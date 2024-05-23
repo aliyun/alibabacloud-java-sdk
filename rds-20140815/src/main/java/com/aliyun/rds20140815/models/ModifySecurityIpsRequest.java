@@ -22,6 +22,8 @@ public class ModifySecurityIpsRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -64,6 +66,8 @@ public class ModifySecurityIpsRequest extends TeaModel {
      * <p>*   CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</p>
      * <br>
      * <p>> A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIps")
     public String securityIps;

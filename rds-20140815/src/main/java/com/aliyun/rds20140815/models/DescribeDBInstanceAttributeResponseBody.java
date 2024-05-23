@@ -52,7 +52,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **single-db**</p>
          * <p>*   **multi-db**</p>
          * <br>
-         * <p>>  For more information about migration modes for Babelfish, see [Migration modes](~~428613~~).</p>
+         * <p>>  For more information about migration modes for Babelfish, see [Migration modes](https://help.aliyun.com/document_detail/428613.html).</p>
          */
         @NameInMap("MigrationMode")
         public String migrationMode;
@@ -476,7 +476,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.</p>
          * <br>
-         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).</p>
+         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](https://help.aliyun.com/document_detail/428613.html).</p>
          */
         @NameInMap("BabelfishConfig")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
@@ -492,6 +492,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
+
+        @NameInMap("CanTempUpgrade")
+        public Boolean canTempUpgrade;
 
         /**
          * <p>The RDS edition. Valid values:</p>
@@ -569,7 +572,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceCPU;
 
         /**
-         * <p>The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+         * <p>The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
@@ -619,7 +622,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceNetType;
 
         /**
-         * <p>The status of the instance. For more information, see [Instance states](~~26315~~).</p>
+         * <p>The status of the instance. For more information, see [Instance states](https://help.aliyun.com/document_detail/26315.html).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
@@ -915,6 +918,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("TempDBInstanceId")
         public String tempDBInstanceId;
 
+        @NameInMap("TempUpgradeTimeEnd")
+        public String tempUpgradeTimeEnd;
+
+        @NameInMap("TempUpgradeTimeStart")
+        public String tempUpgradeTimeStart;
+
         /**
          * <p>The time zone.</p>
          */
@@ -1025,6 +1034,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Boolean getBurstingEnabled() {
             return this.burstingEnabled;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCanTempUpgrade(Boolean canTempUpgrade) {
+            this.canTempUpgrade = canTempUpgrade;
+            return this;
+        }
+        public Boolean getCanTempUpgrade() {
+            return this.canTempUpgrade;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCategory(String category) {
@@ -1489,6 +1506,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getTempDBInstanceId() {
             return this.tempDBInstanceId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setTempUpgradeTimeEnd(String tempUpgradeTimeEnd) {
+            this.tempUpgradeTimeEnd = tempUpgradeTimeEnd;
+            return this;
+        }
+        public String getTempUpgradeTimeEnd() {
+            return this.tempUpgradeTimeEnd;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setTempUpgradeTimeStart(String tempUpgradeTimeStart) {
+            this.tempUpgradeTimeStart = tempUpgradeTimeStart;
+            return this;
+        }
+        public String getTempUpgradeTimeStart() {
+            return this.tempUpgradeTimeStart;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setTimeZone(String timeZone) {

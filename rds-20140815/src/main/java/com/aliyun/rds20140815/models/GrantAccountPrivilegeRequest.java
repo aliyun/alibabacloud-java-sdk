@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -25,18 +27,24 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
      * <br>
      * <p>*   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.</p>
      * <p>*   If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to **DBOwner**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database on which you want to grant permissions. Separate multiple database names with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBName")
     public String DBName;

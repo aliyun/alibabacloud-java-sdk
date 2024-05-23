@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifySQLCollectorPolicyRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -33,6 +35,8 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
      * <br>
      * <p>*   **Enable**</p>
      * <p>*   **Disabled**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;

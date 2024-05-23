@@ -12,12 +12,16 @@ public class DescribePostgresExtensionsRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The database name. You can call the DescribeDatabases operation to query the database name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBName")
     public String DBName;

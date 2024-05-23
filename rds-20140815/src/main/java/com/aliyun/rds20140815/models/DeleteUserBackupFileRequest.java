@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteUserBackupFileRequest extends TeaModel {
     /**
      * <p>The ID of the full backup file. You can call the ListUserBackupFiles operation to query the information about all full backup files in a region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -15,6 +17,8 @@ public class DeleteUserBackupFileRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

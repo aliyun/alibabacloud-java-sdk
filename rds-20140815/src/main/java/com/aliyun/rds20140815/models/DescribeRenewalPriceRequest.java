@@ -17,19 +17,21 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance type of the instance. For more information, see [Primary instance types](~~26312~~). By default, the current instance type applies.</p>
+     * <p>The instance type of the instance. For more information, see [Primary instance types](https://help.aliyun.com/document_detail/26312.html). By default, the current instance type applies.</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The type of the order that you want to place. Set the value to **BUY**.</p>
+     * <p>The type of order. Set the value to **BUY**.</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -78,6 +80,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
      * <br>
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimeType")
     public String timeType;
@@ -87,6 +91,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
      * <br>
      * <p>*   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter is within the range of **1 to 3**.</p>
      * <p>*   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter is within the range of **1 to 9**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;

@@ -17,6 +17,8 @@ public class AddTagsToResourceRequest extends TeaModel {
      * <p>The instance ID.</p>
      * <br>
      * <p>>  You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -29,6 +31,8 @@ public class AddTagsToResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

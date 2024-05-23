@@ -15,7 +15,7 @@ public class CreateBackupRequest extends TeaModel {
      * <br>
      * <p>> *   You can perform a logical backup only when databases are created on the instance.</p>
      * <p>> *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.</p>
-     * <p>> *   For more information about the supported backup types, see [Use the data backup feature](~~98818~~).</p>
+     * <p>> *   For more information about the supported backup types, see [Use the data backup feature](https://help.aliyun.com/document_detail/98818.html).</p>
      * <p>> *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.</p>
      */
     @NameInMap("BackupMethod")
@@ -48,6 +48,8 @@ public class CreateBackupRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -16,6 +16,8 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
      * <p>The prefix of the internal endpoint.</p>
      * <br>
      * <p>When you create any type of endpoint, an internal endpoint is automatically created for the endpoint. This parameter specifies the prefix of the internal endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
@@ -27,22 +29,28 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
     public String DBInstanceEndpointDescription;
 
     /**
-     * <p>The type of the endpoint. Valid values:</p>
+     * <p>The endpoint type. Valid values:</p>
      * <br>
      * <p>*   Primary: read/write endpoint of the instance</p>
      * <p>*   Readonly: read-only endpoint of the instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceEndpointType")
     public String DBInstanceEndpointType;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The information about the node that is configured for the endpoint.</p>
+     * <p>The information about the endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeItems")
     public java.util.List<CreateDBInstanceEndpointRequestNodeItems> nodeItems;
@@ -51,6 +59,8 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
      * <p>The port number of the internal endpoint. You can specify the port number for the internal endpoint.</p>
      * <br>
      * <p>Valid values: 3000 to 5999.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public String port;
@@ -62,7 +72,7 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -72,12 +82,16 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID of the internal endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The virtual private cloud (VPC) ID of the internal endpoint.</p>
+     * <p>The VPC ID of the internal endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -185,13 +199,17 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
 
     public static class CreateDBInstanceEndpointRequestNodeItems extends TeaModel {
         /**
-         * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The node ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;

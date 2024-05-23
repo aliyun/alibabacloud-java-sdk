@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeMarketingActivityRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AliUid")
     public Long aliUid;
@@ -27,7 +29,9 @@ public class DescribeMarketingActivityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,6 +50,8 @@ public class DescribeMarketingActivityRequest extends TeaModel {
 
     /**
      * <p>The service name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UpgradeCode")
     public String upgradeCode;

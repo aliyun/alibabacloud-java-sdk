@@ -9,11 +9,16 @@ public class RenewInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.</p>
      * <p>*   **False** (default): disables automatic payment. You have to manually pay the order in the console.</p>
-     * <p>>  For more information about manual renewal in the console, see the following topics:</p>
-     * <p>> *   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)</p>
-     * <p>> *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)</p>
-     * <p>> *   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)</p>
-     * <p>> *   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)</p>
+     * <br>
+     * <p>>  For more information about how to manually renew an instance in the console, see the following topic:</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96050.html)</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96741.html)</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95637.html)</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97122.html)</p>
      */
     @NameInMap("AutoPay")
     public String autoPay;
@@ -35,6 +40,8 @@ public class RenewInstanceRequest extends TeaModel {
 
     /**
      * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -51,6 +58,8 @@ public class RenewInstanceRequest extends TeaModel {
      * <p>*   **36**</p>
      * <p>*   **48**</p>
      * <p>*   **60**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public Integer period;

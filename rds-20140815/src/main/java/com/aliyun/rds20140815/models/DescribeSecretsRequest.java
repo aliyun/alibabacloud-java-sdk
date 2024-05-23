@@ -31,6 +31,8 @@ public class DescribeSecretsRequest extends TeaModel {
      * <p>The database engine of the database.</p>
      * <br>
      * <p>> Only MySQL is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -45,18 +47,24 @@ public class DescribeSecretsRequest extends TeaModel {
      * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
      * <br>
      * <p>> The default value is 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

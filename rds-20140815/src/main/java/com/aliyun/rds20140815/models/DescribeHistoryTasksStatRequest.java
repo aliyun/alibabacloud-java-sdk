@@ -12,6 +12,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*t*HH:mm:ss*z format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FromStartTime")
     public String fromStartTime;
@@ -27,6 +29,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -82,6 +86,8 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ToStartTime")
     public String toStartTime;

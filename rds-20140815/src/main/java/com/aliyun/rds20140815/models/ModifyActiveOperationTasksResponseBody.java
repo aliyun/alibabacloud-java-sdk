@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the O\&M task. IDs are separated by commas (,).</p>
+     * <p>The ID of the O\\&M task. IDs are separated by commas (,).</p>
      */
     @NameInMap("Ids")
     public String ids;

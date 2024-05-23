@@ -12,6 +12,8 @@ public class SwitchDBInstanceNetTypeRequest extends TeaModel {
 
     /**
      * <p>The prefix of the custom endpoint. The prefix must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter. A valid endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
@@ -29,6 +31,8 @@ public class SwitchDBInstanceNetTypeRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

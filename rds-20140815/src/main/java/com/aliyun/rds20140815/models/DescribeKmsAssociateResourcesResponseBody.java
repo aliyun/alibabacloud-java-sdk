@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
     /**
-     * <p>The information about the associated ApsaraDB RDS instance.</p>
+     * <p>The information about the associated ApsaraDB RDS instances.</p>
      */
     @NameInMap("AssociateDBInstances")
     public java.util.List<DescribeKmsAssociateResourcesResponseBodyAssociateDBInstances> associateDBInstances;
@@ -72,7 +72,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The way in which the key is used. Return values:</p>
+         * <p>The purpose of the key. Valid values:</p>
          * <br>
          * <p>*   **DiskEncryption**: cloud disk encryption</p>
          * <p>*   **TDE**: transparent data encryption</p>

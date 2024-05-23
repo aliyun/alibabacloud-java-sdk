@@ -39,7 +39,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsStatResponseBodyItems extends TeaModel {
         /**
-         * <p>The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         * <p>The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).</p>
          */
         @NameInMap("EventCategory")
         public String eventCategory;

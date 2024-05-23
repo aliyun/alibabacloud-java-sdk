@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -26,6 +28,8 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the dedicated proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;

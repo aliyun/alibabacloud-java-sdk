@@ -20,6 +20,8 @@ public class RestoreDdrTableRequest extends TeaModel {
 
     /**
      * <p>The source instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -60,6 +62,8 @@ public class RestoreDdrTableRequest extends TeaModel {
      * <p>*   **1**: restores data to a point in time. If you set this parameter to 1, you must also specify the **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName** parameters.</p>
      * <br>
      * <p>Default value: **0**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;
@@ -82,6 +86,8 @@ public class RestoreDdrTableRequest extends TeaModel {
 
     /**
      * <p>The names of the databases and tables that you want to restore. The value is in the following format: `[{"type":"db","name":"<The name of Database 1 on the source instance>","newname":"<The name of Database 1 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 1 in Database 1 on the source instance>","newname":"<The name of Table 1 in Database 1 on the destination instance>"},{"type":"table","name":"<The name of Table 2 in Database 1 on the source instance>","newname":"<The name of Table 2 in Database 1 on the destination instance>"}]},{"type":"db","name":"<The name of Database 2 on the source instance>","newname":"<The name of Database 2 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 3 in Database 2 on the source instance>","newname":"<The name of Table 3 in Database 2 on the destination instance>"},{"type":"table","name":"<The name of Table 4 in Database 2 on the source instance>","newname":"<The name of Table 4 in Database 2 on the destination instance>"}]}]`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableMeta")
     public String tableMeta;

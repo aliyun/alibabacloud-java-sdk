@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>The O\&M task ID. Separate multiple IDs with commas (,).</p>
+     * <p>The O\\&M task ID. Separate multiple IDs with commas (,).</p>
      * <br>
-     * <p>>  You can call the DescribeActiveOperationTask operation to query the O\&M task ID.</p>
+     * <p>>  You can call the DescribeActiveOperationTask operation to query the O\\&M task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")
     public String ids;
@@ -46,6 +48,8 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
      * <p>The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>>  The time that is specified by the SwitchTime parameter cannot be later than the time that is specified by the Deadline parameter. You can call the DescribeActiveOperationTasks operation to query the value of the Deadline parameter in the response.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;

@@ -13,12 +13,16 @@ public class ModifyDBInstanceConnectionModeRequest extends TeaModel {
      * <p>The system automatically assigns a connection mode to the instance.</p>
      * <br>
      * <p>>  SQL Server 2012, SQL Server 2016, and SQL Server 2017 support only the standard mode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionMode")
     public String connectionMode;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

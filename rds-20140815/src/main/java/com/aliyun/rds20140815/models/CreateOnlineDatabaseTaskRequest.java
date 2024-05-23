@@ -11,6 +11,8 @@ public class CreateOnlineDatabaseTaskRequest extends TeaModel {
      * <p>*   **AsyncExecuteDBCheck**: asynchronous database check</p>
      * <br>
      * <p>> The check methods are supported for RDS instances that run SQL Server 2008 R2.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckDBMode")
     public String checkDBMode;
@@ -23,18 +25,24 @@ public class CreateOnlineDatabaseTaskRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
      * <p>The ID of the migration task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;

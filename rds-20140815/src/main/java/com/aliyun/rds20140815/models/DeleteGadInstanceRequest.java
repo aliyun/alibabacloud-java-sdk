@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteGadInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the global active database cluster. You can call the GadInstanceName operation to query the cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GadInstanceName")
     public String gadInstanceName;

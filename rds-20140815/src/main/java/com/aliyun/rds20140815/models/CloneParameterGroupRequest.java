@@ -15,18 +15,24 @@ public class CloneParameterGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
      * <p>The name of the parameter template in the destination region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
 
     /**
      * <p>The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,6 +51,8 @@ public class CloneParameterGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetRegionId")
     public String targetRegionId;

@@ -11,10 +11,15 @@ public class ModifyWhitelistTemplateRequest extends TeaModel {
      * <p>*   CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24-bit in length. You can replace 24 with a value that ranges from 1 to 32.</p>
      * <br>
      * <p>> : A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpWhitelist")
     public String ipWhitelist;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent zone list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

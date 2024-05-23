@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyHADiagnoseConfigRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -15,6 +17,8 @@ public class ModifyHADiagnoseConfigRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

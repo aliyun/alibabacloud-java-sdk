@@ -23,12 +23,14 @@ public class ModifyDBNodeRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. Unit: GB For more information, see [Instance types](~~26312~~).</p>
+     * <p>The new storage capacity of the instance. Unit: GB For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      */
     @NameInMap("DBInstanceStorage")
     public String DBInstanceStorage;

@@ -53,7 +53,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts extends TeaModel {
         /**
-         * <p>The host account. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.</p>
+         * <p>The host account. You can call the [CreateDedicatedHostAccount](https://help.aliyun.com/document_detail/196877.html) operation to create a host account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -74,7 +74,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String bastionInstanceId;
 
         /**
-         * <p>The core overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The core overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
          */
         @NameInMap("CPUAllocationRatio")
         public String CPUAllocationRatio;
@@ -104,7 +104,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String dedicatedHostId;
 
         /**
-         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
          */
         @NameInMap("DiskAllocationRatio")
         public String diskAllocationRatio;

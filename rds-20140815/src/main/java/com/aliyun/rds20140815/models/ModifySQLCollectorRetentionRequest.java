@@ -12,12 +12,16 @@ public class ModifySQLCollectorRetentionRequest extends TeaModel {
      * <p>*   365: one year</p>
      * <p>*   1095: three years</p>
      * <p>*   1825: five years</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigValue")
     public String configValue;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

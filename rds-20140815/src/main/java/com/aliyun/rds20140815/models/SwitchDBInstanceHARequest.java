@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SwitchDBInstanceHARequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -34,6 +36,8 @@ public class SwitchDBInstanceHARequest extends TeaModel {
 
     /**
      * <p>The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

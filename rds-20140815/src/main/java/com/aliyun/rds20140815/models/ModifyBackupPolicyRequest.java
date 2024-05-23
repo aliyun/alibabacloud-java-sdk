@@ -46,9 +46,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>*   **240**: A snapshot backup is performed every 240 minutes.</p>
      * <p>*   **480**: A snapshot backup is performed every 480 minutes.</p>
      * <br>
-     * <p>> *   You can configure a backup policy by using this parameter and the **PreferredBackupPeriod** parameter. For example, if you set **PreferredBackupPeriod** to Saturday,Sunday and BackupInterval to \*\*-1\*\*, a snapshot backup is performed on every Saturday and Sunday.</p>
+     * <p>> *   You can configure a backup policy by using this parameter and the **PreferredBackupPeriod** parameter. For example, if you set **PreferredBackupPeriod** to Saturday,Sunday and BackupInterval to \\*\\*-1\\*\\*, a snapshot backup is performed on every Saturday and Sunday.</p>
      * <p>> *   If the instance runs PostgreSQL, BackupInterval is supported only when the instance is equipped with cloud disks.</p>
-     * <p>> *   If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see [Enable snapshot backups for an ApsaraDB RDS for SQL Server instance](~~211143~~).</p>
+     * <p>> *   If the instance runs SQL Server, BackupInterval is supported only when the snapshot backup feature is enabled for the instance. For more information, see [Enable snapshot backups for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/211143.html).</p>
      * <p>> *   If **Category** is set to **Flash**, BackupInterval is invalid.</p>
      * <p>> *   This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.</p>
      */
@@ -128,7 +128,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>*   **0**: Backups are not compressed.</p>
      * <p>*   **1**: The zlib tool is used to compress backups into .tar.gz files.</p>
      * <p>*   **2**: The zlib tool is used to compress backups in parallel.</p>
-     * <p>*   **4**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).</p>
+     * <p>*   **4**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported for instances that run MySQL 5.6 or MySQL 5.7. Backups in this compression format can be used to restore individual databases and tables. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/103175.html).</p>
      * <p>*   **8**: The QuickLZ tool is used to compress backups into .xb.gz files. This compression format is supported only for instances that run MySQL 8.0. Backups in this compression format cannot be used to restore individual databases and tables.</p>
      * <br>
      * <p>> This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.</p>
@@ -138,6 +138,8 @@ public class ModifyBackupPolicyRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -209,7 +211,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
      * <p>The number of binary log files that you want to retain on the instance. Default value: **60**. Valid values: **6** to **100**.</p>
      * <br>
      * <p>> *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.</p>
-     * <p>> *   If the instance runs MySQL, you can set this parameter to \*\*-1\*\*. The value -1 specifies that no limits are imposed on the number of binary log files retained on the instance.</p>
+     * <p>> *   If the instance runs MySQL, you can set this parameter to \\*\\*-1\\*\\*. The value -1 specifies that no limits are imposed on the number of binary log files retained on the instance.</p>
      */
     @NameInMap("LogBackupLocalRetentionNumber")
     public Integer logBackupLocalRetentionNumber;

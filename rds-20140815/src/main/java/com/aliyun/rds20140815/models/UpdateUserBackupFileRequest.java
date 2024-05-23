@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateUserBackupFileRequest extends TeaModel {
     /**
      * <p>The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -21,6 +23,8 @@ public class UpdateUserBackupFileRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

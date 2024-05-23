@@ -17,6 +17,8 @@ public class ListClassesRequest extends TeaModel {
      * <p>*   **rds_intl**: The instances are subscription primary instances.</p>
      * <p>*   **rords_intl**: The instances are pay-as-you-go read-only instances.</p>
      * <p>*   **rds_rordspre_public_intl**: The instances are subscription read-only instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
@@ -36,6 +38,8 @@ public class ListClassesRequest extends TeaModel {
      * <p>*   **UPGRADE**: specifies the query orders that are used to change the specifications of instances.</p>
      * <p>*   **RENEW**: specifies the query orders that are used to renew instances.</p>
      * <p>*   **CONVERT**: specifies the query orders that are used to change the billing methods of instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderType")
     public String orderType;

@@ -12,6 +12,8 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -30,6 +32,8 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
      * <br>
      * <p>*   **Enable**</p>
      * <p>*   **Disable**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;

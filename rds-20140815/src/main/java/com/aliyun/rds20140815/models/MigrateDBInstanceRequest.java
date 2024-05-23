@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class MigrateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -62,7 +66,7 @@ public class MigrateDBInstanceRequest extends TeaModel {
     public String targetDedicatedHostIdForSlave;
 
     /**
-     * <p>The zone ID of the secondary instance.</p>
+     * <p>The zone ID of the secondary node.</p>
      */
     @NameInMap("ZoneIdForFollower")
     public String zoneIdForFollower;

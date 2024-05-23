@@ -53,13 +53,13 @@ public class ListClassesResponseBody extends TeaModel {
 
     public static class ListClassesResponseBodyItems extends TeaModel {
         /**
-         * <p>The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).</p>
+         * <p>The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html) and [Read-only ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/145759.html).</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
         /**
-         * <p>The instance family. For more information, see [Overview of instance families](~~57184~~).</p>
+         * <p>The instance family. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/57184.html).</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;

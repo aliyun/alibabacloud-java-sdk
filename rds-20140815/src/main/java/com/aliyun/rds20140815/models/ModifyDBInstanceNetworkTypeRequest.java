@@ -14,12 +14,16 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The network type after the modification. Set the value to **VPC**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;

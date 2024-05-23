@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -15,13 +17,17 @@ public class ResetAccountPasswordRequest extends TeaModel {
      * <br>
      * <p>> *   The value must be 8 to 32 characters in length.</p>
      * <p>> *   The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>> *   The following special characters are supported: ! @ # $ & % ^ \* ( ) \_ + - =</p>
+     * <p>> *   The following special characters are supported: ! @ # $ & % ^ \\* ( ) _ + - =</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

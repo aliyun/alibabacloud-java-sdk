@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateMaskingRulesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
@@ -25,6 +28,9 @@ public class CreateMaskingRulesRequest extends TeaModel {
     @NameInMap("RuleConfig")
     public CreateMaskingRulesRequestRuleConfig ruleConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

@@ -12,6 +12,8 @@ public class ModifyParameterRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

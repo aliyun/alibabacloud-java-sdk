@@ -38,12 +38,14 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
      * <p>*   **rds_intl**: The instance is a subscription primary instance.</p>
      * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance.</p>
      * <p>*   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -81,7 +83,7 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/610399.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

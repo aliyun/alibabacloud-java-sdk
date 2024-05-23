@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DetachGadInstanceMemberRequest extends TeaModel {
     /**
      * <p>The ID of the global active database cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GadInstanceName")
     public String gadInstanceName;
 
     /**
      * <p>The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MemberInstanceName")
     public String memberInstanceName;

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossBackupMetaListRequest extends TeaModel {
     /**
-     * <p>The ID of the cross-region backup file that you want to use. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the cross-region backup file.</p>
+     * <p>The ID of the cross-region backup file that you want to use. You can call the [DescribeCrossRegionBackups](https://help.aliyun.com/document_detail/121733.html) operation to query the ID of the cross-region backup file.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;

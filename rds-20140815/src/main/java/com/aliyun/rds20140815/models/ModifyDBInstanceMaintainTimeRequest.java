@@ -12,12 +12,16 @@ public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The maintenance window of the instance. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaintainTime")
     public String maintainTime;

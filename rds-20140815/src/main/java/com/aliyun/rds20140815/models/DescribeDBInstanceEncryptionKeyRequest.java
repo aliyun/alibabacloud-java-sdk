@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     /**
-     * <p>The ID of the instance You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <p>The ID of the instance You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the IDs of instances.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,7 +38,7 @@ public class DescribeDBInstanceEncryptionKeyRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the destination region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The ID of the destination region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
      */
     @NameInMap("TargetRegionId")
     public String targetRegionId;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     /**
      * <p>The prefix of the proxy endpoint Enter a custom prefix.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,12 +28,16 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
      * <p>*   **Classic**: classic network</p>
      * <br>
      * <p>Default value: **Classic**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
 
     /**
      * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;

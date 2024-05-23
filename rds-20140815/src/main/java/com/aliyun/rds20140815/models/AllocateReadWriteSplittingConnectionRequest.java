@@ -14,6 +14,8 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
 
     /**
      * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

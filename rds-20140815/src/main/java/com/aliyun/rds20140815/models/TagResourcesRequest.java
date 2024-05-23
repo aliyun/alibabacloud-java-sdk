@@ -9,12 +9,16 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -27,6 +31,8 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to **INSTANCE**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -101,6 +107,8 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can create N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

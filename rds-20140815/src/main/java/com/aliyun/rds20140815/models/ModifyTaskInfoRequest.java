@@ -11,7 +11,9 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,6 +46,8 @@ public class ModifyTaskInfoRequest extends TeaModel {
 
     /**
      * <p>The task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

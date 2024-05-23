@@ -19,19 +19,23 @@ public class ModifyDBInstanceEndpointRequest extends TeaModel {
     public String DBInstanceEndpointDescription;
 
     /**
-     * <p>The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.</p>
+     * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The information about the node that is configured for the endpoint.</p>
+     * <p>The information about the endpoint.</p>
      */
     @NameInMap("NodeItems")
     public java.util.List<ModifyDBInstanceEndpointRequestNodeItems> nodeItems;
@@ -94,7 +98,7 @@ public class ModifyDBInstanceEndpointRequest extends TeaModel {
 
     public static class ModifyDBInstanceEndpointRequestNodeItems extends TeaModel {
         /**
-         * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -102,10 +106,10 @@ public class ModifyDBInstanceEndpointRequest extends TeaModel {
         /**
          * <p>The node ID.</p>
          * <br>
-         * <p>You can use one of the following methods to query the ID of the node:</p>
+         * <p>You can query the node ID by using the following methods:</p>
          * <br>
-         * <p>*   Log on to the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology section.</p>
-         * <p>*   Call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the ID of the node.</p>
+         * <p>*   Log on the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology in the lower part of the instance details page.</p>
+         * <p>*   Call the DescribeDBInstanceAttribute operation to query the node ID.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;

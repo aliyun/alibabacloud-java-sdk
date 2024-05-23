@@ -19,7 +19,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see [Obtain the access URL after you upload objects](~~39607~~).</p>
+     * <p>The URL from which you can download the full backup file that is stored as an object in an Object Storage Service (OSS) bucket. For more information about how to obtain the URL, see [Obtain the access URL after you upload objects](https://help.aliyun.com/document_detail/39607.html).</p>
      */
     @NameInMap("OssUrl")
     public String ossUrl;
@@ -28,13 +28,15 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) to query the resource group ID.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

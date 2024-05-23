@@ -214,7 +214,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskDetail;
 
         /**
-         * <p>The task ID in the t-\*\*\* format.</p>
+         * <p>The task ID in the t-\\*\\*\\* format.</p>
          */
         @NameInMap("TaskId")
         public String taskId;

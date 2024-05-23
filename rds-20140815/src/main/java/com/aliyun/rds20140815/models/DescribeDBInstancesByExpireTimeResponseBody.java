@@ -95,7 +95,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The status of the instance. For more information, see [Instance state table](~~26315~~).</p>
+         * <p>The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;

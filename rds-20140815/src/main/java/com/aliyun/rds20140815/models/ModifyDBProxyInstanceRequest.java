@@ -5,45 +5,54 @@ import com.aliyun.tea.*;
 
 public class ModifyDBProxyInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
-     * <p>The number of proxy instances that are enabled. If the value of this parameter is 0, the database proxy feature is disabled for the instance. Valid values: **1** to **60**.</p>
+     * <p>The number of database proxies. If you set this parameter to 0, the database proxy feature is disabled for the instance. Valid values: **1** to **16**.</p>
      * <br>
-     * <p>>  The capability of the database proxy to process requests increases with the number of proxy instances that are enabled. You can monitor the load on the instance and specify an appropriate number of proxy instances based on the load monitoring data.</p>
+     * <p>>  The capability of the database proxy feature to process requests increases with the number of database proxies that are enabled. You can monitor the load on the instance and specify an appropriate number of database proxies based on the load monitoring data.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBProxyInstanceNum")
     public String DBProxyInstanceNum;
 
     /**
-     * <p>The type of database proxy that is enabled for the instance. Set the value to **DedicatedProxy**.</p>
+     * <p>The database proxy type. Valid values:</p>
+     * <br>
+     * <p>*   **common**: general-purpose database proxy</p>
+     * <p>*   **exclusive** (default): dedicated database proxy</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
     /**
-     * <p>The point in time at which you want to apply the new database proxy settings. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The point in time that you want to specify. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  If you set the **EffectiveTime** parameter to **SpecificTime**, you must specify the EffectiveSpecificTime parameter.</p>
+     * <p>>  If the **EffectiveTime** parameter is set to **SpecificTime**, you must specify this parameter.</p>
      */
     @NameInMap("EffectiveSpecificTime")
     public String effectiveSpecificTime;
 
     /**
-     * <p>The time when you want to apply the new database proxy settings. Valid values:</p>
+     * <p>The effective time. Valid values:</p>
      * <br>
-     * <p>*   **Immediate**: ApsaraDB RDS immediately applies the new settings.</p>
-     * <p>*   **MaintainTime**: ApsaraDB RDS applies the new settings during the maintenance window that you specified. For more information, see [Modify the maintenance window](~~26249~~).</p>
-     * <p>*   **SpecificTime**: ApsaraDB RDS applies the new settings at a specified point in time.</p>
+     * <p>*   **Immediate**: The effective time is immediate.</p>
+     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</p>
+     * <p>*   **SpecificTime**: The effective time is a specified point in time.</p>
      * <br>
      * <p>Default value: **MaintainTime**.</p>
      */
@@ -54,7 +63,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance resides. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -65,6 +74,11 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the vSwitch in the destination zone. You can call the [DescribeVSwitches](https://help.aliyun.com/document_detail/610431.html) operation to query existing vSwitches.</p>
+     * <br>
+     * <p>>  Only database proxies for ApsaraDB RDS for MySQL instances that use cloud disks can be migrated to different zones.</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 

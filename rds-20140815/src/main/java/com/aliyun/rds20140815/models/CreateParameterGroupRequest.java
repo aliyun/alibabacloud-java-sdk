@@ -9,6 +9,8 @@ public class CreateParameterGroupRequest extends TeaModel {
      * <br>
      * <p>*   **mysql**</p>
      * <p>*   **PostgreSQL**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -30,6 +32,8 @@ public class CreateParameterGroupRequest extends TeaModel {
      * <p>    *   **13.0**</p>
      * <p>    *   **14.0**</p>
      * <p>    *   **15.0**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -46,20 +50,26 @@ public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The name of the parameter template.</p>
      * <br>
-     * <p>*   The value must start with a letter and can contain letters, digits, periods (.), and underscores (\_).</p>
+     * <p>*   The value must start with a letter and can contain letters, digits, periods (.), and underscores (_).</p>
      * <p>*   The value can be 8 to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
 
     /**
-     * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](~~96063~~) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](~~96751~~).</p>
+     * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96063.html) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96751.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
      * <p>The region ID of the parameter template. You can call the DescribeRegions operation to query the most recent zone list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

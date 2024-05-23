@@ -14,12 +14,16 @@ public class CreateDBNodesRequest extends TeaModel {
 
     /**
      * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The details of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<CreateDBNodesRequestDBNode> DBNode;
@@ -114,15 +118,22 @@ public class CreateDBNodesRequest extends TeaModel {
     public static class CreateDBNodesRequestDBNode extends TeaModel {
         /**
          * <p>The specification information of the node.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("classCode")
         public String classCode;
 
+        /**
+         * <p>The vSwitch ID of the node.</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
         /**
-         * <p>The zone ID of the node.</p>
+         * <p>The ID of the zone in which the node is deployed.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("zoneId")
         public String zoneId;

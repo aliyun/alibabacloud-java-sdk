@@ -147,13 +147,13 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The instance type of the instance. For more information, see [Instance types](~~26312~~).</p>
+         * <p>The instance type of the instance. For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
         /**
-         * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter.</p>
+         * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-). The value must start with a letter.</p>
          * <br>
          * <p>> The value cannot start with http:// or https://.</p>
          */
@@ -176,7 +176,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         public String DBInstanceNetType;
 
         /**
-         * <p>The status of the instance. For more information, see [Instance state table](~~26315~~).</p>
+         * <p>The status of the instance. For more information, see [Instance state table](https://help.aliyun.com/document_detail/26315.html).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;

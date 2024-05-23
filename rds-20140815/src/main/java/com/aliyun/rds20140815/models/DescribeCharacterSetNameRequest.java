@@ -11,6 +11,8 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
      * <p>*   **mssql**</p>
      * <p>*   **PostgreSQL**</p>
      * <p>*   **MariaDB**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -23,6 +25,8 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

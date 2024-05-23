@@ -12,6 +12,8 @@ public class ModifyDBInstanceMonitorRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -31,6 +33,8 @@ public class ModifyDBInstanceMonitorRequest extends TeaModel {
      * <p>*   **300**</p>
      * <br>
      * <p>Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public String period;

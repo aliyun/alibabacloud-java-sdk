@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SwitchDBInstanceVpcRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,6 +27,8 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
      * <p>The VPC ID.</p>
      * <br>
      * <p>> The VPC must reside in the same region as the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -33,6 +37,8 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
      * <p>The vSwitch ID of the instance.</p>
      * <br>
      * <p>> The vSwitch must belong to the same zone as the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

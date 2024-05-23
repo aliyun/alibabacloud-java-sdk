@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The details about the O\&M task.</p>
+     * <p>The details about the O\\&M task.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
@@ -93,7 +93,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String allowChange;
 
         /**
-         * <p>The code of the task level. The value S1 indicates the system O\&M level. The value S0 indicates the exception fixing level.</p>
+         * <p>The code of the task level. The value S1 indicates the system O\\&M level. The value S0 indicates the exception fixing level.</p>
          */
         @NameInMap("ChangeLevel")
         public String changeLevel;
@@ -237,7 +237,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskParams;
 
         /**
-         * <p>The type of the O\&M task. Valid values:</p>
+         * <p>The type of the O\\&M task. Valid values:</p>
          * <br>
          * <p>*   **rds_apsaradb_ha**: primary/secondary switchover</p>
          * <p>*   **rds_apsaradb_transfer**: instance migration</p>

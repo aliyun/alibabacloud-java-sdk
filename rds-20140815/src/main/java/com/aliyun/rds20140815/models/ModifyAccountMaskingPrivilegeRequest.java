@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
@@ -13,6 +16,9 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Privilege")
     public String privilege;
 
@@ -22,6 +28,9 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

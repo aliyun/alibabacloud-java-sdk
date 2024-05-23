@@ -158,7 +158,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
          * <br>
-         * <p>> : The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.</p>
+         * <p>> : The value \\*\\*-1\\*\\* is returned for an instance that does not reside in a dedicated cluster.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;

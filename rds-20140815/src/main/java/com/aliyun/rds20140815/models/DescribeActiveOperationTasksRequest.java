@@ -29,7 +29,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
      * <br>
      * <p>*   **all**: all types</p>
      * <p>*   **S0**: returns the tasks of the exception fixing level.</p>
-     * <p>*   **S1**: returns the tasks of the system O\&M level.</p>
+     * <p>*   **S1**: returns the tasks of the system O\\&M level.</p>
      */
     @NameInMap("ChangeLevel")
     public String changeLevel;
@@ -59,7 +59,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 25.</p>
+     * <p>The number of entries per page. Default value: 25. Maximum value: 100.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

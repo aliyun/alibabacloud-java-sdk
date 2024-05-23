@@ -49,7 +49,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public Boolean coldDataEnabled;
 
     /**
-     * <p>The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.</p>
+     * <p>The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html). You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.</p>
      * <br>
      * <p>> *   You must specify at least one of DBInstanceClass and **DBInstanceStorage**.</p>
      * <p>> *   You can call the DescribeDBInstanceAttribute operation to query the current instance type of the instance.</p>
@@ -59,14 +59,16 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is supported by the new instance type.</p>
+     * <p>The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is supported by the new instance type.</p>
      * <br>
-     * <p>> *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass**.</p>
+     * <p>> *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.</p>
      * <p>> *   You can call the DescribeDBInstanceAttribute to query the current storage capacity of the instance.</p>
      */
     @NameInMap("DBInstanceStorage")
@@ -83,7 +85,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <br>
      * <p>To change the storage type, take note of the following items:</p>
      * <br>
-     * <p>If the instance runs PostgreSQL, you can upgrade the storage type of the instance from standard SSD to ESSD. However, you cannot downgrade the storage type of the instance from ESSD to standard SSD. ESSDs provide the following PLs: PL1, PL2, and PL3. You can upgrade or downgrade the storage type between ESSD of PL1, ESSD of PL2, and ESSD of PL3. For more information, see [Configuration items](~~96750~~).</p>
+     * <p>If the instance runs PostgreSQL, you can upgrade the storage type of the instance from standard SSD to ESSD. However, you cannot downgrade the storage type of the instance from ESSD to standard SSD. ESSDs provide the following PLs: PL1, PL2, and PL3. You can upgrade or downgrade the storage type between ESSD of PL1, ESSD of PL2, and ESSD of PL3. For more information, see [Configuration items](https://help.aliyun.com/document_detail/96750.html).</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -110,7 +112,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     /**
      * <p>The time when you want the change to take effect. Valid values:</p>
      * <br>
-     * <p>*   **Immediate**: This is the default value.</p>
+     * <p>*   **Immediate** (default)</p>
      * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</p>
      */
     @NameInMap("EffectiveTime")
@@ -122,14 +124,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <p>*   Regular instance</p>
      * <br>
      * <p>    *   Valid values if you set the Engine parameter to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
-     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2008r2**, **08r2\_ent_ha**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**</p>
+     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2008r2**, **08r2_ent_ha**, **2012**, **2012_ent_ha**, **2012_std_ha**, **2012_web**, **2014_std_ha**, **2016_ent_ha**, **2016_std_ha**, **2016_web**, **2017_std_ha**, **2017_ent**, **2019_std_ha**, and **2019_ent**</p>
      * <p>    *   Valid values if you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
      * <p>    *   Valid value if you set the Engine parameter to MariaDB: **10.3**</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
      * <p>    *   Valid values if you set the Engine parameter to MySQL: **5.7** and **8.0**</p>
-     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
+     * <p>    *   Valid values if you set the Engine parameter to SQLServer: **2016_std_sl**, **2017_std_sl**, and **2019_std_sl**</p>
      * <p>    *   Valid values if you set the Engine parameter to PostgreSQL: **14.0**, **15.0**, **16.0**</p>
      * <br>
      * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
@@ -154,7 +156,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go.</p>
      * <p>*   **Prepaid**: subscription.</p>
-     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. If you set the value to Serverless, you must specify the scaling range of computing resources, configure the automatic start and stop feature, and configure auto scaling policies for your serverless instance. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).</p>
+     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. If you set the value to Serverless, you must specify the scaling range of computing resources, configure the automatic start and stop feature, and configure auto scaling policies for your serverless instance. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -172,7 +174,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The serverless instance specifications that you want to change.</p>
+     * <p>The specifications that you want to change for a serverless instance.</p>
      */
     @NameInMap("ServerlessConfiguration")
     public String serverlessConfigurationShrink;
@@ -196,7 +198,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <br>
      * <p>Format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1200_20200830`.</p>
      * <br>
-     * <p>>  For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).</p>
+     * <p>>  For more information about minor engine versions, see [Release notes for AliPG](https://help.aliyun.com/document_detail/126002.html).</p>
      */
     @NameInMap("TargetMinorVersion")
     public String targetMinorVersion;

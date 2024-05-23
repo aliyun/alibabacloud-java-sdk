@@ -49,7 +49,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>Indicates whether the forceful SSL encryption feature is enabled. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).</p>
+     * <p>Indicates whether the forceful SSL encryption feature is enabled. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](https://help.aliyun.com/document_detail/95715.html).</p>
      * <br>
      * <p>*   **1**: enabled</p>
      * <p>*   **0**: The feature is disabled.</p>
@@ -165,7 +165,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String serverKey;
 
     /**
-     * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).</p>
+     * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](https://help.aliyun.com/document_detail/95715.html).</p>
      */
     @NameInMap("TlsVersion")
     public String tlsVersion;

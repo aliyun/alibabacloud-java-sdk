@@ -64,6 +64,8 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;

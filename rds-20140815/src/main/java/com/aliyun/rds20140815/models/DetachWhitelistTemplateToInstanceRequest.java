@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     /**
      * <p>The instance name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InsName")
     public String insName;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -27,6 +32,8 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;

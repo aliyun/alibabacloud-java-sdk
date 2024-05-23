@@ -9,6 +9,8 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends TeaModel {
      * <br>
      * <p>*   **Auto:** automatic update.</p>
      * <p>*   **Manual**: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AutoUpgradeMinorVersion")
     public String autoUpgradeMinorVersion;
@@ -21,6 +23,8 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

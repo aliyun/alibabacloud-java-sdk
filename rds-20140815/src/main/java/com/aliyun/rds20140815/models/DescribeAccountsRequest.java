@@ -14,6 +14,8 @@ public class DescribeAccountsRequest extends TeaModel {
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <br>
      * <p>>  This parameter is not supported for RDS instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

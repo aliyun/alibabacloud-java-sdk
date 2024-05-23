@@ -12,6 +12,8 @@ public class DescribeBackupDatabaseRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

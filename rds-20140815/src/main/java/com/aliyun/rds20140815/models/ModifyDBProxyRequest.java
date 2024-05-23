@@ -9,12 +9,16 @@ public class ModifyDBProxyRequest extends TeaModel {
      * <br>
      * <p>*   **Startup**: enables the database proxy feature.</p>
      * <p>*   **Shutdown**: disables the database proxy feature.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigDBProxyService")
     public String configDBProxyService;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

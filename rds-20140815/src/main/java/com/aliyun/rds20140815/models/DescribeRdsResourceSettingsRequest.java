@@ -7,6 +7,9 @@ public class DescribeRdsResourceSettingsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceNiche")
     public String resourceNiche;
 

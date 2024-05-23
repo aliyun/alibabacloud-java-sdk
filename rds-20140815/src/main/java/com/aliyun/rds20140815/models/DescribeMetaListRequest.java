@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaListRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the backup set ID.</p>
+     * <p>The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the IDs of data backup files.</p>
      * <br>
-     * <p>>  This parameter must be specified when the **RestoreType** parameter is set to **BackupSetID**.</p>
+     * <p>>  This parameter is required when you set the **RestoreType** parameter to **BackupSetID**.</p>
      */
     @NameInMap("BackupSetID")
     public Long backupSetID;
@@ -20,6 +20,8 @@ public class DescribeMetaListRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -80,9 +82,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The method that is used to restore data. Valid values:</p>
+     * <p>The restoration method that you want to use. Valid values:</p>
      * <br>
-     * <p>*   **BackupSetID**: Data is restored from a backup set. If you use this value, you must also specify the **BackupSetID** parameter.</p>
+     * <p>*   **BackupSetID**: Data is restored from the backup set. If you use this value, you must also specify the **BackupSetID** parameter.</p>
      * <p>*   **RestoreTime**: Data is restored to a specific point in time. If you use this value, you must also specify the **RestoreTime** parameter.</p>
      * <br>
      * <p>Default value: **BackupSetID**.</p>

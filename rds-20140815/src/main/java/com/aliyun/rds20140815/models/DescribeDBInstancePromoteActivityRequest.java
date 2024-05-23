@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancePromoteActivityRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AliUid")
     public String aliUid;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;

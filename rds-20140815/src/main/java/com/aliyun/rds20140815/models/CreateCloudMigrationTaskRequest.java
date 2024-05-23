@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateCloudMigrationTaskRequest extends TeaModel {
     /**
      * <p>The ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -14,7 +16,9 @@ public class CreateCloudMigrationTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.</p>
+     * <p>The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](https://help.aliyun.com/document_detail/369500.html) topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceAccount")
     public String sourceAccount;
@@ -24,6 +28,8 @@ public class CreateCloudMigrationTaskRequest extends TeaModel {
      * <br>
      * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
      * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceCategory")
     public String sourceCategory;
@@ -31,20 +37,26 @@ public class CreateCloudMigrationTaskRequest extends TeaModel {
     /**
      * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
      * <br>
-     * <p>*   If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](~~273914~~).</p>
+     * <p>*   If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](https://help.aliyun.com/document_detail/273914.html).</p>
      * <p>*   If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
 
     /**
-     * <p>The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](~~369500~~) topic.</p>
+     * <p>The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the [Create an account for cloud migration on a self-managed PostgreSQL instance](https://help.aliyun.com/document_detail/369500.html) topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourcePassword")
     public String sourcePassword;
 
     /**
      * <p>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the `netstat -a | grep PGSQL` command to obtain the port number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourcePort")
     public Long sourcePort;

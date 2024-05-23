@@ -67,7 +67,7 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      * <br>
      * <p>> By default, the new instance uses the same instance type as the original primary instance.</p>
      */
@@ -76,12 +76,14 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
      * <br>
      * <p>> By default, the new instance has the same storage capacity as the original primary instance.</p>
      */
@@ -145,7 +147,9 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go.</p>
      * <p>*   **Prepaid**: subscription.</p>
-     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).</p>
+     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -191,7 +195,9 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The configuration of the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</p>
+     * <p>The specifications for the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</p>
+     * <br>
+     * <p>>  This parameter is available only on the China site (aliyun.com).</p>
      */
     @NameInMap("ServerlessConfig")
     public String serverlessConfigShrink;

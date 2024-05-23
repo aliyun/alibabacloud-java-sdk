@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     /**
      * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,6 +20,8 @@ public class DescribeReadDBInstanceDelayRequest extends TeaModel {
 
     /**
      * <p>The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReadInstanceId")
     public String readInstanceId;

@@ -12,6 +12,8 @@ public class CreateSecretRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -32,6 +34,8 @@ public class CreateSecretRequest extends TeaModel {
      * <p>The engine of the database.</p>
      * <br>
      * <p>> Only MySQL is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -41,18 +45,24 @@ public class CreateSecretRequest extends TeaModel {
 
     /**
      * <p>The password that is used to access the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -71,6 +81,8 @@ public class CreateSecretRequest extends TeaModel {
 
     /**
      * <p>The username that is used to access the database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

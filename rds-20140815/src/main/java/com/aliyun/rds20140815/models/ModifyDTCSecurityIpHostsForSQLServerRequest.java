@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,6 +20,8 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -31,7 +35,9 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
     /**
      * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Separate multiple entries with semicolon (;).</p>
      * <br>
-     * <p>>  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](~~124321~~).</p>
+     * <p>>  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](https://help.aliyun.com/document_detail/124321.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityIpHosts")
     public String securityIpHosts;
@@ -41,6 +47,8 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
 
     /**
      * <p>The name of the IP address whitelist.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WhiteListGroupName")
     public String whiteListGroupName;

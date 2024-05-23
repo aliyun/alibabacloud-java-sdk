@@ -10,10 +10,10 @@ public class ModifyCollationTimeZoneRequest extends TeaModel {
      * <p>*   **Chinese_PRC_CI_AS**</p>
      * <p>*   **Chinese_PRC_CS_AS**</p>
      * <p>*   **Chinese_PRC_BIN**</p>
-     * <p>*   **Latin1\_General_CI_AS**</p>
-     * <p>*   **Latin1\_General_CS_AS**</p>
-     * <p>*   **SQL_Latin1\_General_CP1\_CI_AS**</p>
-     * <p>*   **SQL_Latin1\_General_CP1\_CS_AS**</p>
+     * <p>*   **Latin1_General_CI_AS**</p>
+     * <p>*   **Latin1_General_CS_AS**</p>
+     * <p>*   **SQL_Latin1_General_CP1_CI_AS**</p>
+     * <p>*   **SQL_Latin1_General_CP1_CS_AS**</p>
      * <p>*   **Japanese_CI_AS**</p>
      * <p>*   **Japanese_CS_AS**</p>
      * <p>*   **Chinese_Taiwan_Stroke_CI_AS**</p>
@@ -30,6 +30,8 @@ public class ModifyCollationTimeZoneRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

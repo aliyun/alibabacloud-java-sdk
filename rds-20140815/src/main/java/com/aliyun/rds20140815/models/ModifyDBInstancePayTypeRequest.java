@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyDBInstancePayTypeRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The billing method of the instance. The value is fixed as **Prepaid**, which indicates the subscription billing method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -21,6 +25,8 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
      * <br>
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Period")
     public String period;

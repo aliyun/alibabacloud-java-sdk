@@ -20,6 +20,8 @@ public class RestoreTableRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -30,7 +32,7 @@ public class RestoreTableRequest extends TeaModel {
      * <p>*   **true**: enables the feature.</p>
      * <p>*   **false**: disables the feature.</p>
      * <br>
-     * <p>> For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](~~103175~~).</p>
+     * <p>> For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/103175.html).</p>
      */
     @NameInMap("InstantRecovery")
     public Boolean instantRecovery;
@@ -51,13 +53,15 @@ public class RestoreTableRequest extends TeaModel {
      * <p>The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
      * <p>> *   You must specify at least one of **BackupId** and **RestoreTime**.</p>
-     * <p>> *   You must enable the log backup feature. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).</p>
+     * <p>> *   You must enable the log backup feature. For more information, see [Back up an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98818.html).</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     /**
      * <p>The names of the databases and tables that you want to restore. The value is in the following format: `[{"type":"db","name":"<The name of Database 1 on the source instance>","newname":"<The name of Database 1 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 1 in Database 1 on the source instance>","newname":"<The name of Table 1 in Database 1 on the destination instance>"},{"type":"table","name":"<The name of Table 2 in Database 1 on the source instance>","newname":"<The name of Table 2 in Database 1 on the destination instance>"}]},{"type":"db","name":"<The name of Database 2 on the source instance>","newname":"<The name of Database 2 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 3 in Database 2 on the source instance>","newname":"<The name of Table 3 in Database 2 on the destination instance>"},{"type":"table","name":"<The name of Table 4 in Database 2 on the source instance>","newname":"<The name of Table 4 in Database 2 on the destination instance>"}]}]`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TableMeta")
     public String tableMeta;

@@ -12,18 +12,24 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
      * <p>The dedicated proxy endpoint of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbProxyConnectString")
     public String dbProxyConnectString;
 
     /**
      * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbProxyEndpointId")
     public String dbProxyEndpointId;
@@ -36,6 +42,8 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
      * <p>*   2: updates the validity period of the SSL certificate.</p>
      * <br>
      * <p>> This setting causes your instance to restart. Proceed with caution.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbProxySslEnabled")
     public String dbProxySslEnabled;

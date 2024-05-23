@@ -25,6 +25,8 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -87,7 +89,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <p>*   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
      * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
      * <br>
-     * <p>> You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](~~96076~~) and [Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](~~418272~~).</p>
+     * <p>> You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/96076.html) and [Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418272.html).</p>
      */
     @NameInMap("ReadOnlyInstanceDistributionType")
     public String readOnlyInstanceDistributionType;
