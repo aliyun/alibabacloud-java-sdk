@@ -4,15 +4,27 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class FlinkApiProxyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("flinkApiPath")
     public String flinkApiPath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resourceId")
     public String resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

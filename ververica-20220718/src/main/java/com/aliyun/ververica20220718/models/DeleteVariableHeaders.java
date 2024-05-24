@@ -7,6 +7,9 @@ public class DeleteVariableHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 
