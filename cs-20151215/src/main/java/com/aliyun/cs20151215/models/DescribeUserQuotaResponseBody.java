@@ -29,6 +29,8 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public Long clusterQuota;
 
     /**
+     * <p>This parameter is deprecated.</p>
+     * <br>
      * <p>The quota of enhanced edge node pools.</p>
      */
     @NameInMap("edge_improved_nodepool_quota")
@@ -109,18 +111,24 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
 
     public static class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota extends TeaModel {
         /**
+         * <p>This parameter is deprecated.</p>
+         * <br>
          * <p>The maximum bandwidth of each enhanced node pool. Unit: Mbit/s.</p>
          */
         @NameInMap("bandwidth")
         public Integer bandwidth;
 
         /**
+         * <p>This parameter is deprecated.</p>
+         * <br>
          * <p>The quota of enhanced edge node pools that belong to an Alibaba Cloud account.</p>
          */
         @NameInMap("count")
         public Integer count;
 
         /**
+         * <p>This parameter is deprecated.</p>
+         * <br>
          * <p>The maximum subscription duration of an enhanced edge node pool. Unit: months.</p>
          * <br>
          * <p>> You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.</p>
