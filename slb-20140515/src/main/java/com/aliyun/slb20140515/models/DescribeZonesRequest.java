@@ -18,6 +18,8 @@ public class DescribeZonesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

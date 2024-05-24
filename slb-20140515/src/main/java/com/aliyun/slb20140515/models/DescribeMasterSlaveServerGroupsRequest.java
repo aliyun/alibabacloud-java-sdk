@@ -21,6 +21,8 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The CLB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,6 +35,8 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

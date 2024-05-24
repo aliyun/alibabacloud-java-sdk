@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RemoveListenerWhiteListItemRequest extends TeaModel {
     /**
      * <p>The listening port.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -20,6 +22,8 @@ public class RemoveListenerWhiteListItemRequest extends TeaModel {
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,7 +37,7 @@ public class RemoveListenerWhiteListItemRequest extends TeaModel {
     /**
      * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,6 +52,8 @@ public class RemoveListenerWhiteListItemRequest extends TeaModel {
      * <p>The list of IP addresses or CIDR blocks that you want to remove from the whitelist. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
      * <br>
      * <p>>  If all IP addresses are removed from the whitelist, the listener does not forward requests.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceItems")
     public String sourceItems;

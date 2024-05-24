@@ -17,7 +17,7 @@ public class RemoveVServerGroupBackendServersRequest extends TeaModel {
      * <br>
      * <p>*   **Weight**: the weight of the backend server. Valid values: **0 to 100**.</p>
      * <br>
-     * <p>*   **Description**: the description of the backend server. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     * <p>*   **Description**: the description of the backend server. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
      * <br>
      * <p>*   **Type**: the type of backend server. Valid values:</p>
      * <br>
@@ -25,6 +25,8 @@ public class RemoveVServerGroupBackendServersRequest extends TeaModel {
      * <p>    *   **eni**: an ENI.</p>
      * <br>
      * <p>*   **ServerIp**: the IP address of the ECS instance or ENI.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
@@ -37,6 +39,8 @@ public class RemoveVServerGroupBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,6 +53,8 @@ public class RemoveVServerGroupBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the vServer group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

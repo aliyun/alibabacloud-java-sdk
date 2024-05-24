@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteAccessControlListRequest extends TeaModel {
     /**
      * <p>The ACL ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -19,7 +21,9 @@ public class DeleteAccessControlListRequest extends TeaModel {
     /**
      * <p>The region ID of the ACL.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

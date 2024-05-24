@@ -16,6 +16,8 @@ public class DeleteAccessLogsDownloadAttributeRequest extends TeaModel {
      * <p>*   **LogProject**: the name of the project of Log Service.</p>
      * <p>*   **LogStore**: the name of the Logstore of Log Service.</p>
      * <p>*   **LoadBalancerId**: the ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogsDownloadAttributes")
     public String logsDownloadAttributes;
@@ -28,6 +30,8 @@ public class DeleteAccessLogsDownloadAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -49,7 +49,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The name of the listener.</p>
      * <br>
-     * <p>The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     * <p>The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -101,12 +101,16 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
      * <p>The frontend port used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -148,7 +152,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the CLB instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

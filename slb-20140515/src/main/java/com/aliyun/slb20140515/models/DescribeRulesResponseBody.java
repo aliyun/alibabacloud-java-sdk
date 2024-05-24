@@ -85,9 +85,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         /**
          * <p>The domain name that is used for health checks. Valid values:</p>
          * <br>
-         * <p>*   **$\_ip**: The private IP address of the backend server.</p>
+         * <p>*   **$_ip**: The private IP address of the backend server.</p>
          * <br>
-         * <p>    If you do not set this parameter or set the parameter to $\_ip, the SLB instance uses the private IP address of each backend server as the domain name for health checks.</p>
+         * <p>    If you do not set this parameter or set the parameter to $_ip, the SLB instance uses the private IP address of each backend server as the domain name for health checks.</p>
          * <br>
          * <p>*   **domain**: The domain name must be 1 to 80 characters in length. The domain name can contain only letters, digits, periods (.),and hyphens (-).</p>
          * <br>
@@ -97,9 +97,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String healthCheckDomain;
 
         /**
-         * <p>The HTTP status code that indicates a successful health check. Multiple HTTP status codes are separated by commas (,). Default value: **http\_2xx**.</p>
+         * <p>The HTTP status code that indicates a successful health check. Multiple HTTP status codes are separated by commas (,). Default value: **http_2xx**.</p>
          * <br>
-         * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+         * <p>Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.</p>
          * <br>
          * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
          */
@@ -162,7 +162,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The name of the forwarding rule. The name must be 1 to 80 characters in length, and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+         * <p>The name of the forwarding rule. The name must be 1 to 80 characters in length, and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
          * <br>
          * <p>>  The name of each forwarding rule must be unique within a listener.</p>
          */

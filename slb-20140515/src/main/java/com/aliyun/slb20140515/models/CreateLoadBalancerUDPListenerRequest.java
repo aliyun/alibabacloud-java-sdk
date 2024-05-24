@@ -51,6 +51,8 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
      * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
      * <br>
      * <p>**-1**: For a pay-by-data-transfer Internet-facing CLB instance, you can set this parameter to **-1**. This way, the bandwidth of the listener is unlimited.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -58,7 +60,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     /**
      * <p>The name of the listener.</p>
      * <br>
-     * <p>The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     * <p>The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -104,12 +106,16 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
      * <p>The frontend port used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

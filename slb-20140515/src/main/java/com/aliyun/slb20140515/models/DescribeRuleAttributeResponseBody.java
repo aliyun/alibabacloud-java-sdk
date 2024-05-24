@@ -53,7 +53,7 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
      * <br>
-     * <p>*   **$\_ip**: The private IP address of the backend server. If the $\_ip parameter is set or the HealthCheckDomain parameter is not set, SLB uses the private IP addresses of backend servers as the domain names for health checks.</p>
+     * <p>*   **$_ip**: The private IP address of the backend server. If the $_ip parameter is set or the HealthCheckDomain parameter is not set, SLB uses the private IP addresses of backend servers as the domain names for health checks.</p>
      * <p>*   **domain**: The domain name must be 1 to 80 characters in length. It can contain only letters, digits, periods (.),and hyphens (-).</p>
      * <br>
      * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
@@ -62,9 +62,9 @@ public class DescribeRuleAttributeResponseBody extends TeaModel {
     public String healthCheckDomain;
 
     /**
-     * <p>The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http\_2xx**.</p>
+     * <p>The HTTP status code that indicates a successful health check. Separate multiple HTTP status codes with commas (,). Default value: **http_2xx**.</p>
      * <br>
-     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <p>Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.</p>
      * <br>
      * <p>>  If you set the **HealthCheck** parameter to **on**, this parameter is required.</p>
      */

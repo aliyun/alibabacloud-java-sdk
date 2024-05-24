@@ -102,7 +102,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * <p>The CLB instance name.</p>
      * <br>
-     * <p>The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
      * <br>
      * <p>If you do not specify this parameter, the system automatically assigns a name to the CLB instance.</p>
      */
@@ -142,7 +142,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String masterZoneId;
 
     /**
-     * <p>The reason for enabling the configuration read-only mode. The reason must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The reason for enabling the configuration read-only mode. The reason must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>>  This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.</p>
      */
@@ -189,6 +189,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * <p>The region ID of the CLB instance.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

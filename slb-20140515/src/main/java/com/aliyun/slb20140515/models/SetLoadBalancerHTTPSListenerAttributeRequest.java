@@ -123,7 +123,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
      * <br>
-     * <p>*   **$\_ip**: the private IP address of a backend server. If you do not set this parameter or set the parameter to $\_ip, the CLB instance uses the private IP address of each backend server as the domain name for health checks.</p>
+     * <p>*   **$_ip**: the private IP address of a backend server. If you do not set this parameter or set the parameter to $_ip, the CLB instance uses the private IP address of each backend server as the domain name for health checks.</p>
      * <p>*   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.),and hyphens (-).</p>
      * <br>
      * <p>>  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
@@ -134,7 +134,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     /**
      * <p>The HTTP status code of a successful health check. Separate multiple HTTP status codes with commas (,).</p>
      * <br>
-     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <p>Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.</p>
      * <br>
      * <p>>  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
      */
@@ -203,12 +203,16 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
      * <p>The frontend port that is used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -222,7 +226,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -284,35 +288,35 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     /**
      * <p>The Transport Layer Security (TLS) security policy. Each security policy contains TLS protocol versions and cipher suites available for HTTPS.</p>
      * <br>
-     * <p>*   **tls_cipher_policy\_1\_0**:</p>
+     * <p>*   **tls_cipher_policy_1_0**:</p>
      * <br>
      * <p>    Supported TLS versions: TLS 1.0, TLS 1.1, and TLS 1.2</p>
      * <br>
      * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
      * <br>
-     * <p>*   **tls_cipher_policy\_1\_1**:</p>
+     * <p>*   **tls_cipher_policy_1_1**:</p>
      * <br>
      * <p>    Supported TLS versions: TLS 1.1 and TLS 1.2</p>
      * <br>
      * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
      * <br>
-     * <p>*   **tls_cipher_policy\_1\_2**</p>
+     * <p>*   **tls_cipher_policy_1_2**</p>
      * <br>
      * <p>    Supported TLS version: TLS 1.2</p>
      * <br>
      * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
      * <br>
-     * <p>*   **tls_cipher_policy\_1\_2\_strict**</p>
+     * <p>*   **tls_cipher_policy_1_2_strict**</p>
      * <br>
      * <p>    Supported TLS version: TLS 1.2</p>
      * <br>
      * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
      * <br>
-     * <p>*   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**</p>
+     * <p>*   **tls_cipher_policy_1_2_strict_with_1_3**</p>
      * <br>
      * <p>    Supported TLS versions: TLS 1.2 and TLS 1.3</p>
      * <br>
-     * <p>    Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
+     * <p>    Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
      */
     @NameInMap("TLSCipherPolicy")
     public String TLSCipherPolicy;
@@ -351,6 +355,12 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
+    /**
+     * <p>Specifies whether to use the `XForwardedFor_ClientSrcPort` header to retrieve the client port. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("XForwardedFor_ClientSrcPort")
     public String XForwardedFor_ClientSrcPort;
 
@@ -372,6 +382,12 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
 
+    /**
+     * <p>Specifies whether to use the `XForwardedFor_SLBPORT` header to retrieve the listener port of the CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("XForwardedFor_SLBPORT")
     public String XForwardedFor_SLBPORT;
 

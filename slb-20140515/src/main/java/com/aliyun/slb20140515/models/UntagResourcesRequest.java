@@ -21,13 +21,17 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Server Load Balancer (SLB) instance is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource. Valid values of N: 1 to 20.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -44,6 +48,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>*   **instance**: an SLB instance</p>
      * <p>*   **certificate**: a certificate</p>
      * <p>*   **acl**: a network access control list (ACL)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -20,7 +20,7 @@ public class AddVServerGroupBackendServersRequest extends TeaModel {
      * <p>    *   **ecs**: an ECS instance. This is the default value.</p>
      * <p>    *   **eni**: an ENI.</p>
      * <br>
-     * <p>*   **Description**: Optional. The description of the backend server. This parameter is of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     * <p>*   **Description**: Optional. The description of the backend server. This parameter is of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
      * <br>
      * <p>*   **ServerIp**: The IP address of the ECS instance or ENI.</p>
      * <br>
@@ -29,6 +29,8 @@ public class AddVServerGroupBackendServersRequest extends TeaModel {
      * <p>*   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `</p>
      * <p>*   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168. **. **", "Port":"80","Description":"test-112" }] `</p>
      * <p>*   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168. **. **", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166. **. **", "Port":"80","Description":"test-113" }] `</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
@@ -41,6 +43,8 @@ public class AddVServerGroupBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,6 +57,8 @@ public class AddVServerGroupBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the server group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

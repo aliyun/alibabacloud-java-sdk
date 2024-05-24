@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeVServerGroupsRequest extends TeaModel {
+    /**
+     * <p>The name of the vServer group.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -27,6 +30,8 @@ public class DescribeVServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -40,7 +45,9 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

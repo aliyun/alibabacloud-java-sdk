@@ -29,6 +29,8 @@ public class AddAccessControlListEntryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

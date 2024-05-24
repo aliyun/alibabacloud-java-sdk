@@ -8,6 +8,8 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
      * <p>The listener port of the SLB instance.</p>
      * <br>
      * <p>Valid values: **1 to 65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -22,6 +24,8 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
 
     /**
      * <p>The ID of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -35,7 +39,7 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
     /**
      * <p>The region where the SLB instance is deployed.</p>
      * <br>
-     * <p>You can retrieve the region ID by calling the [DescribeRegions](~~27584~~) operation.</p>
+     * <p>You can retrieve the region ID by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

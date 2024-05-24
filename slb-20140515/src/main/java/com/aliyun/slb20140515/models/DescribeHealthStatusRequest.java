@@ -22,6 +22,8 @@ public class DescribeHealthStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

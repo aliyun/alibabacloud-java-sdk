@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateAccessControlListRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform. Set the value to **CreateAccessControlList**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclName")
     public String aclName;
@@ -24,12 +26,14 @@ public class CreateAccessControlListRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the ACL that you create must be unique within each region.</p>
+     * <p>The name of the ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of the ACL that you create must be unique within each region.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

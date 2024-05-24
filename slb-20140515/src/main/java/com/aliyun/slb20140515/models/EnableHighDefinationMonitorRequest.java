@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class EnableHighDefinationMonitorRequest extends TeaModel {
     /**
      * <p>The name of the project of Log Service. The name must be 4 to 63 characters in length, and can contain digits and lowercase letters. It must start and end with a digit or a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
-     * <p>The name of the Logstore of Log Service. The name must be 2 to 64 characters in length and can contain digits, lowercase letters, hyphens (-) and underscores (\_). It must start and end with a digit or a letter.</p>
+     * <p>The name of the Logstore of Log Service. The name must be 2 to 64 characters in length and can contain digits, lowercase letters, hyphens (-) and underscores (_). It must start and end with a digit or a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogStore")
     public String logStore;
@@ -25,7 +29,9 @@ public class EnableHighDefinationMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

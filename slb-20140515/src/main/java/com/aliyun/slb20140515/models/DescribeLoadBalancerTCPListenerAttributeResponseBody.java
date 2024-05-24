@@ -109,7 +109,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
      * <br>
-     * <p>*   **$\_ip**: the private IP addresses of backend servers. If you do not set the HealthCheckDomain parameter or set the parameter to $\_ip, the CLB instance uses the private IP address of each backend server for health checks.</p>
+     * <p>*   **$_ip**: the private IP addresses of backend servers. If you do not set the HealthCheckDomain parameter or set the parameter to $_ip, the CLB instance uses the private IP address of each backend server for health checks.</p>
      * <p>*   **domain**: The domain name is 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
      */
     @NameInMap("HealthCheckDomain")

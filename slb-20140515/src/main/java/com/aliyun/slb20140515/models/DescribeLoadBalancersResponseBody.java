@@ -250,7 +250,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         public String masterZoneId;
 
         /**
-         * <p>The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         * <p>The reason why the configuration read-only mode was enabled. The reason must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
          * <br>
          * <p>> This parameter takes effect only when you set the `ModificationProtectionStatus` parameter to **ConsoleProtection**.</p>
          */

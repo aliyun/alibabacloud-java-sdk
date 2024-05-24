@@ -8,6 +8,8 @@ public class AddTagsRequest extends TeaModel {
      * <p>The name of this action.</p>
      * <br>
      * <p>Value: **AddTags**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -20,6 +22,8 @@ public class AddTagsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,6 +36,8 @@ public class AddTagsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
     public String tags;

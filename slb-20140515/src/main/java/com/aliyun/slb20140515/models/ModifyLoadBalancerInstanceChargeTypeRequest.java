@@ -16,6 +16,8 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
      * <p>The metering method of the instance after the change.</p>
      * <br>
      * <p>Valid value: **PayByCLCU**. Only pay-by-LCU is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -33,6 +35,8 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -54,7 +58,9 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The region ID of the CLB instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

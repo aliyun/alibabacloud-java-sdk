@@ -23,12 +23,16 @@ public class RemoveBackendServersRequest extends TeaModel {
      * <br>
      * <p>*   Remove an ECS instance: `[{"ServerId":"i-bp1fq61enf4loa5i****", "Type": "ecs","Weight":"100"}]`</p>
      * <p>*   Remove an ENI: `[{"ServerId":"eni-2ze1sdp5****","Type": "eni","Weight":"100"}]`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
