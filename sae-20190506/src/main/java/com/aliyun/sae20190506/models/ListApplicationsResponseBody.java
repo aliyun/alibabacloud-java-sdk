@@ -431,6 +431,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("MseEnabled")
         public Boolean mseEnabled;
 
+        @NameInMap("MseNamespaceId")
+        public String mseNamespaceId;
+
         /**
          * <p>demo-app</p>
          */
@@ -541,6 +544,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Boolean getMseEnabled() {
             return this.mseEnabled;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setMseNamespaceId(String mseNamespaceId) {
+            this.mseNamespaceId = mseNamespaceId;
+            return this;
+        }
+        public String getMseNamespaceId() {
+            return this.mseNamespaceId;
         }
 
         public ListApplicationsResponseBodyDataApplications setNamespaceId(String namespaceId) {
