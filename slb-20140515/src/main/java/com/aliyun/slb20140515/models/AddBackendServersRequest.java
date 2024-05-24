@@ -13,7 +13,7 @@ public class AddBackendServersRequest extends TeaModel {
      * <br>
      * <p>    If the value is set to 0, no requests are forwarded to the backend server.</p>
      * <br>
-     * <p>*   **Description**: Optional. The description of the backend server. This value must be a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     * <p>*   **Description**: Optional. The description of the backend server. This value must be a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
      * <br>
      * <p>*   **Type**: the type of the backend server. Valid values:</p>
      * <br>
@@ -29,9 +29,9 @@ public class AddBackendServersRequest extends TeaModel {
      * <p>Examples:</p>
      * <br>
      * <p>*   ECS instance: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-113" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }]`</p>
-     * <p>*   Elastic container instance: `[{ "ServerId": "eci-xxxxxxxxx", "Weight": "100", "Type": "eci", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-114" }]`</p>
+     * <p>*   ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }]`</p>
+     * <p>*   ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-113" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }]`</p>
+     * <p>*   Elastic container instance: `[{ "ServerId": "eci-xxxxxxxxx", "Weight": "100", "Type": "eci", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-114" }]`</p>
      * <br>
      * <p>>  The backend servers that you add to a CLB instance must be in the Running state. You can add at most 20 backend servers to a CLB instance in each request.</p>
      */
@@ -40,6 +40,8 @@ public class AddBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -53,7 +55,7 @@ public class AddBackendServersRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

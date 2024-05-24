@@ -13,7 +13,7 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     /**
      * <p>The region where the CLB instances are deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
      * <br>
      * <p>>  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.</p>
      */

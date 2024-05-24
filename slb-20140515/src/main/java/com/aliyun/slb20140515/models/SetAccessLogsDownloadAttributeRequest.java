@@ -16,6 +16,8 @@ public class SetAccessLogsDownloadAttributeRequest extends TeaModel {
      * <p>*   **LogProject**: the name of the project.</p>
      * <p>*   **LogStore**: the name of the Logstore.</p>
      * <p>*   **LoadBalancerId**: the ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogsDownloadAttributes")
     public String logsDownloadAttributes;
@@ -29,7 +31,9 @@ public class SetAccessLogsDownloadAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

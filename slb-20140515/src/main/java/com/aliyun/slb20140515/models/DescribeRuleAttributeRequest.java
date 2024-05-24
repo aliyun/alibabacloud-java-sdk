@@ -13,7 +13,9 @@ public class DescribeRuleAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,6 +28,8 @@ public class DescribeRuleAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the forwarding rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

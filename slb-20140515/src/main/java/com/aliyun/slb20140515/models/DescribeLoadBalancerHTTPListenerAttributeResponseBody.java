@@ -207,7 +207,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
      * <p>The routing algorithm. Valid values:</p>
      * <br>
      * <p>*   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</p>
-     * <p>*   \*\* rr\*\*: Requests are sequentially distributed to backend servers.</p>
+     * <p>*   \\*\\* rr\\*\\*: Requests are sequentially distributed to backend servers.</p>
      */
     @NameInMap("Scheduler")
     public String scheduler;
@@ -284,6 +284,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
+    /**
+     * <p>Indicates whether the `XForwardedFor_ClientSrcPort` header is used to retrieve the client port. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("XForwardedFor_ClientSrcPort")
     public String XForwardedFor_ClientSrcPort;
 
@@ -305,6 +311,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
 
+    /**
+     * <p>Indicates whether the `XForwardedFor_SLBPORT` header is used to retrieve the listener port of the CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("XForwardedFor_SLBPORT")
     public String XForwardedFor_SLBPORT;
 
@@ -644,7 +656,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
 
     public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule extends TeaModel {
         /**
-         * <p>The endpoint.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("Domain")
         public String domain;
@@ -662,13 +674,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         public String ruleName;
 
         /**
-         * <p>The request path.</p>
+         * <p>The request URL.</p>
          */
         @NameInMap("Url")
         public String url;
 
         /**
-         * <p>The ID of the server group that is associated with the forwarding rule.</p>
+         * <p>The ID of the server group specified in the forwarding rule.</p>
          */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
@@ -741,13 +753,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
 
     public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: **1** to **20**. The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N. Valid values of N: **1** to **20**. The tag key cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of tag N. Valid values of N: **1** to **20**. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N. Valid values of N: **1** to **20**. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

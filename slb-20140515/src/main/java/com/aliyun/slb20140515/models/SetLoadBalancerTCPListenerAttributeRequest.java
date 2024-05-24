@@ -66,7 +66,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The name of the listener.</p>
      * <br>
-     * <p>The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     * <p>The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -100,7 +100,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The domain name that is used for health checks. You can set this parameter when the TCP listener requires HTTP health checks. If you do not set this parameter, TCP health checks are performed.</p>
      * <br>
-     * <p>*   **$\_ip**: the private IP addresses of the backend servers.</p>
+     * <p>*   **$_ip**: the private IP addresses of the backend servers.</p>
      * <br>
      * <p>    If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the CLB instance uses the private IP addresses of backend servers for health checks.</p>
      * <br>
@@ -112,7 +112,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).</p>
      * <br>
-     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <p>Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.</p>
      */
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
@@ -162,12 +162,16 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
      * <p>The frontend port used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -217,7 +221,7 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the CLB instance.</p>
      * <br>
-     * <p>You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~DescribeRegions~~) operation.</p>
+     * <p>You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](~~DescribeRegions~~) operation.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

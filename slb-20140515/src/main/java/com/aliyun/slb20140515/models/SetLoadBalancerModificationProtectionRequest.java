@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class SetLoadBalancerModificationProtectionRequest extends TeaModel {
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <br>
      * <p>>  This parameter is valid only if the **ModificationProtectionStatus** parameter is set to **ConsoleProtection**.</p>
      */
@@ -25,6 +27,8 @@ public class SetLoadBalancerModificationProtectionRequest extends TeaModel {
      * <p>*   **ConsoleProtection**: enables the configuration read-only mode.</p>
      * <br>
      * <p>>  If you set this parameter to **ConsoleProtection**, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
@@ -38,7 +42,9 @@ public class SetLoadBalancerModificationProtectionRequest extends TeaModel {
     /**
      * <p>The region ID of the CLB instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

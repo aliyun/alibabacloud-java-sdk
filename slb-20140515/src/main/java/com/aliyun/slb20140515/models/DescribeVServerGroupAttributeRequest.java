@@ -12,6 +12,8 @@ public class DescribeVServerGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -24,6 +26,8 @@ public class DescribeVServerGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the vServer group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsRequest extends TeaModel {
     /**
-     * <p>The ACL name. The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of each ACL must be unique within a region. Fuzzy match is supported.</p>
+     * <p>The ACL name. The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (_). The name of each ACL must be unique within a region. Fuzzy match is supported.</p>
      */
     @NameInMap("AclName")
     public String aclName;
@@ -40,7 +40,9 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     /**
      * <p>The region ID of the ACL.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

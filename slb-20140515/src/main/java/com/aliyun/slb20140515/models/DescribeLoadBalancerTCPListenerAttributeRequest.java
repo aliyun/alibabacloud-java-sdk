@@ -8,12 +8,16 @@ public class DescribeLoadBalancerTCPListenerAttributeRequest extends TeaModel {
      * <p>The frontend port used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -27,7 +31,7 @@ public class DescribeLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the CLB instance.</p>
      * <br>
-     * <p>You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.</p>
+     * <p>You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/40654.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

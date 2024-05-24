@@ -45,7 +45,7 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     /**
      * <p>The name of the CLB instance.</p>
      * <br>
-     * <p>The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      * <br>
      * <p>You can specify up to 10 names. Separate multiple names with commas (,).</p>
      */
@@ -110,7 +110,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

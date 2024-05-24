@@ -11,6 +11,8 @@ public class SetListenerAccessControlStatusRequest extends TeaModel {
      * <p>*   **close**: disables the whitelist.</p>
      * <br>
      * <p>>  After the whitelist is enabled, if no IP address is added to the whitelist, the CLB instance does not distribute network traffic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessControlStatus")
     public String accessControlStatus;
@@ -19,6 +21,8 @@ public class SetListenerAccessControlStatusRequest extends TeaModel {
      * <p>The frontend port that is used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1 to 65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -33,6 +37,8 @@ public class SetListenerAccessControlStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -46,7 +52,7 @@ public class SetListenerAccessControlStatusRequest extends TeaModel {
     /**
      * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

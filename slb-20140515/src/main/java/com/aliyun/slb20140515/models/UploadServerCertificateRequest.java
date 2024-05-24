@@ -37,7 +37,9 @@ public class UploadServerCertificateRequest extends TeaModel {
     /**
      * <p>The region ID of the CLB instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,7 +65,7 @@ public class UploadServerCertificateRequest extends TeaModel {
     /**
      * <p>The name of the server certificate.</p>
      * <br>
-     * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;

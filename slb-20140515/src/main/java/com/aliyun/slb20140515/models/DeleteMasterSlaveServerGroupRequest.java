@@ -8,6 +8,8 @@ public class DeleteMasterSlaveServerGroupRequest extends TeaModel {
      * <p>The ID of the active/standby server group to be deleted.</p>
      * <br>
      * <p>>  An active/standby server group in use cannot be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
@@ -20,6 +22,8 @@ public class DeleteMasterSlaveServerGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

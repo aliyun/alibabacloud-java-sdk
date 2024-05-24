@@ -13,7 +13,9 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Server Load Balancer (SLB) instance is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,7 +23,9 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The resource ID. You can specify up to 20 IDs.</p>
      * <br>
-     * <p>>  The value of **ResourceId** of a **listener** is **LoadBalancerId\_ Listener protocol_Port**, where LoadBalancerId is the SLB instance ID and port is the listener port. Example: lb-bp1snb10sbml4mqty_http\_80.</p>
+     * <p>>  The value of **ResourceId** of a **listener** is **LoadBalancerId_ Listener protocol_Port**, where LoadBalancerId is the SLB instance ID and port is the listener port. Example: lb-bp1snb10sbml4mqty_http_80.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -41,12 +45,16 @@ public class TagResourcesRequest extends TeaModel {
      * <p>*   **listener**: a listener</p>
      * <p>*   **vservergroup**: a vServer group</p>
      * <p>*   **masterslaveservergroup**: a primary/secondary server group</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;

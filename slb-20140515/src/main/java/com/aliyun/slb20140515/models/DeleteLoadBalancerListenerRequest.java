@@ -8,6 +8,8 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
      * <p>The frontend port that is used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1 to 65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -24,6 +26,8 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
      * <p>The ID of the CLB instance.</p>
      * <br>
      * <p>>  If the endpoint of the selected region is slb.aliyuncs.com, the **RegionId** parameter is required.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -37,7 +41,7 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
     /**
      * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

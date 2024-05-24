@@ -13,7 +13,7 @@ public class DeleteServerCertificateRequest extends TeaModel {
     /**
      * <p>The region where the Server Load Balancer (SLB) instance is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query region IDs.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query region IDs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,6 +26,8 @@ public class DeleteServerCertificateRequest extends TeaModel {
 
     /**
      * <p>The ID of the server certificate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetLoadBalancerNameRequest extends TeaModel {
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -13,7 +15,9 @@ public class SetLoadBalancerNameRequest extends TeaModel {
     /**
      * <p>The new name of the CLB instance.</p>
      * <br>
-     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
@@ -27,7 +31,7 @@ public class SetLoadBalancerNameRequest extends TeaModel {
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

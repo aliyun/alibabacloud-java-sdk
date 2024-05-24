@@ -13,7 +13,7 @@ public class ModifyVServerGroupBackendServersRequest extends TeaModel {
      * <br>
      * <p>*   **Weight**: required. The weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0 to 100**.</p>
      * <br>
-     * <p>*   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. The description can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     * <p>*   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. The description can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
      * <br>
      * <p>*   **Type**: the type of backend server. This parameter must be of the STRING type. Valid values:</p>
      * <br>
@@ -25,8 +25,8 @@ public class ModifyVServerGroupBackendServersRequest extends TeaModel {
      * <p>Examples:</p>
      * <br>
      * <p>*   An ECS instance: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }]`</p>
+     * <p>*   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }]`</p>
+     * <p>*   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }]`</p>
      */
     @NameInMap("NewBackendServers")
     public String newBackendServers;
@@ -40,7 +40,7 @@ public class ModifyVServerGroupBackendServersRequest extends TeaModel {
      * <br>
      * <p>*   **Weight**: required. The weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0 to 100**.</p>
      * <br>
-     * <p>*   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     * <p>*   **Description**: optional. The description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
      * <br>
      * <p>*   **Type**: the type of backend server. This parameter must be of the STRING type. Valid values:</p>
      * <br>
@@ -52,8 +52,8 @@ public class ModifyVServerGroupBackendServersRequest extends TeaModel {
      * <p>Examples:</p>
      * <br>
      * <p>*   An ECS instance: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }]`</p>
-     * <p>*   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }]`</p>
+     * <p>*   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }]`</p>
+     * <p>*   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }]`</p>
      */
     @NameInMap("OldBackendServers")
     public String oldBackendServers;
@@ -66,6 +66,8 @@ public class ModifyVServerGroupBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,6 +80,8 @@ public class ModifyVServerGroupBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the vServer group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

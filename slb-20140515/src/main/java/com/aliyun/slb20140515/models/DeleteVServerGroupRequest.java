@@ -12,6 +12,8 @@ public class DeleteVServerGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,6 +28,8 @@ public class DeleteVServerGroupRequest extends TeaModel {
      * <p>The ID of the VServer group to be deleted.</p>
      * <br>
      * <p>>  If the VServer group is in use, it cannot be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

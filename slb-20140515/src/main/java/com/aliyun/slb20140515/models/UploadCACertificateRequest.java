@@ -8,6 +8,8 @@ public class UploadCACertificateRequest extends TeaModel {
      * <p>The name of this action.</p>
      * <br>
      * <p>Value: **UploadCACertificate**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CACertificate")
     public String CACertificate;
@@ -15,7 +17,7 @@ public class UploadCACertificateRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the CA certificate belongs.</p>
      * <br>
-     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
+     * <p>To query the region ID, call [DescribeRegions](https://help.aliyun.com/document_detail/27584.html).</p>
      */
     @NameInMap("CACertificateName")
     public String CACertificateName;
@@ -28,6 +30,8 @@ public class UploadCACertificateRequest extends TeaModel {
 
     /**
      * <p>The region id.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

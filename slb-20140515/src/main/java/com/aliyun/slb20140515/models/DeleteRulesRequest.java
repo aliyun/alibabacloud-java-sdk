@@ -13,7 +13,9 @@ public class DeleteRulesRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query region IDs.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query region IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,6 +30,8 @@ public class DeleteRulesRequest extends TeaModel {
      * <p>The list of forwarding rules that you want to delete.</p>
      * <br>
      * <p>>  The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleIds")
     public String ruleIds;

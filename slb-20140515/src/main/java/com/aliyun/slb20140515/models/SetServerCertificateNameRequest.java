@@ -11,9 +11,9 @@ public class SetServerCertificateNameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the Server Load Balancer (SLB) instance belongs.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/2401682.html) operation to query the most recent region list.</p>
      * <br>
-     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,14 +26,16 @@ public class SetServerCertificateNameRequest extends TeaModel {
 
     /**
      * <p>The ID of the server certificate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
     /**
-     * <p>The name of the server certificate.</p>
+     * <p>The name of the third-party server certificate that you want to upload. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), underscores (_), and asterisks (\\*).</p>
      * <br>
-     * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;

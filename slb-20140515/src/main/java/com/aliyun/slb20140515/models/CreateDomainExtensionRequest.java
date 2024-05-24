@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateDomainExtensionRequest extends TeaModel {
     /**
      * <p>The domain name to be created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -14,12 +16,16 @@ public class CreateDomainExtensionRequest extends TeaModel {
      * <p>The frontend port of the HTTPS listener.</p>
      * <br>
      * <p>Value range:** 1 to 65535**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -32,6 +38,8 @@ public class CreateDomainExtensionRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

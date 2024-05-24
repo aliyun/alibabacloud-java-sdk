@@ -44,7 +44,7 @@ public class SetRuleRequest extends TeaModel {
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
      * <br>
-     * <p>*   **$\_ip**: the private IP address of a backend server. If you do not set this parameter or set the parameter to $\_ip, the SLB instance uses the private IP address of each backend server for health checks.</p>
+     * <p>*   **$_ip**: the private IP address of a backend server. If you do not set this parameter or set the parameter to $_ip, the SLB instance uses the private IP address of each backend server for health checks.</p>
      * <p>*   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
      * <br>
      * <p>>  This parameter takes effect if the **HealthCheck** parameter is set to **on**.</p>
@@ -55,7 +55,7 @@ public class SetRuleRequest extends TeaModel {
     /**
      * <p>The HTTP status code for a successful health check. Multiple HTTP status codes are separated by commas (,).</p>
      * <br>
-     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <p>Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.</p>
      * <br>
      * <p>>  This parameter is required and takes effect if the **HealthCheck** parameter is set to **on**.</p>
      */
@@ -114,7 +114,9 @@ public class SetRuleRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -127,12 +129,14 @@ public class SetRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the forwarding rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
-     * <p>The name of the forwarding rule. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     * <p>The name of the forwarding rule. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
      * <br>
      * <p>>  Forwarding rule names must be unique within the same listener.</p>
      */

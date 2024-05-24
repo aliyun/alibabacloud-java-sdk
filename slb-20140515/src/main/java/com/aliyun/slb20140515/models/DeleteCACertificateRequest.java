@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteCACertificateRequest extends TeaModel {
     /**
      * <p>The CA certificate ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CACertificateId")
     public String CACertificateId;
@@ -19,7 +21,9 @@ public class DeleteCACertificateRequest extends TeaModel {
     /**
      * <p>The region of the CA certificates.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

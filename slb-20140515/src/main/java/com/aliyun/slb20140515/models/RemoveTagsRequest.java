@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RemoveTagsRequest extends TeaModel {
     /**
      * <p>The ID of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -18,6 +20,8 @@ public class RemoveTagsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,6 +34,8 @@ public class RemoveTagsRequest extends TeaModel {
 
     /**
      * <p>A list of tags to be removed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
     public String tags;

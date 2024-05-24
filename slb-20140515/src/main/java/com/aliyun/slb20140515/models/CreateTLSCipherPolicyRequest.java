@@ -41,17 +41,21 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
      * <br>
      * <p>TLS 1.3 supports the following cipher suites:</p>
      * <br>
-     * <p>*   **TLS_AES\_128\_GCM_SHA256**</p>
-     * <p>*   **TLS_AES\_256\_GCM_SHA384**</p>
-     * <p>*   **TLS_CHACHA20\_POLY1305\_SHA256**</p>
-     * <p>*   **TLS_AES\_128\_CCM_SHA256**</p>
-     * <p>*   **TLS_AES\_128\_CCM\_8\_SHA256**</p>
+     * <p>*   **TLS_AES_128_GCM_SHA256**</p>
+     * <p>*   **TLS_AES_256_GCM_SHA384**</p>
+     * <p>*   **TLS_CHACHA20_POLY1305_SHA256**</p>
+     * <p>*   **TLS_AES_128_CCM_SHA256**</p>
+     * <p>*   **TLS_AES_128_CCM_8_SHA256**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ciphers")
     public java.util.List<String> ciphers;
 
     /**
-     * <p>The name of the TLS policy. The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the TLS policy. The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -65,7 +69,9 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Server Load Balancer (SLB) instance is created.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,6 +84,8 @@ public class CreateTLSCipherPolicyRequest extends TeaModel {
 
     /**
      * <p>The version of the TLS protocol. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**. You can specify at most four TLS versions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TLSVersions")
     public java.util.List<String> TLSVersions;

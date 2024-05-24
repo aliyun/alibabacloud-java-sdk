@@ -15,7 +15,7 @@ public class CreateVServerGroupRequest extends TeaModel {
      * <br>
      * <p>*   **Weight**: Required. Specify the weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0** to **100**.</p>
      * <br>
-     * <p>*   **Description**: Optional. Specify the description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     * <p>*   **Description**: Optional. Specify the description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
      * <br>
      * <p>*   **Type**: Specify the type of the backend server. This parameter must be of the STRING type. Valid values:</p>
      * <br>
@@ -27,14 +27,16 @@ public class CreateVServerGroupRequest extends TeaModel {
      * <p>Examples:</p>
      * <br>
      * <p>*   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `</p>
-     * <p>*   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }] `</p>
-     * <p>*   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }] `</p>
+     * <p>*   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" }] `</p>
+     * <p>*   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.\*\*.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.\*\*.**", "Port":"80","Description":"test-113" }] `</p>
      */
     @NameInMap("BackendServers")
     public String backendServers;
 
     /**
      * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -47,6 +49,8 @@ public class CreateVServerGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the SLB instance is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -66,7 +70,7 @@ public class CreateVServerGroupRequest extends TeaModel {
     /**
      * <p>The name of the vServer group.</p>
      * <br>
-     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (_).</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;

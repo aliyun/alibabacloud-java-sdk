@@ -8,6 +8,8 @@ public class DescribeRulesRequest extends TeaModel {
      * <p>The frontend listener port that is used by the Server Load Balancer (SLB) instance.</p>
      * <br>
      * <p>Valid values: **1 to 65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -22,6 +24,8 @@ public class DescribeRulesRequest extends TeaModel {
 
     /**
      * <p>The ID of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -35,7 +39,9 @@ public class DescribeRulesRequest extends TeaModel {
     /**
      * <p>The ID of the region where the SLB instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

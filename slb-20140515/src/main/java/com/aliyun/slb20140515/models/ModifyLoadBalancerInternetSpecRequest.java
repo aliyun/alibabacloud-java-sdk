@@ -34,6 +34,8 @@ public class ModifyLoadBalancerInternetSpecRequest extends TeaModel {
 
     /**
      * <p>The ID of the CLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -47,7 +49,7 @@ public class ModifyLoadBalancerInternetSpecRequest extends TeaModel {
     /**
      * <p>The ID of the region where the CLB instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

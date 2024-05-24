@@ -7,13 +7,15 @@ public class DescribeAccessControlListAttributeRequest extends TeaModel {
     /**
      * <p>The remarks of the ACL entry.</p>
      * <br>
-     * <p>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
     /**
      * <p>The ID of the ACL.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -38,6 +40,8 @@ public class DescribeAccessControlListAttributeRequest extends TeaModel {
 
     /**
      * <p>The time when the network ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

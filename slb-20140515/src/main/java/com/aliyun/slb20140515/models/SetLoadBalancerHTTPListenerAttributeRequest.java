@@ -102,7 +102,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The domain name that is used for health checks. Valid values:</p>
      * <br>
-     * <p>*   **$\_ip**: the private IP address of a backend server. If you specify \*\*$\_ip **or** ignore HealthCheckDomain\*\*, CLB uses the private IP addresses of backend servers as the health check domain names.</p>
+     * <p>*   **$_ip**: the private IP address of a backend server. If you specify \\*\\*$_ip **or** ignore HealthCheckDomain\\*\\*, CLB uses the private IP addresses of backend servers as the health check domain names.</p>
      * <p>*   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
      * <br>
      * <p>> The parameter takes effect only if you set **HealthCheck** to **on**.</p>
@@ -113,7 +113,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).</p>
      * <br>
-     * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
+     * <p>Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.</p>
      * <br>
      * <p>>  The parameter takes effect only if you set **HealthCheck** to **on**.</p>
      */
@@ -180,12 +180,16 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      * <p>The frontend port that is used by the CLB instance.</p>
      * <br>
      * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The CLB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -199,7 +203,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the CLB instance.</p>
      * <br>
-     * <p>You can query the region ID from the [Regions and zones](~~27585~~) list or by calling the [DescribeRegions](~~27584~~) operation.</p>
+     * <p>You can query the region ID from the [Regions and zones](https://help.aliyun.com/document_detail/27585.html) list or by calling the [DescribeRegions](https://help.aliyun.com/document_detail/27584.html) operation.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -286,6 +290,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
+    /**
+     * <p>Specifies whether to use the `XForwardedFor_ClientSrcPort` header to retrieve the client port. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("XForwardedFor_ClientSrcPort")
     public String XForwardedFor_ClientSrcPort;
 
@@ -307,6 +317,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
 
+    /**
+     * <p>Specifies whether to use the `XForwardedFor_SLBPORT` header to retrieve the listener port of the CLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("XForwardedFor_SLBPORT")
     public String XForwardedFor_SLBPORT;
 
