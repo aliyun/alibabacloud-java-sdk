@@ -7,6 +7,9 @@ public class JobStartParameters extends TeaModel {
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    @NameInMap("localVariables")
+    public java.util.List<LocalVariable> localVariables;
+
     @NameInMap("resourceQueueName")
     public String resourceQueueName;
 
@@ -24,6 +27,14 @@ public class JobStartParameters extends TeaModel {
     }
     public String getDeploymentId() {
         return this.deploymentId;
+    }
+
+    public JobStartParameters setLocalVariables(java.util.List<LocalVariable> localVariables) {
+        this.localVariables = localVariables;
+        return this;
+    }
+    public java.util.List<LocalVariable> getLocalVariables() {
+        return this.localVariables;
     }
 
     public JobStartParameters setResourceQueueName(String resourceQueueName) {

@@ -4,12 +4,18 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class EngineVersionMetadata extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("engineVersion")
     public String engineVersion;
 
     @NameInMap("features")
     public EngineVersionSupportedFeatures features;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("status")
     public String status;
 

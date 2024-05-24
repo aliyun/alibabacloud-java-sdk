@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("deploymentId")
     public String deploymentId;
 
@@ -12,6 +15,9 @@ public class ListJobsRequest extends TeaModel {
 
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    @NameInMap("sortName")
+    public String sortName;
 
     public static ListJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobsRequest self = new ListJobsRequest();
@@ -40,6 +46,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListJobsRequest setSortName(String sortName) {
+        this.sortName = sortName;
+        return this;
+    }
+    public String getSortName() {
+        return this.sortName;
     }
 
 }

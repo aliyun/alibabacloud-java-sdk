@@ -3,7 +3,7 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteMemberResponse extends TeaModel {
+public class ListEditableNamespaceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteMemberResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteMemberResponseBody body;
+    public ListEditableNamespaceResponseBody body;
 
-    public static DeleteMemberResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteMemberResponse self = new DeleteMemberResponse();
+    public static ListEditableNamespaceResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListEditableNamespaceResponse self = new ListEditableNamespaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMemberResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListEditableNamespaceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteMemberResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteMemberResponse setStatusCode(Integer statusCode) {
+    public ListEditableNamespaceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteMemberResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteMemberResponse setBody(DeleteMemberResponseBody body) {
+    public ListEditableNamespaceResponse setBody(ListEditableNamespaceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteMemberResponseBody getBody() {
+    public ListEditableNamespaceResponseBody getBody() {
         return this.body;
     }
 

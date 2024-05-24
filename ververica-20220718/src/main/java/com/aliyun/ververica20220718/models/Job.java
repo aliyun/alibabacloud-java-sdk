@@ -10,6 +10,9 @@ public class Job extends TeaModel {
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
+    @NameInMap("createdAt")
+    public String createdAt;
+
     @NameInMap("creator")
     public String creator;
 
@@ -37,11 +40,17 @@ public class Job extends TeaModel {
     @NameInMap("jobId")
     public String jobId;
 
+    @NameInMap("localVariables")
+    public java.util.List<LocalVariable> localVariables;
+
     @NameInMap("logging")
     public Logging logging;
 
     @NameInMap("metric")
     public JobMetric metric;
+
+    @NameInMap("modifiedAt")
+    public String modifiedAt;
 
     @NameInMap("modifier")
     public String modifier;
@@ -70,6 +79,9 @@ public class Job extends TeaModel {
     @NameInMap("userFlinkConf")
     public java.util.Map<String, ?> userFlinkConf;
 
+    @NameInMap("workspace")
+    public String workspace;
+
     public static Job build(java.util.Map<String, ?> map) throws Exception {
         Job self = new Job();
         return TeaModel.build(map, self);
@@ -89,6 +101,14 @@ public class Job extends TeaModel {
     }
     public BatchResourceSetting getBatchResourceSetting() {
         return this.batchResourceSetting;
+    }
+
+    public Job setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    public String getCreatedAt() {
+        return this.createdAt;
     }
 
     public Job setCreator(String creator) {
@@ -163,6 +183,14 @@ public class Job extends TeaModel {
         return this.jobId;
     }
 
+    public Job setLocalVariables(java.util.List<LocalVariable> localVariables) {
+        this.localVariables = localVariables;
+        return this;
+    }
+    public java.util.List<LocalVariable> getLocalVariables() {
+        return this.localVariables;
+    }
+
     public Job setLogging(Logging logging) {
         this.logging = logging;
         return this;
@@ -177,6 +205,14 @@ public class Job extends TeaModel {
     }
     public JobMetric getMetric() {
         return this.metric;
+    }
+
+    public Job setModifiedAt(String modifiedAt) {
+        this.modifiedAt = modifiedAt;
+        return this;
+    }
+    public String getModifiedAt() {
+        return this.modifiedAt;
     }
 
     public Job setModifier(String modifier) {
@@ -249,6 +285,14 @@ public class Job extends TeaModel {
     }
     public java.util.Map<String, ?> getUserFlinkConf() {
         return this.userFlinkConf;
+    }
+
+    public Job setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

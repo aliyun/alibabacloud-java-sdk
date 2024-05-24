@@ -10,6 +10,9 @@ public class Deployment extends TeaModel {
     @NameInMap("batchResourceSetting")
     public BatchResourceSetting batchResourceSetting;
 
+    @NameInMap("createdAt")
+    public String createdAt;
+
     @NameInMap("creator")
     public String creator;
 
@@ -40,8 +43,14 @@ public class Deployment extends TeaModel {
     @NameInMap("jobSummary")
     public JobSummary jobSummary;
 
+    @NameInMap("localVariables")
+    public java.util.List<LocalVariable> localVariables;
+
     @NameInMap("logging")
     public Logging logging;
+
+    @NameInMap("modifiedAt")
+    public String modifiedAt;
 
     @NameInMap("modifier")
     public String modifier;
@@ -57,6 +66,9 @@ public class Deployment extends TeaModel {
 
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
+
+    @NameInMap("workspace")
+    public String workspace;
 
     public static Deployment build(java.util.Map<String, ?> map) throws Exception {
         Deployment self = new Deployment();
@@ -77,6 +89,14 @@ public class Deployment extends TeaModel {
     }
     public BatchResourceSetting getBatchResourceSetting() {
         return this.batchResourceSetting;
+    }
+
+    public Deployment setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    public String getCreatedAt() {
+        return this.createdAt;
     }
 
     public Deployment setCreator(String creator) {
@@ -159,12 +179,28 @@ public class Deployment extends TeaModel {
         return this.jobSummary;
     }
 
+    public Deployment setLocalVariables(java.util.List<LocalVariable> localVariables) {
+        this.localVariables = localVariables;
+        return this;
+    }
+    public java.util.List<LocalVariable> getLocalVariables() {
+        return this.localVariables;
+    }
+
     public Deployment setLogging(Logging logging) {
         this.logging = logging;
         return this;
     }
     public Logging getLogging() {
         return this.logging;
+    }
+
+    public Deployment setModifiedAt(String modifiedAt) {
+        this.modifiedAt = modifiedAt;
+        return this;
+    }
+    public String getModifiedAt() {
+        return this.modifiedAt;
     }
 
     public Deployment setModifier(String modifier) {
@@ -205,6 +241,14 @@ public class Deployment extends TeaModel {
     }
     public StreamingResourceSetting getStreamingResourceSetting() {
         return this.streamingResourceSetting;
+    }
+
+    public Deployment setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }
