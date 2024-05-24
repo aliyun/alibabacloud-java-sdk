@@ -10,6 +10,9 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 

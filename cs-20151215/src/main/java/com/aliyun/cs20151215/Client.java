@@ -441,6 +441,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 检查是否授权指定服务角色
+     *
+     * @param request CheckServiceRoleRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckServiceRoleResponse
+     */
+    public CheckServiceRoleResponse checkServiceRoleWithOptions(CheckServiceRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.roles)) {
+            body.put("roles", request.roles);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckServiceRole"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ram/check-service-role"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckServiceRoleResponse());
+    }
+
+    /**
+     * @summary 检查是否授权指定服务角色
+     *
+     * @param request CheckServiceRoleRequest
+     * @return CheckServiceRoleResponse
+     */
+    public CheckServiceRoleResponse checkServiceRole(CheckServiceRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.checkServiceRoleWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.
      *
      * @param request CreateAutoscalingConfigRequest
@@ -959,7 +1004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+     * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
      *
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1032,7 +1077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CreateClusterNodePool operation to create a node pool for a Container Service for Kubernetes (ACK) cluster.
+     * @summary Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&M workload.
      *
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -6396,9 +6441,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
      *
-     * @description **
-     * ****
-     * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+     * @description - You can call this operation only with an Alibaba Cloud account. 
+     * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
      *
      * @param request UpdateK8sClusterUserConfigExpireRequest
      * @param headers map
@@ -6437,9 +6481,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary Sets the validity period of a kubeconfig file used by a Resource Access Management (RAM) user or RAM role to connect to a Container Service for Kubernetes (ACK) cluster. The validity period ranges from 1 to 876,000 hours. You can call this API operation when you customize configurations by using an Alibaba Cloud account. The default validity period of a kubeconfig file is three years.
      *
-     * @description **
-     * ****
-     * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+     * @description - You can call this operation only with an Alibaba Cloud account. 
+     * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
      *
      * @param request UpdateK8sClusterUserConfigExpireRequest
      * @return UpdateK8sClusterUserConfigExpireResponse
