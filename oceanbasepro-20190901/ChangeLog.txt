@@ -1,3 +1,6 @@
+2024-05-27 Version: 3.1.1
+- Generated java 2019-09-01 for OceanBasePro.
+
 2024-05-23 Version: 3.1.0
 - Support API BatchKillProcessList.
 - Support API CreateTag.

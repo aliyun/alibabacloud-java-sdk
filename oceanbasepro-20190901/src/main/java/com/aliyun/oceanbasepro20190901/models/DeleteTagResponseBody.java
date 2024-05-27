@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagResponseBody extends TeaModel {
+    /**
+     * <p>The tag group deletion result.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

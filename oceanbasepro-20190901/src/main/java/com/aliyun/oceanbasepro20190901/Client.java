@@ -27,7 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary BatchKillProcessList
+     * @summary You can call this operation to close sessions in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeProcessStatsComposition.
      *
      * @param request BatchKillProcessListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -66,7 +66,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary BatchKillProcessList
+     * @summary You can call this operation to close sessions in batches. Please note that this operation is executed asynchronously. After calling this operation, you need to verify it by calling DescribeProcessStatsComposition.
      *
      * @param request BatchKillProcessListRequest
      * @return BatchKillProcessListResponse
@@ -969,6 +969,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to create a tag group.
+     *
      * @param request CreateTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTagResponse
@@ -1002,6 +1004,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to create a tag group.
+     *
      * @param request CreateTagRequest
      * @return CreateTagResponse
      */
@@ -1585,6 +1589,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to delete a tag group.
+     *
      * @param request DeleteTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTagResponse
@@ -1614,6 +1620,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to delete a tag group.
+     *
      * @param request DeleteTagRequest
      * @return DeleteTagResponse
      */
@@ -1623,6 +1631,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to delete a tag from a tag group.
+     *
      * @param request DeleteTagValueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTagValueResponse
@@ -1656,6 +1666,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to delete a tag from a tag group.
+     *
      * @param request DeleteTagValueRequest
      * @return DeleteTagValueResponse
      */
@@ -2543,7 +2555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The tag of the resource.
+     * @summary You can call this operation to query the tags of clusters.
      *
      * @param request DescribeInstanceTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2578,7 +2590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The tag of the resource.
+     * @summary You can call this operation to query the tags of clusters.
      *
      * @param request DescribeInstanceTagsRequest
      * @return DescribeInstanceTagsResponse
@@ -3599,7 +3611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeProcessStatsComposition
+     * @summary You can call this operation to query session information.
      *
      * @param request DescribeProcessStatsCompositionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3658,7 +3670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeProcessStatsComposition
+     * @summary You can call this operation to query session information.
      *
      * @param request DescribeProcessStatsCompositionRequest
      * @return DescribeProcessStatsCompositionResponse
@@ -4455,6 +4467,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to query tags.
+     *
      * @param request DescribeTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTagValuesResponse
@@ -4484,6 +4498,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to query tags.
+     *
      * @param request DescribeTagValuesRequest
      * @return DescribeTagValuesResponse
      */
@@ -6207,6 +6223,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to rename a tag.
+     *
      * @param request ModifyTagValueNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTagValueNameResponse
@@ -6244,6 +6262,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to rename a tag.
+     *
      * @param request ModifyTagValueNameRequest
      * @return ModifyTagValueNameResponse
      */

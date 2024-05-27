@@ -4,30 +4,53 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessStatsCompositionRequest extends TeaModel {
+    /**
+     * <p>The IP address of the client.</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
     /**
+     * <p>The ID of the OceanBase cluster.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IP address of the server.</p>
+     */
     @NameInMap("ServerIp")
     public String serverIp;
 
+    /**
+     * <p>The SQL statement. It supports LIKE clauses, and you may specify only part of the clauses in the SQL statement.</p>
+     */
     @NameInMap("SqlText")
     public String sqlText;
 
+    /**
+     * <p>The state of the session.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The user identifier (UID) of OceanBase Database.</p>
+     */
     @NameInMap("UId")
     public String UId;
 
+    /**
+     * <p>The username that you use to log in to the database.</p>
+     */
     @NameInMap("Users")
     public String users;
 

@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class BatchKillProcessListResponseBody extends TeaModel {
+    /**
+     * <p>The array of the return result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<BatchKillProcessListResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class BatchKillProcessListResponseBody extends TeaModel {
     }
 
     public static class BatchKillProcessListResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the calling is successful.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
