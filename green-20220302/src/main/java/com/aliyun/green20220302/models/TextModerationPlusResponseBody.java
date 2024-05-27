@@ -60,6 +60,12 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("Answer")
         public String answer;
 
+        @NameInMap("HitLabel")
+        public String hitLabel;
+
+        @NameInMap("HitLibName")
+        public String hitLibName;
+
         public static TextModerationPlusResponseBodyDataAdvice build(java.util.Map<String, ?> map) throws Exception {
             TextModerationPlusResponseBodyDataAdvice self = new TextModerationPlusResponseBodyDataAdvice();
             return TeaModel.build(map, self);
@@ -71,6 +77,22 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public String getAnswer() {
             return this.answer;
+        }
+
+        public TextModerationPlusResponseBodyDataAdvice setHitLabel(String hitLabel) {
+            this.hitLabel = hitLabel;
+            return this;
+        }
+        public String getHitLabel() {
+            return this.hitLabel;
+        }
+
+        public TextModerationPlusResponseBodyDataAdvice setHitLibName(String hitLibName) {
+            this.hitLibName = hitLibName;
+            return this;
+        }
+        public String getHitLibName() {
+            return this.hitLibName;
         }
 
     }
