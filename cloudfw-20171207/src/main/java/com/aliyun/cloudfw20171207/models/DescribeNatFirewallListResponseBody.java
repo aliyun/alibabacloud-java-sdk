@@ -42,6 +42,58 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList extends TeaModel {
+        @NameInMap("DestinationCidr")
+        public String destinationCidr;
+
+        @NameInMap("NextHopId")
+        public String nextHopId;
+
+        @NameInMap("NextHopType")
+        public String nextHopType;
+
+        @NameInMap("RouteTableId")
+        public String routeTableId;
+
+        public static DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList self = new DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList setDestinationCidr(String destinationCidr) {
+            this.destinationCidr = destinationCidr;
+            return this;
+        }
+        public String getDestinationCidr() {
+            return this.destinationCidr;
+        }
+
+        public DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList setNextHopId(String nextHopId) {
+            this.nextHopId = nextHopId;
+            return this;
+        }
+        public String getNextHopId() {
+            return this.nextHopId;
+        }
+
+        public DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList setNextHopType(String nextHopType) {
+            this.nextHopType = nextHopType;
+            return this;
+        }
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        public DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+    }
+
     public static class DescribeNatFirewallListResponseBodyNatFirewallList extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
@@ -57,6 +109,9 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
 
         @NameInMap("NatGatewayName")
         public String natGatewayName;
+
+        @NameInMap("NatRouteEntryList")
+        public java.util.List<DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList> natRouteEntryList;
 
         @NameInMap("ProxyId")
         public String proxyId;
@@ -122,6 +177,14 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         }
         public String getNatGatewayName() {
             return this.natGatewayName;
+        }
+
+        public DescribeNatFirewallListResponseBodyNatFirewallList setNatRouteEntryList(java.util.List<DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList> natRouteEntryList) {
+            this.natRouteEntryList = natRouteEntryList;
+            return this;
+        }
+        public java.util.List<DescribeNatFirewallListResponseBodyNatFirewallListNatRouteEntryList> getNatRouteEntryList() {
+            return this.natRouteEntryList;
         }
 
         public DescribeNatFirewallListResponseBodyNatFirewallList setProxyId(String proxyId) {

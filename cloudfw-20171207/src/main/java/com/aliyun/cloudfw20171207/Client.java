@@ -6602,9 +6602,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary Turns off all firewall switches.
      *
-     * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
+     * ## [](#qps-)QPS limits
+     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
      *
      * @param request PutDisableAllFwSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6645,9 +6645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary Turns off all firewall switches.
      *
-     * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches. 
-     * ## Limits
-     * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+     * @description You can call the PutDisableAllFwSwitch operation to turn off all firewall switches.
+     * ## [](#qps-)QPS limits
+     * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
      *
      * @param request PutDisableAllFwSwitchRequest
      * @return PutDisableAllFwSwitchResponse
