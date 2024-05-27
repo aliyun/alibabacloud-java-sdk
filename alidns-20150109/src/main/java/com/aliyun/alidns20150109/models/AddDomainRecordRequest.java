@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddDomainRecordRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -36,6 +38,8 @@ public class AddDomainRecordRequest extends TeaModel {
      * <p>The hostname.</p>
      * <br>
      * <p>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RR")
     public String RR;
@@ -52,6 +56,8 @@ public class AddDomainRecordRequest extends TeaModel {
      * <p>The type of the DNS record. For more information, see</p>
      * <br>
      * <p>[DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -64,6 +70,8 @@ public class AddDomainRecordRequest extends TeaModel {
 
     /**
      * <p>The record value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Value")
     public String value;

@@ -12,6 +12,8 @@ public class UpdateDNSSLBWeightRequest extends TeaModel {
 
     /**
      * <p>The ID of the DNS record.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RecordId")
     public String recordId;
@@ -24,6 +26,8 @@ public class UpdateDNSSLBWeightRequest extends TeaModel {
 
     /**
      * <p>The weight of the DNS record that you want to specify. Valid values: `1 to 100`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Weight")
     public Integer weight;

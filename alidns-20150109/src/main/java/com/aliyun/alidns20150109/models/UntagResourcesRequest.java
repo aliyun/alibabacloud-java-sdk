@@ -18,12 +18,16 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The resource type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

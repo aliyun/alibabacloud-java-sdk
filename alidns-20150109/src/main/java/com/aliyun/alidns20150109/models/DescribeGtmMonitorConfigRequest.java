@@ -12,6 +12,8 @@ public class DescribeGtmMonitorConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the health check configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;

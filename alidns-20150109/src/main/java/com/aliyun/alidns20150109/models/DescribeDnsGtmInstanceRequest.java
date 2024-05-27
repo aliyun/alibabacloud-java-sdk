@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance about which you want to query the information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

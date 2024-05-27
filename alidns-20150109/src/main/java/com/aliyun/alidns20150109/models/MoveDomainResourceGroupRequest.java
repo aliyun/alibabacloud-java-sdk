@@ -12,12 +12,16 @@ public class MoveDomainResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the new resource group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
      * <p>The resource ID. If Tag is left empty, ResourceId is required.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

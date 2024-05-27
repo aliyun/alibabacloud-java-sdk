@@ -24,6 +24,8 @@ public class PreviewGtmRecoveryPlanRequest extends TeaModel {
 
     /**
      * <p>The ID of the disaster recovery plan that you want to preview.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;

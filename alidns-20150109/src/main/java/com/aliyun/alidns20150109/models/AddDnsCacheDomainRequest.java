@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class AddDnsCacheDomainRequest extends TeaModel {
     /**
      * <p>The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CacheTtlMax")
     public Integer cacheTtlMax;
 
     /**
      * <p>The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CacheTtlMin")
     public Integer cacheTtlMin;
 
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The instance ID of the cache-accelerated domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -42,18 +50,24 @@ public class AddDnsCacheDomainRequest extends TeaModel {
 
     /**
      * <p>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceDnsServer")
     public java.util.List<AddDnsCacheDomainRequestSourceDnsServer> sourceDnsServer;
 
     /**
      * <p>Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceEdns")
     public String sourceEdns;
 
     /**
      * <p>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceProtocol")
     public String sourceProtocol;
@@ -138,12 +152,16 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     public static class AddDnsCacheDomainRequestSourceDnsServer extends TeaModel {
         /**
          * <p>The domain name or IP address of the origin DNS server.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The port of the origin DNS server.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Port")
         public String port;

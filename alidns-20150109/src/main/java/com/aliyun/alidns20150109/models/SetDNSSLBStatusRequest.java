@@ -33,6 +33,8 @@ public class SetDNSSLBStatusRequest extends TeaModel {
 
     /**
      * <p>The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubDomain")
     public String subDomain;

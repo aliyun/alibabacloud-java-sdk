@@ -12,6 +12,8 @@ public class UpdateDomainRecordRemarkRequest extends TeaModel {
 
     /**
      * <p>The ID of the DNS record.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RecordId")
     public String recordId;

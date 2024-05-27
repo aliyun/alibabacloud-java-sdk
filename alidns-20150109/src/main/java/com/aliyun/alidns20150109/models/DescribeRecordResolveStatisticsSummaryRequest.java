@@ -15,6 +15,8 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends TeaModel {
 
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -69,6 +71,8 @@ public class DescribeRecordResolveStatisticsSummaryRequest extends TeaModel {
 
     /**
      * <p>The start date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-01.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

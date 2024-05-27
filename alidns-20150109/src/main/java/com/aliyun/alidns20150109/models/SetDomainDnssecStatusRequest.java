@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetDomainDnssecStatusRequest extends TeaModel {
     /**
      * <p>The domain name for which you want to set the DNSSEC status.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -21,6 +23,8 @@ public class SetDomainDnssecStatusRequest extends TeaModel {
      * <br>
      * <p>*   ON: enables DNSSEC for the domain name.</p>
      * <p>*   OFF: disables DNSSEC for the domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

@@ -14,6 +14,8 @@ public class DeleteDomainRecordRequest extends TeaModel {
      * <p>The ID of the DNS record.</p>
      * <br>
      * <p>This parameter is returned when you add a DNS record or when you query a list of DNS records.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RecordId")
     public String recordId;

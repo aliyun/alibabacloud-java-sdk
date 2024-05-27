@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddDomainBackupRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -21,6 +23,8 @@ public class AddDomainBackupRequest extends TeaModel {
      * <br>
      * <p>*   **DAY**: Backs up data once every day.</p>
      * <p>*   **HOUR**: Backs up data once every hour.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PeriodType")
     public String periodType;

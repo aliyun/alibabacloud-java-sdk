@@ -12,6 +12,8 @@ public class SetDnsGtmMonitorStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the health check task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
@@ -21,6 +23,8 @@ public class SetDnsGtmMonitorStatusRequest extends TeaModel {
      * <br>
      * <p>*   OPEN: enables the health check feature.</p>
      * <p>*   CLOSE: disables the health check feature.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

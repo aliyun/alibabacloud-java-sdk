@@ -12,6 +12,8 @@ public class DescribeDnsGtmMonitorConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the health check task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;

@@ -10,6 +10,8 @@ public class SetGtmAccessModeRequest extends TeaModel {
      * <p>*   **AUTO**: Automatic switch</p>
      * <p>*   **DEFAULT**: Default address pool</p>
      * <p>*   **FAILOVER**: Failover address pool</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
@@ -22,6 +24,8 @@ public class SetGtmAccessModeRequest extends TeaModel {
 
     /**
      * <p>The ID of the access policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

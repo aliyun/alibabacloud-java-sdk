@@ -1,3 +1,7 @@
+2024-05-27 Version: 3.3.0
+- Support API DescribeCloudGtmAddressPool.
+
+
 2024-05-23 Version: 3.2.0
 - Support API DescribeInternetDnsLogs.
 - Update API DescribeDomainStatistics: update param DomainName.

@@ -4,12 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SubmitIspFlushCacheTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Isp")
     public java.util.List<String> isp;
 

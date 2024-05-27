@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteSubDomainRecordsRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -20,6 +22,8 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
      * <p>The host record.</p>
      * <br>
      * <p>For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RR")
     public String RR;

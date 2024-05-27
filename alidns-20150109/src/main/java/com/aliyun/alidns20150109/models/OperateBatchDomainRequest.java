@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class OperateBatchDomainRequest extends TeaModel {
     /**
      * <p>The DNS records. You can submit up to 1000 DNS records.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainRecordInfo")
     public java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo;
@@ -23,6 +25,8 @@ public class OperateBatchDomainRequest extends TeaModel {
      * <p>*   **DOMAIN_DEL**: deletes domain names in batches.</p>
      * <p>*   **RR_ADD**: adds DNS records in batches.</p>
      * <p>*   **RR_DEL**: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -61,6 +65,8 @@ public class OperateBatchDomainRequest extends TeaModel {
          * <p>The domain name.</p>
          * <br>
          * <p>>  You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Domain")
         public String domain;

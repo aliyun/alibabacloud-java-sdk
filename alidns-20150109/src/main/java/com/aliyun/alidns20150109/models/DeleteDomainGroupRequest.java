@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteDomainGroupRequest extends TeaModel {
     /**
      * <p>The ID of the domain name group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

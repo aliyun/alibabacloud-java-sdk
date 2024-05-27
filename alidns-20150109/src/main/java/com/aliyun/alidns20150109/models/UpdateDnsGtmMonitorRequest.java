@@ -18,6 +18,8 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
 
     /**
      * <p>The monitored nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> ispCityNode;
@@ -30,6 +32,8 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
 
     /**
      * <p>The ID of the health check configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
@@ -82,6 +86,8 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
      * <br>
      * <p>        *   IPV4</p>
      * <p>        *   IPV6</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
@@ -93,6 +99,8 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
      * <p>*   HTTPS</p>
      * <p>*   PING</p>
      * <p>*   TCP</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;

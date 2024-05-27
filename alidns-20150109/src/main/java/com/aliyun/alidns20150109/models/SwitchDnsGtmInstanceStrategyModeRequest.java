@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
     /**
      * <p>The ID of the GTM instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -21,6 +23,8 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
      * <br>
      * <p>*   GEO: geographical location-based</p>
      * <p>*   LATENCY: latency-based</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyMode")
     public String strategyMode;

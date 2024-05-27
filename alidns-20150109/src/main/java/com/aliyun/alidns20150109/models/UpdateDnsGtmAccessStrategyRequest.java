@@ -16,6 +16,8 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The address pools in the primary address pool set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultAddrPool")
     public java.util.List<UpdateDnsGtmAccessStrategyRequestDefaultAddrPool> defaultAddrPool;
@@ -26,6 +28,8 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
      * <p>*   IPV4</p>
      * <p>*   IPV6</p>
      * <p>*   DOMAIN</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultAddrPoolType")
     public String defaultAddrPoolType;
@@ -56,6 +60,8 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The minimum number of available addresses in the primary address pool set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultMinAvailableAddrNum")
     public Integer defaultMinAvailableAddrNum;
@@ -120,12 +126,16 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The ID of the access policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;
 
     /**
      * <p>The name of the access policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;

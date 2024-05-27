@@ -38,6 +38,8 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
      * <p>If you set SubDomain to `a.www.example.com` and leave</p>
      * <br>
      * <p>DomainName empty, the system returns the DNS records that contain the hostname `a.www` for the domain name example.com. If you set SubDomain to a.www.example.com and set DomainName to www.example.com, the system returns the DNS records that contain the hostname `a` for the domain name www.example.com. If you set SubDomain to a.www.example.com and set DomainName to a.www.example.com, the system returns the DNS records that contain the hostname `@` for the domain name a.www.example.com.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubDomain")
     public String subDomain;

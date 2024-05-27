@@ -12,6 +12,8 @@ public class SetDomainRecordStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the DNS record.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RecordId")
     public String recordId;
@@ -21,6 +23,8 @@ public class SetDomainRecordStatusRequest extends TeaModel {
      * <br>
      * <p>*   **Enable**: enables the DNS record.</p>
      * <p>*   **Disable**: disables the DNS record.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

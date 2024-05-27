@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeGtmInstanceAddressPoolsRequest extends TeaModel {
     /**
      * <p>The ID of the GTM instance that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
