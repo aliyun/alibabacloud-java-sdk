@@ -358,6 +358,9 @@ public class DescribeApiDocResponseBody extends TeaModel {
         @NameInMap("BodyFormat")
         public String bodyFormat;
 
+        @NameInMap("EscapePathParam")
+        public Boolean escapePathParam;
+
         /**
          * <p>The description of the request body.</p>
          */
@@ -403,6 +406,14 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
         public String getBodyFormat() {
             return this.bodyFormat;
+        }
+
+        public DescribeApiDocResponseBodyRequestConfig setEscapePathParam(Boolean escapePathParam) {
+            this.escapePathParam = escapePathParam;
+            return this;
+        }
+        public Boolean getEscapePathParam() {
+            return this.escapePathParam;
         }
 
         public DescribeApiDocResponseBodyRequestConfig setPostBodyDescription(String postBodyDescription) {
