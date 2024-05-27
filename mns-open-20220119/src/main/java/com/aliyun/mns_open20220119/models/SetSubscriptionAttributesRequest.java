@@ -7,9 +7,15 @@ public class SetSubscriptionAttributesRequest extends TeaModel {
     @NameInMap("NotifyStrategy")
     public String notifyStrategy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TopicName")
     public String topicName;
 

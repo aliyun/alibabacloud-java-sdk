@@ -4,6 +4,9 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SubscribeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
@@ -16,12 +19,21 @@ public class SubscribeRequest extends TeaModel {
     @NameInMap("NotifyStrategy")
     public String notifyStrategy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PushType")
     public String pushType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TopicName")
     public String topicName;
 

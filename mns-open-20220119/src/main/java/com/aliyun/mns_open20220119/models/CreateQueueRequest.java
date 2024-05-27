@@ -19,8 +19,14 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("PollingWaitSeconds")
     public Long pollingWaitSeconds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateQueueRequestTag> tag;
 
     @NameInMap("VisibilityTimeout")
     public Long visibilityTimeout;
@@ -78,12 +84,50 @@ public class CreateQueueRequest extends TeaModel {
         return this.queueName;
     }
 
+    public CreateQueueRequest setTag(java.util.List<CreateQueueRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateQueueRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateQueueRequest setVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
     }
     public Long getVisibilityTimeout() {
         return this.visibilityTimeout;
+    }
+
+    public static class CreateQueueRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateQueueRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateQueueRequestTag self = new CreateQueueRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateQueueRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateQueueRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

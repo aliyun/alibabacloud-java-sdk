@@ -75,6 +75,36 @@ public class ListQueueResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListQueueResponseBodyDataPageDataTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListQueueResponseBodyDataPageDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListQueueResponseBodyDataPageDataTags self = new ListQueueResponseBodyDataPageDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListQueueResponseBodyDataPageDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListQueueResponseBodyDataPageDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListQueueResponseBodyDataPageData extends TeaModel {
         @NameInMap("ActiveMessages")
         public Long activeMessages;
@@ -108,6 +138,9 @@ public class ListQueueResponseBody extends TeaModel {
 
         @NameInMap("QueueName")
         public String queueName;
+
+        @NameInMap("Tags")
+        public java.util.List<ListQueueResponseBodyDataPageDataTags> tags;
 
         @NameInMap("VisibilityTimeout")
         public Long visibilityTimeout;
@@ -203,6 +236,14 @@ public class ListQueueResponseBody extends TeaModel {
         }
         public String getQueueName() {
             return this.queueName;
+        }
+
+        public ListQueueResponseBodyDataPageData setTags(java.util.List<ListQueueResponseBodyDataPageDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListQueueResponseBodyDataPageDataTags> getTags() {
+            return this.tags;
         }
 
         public ListQueueResponseBodyDataPageData setVisibilityTimeout(Long visibilityTimeout) {
