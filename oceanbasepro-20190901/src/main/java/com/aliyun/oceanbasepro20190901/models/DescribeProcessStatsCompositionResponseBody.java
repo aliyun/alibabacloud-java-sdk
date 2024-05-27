@@ -8,7 +8,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
      * <p>The return result.</p>
      */
     @NameInMap("Data")
-    public java.util.List<DescribeProcessStatsCompositionResponseBodyData> data;
+    public DescribeProcessStatsCompositionResponseBodyData data;
 
     /**
      * <p>The ID of the request.</p>
@@ -21,11 +21,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeProcessStatsCompositionResponseBody setData(java.util.List<DescribeProcessStatsCompositionResponseBodyData> data) {
+    public DescribeProcessStatsCompositionResponseBody setData(DescribeProcessStatsCompositionResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<DescribeProcessStatsCompositionResponseBodyData> getData() {
+    public DescribeProcessStatsCompositionResponseBodyData getData() {
         return this.data;
     }
 
@@ -38,93 +38,48 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessStatsCompositionResponseBodyDataAllProcessList extends TeaModel {
-        /**
-         * <p>The IP address of the client.</p>
-         */
         @NameInMap("ClientIp")
         public String clientIp;
 
-        /**
-         * <p>The type of command executed on the current session.</p>
-         */
         @NameInMap("Command")
         public String command;
 
-        /**
-         * <p>The CPU time.</p>
-         */
         @NameInMap("CpuTime")
         public Long cpuTime;
 
-        /**
-         * <p>The name of the database.</p>
-         */
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <p>The execution time.</p>
-         */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
-        /**
-         * <p>The ID of the plan.</p>
-         */
         @NameInMap("PlanId")
         public String planId;
 
-        /**
-         * <p>The ID of the proxy session.</p>
-         */
         @NameInMap("ProxySessId")
         public String proxySessId;
 
-        /**
-         * <p>The IP address of the server.</p>
-         */
         @NameInMap("ServerIp")
         public String serverIp;
 
-        /**
-         * <p>The ID of the session.</p>
-         */
         @NameInMap("SessionId")
         public Long sessionId;
 
-        /**
-         * <p>The ID of the SQL statement.</p>
-         */
         @NameInMap("SqlId")
         public String sqlId;
 
-        /**
-         * <p>The SQL statement.</p>
-         */
         @NameInMap("SqlText")
         public String sqlText;
 
-        /**
-         * <p>The state of the session.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The ID of the tenant.</p>
-         */
         @NameInMap("TenantId")
         public String tenantId;
 
-        /**
-         * <p>The ID of the trace.</p>
-         */
         @NameInMap("TraceId")
         public String traceId;
 
-        /**
-         * <p>The username that you use to log in to the database.</p>
-         */
         @NameInMap("User")
         public String user;
 
@@ -256,27 +211,15 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessStatsCompositionResponseBodyDataSessionStatisticsDataBaseStatistics extends TeaModel {
-        /**
-         * <p>The number of active sessions.</p>
-         */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
-        /**
-         * <p>The value of the database metric.</p>
-         */
         @NameInMap("MetricValue")
         public String metricValue;
 
-        /**
-         * <p>The total number of sessions.</p>
-         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        /**
-         * <p>The type of the database statistics.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -320,27 +263,15 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessStatsCompositionResponseBodyDataSessionStatisticsSourceStatistics extends TeaModel {
-        /**
-         * <p>The number of active sessions.</p>
-         */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
-        /**
-         * <p>The value of the data source metric.</p>
-         */
         @NameInMap("MetricValue")
         public String metricValue;
 
-        /**
-         * <p>The total number of sessions.</p>
-         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        /**
-         * <p>The type of the data source.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -384,27 +315,15 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessStatsCompositionResponseBodyDataSessionStatisticsUserStatistics extends TeaModel {
-        /**
-         * <p>The number of active sessions.</p>
-         */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
-        /**
-         * <p>The value of the user metric.</p>
-         */
         @NameInMap("MetricValue")
         public String metricValue;
 
-        /**
-         * <p>The total number of sessions.</p>
-         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        /**
-         * <p>The type of the user.</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -448,21 +367,12 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessStatsCompositionResponseBodyDataSessionStatistics extends TeaModel {
-        /**
-         * <p>The database statistics.</p>
-         */
         @NameInMap("DataBaseStatistics")
         public java.util.List<DescribeProcessStatsCompositionResponseBodyDataSessionStatisticsDataBaseStatistics> dataBaseStatistics;
 
-        /**
-         * <p>The data source statistics.</p>
-         */
         @NameInMap("SourceStatistics")
         public java.util.List<DescribeProcessStatsCompositionResponseBodyDataSessionStatisticsSourceStatistics> sourceStatistics;
 
-        /**
-         * <p>The user statistics.</p>
-         */
         @NameInMap("UserStatistics")
         public java.util.List<DescribeProcessStatsCompositionResponseBodyDataSessionStatisticsUserStatistics> userStatistics;
 
@@ -498,39 +408,21 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessStatsCompositionResponseBodyData extends TeaModel {
-        /**
-         * <p>The number of active sessions.</p>
-         */
         @NameInMap("ActiveSessionCount")
         public Integer activeSessionCount;
 
-        /**
-         * <p>The list of all processes in the system.</p>
-         */
         @NameInMap("AllProcessList")
         public java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessList> allProcessList;
 
-        /**
-         * <p>The number of idle sessions.</p>
-         */
         @NameInMap("IdleSessionCount")
         public Integer idleSessionCount;
 
-        /**
-         * <p>The version of OceanBase Database.</p>
-         */
         @NameInMap("ObVersion")
         public String obVersion;
 
-        /**
-         * <p>The session statistics.</p>
-         */
         @NameInMap("SessionStatistics")
         public DescribeProcessStatsCompositionResponseBodyDataSessionStatistics sessionStatistics;
 
-        /**
-         * <p>The total number of sessions.</p>
-         */
         @NameInMap("TotalSessionCount")
         public Integer totalSessionCount;
 
