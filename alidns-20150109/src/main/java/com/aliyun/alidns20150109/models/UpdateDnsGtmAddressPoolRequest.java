@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The address pools.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
     public java.util.List<UpdateDnsGtmAddressPoolRequestAddr> addr;
 
     /**
      * <p>The ID of the address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
@@ -27,6 +31,8 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
      * <br>
      * <p>*   ALL_RR: returns all addresses.</p>
      * <p>*   RATIO: returns addresses by weight.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
@@ -85,6 +91,8 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     public static class UpdateDnsGtmAddressPoolRequestAddr extends TeaModel {
         /**
          * <p>The address in the address pool.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Addr")
         public String addr;
@@ -117,6 +125,8 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
          * <p>*   SMART: smart return.</p>
          * <p>*   ONLINE: always online.</p>
          * <p>*   OFFLINE: always offline.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Mode")
         public String mode;

@@ -4,11 +4,16 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateGtmAddressPoolRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Addr")
     public java.util.List<UpdateGtmAddressPoolRequestAddr> addr;
 
     /**
      * <p>The ID of the address pool that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
@@ -33,6 +38,8 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The type of the address pool that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

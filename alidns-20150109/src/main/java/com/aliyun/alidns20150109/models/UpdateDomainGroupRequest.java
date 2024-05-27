@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateDomainGroupRequest extends TeaModel {
     /**
      * <p>The ID of the domain name group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The new name of the domain name group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;

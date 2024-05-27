@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class AddGtmMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
      * <p>The number of consecutive failures.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
     /**
      * <p>The health check interval. Unit: seconds. Set the value to 60.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>The nodes for monitoring.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<AddGtmMonitorRequestIspCityNode> ispCityNode;
@@ -55,6 +63,8 @@ public class AddGtmMonitorRequest extends TeaModel {
      * <br>
      * <p>*   port: the port that you want to check</p>
      * <p>*   failureRate: the failure rate</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
@@ -66,12 +76,16 @@ public class AddGtmMonitorRequest extends TeaModel {
      * <p>*   HTTPS</p>
      * <p>*   PING</p>
      * <p>*   TCP</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
      * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;

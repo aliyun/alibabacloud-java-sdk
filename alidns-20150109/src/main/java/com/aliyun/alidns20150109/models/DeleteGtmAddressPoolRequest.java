@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The ID of the address pool that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;

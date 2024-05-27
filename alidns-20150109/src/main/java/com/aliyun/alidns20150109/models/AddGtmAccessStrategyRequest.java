@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AddGtmAccessStrategyRequest extends TeaModel {
     /**
      * <p>The line codes of access regions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessLines")
     public String accessLines;
 
     /**
      * <p>The ID of the default address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultAddrPoolId")
     public String defaultAddrPoolId;
@@ -20,12 +24,16 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
      * <p>The ID of the failover address pool.</p>
      * <br>
      * <p>If the failover address pool is not set, pass the **Empty** value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FailoverAddrPoolId")
     public String failoverAddrPoolId;
 
     /**
      * <p>The ID of the GTM instance for which you want to create an access policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -38,6 +46,8 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The name of the access policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;

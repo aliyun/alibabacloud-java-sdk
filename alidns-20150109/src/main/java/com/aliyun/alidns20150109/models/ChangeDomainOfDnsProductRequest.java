@@ -12,6 +12,8 @@ public class ChangeDomainOfDnsProductRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud DNS instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The address pools.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
     public java.util.List<AddGtmAddressPoolRequestAddr> addr;
@@ -18,6 +20,8 @@ public class AddGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The ID of the GTM instance for which you want to create an address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -42,6 +46,8 @@ public class AddGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The minimum number of available addresses in the address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MinAvailableAddrNum")
     public Integer minAvailableAddrNum;
@@ -82,6 +88,8 @@ public class AddGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The name of the address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -108,6 +116,8 @@ public class AddGtmAddressPoolRequest extends TeaModel {
      * <br>
      * <p>*   **IP**: IPv4 address</p>
      * <p>*   **DOMAIN**: domain name</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

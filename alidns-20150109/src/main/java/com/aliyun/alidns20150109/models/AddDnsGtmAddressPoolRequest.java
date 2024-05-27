@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddDnsGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The address pools.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
     public java.util.List<AddDnsGtmAddressPoolRequestAddr> addr;
@@ -18,6 +20,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -45,6 +49,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
      * <br>
      * <p>*   ALL_RR: returns all addresses.</p>
      * <p>*   RATIO: returns addresses by weight.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
@@ -112,6 +118,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The name of the address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -139,6 +147,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
      * <p>*   IPV4: IPv4 address</p>
      * <p>*   IPV6: IPv6 address</p>
      * <p>*   DOMAIN: domain name</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -255,6 +265,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     public static class AddDnsGtmAddressPoolRequestAddr extends TeaModel {
         /**
          * <p>The address in the address pool.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Addr")
         public String addr;
@@ -269,6 +281,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
          * <p>    *   NO_NEED: no need for rectification</p>
          * <p>    *   RECTIFIED: rectified</p>
          * <p>    *   AUTO: automatic rectification</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
@@ -285,6 +299,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
          * <p>*   SMART: smart return</p>
          * <p>*   ONLINE: always online</p>
          * <p>*   OFFLINE: always offline</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Mode")
         public String mode;

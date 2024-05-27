@@ -12,6 +12,8 @@ public class DescribeDnsGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The ID of the access policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

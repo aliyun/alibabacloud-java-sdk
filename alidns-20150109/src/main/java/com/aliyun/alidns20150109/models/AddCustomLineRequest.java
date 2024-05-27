@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AddCustomLineRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The CIDR blocks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpSegment")
     public java.util.List<AddCustomLineRequestIpSegment> ipSegment;
@@ -24,6 +28,8 @@ public class AddCustomLineRequest extends TeaModel {
 
     /**
      * <p>The name of the custom line.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LineName")
     public String lineName;

@@ -21,6 +21,8 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
      * <br>
      * <p>*   ADD_SUB_DOMAIN</p>
      * <p>*   RETRIEVAL</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

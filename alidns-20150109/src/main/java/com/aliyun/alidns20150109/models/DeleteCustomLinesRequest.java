@@ -12,6 +12,8 @@ public class DeleteCustomLinesRequest extends TeaModel {
 
     /**
      * <p>The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LineIds")
     public String lineIds;

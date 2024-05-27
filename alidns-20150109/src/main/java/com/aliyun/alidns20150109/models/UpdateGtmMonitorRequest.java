@@ -18,6 +18,8 @@ public class UpdateGtmMonitorRequest extends TeaModel {
 
     /**
      * <p>The monitored nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<UpdateGtmMonitorRequestIspCityNode> ispCityNode;
@@ -30,6 +32,8 @@ public class UpdateGtmMonitorRequest extends TeaModel {
 
     /**
      * <p>The ID of the health check configuration.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
@@ -55,12 +59,16 @@ public class UpdateGtmMonitorRequest extends TeaModel {
      * <br>
      * <p>*   port: the port to check.</p>
      * <p>*   failureRate: the failure rate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
     /**
      * <p>The protocol used for the health check.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;

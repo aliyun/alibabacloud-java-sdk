@@ -12,6 +12,8 @@ public class DescribeGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The ID of the access policy that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

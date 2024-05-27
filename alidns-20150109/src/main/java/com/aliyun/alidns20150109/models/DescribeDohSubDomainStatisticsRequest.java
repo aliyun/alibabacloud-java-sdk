@@ -28,6 +28,8 @@ public class DescribeDohSubDomainStatisticsRequest extends TeaModel {
 
     /**
      * <p>The subdomain whose statistics you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubDomain")
     public String subDomain;

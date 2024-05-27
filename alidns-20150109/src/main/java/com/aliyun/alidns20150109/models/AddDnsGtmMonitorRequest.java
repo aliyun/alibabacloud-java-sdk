@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class AddDnsGtmMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the address pool.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
      * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
     /**
      * <p>The health check interval. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>The monitored nodes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<AddDnsGtmMonitorRequestIspCityNode> ispCityNode;
@@ -82,6 +90,8 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
      * <br>
      * <p>        *   IPV4</p>
      * <p>        *   IPV6</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
@@ -93,12 +103,16 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
      * <p>*   HTTPS</p>
      * <p>*   PING</p>
      * <p>*   TCP</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
      * <p>The health check timeout period. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;

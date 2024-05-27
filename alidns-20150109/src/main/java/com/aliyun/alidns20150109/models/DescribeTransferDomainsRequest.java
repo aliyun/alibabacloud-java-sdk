@@ -45,6 +45,8 @@ public class DescribeTransferDomainsRequest extends TeaModel {
      * <br>
      * <p>*   IN: The domain name was transferred to the current account.</p>
      * <p>*   OUT: The domain name was transferred from the current account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TransferType")
     public String transferType;

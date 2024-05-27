@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateDomainRemarkRequest extends TeaModel {
     /**
      * <p>The domain name that already exists in Alibaba Cloud DNS.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

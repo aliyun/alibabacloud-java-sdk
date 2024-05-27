@@ -18,12 +18,14 @@ public class UpdateCustomLineRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the custom line.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LineId")
     public Long lineId;
 
     /**
-     * <p>The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
      */
     @NameInMap("LineName")
     public String lineName;

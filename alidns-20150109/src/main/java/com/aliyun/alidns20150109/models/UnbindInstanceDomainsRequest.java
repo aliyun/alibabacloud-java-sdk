@@ -8,12 +8,16 @@ public class UnbindInstanceDomainsRequest extends TeaModel {
      * <p>The domain names.</p>
      * <br>
      * <p>Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

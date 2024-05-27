@@ -168,7 +168,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos;
 
         /**
-         * <p>The user\"s domain name or domain name list.</p>
+         * <p>The user\\"s domain name or domain name list.</p>
          */
         @NameInMap("UserDomainName")
         public String userDomainName;

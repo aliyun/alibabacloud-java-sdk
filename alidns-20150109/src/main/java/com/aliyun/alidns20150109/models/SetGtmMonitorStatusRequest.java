@@ -12,6 +12,8 @@ public class SetGtmMonitorStatusRequest extends TeaModel {
 
     /**
      * <p>The health check ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
@@ -21,6 +23,8 @@ public class SetGtmMonitorStatusRequest extends TeaModel {
      * <br>
      * <p>*   **OPEN**: Enabled</p>
      * <p>*   **CLOSE**: Disabled</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

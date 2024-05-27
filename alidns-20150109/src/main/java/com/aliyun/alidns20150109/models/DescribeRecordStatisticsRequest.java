@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeRecordStatisticsRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -35,6 +37,8 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
 
     /**
      * <p>The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rr")
     public String rr;
@@ -47,6 +51,8 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
      * <p>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</p>
      * <br>
      * <p>If the time range is greater than seven days, data is returned on a daily basis.````</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

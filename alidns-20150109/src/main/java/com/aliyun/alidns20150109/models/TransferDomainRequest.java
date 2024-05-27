@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class TransferDomainRequest extends TeaModel {
     /**
      * <p>The domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
@@ -27,6 +29,8 @@ public class TransferDomainRequest extends TeaModel {
 
     /**
      * <p>The destination user ID. The domain names and their Domain Name System (DNS) records are transferred to the destination user ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TargetUserId")
     public Long targetUserId;

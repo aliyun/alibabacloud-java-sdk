@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AddDnsGtmAccessStrategyRequest extends TeaModel {
     /**
      * <p>The address pools in the primary address pool set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultAddrPool")
     public java.util.List<AddDnsGtmAccessStrategyRequestDefaultAddrPool> defaultAddrPool;
@@ -16,6 +18,8 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
      * <p>*   IPV4</p>
      * <p>*   IPV6</p>
      * <p>*   DOMAIN</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultAddrPoolType")
     public String defaultAddrPoolType;
@@ -46,6 +50,8 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The minimum number of available addresses in the primary address pool set.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultMinAvailableAddrNum")
     public Integer defaultMinAvailableAddrNum;
@@ -98,6 +104,8 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -119,12 +127,16 @@ public class AddDnsGtmAccessStrategyRequest extends TeaModel {
      * <br>
      * <p>*   GEO: geographical location-based access policy</p>
      * <p>*   LATENCY: latency-based access policy</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyMode")
     public String strategyMode;
 
     /**
      * <p>The name of the access policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;

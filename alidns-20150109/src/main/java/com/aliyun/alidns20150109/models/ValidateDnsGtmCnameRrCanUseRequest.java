@@ -4,18 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ValidateDnsGtmCnameRrCanUseRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CnameMode")
     public String cnameMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CnameRr")
     public String cnameRr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CnameType")
     public String cnameType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CnameZone")
     public String cnameZone;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

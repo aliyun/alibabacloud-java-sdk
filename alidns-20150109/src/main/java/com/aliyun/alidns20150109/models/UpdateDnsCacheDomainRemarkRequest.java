@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateDnsCacheDomainRemarkRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,7 +19,7 @@ public class UpdateDnsCacheDomainRemarkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The remarks. The remarks can be up to 50 characters in length and can contain only letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The remarks. The remarks can be up to 50 characters in length and can contain only letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Remark")
     public String remark;

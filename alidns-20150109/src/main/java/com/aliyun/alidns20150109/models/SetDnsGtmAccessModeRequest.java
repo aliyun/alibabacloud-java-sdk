@@ -10,6 +10,8 @@ public class SetDnsGtmAccessModeRequest extends TeaModel {
      * <p>*   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</p>
      * <p>*   DEFAULT: uses the primary address pool group.</p>
      * <p>*   FAILOVER: uses the secondary address pool group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
@@ -22,6 +24,8 @@ public class SetDnsGtmAccessModeRequest extends TeaModel {
 
     /**
      * <p>The ID of the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

@@ -24,6 +24,8 @@ public class DescribeTagsRequest extends TeaModel {
 
     /**
      * <p>The type of the resources from which you want to query tags. Set the value to DOMAIN.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

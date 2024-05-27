@@ -30,6 +30,8 @@ public class UpdateGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The ID of the access policy that you want to query for the GTM instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

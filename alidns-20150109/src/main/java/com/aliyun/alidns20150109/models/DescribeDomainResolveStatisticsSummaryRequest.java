@@ -54,6 +54,8 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
 
     /**
      * <p>The start time in the yyyy-MM-dd format, for example, 2023-03-01.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;

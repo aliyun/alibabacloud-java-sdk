@@ -18,6 +18,8 @@ public class UpdateDnsCacheDomainRequest extends TeaModel {
 
     /**
      * <p>The domain name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

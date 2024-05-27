@@ -24,6 +24,8 @@ public class UpdateGtmRecoveryPlanRequest extends TeaModel {
 
     /**
      * <p>The ID of the disaster recovery plan.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;

@@ -49,6 +49,8 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
      * <p>The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.</p>
      * <br>
      * <p>You can only query DNS records of the last 90 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartDate")
     public String startDate;
