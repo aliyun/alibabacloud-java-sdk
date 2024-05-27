@@ -10,6 +10,9 @@ public class SetTopicAttributesRequest extends TeaModel {
     @NameInMap("MaxMessageSize")
     public Long maxMessageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TopicName")
     public String topicName;
 

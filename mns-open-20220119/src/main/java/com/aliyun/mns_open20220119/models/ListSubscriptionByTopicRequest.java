@@ -13,6 +13,9 @@ public class ListSubscriptionByTopicRequest extends TeaModel {
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TopicName")
     public String topicName;
 

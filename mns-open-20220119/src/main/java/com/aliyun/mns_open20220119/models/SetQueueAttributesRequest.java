@@ -19,6 +19,9 @@ public class SetQueueAttributesRequest extends TeaModel {
     @NameInMap("PollingWaitSeconds")
     public Long pollingWaitSeconds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 

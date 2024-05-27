@@ -75,6 +75,36 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetQueueAttributesResponseBodyDataTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetQueueAttributesResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            GetQueueAttributesResponseBodyDataTags self = new GetQueueAttributesResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetQueueAttributesResponseBodyDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetQueueAttributesResponseBodyDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetQueueAttributesResponseBodyData extends TeaModel {
         @NameInMap("ActiveMessages")
         public Long activeMessages;
@@ -108,6 +138,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
         @NameInMap("QueueName")
         public String queueName;
+
+        @NameInMap("Tags")
+        public java.util.List<GetQueueAttributesResponseBodyDataTags> tags;
 
         @NameInMap("VisibilityTimeout")
         public Long visibilityTimeout;
@@ -203,6 +236,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
         public String getQueueName() {
             return this.queueName;
+        }
+
+        public GetQueueAttributesResponseBodyData setTags(java.util.List<GetQueueAttributesResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetQueueAttributesResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public GetQueueAttributesResponseBodyData setVisibilityTimeout(Long visibilityTimeout) {

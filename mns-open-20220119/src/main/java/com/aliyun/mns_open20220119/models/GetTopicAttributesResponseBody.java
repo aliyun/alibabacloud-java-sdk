@@ -75,6 +75,36 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetTopicAttributesResponseBodyDataTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetTopicAttributesResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicAttributesResponseBodyDataTags self = new GetTopicAttributesResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTopicAttributesResponseBodyDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetTopicAttributesResponseBodyDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetTopicAttributesResponseBodyData extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
@@ -93,6 +123,9 @@ public class GetTopicAttributesResponseBody extends TeaModel {
 
         @NameInMap("MessageRetentionPeriod")
         public Long messageRetentionPeriod;
+
+        @NameInMap("Tags")
+        public java.util.List<GetTopicAttributesResponseBodyDataTags> tags;
 
         @NameInMap("TopicName")
         public String topicName;
@@ -148,6 +181,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
         public Long getMessageRetentionPeriod() {
             return this.messageRetentionPeriod;
+        }
+
+        public GetTopicAttributesResponseBodyData setTags(java.util.List<GetTopicAttributesResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetTopicAttributesResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public GetTopicAttributesResponseBodyData setTopicName(String topicName) {
