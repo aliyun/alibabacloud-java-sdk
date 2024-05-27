@@ -11,9 +11,9 @@ public class PutDisableAllFwSwitchRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The natural language of the request and response. Valid values:</p>
+     * <p>The language of the content within the request and response. Valid values: Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **zh** (default): Chinese</p>
      * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
