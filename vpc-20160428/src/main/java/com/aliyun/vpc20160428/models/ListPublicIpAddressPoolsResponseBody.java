@@ -114,6 +114,9 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("BizType")
         public String bizType;
 
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         /**
          * <p>The time when the IP address pool was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
@@ -259,6 +262,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public String getBizType() {
             return this.bizType;
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setCreationTime(String creationTime) {
