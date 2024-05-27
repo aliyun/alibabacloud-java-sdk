@@ -43,6 +43,9 @@ public class DescribeRulesRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleGroupId")
     public Long ruleGroupId;
 

@@ -963,6 +963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @description ## Usage notes
+     * You can call the DescribeInstanceInfo operation to query the information about the WAF instance within your Alibaba Cloud account. The information includes the ID, version, status, and expiration time of the instance.
+     *
      * @param request DescribeInstanceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceInfoResponse
@@ -1000,6 +1003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @description ## Usage notes
+     * You can call the DescribeInstanceInfo operation to query the information about the WAF instance within your Alibaba Cloud account. The information includes the ID, version, status, and expiration time of the instance.
+     *
      * @param request DescribeInstanceInfoRequest
      * @return DescribeInstanceInfoResponse
      */
