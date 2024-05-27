@@ -916,6 +916,9 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         @NameInMap("BodyModel")
         public String bodyModel;
 
+        @NameInMap("EscapePathParam")
+        public Boolean escapePathParam;
+
         /**
          * <p>The description of the request body.</p>
          */
@@ -969,6 +972,14 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         }
         public String getBodyModel() {
             return this.bodyModel;
+        }
+
+        public DescribeApiHistoryResponseBodyRequestConfig setEscapePathParam(Boolean escapePathParam) {
+            this.escapePathParam = escapePathParam;
+            return this;
+        }
+        public Boolean getEscapePathParam() {
+            return this.escapePathParam;
         }
 
         public DescribeApiHistoryResponseBodyRequestConfig setPostBodyDescription(String postBodyDescription) {

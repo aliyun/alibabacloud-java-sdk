@@ -1008,6 +1008,9 @@ public class DescribeApiResponseBody extends TeaModel {
         @NameInMap("BodyModel")
         public String bodyModel;
 
+        @NameInMap("EscapePathParam")
+        public Boolean escapePathParam;
+
         /**
          * <p>The description of the request body.</p>
          */
@@ -1057,6 +1060,14 @@ public class DescribeApiResponseBody extends TeaModel {
         }
         public String getBodyModel() {
             return this.bodyModel;
+        }
+
+        public DescribeApiResponseBodyRequestConfig setEscapePathParam(Boolean escapePathParam) {
+            this.escapePathParam = escapePathParam;
+            return this;
+        }
+        public Boolean getEscapePathParam() {
+            return this.escapePathParam;
         }
 
         public DescribeApiResponseBodyRequestConfig setPostBodyDescription(String postBodyDescription) {
