@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTagValuesRequest extends TeaModel {
     /**
+     * <p>The type of the resource.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")

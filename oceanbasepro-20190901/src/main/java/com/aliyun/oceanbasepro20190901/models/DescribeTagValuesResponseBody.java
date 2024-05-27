@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagValuesResponseBody extends TeaModel {
+    /**
+     * <p>The mappings between tag groups and tags.</p>
+     */
     @NameInMap("Map")
     public String map;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

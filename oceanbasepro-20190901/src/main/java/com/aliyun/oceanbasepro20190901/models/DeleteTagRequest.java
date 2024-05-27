@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteTagRequest extends TeaModel {
     /**
+     * <p>The name of the tag group.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Key")

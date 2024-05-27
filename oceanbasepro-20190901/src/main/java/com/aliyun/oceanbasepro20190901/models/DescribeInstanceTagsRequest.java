@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTagsRequest extends TeaModel {
     /**
-     * <p>The list of tags.</p>
+     * <p>The list of cluster IDs.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
-     * <p>The returned response.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public String tags;
