@@ -7,15 +7,24 @@ public class ListChannelRiskDetailsRequest extends TeaModel {
     @NameInMap("channel")
     public String channel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("end")
     public String end;
 
     @NameInMap("isAllChannel")
     public String isAllChannel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("start")
     public String start;
 
