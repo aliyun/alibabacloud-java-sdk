@@ -1147,6 +1147,314 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param tmpReq CreateCloudGtmAddressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudGtmAddressResponse
+     */
+    public CreateCloudGtmAddressResponse createCloudGtmAddressWithOptions(CreateCloudGtmAddressRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCloudGtmAddressShrinkRequest request = new CreateCloudGtmAddressShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.healthTasks)) {
+            request.healthTasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.healthTasks, "HealthTasks", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attributeInfo)) {
+            query.put("AttributeInfo", request.attributeInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableMode)) {
+            query.put("AvailableMode", request.availableMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthJudgement)) {
+            query.put("HealthJudgement", request.healthJudgement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthTasksShrink)) {
+            query.put("HealthTasks", request.healthTasksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.manualAvailableStatus)) {
+            query.put("ManualAvailableStatus", request.manualAvailableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudGtmAddress"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudGtmAddressResponse());
+    }
+
+    /**
+     * @param request CreateCloudGtmAddressRequest
+     * @return CreateCloudGtmAddressResponse
+     */
+    public CreateCloudGtmAddressResponse createCloudGtmAddress(CreateCloudGtmAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudGtmAddressWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request CreateCloudGtmAddressPoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudGtmAddressPoolResponse
+     */
+    public CreateCloudGtmAddressPoolResponse createCloudGtmAddressPoolWithOptions(CreateCloudGtmAddressPoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolName)) {
+            query.put("AddressPoolName", request.addressPoolName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolType)) {
+            query.put("AddressPoolType", request.addressPoolType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthJudgement)) {
+            query.put("HealthJudgement", request.healthJudgement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudGtmAddressPool"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudGtmAddressPoolResponse());
+    }
+
+    /**
+     * @param request CreateCloudGtmAddressPoolRequest
+     * @return CreateCloudGtmAddressPoolResponse
+     */
+    public CreateCloudGtmAddressPoolResponse createCloudGtmAddressPool(CreateCloudGtmAddressPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudGtmAddressPoolWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request CreateCloudGtmInstanceConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudGtmInstanceConfigResponse
+     */
+    public CreateCloudGtmInstanceConfigResponse createCloudGtmInstanceConfigWithOptions(CreateCloudGtmInstanceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleHostname)) {
+            query.put("ScheduleHostname", request.scheduleHostname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleRrType)) {
+            query.put("ScheduleRrType", request.scheduleRrType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleZoneMode)) {
+            query.put("ScheduleZoneMode", request.scheduleZoneMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleZoneName)) {
+            query.put("ScheduleZoneName", request.scheduleZoneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            query.put("Ttl", request.ttl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudGtmInstanceConfig"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudGtmInstanceConfigResponse());
+    }
+
+    /**
+     * @param request CreateCloudGtmInstanceConfigRequest
+     * @return CreateCloudGtmInstanceConfigResponse
+     */
+    public CreateCloudGtmInstanceConfigResponse createCloudGtmInstanceConfig(CreateCloudGtmInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudGtmInstanceConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq CreateCloudGtmMonitorTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudGtmMonitorTemplateResponse
+     */
+    public CreateCloudGtmMonitorTemplateResponse createCloudGtmMonitorTemplateWithOptions(CreateCloudGtmMonitorTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCloudGtmMonitorTemplateShrinkRequest request = new CreateCloudGtmMonitorTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ispCityNodes)) {
+            request.ispCityNodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ispCityNodes, "IspCityNodes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluationCount)) {
+            query.put("EvaluationCount", request.evaluationCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendInfo)) {
+            query.put("ExtendInfo", request.extendInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.failureRate)) {
+            query.put("FailureRate", request.failureRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispCityNodesShrink)) {
+            query.put("IspCityNodes", request.ispCityNodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudGtmMonitorTemplate"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudGtmMonitorTemplateResponse());
+    }
+
+    /**
+     * @param request CreateCloudGtmMonitorTemplateRequest
+     * @return CreateCloudGtmMonitorTemplateResponse
+     */
+    public CreateCloudGtmMonitorTemplateResponse createCloudGtmMonitorTemplate(CreateCloudGtmMonitorTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudGtmMonitorTemplateWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 创建公共DNS AppKey
      *
      * @param request CreatePdnsAppKeyRequest
@@ -1236,6 +1544,194 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePdnsUdpIpSegmentResponse createPdnsUdpIpSegment(CreatePdnsUdpIpSegmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPdnsUdpIpSegmentWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DeleteCloudGtmAddressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudGtmAddressResponse
+     */
+    public DeleteCloudGtmAddressResponse deleteCloudGtmAddressWithOptions(DeleteCloudGtmAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudGtmAddress"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudGtmAddressResponse());
+    }
+
+    /**
+     * @param request DeleteCloudGtmAddressRequest
+     * @return DeleteCloudGtmAddressResponse
+     */
+    public DeleteCloudGtmAddressResponse deleteCloudGtmAddress(DeleteCloudGtmAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudGtmAddressWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DeleteCloudGtmAddressPoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudGtmAddressPoolResponse
+     */
+    public DeleteCloudGtmAddressPoolResponse deleteCloudGtmAddressPoolWithOptions(DeleteCloudGtmAddressPoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolId)) {
+            query.put("AddressPoolId", request.addressPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudGtmAddressPool"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudGtmAddressPoolResponse());
+    }
+
+    /**
+     * @param request DeleteCloudGtmAddressPoolRequest
+     * @return DeleteCloudGtmAddressPoolResponse
+     */
+    public DeleteCloudGtmAddressPoolResponse deleteCloudGtmAddressPool(DeleteCloudGtmAddressPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudGtmAddressPoolWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DeleteCloudGtmInstanceConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudGtmInstanceConfigResponse
+     */
+    public DeleteCloudGtmInstanceConfigResponse deleteCloudGtmInstanceConfigWithOptions(DeleteCloudGtmInstanceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudGtmInstanceConfig"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudGtmInstanceConfigResponse());
+    }
+
+    /**
+     * @param request DeleteCloudGtmInstanceConfigRequest
+     * @return DeleteCloudGtmInstanceConfigResponse
+     */
+    public DeleteCloudGtmInstanceConfigResponse deleteCloudGtmInstanceConfig(DeleteCloudGtmInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudGtmInstanceConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DeleteCloudGtmMonitorTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudGtmMonitorTemplateResponse
+     */
+    public DeleteCloudGtmMonitorTemplateResponse deleteCloudGtmMonitorTemplateWithOptions(DeleteCloudGtmMonitorTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudGtmMonitorTemplate"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudGtmMonitorTemplateResponse());
+    }
+
+    /**
+     * @param request DeleteCloudGtmMonitorTemplateRequest
+     * @return DeleteCloudGtmMonitorTemplateResponse
+     */
+    public DeleteCloudGtmMonitorTemplateResponse deleteCloudGtmMonitorTemplate(DeleteCloudGtmMonitorTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudGtmMonitorTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -1853,6 +2349,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeCloudGtmAddressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmAddressResponse
+     */
+    public DescribeCloudGtmAddressResponse describeCloudGtmAddressWithOptions(DescribeCloudGtmAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmAddress"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmAddressResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmAddressRequest
+     * @return DescribeCloudGtmAddressResponse
+     */
+    public DescribeCloudGtmAddressResponse describeCloudGtmAddress(DescribeCloudGtmAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmAddressWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DescribeCloudGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudGtmAddressPoolResponse
@@ -1896,6 +2438,349 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCloudGtmAddressPoolResponse describeCloudGtmAddressPool(DescribeCloudGtmAddressPoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudGtmAddressPoolWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmAddressPoolReferenceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmAddressPoolReferenceResponse
+     */
+    public DescribeCloudGtmAddressPoolReferenceResponse describeCloudGtmAddressPoolReferenceWithOptions(DescribeCloudGtmAddressPoolReferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolId)) {
+            query.put("AddressPoolId", request.addressPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmAddressPoolReference"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmAddressPoolReferenceResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmAddressPoolReferenceRequest
+     * @return DescribeCloudGtmAddressPoolReferenceResponse
+     */
+    public DescribeCloudGtmAddressPoolReferenceResponse describeCloudGtmAddressPoolReference(DescribeCloudGtmAddressPoolReferenceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmAddressPoolReferenceWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmAddressReferenceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmAddressReferenceResponse
+     */
+    public DescribeCloudGtmAddressReferenceResponse describeCloudGtmAddressReferenceWithOptions(DescribeCloudGtmAddressReferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmAddressReference"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmAddressReferenceResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmAddressReferenceRequest
+     * @return DescribeCloudGtmAddressReferenceResponse
+     */
+    public DescribeCloudGtmAddressReferenceResponse describeCloudGtmAddressReference(DescribeCloudGtmAddressReferenceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmAddressReferenceWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmGlobalAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmGlobalAlertResponse
+     */
+    public DescribeCloudGtmGlobalAlertResponse describeCloudGtmGlobalAlertWithOptions(DescribeCloudGtmGlobalAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmGlobalAlert"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmGlobalAlertResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmGlobalAlertRequest
+     * @return DescribeCloudGtmGlobalAlertResponse
+     */
+    public DescribeCloudGtmGlobalAlertResponse describeCloudGtmGlobalAlert(DescribeCloudGtmGlobalAlertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmGlobalAlertWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmInstanceConfigAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmInstanceConfigAlertResponse
+     */
+    public DescribeCloudGtmInstanceConfigAlertResponse describeCloudGtmInstanceConfigAlertWithOptions(DescribeCloudGtmInstanceConfigAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmInstanceConfigAlert"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmInstanceConfigAlertResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmInstanceConfigAlertRequest
+     * @return DescribeCloudGtmInstanceConfigAlertResponse
+     */
+    public DescribeCloudGtmInstanceConfigAlertResponse describeCloudGtmInstanceConfigAlert(DescribeCloudGtmInstanceConfigAlertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmInstanceConfigAlertWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmInstanceConfigFullInfoResponse
+     */
+    public DescribeCloudGtmInstanceConfigFullInfoResponse describeCloudGtmInstanceConfigFullInfoWithOptions(DescribeCloudGtmInstanceConfigFullInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmInstanceConfigFullInfo"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmInstanceConfigFullInfoResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
+     * @return DescribeCloudGtmInstanceConfigFullInfoResponse
+     */
+    public DescribeCloudGtmInstanceConfigFullInfoResponse describeCloudGtmInstanceConfigFullInfo(DescribeCloudGtmInstanceConfigFullInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmInstanceConfigFullInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmMonitorTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmMonitorTemplateResponse
+     */
+    public DescribeCloudGtmMonitorTemplateResponse describeCloudGtmMonitorTemplateWithOptions(DescribeCloudGtmMonitorTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmMonitorTemplate"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmMonitorTemplateResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmMonitorTemplateRequest
+     * @return DescribeCloudGtmMonitorTemplateResponse
+     */
+    public DescribeCloudGtmMonitorTemplateResponse describeCloudGtmMonitorTemplate(DescribeCloudGtmMonitorTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmMonitorTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmSummaryResponse
+     */
+    public DescribeCloudGtmSummaryResponse describeCloudGtmSummaryWithOptions(DescribeCloudGtmSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmSummary"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmSummaryResponse());
+    }
+
+    /**
+     * @param request DescribeCloudGtmSummaryRequest
+     * @return DescribeCloudGtmSummaryResponse
+     */
+    public DescribeCloudGtmSummaryResponse describeCloudGtmSummary(DescribeCloudGtmSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmSummaryWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCloudGtmSystemLinesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudGtmSystemLinesResponse
+     */
+    public DescribeCloudGtmSystemLinesResponse describeCloudGtmSystemLinesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudGtmSystemLines"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudGtmSystemLinesResponse());
+    }
+
+    /**
+     * @return DescribeCloudGtmSystemLinesResponse
+     */
+    public DescribeCloudGtmSystemLinesResponse describeCloudGtmSystemLines() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudGtmSystemLinesWithOptions(runtime);
     }
 
     /**
@@ -6463,6 +7348,478 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ListCloudGtmAddressPoolsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmAddressPoolsResponse
+     */
+    public ListCloudGtmAddressPoolsResponse listCloudGtmAddressPoolsWithOptions(ListCloudGtmAddressPoolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolName)) {
+            query.put("AddressPoolName", request.addressPoolName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolType)) {
+            query.put("AddressPoolType", request.addressPoolType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmAddressPools"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmAddressPoolsResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmAddressPoolsRequest
+     * @return ListCloudGtmAddressPoolsResponse
+     */
+    public ListCloudGtmAddressPoolsResponse listCloudGtmAddressPools(ListCloudGtmAddressPoolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmAddressPoolsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListCloudGtmAddressesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmAddressesResponse
+     */
+    public ListCloudGtmAddressesResponse listCloudGtmAddressesWithOptions(ListCloudGtmAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthStatus)) {
+            query.put("HealthStatus", request.healthStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitorTemplateId)) {
+            query.put("MonitorTemplateId", request.monitorTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmAddresses"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmAddressesResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmAddressesRequest
+     * @return ListCloudGtmAddressesResponse
+     */
+    public ListCloudGtmAddressesResponse listCloudGtmAddresses(ListCloudGtmAddressesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmAddressesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListCloudGtmAlertLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmAlertLogsResponse
+     */
+    public ListCloudGtmAlertLogsResponse listCloudGtmAlertLogsWithOptions(ListCloudGtmAlertLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionType)) {
+            query.put("ActionType", request.actionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmAlertLogs"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmAlertLogsResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmAlertLogsRequest
+     * @return ListCloudGtmAlertLogsResponse
+     */
+    public ListCloudGtmAlertLogsResponse listCloudGtmAlertLogs(ListCloudGtmAlertLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmAlertLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListCloudGtmAvailableAlertGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmAvailableAlertGroupsResponse
+     */
+    public ListCloudGtmAvailableAlertGroupsResponse listCloudGtmAvailableAlertGroupsWithOptions(ListCloudGtmAvailableAlertGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmAvailableAlertGroups"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmAvailableAlertGroupsResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmAvailableAlertGroupsRequest
+     * @return ListCloudGtmAvailableAlertGroupsResponse
+     */
+    public ListCloudGtmAvailableAlertGroupsResponse listCloudGtmAvailableAlertGroups(ListCloudGtmAvailableAlertGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmAvailableAlertGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListCloudGtmInstanceConfigsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmInstanceConfigsResponse
+     */
+    public ListCloudGtmInstanceConfigsResponse listCloudGtmInstanceConfigsWithOptions(ListCloudGtmInstanceConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleDomainName)) {
+            query.put("ScheduleDomainName", request.scheduleDomainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleZoneName)) {
+            query.put("ScheduleZoneName", request.scheduleZoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmInstanceConfigs"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmInstanceConfigsResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmInstanceConfigsRequest
+     * @return ListCloudGtmInstanceConfigsResponse
+     */
+    public ListCloudGtmInstanceConfigsResponse listCloudGtmInstanceConfigs(ListCloudGtmInstanceConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmInstanceConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListCloudGtmInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmInstancesResponse
+     */
+    public ListCloudGtmInstancesResponse listCloudGtmInstancesWithOptions(ListCloudGtmInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmInstances"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmInstancesResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmInstancesRequest
+     * @return ListCloudGtmInstancesResponse
+     */
+    public ListCloudGtmInstancesResponse listCloudGtmInstances(ListCloudGtmInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListCloudGtmMonitorNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmMonitorNodesResponse
+     */
+    public ListCloudGtmMonitorNodesResponse listCloudGtmMonitorNodesWithOptions(ListCloudGtmMonitorNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmMonitorNodes"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmMonitorNodesResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmMonitorNodesRequest
+     * @return ListCloudGtmMonitorNodesResponse
+     */
+    public ListCloudGtmMonitorNodesResponse listCloudGtmMonitorNodes(ListCloudGtmMonitorNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmMonitorNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListCloudGtmMonitorTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudGtmMonitorTemplatesResponse
+     */
+    public ListCloudGtmMonitorTemplatesResponse listCloudGtmMonitorTemplatesWithOptions(ListCloudGtmMonitorTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudGtmMonitorTemplates"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudGtmMonitorTemplatesResponse());
+    }
+
+    /**
+     * @param request ListCloudGtmMonitorTemplatesRequest
+     * @return ListCloudGtmMonitorTemplatesResponse
+     */
+    public ListCloudGtmMonitorTemplatesResponse listCloudGtmMonitorTemplates(ListCloudGtmMonitorTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudGtmMonitorTemplatesWithOptions(request, runtime);
+    }
+
+    /**
      * @summary Queries the tags that are added to a specified resource.
      *
      * @description *   Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
@@ -6929,6 +8286,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param tmpReq ReplaceCloudGtmAddressPoolAddressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReplaceCloudGtmAddressPoolAddressResponse
+     */
+    public ReplaceCloudGtmAddressPoolAddressResponse replaceCloudGtmAddressPoolAddressWithOptions(ReplaceCloudGtmAddressPoolAddressRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ReplaceCloudGtmAddressPoolAddressShrinkRequest request = new ReplaceCloudGtmAddressPoolAddressShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.addresses)) {
+            request.addressesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.addresses, "Addresses", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolId)) {
+            query.put("AddressPoolId", request.addressPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressesShrink)) {
+            query.put("Addresses", request.addressesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReplaceCloudGtmAddressPoolAddress"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReplaceCloudGtmAddressPoolAddressResponse());
+    }
+
+    /**
+     * @param request ReplaceCloudGtmAddressPoolAddressRequest
+     * @return ReplaceCloudGtmAddressPoolAddressResponse
+     */
+    public ReplaceCloudGtmAddressPoolAddressResponse replaceCloudGtmAddressPoolAddress(ReplaceCloudGtmAddressPoolAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.replaceCloudGtmAddressPoolAddressWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq ReplaceCloudGtmInstanceConfigAddressPoolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReplaceCloudGtmInstanceConfigAddressPoolResponse
+     */
+    public ReplaceCloudGtmInstanceConfigAddressPoolResponse replaceCloudGtmInstanceConfigAddressPoolWithOptions(ReplaceCloudGtmInstanceConfigAddressPoolRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ReplaceCloudGtmInstanceConfigAddressPoolShrinkRequest request = new ReplaceCloudGtmInstanceConfigAddressPoolShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.addressPools)) {
+            request.addressPoolsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.addressPools, "AddressPools", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolsShrink)) {
+            query.put("AddressPools", request.addressPoolsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReplaceCloudGtmInstanceConfigAddressPool"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReplaceCloudGtmInstanceConfigAddressPoolResponse());
+    }
+
+    /**
+     * @param request ReplaceCloudGtmInstanceConfigAddressPoolRequest
+     * @return ReplaceCloudGtmInstanceConfigAddressPoolResponse
+     */
+    public ReplaceCloudGtmInstanceConfigAddressPoolResponse replaceCloudGtmInstanceConfigAddressPool(ReplaceCloudGtmInstanceConfigAddressPoolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.replaceCloudGtmInstanceConfigAddressPoolWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 恢复公共DNS服务
      *
      * @param request ResumePdnsServiceRequest
@@ -7064,6 +8537,364 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RollbackGtmRecoveryPlanResponse rollbackGtmRecoveryPlan(RollbackGtmRecoveryPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rollbackGtmRecoveryPlanWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request SearchCloudGtmAddressPoolsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchCloudGtmAddressPoolsResponse
+     */
+    public SearchCloudGtmAddressPoolsResponse searchCloudGtmAddressPoolsWithOptions(SearchCloudGtmAddressPoolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolName)) {
+            query.put("AddressPoolName", request.addressPoolName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolType)) {
+            query.put("AddressPoolType", request.addressPoolType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableStatus)) {
+            query.put("AvailableStatus", request.availableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthStatus)) {
+            query.put("HealthStatus", request.healthStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchCloudGtmAddressPools"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchCloudGtmAddressPoolsResponse());
+    }
+
+    /**
+     * @param request SearchCloudGtmAddressPoolsRequest
+     * @return SearchCloudGtmAddressPoolsResponse
+     */
+    public SearchCloudGtmAddressPoolsResponse searchCloudGtmAddressPools(SearchCloudGtmAddressPoolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchCloudGtmAddressPoolsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request SearchCloudGtmAddressesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchCloudGtmAddressesResponse
+     */
+    public SearchCloudGtmAddressesResponse searchCloudGtmAddressesWithOptions(SearchCloudGtmAddressesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableStatus)) {
+            query.put("AvailableStatus", request.availableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthStatus)) {
+            query.put("HealthStatus", request.healthStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monitorTemplateName)) {
+            query.put("MonitorTemplateName", request.monitorTemplateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameSearchCondition)) {
+            query.put("NameSearchCondition", request.nameSearchCondition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.names)) {
+            query.put("Names", request.names);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarkSearchCondition)) {
+            query.put("RemarkSearchCondition", request.remarkSearchCondition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remarks)) {
+            query.put("Remarks", request.remarks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchCloudGtmAddresses"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchCloudGtmAddressesResponse());
+    }
+
+    /**
+     * @param request SearchCloudGtmAddressesRequest
+     * @return SearchCloudGtmAddressesResponse
+     */
+    public SearchCloudGtmAddressesResponse searchCloudGtmAddresses(SearchCloudGtmAddressesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchCloudGtmAddressesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request SearchCloudGtmInstanceConfigsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchCloudGtmInstanceConfigsResponse
+     */
+    public SearchCloudGtmInstanceConfigsResponse searchCloudGtmInstanceConfigsWithOptions(SearchCloudGtmInstanceConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableStatus)) {
+            query.put("AvailableStatus", request.availableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthStatus)) {
+            query.put("HealthStatus", request.healthStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleDomainName)) {
+            query.put("ScheduleDomainName", request.scheduleDomainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleZoneName)) {
+            query.put("ScheduleZoneName", request.scheduleZoneName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchCloudGtmInstanceConfigs"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchCloudGtmInstanceConfigsResponse());
+    }
+
+    /**
+     * @param request SearchCloudGtmInstanceConfigsRequest
+     * @return SearchCloudGtmInstanceConfigsResponse
+     */
+    public SearchCloudGtmInstanceConfigsResponse searchCloudGtmInstanceConfigs(SearchCloudGtmInstanceConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchCloudGtmInstanceConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request SearchCloudGtmInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchCloudGtmInstancesResponse
+     */
+    public SearchCloudGtmInstancesResponse searchCloudGtmInstancesWithOptions(SearchCloudGtmInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchCloudGtmInstances"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchCloudGtmInstancesResponse());
+    }
+
+    /**
+     * @param request SearchCloudGtmInstancesRequest
+     * @return SearchCloudGtmInstancesResponse
+     */
+    public SearchCloudGtmInstancesResponse searchCloudGtmInstances(SearchCloudGtmInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchCloudGtmInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request SearchCloudGtmMonitorTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchCloudGtmMonitorTemplatesResponse
+     */
+    public SearchCloudGtmMonitorTemplatesResponse searchCloudGtmMonitorTemplatesWithOptions(SearchCloudGtmMonitorTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchCloudGtmMonitorTemplates"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchCloudGtmMonitorTemplatesResponse());
+    }
+
+    /**
+     * @param request SearchCloudGtmMonitorTemplatesRequest
+     * @return SearchCloudGtmMonitorTemplatesResponse
+     */
+    public SearchCloudGtmMonitorTemplatesResponse searchCloudGtmMonitorTemplates(SearchCloudGtmMonitorTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchCloudGtmMonitorTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -7802,6 +9633,980 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAppKeyStateResponse updateAppKeyState(UpdateAppKeyStateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAppKeyStateWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq UpdateCloudGtmAddressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressResponse
+     */
+    public UpdateCloudGtmAddressResponse updateCloudGtmAddressWithOptions(UpdateCloudGtmAddressRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCloudGtmAddressShrinkRequest request = new UpdateCloudGtmAddressShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.healthTasks)) {
+            request.healthTasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.healthTasks, "HealthTasks", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attributeInfo)) {
+            query.put("AttributeInfo", request.attributeInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthJudgement)) {
+            query.put("HealthJudgement", request.healthJudgement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthTasksShrink)) {
+            query.put("HealthTasks", request.healthTasksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddress"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressRequest
+     * @return UpdateCloudGtmAddressResponse
+     */
+    public UpdateCloudGtmAddressResponse updateCloudGtmAddress(UpdateCloudGtmAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressEnableStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressEnableStatusResponse
+     */
+    public UpdateCloudGtmAddressEnableStatusResponse updateCloudGtmAddressEnableStatusWithOptions(UpdateCloudGtmAddressEnableStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddressEnableStatus"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressEnableStatusResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressEnableStatusRequest
+     * @return UpdateCloudGtmAddressEnableStatusResponse
+     */
+    public UpdateCloudGtmAddressEnableStatusResponse updateCloudGtmAddressEnableStatus(UpdateCloudGtmAddressEnableStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressEnableStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressManualAvailableStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressManualAvailableStatusResponse
+     */
+    public UpdateCloudGtmAddressManualAvailableStatusResponse updateCloudGtmAddressManualAvailableStatusWithOptions(UpdateCloudGtmAddressManualAvailableStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableMode)) {
+            query.put("AvailableMode", request.availableMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.manualAvailableStatus)) {
+            query.put("ManualAvailableStatus", request.manualAvailableStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddressManualAvailableStatus"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressManualAvailableStatusResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressManualAvailableStatusRequest
+     * @return UpdateCloudGtmAddressManualAvailableStatusResponse
+     */
+    public UpdateCloudGtmAddressManualAvailableStatusResponse updateCloudGtmAddressManualAvailableStatus(UpdateCloudGtmAddressManualAvailableStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressManualAvailableStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolBasicConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressPoolBasicConfigResponse
+     */
+    public UpdateCloudGtmAddressPoolBasicConfigResponse updateCloudGtmAddressPoolBasicConfigWithOptions(UpdateCloudGtmAddressPoolBasicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolId)) {
+            query.put("AddressPoolId", request.addressPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolName)) {
+            query.put("AddressPoolName", request.addressPoolName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthJudgement)) {
+            query.put("HealthJudgement", request.healthJudgement);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddressPoolBasicConfig"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressPoolBasicConfigResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolBasicConfigRequest
+     * @return UpdateCloudGtmAddressPoolBasicConfigResponse
+     */
+    public UpdateCloudGtmAddressPoolBasicConfigResponse updateCloudGtmAddressPoolBasicConfig(UpdateCloudGtmAddressPoolBasicConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressPoolBasicConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolEnableStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressPoolEnableStatusResponse
+     */
+    public UpdateCloudGtmAddressPoolEnableStatusResponse updateCloudGtmAddressPoolEnableStatusWithOptions(UpdateCloudGtmAddressPoolEnableStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolId)) {
+            query.put("AddressPoolId", request.addressPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddressPoolEnableStatus"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressPoolEnableStatusResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolEnableStatusRequest
+     * @return UpdateCloudGtmAddressPoolEnableStatusResponse
+     */
+    public UpdateCloudGtmAddressPoolEnableStatusResponse updateCloudGtmAddressPoolEnableStatus(UpdateCloudGtmAddressPoolEnableStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressPoolEnableStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolLbStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressPoolLbStrategyResponse
+     */
+    public UpdateCloudGtmAddressPoolLbStrategyResponse updateCloudGtmAddressPoolLbStrategyWithOptions(UpdateCloudGtmAddressPoolLbStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressLbStrategy)) {
+            query.put("AddressLbStrategy", request.addressLbStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolId)) {
+            query.put("AddressPoolId", request.addressPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequenceLbStrategyMode)) {
+            query.put("SequenceLbStrategyMode", request.sequenceLbStrategyMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddressPoolLbStrategy"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressPoolLbStrategyResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolLbStrategyRequest
+     * @return UpdateCloudGtmAddressPoolLbStrategyResponse
+     */
+    public UpdateCloudGtmAddressPoolLbStrategyResponse updateCloudGtmAddressPoolLbStrategy(UpdateCloudGtmAddressPoolLbStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressPoolLbStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolRemarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressPoolRemarkResponse
+     */
+    public UpdateCloudGtmAddressPoolRemarkResponse updateCloudGtmAddressPoolRemarkWithOptions(UpdateCloudGtmAddressPoolRemarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolId)) {
+            query.put("AddressPoolId", request.addressPoolId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddressPoolRemark"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressPoolRemarkResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressPoolRemarkRequest
+     * @return UpdateCloudGtmAddressPoolRemarkResponse
+     */
+    public UpdateCloudGtmAddressPoolRemarkResponse updateCloudGtmAddressPoolRemark(UpdateCloudGtmAddressPoolRemarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressPoolRemarkWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressRemarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmAddressRemarkResponse
+     */
+    public UpdateCloudGtmAddressRemarkResponse updateCloudGtmAddressRemarkWithOptions(UpdateCloudGtmAddressRemarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressId)) {
+            query.put("AddressId", request.addressId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmAddressRemark"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmAddressRemarkResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmAddressRemarkRequest
+     * @return UpdateCloudGtmAddressRemarkResponse
+     */
+    public UpdateCloudGtmAddressRemarkResponse updateCloudGtmAddressRemark(UpdateCloudGtmAddressRemarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmAddressRemarkWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq UpdateCloudGtmGlobalAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmGlobalAlertResponse
+     */
+    public UpdateCloudGtmGlobalAlertResponse updateCloudGtmGlobalAlertWithOptions(UpdateCloudGtmGlobalAlertRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCloudGtmGlobalAlertShrinkRequest request = new UpdateCloudGtmGlobalAlertShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.alertConfig)) {
+            request.alertConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.alertConfig, "AlertConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.alertGroup)) {
+            request.alertGroupShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.alertGroup, "AlertGroup", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertConfigShrink)) {
+            query.put("AlertConfig", request.alertConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertGroupShrink)) {
+            query.put("AlertGroup", request.alertGroupShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmGlobalAlert"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmGlobalAlertResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmGlobalAlertRequest
+     * @return UpdateCloudGtmGlobalAlertResponse
+     */
+    public UpdateCloudGtmGlobalAlertResponse updateCloudGtmGlobalAlert(UpdateCloudGtmGlobalAlertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmGlobalAlertWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq UpdateCloudGtmInstanceConfigAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmInstanceConfigAlertResponse
+     */
+    public UpdateCloudGtmInstanceConfigAlertResponse updateCloudGtmInstanceConfigAlertWithOptions(UpdateCloudGtmInstanceConfigAlertRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCloudGtmInstanceConfigAlertShrinkRequest request = new UpdateCloudGtmInstanceConfigAlertShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.alertConfig)) {
+            request.alertConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.alertConfig, "AlertConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.alertGroup)) {
+            request.alertGroupShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.alertGroup, "AlertGroup", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertConfigShrink)) {
+            query.put("AlertConfig", request.alertConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertGroupShrink)) {
+            query.put("AlertGroup", request.alertGroupShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertMode)) {
+            query.put("AlertMode", request.alertMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmInstanceConfigAlert"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmInstanceConfigAlertResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigAlertRequest
+     * @return UpdateCloudGtmInstanceConfigAlertResponse
+     */
+    public UpdateCloudGtmInstanceConfigAlertResponse updateCloudGtmInstanceConfigAlert(UpdateCloudGtmInstanceConfigAlertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmInstanceConfigAlertWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigBasicRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmInstanceConfigBasicResponse
+     */
+    public UpdateCloudGtmInstanceConfigBasicResponse updateCloudGtmInstanceConfigBasicWithOptions(UpdateCloudGtmInstanceConfigBasicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleHostname)) {
+            query.put("ScheduleHostname", request.scheduleHostname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleZoneName)) {
+            query.put("ScheduleZoneName", request.scheduleZoneName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
+            query.put("Ttl", request.ttl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmInstanceConfigBasic"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmInstanceConfigBasicResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigBasicRequest
+     * @return UpdateCloudGtmInstanceConfigBasicResponse
+     */
+    public UpdateCloudGtmInstanceConfigBasicResponse updateCloudGtmInstanceConfigBasic(UpdateCloudGtmInstanceConfigBasicRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmInstanceConfigBasicWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigEnableStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmInstanceConfigEnableStatusResponse
+     */
+    public UpdateCloudGtmInstanceConfigEnableStatusResponse updateCloudGtmInstanceConfigEnableStatusWithOptions(UpdateCloudGtmInstanceConfigEnableStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableStatus)) {
+            query.put("EnableStatus", request.enableStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmInstanceConfigEnableStatus"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmInstanceConfigEnableStatusResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigEnableStatusRequest
+     * @return UpdateCloudGtmInstanceConfigEnableStatusResponse
+     */
+    public UpdateCloudGtmInstanceConfigEnableStatusResponse updateCloudGtmInstanceConfigEnableStatus(UpdateCloudGtmInstanceConfigEnableStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmInstanceConfigEnableStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigLbStrategyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmInstanceConfigLbStrategyResponse
+     */
+    public UpdateCloudGtmInstanceConfigLbStrategyResponse updateCloudGtmInstanceConfigLbStrategyWithOptions(UpdateCloudGtmInstanceConfigLbStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressPoolLbStrategy)) {
+            query.put("AddressPoolLbStrategy", request.addressPoolLbStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequenceLbStrategyMode)) {
+            query.put("SequenceLbStrategyMode", request.sequenceLbStrategyMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmInstanceConfigLbStrategy"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmInstanceConfigLbStrategyResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigLbStrategyRequest
+     * @return UpdateCloudGtmInstanceConfigLbStrategyResponse
+     */
+    public UpdateCloudGtmInstanceConfigLbStrategyResponse updateCloudGtmInstanceConfigLbStrategy(UpdateCloudGtmInstanceConfigLbStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmInstanceConfigLbStrategyWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigRemarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmInstanceConfigRemarkResponse
+     */
+    public UpdateCloudGtmInstanceConfigRemarkResponse updateCloudGtmInstanceConfigRemarkWithOptions(UpdateCloudGtmInstanceConfigRemarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmInstanceConfigRemark"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmInstanceConfigRemarkResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceConfigRemarkRequest
+     * @return UpdateCloudGtmInstanceConfigRemarkResponse
+     */
+    public UpdateCloudGtmInstanceConfigRemarkResponse updateCloudGtmInstanceConfigRemark(UpdateCloudGtmInstanceConfigRemarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmInstanceConfigRemarkWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmInstanceNameResponse
+     */
+    public UpdateCloudGtmInstanceNameResponse updateCloudGtmInstanceNameWithOptions(UpdateCloudGtmInstanceNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmInstanceName"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmInstanceNameResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmInstanceNameRequest
+     * @return UpdateCloudGtmInstanceNameResponse
+     */
+    public UpdateCloudGtmInstanceNameResponse updateCloudGtmInstanceName(UpdateCloudGtmInstanceNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmInstanceNameWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq UpdateCloudGtmMonitorTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmMonitorTemplateResponse
+     */
+    public UpdateCloudGtmMonitorTemplateResponse updateCloudGtmMonitorTemplateWithOptions(UpdateCloudGtmMonitorTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCloudGtmMonitorTemplateShrinkRequest request = new UpdateCloudGtmMonitorTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ispCityNodes)) {
+            request.ispCityNodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ispCityNodes, "IspCityNodes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluationCount)) {
+            query.put("EvaluationCount", request.evaluationCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendInfo)) {
+            query.put("ExtendInfo", request.extendInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.failureRate)) {
+            query.put("FailureRate", request.failureRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ispCityNodesShrink)) {
+            query.put("IspCityNodes", request.ispCityNodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmMonitorTemplate"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmMonitorTemplateResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmMonitorTemplateRequest
+     * @return UpdateCloudGtmMonitorTemplateResponse
+     */
+    public UpdateCloudGtmMonitorTemplateResponse updateCloudGtmMonitorTemplate(UpdateCloudGtmMonitorTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmMonitorTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCloudGtmMonitorTemplateRemarkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudGtmMonitorTemplateRemarkResponse
+     */
+    public UpdateCloudGtmMonitorTemplateRemarkResponse updateCloudGtmMonitorTemplateRemarkWithOptions(UpdateCloudGtmMonitorTemplateRemarkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudGtmMonitorTemplateRemark"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudGtmMonitorTemplateRemarkResponse());
+    }
+
+    /**
+     * @param request UpdateCloudGtmMonitorTemplateRemarkRequest
+     * @return UpdateCloudGtmMonitorTemplateRemarkResponse
+     */
+    public UpdateCloudGtmMonitorTemplateRemarkResponse updateCloudGtmMonitorTemplateRemark(UpdateCloudGtmMonitorTemplateRemarkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudGtmMonitorTemplateRemarkWithOptions(request, runtime);
     }
 
     /**
