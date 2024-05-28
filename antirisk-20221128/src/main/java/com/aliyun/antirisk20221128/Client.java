@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 获取实时反作弊信息
+     *
+     * @param request GetRealTimeRiskInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRealTimeRiskInfoResponse
+     */
     public GetRealTimeRiskInfoResponse getRealTimeRiskInfoWithOptions(GetRealTimeRiskInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -59,12 +67,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRealTimeRiskInfoResponse());
     }
 
+    /**
+     * @summary 获取实时反作弊信息
+     *
+     * @param request GetRealTimeRiskInfoRequest
+     * @return GetRealTimeRiskInfoResponse
+     */
     public GetRealTimeRiskInfoResponse getRealTimeRiskInfo(GetRealTimeRiskInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRealTimeRiskInfoWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary atoken换zid+tags
+     *
+     * @param request GetZidTagByAtokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetZidTagByAtokenResponse
+     */
     public GetZidTagByAtokenResponse getZidTagByAtokenWithOptions(GetZidTagByAtokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -94,12 +116,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetZidTagByAtokenResponse());
     }
 
+    /**
+     * @summary atoken换zid+tags
+     *
+     * @param request GetZidTagByAtokenRequest
+     * @return GetZidTagByAtokenResponse
+     */
     public GetZidTagByAtokenResponse getZidTagByAtoken(GetZidTagByAtokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getZidTagByAtokenWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary atoken换zid+tags+风险分
+     *
+     * @param request GetZidTagScoreByAtokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetZidTagScoreByAtokenResponse
+     */
     public GetZidTagScoreByAtokenResponse getZidTagScoreByAtokenWithOptions(GetZidTagScoreByAtokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -129,12 +165,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetZidTagScoreByAtokenResponse());
     }
 
+    /**
+     * @summary atoken换zid+tags+风险分
+     *
+     * @param request GetZidTagScoreByAtokenRequest
+     * @return GetZidTagScoreByAtokenResponse
+     */
     public GetZidTagScoreByAtokenResponse getZidTagScoreByAtoken(GetZidTagScoreByAtokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getZidTagScoreByAtokenWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary  渠道风险明细
+     *
+     * @param request ListChannelRiskDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChannelRiskDetailsResponse
+     */
     public ListChannelRiskDetailsResponse listChannelRiskDetailsWithOptions(ListChannelRiskDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -176,12 +226,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListChannelRiskDetailsResponse());
     }
 
+    /**
+     * @summary  渠道风险明细
+     *
+     * @param request ListChannelRiskDetailsRequest
+     * @return ListChannelRiskDetailsResponse
+     */
     public ListChannelRiskDetailsResponse listChannelRiskDetails(ListChannelRiskDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listChannelRiskDetailsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 卸载明细列表
+     *
+     * @param request ListUninstallDetailRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUninstallDetailResponse
+     */
     public ListUninstallDetailResponse listUninstallDetailWithOptions(ListUninstallDetailRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -215,6 +279,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUninstallDetailResponse());
     }
 
+    /**
+     * @summary 卸载明细列表
+     *
+     * @param request ListUninstallDetailRequest
+     * @return ListUninstallDetailResponse
+     */
     public ListUninstallDetailResponse listUninstallDetail(ListUninstallDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

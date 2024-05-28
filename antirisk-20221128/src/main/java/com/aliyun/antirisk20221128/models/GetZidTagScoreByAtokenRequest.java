@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class GetZidTagScoreByAtokenRequest extends TeaModel {
     /**
      * <p>atoken</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("atoken")
     public String atoken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 

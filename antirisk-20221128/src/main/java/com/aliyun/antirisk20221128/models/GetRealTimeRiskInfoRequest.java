@@ -4,9 +4,15 @@ package com.aliyun.antirisk20221128.models;
 import com.aliyun.tea.*;
 
 public class GetRealTimeRiskInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("atoken")
     public String atoken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 

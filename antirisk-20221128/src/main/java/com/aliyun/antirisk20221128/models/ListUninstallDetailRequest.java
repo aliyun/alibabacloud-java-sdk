@@ -4,12 +4,21 @@ package com.aliyun.antirisk20221128.models;
 import com.aliyun.tea.*;
 
 public class ListUninstallDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endDs")
     public String endDs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("startDs")
     public String startDs;
 
