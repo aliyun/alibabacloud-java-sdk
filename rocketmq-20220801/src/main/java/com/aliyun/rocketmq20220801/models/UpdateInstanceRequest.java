@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
+     * <p>The access control list for the instance.</p>
+     */
+    @NameInMap("aclInfo")
+    public UpdateInstanceRequestAclInfo aclInfo;
+
+    /**
      * <p>The updated name of the instance.</p>
      */
     @NameInMap("instanceName")
@@ -31,6 +37,14 @@ public class UpdateInstanceRequest extends TeaModel {
     public static UpdateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceRequest self = new UpdateInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateInstanceRequest setAclInfo(UpdateInstanceRequestAclInfo aclInfo) {
+        this.aclInfo = aclInfo;
+        return this;
+    }
+    public UpdateInstanceRequestAclInfo getAclInfo() {
+        return this.aclInfo;
     }
 
     public UpdateInstanceRequest setInstanceName(String instanceName) {
@@ -63,6 +77,46 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public static class UpdateInstanceRequestAclInfo extends TeaModel {
+        /**
+         * <p>The authentication type of the instance.</p>
+         */
+        @NameInMap("aclTypes")
+        public java.util.List<String> aclTypes;
+
+        /**
+         * <p>Indicates whether the authentication-free in VPCs feature is enabled.</p>
+         * <p>Indicates whether the authentication-free in VPCs feature is enabled.</p>
+         * <p>Valid values:</p>
+         * <p>- true</p>
+         * <p>- false</p>
+         */
+        @NameInMap("defaultVpcAuthFree")
+        public Boolean defaultVpcAuthFree;
+
+        public static UpdateInstanceRequestAclInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestAclInfo self = new UpdateInstanceRequestAclInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestAclInfo setAclTypes(java.util.List<String> aclTypes) {
+            this.aclTypes = aclTypes;
+            return this;
+        }
+        public java.util.List<String> getAclTypes() {
+            return this.aclTypes;
+        }
+
+        public UpdateInstanceRequestAclInfo setDefaultVpcAuthFree(Boolean defaultVpcAuthFree) {
+            this.defaultVpcAuthFree = defaultVpcAuthFree;
+            return this;
+        }
+        public Boolean getDefaultVpcAuthFree() {
+            return this.defaultVpcAuthFree;
+        }
+
     }
 
     public static class UpdateInstanceRequestNetworkInfoInternetInfo extends TeaModel {
@@ -121,9 +175,9 @@ public class UpdateInstanceRequest extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](~~427237~~).</p>
+         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](https://help.aliyun.com/document_detail/427237.html).</p>
          * <br>
-         * <p>>  The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance editions](~~444715~~).</p>
+         * <p>>  The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance editions](https://help.aliyun.com/document_detail/444715.html).</p>
          */
         @NameInMap("autoScaling")
         public Boolean autoScaling;
@@ -131,9 +185,9 @@ public class UpdateInstanceRequest extends TeaModel {
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <br>
-         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](~~440347~~) topic.</p>
+         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](https://help.aliyun.com/document_detail/440347.html) topic.</p>
          * <br>
-         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](~~427238~~).</p>
+         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](https://help.aliyun.com/document_detail/427238.html).</p>
          */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;

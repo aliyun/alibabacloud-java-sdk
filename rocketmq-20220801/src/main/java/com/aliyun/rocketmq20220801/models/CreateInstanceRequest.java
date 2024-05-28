@@ -42,6 +42,8 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The network configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("networkInfo")
     public CreateInstanceRequestNetworkInfo networkInfo;
@@ -54,7 +56,9 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>*   PayAsYouGo: This billing method allows you to use resources before you pay for the resources.</p>
      * <p>*   Subscription: This billing method allows you to use resources after you pay for the resources.</p>
      * <br>
-     * <p>For more information, see [Billing methods](~~427234~~).</p>
+     * <p>For more information, see [Billing methods](https://help.aliyun.com/document_detail/427234.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("paymentType")
     public String paymentType;
@@ -100,7 +104,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](~~444722~~).</p>
+     * <p>The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -109,27 +113,34 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>*   professional: Professional Edition</p>
      * <br>
      * <p>>  After an instance is created, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, Enterprise Platinum Edition. For example, you can upgrade an instance of Standard Edition to Professional Edition, but cannot downgrade an instance of Professional Edition to Standard Edition.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("seriesCode")
     public String seriesCode;
 
     /**
      * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("serviceCode")
     public String serviceCode;
 
     /**
-     * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](~~444722~~).</p>
+     * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
      * <p>*   cluster_ha: High-availability Cluster Edition</p>
      * <p>*   single_node: Standalone Edition</p>
+     * <p>*   serverless: Serverless Edition</p>
      * <br>
      * <p>If you set seriesCode to ultimate, you can set this parameter to only cluster_ha.</p>
      * <br>
      * <p>>  After an instance is created, you cannot change the sub-category edition of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("subSeriesCode")
     public String subSeriesCode;
@@ -282,7 +293,10 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   payByBandwidth: pay-by-bandwidth. If Internet access is enabled for an instance, specify this value for the parameter.</p>
+         * <p>*   payByTraffic: pay-by-traffic. If Internet access is enabled for an instance, specify this value for the parameter.</p>
          * <p>*   uninvolved: No billing method is involved. If Internet access is disabled for an instance, specify this value for the parameter.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("flowOutType")
         public String flowOutType;
@@ -295,7 +309,9 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>*   enable</p>
          * <p>*   disable</p>
          * <br>
-         * <p>By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see [Internet access fee](~~427240~~).</p>
+         * <p>By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see [Internet access fee](https://help.aliyun.com/document_detail/427240.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("internetSpec")
         public String internetSpec;
@@ -356,9 +372,11 @@ public class CreateInstanceRequest extends TeaModel {
         public String securityGroupIds;
 
         /**
-         * <p>The ID of the vSwitch with which you want to associate the instance.</p>
+         * <p>The ID of the vSwitch with which you want to associate the instance, If there are multiple vSwitchs, please concatenate them using the "|" character.</p>
          * <br>
          * <p>>  After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("vSwitchId")
         public String vSwitchId;
@@ -367,6 +385,8 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>The ID of the VPC in which you want to deploy the instance.</p>
          * <br>
          * <p>>  After an ApsaraMQ for RocketMQ instance is created, you cannot change the VPC in which the instance is deployed. If you want to change the VPC in which the instance is deployed, you must release the instance and create a new instance.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
@@ -405,12 +425,16 @@ public class CreateInstanceRequest extends TeaModel {
     public static class CreateInstanceRequestNetworkInfo extends TeaModel {
         /**
          * <p>The Internet-related configurations.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("internetInfo")
         public CreateInstanceRequestNetworkInfoInternetInfo internetInfo;
 
         /**
          * <p>The virtual private cloud (VPC)-related configurations.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("vpcInfo")
         public CreateInstanceRequestNetworkInfoVpcInfo vpcInfo;
@@ -447,9 +471,9 @@ public class CreateInstanceRequest extends TeaModel {
          * <p>*   true: enable</p>
          * <p>*   false: disable</p>
          * <br>
-         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](~~427237~~).</p>
+         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](https://help.aliyun.com/document_detail/427237.html).</p>
          * <br>
-         * <p>>  The elastic TPS feature is supported only by instances of specific editions. For more information, see [Instance editions](~~444715~~).</p>
+         * <p>>  The elastic TPS feature is supported only by instances of specific editions. For more information, see [Instance editions](https://help.aliyun.com/document_detail/444715.html).</p>
          */
         @NameInMap("autoScaling")
         public Boolean autoScaling;
@@ -474,15 +498,17 @@ public class CreateInstanceRequest extends TeaModel {
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <br>
-         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](~~440347~~) topic.</p>
+         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](https://help.aliyun.com/document_detail/440347.html) topic.</p>
          * <br>
-         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](~~427238~~).</p>
+         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](https://help.aliyun.com/document_detail/427238.html).</p>
          */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
         /**
-         * <p>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For information about computing specification limits, see [Instance specifications](~~444715~~).</p>
+         * <p>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For information about computing specification limits, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;

@@ -125,7 +125,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         /**
          * <p>The dead-letter topic.</p>
          * <br>
-         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).</p>
+         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](https://help.aliyun.com/document_detail/440356.html).</p>
          */
         @NameInMap("deadLetterTargetTopic")
         public String deadLetterTargetTopic;
@@ -205,7 +205,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
     public static class GetConsumerGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).</p>
+         * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](https://help.aliyun.com/document_detail/440356.html).</p>
          */
         @NameInMap("consumeRetryPolicy")
         public GetConsumerGroupResponseBodyDataConsumeRetryPolicy consumeRetryPolicy;

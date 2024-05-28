@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
     /**
-     * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).</p>
+     * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](https://help.aliyun.com/document_detail/440356.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("consumeRetryPolicy")
     public CreateConsumerGroupRequestConsumeRetryPolicy consumeRetryPolicy;
@@ -17,6 +19,8 @@ public class CreateConsumerGroupRequest extends TeaModel {
      * <br>
      * <p>*   Concurrently: concurrent delivery</p>
      * <p>*   Orderly: ordered delivery</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("deliveryOrderType")
     public String deliveryOrderType;
@@ -60,7 +64,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
         /**
          * <p>The dead-letter topic.</p>
          * <br>
-         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).</p>
+         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](https://help.aliyun.com/document_detail/440356.html).</p>
          */
         @NameInMap("deadLetterTargetTopic")
         public String deadLetterTargetTopic;
@@ -72,12 +76,14 @@ public class CreateConsumerGroupRequest extends TeaModel {
         public Integer maxRetryTimes;
 
         /**
-         * <p>The retry policy. For more information, see [Message retry](~~440356~~).</p>
+         * <p>The retry policy. For more information, see [Message retry](https://help.aliyun.com/document_detail/440356.html).</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
          * <p>*   FixedRetryPolicy: Failed messages are retried at a fixed interval.</p>
          * <p>*   DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("retryPolicy")
         public String retryPolicy;
