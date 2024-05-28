@@ -90,6 +90,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @NameInMap("ProxyRevisionVersion")
     public String proxyRevisionVersion;
 
+    @NameInMap("ProxyRevisionVersionList")
+    public java.util.List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> proxyRevisionVersionList;
+
     /**
      * <p>The status of PolarProxy. Valid values:</p>
      * <br>
@@ -200,6 +203,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         return this.proxyRevisionVersion;
     }
 
+    public DescribeDBClusterVersionResponseBody setProxyRevisionVersionList(java.util.List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> proxyRevisionVersionList) {
+        this.proxyRevisionVersionList = proxyRevisionVersionList;
+        return this;
+    }
+    public java.util.List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> getProxyRevisionVersionList() {
+        return this.proxyRevisionVersionList;
+    }
+
     public DescribeDBClusterVersionResponseBody setProxyVersionStatus(String proxyVersionStatus) {
         this.proxyVersionStatus = proxyVersionStatus;
         return this;
@@ -275,6 +286,58 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         }
 
         public DescribeDBClusterVersionResponseBodyDBRevisionVersionList setRevisionVersionName(String revisionVersionName) {
+            this.revisionVersionName = revisionVersionName;
+            return this;
+        }
+        public String getRevisionVersionName() {
+            return this.revisionVersionName;
+        }
+
+    }
+
+    public static class DescribeDBClusterVersionResponseBodyProxyRevisionVersionList extends TeaModel {
+        @NameInMap("ReleaseNote")
+        public String releaseNote;
+
+        @NameInMap("ReleaseType")
+        public String releaseType;
+
+        @NameInMap("RevisionVersionCode")
+        public String revisionVersionCode;
+
+        @NameInMap("RevisionVersionName")
+        public String revisionVersionName;
+
+        public static DescribeDBClusterVersionResponseBodyProxyRevisionVersionList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterVersionResponseBodyProxyRevisionVersionList self = new DescribeDBClusterVersionResponseBodyProxyRevisionVersionList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterVersionResponseBodyProxyRevisionVersionList setReleaseNote(String releaseNote) {
+            this.releaseNote = releaseNote;
+            return this;
+        }
+        public String getReleaseNote() {
+            return this.releaseNote;
+        }
+
+        public DescribeDBClusterVersionResponseBodyProxyRevisionVersionList setReleaseType(String releaseType) {
+            this.releaseType = releaseType;
+            return this;
+        }
+        public String getReleaseType() {
+            return this.releaseType;
+        }
+
+        public DescribeDBClusterVersionResponseBodyProxyRevisionVersionList setRevisionVersionCode(String revisionVersionCode) {
+            this.revisionVersionCode = revisionVersionCode;
+            return this;
+        }
+        public String getRevisionVersionCode() {
+            return this.revisionVersionCode;
+        }
+
+        public DescribeDBClusterVersionResponseBodyProxyRevisionVersionList setRevisionVersionName(String revisionVersionName) {
             this.revisionVersionName = revisionVersionName;
             return this;
         }
