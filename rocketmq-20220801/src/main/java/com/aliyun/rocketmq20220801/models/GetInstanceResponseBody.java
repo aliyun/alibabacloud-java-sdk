@@ -145,14 +145,47 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDataAclInfo extends TeaModel {
         /**
-         * <p>The authentication type of the instance.</p>
+         * <p>The authentication type of the instance. This parameter is no longer in use. We recommend that you configure aclTypes.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   default: intelligent authentication</p>
+         * <p>- default: intelligent identity authentication</p>
+         * <br>
+         * <p>- apache_acl:access control list (ACL) identity authentication**</p>
          */
         @NameInMap("aclType")
+        @Deprecated
         public String aclType;
+
+        /**
+         * <p>The authentication types of the instance.</p>
+         */
+        @NameInMap("aclTypes")
+        public java.util.List<String> aclTypes;
+
+        /**
+         * <p>Indicates whether the authentication-free in VPCs feature is enabled.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
+        @NameInMap("defaultVpcAuthFree")
+        public Boolean defaultVpcAuthFree;
 
         public static GetInstanceResponseBodyDataAclInfo build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyDataAclInfo self = new GetInstanceResponseBodyDataAclInfo();
@@ -165,6 +198,22 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getAclType() {
             return this.aclType;
+        }
+
+        public GetInstanceResponseBodyDataAclInfo setAclTypes(java.util.List<String> aclTypes) {
+            this.aclTypes = aclTypes;
+            return this;
+        }
+        public java.util.List<String> getAclTypes() {
+            return this.aclTypes;
+        }
+
+        public GetInstanceResponseBodyDataAclInfo setDefaultVpcAuthFree(Boolean defaultVpcAuthFree) {
+            this.defaultVpcAuthFree = defaultVpcAuthFree;
+            return this;
+        }
+        public Boolean getDefaultVpcAuthFree() {
+            return this.defaultVpcAuthFree;
         }
 
     }
@@ -219,7 +268,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>*   enable</p>
          * <p>*   disable</p>
          * <br>
-         * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).</p>
+         * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](https://help.aliyun.com/document_detail/427240.html).</p>
          */
         @NameInMap("internetSpec")
         public String internetSpec;
@@ -227,15 +276,15 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <br>
-         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).</p>
+         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](https://help.aliyun.com/document_detail/440347.html).</p>
          * <br>
-         * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).</p>
+         * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](https://help.aliyun.com/document_detail/427238.html).</p>
          */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
         /**
-         * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).</p>
+         * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).</p>
          */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;
@@ -254,9 +303,9 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>*   true: enable</p>
          * <p>*   false: disable</p>
          * <br>
-         * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).</p>
+         * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](https://help.aliyun.com/document_detail/427237.html).</p>
          * <br>
-         * <p>> The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance specifications](~~444715~~).</p>
+         * <p>> The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).</p>
          */
         @NameInMap("supportAutoScaling")
         public Boolean supportAutoScaling;
@@ -414,29 +463,8 @@ public class GetInstanceResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   TCP_VPC</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    VPC endpoint</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   TCP_INTERNET</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    public endpoint</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>- TCP_VPC: VPC endpoint</p>
+         * <p>- TCP_INTERNET:public endpoint</p>
          */
         @NameInMap("endpointType")
         public String endpointType;
@@ -448,10 +476,10 @@ public class GetInstanceResponseBody extends TeaModel {
         public String endpointUrl;
 
         /**
-         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the ApsaraMQ for RocketMQ broker.</p>
+         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</p>
          * <br>
-         * <p>*   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
-         * <p>*   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
          * <br>
          * <p>We recommend that you configure internetInfo.ipWhitelist instead of this parameter.</p>
          */
@@ -515,7 +543,7 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>*   enable</p>
          * <p>*   disable</p>
          * <br>
-         * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).</p>
+         * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](https://help.aliyun.com/document_detail/427240.html).</p>
          */
         @NameInMap("internetSpec")
         public String internetSpec;
@@ -568,9 +596,39 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches extends TeaModel {
+        @NameInMap("vSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        public static GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches self = new GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyDataNetworkInfoVpcInfo extends TeaModel {
         /**
-         * <p>The ID of the security group with which the instance is associated.</p>
+         * <p>The security group ID.</p>
          */
         @NameInMap("securityGroupIds")
         public String securityGroupIds;
@@ -579,7 +637,11 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>The ID of the vSwitch with which the instance is associated.</p>
          */
         @NameInMap("vSwitchId")
+        @Deprecated
         public String vSwitchId;
+
+        @NameInMap("vSwitches")
+        public java.util.List<GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches> vSwitches;
 
         /**
          * <p>The ID of the VPC with which the instance is associated.</p>
@@ -608,6 +670,14 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
+        public GetInstanceResponseBodyDataNetworkInfoVpcInfo setVSwitches(java.util.List<GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches> vSwitches) {
+            this.vSwitches = vSwitches;
+            return this;
+        }
+        public java.util.List<GetInstanceResponseBodyDataNetworkInfoVpcInfoVSwitches> getVSwitches() {
+            return this.vSwitches;
+        }
+
         public GetInstanceResponseBodyDataNetworkInfoVpcInfo setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
@@ -632,7 +702,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public GetInstanceResponseBodyDataNetworkInfoInternetInfo internetInfo;
 
         /**
-         * <p>The information about the VPC.</p>
+         * <p>The virtual private cloud (VPC) information.</p>
          */
         @NameInMap("vpcInfo")
         public GetInstanceResponseBodyDataNetworkInfoVpcInfo vpcInfo;
@@ -685,15 +755,15 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <br>
-         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).</p>
+         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](https://help.aliyun.com/document_detail/440347.html).</p>
          * <br>
-         * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).</p>
+         * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](https://help.aliyun.com/document_detail/427238.html).</p>
          */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
         /**
-         * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).</p>
+         * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).</p>
          */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;
@@ -712,15 +782,20 @@ public class GetInstanceResponseBody extends TeaModel {
          * <p>*   true: enable</p>
          * <p>*   false: disable</p>
          * <br>
-         * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).</p>
+         * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](https://help.aliyun.com/document_detail/427237.html).</p>
          * <br>
-         * <p>> The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](~~444715~~).</p>
+         * <p>> The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).</p>
          */
         @NameInMap("supportAutoScaling")
         public Boolean supportAutoScaling;
 
         /**
-         * <p>Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.</p>
+         * <p>Indicates whether the message trace feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
          */
         @NameInMap("traceOn")
         public Boolean traceOn;
@@ -910,9 +985,10 @@ public class GetInstanceResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The extended configurations. We recommend you configure the productInfo, internetInfo, or aclInfo parameter instead of this parameter.</p>
+         * <p>The extended configurations. We recommend you configure productInfo, internetInfo, or aclInfo instead of this parameter.</p>
          */
         @NameInMap("extConfig")
+        @Deprecated
         public GetInstanceResponseBodyDataExtConfig extConfig;
 
         /**
@@ -934,7 +1010,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The quotas in the instance.</p>
+         * <p>The instance quotas.</p>
          */
         @NameInMap("instanceQuotas")
         public java.util.List<GetInstanceResponseBodyDataInstanceQuotas> instanceQuotas;
@@ -987,7 +1063,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](~~444722~~).</p>
+         * <p>The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -1031,7 +1107,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](~~444722~~).</p>
+         * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).</p>
          * <br>
          * <p>Valid values:</p>
          * <br>

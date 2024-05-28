@@ -16,6 +16,8 @@ public class ListInstancesRequest extends TeaModel {
      * <p>Valid values: 1 to 100000000.</p>
      * <br>
      * <p>If the value that you specify for this parameter is less than 1, the system uses 1 as the value. If the value that you specify for this parameter is greater than 100000000, the system uses 100000000 as the value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
@@ -26,6 +28,8 @@ public class ListInstancesRequest extends TeaModel {
      * <p>Valid values: 10 to 200.</p>
      * <br>
      * <p>If the value that you specify for this parameter is less than 10, the system uses 10 as the value. If the value that you specify for this parameter is greater than 200, the system uses 200 as the value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;

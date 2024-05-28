@@ -122,6 +122,9 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListConsumerGroupSubscriptionsResponseBodyData extends TeaModel {
+        @NameInMap("consistency")
+        public Boolean consistency;
+
         /**
          * <p>The consumer group ID.</p>
          */
@@ -167,6 +170,14 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         public static ListConsumerGroupSubscriptionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListConsumerGroupSubscriptionsResponseBodyData self = new ListConsumerGroupSubscriptionsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListConsumerGroupSubscriptionsResponseBodyData setConsistency(Boolean consistency) {
+            this.consistency = consistency;
+            return this;
+        }
+        public Boolean getConsistency() {
+            return this.consistency;
         }
 
         public ListConsumerGroupSubscriptionsResponseBodyData setConsumerGroupId(String consumerGroupId) {
