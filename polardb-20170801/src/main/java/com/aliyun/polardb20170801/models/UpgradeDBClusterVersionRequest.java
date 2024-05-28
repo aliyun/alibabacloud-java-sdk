@@ -59,6 +59,9 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     @NameInMap("TargetDBRevisionVersionCode")
     public String targetDBRevisionVersionCode;
 
+    @NameInMap("TargetProxyRevisionVersionCode")
+    public String targetProxyRevisionVersionCode;
+
     /**
      * <p>The upgrade tag. The value is fixed as **INNOVATE**.</p>
      * <br>
@@ -162,6 +165,14 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     }
     public String getTargetDBRevisionVersionCode() {
         return this.targetDBRevisionVersionCode;
+    }
+
+    public UpgradeDBClusterVersionRequest setTargetProxyRevisionVersionCode(String targetProxyRevisionVersionCode) {
+        this.targetProxyRevisionVersionCode = targetProxyRevisionVersionCode;
+        return this;
+    }
+    public String getTargetProxyRevisionVersionCode() {
+        return this.targetProxyRevisionVersionCode;
     }
 
     public UpgradeDBClusterVersionRequest setUpgradeLabel(String upgradeLabel) {

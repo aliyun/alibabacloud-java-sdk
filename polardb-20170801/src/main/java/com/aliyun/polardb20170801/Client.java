@@ -10637,6 +10637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TargetDBRevisionVersionCode", request.targetDBRevisionVersionCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetProxyRevisionVersionCode)) {
+            query.put("TargetProxyRevisionVersionCode", request.targetProxyRevisionVersionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.upgradeLabel)) {
             query.put("UpgradeLabel", request.upgradeLabel);
         }
