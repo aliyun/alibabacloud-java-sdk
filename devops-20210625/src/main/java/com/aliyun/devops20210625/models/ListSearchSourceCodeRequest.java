@@ -10,6 +10,9 @@ public class ListSearchSourceCodeRequest extends TeaModel {
     @NameInMap("isCodeBlock")
     public Boolean isCodeBlock;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
@@ -34,6 +37,9 @@ public class ListSearchSourceCodeRequest extends TeaModel {
     @NameInMap("sort")
     public String sort;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

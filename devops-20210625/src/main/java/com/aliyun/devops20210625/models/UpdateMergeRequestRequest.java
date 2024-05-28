@@ -13,6 +13,9 @@ public class UpdateMergeRequestRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

@@ -7,12 +7,21 @@ public class GetCheckRunRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("checkRunId")
     public Long checkRunId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 

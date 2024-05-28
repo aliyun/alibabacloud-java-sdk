@@ -4,18 +4,33 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceConnectionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("authType")
     public String authType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("connectionName")
     public String connectionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("connectionType")
     public String connectionType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("serviceAuthId")
     public Long serviceAuthId;
 

@@ -4,12 +4,21 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetCustomFieldOptionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceType")
     public String spaceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;
 

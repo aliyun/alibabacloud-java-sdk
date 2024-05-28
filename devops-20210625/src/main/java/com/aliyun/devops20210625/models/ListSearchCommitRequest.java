@@ -4,6 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListSearchCommitRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
@@ -25,6 +28,9 @@ public class ListSearchCommitRequest extends TeaModel {
     @NameInMap("sort")
     public String sort;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

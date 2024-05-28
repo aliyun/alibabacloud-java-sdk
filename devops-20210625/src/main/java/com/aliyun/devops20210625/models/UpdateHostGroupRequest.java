@@ -22,15 +22,24 @@ public class UpdateHostGroupRequest extends TeaModel {
     @NameInMap("machineInfos")
     public String machineInfos;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("serviceConnectionId")
     public Long serviceConnectionId;
 
     @NameInMap("tagIds")
     public String tagIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

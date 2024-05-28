@@ -16,6 +16,9 @@ public class GetTestcaseListRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 

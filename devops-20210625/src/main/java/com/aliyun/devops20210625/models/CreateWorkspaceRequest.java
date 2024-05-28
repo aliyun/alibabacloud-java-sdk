@@ -4,9 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("codeUrl")
     public String codeUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("codeVersion")
     public String codeVersion;
 
@@ -25,6 +31,9 @@ public class CreateWorkspaceRequest extends TeaModel {
     @NameInMap("reuse")
     public Boolean reuse;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("workspaceTemplate")
     public String workspaceTemplate;
 

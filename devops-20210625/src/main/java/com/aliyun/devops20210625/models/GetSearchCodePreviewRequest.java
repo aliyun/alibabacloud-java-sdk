@@ -4,15 +4,24 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetSearchCodePreviewRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("docId")
     public String docId;
 
     @NameInMap("isDsl")
     public Boolean isDsl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

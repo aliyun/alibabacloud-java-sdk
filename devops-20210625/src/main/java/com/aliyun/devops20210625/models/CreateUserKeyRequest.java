@@ -10,15 +10,27 @@ public class CreateUserKeyRequest extends TeaModel {
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("keyScope")
     public String keyScope;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("publicKey")
     public String publicKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

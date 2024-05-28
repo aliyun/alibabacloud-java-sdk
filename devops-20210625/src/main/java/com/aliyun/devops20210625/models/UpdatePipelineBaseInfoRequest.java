@@ -7,6 +7,9 @@ public class UpdatePipelineBaseInfoRequest extends TeaModel {
     @NameInMap("envId")
     public Long envId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pipelineName")
     public String pipelineName;
 

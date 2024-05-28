@@ -4,9 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class DeletePipelineRelationsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("relObjectId")
     public String relObjectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("relObjectType")
     public String relObjectType;
 

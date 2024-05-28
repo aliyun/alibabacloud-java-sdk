@@ -10,9 +10,15 @@ public class ListSprintsRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceType")
     public String spaceType;
 

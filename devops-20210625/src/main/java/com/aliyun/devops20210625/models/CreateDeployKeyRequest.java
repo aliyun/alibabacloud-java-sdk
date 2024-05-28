@@ -7,12 +7,21 @@ public class CreateDeployKeyRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

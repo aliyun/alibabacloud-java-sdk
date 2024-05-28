@@ -13,18 +13,30 @@ public class CreateCommitStatusRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("state")
     public String state;
 
     @NameInMap("targetUrl")
     public String targetUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sha")
     public String sha;
 

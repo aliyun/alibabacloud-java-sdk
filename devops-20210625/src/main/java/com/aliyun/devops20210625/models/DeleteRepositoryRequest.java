@@ -7,9 +7,15 @@ public class DeleteRepositoryRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("reason")
     public String reason;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

@@ -4,9 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkitemFieldRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("updateWorkitemPropertyRequest")
     public java.util.List<UpdateWorkitemFieldRequestUpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;
 
@@ -32,9 +38,15 @@ public class UpdateWorkitemFieldRequest extends TeaModel {
     }
 
     public static class UpdateWorkitemFieldRequestUpdateWorkitemPropertyRequest extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("fieldValue")
         public String fieldValue;
 

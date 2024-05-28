@@ -10,6 +10,9 @@ public class DeleteRepositoryMemberRequest extends TeaModel {
     @NameInMap("memberType")
     public String memberType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

@@ -7,6 +7,9 @@ public class CreateMergeRequestRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("createFrom")
     public String createFrom;
 
@@ -16,24 +19,42 @@ public class CreateMergeRequestRequest extends TeaModel {
     @NameInMap("reviewerIds")
     public java.util.List<String> reviewerIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sourceBranch")
     public String sourceBranch;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sourceProjectId")
     public Long sourceProjectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("targetBranch")
     public String targetBranch;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("targetProjectId")
     public Long targetProjectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("title")
     public String title;
 
     @NameInMap("workItemIds")
     public String workItemIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

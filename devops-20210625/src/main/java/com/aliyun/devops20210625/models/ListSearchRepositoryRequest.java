@@ -7,6 +7,9 @@ public class ListSearchRepositoryRequest extends TeaModel {
     @NameInMap("aliyunPk")
     public String aliyunPk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
@@ -31,6 +34,9 @@ public class ListSearchRepositoryRequest extends TeaModel {
     @NameInMap("visibilityLevel")
     public Integer visibilityLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

@@ -13,6 +13,9 @@ public class ListRepositoryGroupsRequest extends TeaModel {
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
@@ -22,6 +25,9 @@ public class ListRepositoryGroupsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("parentId")
     public Long parentId;
 

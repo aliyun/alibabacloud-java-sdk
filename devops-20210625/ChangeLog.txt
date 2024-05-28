@@ -1,3 +1,22 @@
+2024-05-28 Version: 4.14.0
+- Support API ExportInsightCustomValue.
+- Support API ExportInsightExpectedWorkTime.
+- Support API ExportInsightField.
+- Support API ExportInsightSpace.
+- Support API ExportInsightSpaceRef.
+- Support API ExportInsightSprint.
+- Support API ExportInsightTagRef.
+- Support API ExportInsightWorkTime.
+- Support API ExportInsightWorkitemStatus.
+- Support API ExportInsightWorkitemStatusJoinWorkitemDefectExtra.
+- Support API ExportInsightWorkitemVersion.
+- Support API ExportWorkitemActivity.
+- Update API CreateWorkitem: update response param.
+- Update API GetApplication: update response param.
+- Update API GetWorkItemInfo: update response param.
+- Update API UpdateWorkItem: update response param.
+
+
 2024-04-25 Version: 4.13.5
 - Update API CreateWorkitem: update response param.
 - Update API GetApplication: update response param.

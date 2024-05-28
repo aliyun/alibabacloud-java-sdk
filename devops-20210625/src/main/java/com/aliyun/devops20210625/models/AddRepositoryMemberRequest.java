@@ -7,12 +7,21 @@ public class AddRepositoryMemberRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("accessLevel")
     public Integer accessLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("aliyunPks")
     public String aliyunPks;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

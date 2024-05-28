@@ -10,6 +10,9 @@ public class ListRepositoryCommitsRequest extends TeaModel {
     @NameInMap("end")
     public String end;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
@@ -22,6 +25,9 @@ public class ListRepositoryCommitsRequest extends TeaModel {
     @NameInMap("path")
     public String path;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("refName")
     public String refName;
 

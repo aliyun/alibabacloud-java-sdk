@@ -10,12 +10,18 @@ public class MergeMergeRequestRequest extends TeaModel {
     @NameInMap("mergeMessage")
     public String mergeMessage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("mergeType")
     public String mergeType;
 
     @NameInMap("removeSourceBranch")
     public Boolean removeSourceBranch;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

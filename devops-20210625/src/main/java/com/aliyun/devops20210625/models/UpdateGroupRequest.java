@@ -13,18 +13,30 @@ public class UpdateGroupRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pathWithNamespace")
     public String pathWithNamespace;
 
     @NameInMap("visibilityLevel")
     public Integer visibilityLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

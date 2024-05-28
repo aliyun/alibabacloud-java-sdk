@@ -7,9 +7,15 @@ public class DeleteProjectLabelRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 

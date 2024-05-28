@@ -4,9 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkitemV2Request extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("assignedTo")
     public String assignedTo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("category")
     public String category;
 
@@ -22,12 +28,18 @@ public class CreateWorkitemV2Request extends TeaModel {
     @NameInMap("participants")
     public java.util.List<String> participants;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
     @NameInMap("sprintIdentifier")
     public String sprintIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("subject")
     public String subject;
 
@@ -43,6 +55,9 @@ public class CreateWorkitemV2Request extends TeaModel {
     @NameInMap("versions")
     public java.util.List<String> versions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("workitemTypeIdentifier")
     public String workitemTypeIdentifier;
 

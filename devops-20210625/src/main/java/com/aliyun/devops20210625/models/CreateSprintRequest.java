@@ -7,12 +7,21 @@ public class CreateSprintRequest extends TeaModel {
     @NameInMap("endDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("staffIds")
     public java.util.List<String> staffIds;
 

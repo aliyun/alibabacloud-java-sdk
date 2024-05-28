@@ -43,6 +43,9 @@ public class CreateRepositoryRequest extends TeaModel {
     @NameInMap("localImportUrl")
     public String localImportUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -61,6 +64,9 @@ public class CreateRepositoryRequest extends TeaModel {
     @NameInMap("createParentPath")
     public Boolean createParentPath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

@@ -10,6 +10,9 @@ public class TriggerRepositoryMirrorSyncRequest extends TeaModel {
     @NameInMap("account")
     public String account;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

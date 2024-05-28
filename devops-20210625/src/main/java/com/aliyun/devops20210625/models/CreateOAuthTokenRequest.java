@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateOAuthTokenRequest extends TeaModel {
     /**
      * <p>clientId</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("clientId")
     public String clientId;
 
     /**
      * <p>client_secret</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("clientSecret")
     public String clientSecret;
@@ -19,12 +23,18 @@ public class CreateOAuthTokenRequest extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("grantType")
     public String grantType;
 
     @NameInMap("login")
     public String login;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("scope")
     public String scope;
 
