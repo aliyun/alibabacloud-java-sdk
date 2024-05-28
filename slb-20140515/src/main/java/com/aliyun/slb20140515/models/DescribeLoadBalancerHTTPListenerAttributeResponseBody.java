@@ -12,6 +12,9 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     @NameInMap("AclId")
     public String aclId;
 
+    @NameInMap("AclIds")
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds aclIds;
+
     /**
      * <p>Indicates whether access control is enabled. Valid values:</p>
      * <br>
@@ -342,6 +345,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         return this.aclId;
     }
 
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBody setAclIds(DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds aclIds) {
+        this.aclIds = aclIds;
+        return this;
+    }
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds getAclIds() {
+        return this.aclIds;
+    }
+
     public DescribeLoadBalancerHTTPListenerAttributeResponseBody setAclStatus(String aclStatus) {
         this.aclStatus = aclStatus;
         return this;
@@ -652,6 +663,25 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     }
     public String getXForwardedFor_proto() {
         return this.XForwardedFor_proto;
+    }
+
+    public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds extends TeaModel {
+        @NameInMap("AclId")
+        public java.util.List<String> aclId;
+
+        public static DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds self = new DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds setAclId(java.util.List<String> aclId) {
+            this.aclId = aclId;
+            return this;
+        }
+        public java.util.List<String> getAclId() {
+            return this.aclId;
+        }
+
     }
 
     public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule extends TeaModel {
