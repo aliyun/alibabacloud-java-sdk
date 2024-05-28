@@ -7,18 +7,30 @@ public class CreateCommitWithMultipleFilesRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("actions")
     public java.util.List<CreateCommitWithMultipleFilesRequestActions> actions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("branch")
     public String branch;
 
     @NameInMap("commitMessage")
     public String commitMessage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 

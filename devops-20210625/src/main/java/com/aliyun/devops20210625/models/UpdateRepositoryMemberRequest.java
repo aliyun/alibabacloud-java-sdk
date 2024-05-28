@@ -22,6 +22,9 @@ public class UpdateRepositoryMemberRequest extends TeaModel {
     @NameInMap("relatedInfos")
     public java.util.List<UpdateRepositoryMemberRequestRelatedInfos> relatedInfos;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

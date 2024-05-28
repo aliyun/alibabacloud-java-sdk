@@ -4,6 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateTestCaseRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("updateWorkitemPropertyRequest")
     public java.util.List<UpdateTestCaseRequestUpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest;
 
@@ -21,9 +24,15 @@ public class UpdateTestCaseRequest extends TeaModel {
     }
 
     public static class UpdateTestCaseRequestUpdateWorkitemPropertyRequest extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("fieldIdentifier")
         public String fieldIdentifier;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("fieldValue")
         public String fieldValue;
 

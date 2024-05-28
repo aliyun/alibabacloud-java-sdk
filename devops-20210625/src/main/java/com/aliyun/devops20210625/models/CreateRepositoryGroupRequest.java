@@ -13,18 +13,33 @@ public class CreateRepositoryGroupRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("parentId")
     public Long parentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("visibilityLevel")
     public Integer visibilityLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

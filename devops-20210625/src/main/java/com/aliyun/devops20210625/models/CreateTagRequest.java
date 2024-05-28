@@ -10,12 +10,21 @@ public class CreateTagRequest extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ref")
     public String ref;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("tagName")
     public String tagName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

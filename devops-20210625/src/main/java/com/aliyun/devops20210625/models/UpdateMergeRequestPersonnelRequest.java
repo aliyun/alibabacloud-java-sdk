@@ -10,6 +10,9 @@ public class UpdateMergeRequestPersonnelRequest extends TeaModel {
     @NameInMap("newUserIdList")
     public java.util.List<String> newUserIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

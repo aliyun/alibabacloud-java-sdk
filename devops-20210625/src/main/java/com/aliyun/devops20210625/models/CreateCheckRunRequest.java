@@ -22,9 +22,15 @@ public class CreateCheckRunRequest extends TeaModel {
     @NameInMap("externalId")
     public String externalId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("headSha")
     public String headSha;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -37,9 +43,15 @@ public class CreateCheckRunRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 
@@ -153,18 +165,30 @@ public class CreateCheckRunRequest extends TeaModel {
     }
 
     public static class CreateCheckRunRequestAnnotations extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("annotationLevel")
         public String annotationLevel;
 
         @NameInMap("endColumn")
         public Long endColumn;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("endLine")
         public Long endLine;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("path")
         public String path;
 
@@ -174,6 +198,9 @@ public class CreateCheckRunRequest extends TeaModel {
         @NameInMap("startColumn")
         public Long startColumn;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("startLine")
         public Long startLine;
 
@@ -260,12 +287,18 @@ public class CreateCheckRunRequest extends TeaModel {
     }
 
     public static class CreateCheckRunRequestOutputImages extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("alt")
         public String alt;
 
         @NameInMap("caption")
         public String caption;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("imageUrl")
         public String imageUrl;
 
@@ -304,12 +337,18 @@ public class CreateCheckRunRequest extends TeaModel {
         @NameInMap("images")
         public java.util.List<CreateCheckRunRequestOutputImages> images;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("summary")
         public String summary;
 
         @NameInMap("text")
         public String text;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("title")
         public String title;
 

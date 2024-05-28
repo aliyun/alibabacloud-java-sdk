@@ -7,6 +7,9 @@ public class GetTestResultListRequest extends TeaModel {
     @NameInMap("conditions")
     public String conditions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("directoryIdentifier")
     public String directoryIdentifier;
 

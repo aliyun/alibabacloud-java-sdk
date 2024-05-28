@@ -7,24 +7,42 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("branchName")
     public String branchName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("commitMessage")
     public String commitMessage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("content")
     public String content;
 
     @NameInMap("encoding")
     public String encoding;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("newPath")
     public String newPath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("oldPath")
     public String oldPath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

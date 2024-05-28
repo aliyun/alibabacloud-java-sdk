@@ -4,9 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class WorkitemAttachmentCreateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fileKey")
     public String fileKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("originalFilename")
     public String originalFilename;
 

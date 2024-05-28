@@ -7,15 +7,24 @@ public class GetFileBlobsRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("filePath")
     public String filePath;
 
     @NameInMap("from")
     public Long from;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ref")
     public String ref;
 

@@ -7,6 +7,9 @@ public class ListCommitStatusesRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
@@ -16,9 +19,15 @@ public class ListCommitStatusesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sha")
     public String sha;
 

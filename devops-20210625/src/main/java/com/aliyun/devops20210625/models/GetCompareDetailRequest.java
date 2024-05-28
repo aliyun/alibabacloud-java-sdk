@@ -4,6 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetCompareDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("from")
     public String from;
 
@@ -16,9 +19,15 @@ public class GetCompareDetailRequest extends TeaModel {
     @NameInMap("mergeBase")
     public Boolean mergeBase;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("to")
     public String to;
 

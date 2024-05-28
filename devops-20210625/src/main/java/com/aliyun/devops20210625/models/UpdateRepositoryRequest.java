@@ -58,6 +58,9 @@ public class UpdateRepositoryRequest extends TeaModel {
     @NameInMap("wikiEnabled")
     public Boolean wikiEnabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

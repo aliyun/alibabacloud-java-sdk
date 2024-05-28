@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkitemCommentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("commentId")
     public Long commentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("formatType")
     public String formatType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;
 

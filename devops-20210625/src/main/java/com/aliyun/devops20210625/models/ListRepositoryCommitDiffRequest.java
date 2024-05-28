@@ -13,6 +13,9 @@ public class ListRepositoryCommitDiffRequest extends TeaModel {
     @NameInMap("contextLine")
     public Integer contextLine;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

@@ -28,9 +28,15 @@ public class AddWebhookRequest extends TeaModel {
     @NameInMap("tagPushEvents")
     public Boolean tagPushEvents;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("url")
     public String url;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

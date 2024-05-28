@@ -4,24 +4,42 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkitemRecordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("actualTime")
     public String actualTime;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtEnd")
     public String gmtEnd;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("gmtStart")
     public String gmtStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("recordUserIdentifier")
     public String recordUserIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("workitemIdentifier")
     public String workitemIdentifier;
 

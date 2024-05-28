@@ -4,15 +4,27 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkItemRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("fieldType")
     public String fieldType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("identifier")
     public String identifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("propertyKey")
     public String propertyKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("propertyValue")
     public String propertyValue;
 

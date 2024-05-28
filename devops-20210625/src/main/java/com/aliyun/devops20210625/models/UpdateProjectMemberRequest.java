@@ -4,18 +4,33 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectMemberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("roleIdentifier")
     public String roleIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("targetIdentifier")
     public String targetIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("targetType")
     public String targetType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userIdentifier")
     public String userIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userType")
     public String userType;
 

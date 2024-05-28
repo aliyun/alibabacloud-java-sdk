@@ -7,9 +7,15 @@ public class CreateCommentRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("commentType")
     public String commentType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("content")
     public String content;
 
@@ -31,12 +37,21 @@ public class CreateCommentRequest extends TeaModel {
     @NameInMap("resolved")
     public Boolean resolved;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("localId")
     public Long localId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 

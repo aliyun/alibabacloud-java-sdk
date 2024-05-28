@@ -7,6 +7,9 @@ public class CreateProtectdBranchRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("allowMergeRoles")
     public java.util.List<Integer> allowMergeRoles;
 
@@ -19,6 +22,9 @@ public class CreateProtectdBranchRequest extends TeaModel {
     @NameInMap("allowPushUserIds")
     public java.util.List<String> allowPushUserIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("branch")
     public String branch;
 
@@ -31,6 +37,9 @@ public class CreateProtectdBranchRequest extends TeaModel {
     @NameInMap("testSettingDTO")
     public CreateProtectdBranchRequestTestSettingDTO testSettingDTO;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

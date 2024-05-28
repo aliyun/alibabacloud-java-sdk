@@ -10,6 +10,9 @@ public class UpdatePushRuleRequest extends TeaModel {
     @NameInMap("ruleInfos")
     public java.util.List<UpdatePushRuleRequestRuleInfos> ruleInfos;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

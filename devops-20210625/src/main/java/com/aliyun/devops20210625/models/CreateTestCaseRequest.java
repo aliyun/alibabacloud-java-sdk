@@ -4,9 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateTestCaseRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("assignedTo")
     public String assignedTo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("directoryIdentifier")
     public String directoryIdentifier;
 
@@ -16,9 +22,15 @@ public class CreateTestCaseRequest extends TeaModel {
     @NameInMap("priority")
     public String priority;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spaceIdentifier")
     public String spaceIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("subject")
     public String subject;
 
@@ -164,6 +176,9 @@ public class CreateTestCaseRequest extends TeaModel {
         @NameInMap("stepResultList")
         public java.util.List<CreateTestCaseRequestTestcaseStepContentInfoStepResultList> stepResultList;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("stepType")
         public String stepType;
 

@@ -4,18 +4,30 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceCredentialRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("password")
     public String password;
 
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("username")
     public String username;
 

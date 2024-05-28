@@ -7,12 +7,21 @@ public class DeleteGroupMemberRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("aliyunPk")
     public String aliyunPk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("memberType")
     public String memberType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

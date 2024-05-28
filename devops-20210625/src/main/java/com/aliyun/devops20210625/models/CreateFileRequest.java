@@ -7,21 +7,36 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("accessToken")
     public String accessToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("branchName")
     public String branchName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("commitMessage")
     public String commitMessage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("content")
     public String content;
 
     @NameInMap("encoding")
     public String encoding;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("filePath")
     public String filePath;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

@@ -22,12 +22,21 @@ public class ListMergeRequestCommentsRequest extends TeaModel {
     @NameInMap("state")
     public String state;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("localId")
     public Long localId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("repositoryIdentity")
     public String repositoryIdentity;
 

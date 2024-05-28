@@ -28,6 +28,9 @@ public class ListMergeRequestsRequest extends TeaModel {
     @NameInMap("orderBy")
     public String orderBy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 

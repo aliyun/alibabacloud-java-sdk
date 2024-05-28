@@ -13,9 +13,15 @@ public class ReviewMergeRequestRequest extends TeaModel {
     @NameInMap("reviewComment")
     public String reviewComment;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("reviewOpinion")
     public String reviewOpinion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("organizationId")
     public String organizationId;
 
