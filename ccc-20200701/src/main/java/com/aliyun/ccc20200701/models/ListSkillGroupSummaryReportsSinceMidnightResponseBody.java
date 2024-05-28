@@ -109,6 +109,15 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("CallsOffered")
         public Long callsOffered;
 
+        @NameInMap("CallsQueuingCanceled")
+        public String callsQueuingCanceled;
+
+        @NameInMap("CallsQueuingFailure")
+        public String callsQueuingFailure;
+
+        @NameInMap("CallsQueuingRerouted")
+        public String callsQueuingRerouted;
+
         @NameInMap("CallsQueuingTimeout")
         public Long callsQueuingTimeout;
 
@@ -263,6 +272,30 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
         public Long getCallsOffered() {
             return this.callsOffered;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsQueuingCanceled(String callsQueuingCanceled) {
+            this.callsQueuingCanceled = callsQueuingCanceled;
+            return this;
+        }
+        public String getCallsQueuingCanceled() {
+            return this.callsQueuingCanceled;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsQueuingFailure(String callsQueuingFailure) {
+            this.callsQueuingFailure = callsQueuingFailure;
+            return this;
+        }
+        public String getCallsQueuingFailure() {
+            return this.callsQueuingFailure;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsQueuingRerouted(String callsQueuingRerouted) {
+            this.callsQueuingRerouted = callsQueuingRerouted;
+            return this;
+        }
+        public String getCallsQueuingRerouted() {
+            return this.callsQueuingRerouted;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsQueuingTimeout(Long callsQueuingTimeout) {
