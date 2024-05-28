@@ -7,6 +7,9 @@ public class GetDomainResponseBody extends TeaModel {
     @NameInMap("BucketType")
     public String bucketType;
 
+    @NameInMap("Buckets")
+    public String buckets;
+
     @NameInMap("Condition")
     public String condition;
 
@@ -66,6 +69,14 @@ public class GetDomainResponseBody extends TeaModel {
     }
     public String getBucketType() {
         return this.bucketType;
+    }
+
+    public GetDomainResponseBody setBuckets(String buckets) {
+        this.buckets = buckets;
+        return this;
+    }
+    public String getBuckets() {
+        return this.buckets;
     }
 
     public GetDomainResponseBody setCondition(String condition) {
