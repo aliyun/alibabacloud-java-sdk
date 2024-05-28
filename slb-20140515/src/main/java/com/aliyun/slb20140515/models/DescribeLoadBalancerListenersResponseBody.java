@@ -1571,6 +1571,9 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
 
+        @NameInMap("AclIds")
+        public java.util.List<String> aclIds;
+
         /**
          * <p>Indicates whether access control is enabled. Valid values:</p>
          * <br>
@@ -1700,6 +1703,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         }
         public String getAclId() {
             return this.aclId;
+        }
+
+        public DescribeLoadBalancerListenersResponseBodyListeners setAclIds(java.util.List<String> aclIds) {
+            this.aclIds = aclIds;
+            return this;
+        }
+        public java.util.List<String> getAclIds() {
+            return this.aclIds;
         }
 
         public DescribeLoadBalancerListenersResponseBodyListeners setAclStatus(String aclStatus) {

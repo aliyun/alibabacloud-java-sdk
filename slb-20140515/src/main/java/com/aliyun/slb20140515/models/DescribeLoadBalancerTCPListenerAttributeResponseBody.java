@@ -12,6 +12,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     @NameInMap("AclId")
     public String aclId;
 
+    @NameInMap("AclIds")
+    public DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds aclIds;
+
     /**
      * <p>Indicates whether access control is enabled. Valid values:</p>
      * <br>
@@ -254,6 +257,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return this.aclId;
     }
 
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setAclIds(DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds aclIds) {
+        this.aclIds = aclIds;
+        return this;
+    }
+    public DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds getAclIds() {
+        return this.aclIds;
+    }
+
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setAclStatus(String aclStatus) {
         this.aclStatus = aclStatus;
         return this;
@@ -492,6 +503,25 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     }
     public String getVServerGroupId() {
         return this.VServerGroupId;
+    }
+
+    public static class DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds extends TeaModel {
+        @NameInMap("AclId")
+        public java.util.List<String> aclId;
+
+        public static DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds self = new DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds setAclId(java.util.List<String> aclId) {
+            this.aclId = aclId;
+            return this;
+        }
+        public java.util.List<String> getAclId() {
+            return this.aclId;
+        }
+
     }
 
     public static class DescribeLoadBalancerTCPListenerAttributeResponseBodyTagsTag extends TeaModel {

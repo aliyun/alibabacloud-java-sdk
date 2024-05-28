@@ -10,6 +10,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @NameInMap("AclId")
     public String aclId;
 
+    @NameInMap("AclIds")
+    public DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds aclIds;
+
     /**
      * <p>Indicates whether access control is enabled. Valid values: **on** and **off**. Default value: off.</p>
      */
@@ -180,6 +183,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
     public String getAclId() {
         return this.aclId;
+    }
+
+    public DescribeLoadBalancerUDPListenerAttributeResponseBody setAclIds(DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds aclIds) {
+        this.aclIds = aclIds;
+        return this;
+    }
+    public DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds getAclIds() {
+        return this.aclIds;
     }
 
     public DescribeLoadBalancerUDPListenerAttributeResponseBody setAclStatus(String aclStatus) {
@@ -356,6 +367,25 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
     public String getVServerGroupId() {
         return this.VServerGroupId;
+    }
+
+    public static class DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds extends TeaModel {
+        @NameInMap("AclId")
+        public java.util.List<String> aclId;
+
+        public static DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds self = new DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerUDPListenerAttributeResponseBodyAclIds setAclId(java.util.List<String> aclId) {
+            this.aclId = aclId;
+            return this;
+        }
+        public java.util.List<String> getAclId() {
+            return this.aclId;
+        }
+
     }
 
     public static class DescribeLoadBalancerUDPListenerAttributeResponseBodyTagsTag extends TeaModel {

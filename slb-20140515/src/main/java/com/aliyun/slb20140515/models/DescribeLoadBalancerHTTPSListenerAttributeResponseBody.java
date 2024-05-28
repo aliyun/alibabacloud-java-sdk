@@ -12,6 +12,9 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("AclId")
     public String aclId;
 
+    @NameInMap("AclIds")
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds aclIds;
+
     /**
      * <p>Indicates whether access control is enabled. Valid values:</p>
      * <br>
@@ -415,6 +418,14 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.aclId;
     }
 
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setAclIds(DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds aclIds) {
+        this.aclIds = aclIds;
+        return this;
+    }
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds getAclIds() {
+        return this.aclIds;
+    }
+
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setAclStatus(String aclStatus) {
         this.aclStatus = aclStatus;
         return this;
@@ -781,6 +792,25 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     }
     public String getXForwardedFor_proto() {
         return this.XForwardedFor_proto;
+    }
+
+    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds extends TeaModel {
+        @NameInMap("AclId")
+        public java.util.List<String> aclId;
+
+        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds setAclId(java.util.List<String> aclId) {
+            this.aclId = aclId;
+            return this;
+        }
+        public java.util.List<String> getAclId() {
+            return this.aclId;
+        }
+
     }
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension extends TeaModel {
