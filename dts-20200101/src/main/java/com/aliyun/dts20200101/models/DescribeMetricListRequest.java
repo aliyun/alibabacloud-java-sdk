@@ -42,6 +42,8 @@ public class DescribeMetricListRequest extends TeaModel {
      * <p>*   **cpu_total**: the CPU utilization.</p>
      * <p>*   **memory_usedutilization**: the memory usage.</p>
      * <p>*   **IntranetOutRate**: the outbound traffic over the internal network. Unit: byte.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MetricName")
     public String metricName;
@@ -60,6 +62,8 @@ public class DescribeMetricListRequest extends TeaModel {
 
     /**
      * <p>The monitored object. If the **MetricType** parameter is set to **NODE**, set this parameter to the ID of the node that is monitored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public String param;

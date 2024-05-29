@@ -5,27 +5,29 @@ import com.aliyun.tea.*;
 
 public class ModifySubscriptionRequest extends TeaModel {
     /**
-     * <p>The objects of the change tracking task. The value is a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+     * <p>The objects of the change tracking task. The value is a JSON string. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).</p>
      * <br>
-     * <p>>  You can call the [DescribeDtsJobDetail](~~208925~~) operation to query the original objects of the task.</p>
+     * <p>>  You can call the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation to query the original objects of the task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbList")
     public String dbList;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,6 +40,8 @@ public class ModifySubscriptionRequest extends TeaModel {
      * <br>
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionDataTypeDDL")
     public Boolean subscriptionDataTypeDDL;
@@ -47,6 +51,8 @@ public class ModifySubscriptionRequest extends TeaModel {
      * <br>
      * <p>*   **true**: yes</p>
      * <p>*   **false**: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionDataTypeDML")
     public Boolean subscriptionDataTypeDML;

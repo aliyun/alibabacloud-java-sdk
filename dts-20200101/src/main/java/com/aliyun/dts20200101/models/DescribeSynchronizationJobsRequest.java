@@ -11,7 +11,7 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.</p>
+     * <p>The tag value. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag value.</p>
      * <br>
      * <p>> </p>
      * <p>*   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</p>
@@ -47,7 +47,7 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.</p>
+     * <p>The tag key. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag key.</p>
      * <br>
      * <p>> </p>
      * <p>*   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</p>
@@ -139,6 +139,8 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     public static class DescribeSynchronizationJobsRequestTag extends TeaModel {
         /**
          * <p>The ID of the request.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

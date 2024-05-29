@@ -5,18 +5,22 @@ import com.aliyun.tea.*;
 
 public class TransferInstanceClassRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The new instance class of the DTS instance. You can call the [DescribeDtsJobDetail](~~208925~~) operation to query the original instance class of the DTS instance.</p>
+     * <p>The new instance class of the DTS instance. You can call the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation to query the original instance class of the DTS instance.</p>
      * <br>
      * <p>*   DTS supports the following instance classes for a data migration instance: **xxlarge**, **xlarge**, **large**, **medium**, and **small**.</p>
      * <p>*   DTS supports the following instance classes for a data synchronization instance: **large**, **medium**, **small**, and **micro**.</p>
      * <br>
-     * <p>>  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).</p>
+     * <p>>  For more information about the test performance of each instance class, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html) and [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
@@ -26,12 +30,14 @@ public class TransferInstanceClassRequest extends TeaModel {
      * <br>
      * <p>*   **UPGRADE**</p>
      * <p>*   **DOWNGRADE**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

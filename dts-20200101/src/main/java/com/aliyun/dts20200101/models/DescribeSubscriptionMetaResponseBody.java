@@ -103,7 +103,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         public Long checkpoint;
 
         /**
-         * <p>The objects of the subtask. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+         * <p>The objects of the subtask. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).</p>
          */
         @NameInMap("DBList")
         public String DBList;

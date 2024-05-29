@@ -13,7 +13,9 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String checkpoint;
 
     /**
-     * <p>The objects for which you want to track data changes. The value must be a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+     * <p>The objects for which you want to track data changes. The value must be a JSON string. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbList")
     public String dbList;
@@ -38,7 +40,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</p>
-     * <p>*   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).</p>
+     * <p>*   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).</p>
      */
     @NameInMap("DelayPhone")
     public String delayPhone;
@@ -55,13 +57,13 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String dtsBisLabel;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -70,6 +72,8 @@ public class ConfigureSubscriptionRequest extends TeaModel {
      * <p>The name of the change tracking task.</p>
      * <br>
      * <p>>  We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobName")
     public String dtsJobName;
@@ -88,7 +92,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</p>
-     * <p>*   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).</p>
+     * <p>*   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).</p>
      */
     @NameInMap("ErrorPhone")
     public String errorPhone;
@@ -100,13 +104,15 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public Double minDu;
 
     /**
-     * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see [MigrationReserved](~~176470~~).</p>
+     * <p>The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
      */
     @NameInMap("Reserve")
     public String reserve;
@@ -190,7 +196,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     public String sourceEndpointPort;
 
     /**
-     * <p>The ID of the region in which the source database resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the source database resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      * <br>
      * <p>>  If the source database is a self-managed database with a public IP address, you can set the value of this parameter to **cn-hangzhou** or the ID of the region that is closest to the region in which the self-managed database resides.</p>
      */
@@ -200,7 +206,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     /**
      * <p>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking task. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</p>
      * <br>
-     * <p>>  For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).</p>
+     * <p>>  For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).</p>
      */
     @NameInMap("SourceEndpointRole")
     public String sourceEndpointRole;
@@ -208,7 +214,7 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     /**
      * <p>The username of the account that is used to connect to the source database.</p>
      * <br>
-     * <p>>  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Prepare the source database account for change tracking](~~212653~~).</p>
+     * <p>>  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Prepare the source database account for change tracking](https://help.aliyun.com/document_detail/212653.html).</p>
      */
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
@@ -237,6 +243,8 @@ public class ConfigureSubscriptionRequest extends TeaModel {
      * <p>> </p>
      * <p>*   To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the **SubscriptionInstanceVPCId** and **SubscriptionInstanceVSwitchID** parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</p>
      * <p>*   The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionInstanceNetworkType")
     public String subscriptionInstanceNetworkType;

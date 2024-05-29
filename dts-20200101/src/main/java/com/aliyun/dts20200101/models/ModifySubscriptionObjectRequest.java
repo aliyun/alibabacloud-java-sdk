@@ -20,13 +20,17 @@ public class ModifySubscriptionObjectRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html) operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
     /**
-     * <p>The objects from which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](~~141902~~).</p>
+     * <p>The objects from which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](https://help.aliyun.com/document_detail/141902.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionObject")
     public String subscriptionObject;

@@ -32,7 +32,7 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~49442~~).</p>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/49442.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -135,6 +135,8 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
          * <p>> </p>
          * <p>*   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</p>
          * <p>*   This parameter cannot be an empty string.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;

@@ -13,25 +13,29 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     /**
      * <p>The ID of the consumer group.</p>
      * <br>
-     * <p>You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.</p>
+     * <p>You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerGroupID")
     public String consumerGroupID;
 
     /**
-     * <p>The name of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group name.</p>
+     * <p>The name of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group name.</p>
      */
     @NameInMap("ConsumerGroupName")
     public String consumerGroupName;
 
     /**
      * <p>The current password of the consumer group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerGroupPassword")
     public String consumerGroupPassword;
 
     /**
-     * <p>The username of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the username.</p>
+     * <p>The username of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the username.</p>
      */
     @NameInMap("ConsumerGroupUserName")
     public String consumerGroupUserName;
@@ -47,6 +51,8 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
 
     /**
      * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
@@ -56,6 +62,8 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
      * <br>
      * <p>*   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
      * <p>*   A password must be 8 to 32 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("consumerGroupNewPassword")
     public String consumerGroupNewPassword;

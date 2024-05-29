@@ -29,9 +29,11 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public Integer DBInstanceCount;
 
     /**
-     * <p>The ID of the region where the destination database resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the destination database resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      * <br>
      * <p>>  If the **SourceRegion** parameter is set to the China (Hong Kong) region or a region outside the Chinese mainland, you must set the DestRegion parameter to the same region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestRegion")
     public String destRegion;
@@ -44,6 +46,8 @@ public class CreateSynchronizationJobRequest extends TeaModel {
      * <br>
      * <p>*   **PrePaid**: subscription</p>
      * <p>*   **PostPaid** (default value): pay-as-you-go</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -66,7 +70,9 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the region where the source database resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the source database resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceRegion")
     public String sourceRegion;
@@ -74,7 +80,9 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     /**
      * <p>The specification of the data synchronization instance. Valid values: **micro**, **small**, **medium**, and **large**.</p>
      * <br>
-     * <p>>  For more information about the test performance of each specification, see [Specifications of data synchronization instances](~~26605~~).</p>
+     * <p>>  For more information about the test performance of each specification, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SynchronizationJobClass")
     public String synchronizationJobClass;
@@ -253,7 +261,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
          * <br>
          * <p>> </p>
          * <p>*   Default value: **MySQL**.</p>
-         * <p>*   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).</p>
+         * <p>*   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](https://help.aliyun.com/document_detail/130744.html).</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -284,7 +292,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
          * <br>
          * <p>> </p>
          * <p>*   Default value: **MySQL**.</p>
-         * <p>*   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).</p>
+         * <p>*   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](https://help.aliyun.com/document_detail/130744.html).</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;

@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class TransferPayTypeRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     /**
      * <p>The subscription length.</p>
      * <br>
@@ -24,12 +27,16 @@ public class TransferPayTypeRequest extends TeaModel {
      * <p>> </p>
      * <p>*   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</p>
      * <p>*   If you do not need to change the billing method, specify the current billing method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -52,7 +59,7 @@ public class TransferPayTypeRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,6 +70,14 @@ public class TransferPayTypeRequest extends TeaModel {
     public static TransferPayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferPayTypeRequest self = new TransferPayTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TransferPayTypeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public TransferPayTypeRequest setBuyCount(String buyCount) {

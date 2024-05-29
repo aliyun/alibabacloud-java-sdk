@@ -412,7 +412,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
          * <br>
-         * <p>>  To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         * <p>>  To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
@@ -534,7 +534,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -544,8 +544,8 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          * <br>
          * <p>*   **DISABLE**: SSL encryption is disabled.</p>
          * <p>*   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.</p>
-         * <p>*   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.</p>
-         * <p>*   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.</p>
+         * <p>*   **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.</p>
+         * <p>*   **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
@@ -1392,7 +1392,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          * <p>- **true**</p>
          * <p>- **false**</p>
          * <br>
-         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
@@ -1508,7 +1508,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -2113,7 +2113,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -2355,7 +2355,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * <p>The instance class. </p>
          * <br>
-         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).</p>
+         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
@@ -2462,7 +2462,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
          */
         @NameInMap("Reserved")
         public String reserved;
@@ -2794,7 +2794,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -3036,7 +3036,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String consumptionCheckpoint;
 
         /**
-         * <p>The downstream client information, in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.</p>
+         * <p>The downstream client information, in the following format: \\<IP address of the downstream client>:\\<Random ID generated by DTS>.</p>
          */
         @NameInMap("ConsumptionClient")
         public String consumptionClient;
@@ -3121,7 +3121,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * <p>The instance class.</p>
          * <br>
-         * <p>>  For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).</p>
+         * <p>>  For more information about the test performance of each instance class, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
@@ -3290,7 +3290,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
          */
         @NameInMap("Reserved")
         public String reserved;
@@ -3928,7 +3928,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          * <p>- **true**</p>
          * <p>- **false**</p>
          * <br>
-         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
@@ -4050,7 +4050,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -4618,7 +4618,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          * <p>- **true**</p>
          * <p>- **false**</p>
          * <br>
-         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
@@ -4734,7 +4734,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -5139,7 +5139,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -5369,7 +5369,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * <p>The instance class. </p>
          * <br>
-         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).</p>
+         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
@@ -5440,7 +5440,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
          */
         @NameInMap("Reserved")
         public String reserved;
@@ -5700,7 +5700,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -5974,7 +5974,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListDataSynchronizationStatus dataSynchronizationStatus;
 
         /**
-         * <p>The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+         * <p>The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).</p>
          */
         @NameInMap("DbObject")
         public String dbObject;
@@ -6002,7 +6002,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * <p>The instance class. </p>
          * <br>
-         * <p>> For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).</p>
+         * <p>> For more information about the test performance of each instance class, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html) and [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
@@ -6103,7 +6103,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
          */
         @NameInMap("Reserved")
         public String reserved;

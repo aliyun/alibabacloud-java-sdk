@@ -16,7 +16,9 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public Long delayRuleTime;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -40,13 +42,13 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</p>
-     * <p>*   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).</p>
+     * <p>*   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](https://help.aliyun.com/document_detail/175876.html).</p>
      */
     @NameInMap("Phone")
     public String phone;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

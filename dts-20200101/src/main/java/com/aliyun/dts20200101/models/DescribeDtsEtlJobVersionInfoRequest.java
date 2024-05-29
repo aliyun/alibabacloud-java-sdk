@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the Data Transmission Service (DTS) instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     * <p>The ID of the Data Transmission Service (DTS) instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the ETL task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the ETL task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -29,7 +31,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. You can call the [DescribeRegions](~~25609~~) operation to query the available Alibaba Cloud regions.</p>
+     * <p>The ID of the region in which the DTS instance resides. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the available Alibaba Cloud regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

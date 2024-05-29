@@ -21,6 +21,8 @@ public class DescribeSubscriptionMetaShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the consumer group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sid")
     public String sid;

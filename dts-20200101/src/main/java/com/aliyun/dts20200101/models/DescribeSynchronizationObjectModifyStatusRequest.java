@@ -20,7 +20,7 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the data synchronization instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the data synchronization instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,7 +29,9 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The task ID, which is returned after you call the [ModifySynchronizationObject](~~49451~~) operation to modify the objects to be synchronized.</p>
+     * <p>The task ID, which is returned after you call the [ModifySynchronizationObject](https://help.aliyun.com/document_detail/49451.html) operation to modify the objects to be synchronized.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

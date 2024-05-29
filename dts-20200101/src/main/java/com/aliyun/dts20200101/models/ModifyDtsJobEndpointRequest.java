@@ -19,12 +19,18 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
     @NameInMap("EndpointInstanceId")
     public String endpointInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndpointInstanceType")
     public String endpointInstanceType;
 

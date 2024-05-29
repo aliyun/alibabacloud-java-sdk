@@ -39,7 +39,9 @@ public class DescribeSynchronizationJobReplicatorCompareRequest extends TeaModel
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID.</p>
+     * <p>The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;

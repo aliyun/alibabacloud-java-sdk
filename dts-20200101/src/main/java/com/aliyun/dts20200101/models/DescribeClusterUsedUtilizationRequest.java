@@ -18,6 +18,8 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster. If the **MetricType** parameter is set to **CLUSTER**, enter the ID of the exclusive cluster. Otherwise, set this parameter to a node ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;

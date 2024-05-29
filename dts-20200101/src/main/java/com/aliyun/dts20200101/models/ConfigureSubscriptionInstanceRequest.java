@@ -29,13 +29,15 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html) operation to query the instance ID.</p>
      */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
@@ -51,7 +53,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public String subscriptionInstanceNetworkType;
 
     /**
-     * <p>The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](~~141902~~).</p>
+     * <p>The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](https://help.aliyun.com/document_detail/141902.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionObject")
     public String subscriptionObject;
@@ -183,7 +187,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
          * <p>*   **CEN**: self-managed database connected over Cloud Enterprise Network (CEN)</p>
          * <p>*   **dg**: self-managed database connected over Database Gateway</p>
          * <br>
-         * <p>>  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](~~49436~~) operation.</p>
+         * <p>>  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -221,7 +225,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         /**
          * <p>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</p>
          * <br>
-         * <p>>  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).</p>
+         * <p>>  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).</p>
          */
         @NameInMap("Role")
         public String role;
@@ -229,7 +233,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         /**
          * <p>The username of the account that is used to connect to the source database.</p>
          * <br>
-         * <p>>  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](~~145715~~).</p>
+         * <p>>  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](https://help.aliyun.com/document_detail/145715.html).</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -327,6 +331,8 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
          * <br>
          * <p>*   **true**: tracks DDL statements.</p>
          * <p>*   **false**: does not track DDL statements.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DDL")
         public Boolean DDL;
@@ -336,6 +342,8 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
          * <br>
          * <p>*   **true**: tracks DML statements.</p>
          * <p>*   **false**: does not tack DML statements.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DML")
         public Boolean DML;

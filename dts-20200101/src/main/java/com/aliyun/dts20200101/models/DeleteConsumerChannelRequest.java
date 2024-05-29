@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerChannelRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group. You can call the [DescribeConsumerChannel](~~264169~~) operation to query the consumer group ID.</p>
+     * <p>The ID of the consumer group. You can call the [DescribeConsumerChannel](https://help.aliyun.com/document_detail/264169.html) operation to query the consumer group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerGroupId")
     public String consumerGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
      * <br>
      * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
      */
@@ -19,7 +21,7 @@ public class DeleteConsumerChannelRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
      * <br>
      * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
      */
@@ -27,7 +29,9 @@ public class DeleteConsumerChannelRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -11,7 +11,9 @@ public class DeleteConsumerGroupRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The ID of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.</p>
+     * <p>The ID of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerGroupID")
     public String consumerGroupID;
@@ -27,6 +29,8 @@ public class DeleteConsumerGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;

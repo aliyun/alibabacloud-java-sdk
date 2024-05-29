@@ -100,7 +100,7 @@ public class DescribeDtsJobsRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("Region")
     public String region;

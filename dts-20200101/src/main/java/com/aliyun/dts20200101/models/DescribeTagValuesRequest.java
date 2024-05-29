@@ -36,7 +36,7 @@ public class DescribeTagValuesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,7 +45,7 @@ public class DescribeTagValuesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
      * <br>
      * <p>>  If this parameter is left empty, the values of all tag keys of the current user are returned.</p>
      */

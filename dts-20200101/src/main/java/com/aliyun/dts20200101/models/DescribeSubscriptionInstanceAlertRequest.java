@@ -27,6 +27,8 @@ public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
 
     /**
      * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;

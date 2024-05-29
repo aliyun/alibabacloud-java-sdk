@@ -9,13 +9,15 @@ public class StopDtsJobsRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   Separate multiple task IDs by **,** (commas).</p>
-     * <p>*   You can call the [DescribeDtsJobs](~~209702~~) operation to query task IDs.</p>
+     * <p>*   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query task IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobIds")
     public String dtsJobIds;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

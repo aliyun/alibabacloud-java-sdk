@@ -27,12 +27,16 @@ public class ConfigureMigrationJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
     /**
      * <p>The name of the data migration task. The name can be up to 32 characters in length. We recommend that you specify an informative name to identify the task. You do not need to use a unique task name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationJobName")
     public String migrationJobName;
@@ -40,13 +44,15 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     /**
      * <p>The objects that you want to migrate. The value is a JSON string and can contain regular expressions.</p>
      * <br>
-     * <p>For more information, see [MigrationObject](~~141227~~).</p>
+     * <p>For more information, see [MigrationObject](https://help.aliyun.com/document_detail/141227.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationObject")
     public String migrationObject;
 
     /**
-     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
      */
     @NameInMap("MigrationReserved")
     public String migrationReserved;
@@ -55,7 +61,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the data migration instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      * <br>
      * <p>>  The region ID of the data migration instance is the same as that of the destination database.</p>
      */
@@ -215,6 +221,8 @@ public class ConfigureMigrationJobRequest extends TeaModel {
          * <p>*   **PolarDB_o**: PolarDB O Edition cluster</p>
          * <p>*   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0</p>
          * <p>*   **Greenplum**: AnalyticDB for PostgreSQL instance</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -244,7 +252,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         /**
          * <p>The region ID of the destination database.</p>
          * <br>
-         * <p>>  If the **DestinationEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](~~141033~~).</p>
+         * <p>>  If the **DestinationEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -252,7 +260,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         /**
          * <p>The database account of the destination database.</p>
          * <br>
-         * <p>>  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](~~26618~~).</p>
+         * <p>>  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -351,7 +359,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
          * <br>
-         * <p>>  For more information about databases that support full data migration, see [Supported databases and migration types](~~26618~~).</p>
+         * <p>>  For more information about databases that support full data migration, see [Supported databases and migration types](https://help.aliyun.com/document_detail/26618.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DataIntialization")
         public Boolean dataIntialization;
@@ -362,7 +372,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
          * <br>
-         * <p>>  For more information about databases that support incremental data migration, see [Supported databases and migration types](~~26618~~).</p>
+         * <p>>  For more information about databases that support incremental data migration, see [Supported databases and migration types](https://help.aliyun.com/document_detail/26618.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
@@ -373,7 +385,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
          * <p>*   **true**: yes</p>
          * <p>*   **false**: no</p>
          * <br>
-         * <p>>  For more information about databases that support schema migration, see [Supported databases and migration types](~~26618~~).</p>
+         * <p>>  For more information about databases that support schema migration, see [Supported databases and migration types](https://help.aliyun.com/document_detail/26618.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("StructureIntialization")
         public Boolean structureIntialization;
@@ -458,6 +472,8 @@ public class ConfigureMigrationJobRequest extends TeaModel {
          * <p>*   **MongoDB**: ApsaraDB for MongoDB instance</p>
          * <p>*   **POLARDB**: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster</p>
          * <p>*   **PolarDB_o**: PolarDB O Edition cluster</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -495,7 +511,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         /**
          * <p>The region ID of the source database.</p>
          * <br>
-         * <p>>  If the **SourceEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](~~141033~~).</p>
+         * <p>>  If the **SourceEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
          */
         @NameInMap("Region")
         public String region;
@@ -503,7 +519,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         /**
          * <p>The authorized RAM role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.</p>
          * <br>
-         * <p>>  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).</p>
+         * <p>>  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).</p>
          */
         @NameInMap("Role")
         public String role;
@@ -511,7 +527,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         /**
          * <p>The database account of the source database.</p>
          * <br>
-         * <p>>  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](~~26618~~).</p>
+         * <p>>  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).</p>
          */
         @NameInMap("UserName")
         public String userName;

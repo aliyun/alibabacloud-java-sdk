@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDedicatedClusterRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;

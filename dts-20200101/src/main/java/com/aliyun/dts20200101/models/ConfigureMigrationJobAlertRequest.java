@@ -15,7 +15,7 @@ public class ConfigureMigrationJobAlertRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</p>
-     * <p>*   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](~~175876~~).</p>
+     * <p>*   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](https://help.aliyun.com/document_detail/175876.html).</p>
      */
     @NameInMap("DelayAlertPhone")
     public String delayAlertPhone;
@@ -46,7 +46,7 @@ public class ConfigureMigrationJobAlertRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</p>
-     * <p>*   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](~~175876~~).</p>
+     * <p>*   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](https://help.aliyun.com/document_detail/175876.html).</p>
      */
     @NameInMap("ErrorAlertPhone")
     public String errorAlertPhone;
@@ -67,6 +67,8 @@ public class ConfigureMigrationJobAlertRequest extends TeaModel {
 
     /**
      * <p>The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;

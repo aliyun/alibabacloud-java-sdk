@@ -49,7 +49,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("Success")
     public Boolean success;

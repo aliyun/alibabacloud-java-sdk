@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SkipPreCheckRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -17,7 +19,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,6 +34,8 @@ public class SkipPreCheckRequest extends TeaModel {
      * <p>*   **false**: does not skip the precheck item.</p>
      * <br>
      * <p>>  This parameter is required.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Skip")
     public Boolean skip;
@@ -47,7 +51,7 @@ public class SkipPreCheckRequest extends TeaModel {
      * <br>
      * <p>*   **CHECK_TOPOLOGY**: topology type</p>
      * <br>
-     * <p>> For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).</p>
+     * <p>> For more information about the topologies supported by DTS, see [Synchronization topologies](https://help.aliyun.com/document_detail/124115.html).</p>
      * <br>
      * <p>*   **CHECK_SERVER_ID**: the server ID of the source database</p>
      * <br>
@@ -67,7 +71,7 @@ public class SkipPreCheckRequest extends TeaModel {
      * <br>
      * <p>*   **CHECK_TOPOLOGY_DETAIL**: topology type</p>
      * <br>
-     * <p>> For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).</p>
+     * <p>> For more information about the topologies supported by DTS, see [Synchronization topologies](https://help.aliyun.com/document_detail/124115.html).</p>
      * <br>
      * <p>*   **CHECK_SERVER_ID_DETAIL**: the server ID of the source database</p>
      * <br>

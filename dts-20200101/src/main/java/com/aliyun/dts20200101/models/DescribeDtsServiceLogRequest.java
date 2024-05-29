@@ -11,9 +11,9 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The end of the time range to query. You can call the [DescribePreCheckStatus](~~209718~~) operation to query the execution time of the subtasks.</p>
+     * <p>The end of the time range to query. You can call the [DescribePreCheckStatus](https://help.aliyun.com/document_detail/209718.html) operation to query the execution time of the subtasks.</p>
      * <br>
-     * <p>> *   To obtain the logs that are generated for DTS subtasks within a specific period of time, you can call the [DescribePreCheckStatus](~~209718~~) operation to query the execution time of the subtasks.</p>
+     * <p>> *   To obtain the logs that are generated for DTS subtasks within a specific period of time, you can call the [DescribePreCheckStatus](https://help.aliyun.com/document_detail/209718.html) operation to query the execution time of the subtasks.</p>
      * <p>>*   Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.</p>
      */
     @NameInMap("EndTime")
@@ -40,7 +40,7 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,7 +51,7 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query.</p>
      * <br>
-     * <p>> *   To obtain the logs that are generated for Data Transmission Service (DTS) subtasks within a specific period of time, you can call the [DescribePreCheckStatus](~~209718~~) operation to query the execution time of the subtasks.</p>
+     * <p>> *   To obtain the logs that are generated for Data Transmission Service (DTS) subtasks within a specific period of time, you can call the [DescribePreCheckStatus](https://help.aliyun.com/document_detail/209718.html) operation to query the execution time of the subtasks.</p>
      * <p>>*   Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.</p>
      */
     @NameInMap("StartTime")

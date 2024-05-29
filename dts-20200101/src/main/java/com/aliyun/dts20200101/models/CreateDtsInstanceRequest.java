@@ -62,14 +62,14 @@ public class CreateDtsInstanceRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   The default value is **MySQL**.</p>
-     * <p>*   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](~~130744~~) and [Overview of data migration scenarios](~~26618~~).</p>
+     * <p>*   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html) and [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).</p>
      * <p>*   You must specify one of this parameter and the **JobId** parameter.</p>
      */
     @NameInMap("DestinationEndpointEngineName")
     public String destinationEndpointEngineName;
 
     /**
-     * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      * <br>
      * <p>>  You must specify one of this parameter and the **JobId** parameter.</p>
      */
@@ -97,7 +97,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
      * <p>*   DTS supports the following instance classes for a data migration instance: **xxlarge**, **xlarge**, **large**, **medium**, and **small**.</p>
      * <p>*   DTS supports the following instance classes for a data synchronization instance: **large**, **medium**, **small**, and **micro**.</p>
      * <br>
-     * <p>>  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).</p>
+     * <p>>  For more information about the test performance of each instance class, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html) and [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
@@ -144,7 +144,7 @@ public class CreateDtsInstanceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -181,14 +181,14 @@ public class CreateDtsInstanceRequest extends TeaModel {
      * <br>
      * <p>> </p>
      * <p>*   The default value is **MySQL**.</p>
-     * <p>*   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](~~130744~~) and [Overview of data migration scenarios](~~26618~~).</p>
+     * <p>*   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html) and [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html).</p>
      * <p>*   You must specify one of this parameter and the **JobId** parameter.</p>
      */
     @NameInMap("SourceEndpointEngineName")
     public String sourceEndpointEngineName;
 
     /**
-     * <p>The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      * <br>
      * <p>>  You must specify one of this parameter and the **JobId** parameter.</p>
      */

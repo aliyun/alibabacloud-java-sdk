@@ -9,12 +9,16 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
      * <br>
      * <p>*   **1**: full data verification.</p>
      * <p>*   **2**: incremental data verification.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckType")
     public Integer checkType;
 
     /**
-     * <p>The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;

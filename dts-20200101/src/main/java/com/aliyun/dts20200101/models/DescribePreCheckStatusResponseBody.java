@@ -1309,7 +1309,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The sub-item progress of the subtask.</p>
          * <br>
-         * <p>>  If **\[]** is returned, the subtask has no sub-items.</p>
+         * <p>>  If **[]** is returned, the subtask has no sub-items.</p>
          */
         @NameInMap("Sub")
         public String sub;
@@ -1843,7 +1843,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The sub-item progress of the subtask.</p>
          * <br>
-         * <p>>  If **\[]** is returned, the subtask has no sub-items.</p>
+         * <p>>  If **[]** is returned, the subtask has no sub-items.</p>
          */
         @NameInMap("Sub")
         public String sub;

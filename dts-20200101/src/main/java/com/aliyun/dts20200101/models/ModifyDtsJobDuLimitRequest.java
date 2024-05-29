@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDtsJobDuLimitRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -14,6 +16,8 @@ public class ModifyDtsJobDuLimitRequest extends TeaModel {
      * <p>The upper limit of DUs for the DTS task.</p>
      * <br>
      * <p>>  Minimum value: **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DuLimit")
     public Long duLimit;
