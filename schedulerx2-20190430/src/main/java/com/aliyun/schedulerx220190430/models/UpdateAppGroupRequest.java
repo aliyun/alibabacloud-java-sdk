@@ -28,6 +28,9 @@ public class UpdateAppGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Version")
+    public Integer version;
+
     public static UpdateAppGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppGroupRequest self = new UpdateAppGroupRequest();
         return TeaModel.build(map, self);
@@ -71,6 +74,14 @@ public class UpdateAppGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateAppGroupRequest setVersion(Integer version) {
+        this.version = version;
+        return this;
+    }
+    public Integer getVersion() {
+        return this.version;
     }
 
 }

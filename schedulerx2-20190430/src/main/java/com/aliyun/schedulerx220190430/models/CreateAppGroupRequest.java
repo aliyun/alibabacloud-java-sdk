@@ -101,6 +101,9 @@ public class CreateAppGroupRequest extends TeaModel {
     @NameInMap("ScheduleBusyWorkers")
     public Boolean scheduleBusyWorkers;
 
+    @NameInMap("Version")
+    public Integer version;
+
     public static CreateAppGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppGroupRequest self = new CreateAppGroupRequest();
         return TeaModel.build(map, self);
@@ -216,6 +219,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public Boolean getScheduleBusyWorkers() {
         return this.scheduleBusyWorkers;
+    }
+
+    public CreateAppGroupRequest setVersion(Integer version) {
+        this.version = version;
+        return this;
+    }
+    public Integer getVersion() {
+        return this.version;
     }
 
 }
