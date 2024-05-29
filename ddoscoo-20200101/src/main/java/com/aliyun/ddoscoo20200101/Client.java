@@ -1767,6 +1767,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 删除新版cc规则
+     *
+     * @param request DeleteWebCCRuleV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWebCCRuleV2Response
+     */
+    public DeleteWebCCRuleV2Response deleteWebCCRuleV2WithOptions(DeleteWebCCRuleV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleNames)) {
+            query.put("RuleNames", request.ruleNames);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWebCCRuleV2"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWebCCRuleV2Response());
+    }
+
+    /**
+     * @summary 删除新版cc规则
+     *
+     * @param request DeleteWebCCRuleV2Request
+     * @return DeleteWebCCRuleV2Response
+     */
+    public DeleteWebCCRuleV2Response deleteWebCCRuleV2(DeleteWebCCRuleV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWebCCRuleV2WithOptions(request, runtime);
+    }
+
+    /**
      * @summary Deletes the custom rules of the Static Page Caching policy for a website.
      *
      * @description You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.
@@ -8622,6 +8672,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyWebAreaBlockSwitchResponse modifyWebAreaBlockSwitch(ModifyWebAreaBlockSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyWebAreaBlockSwitchWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 统一全局CC开关
+     *
+     * @param request ModifyWebCCGlobalSwitchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyWebCCGlobalSwitchResponse
+     */
+    public ModifyWebCCGlobalSwitchResponse modifyWebCCGlobalSwitchWithOptions(ModifyWebCCGlobalSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ccGlobalSwitch)) {
+            query.put("CcGlobalSwitch", request.ccGlobalSwitch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyWebCCGlobalSwitch"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyWebCCGlobalSwitchResponse());
+    }
+
+    /**
+     * @summary 统一全局CC开关
+     *
+     * @param request ModifyWebCCGlobalSwitchRequest
+     * @return ModifyWebCCGlobalSwitchResponse
+     */
+    public ModifyWebCCGlobalSwitchResponse modifyWebCCGlobalSwitch(ModifyWebCCGlobalSwitchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyWebCCGlobalSwitchWithOptions(request, runtime);
     }
 
     /**
