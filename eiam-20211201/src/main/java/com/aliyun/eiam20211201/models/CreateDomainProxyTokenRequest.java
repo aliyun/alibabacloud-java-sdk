@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateDomainProxyTokenRequest extends TeaModel {
     /**
      * <p>域名ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainId")
     public String domainId;
 
     /**
      * <p>IDaaS EIAM实例的ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

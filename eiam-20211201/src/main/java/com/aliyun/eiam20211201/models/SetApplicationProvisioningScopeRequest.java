@@ -6,12 +6,22 @@ import com.aliyun.tea.*;
 public class SetApplicationProvisioningScopeRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
+     * <p>授权同步出的组列表</p>
+     */
+    @NameInMap("GroupIds")
+    public java.util.List<String> groupIds;
+
+    /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -33,6 +43,14 @@ public class SetApplicationProvisioningScopeRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public SetApplicationProvisioningScopeRequest setGroupIds(java.util.List<String> groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    public java.util.List<String> getGroupIds() {
+        return this.groupIds;
     }
 
     public SetApplicationProvisioningScopeRequest setInstanceId(String instanceId) {

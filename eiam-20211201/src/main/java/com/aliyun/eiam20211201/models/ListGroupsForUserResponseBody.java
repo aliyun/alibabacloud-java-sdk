@@ -58,6 +58,12 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
+        @NameInMap("GroupMemberRelationSourceId")
+        public String groupMemberRelationSourceId;
+
+        @NameInMap("GroupMemberRelationSourceType")
+        public String groupMemberRelationSourceType;
+
         public static ListGroupsForUserResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
             ListGroupsForUserResponseBodyGroups self = new ListGroupsForUserResponseBodyGroups();
             return TeaModel.build(map, self);
@@ -69,6 +75,22 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public ListGroupsForUserResponseBodyGroups setGroupMemberRelationSourceId(String groupMemberRelationSourceId) {
+            this.groupMemberRelationSourceId = groupMemberRelationSourceId;
+            return this;
+        }
+        public String getGroupMemberRelationSourceId() {
+            return this.groupMemberRelationSourceId;
+        }
+
+        public ListGroupsForUserResponseBodyGroups setGroupMemberRelationSourceType(String groupMemberRelationSourceType) {
+            this.groupMemberRelationSourceType = groupMemberRelationSourceType;
+            return this;
+        }
+        public String getGroupMemberRelationSourceType() {
+            return this.groupMemberRelationSourceType;
         }
 
     }

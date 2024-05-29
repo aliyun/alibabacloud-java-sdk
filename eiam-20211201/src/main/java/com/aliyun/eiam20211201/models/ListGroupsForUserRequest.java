@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListGroupsForUserRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,6 +26,8 @@ public class ListGroupsForUserRequest extends TeaModel {
 
     /**
      * <p>The account ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

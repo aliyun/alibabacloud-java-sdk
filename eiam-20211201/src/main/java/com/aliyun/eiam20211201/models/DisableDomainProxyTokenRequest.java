@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DisableDomainProxyTokenRequest extends TeaModel {
     /**
      * <p>域名ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainId")
     public String domainId;
 
     /**
      * <p>域名代理Token ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DomainProxyTokenId")
     public String domainProxyTokenId;
 
     /**
      * <p>IDaaS EIAM实例的ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

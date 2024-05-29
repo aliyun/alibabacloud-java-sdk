@@ -23,7 +23,7 @@ public class CreateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
      */
     @NameInMap("Email")
     public String email;
@@ -36,6 +36,8 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -78,6 +80,8 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The ID of the primary organizational unit to which the account belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrimaryOrganizationalUnitId")
     public String primaryOrganizationalUnitId;
@@ -89,7 +93,9 @@ public class CreateUserRequest extends TeaModel {
     public String userExternalId;
 
     /**
-     * <p>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (\_), periods (.), at signs (@), and hyphens (-).</p>
+     * <p>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -15,6 +17,8 @@ public class CreateApplicationRequest extends TeaModel {
      * <br>
      * <p>*   urn:alibaba:idaas:app:source:template: application template</p>
      * <p>*   urn:alibaba:idaas:app:source:standard: standard protocol</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationSourceType")
     public String applicationSourceType;
@@ -33,6 +37,8 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -48,6 +54,8 @@ public class CreateApplicationRequest extends TeaModel {
      * <br>
      * <p>*   saml2: the SAML 2.0 protocol.</p>
      * <p>*   oidc: the OpenID Connect protocol.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SsoType")
     public String ssoType;

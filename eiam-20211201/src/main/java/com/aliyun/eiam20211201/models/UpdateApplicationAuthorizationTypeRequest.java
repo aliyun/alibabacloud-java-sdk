@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateApplicationAuthorizationTypeRequest extends TeaModel {
     /**
      * <p>The ID of the application that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
@@ -15,12 +17,16 @@ public class UpdateApplicationAuthorizationTypeRequest extends TeaModel {
      * <br>
      * <p>*   authorize_required: Only the user with explicit authorization can access the application.</p>
      * <p>*   default_all: By default, all users can access the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthorizationType")
     public String authorizationType;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

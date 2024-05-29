@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class RemoveUsersFromGroupRequest extends TeaModel {
     /**
      * <p>The group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The account IDs. A maximum of 100 accounts can be removed from a group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

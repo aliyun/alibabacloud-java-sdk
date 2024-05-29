@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetApplicationProvisioningConfigRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
@@ -18,6 +20,8 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -36,6 +40,8 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
      * <br>
      * <p>*   idaas_callback: custom event callback protocol of IDaaS.</p>
      * <p>*   scim2: System for Cross-domain Identity Management (SCIM) protocol.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProvisionProtocolType")
     public String provisionProtocolType;

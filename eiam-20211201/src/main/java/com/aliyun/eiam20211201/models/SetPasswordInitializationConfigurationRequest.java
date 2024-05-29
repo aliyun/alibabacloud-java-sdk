@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetPasswordInitializationConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -30,6 +32,8 @@ public class SetPasswordInitializationConfigurationRequest extends TeaModel {
      * <br>
      * <p>*   enabled</p>
      * <p>*   disabled</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PasswordInitializationStatus")
     public String passwordInitializationStatus;

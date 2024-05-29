@@ -12,12 +12,16 @@ public class SetForgetPasswordConfigurationRequest extends TeaModel {
 
     /**
      * <p>忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForgetPasswordStatus")
     public String forgetPasswordStatus;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

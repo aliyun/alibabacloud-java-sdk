@@ -18,12 +18,16 @@ public class CreateGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the group. The name can be up to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
