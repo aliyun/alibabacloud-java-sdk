@@ -113,6 +113,9 @@ public class ListGroupsResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
+        @NameInMap("Version")
+        public Integer version;
+
         public static ListGroupsResponseBodyDataAppGroups build(java.util.Map<String, ?> map) throws Exception {
             ListGroupsResponseBodyDataAppGroups self = new ListGroupsResponseBodyDataAppGroups();
             return TeaModel.build(map, self);
@@ -156,6 +159,14 @@ public class ListGroupsResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public ListGroupsResponseBodyDataAppGroups setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
     }
