@@ -16,16 +16,18 @@ public class ConfigNetworkRegionBlockRequest extends TeaModel {
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note**For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic.</p>
+     * <p>    **Note**For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic.</p>
      * <br>
      * <br>
      * <p>*   **Provinces**: the codes of the administrative regions in China from which you want to block requests. This field is optional and must be of the array type.</p>
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note**For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic.</p>
+     * <p>    **Note**For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic.</p>
      * <br>
      * <p>    For example, `[11,12]` specifies Beijing and Tianjin.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -33,7 +35,9 @@ public class ConfigNetworkRegionBlockRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

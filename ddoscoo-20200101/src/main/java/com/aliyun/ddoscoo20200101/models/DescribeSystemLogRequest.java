@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeSystemLogRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The bills of the burstable clean bandwidth that are issued before this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -13,7 +15,7 @@ public class DescribeSystemLogRequest extends TeaModel {
     /**
      * <p>The IP address of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceDetails](~~91490~~) operation to query the IP addresses of all instances.</p>
+     * <p>> You can call the [DescribeInstanceDetails](https://help.aliyun.com/document_detail/91490.html) operation to query the IP addresses of all instances.</p>
      */
     @NameInMap("EntityObject")
     public String entityObject;
@@ -28,18 +30,24 @@ public class DescribeSystemLogRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query. The bills of the burstable clean bandwidth that are issued after this point in time are queried. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

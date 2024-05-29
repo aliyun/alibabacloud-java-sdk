@@ -12,6 +12,8 @@ public class DeleteSchedulerRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the scheduling rule that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

@@ -4,30 +4,54 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebCCRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Act")
     public String act;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

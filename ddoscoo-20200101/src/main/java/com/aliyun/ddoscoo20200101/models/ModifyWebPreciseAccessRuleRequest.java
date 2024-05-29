@@ -7,7 +7,9 @@ public class ModifyWebPreciseAccessRuleRequest extends TeaModel {
     /**
      * <p>The domain name of the website.</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -52,6 +54,8 @@ public class ModifyWebPreciseAccessRuleRequest extends TeaModel {
      * <p>    *   **content**: the match content. This parameter is required and must be of the string type.</p>
      * <br>
      * <p>*   **header_name**: the HTTP header. This parameter is optional and must be of the string type. This parameter takes effect only when **field** is **header**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rules;

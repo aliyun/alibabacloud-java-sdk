@@ -20,6 +20,8 @@ public class CreateAsyncTaskRequest extends TeaModel {
      * <p>If **TaskType** is set to **2**, the following field is returned:</p>
      * <br>
      * <p>*   **domain**: the domain name of the website, which must be of the STRING type. If you do not specify this field, the forwarding rules of all websites are exported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskParams")
     public String taskParams;
@@ -33,6 +35,8 @@ public class CreateAsyncTaskRequest extends TeaModel {
      * <p>*   **4**: the task to export the anti-DDoS mitigation policies of an instance</p>
      * <p>*   **5**: the task to download the blacklist for destination IP addresses of an instance</p>
      * <p>*   **6**: the task to download the whitelist for destination IP addresses of an instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskType")
     public Integer taskType;

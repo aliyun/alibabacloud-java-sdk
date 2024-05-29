@@ -12,6 +12,8 @@ public class CreatePortRequest extends TeaModel {
 
     /**
      * <p>The forwarding port. Valid values: **0** to **65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FrontendPort")
     public String frontendPort;
@@ -21,6 +23,8 @@ public class CreatePortRequest extends TeaModel {
      * <br>
      * <p>*   **tcp**</p>
      * <p>*   **udp**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FrontendProtocol")
     public String frontendProtocol;
@@ -28,13 +32,17 @@ public class CreatePortRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance to which the port forwarding rule belongs.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>An array that consists of the IP addresses of origin servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RealServers")
     public java.util.List<String> realServers;

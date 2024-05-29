@@ -12,6 +12,8 @@ public class DetachSceneDefenseObjectRequest extends TeaModel {
 
     /**
      * <p>The protection asset that you want to remove from a policy. Separate multiple protection assets with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Objects")
     public String objects;
@@ -19,7 +21,9 @@ public class DetachSceneDefenseObjectRequest extends TeaModel {
     /**
      * <p>The ID of the policy.</p>
      * <br>
-     * <p>> You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.</p>
+     * <p>> You can call the [DescribeSceneDefensePolicies](https://help.aliyun.com/document_detail/159382.html) operation to query the IDs of all policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

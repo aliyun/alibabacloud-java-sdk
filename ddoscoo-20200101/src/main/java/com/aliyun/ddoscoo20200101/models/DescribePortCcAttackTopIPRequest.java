@@ -4,15 +4,24 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortCcAttackTopIPRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
     @NameInMap("Limit")
     public Long limit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 

@@ -8,6 +8,8 @@ public class DescribeAutoCcListCountRequest extends TeaModel {
      * <p>The ID of the instance.</p>
      * <br>
      * <p>> You can call the **DescribeInstanceIds** operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

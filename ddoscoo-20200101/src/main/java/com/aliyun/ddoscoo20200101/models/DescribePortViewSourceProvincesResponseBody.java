@@ -49,7 +49,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         /**
          * <p>The ID of the administrative region in China from which the requests are sent. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.</p>
          * <br>
-         * <p>> For more information, see [Location parameters](~~167926~~).</p>
+         * <p>> For more information, see [Location parameters](https://help.aliyun.com/document_detail/167926.html).</p>
          */
         @NameInMap("ProvinceId")
         public String provinceId;

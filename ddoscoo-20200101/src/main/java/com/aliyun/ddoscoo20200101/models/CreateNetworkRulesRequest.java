@@ -12,6 +12,8 @@ public class CreateNetworkRulesRequest extends TeaModel {
      * <p>*   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.</p>
      * <p>*   **BackendPort**: the port of the origin server. This field is required and must be of the INTEGER type.</p>
      * <p>*   **RealServers**: the IP addresses of the origin server. This field is required and must be a JSON array. You can specify up to 20 IP addresses.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkRules")
     public String networkRules;

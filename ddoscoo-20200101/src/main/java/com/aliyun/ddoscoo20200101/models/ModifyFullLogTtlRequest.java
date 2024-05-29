@@ -12,6 +12,8 @@ public class ModifyFullLogTtlRequest extends TeaModel {
 
     /**
      * <p>The log storage duration of a website. Valid values: **30** to **180**. Unit: days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;

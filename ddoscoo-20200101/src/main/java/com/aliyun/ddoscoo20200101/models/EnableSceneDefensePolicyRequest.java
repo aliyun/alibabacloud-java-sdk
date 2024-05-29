@@ -7,7 +7,9 @@ public class EnableSceneDefensePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the policy that you want to enable.</p>
      * <br>
-     * <p>> You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.</p>
+     * <p>> You can call the [DescribeSceneDefensePolicies](https://help.aliyun.com/document_detail/159382.html) operation to query the IDs of all policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

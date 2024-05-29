@@ -7,7 +7,9 @@ public class ConfigL7RsPolicyRequest extends TeaModel {
     /**
      * <p>The domain name of the website.</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query the domain names for which forwarding rules are configured.</p>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query the domain names for which forwarding rules are configured.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -28,6 +30,8 @@ public class ConfigL7RsPolicyRequest extends TeaModel {
      * <p>    *   **Attribute**: the parameter for back-to-origin. This field is optional and must be a JSON object. The value contains the following field:</p>
      * <br>
      * <p>        *   **Weight**: the weight of the server. This field is optional and must be an integer. This field takes effect only when **ProxyMode** is set to **rr**. Valid values: **1** to **100**. Default value: **100**. An origin server with a higher weight receives more requests.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Policy")
     public String policy;
@@ -35,7 +39,7 @@ public class ConfigL7RsPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
+     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

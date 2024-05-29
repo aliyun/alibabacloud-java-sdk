@@ -7,7 +7,9 @@ public class ModifyPortAutoCcStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +20,8 @@ public class ModifyPortAutoCcStatusRequest extends TeaModel {
      * <p>*   **normal**</p>
      * <p>*   **loose**</p>
      * <p>*   **strict**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -27,6 +31,8 @@ public class ModifyPortAutoCcStatusRequest extends TeaModel {
      * <br>
      * <p>*   **on**: enables the policy.</p>
      * <p>*   **off**: disables the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Switch")
     public String _switch;

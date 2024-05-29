@@ -7,7 +7,9 @@ public class SwitchSchedulerRuleRequest extends TeaModel {
     /**
      * <p>The name of the scheduling rule to manage.</p>
      * <br>
-     * <p>> You can call the [DescribeSchedulerRules](~~157481~~) operation to query the names of all scheduling rules.</p>
+     * <p>> You can call the [DescribeSchedulerRules](https://help.aliyun.com/document_detail/157481.html) operation to query the names of all scheduling rules.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -19,6 +21,8 @@ public class SwitchSchedulerRuleRequest extends TeaModel {
      * <p>*   **3**: network acceleration rule</p>
      * <p>*   **5**: Alibaba Cloud CDN (CDN) interaction rule</p>
      * <p>*   **6**: cloud service interaction rule</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;
@@ -35,8 +39,10 @@ public class SwitchSchedulerRuleRequest extends TeaModel {
      * <br>
      * <p>*   **Interval**: optional. The waiting time that is required before the service traffic is switched back. Unit: minutes. Data type: integer. Usage notes:</p>
      * <br>
-     * <p>    *   If the **State** parameter is set to **0**, you must set this parameter to \*\*-1\*\*. Otherwise, the call fails.</p>
+     * <p>    *   If the **State** parameter is set to **0**, you must set this parameter to \\*\\*-1\\*\\*. Otherwise, the call fails.</p>
      * <p>    *   If the **State** parameter is set to **1**, you do not need to set this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SwitchData")
     public String switchData;

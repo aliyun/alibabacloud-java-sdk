@@ -7,15 +7,27 @@ public class DescribeWebReportTopIpRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

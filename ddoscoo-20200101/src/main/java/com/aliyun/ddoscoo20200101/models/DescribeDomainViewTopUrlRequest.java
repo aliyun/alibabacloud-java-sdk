@@ -7,7 +7,7 @@ public class DescribeDomainViewTopUrlRequest extends TeaModel {
     /**
      * <p>The domain name of the website.</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -16,6 +16,8 @@ public class DescribeDomainViewTopUrlRequest extends TeaModel {
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -30,12 +32,16 @@ public class DescribeDomainViewTopUrlRequest extends TeaModel {
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>The number of URLs to query. Valid values: **1** to **100**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Top")
     public Integer top;

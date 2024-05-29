@@ -8,6 +8,8 @@ public class ModifyNetworkRuleAttributeRequest extends TeaModel {
      * <p>The session persistence settings of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:</p>
      * <br>
      * <p>*   **PersistenceTimeout**: The timeout period of session persistence. This field is required and must be of the integer type. Valid values: **30** to **3600**. Unit: seconds. Default value: **0**. A value of 0 indicates that session persistence is disabled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -17,12 +19,16 @@ public class ModifyNetworkRuleAttributeRequest extends TeaModel {
      * <br>
      * <p>*   **tcp**</p>
      * <p>*   **udp**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
     /**
      * <p>The forwarding port.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
@@ -30,7 +36,9 @@ public class ModifyNetworkRuleAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

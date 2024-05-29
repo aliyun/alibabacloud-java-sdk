@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDomainResourceRequest extends TeaModel {
     /**
      * <p>The domain name that is added to the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -30,18 +32,24 @@ public class ModifyDomainResourceRequest extends TeaModel {
 
     /**
      * <p>An array consisting of the IDs of instances that you want to associate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
      * <p>An array that consists of the details of the protocol type and port number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProxyTypes")
     public java.util.List<ModifyDomainResourceRequestProxyTypes> proxyTypes;
 
     /**
      * <p>An array that consists of the addresses of origin servers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RealServers")
     public java.util.List<String> realServers;
@@ -54,6 +62,8 @@ public class ModifyDomainResourceRequest extends TeaModel {
      * <p>*   **1**: domain name</p>
      * <br>
      * <p>    If you deploy proxies, such as a Web Application Firewall (WAF) instance, between the origin server and the Anti-DDoS Pro or Anti-DDoS Premium instance, set the value to 1. If you use the domain name, you must enter the address of the proxy, such as the CNAME of WAF.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RsType")
     public Integer rsType;
@@ -114,6 +124,8 @@ public class ModifyDomainResourceRequest extends TeaModel {
     public static class ModifyDomainResourceRequestProxyTypes extends TeaModel {
         /**
          * <p>An array that consists of port numbers.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ProxyPorts")
         public java.util.List<Integer> proxyPorts;

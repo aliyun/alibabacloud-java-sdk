@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ModifySceneDefensePolicyRequest extends TeaModel {
     /**
      * <p>The end time of the policy. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The name of the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -19,13 +23,17 @@ public class ModifySceneDefensePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the policy that you want to modify.</p>
      * <br>
-     * <p>> You can call the [DescribeSceneDefensePolicies](~~159382~~) operation to query the IDs of all policies.</p>
+     * <p>> You can call the [DescribeSceneDefensePolicies](https://help.aliyun.com/document_detail/159382.html) operation to query the IDs of all policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The start time of the policy. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -35,6 +43,8 @@ public class ModifySceneDefensePolicyRequest extends TeaModel {
      * <br>
      * <p>*   **promotion**: important activity</p>
      * <p>*   **bypass**: all traffic forwarded</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Template")
     public String template;

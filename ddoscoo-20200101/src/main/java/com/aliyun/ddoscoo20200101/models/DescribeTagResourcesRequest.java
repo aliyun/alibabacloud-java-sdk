@@ -14,6 +14,8 @@ public class DescribeTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,6 +36,8 @@ public class DescribeTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -105,7 +109,7 @@ public class DescribeTagResourcesRequest extends TeaModel {
          * <br>
          * <p>*   You must specify at least one of the **ResourceIds.N** and **Tags.N.Key** parameters.</p>
          * <br>
-         * <p>*   You can call the [DescribeTagKeys](~~159785~~) operation to query all tag keys.</p>
+         * <p>*   You can call the [DescribeTagKeys](https://help.aliyun.com/document_detail/159785.html) operation to query all tag keys.</p>
          */
         @NameInMap("Key")
         public String key;

@@ -45,7 +45,7 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The ID of the region inside China. For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.</p>
+         * <p>The ID of the region inside China. For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.</p>
          */
         @NameInMap("ProvinceId")
         public String provinceId;

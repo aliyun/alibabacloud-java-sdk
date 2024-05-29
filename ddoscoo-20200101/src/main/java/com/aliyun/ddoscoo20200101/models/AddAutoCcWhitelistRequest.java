@@ -15,7 +15,9 @@ public class AddAutoCcWhitelistRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,6 +26,8 @@ public class AddAutoCcWhitelistRequest extends TeaModel {
      * <p>The configuration of the IP addresses that you want to add to the whitelist. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
      * <br>
      * <p>*   **src**: the IP address that you want to add. This parameter is required. Data type: string.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Whitelist")
     public String whitelist;

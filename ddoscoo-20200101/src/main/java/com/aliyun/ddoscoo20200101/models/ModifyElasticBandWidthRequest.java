@@ -7,7 +7,9 @@ public class ModifyElasticBandWidthRequest extends TeaModel {
     /**
      * <p>The new burstable protection bandwidth that you want to use. Unit: Gbit/s.</p>
      * <br>
-     * <p>> You can call the [DescribeElasticBandwidthSpec](~~91502~~) operation to query the available burstable protection bandwidth of the instance.</p>
+     * <p>> You can call the [DescribeElasticBandwidthSpec](https://help.aliyun.com/document_detail/91502.html) operation to query the available burstable protection bandwidth of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ElasticBandwidth")
     public Integer elasticBandwidth;
@@ -15,7 +17,9 @@ public class ModifyElasticBandWidthRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  The instance must be in a normal state. You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>>  The instance must be in a normal state. You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

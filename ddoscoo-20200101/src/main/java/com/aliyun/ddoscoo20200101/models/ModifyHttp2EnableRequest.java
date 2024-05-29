@@ -7,7 +7,9 @@ public class ModifyHttp2EnableRequest extends TeaModel {
     /**
      * <p>The domain name of the website.</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>> A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -17,6 +19,8 @@ public class ModifyHttp2EnableRequest extends TeaModel {
      * <br>
      * <p>*   **0**: disables HTTP/2.</p>
      * <p>*   **1**: enables HTTP/2.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Enable")
     public Integer enable;

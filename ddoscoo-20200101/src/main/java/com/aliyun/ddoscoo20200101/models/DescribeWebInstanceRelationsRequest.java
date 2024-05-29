@@ -7,7 +7,9 @@ public class DescribeWebInstanceRelationsRequest extends TeaModel {
     /**
      * <p>The domain names of the website. list</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domains")
     public java.util.List<String> domains;

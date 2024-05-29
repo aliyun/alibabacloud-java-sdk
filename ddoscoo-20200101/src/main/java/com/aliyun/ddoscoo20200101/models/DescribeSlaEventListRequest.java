@@ -8,6 +8,8 @@ public class DescribeSlaEventListRequest extends TeaModel {
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>>  This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -35,6 +37,8 @@ public class DescribeSlaEventListRequest extends TeaModel {
      * <br>
      * <p>*   **cn**: Anti-DDoS Pro</p>
      * <p>*   **cn-hongkong**: Anti-DDoS Premium</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -43,6 +47,8 @@ public class DescribeSlaEventListRequest extends TeaModel {
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>>  This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
