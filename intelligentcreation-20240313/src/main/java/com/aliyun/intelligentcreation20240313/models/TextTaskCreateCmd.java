@@ -10,6 +10,9 @@ public class TextTaskCreateCmd extends TeaModel {
     @NameInMap("idempotentId")
     public String idempotentId;
 
+    @NameInMap("industry")
+    public String industry;
+
     @NameInMap("introduction")
     public String introduction;
 
@@ -46,6 +49,9 @@ public class TextTaskCreateCmd extends TeaModel {
     @NameInMap("theme")
     public String theme;
 
+    @NameInMap("themes")
+    public java.util.List<String> themes;
+
     public static TextTaskCreateCmd build(java.util.Map<String, ?> map) throws Exception {
         TextTaskCreateCmd self = new TextTaskCreateCmd();
         return TeaModel.build(map, self);
@@ -65,6 +71,14 @@ public class TextTaskCreateCmd extends TeaModel {
     }
     public String getIdempotentId() {
         return this.idempotentId;
+    }
+
+    public TextTaskCreateCmd setIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    public String getIndustry() {
+        return this.industry;
     }
 
     public TextTaskCreateCmd setIntroduction(String introduction) {
@@ -137,6 +151,14 @@ public class TextTaskCreateCmd extends TeaModel {
     }
     public String getTheme() {
         return this.theme;
+    }
+
+    public TextTaskCreateCmd setThemes(java.util.List<String> themes) {
+        this.themes = themes;
+        return this;
+    }
+    public java.util.List<String> getThemes() {
+        return this.themes;
     }
 
 }
