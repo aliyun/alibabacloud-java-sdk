@@ -15,6 +15,8 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -27,6 +29,8 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

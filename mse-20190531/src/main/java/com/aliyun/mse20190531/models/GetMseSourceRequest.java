@@ -28,6 +28,9 @@ public class GetMseSourceRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>VPC ID</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

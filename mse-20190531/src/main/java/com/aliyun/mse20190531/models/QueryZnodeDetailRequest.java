@@ -27,6 +27,8 @@ public class QueryZnodeDetailRequest extends TeaModel {
 
     /**
      * <p>The path of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Path")
     public String path;

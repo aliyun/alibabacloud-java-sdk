@@ -15,12 +15,16 @@ public class DeleteGatewayAuthConsumerRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the consumer on which the gateway performs authentication operations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

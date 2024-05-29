@@ -11,7 +11,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public GetGatewayServiceDetailResponseBodyData data;
@@ -104,7 +104,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -140,19 +140,19 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The time when the service was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The time when the service was modified.</p>
+         * <p>The modification time.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID of the port configuration.</p>
+         * <p>The port ID.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -276,7 +276,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion extends TeaModel {
         /**
-         * <p>The tags.</p>
+         * <p>The tag.</p>
          */
         @NameInMap("Labels")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels> labels;
@@ -324,7 +324,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String endpointNumPercent;
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The service version.</p>
          */
         @NameInMap("ServiceVersion")
         public GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion serviceVersion;
@@ -368,7 +368,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The type of the service.</p>
+         * <p>The type.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -541,7 +541,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersionDetails> versionDetails;
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The service version. This parameter is deprecated.</p>
          */
         @NameInMap("Versions")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersions> versions;

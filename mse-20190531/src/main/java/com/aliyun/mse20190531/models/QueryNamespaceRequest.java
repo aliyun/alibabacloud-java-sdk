@@ -13,6 +13,9 @@ public class QueryNamespaceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Region")
     public String region;
 

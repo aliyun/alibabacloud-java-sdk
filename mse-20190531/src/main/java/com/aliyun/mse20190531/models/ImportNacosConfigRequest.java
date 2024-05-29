@@ -18,12 +18,16 @@ public class ImportNacosConfigRequest extends TeaModel {
      * <br>
      * <p>*   zh: Chinese</p>
      * <p>*   en: English</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;
 
     /**
      * <p>The ID of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

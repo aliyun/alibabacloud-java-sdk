@@ -21,6 +21,8 @@ public class CreateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The application name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -77,6 +79,8 @@ public class CreateFlowRuleRequest extends TeaModel {
      * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
@@ -89,6 +93,8 @@ public class CreateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -101,6 +107,8 @@ public class CreateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the API resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")
     public String resource;
@@ -110,6 +118,8 @@ public class CreateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The throttling threshold.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Threshold")
     public Integer threshold;

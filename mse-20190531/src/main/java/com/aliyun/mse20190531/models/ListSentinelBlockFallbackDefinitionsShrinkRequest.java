@@ -7,12 +7,18 @@ public class ListSentinelBlockFallbackDefinitionsShrinkRequest extends TeaModel 
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("ClassificationSet")
     public String classificationSetShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

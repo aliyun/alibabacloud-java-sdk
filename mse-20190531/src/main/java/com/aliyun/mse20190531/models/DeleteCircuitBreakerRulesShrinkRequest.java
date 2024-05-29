@@ -12,6 +12,8 @@ public class DeleteCircuitBreakerRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -24,6 +26,8 @@ public class DeleteCircuitBreakerRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>The microservice namespace to which the application belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

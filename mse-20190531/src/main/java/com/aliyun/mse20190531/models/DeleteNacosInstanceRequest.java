@@ -24,24 +24,32 @@ public class DeleteNacosInstanceRequest extends TeaModel {
      * <br>
      * <p>*   `true`: yes</p>
      * <p>*   `false`: no</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
     /**
      * <p>The name of the group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the Nacos instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the Nacos instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ip")
     public String ip;
@@ -54,12 +62,16 @@ public class DeleteNacosInstanceRequest extends TeaModel {
 
     /**
      * <p>The port of the Nacos instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The name of the service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

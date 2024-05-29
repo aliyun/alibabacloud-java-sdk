@@ -21,18 +21,24 @@ public class AddSecurityGroupRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The range of port numbers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortRange")
     public String portRange;
 
     /**
      * <p>The ID of the security group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

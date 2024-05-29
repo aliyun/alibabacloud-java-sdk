@@ -27,6 +27,8 @@ public class UpdateEngineNamespaceRequest extends TeaModel {
 
     /**
      * <p>The ID of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public String id;
@@ -39,6 +41,8 @@ public class UpdateEngineNamespaceRequest extends TeaModel {
 
     /**
      * <p>The name of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

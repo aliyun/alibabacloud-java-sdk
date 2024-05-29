@@ -39,6 +39,8 @@ public class CreateEngineNamespaceRequest extends TeaModel {
 
     /**
      * <p>The display name of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

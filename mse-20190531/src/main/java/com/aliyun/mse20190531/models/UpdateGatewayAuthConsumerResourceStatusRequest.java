@@ -15,18 +15,24 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the consumer.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerId")
     public Long consumerId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The list of IDs of the authorized resources that a user wants to update.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IdList")
     public String idList;
@@ -36,6 +42,8 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends TeaModel {
      * <br>
      * <p>*   true: enabled</p>
      * <p>*   false: disabled</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceStatus")
     public Boolean resourceStatus;

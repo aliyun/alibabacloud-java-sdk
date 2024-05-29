@@ -11,7 +11,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListGatewayServiceResponseBodyData data;
@@ -423,7 +423,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The URL of the HTTP request for the health check.</p>
+         * <p>The endpoint of the HTTP request for the health check.</p>
          */
         @NameInMap("HttpHost")
         public String httpHost;
@@ -561,7 +561,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     public static class ListGatewayServiceResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
@@ -591,7 +591,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The name of the group.</p>
+         * <p>The group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -635,7 +635,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The IP addresses.</p>
+         * <p>The list of IP addresses.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;
@@ -674,7 +674,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public String serviceNameInRegistry;
 
         /**
-         * <p>The service port.</p>
+         * <p>The service port number.</p>
          */
         @NameInMap("ServicePort")
         public Long servicePort;
@@ -692,19 +692,19 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public Long sourceId;
 
         /**
-         * <p>The type of the service source.</p>
+         * <p>The source type.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The array of unhealthy endpoints.</p>
+         * <p>The array of endpoints of unhealthy instances.</p>
          */
         @NameInMap("UnhealthyEndpoints")
         public java.util.List<String> unhealthyEndpoints;
 
         /**
-         * <p>The version of the service.</p>
+         * <p>The service version.</p>
          */
         @NameInMap("Versions")
         public java.util.List<ListGatewayServiceResponseBodyDataResultVersions> versions;
@@ -922,7 +922,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The returned information.</p>
+         * <p>The data returned.</p>
          */
         @NameInMap("Result")
         public java.util.List<ListGatewayServiceResponseBodyDataResult> result;

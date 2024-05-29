@@ -58,7 +58,7 @@ public class AddGatewayShrinkRequest extends TeaModel {
     public Boolean enableSls;
 
     /**
-     * <p>The sampling rate of Tracing Analysis. Valid values: \[1,100].</p>
+     * <p>The sampling rate of Tracing Analysis. Valid values: [1,100].</p>
      */
     @NameInMap("EnableXtrace")
     public Boolean enableXtrace;
@@ -109,6 +109,8 @@ public class AddGatewayShrinkRequest extends TeaModel {
      * <p>*   slb.s3.small</p>
      * <p>*   slb.s3.medium</p>
      * <p>*   slb.s3.large</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -150,10 +152,10 @@ public class AddGatewayShrinkRequest extends TeaModel {
     /**
      * <p>The node specifications. Valid values:</p>
      * <br>
-     * <p>*   MSE_GTW\_16\_32\_200\_c(16C32G)</p>
-     * <p>*   MSE_GTW\_2\_4\_200\_c(2C4G)</p>
-     * <p>*   MSE_GTW\_4\_8\_200\_c(4C8G)</p>
-     * <p>*   MSE_GTW\_8\_16\_200\_c(8C16G)</p>
+     * <p>*   MSE_GTW_16_32_200_c(16C32G)</p>
+     * <p>*   MSE_GTW_2_4_200_c(2C4G)</p>
+     * <p>*   MSE_GTW_4_8_200_c(4C8G)</p>
+     * <p>*   MSE_GTW_8_16_200_c(8C16G)</p>
      */
     @NameInMap("Spec")
     public String spec;
@@ -178,6 +180,8 @@ public class AddGatewayShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the primary vSwitch.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Vpc")
     public String vpc;

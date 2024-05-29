@@ -21,6 +21,8 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends TeaModel {
 
     /**
      * <p>The traffic policy of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayTrafficPolicy")
     public TrafficPolicy gatewayTrafficPolicy;

@@ -15,12 +15,16 @@ public class UpdateGatewayAuthConsumerResourceShrinkRequest extends TeaModel {
 
     /**
      * <p>The gateway authentication consumer ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerId")
     public Long consumerId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;

@@ -30,12 +30,16 @@ public class ListAuthPolicyRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -52,12 +56,16 @@ public class ListAuthPolicyRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The service source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;

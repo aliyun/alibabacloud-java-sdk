@@ -57,12 +57,17 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
 
     /**
      * <p>The name of the lane.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Namespace")
     public String namespace;
+
+    @NameInMap("PathIndependentPercentageEnable")
+    public Boolean pathIndependentPercentageEnable;
 
     /**
      * <p>The ID of the region.</p>
@@ -159,6 +164,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public CreateOrUpdateSwimmingLaneRequest setPathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+        this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+        return this;
+    }
+    public Boolean getPathIndependentPercentageEnable() {
+        return this.pathIndependentPercentageEnable;
     }
 
     public CreateOrUpdateSwimmingLaneRequest setRegionId(String regionId) {
@@ -418,6 +431,36 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
 
     }
 
+    public static class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList extends TeaModel {
+        @NameInMap("Percentage")
+        public Integer percentage;
+
+        @NameInMap("RouteId")
+        public Long routeId;
+
+        public static CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList self = new CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList setPercentage(Integer percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList setRouteId(Long routeId) {
+            this.routeId = routeId;
+            return this;
+        }
+        public Long getRouteId() {
+            return this.routeId;
+        }
+
+    }
+
     public static class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson extends TeaModel {
         @NameInMap("CanaryModel")
         public Integer canaryModel;
@@ -448,6 +491,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
          */
         @NameInMap("RouteIdList")
         public java.util.List<Long> routeIdList;
+
+        @NameInMap("RouteIndependentPercentageEnable")
+        public Boolean routeIndependentPercentageEnable;
+
+        @NameInMap("RouteIndependentPercentageList")
+        public java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList> routeIndependentPercentageList;
 
         public static CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson build(java.util.Map<String, ?> map) throws Exception {
             CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson self = new CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson();
@@ -500,6 +549,22 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
         }
         public java.util.List<Long> getRouteIdList() {
             return this.routeIdList;
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setRouteIndependentPercentageEnable(Boolean routeIndependentPercentageEnable) {
+            this.routeIndependentPercentageEnable = routeIndependentPercentageEnable;
+            return this;
+        }
+        public Boolean getRouteIndependentPercentageEnable() {
+            return this.routeIndependentPercentageEnable;
+        }
+
+        public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson setRouteIndependentPercentageList(java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList> routeIndependentPercentageList) {
+            this.routeIndependentPercentageList = routeIndependentPercentageList;
+            return this;
+        }
+        public java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonRouteIndependentPercentageList> getRouteIndependentPercentageList() {
+            return this.routeIndependentPercentageList;
         }
 
     }

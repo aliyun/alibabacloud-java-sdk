@@ -15,6 +15,8 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>The name of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -33,6 +35,8 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>The region to which the application belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;

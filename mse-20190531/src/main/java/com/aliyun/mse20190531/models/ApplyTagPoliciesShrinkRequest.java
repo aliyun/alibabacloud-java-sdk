@@ -15,6 +15,8 @@ public class ApplyTagPoliciesShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     @Deprecated

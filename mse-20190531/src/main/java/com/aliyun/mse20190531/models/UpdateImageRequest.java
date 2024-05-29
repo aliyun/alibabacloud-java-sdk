@@ -15,6 +15,8 @@ public class UpdateImageRequest extends TeaModel {
 
     /**
      * <p>The ID of the destination cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -23,6 +25,8 @@ public class UpdateImageRequest extends TeaModel {
      * <p>The destination version number.</p>
      * <br>
      * <p>> You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;

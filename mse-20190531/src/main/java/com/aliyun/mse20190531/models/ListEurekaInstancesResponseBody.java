@@ -146,7 +146,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         public String app;
 
         /**
-         * <p>The timeout period of the instance.\</p>
+         * <p>The timeout period of the instance.\\</p>
          * <p>After the specified timeout period expires, the service is unavailable by default and is deleted.</p>
          */
         @NameInMap("DurationInSecs")
@@ -201,7 +201,7 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The maximum interval between two heartbeat checks after a heartbeat check times out.\</p>
+         * <p>The maximum interval between two heartbeat checks after a heartbeat check times out.\\</p>
          * <p>Default value: 10.</p>
          */
         @NameInMap("RenewalIntervalInSecs")

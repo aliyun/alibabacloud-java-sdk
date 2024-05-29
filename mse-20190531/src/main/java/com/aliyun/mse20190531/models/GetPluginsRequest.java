@@ -33,6 +33,8 @@ public class GetPluginsRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;

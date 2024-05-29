@@ -7,6 +7,9 @@ public class RemoveAuthPolicyRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 

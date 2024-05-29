@@ -54,6 +54,8 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
 
     /**
      * <p>The name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

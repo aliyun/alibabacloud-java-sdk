@@ -15,6 +15,8 @@ public class ListGatewayRouteOnAuthRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -23,6 +25,8 @@ public class ListGatewayRouteOnAuthRequest extends TeaModel {
      * <p>The authentication method. Valid values:</p>
      * <br>
      * <p>*   JWT</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

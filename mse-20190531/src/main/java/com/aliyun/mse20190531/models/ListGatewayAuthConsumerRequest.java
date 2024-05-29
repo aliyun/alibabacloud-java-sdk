@@ -24,6 +24,8 @@ public class ListGatewayAuthConsumerRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -36,12 +38,16 @@ public class ListGatewayAuthConsumerRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNum")
     public String pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

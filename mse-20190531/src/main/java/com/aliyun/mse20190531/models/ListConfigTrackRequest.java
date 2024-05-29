@@ -21,6 +21,8 @@ public class ListConfigTrackRequest extends TeaModel {
 
     /**
      * <p>The end timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
@@ -33,6 +35,8 @@ public class ListConfigTrackRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -51,12 +55,16 @@ public class ListConfigTrackRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNum")
     public Long pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -78,6 +86,8 @@ public class ListConfigTrackRequest extends TeaModel {
 
     /**
      * <p>The start timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTs")
     public Long startTs;

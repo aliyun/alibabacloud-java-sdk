@@ -21,18 +21,24 @@ public class DeleteNacosConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
      * <p>The message returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>The HTTP status code.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

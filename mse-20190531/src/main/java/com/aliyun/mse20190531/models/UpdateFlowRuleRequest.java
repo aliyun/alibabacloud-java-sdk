@@ -21,6 +21,8 @@ public class UpdateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The application name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -89,12 +91,16 @@ public class UpdateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

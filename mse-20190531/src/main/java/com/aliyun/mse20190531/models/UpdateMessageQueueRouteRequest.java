@@ -15,6 +15,8 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
 
     /**
      * <p>The ID of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -42,6 +44,8 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;

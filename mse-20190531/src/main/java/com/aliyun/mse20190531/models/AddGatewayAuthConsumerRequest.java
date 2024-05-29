@@ -30,6 +30,8 @@ public class AddGatewayAuthConsumerRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -54,6 +56,8 @@ public class AddGatewayAuthConsumerRequest extends TeaModel {
 
     /**
      * <p>The name of the consumer.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -86,6 +90,8 @@ public class AddGatewayAuthConsumerRequest extends TeaModel {
      * <p>The authentication type. Valid values:</p>
      * <br>
      * <p>*   JWT</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

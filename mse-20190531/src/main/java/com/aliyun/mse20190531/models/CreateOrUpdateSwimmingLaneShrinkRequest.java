@@ -57,12 +57,17 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the lane.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Namespace")
     public String namespace;
+
+    @NameInMap("PathIndependentPercentageEnable")
+    public Boolean pathIndependentPercentageEnable;
 
     /**
      * <p>The ID of the region.</p>
@@ -159,6 +164,14 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public CreateOrUpdateSwimmingLaneShrinkRequest setPathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+        this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+        return this;
+    }
+    public Boolean getPathIndependentPercentageEnable() {
+        return this.pathIndependentPercentageEnable;
     }
 
     public CreateOrUpdateSwimmingLaneShrinkRequest setRegionId(String regionId) {

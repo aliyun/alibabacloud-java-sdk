@@ -7,18 +7,27 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BehaviorType")
     public Integer behaviorType;
 
     @NameInMap("BodyEncoding")
     public Integer bodyEncoding;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Enable")
     public Integer enable;
 
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
@@ -31,12 +40,21 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     @NameInMap("ResponseStatusCode")
     public Integer responseStatusCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RouteId")
     public Long routeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RouteName")
     public String routeName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Threshold")
     public Integer threshold;
 

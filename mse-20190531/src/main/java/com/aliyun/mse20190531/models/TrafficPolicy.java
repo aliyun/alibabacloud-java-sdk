@@ -164,6 +164,9 @@ public class TrafficPolicy extends TeaModel {
         @NameInMap("Sni")
         public String sni;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TlsMode")
         public String tlsMode;
 

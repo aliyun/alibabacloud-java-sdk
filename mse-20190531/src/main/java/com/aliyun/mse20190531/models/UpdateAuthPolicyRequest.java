@@ -30,6 +30,8 @@ public class UpdateAuthPolicyRequest extends TeaModel {
 
     /**
      * <p>The rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public String id;

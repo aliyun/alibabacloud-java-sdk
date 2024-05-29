@@ -15,12 +15,16 @@ public class DeleteZnodeRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The path of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Path")
     public String path;

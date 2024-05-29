@@ -15,6 +15,8 @@ public class UpgradeClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -27,6 +29,8 @@ public class UpgradeClusterRequest extends TeaModel {
 
     /**
      * <p>The destination version.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UpgradeVersion")
     public String upgradeVersion;

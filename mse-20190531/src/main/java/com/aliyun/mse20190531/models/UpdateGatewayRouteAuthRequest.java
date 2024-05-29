@@ -15,6 +15,8 @@ public class UpdateGatewayRouteAuthRequest extends TeaModel {
 
     /**
      * <p>The authentication configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthJSON")
     public UpdateGatewayRouteAuthRequestAuthJSON authJSON;
@@ -27,12 +29,16 @@ public class UpdateGatewayRouteAuthRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The route ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;
