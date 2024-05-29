@@ -12,12 +12,16 @@ public class CreateNetworkAccessEndpointRequest extends TeaModel {
 
     /**
      * <p>IDaaS EIAM实例的ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>专属网络端点名称。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkAccessEndpointName")
     public String networkAccessEndpointName;
@@ -30,12 +34,16 @@ public class CreateNetworkAccessEndpointRequest extends TeaModel {
 
     /**
      * <p>专属网络端点连接的VpcID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>专属网络端点连接的VpcID所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcRegionId")
     public String vpcRegionId;

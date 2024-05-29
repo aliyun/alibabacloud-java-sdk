@@ -17,7 +17,7 @@ public class UpdateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Email")
     public String email;
@@ -30,6 +30,8 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -54,12 +56,14 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The account ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
-     * <p>The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: \_ . @ -</p>
+     * <p>The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: _ . @ -</p>
      */
     @NameInMap("Username")
     public String username;

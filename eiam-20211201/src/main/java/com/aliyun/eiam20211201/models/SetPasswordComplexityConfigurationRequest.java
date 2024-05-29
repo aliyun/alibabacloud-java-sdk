@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetPasswordComplexityConfigurationRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +20,8 @@ public class SetPasswordComplexityConfigurationRequest extends TeaModel {
 
     /**
      * <p>The minimum number of characters in a password.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PasswordMinLength")
     public Integer passwordMinLength;
@@ -57,7 +61,7 @@ public class SetPasswordComplexityConfigurationRequest extends TeaModel {
          * <br>
          * <p>*   inclusion_upper_case: The password must contain uppercase letters.</p>
          * <p>*   inclusion_lower_case: The password must contain lowercase letters.</p>
-         * <p>*   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \" ! # $ ^ ? : , ( ) { } \[ ] ~ - \_ .</p>
+         * <p>*   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \\ / \\" ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</p>
          * <p>*   inclusion_number: The password must contain digits.</p>
          * <p>*   exclusion_username: The password cannot contain a username.</p>
          * <p>*   exclusion_email: The password cannot contain an email prefix.</p>

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SetPasswordHistoryConfigurationRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -21,6 +23,8 @@ public class SetPasswordHistoryConfigurationRequest extends TeaModel {
      * <br>
      * <p>*   enabled</p>
      * <p>*   disabled</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PasswordHistoryStatus")
     public String passwordHistoryStatus;

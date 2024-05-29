@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateUserPasswordRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The new password of the account. For more information about the password format, see the "Password Policies" topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;
@@ -27,6 +31,8 @@ public class UpdateUserPasswordRequest extends TeaModel {
 
     /**
      * <p>The account ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;

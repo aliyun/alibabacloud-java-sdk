@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListNetworkAccessEndpointAvailableZonesRequest extends TeaModel {
     /**
      * <p>专属网络端点支持的地域</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NaeRegionId")
     public String naeRegionId;

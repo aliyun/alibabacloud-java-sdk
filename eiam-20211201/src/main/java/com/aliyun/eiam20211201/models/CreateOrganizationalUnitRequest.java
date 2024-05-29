@@ -12,6 +12,8 @@ public class CreateOrganizationalUnitRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,12 +26,16 @@ public class CreateOrganizationalUnitRequest extends TeaModel {
 
     /**
      * <p>The name of the organization. The name can be up to 64 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OrganizationalUnitName")
     public String organizationalUnitName;
 
     /**
      * <p>The parent organization ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ParentId")
     public String parentId;

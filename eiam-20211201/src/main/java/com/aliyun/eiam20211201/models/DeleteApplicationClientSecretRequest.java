@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteApplicationClientSecretRequest extends TeaModel {
     /**
      * <p>The ID of the application for which you want to delete a client key.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the client key that you want to delete for the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretId")
     public String secretId;
