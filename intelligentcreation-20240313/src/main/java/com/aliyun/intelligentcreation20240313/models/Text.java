@@ -19,6 +19,9 @@ public class Text extends TeaModel {
     @NameInMap("illustrationTaskIdList")
     public java.util.List<Long> illustrationTaskIdList;
 
+    @NameInMap("publishStatus")
+    public String publishStatus;
+
     @NameInMap("textContent")
     public String textContent;
 
@@ -40,11 +43,17 @@ public class Text extends TeaModel {
     @NameInMap("textStatus")
     public String textStatus;
 
+    @NameInMap("textStyleType")
+    public String textStyleType;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("textTaskId")
     public Long textTaskId;
+
+    @NameInMap("textThemes")
+    public java.util.List<String> textThemes;
 
     @NameInMap("title")
     public String title;
@@ -98,6 +107,14 @@ public class Text extends TeaModel {
         return this.illustrationTaskIdList;
     }
 
+    public Text setPublishStatus(String publishStatus) {
+        this.publishStatus = publishStatus;
+        return this;
+    }
+    public String getPublishStatus() {
+        return this.publishStatus;
+    }
+
     public Text setTextContent(String textContent) {
         this.textContent = textContent;
         return this;
@@ -138,12 +155,28 @@ public class Text extends TeaModel {
         return this.textStatus;
     }
 
+    public Text setTextStyleType(String textStyleType) {
+        this.textStyleType = textStyleType;
+        return this;
+    }
+    public String getTextStyleType() {
+        return this.textStyleType;
+    }
+
     public Text setTextTaskId(Long textTaskId) {
         this.textTaskId = textTaskId;
         return this;
     }
     public Long getTextTaskId() {
         return this.textTaskId;
+    }
+
+    public Text setTextThemes(java.util.List<String> textThemes) {
+        this.textThemes = textThemes;
+        return this;
+    }
+    public java.util.List<String> getTextThemes() {
+        return this.textThemes;
     }
 
     public Text setTitle(String title) {

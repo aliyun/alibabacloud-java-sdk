@@ -302,13 +302,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary 查询文案主题列表
      *
+     * @param request ListTextThemesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTextThemesResponse
      */
-    public ListTextThemesResponse listTextThemesWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListTextThemesResponse listTextThemesWithOptions(ListTextThemesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
+            query.put("industry", request.industry);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListTextThemes"),
@@ -327,11 +335,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary 查询文案主题列表
      *
+     * @param request ListTextThemesRequest
      * @return ListTextThemesResponse
      */
-    public ListTextThemesResponse listTextThemes() throws Exception {
+    public ListTextThemesResponse listTextThemes(ListTextThemesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listTextThemesWithOptions(headers, runtime);
+        return this.listTextThemesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 列举文案
+     *
+     * @param request ListTextsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTextsResponse
+     */
+    public ListTextsResponse listTextsWithOptions(ListTextsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generationSource)) {
+            query.put("generationSource", request.generationSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
+            query.put("industry", request.industry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publishStatus)) {
+            query.put("publishStatus", request.publishStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textStyleType)) {
+            query.put("textStyleType", request.textStyleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textTheme)) {
+            query.put("textTheme", request.textTheme);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTexts"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/texts"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTextsResponse());
+    }
+
+    /**
+     * @summary 列举文案
+     *
+     * @param request ListTextsRequest
+     * @return ListTextsResponse
+     */
+    public ListTextsResponse listTexts(ListTextsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTextsWithOptions(request, headers, runtime);
     }
 }
