@@ -9,18 +9,24 @@ public class DescribeDataCheckReportUrlRequest extends TeaModel {
      * <br>
      * <p>*   **1**: full data verification.</p>
      * <p>*   **2**: incremental data verification.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CheckType")
     public Integer checkType;
 
     /**
      * <p>The name of the verified source database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
-     * <p>The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -30,6 +36,8 @@ public class DescribeDataCheckReportUrlRequest extends TeaModel {
 
     /**
      * <p>The name of the table verified in the source database.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TbName")
     public String tbName;

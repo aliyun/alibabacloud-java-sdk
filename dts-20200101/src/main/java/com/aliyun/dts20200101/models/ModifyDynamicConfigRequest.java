@@ -7,12 +7,18 @@ public class ModifyDynamicConfigRequest extends TeaModel {
     @NameInMap("ConfigList")
     public String configList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     @NameInMap("EnableLimit")
     public Boolean enableLimit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobCode")
     public String jobCode;
 

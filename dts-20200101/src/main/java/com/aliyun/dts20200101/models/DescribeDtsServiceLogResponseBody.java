@@ -11,7 +11,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \\*\\*%s\\*\\* variable in the **ErrMessage** parameter.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;

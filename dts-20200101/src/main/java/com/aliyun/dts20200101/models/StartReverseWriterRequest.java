@@ -14,6 +14,8 @@ public class StartReverseWriterRequest extends TeaModel {
 
     /**
      * <p>The ID of the reverse task that was created by calling the CreateReverseDtsJob operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;

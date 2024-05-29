@@ -12,6 +12,8 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
@@ -54,6 +56,8 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
 
     /**
      * <p>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Phones")
     public String phones;

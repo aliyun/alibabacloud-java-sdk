@@ -21,6 +21,8 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
 
     /**
      * <p>The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
@@ -41,7 +43,7 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the data migration instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

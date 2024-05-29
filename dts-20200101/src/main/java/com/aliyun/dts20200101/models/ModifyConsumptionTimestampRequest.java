@@ -12,6 +12,8 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
 
     /**
      * <p>The consumption checkpoint. The format is *yyyy-MM-dd*T*HH:mm:ss*Z. The time is displayed in UTC.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumptionTimestamp")
     public String consumptionTimestamp;
@@ -27,6 +29,8 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
 
     /**
      * <p>The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;

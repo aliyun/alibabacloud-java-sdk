@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDtsJobPasswordRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -30,7 +32,7 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

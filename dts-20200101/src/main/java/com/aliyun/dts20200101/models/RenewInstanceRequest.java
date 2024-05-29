@@ -15,12 +15,16 @@ public class RenewInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the DTS instance. Set the value to **PREPAY**, which indicates the subscription billing method.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -35,7 +39,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

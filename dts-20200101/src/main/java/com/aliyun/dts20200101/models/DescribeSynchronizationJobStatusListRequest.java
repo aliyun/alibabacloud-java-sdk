@@ -26,7 +26,9 @@ public class DescribeSynchronizationJobStatusListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The IDs of the data synchronization instances. The value is a JSON array. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance IDs.</p>
+     * <p>The IDs of the data synchronization instances. The value is a JSON array. You can call the [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SynchronizationJobIdListJsonStr")
     public String synchronizationJobIdListJsonStr;

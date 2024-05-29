@@ -18,6 +18,8 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
 
     /**
      * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;

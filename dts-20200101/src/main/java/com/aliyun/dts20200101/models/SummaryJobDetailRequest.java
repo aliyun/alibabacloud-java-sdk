@@ -16,6 +16,8 @@ public class SummaryJobDetailRequest extends TeaModel {
      * <p>The ID of the data migration or data synchronization task.</p>
      * <br>
      * <p>>  You must specify at least one of the DtsJobId and DtsInstanceId parameters.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -25,12 +27,14 @@ public class SummaryJobDetailRequest extends TeaModel {
      * <br>
      * <p>*   **02**: The task is in the schema migration phase.</p>
      * <p>*   **03**: The task is in the incremental migration phase.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobCode")
     public String jobCode;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

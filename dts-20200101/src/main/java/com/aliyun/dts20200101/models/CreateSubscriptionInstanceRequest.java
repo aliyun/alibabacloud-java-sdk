@@ -43,7 +43,9 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;

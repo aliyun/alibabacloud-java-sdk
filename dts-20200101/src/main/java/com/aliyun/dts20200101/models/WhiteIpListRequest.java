@@ -11,11 +11,13 @@ public class WhiteIpListRequest extends TeaModel {
     public String destinationRegion;
 
     /**
-     * <p>The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      * <br>
      * <p>> </p>
      * <p>*   If the destination instance is a self-managed database with a public IP address or a third-party cloud database, you can set the parameter to **cn-hangzhou** or the ID of the closest region.</p>
      * <p>*   If the DTS task is a data migration or data synchronization task, you must specify this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -27,9 +29,11 @@ public class WhiteIpListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      * <br>
      * <p>>  If the source instance is a self-managed database with a public IP address or a third-party cloud database, you can set the parameter to **cn-hangzhou** or the ID of the closest region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

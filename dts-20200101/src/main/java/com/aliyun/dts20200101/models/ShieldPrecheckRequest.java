@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ShieldPrecheckRequest extends TeaModel {
     /**
      * <p>The ID of the data migration or data synchronization instance. You can call the **DescribeMigrationJobs** or DescribeSynchronizationJobs operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
@@ -21,9 +23,11 @@ public class ShieldPrecheckRequest extends TeaModel {
      * <br>
      * <p>*   **CHECK_TOPOLOGY**: topology</p>
      * <br>
-     * <p>> For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).</p>
+     * <p>> For more information about the topologies supported by DTS, see [Synchronization topologies](https://help.aliyun.com/document_detail/124115.html).</p>
      * <br>
      * <p>*   **CHECK_SERVER_ID**: value of server_id in the source database</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PrecheckItems")
     public String precheckItems;

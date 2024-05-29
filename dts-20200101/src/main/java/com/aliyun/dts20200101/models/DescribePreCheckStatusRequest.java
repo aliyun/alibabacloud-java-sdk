@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribePreCheckStatusRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -17,6 +19,8 @@ public class DescribePreCheckStatusRequest extends TeaModel {
      * <p>*   **02**: schema migration or initial schema synchronization</p>
      * <p>*   **03**: full data migration or initial full data synchronization</p>
      * <p>*   **04**: incremental data migration or synchronization</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("JobCode")
     public String jobCode;
@@ -40,7 +44,7 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -34,7 +34,7 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the data migration instances reside. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the data migration instances reside. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -116,17 +116,19 @@ public class DescribeMigrationJobsRequest extends TeaModel {
 
     public static class DescribeMigrationJobsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.</p>
+         * <p>The tag key. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag key.</p>
          * <br>
          * <p>> </p>
          * <p>*   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</p>
          * <p>*   This parameter cannot be an empty string.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.</p>
+         * <p>The tag value. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag value.</p>
          * <br>
          * <p>> </p>
          * <p>*   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</p>

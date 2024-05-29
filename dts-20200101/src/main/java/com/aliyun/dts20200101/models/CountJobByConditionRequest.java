@@ -33,13 +33,17 @@ public class CountJobByConditionRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>One of the query conditions. The ID of the region. For more information, see [Supported regions](~~141033~~).</p>
+     * <p>One of the query conditions. The ID of the region. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see [Supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

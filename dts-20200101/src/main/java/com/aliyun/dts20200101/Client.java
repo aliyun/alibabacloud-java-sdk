@@ -84,11 +84,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the DTS instance.
-      *
-      * @param request ConfigureDtsJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ConfigureDtsJobResponse
+     * @summary 配置DTS任务
+     *
+     * @description The name of the DTS instance.
+     *
+     * @param request ConfigureDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureDtsJobResponse
      */
     public ConfigureDtsJobResponse configureDtsJobWithOptions(ConfigureDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -333,10 +335,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the DTS instance.
-      *
-      * @param request ConfigureDtsJobRequest
-      * @return ConfigureDtsJobResponse
+     * @summary 配置DTS任务
+     *
+     * @description The name of the DTS instance.
+     *
+     * @param request ConfigureDtsJobRequest
+     * @return ConfigureDtsJobResponse
      */
     public ConfigureDtsJobResponse configureDtsJob(ConfigureDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -350,7 +354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -374,12 +378,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -418,12 +423,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](~~49429~~) operation to start the task.
-      * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](~~49433~~) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](~~49429~~) operation to restart the data migration task.
-      *
-      * @param request ConfigureMigrationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ConfigureMigrationJobResponse
+     * @summary Configures a data migration task.
+     *
+     * @description After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to start the task.
+     * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](https://help.aliyun.com/document_detail/49433.html) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the data migration task.
+     *
+     * @param request ConfigureMigrationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureMigrationJobResponse
      */
     public ConfigureMigrationJobResponse configureMigrationJobWithOptions(ConfigureMigrationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -496,17 +503,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](~~49429~~) operation to start the task.
-      * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](~~49433~~) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](~~49429~~) operation to restart the data migration task.
-      *
-      * @param request ConfigureMigrationJobRequest
-      * @return ConfigureMigrationJobResponse
+     * @summary Configures a data migration task.
+     *
+     * @description After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to start the task.
+     * A data migration task may fail to be started due to precheck failures. You can call the [DescribeMigrationJobStatus](https://help.aliyun.com/document_detail/49433.html) operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the data migration task.
+     *
+     * @param request ConfigureMigrationJobRequest
+     * @return ConfigureMigrationJobResponse
      */
     public ConfigureMigrationJobResponse configureMigrationJob(ConfigureMigrationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureMigrationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ConfigureMigrationJobAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureMigrationJobAlertResponse
+     */
     public ConfigureMigrationJobAlertResponse configureMigrationJobAlertWithOptions(ConfigureMigrationJobAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -567,11 +581,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigureMigrationJobAlertResponse());
     }
 
+    /**
+     * @param request ConfigureMigrationJobAlertRequest
+     * @return ConfigureMigrationJobAlertResponse
+     */
     public ConfigureMigrationJobAlertResponse configureMigrationJobAlert(ConfigureMigrationJobAlertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureMigrationJobAlertWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ConfigureSubscriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureSubscriptionResponse
+     */
     public ConfigureSubscriptionResponse configureSubscriptionWithOptions(ConfigureSubscriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -728,17 +751,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigureSubscriptionResponse());
     }
 
+    /**
+     * @param request ConfigureSubscriptionRequest
+     * @return ConfigureSubscriptionResponse
+     */
     public ConfigureSubscriptionResponse configureSubscription(ConfigureSubscriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureSubscriptionWithOptions(request, runtime);
     }
 
     /**
-      * The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
-      *
-      * @param request ConfigureSubscriptionInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ConfigureSubscriptionInstanceResponse
+     * @summary Before you call this operation, you must call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation to create a change tracking instance.
+     *
+     * @description The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
+     *
+     * @param request ConfigureSubscriptionInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureSubscriptionInstanceResponse
      */
     public ConfigureSubscriptionInstanceResponse configureSubscriptionInstanceWithOptions(ConfigureSubscriptionInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -807,16 +836,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
-      *
-      * @param request ConfigureSubscriptionInstanceRequest
-      * @return ConfigureSubscriptionInstanceResponse
+     * @summary Before you call this operation, you must call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation to create a change tracking instance.
+     *
+     * @description The operation that you want to perform. Set the value to **ConfigureSubscriptionInstance**.
+     *
+     * @param request ConfigureSubscriptionInstanceRequest
+     * @return ConfigureSubscriptionInstanceResponse
      */
     public ConfigureSubscriptionInstanceResponse configureSubscriptionInstance(ConfigureSubscriptionInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureSubscriptionInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ConfigureSubscriptionInstanceAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureSubscriptionInstanceAlertResponse
+     */
     public ConfigureSubscriptionInstanceAlertResponse configureSubscriptionInstanceAlertWithOptions(ConfigureSubscriptionInstanceAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -877,20 +913,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigureSubscriptionInstanceAlertResponse());
     }
 
+    /**
+     * @param request ConfigureSubscriptionInstanceAlertRequest
+     * @return ConfigureSubscriptionInstanceAlertResponse
+     */
     public ConfigureSubscriptionInstanceAlertResponse configureSubscriptionInstanceAlert(ConfigureSubscriptionInstanceAlertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureSubscriptionInstanceAlertWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, you must call the [CreateSynchronizationJob](~~49446~~) operation to create a data synchronization instance.
-      * > 
-      * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](~~49448~~) operation to start the task.
-      * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](~~49453~~) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](~~49448~~) operation to restart the data synchronization task.
-      *
-      * @param request ConfigureSynchronizationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ConfigureSynchronizationJobResponse
+     * @description Before you call this operation, you must call the [CreateSynchronizationJob](https://help.aliyun.com/document_detail/49446.html) operation to create a data synchronization instance.
+     * > 
+     * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to start the task.
+     * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](https://help.aliyun.com/document_detail/49453.html) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to restart the data synchronization task.
+     *
+     * @param request ConfigureSynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureSynchronizationJobResponse
      */
     public ConfigureSynchronizationJobResponse configureSynchronizationJobWithOptions(ConfigureSynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -975,19 +1015,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must call the [CreateSynchronizationJob](~~49446~~) operation to create a data synchronization instance.
-      * > 
-      * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](~~49448~~) operation to start the task.
-      * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](~~49453~~) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](~~49448~~) operation to restart the data synchronization task.
-      *
-      * @param request ConfigureSynchronizationJobRequest
-      * @return ConfigureSynchronizationJobResponse
+     * @description Before you call this operation, you must call the [CreateSynchronizationJob](https://help.aliyun.com/document_detail/49446.html) operation to create a data synchronization instance.
+     * > 
+     * *   After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to start the task.
+     * *   A data synchronization task may fail to be started due to precheck failures. You can call the [DescribeSynchronizationJobStatus](https://help.aliyun.com/document_detail/49453.html) operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the [StartSynchronizationJob](https://help.aliyun.com/document_detail/49448.html) operation to restart the data synchronization task.
+     *
+     * @param request ConfigureSynchronizationJobRequest
+     * @return ConfigureSynchronizationJobResponse
      */
     public ConfigureSynchronizationJobResponse configureSynchronizationJob(ConfigureSynchronizationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureSynchronizationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ConfigureSynchronizationJobAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureSynchronizationJobAlertResponse
+     */
     public ConfigureSynchronizationJobAlertResponse configureSynchronizationJobAlertWithOptions(ConfigureSynchronizationJobAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1052,18 +1097,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigureSynchronizationJobAlertResponse());
     }
 
+    /**
+     * @param request ConfigureSynchronizationJobAlertRequest
+     * @return ConfigureSynchronizationJobAlertResponse
+     */
     public ConfigureSynchronizationJobAlertResponse configureSynchronizationJobAlert(ConfigureSynchronizationJobAlertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureSynchronizationJobAlertWithOptions(request, runtime);
     }
 
     /**
-      * When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-      * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](~~199183~~) operation to verify whether image matching is enabled for the data synchronization instance.
-      *
-      * @param request ConfigureSynchronizationJobReplicatorCompareRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ConfigureSynchronizationJobReplicatorCompareResponse
+     * @description When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
+     * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](https://help.aliyun.com/document_detail/199183.html) operation to verify whether image matching is enabled for the data synchronization instance.
+     *
+     * @param request ConfigureSynchronizationJobReplicatorCompareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigureSynchronizationJobReplicatorCompareResponse
      */
     public ConfigureSynchronizationJobReplicatorCompareResponse configureSynchronizationJobReplicatorCompareWithOptions(ConfigureSynchronizationJobReplicatorCompareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1118,17 +1167,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-      * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](~~199183~~) operation to verify whether image matching is enabled for the data synchronization instance.
-      *
-      * @param request ConfigureSynchronizationJobReplicatorCompareRequest
-      * @return ConfigureSynchronizationJobReplicatorCompareResponse
+     * @description When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
+     * After you call this operation, you can call the [DescribeSynchronizationJobReplicatorCompare](https://help.aliyun.com/document_detail/199183.html) operation to verify whether image matching is enabled for the data synchronization instance.
+     *
+     * @param request ConfigureSynchronizationJobReplicatorCompareRequest
+     * @return ConfigureSynchronizationJobReplicatorCompareResponse
      */
     public ConfigureSynchronizationJobReplicatorCompareResponse configureSynchronizationJobReplicatorCompare(ConfigureSynchronizationJobReplicatorCompareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configureSynchronizationJobReplicatorCompareWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询符合条件的任务数
+     *
+     * @param request CountJobByConditionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CountJobByConditionResponse
+     */
     public CountJobByConditionResponse countJobByConditionWithOptions(CountJobByConditionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1189,11 +1245,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CountJobByConditionResponse());
     }
 
+    /**
+     * @summary 查询符合条件的任务数
+     *
+     * @param request CountJobByConditionRequest
+     * @return CountJobByConditionResponse
+     */
     public CountJobByConditionResponse countJobByCondition(CountJobByConditionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.countJobByConditionWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CreateConsumerChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConsumerChannelResponse
+     */
     public CreateConsumerChannelResponse createConsumerChannelWithOptions(CreateConsumerChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1242,11 +1309,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConsumerChannelResponse());
     }
 
+    /**
+     * @param request CreateConsumerChannelRequest
+     * @return CreateConsumerChannelResponse
+     */
     public CreateConsumerChannelResponse createConsumerChannel(CreateConsumerChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createConsumerChannelWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CreateConsumerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroupWithOptions(CreateConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1299,11 +1375,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConsumerGroupResponse());
     }
 
+    /**
+     * @param request CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createConsumerGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Creates an alert rule.
+     *
+     * @param request CreateDedicatedClusterMonitorRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDedicatedClusterMonitorRuleResponse
+     */
     public CreateDedicatedClusterMonitorRuleResponse createDedicatedClusterMonitorRuleWithOptions(CreateDedicatedClusterMonitorRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1368,18 +1455,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDedicatedClusterMonitorRuleResponse());
     }
 
+    /**
+     * @summary Creates an alert rule.
+     *
+     * @param request CreateDedicatedClusterMonitorRuleRequest
+     * @return CreateDedicatedClusterMonitorRuleResponse
+     */
     public CreateDedicatedClusterMonitorRuleResponse createDedicatedClusterMonitorRule(CreateDedicatedClusterMonitorRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDedicatedClusterMonitorRuleWithOptions(request, runtime);
     }
 
     /**
-      * *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
-      * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](~~208399~~) operation to configure a DTS task.
-      *
-      * @param request CreateDtsInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateDtsInstanceResponse
+     * @description *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
+     * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation to configure a DTS task.
+     *
+     * @param request CreateDtsInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDtsInstanceResponse
      */
     public CreateDtsInstanceResponse createDtsInstanceWithOptions(CreateDtsInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1490,11 +1583,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
-      * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](~~208399~~) operation to configure a DTS task.
-      *
-      * @param request CreateDtsInstanceRequest
-      * @return CreateDtsInstanceResponse
+     * @description *   Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of DTS.
+     * *   If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation to configure a DTS task.
+     *
+     * @param request CreateDtsInstanceRequest
+     * @return CreateDtsInstanceResponse
      */
     public CreateDtsInstanceResponse createDtsInstance(CreateDtsInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1502,14 +1595,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DTS provides the following metrics for DTS tasks:************
-      * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
-      * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
-      * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
-      *
-      * @param request CreateJobMonitorRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateJobMonitorRuleResponse
+     * @description DTS provides the following metrics for DTS tasks:************
+     * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
+     * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
+     * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
+     *
+     * @param request CreateJobMonitorRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateJobMonitorRuleResponse
      */
     public CreateJobMonitorRuleResponse createJobMonitorRuleWithOptions(CreateJobMonitorRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1572,13 +1665,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * DTS provides the following metrics for DTS tasks:************
-      * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
-      * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
-      * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
-      *
-      * @param request CreateJobMonitorRuleRequest
-      * @return CreateJobMonitorRuleResponse
+     * @description DTS provides the following metrics for DTS tasks:************
+     * *   **Latency**: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.
+     * *   **Status**: DTS monitors the status of a DTS task. If the state of the task changes to **Error** or **Restore**, an alert is triggered.
+     * *   **Full Timeout**: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.
+     *
+     * @param request CreateJobMonitorRuleRequest
+     * @return CreateJobMonitorRuleResponse
      */
     public CreateJobMonitorRuleResponse createJobMonitorRule(CreateJobMonitorRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1586,13 +1679,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](~~208270~~).
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-      * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](~~324260~~) operation to configure a data migration task.
-      *
-      * @param request CreateMigrationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateMigrationJobResponse
+     * @description >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](https://help.aliyun.com/document_detail/208270.html).
+     * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
+     * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](https://help.aliyun.com/document_detail/324260.html) operation to configure a data migration task.
+     *
+     * @param request CreateMigrationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMigrationJobResponse
      */
     public CreateMigrationJobResponse createMigrationJobWithOptions(CreateMigrationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1643,18 +1736,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](~~208270~~).
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-      * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](~~324260~~) operation to configure a data migration task.
-      *
-      * @param request CreateMigrationJobRequest
-      * @return CreateMigrationJobResponse
+     * @description >  This API operation is outdated. We recommend that you use the new version. For more information, see [CreateDtsInstance](https://help.aliyun.com/document_detail/208270.html).
+     * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
+     * After you purchase a data migration instance, you must call the [ConfigureMigrationJob](https://help.aliyun.com/document_detail/324260.html) operation to configure a data migration task.
+     *
+     * @param request CreateMigrationJobRequest
+     * @return CreateMigrationJobResponse
      */
     public CreateMigrationJobResponse createMigrationJob(CreateMigrationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createMigrationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 创建DTS反向增量同步任务
+     *
+     * @param request CreateReverseDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateReverseDtsJobResponse
+     */
     public CreateReverseDtsJobResponse createReverseDtsJobWithOptions(CreateReverseDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1691,17 +1791,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReverseDtsJobResponse());
     }
 
+    /**
+     * @summary 创建DTS反向增量同步任务
+     *
+     * @param request CreateReverseDtsJobRequest
+     * @return CreateReverseDtsJobResponse
+     */
     public CreateReverseDtsJobResponse createReverseDtsJob(CreateReverseDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createReverseDtsJobWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-      *
-      * @param request CreateSubscriptionInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateSubscriptionInstanceResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
+     *
+     * @param request CreateSubscriptionInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSubscriptionInstanceResponse
      */
     public CreateSubscriptionInstanceResponse createSubscriptionInstanceWithOptions(CreateSubscriptionInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1764,10 +1870,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-      *
-      * @param request CreateSubscriptionInstanceRequest
-      * @return CreateSubscriptionInstanceResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
+     *
+     * @param request CreateSubscriptionInstanceRequest
+     * @return CreateSubscriptionInstanceResponse
      */
     public CreateSubscriptionInstanceResponse createSubscriptionInstance(CreateSubscriptionInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1775,12 +1881,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-      * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](~~49447~~) operation to configure a data synchronization task. Then, the task is automatically started.
-      *
-      * @param request CreateSynchronizationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateSynchronizationJobResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
+     * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](https://help.aliyun.com/document_detail/49447.html) operation to configure a data synchronization task. Then, the task is automatically started.
+     *
+     * @param request CreateSynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSynchronizationJobResponse
      */
     public CreateSynchronizationJobResponse createSynchronizationJobWithOptions(CreateSynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1867,17 +1973,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
-      * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](~~49447~~) operation to configure a data synchronization task. Then, the task is automatically started.
-      *
-      * @param request CreateSynchronizationJobRequest
-      * @return CreateSynchronizationJobResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS).
+     * After you purchase a data synchronization instance, you must call the [ConfigureSynchronizationJob](https://help.aliyun.com/document_detail/49447.html) operation to configure a data synchronization task. Then, the task is automatically started.
+     *
+     * @param request CreateSynchronizationJobRequest
+     * @return CreateSynchronizationJobResponse
      */
     public CreateSynchronizationJobResponse createSynchronizationJob(CreateSynchronizationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSynchronizationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DeleteConsumerChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConsumerChannelResponse
+     */
     public DeleteConsumerChannelResponse deleteConsumerChannelWithOptions(DeleteConsumerChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1918,11 +2029,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConsumerChannelResponse());
     }
 
+    /**
+     * @param request DeleteConsumerChannelRequest
+     * @return DeleteConsumerChannelResponse
+     */
     public DeleteConsumerChannelResponse deleteConsumerChannel(DeleteConsumerChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteConsumerChannelWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DeleteConsumerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroupWithOptions(DeleteConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1967,11 +2087,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConsumerGroupResponse());
     }
 
+    /**
+     * @param request DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroup(DeleteConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteConsumerGroupWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The HTTP status code.
+     *
+     * @param request DeleteDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDtsJobResponse
+     */
     public DeleteDtsJobResponse deleteDtsJobWithOptions(DeleteDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2020,11 +2151,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDtsJobResponse());
     }
 
+    /**
+     * @summary The HTTP status code.
+     *
+     * @param request DeleteDtsJobRequest
+     * @return DeleteDtsJobResponse
+     */
     public DeleteDtsJobResponse deleteDtsJob(DeleteDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDtsJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Deletes multiple data migration, data synchronization, or change tracking tasks.
+     *
+     * @param request DeleteDtsJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDtsJobsResponse
+     */
     public DeleteDtsJobsResponse deleteDtsJobsWithOptions(DeleteDtsJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2061,17 +2205,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDtsJobsResponse());
     }
 
+    /**
+     * @summary Deletes multiple data migration, data synchronization, or change tracking tasks.
+     *
+     * @param request DeleteDtsJobsRequest
+     * @return DeleteDtsJobsResponse
+     */
     public DeleteDtsJobsResponse deleteDtsJobs(DeleteDtsJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDtsJobsWithOptions(request, runtime);
     }
 
     /**
-      * >  After a data migration instance is released, it cannot be recovered.
-      *
-      * @param request DeleteMigrationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteMigrationJobResponse
+     * @description >  After a data migration instance is released, it cannot be recovered.
+     *
+     * @param request DeleteMigrationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMigrationJobResponse
      */
     public DeleteMigrationJobResponse deleteMigrationJobWithOptions(DeleteMigrationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2114,10 +2264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After a data migration instance is released, it cannot be recovered.
-      *
-      * @param request DeleteMigrationJobRequest
-      * @return DeleteMigrationJobResponse
+     * @description >  After a data migration instance is released, it cannot be recovered.
+     *
+     * @param request DeleteMigrationJobRequest
+     * @return DeleteMigrationJobResponse
      */
     public DeleteMigrationJobResponse deleteMigrationJob(DeleteMigrationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2125,11 +2275,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After a change tracking instance is released, it cannot be recovered.
-      *
-      * @param request DeleteSubscriptionInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteSubscriptionInstanceResponse
+     * @description >  After a change tracking instance is released, it cannot be recovered.
+     *
+     * @param request DeleteSubscriptionInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSubscriptionInstanceResponse
      */
     public DeleteSubscriptionInstanceResponse deleteSubscriptionInstanceWithOptions(DeleteSubscriptionInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2172,10 +2322,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After a change tracking instance is released, it cannot be recovered.
-      *
-      * @param request DeleteSubscriptionInstanceRequest
-      * @return DeleteSubscriptionInstanceResponse
+     * @description >  After a change tracking instance is released, it cannot be recovered.
+     *
+     * @param request DeleteSubscriptionInstanceRequest
+     * @return DeleteSubscriptionInstanceResponse
      */
     public DeleteSubscriptionInstanceResponse deleteSubscriptionInstance(DeleteSubscriptionInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2183,11 +2333,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After a data synchronization instance is released, it cannot be recovered.
-      *
-      * @param request DeleteSynchronizationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteSynchronizationJobResponse
+     * @description >  After a data synchronization instance is released, it cannot be recovered.
+     *
+     * @param request DeleteSynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSynchronizationJobResponse
      */
     public DeleteSynchronizationJobResponse deleteSynchronizationJobWithOptions(DeleteSynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2230,16 +2380,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After a data synchronization instance is released, it cannot be recovered.
-      *
-      * @param request DeleteSynchronizationJobRequest
-      * @return DeleteSynchronizationJobResponse
+     * @description >  After a data synchronization instance is released, it cannot be recovered.
+     *
+     * @param request DeleteSynchronizationJobRequest
+     * @return DeleteSynchronizationJobResponse
      */
     public DeleteSynchronizationJobResponse deleteSynchronizationJob(DeleteSynchronizationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSynchronizationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询数据投递链路store账号
+     *
+     * @param request DescribeChannelAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeChannelAccountResponse
+     */
     public DescribeChannelAccountResponse describeChannelAccountWithOptions(DescribeChannelAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2288,11 +2445,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeChannelAccountResponse());
     }
 
+    /**
+     * @summary 查询数据投递链路store账号
+     *
+     * @param request DescribeChannelAccountRequest
+     * @return DescribeChannelAccountResponse
+     */
     public DescribeChannelAccountResponse describeChannelAccount(DescribeChannelAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeChannelAccountWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 请求所有数据校验任务数据
+     *
+     * @param request DescribeCheckJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCheckJobsResponse
+     */
     public DescribeCheckJobsResponse describeCheckJobsWithOptions(DescribeCheckJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2337,11 +2507,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCheckJobsResponse());
     }
 
+    /**
+     * @summary 请求所有数据校验任务数据
+     *
+     * @param request DescribeCheckJobsRequest
+     * @return DescribeCheckJobsResponse
+     */
     public DescribeCheckJobsResponse describeCheckJobs(DescribeCheckJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCheckJobsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.
+     *
+     * @param request DescribeClusterOperateLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeClusterOperateLogsResponse
+     */
     public DescribeClusterOperateLogsResponse describeClusterOperateLogsWithOptions(DescribeClusterOperateLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2404,11 +2587,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterOperateLogsResponse());
     }
 
+    /**
+     * @summary Queries operation logs of a Data Transmission Service (DTS) dedicated cluster.
+     *
+     * @param request DescribeClusterOperateLogsRequest
+     * @return DescribeClusterOperateLogsResponse
+     */
     public DescribeClusterOperateLogsResponse describeClusterOperateLogs(DescribeClusterOperateLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeClusterOperateLogsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the resource usage of a cluster.
+     *
+     * @param request DescribeClusterUsedUtilizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeClusterUsedUtilizationResponse
+     */
     public DescribeClusterUsedUtilizationResponse describeClusterUsedUtilizationWithOptions(DescribeClusterUsedUtilizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2471,11 +2667,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterUsedUtilizationResponse());
     }
 
+    /**
+     * @summary Queries the resource usage of a cluster.
+     *
+     * @param request DescribeClusterUsedUtilizationRequest
+     * @return DescribeClusterUsedUtilizationResponse
+     */
     public DescribeClusterUsedUtilizationResponse describeClusterUsedUtilization(DescribeClusterUsedUtilizationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeClusterUsedUtilizationWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeConnectionStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeConnectionStatusResponse
+     */
     public DescribeConnectionStatusResponse describeConnectionStatusWithOptions(DescribeConnectionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2592,11 +2799,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConnectionStatusResponse());
     }
 
+    /**
+     * @param request DescribeConnectionStatusRequest
+     * @return DescribeConnectionStatusResponse
+     */
     public DescribeConnectionStatusResponse describeConnectionStatus(DescribeConnectionStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeConnectionStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeConsumerChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeConsumerChannelResponse
+     */
     public DescribeConsumerChannelResponse describeConsumerChannelWithOptions(DescribeConsumerChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2645,11 +2861,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConsumerChannelResponse());
     }
 
+    /**
+     * @param request DescribeConsumerChannelRequest
+     * @return DescribeConsumerChannelResponse
+     */
     public DescribeConsumerChannelResponse describeConsumerChannel(DescribeConsumerChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeConsumerChannelWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the details of consumer groups in a change tracking instance.
+     *
+     * @param request DescribeConsumerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeConsumerGroupResponse
+     */
     public DescribeConsumerGroupResponse describeConsumerGroupWithOptions(DescribeConsumerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2698,18 +2925,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConsumerGroupResponse());
     }
 
+    /**
+     * @summary Queries the details of consumer groups in a change tracking instance.
+     *
+     * @param request DescribeConsumerGroupRequest
+     * @return DescribeConsumerGroupResponse
+     */
     public DescribeConsumerGroupResponse describeConsumerGroup(DescribeConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeConsumerGroupWithOptions(request, runtime);
     }
 
     /**
-      * If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](~~176627~~).
-      * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-      *
-      * @param request DescribeDTSIPRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDTSIPResponse
+     * @description If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
+     * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
+     *
+     * @param request DescribeDTSIPRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDTSIPResponse
      */
     public DescribeDTSIPResponse describeDTSIPWithOptions(DescribeDTSIPRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2748,17 +2981,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](~~176627~~).
-      * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
-      *
-      * @param request DescribeDTSIPRequest
-      * @return DescribeDTSIPResponse
+     * @description If the **source or destination instance** is an **on-premises database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
+     * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on ECS**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.
+     *
+     * @param request DescribeDTSIPRequest
+     * @return DescribeDTSIPResponse
      */
     public DescribeDTSIPResponse describeDTSIP(DescribeDTSIPRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDTSIPWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the download URL of the data consistency verification report.
+     *
+     * @param request DescribeDataCheckReportUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataCheckReportUrlResponse
+     */
     public DescribeDataCheckReportUrlResponse describeDataCheckReportUrlWithOptions(DescribeDataCheckReportUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2799,11 +3039,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataCheckReportUrlResponse());
     }
 
+    /**
+     * @summary Queries the download URL of the data consistency verification report.
+     *
+     * @param request DescribeDataCheckReportUrlRequest
+     * @return DescribeDataCheckReportUrlResponse
+     */
     public DescribeDataCheckReportUrlResponse describeDataCheckReportUrl(DescribeDataCheckReportUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDataCheckReportUrlWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the details of a data verification task.
+     *
+     * @param request DescribeDataCheckTableDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataCheckTableDetailsResponse
+     */
     public DescribeDataCheckTableDetailsResponse describeDataCheckTableDetailsWithOptions(DescribeDataCheckTableDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2856,11 +3109,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataCheckTableDetailsResponse());
     }
 
+    /**
+     * @summary Queries the details of a data verification task.
+     *
+     * @param request DescribeDataCheckTableDetailsRequest
+     * @return DescribeDataCheckTableDetailsResponse
+     */
     public DescribeDataCheckTableDetailsResponse describeDataCheckTableDetails(DescribeDataCheckTableDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDataCheckTableDetailsWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeDataCheckTableDiffDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataCheckTableDiffDetailsResponse
+     */
     public DescribeDataCheckTableDiffDetailsResponse describeDataCheckTableDiffDetailsWithOptions(DescribeDataCheckTableDiffDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2909,11 +3173,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataCheckTableDiffDetailsResponse());
     }
 
+    /**
+     * @param request DescribeDataCheckTableDiffDetailsRequest
+     * @return DescribeDataCheckTableDiffDetailsResponse
+     */
     public DescribeDataCheckTableDiffDetailsResponse describeDataCheckTableDiffDetails(DescribeDataCheckTableDiffDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDataCheckTableDiffDetailsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the information about a dedicated cluster.
+     *
+     * @param request DescribeDedicatedClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDedicatedClusterResponse
+     */
     public DescribeDedicatedClusterResponse describeDedicatedClusterWithOptions(DescribeDedicatedClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2950,11 +3225,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDedicatedClusterResponse());
     }
 
+    /**
+     * @summary Queries the information about a dedicated cluster.
+     *
+     * @param request DescribeDedicatedClusterRequest
+     * @return DescribeDedicatedClusterResponse
+     */
     public DescribeDedicatedClusterResponse describeDedicatedCluster(DescribeDedicatedClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDedicatedClusterWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
+     *
+     * @param request DescribeDedicatedClusterMonitorRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDedicatedClusterMonitorRuleResponse
+     */
     public DescribeDedicatedClusterMonitorRuleResponse describeDedicatedClusterMonitorRuleWithOptions(DescribeDedicatedClusterMonitorRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2991,11 +3279,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDedicatedClusterMonitorRuleResponse());
     }
 
+    /**
+     * @summary The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
+     *
+     * @param request DescribeDedicatedClusterMonitorRuleRequest
+     * @return DescribeDedicatedClusterMonitorRuleResponse
+     */
     public DescribeDedicatedClusterMonitorRuleResponse describeDedicatedClusterMonitorRule(DescribeDedicatedClusterMonitorRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDedicatedClusterMonitorRuleWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查询ETL任务版本信息
+     *
+     * @param request DescribeDtsEtlJobVersionInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDtsEtlJobVersionInfoResponse
+     */
     public DescribeDtsEtlJobVersionInfoResponse describeDtsEtlJobVersionInfoWithOptions(DescribeDtsEtlJobVersionInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3040,11 +3341,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDtsEtlJobVersionInfoResponse());
     }
 
+    /**
+     * @summary 查询ETL任务版本信息
+     *
+     * @param request DescribeDtsEtlJobVersionInfoRequest
+     * @return DescribeDtsEtlJobVersionInfoResponse
+     */
     public DescribeDtsEtlJobVersionInfoResponse describeDtsEtlJobVersionInfo(DescribeDtsEtlJobVersionInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDtsEtlJobVersionInfoWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The latency of incremental data migration or synchronization.
+     * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
+     *
+     * @param request DescribeDtsJobDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDtsJobDetailResponse
+     */
     public DescribeDtsJobDetailResponse describeDtsJobDetailWithOptions(DescribeDtsJobDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3093,18 +3408,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDtsJobDetailResponse());
     }
 
+    /**
+     * @summary The latency of incremental data migration or synchronization.
+     * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
+     *
+     * @param request DescribeDtsJobDetailRequest
+     * @return DescribeDtsJobDetailResponse
+     */
     public DescribeDtsJobDetailResponse describeDtsJobDetail(DescribeDtsJobDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDtsJobDetailWithOptions(request, runtime);
     }
 
     /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
-      *
-      * @param request DescribeDtsJobsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDtsJobsResponse
+     * @summary Queries the list of Data Transmission Service (DTS) tasks and the details of each task.
+     *
+     * @description ## Debugging
+     * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
+     *
+     * @param request DescribeDtsJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDtsJobsResponse
      */
     public DescribeDtsJobsResponse describeDtsJobsWithOptions(DescribeDtsJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3215,17 +3539,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
-      *
-      * @param request DescribeDtsJobsRequest
-      * @return DescribeDtsJobsResponse
+     * @summary Queries the list of Data Transmission Service (DTS) tasks and the details of each task.
+     *
+     * @description ## Debugging
+     * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Dts\\&api=DescribeDtsJobs\\&type=RPC\\&version=2020-01-01)
+     *
+     * @param request DescribeDtsJobsRequest
+     * @return DescribeDtsJobsResponse
      */
     public DescribeDtsJobsResponse describeDtsJobs(DescribeDtsJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDtsJobsWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the logs of a data migration or synchronization task.
+     *
+     * @param request DescribeDtsServiceLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDtsServiceLogResponse
+     */
     public DescribeDtsServiceLogResponse describeDtsServiceLogWithOptions(DescribeDtsServiceLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3290,17 +3623,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDtsServiceLogResponse());
     }
 
+    /**
+     * @summary Queries the logs of a data migration or synchronization task.
+     *
+     * @param request DescribeDtsServiceLogRequest
+     * @return DescribeDtsServiceLogResponse
+     */
     public DescribeDtsServiceLogResponse describeDtsServiceLog(DescribeDtsServiceLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDtsServiceLogWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, you must call the [SwitchSynchronizationEndpoint](~~201858~~) operation to change the database connection settings.
-      *
-      * @param request DescribeEndpointSwitchStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeEndpointSwitchStatusResponse
+     * @description Before you call this operation, you must call the [SwitchSynchronizationEndpoint](https://help.aliyun.com/document_detail/201858.html) operation to change the database connection settings.
+     *
+     * @param request DescribeEndpointSwitchStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEndpointSwitchStatusResponse
      */
     public DescribeEndpointSwitchStatusResponse describeEndpointSwitchStatusWithOptions(DescribeEndpointSwitchStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3347,16 +3686,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must call the [SwitchSynchronizationEndpoint](~~201858~~) operation to change the database connection settings.
-      *
-      * @param request DescribeEndpointSwitchStatusRequest
-      * @return DescribeEndpointSwitchStatusResponse
+     * @description Before you call this operation, you must call the [SwitchSynchronizationEndpoint](https://help.aliyun.com/document_detail/201858.html) operation to change the database connection settings.
+     *
+     * @param request DescribeEndpointSwitchStatusRequest
+     * @return DescribeEndpointSwitchStatusResponse
      */
     public DescribeEndpointSwitchStatusResponse describeEndpointSwitchStatus(DescribeEndpointSwitchStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEndpointSwitchStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeEtlJobLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEtlJobLogsResponse
+     */
     public DescribeEtlJobLogsResponse describeEtlJobLogsWithOptions(DescribeEtlJobLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3389,11 +3733,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEtlJobLogsResponse());
     }
 
+    /**
+     * @param request DescribeEtlJobLogsRequest
+     * @return DescribeEtlJobLogsResponse
+     */
     public DescribeEtlJobLogsResponse describeEtlJobLogs(DescribeEtlJobLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEtlJobLogsWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeInitializationStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInitializationStatusResponse
+     */
     public DescribeInitializationStatusResponse describeInitializationStatusWithOptions(DescribeInitializationStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3442,11 +3795,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInitializationStatusResponse());
     }
 
+    /**
+     * @param request DescribeInitializationStatusRequest
+     * @return DescribeInitializationStatusResponse
+     */
     public DescribeInitializationStatusResponse describeInitializationStatus(DescribeInitializationStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInitializationStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeJobMonitorRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeJobMonitorRuleResponse
+     */
     public DescribeJobMonitorRuleResponse describeJobMonitorRuleWithOptions(DescribeJobMonitorRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3479,11 +3841,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeJobMonitorRuleResponse());
     }
 
+    /**
+     * @param request DescribeJobMonitorRuleRequest
+     * @return DescribeJobMonitorRuleResponse
+     */
     public DescribeJobMonitorRuleResponse describeJobMonitorRule(DescribeJobMonitorRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeJobMonitorRuleWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the metrics of a cluster.
+     *
+     * @param request DescribeMetricListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetricListResponse
+     */
     public DescribeMetricListResponse describeMetricListWithOptions(DescribeMetricListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3554,11 +3927,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetricListResponse());
     }
 
+    /**
+     * @summary Queries the metrics of a cluster.
+     *
+     * @param request DescribeMetricListRequest
+     * @return DescribeMetricListResponse
+     */
     public DescribeMetricListResponse describeMetricList(DescribeMetricListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMetricListWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeMigrationJobAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMigrationJobAlertResponse
+     */
     public DescribeMigrationJobAlertResponse describeMigrationJobAlertWithOptions(DescribeMigrationJobAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3603,17 +3987,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMigrationJobAlertResponse());
     }
 
+    /**
+     * @param request DescribeMigrationJobAlertRequest
+     * @return DescribeMigrationJobAlertResponse
+     */
     public DescribeMigrationJobAlertResponse describeMigrationJobAlert(DescribeMigrationJobAlertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMigrationJobAlertWithOptions(request, runtime);
     }
 
     /**
-      * When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
-      *
-      * @param request DescribeMigrationJobDetailRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeMigrationJobDetailResponse
+     * @summary Queries the details of a data migration task.
+     *
+     * @description When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
+     *
+     * @param request DescribeMigrationJobDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMigrationJobDetailResponse
      */
     public DescribeMigrationJobDetailResponse describeMigrationJobDetailWithOptions(DescribeMigrationJobDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3672,16 +4062,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
-      *
-      * @param request DescribeMigrationJobDetailRequest
-      * @return DescribeMigrationJobDetailResponse
+     * @summary Queries the details of a data migration task.
+     *
+     * @description When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.
+     *
+     * @param request DescribeMigrationJobDetailRequest
+     * @return DescribeMigrationJobDetailResponse
      */
     public DescribeMigrationJobDetailResponse describeMigrationJobDetail(DescribeMigrationJobDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMigrationJobDetailWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the status of a data migration task.
+     *
+     * @param request DescribeMigrationJobStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMigrationJobStatusResponse
+     */
     public DescribeMigrationJobStatusResponse describeMigrationJobStatusWithOptions(DescribeMigrationJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3726,11 +4125,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMigrationJobStatusResponse());
     }
 
+    /**
+     * @summary Queries the status of a data migration task.
+     *
+     * @param request DescribeMigrationJobStatusRequest
+     * @return DescribeMigrationJobStatusResponse
+     */
     public DescribeMigrationJobStatusResponse describeMigrationJobStatus(DescribeMigrationJobStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMigrationJobStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the list of data migration instances and the details of each instance.
+     *
+     * @param request DescribeMigrationJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMigrationJobsResponse
+     */
     public DescribeMigrationJobsResponse describeMigrationJobsWithOptions(DescribeMigrationJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3783,11 +4195,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMigrationJobsResponse());
     }
 
+    /**
+     * @summary Queries the list of data migration instances and the details of each instance.
+     *
+     * @param request DescribeMigrationJobsRequest
+     * @return DescribeMigrationJobsResponse
+     */
     public DescribeMigrationJobsResponse describeMigrationJobs(DescribeMigrationJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMigrationJobsWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribePreCheckStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePreCheckStatusResponse
+     */
     public DescribePreCheckStatusResponse describePreCheckStatusWithOptions(DescribePreCheckStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3848,11 +4271,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePreCheckStatusResponse());
     }
 
+    /**
+     * @param request DescribePreCheckStatusRequest
+     * @return DescribePreCheckStatusResponse
+     */
     public DescribePreCheckStatusResponse describePreCheckStatus(DescribePreCheckStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePreCheckStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeSubscriptionInstanceAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSubscriptionInstanceAlertResponse
+     */
     public DescribeSubscriptionInstanceAlertResponse describeSubscriptionInstanceAlertWithOptions(DescribeSubscriptionInstanceAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3897,11 +4329,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSubscriptionInstanceAlertResponse());
     }
 
+    /**
+     * @param request DescribeSubscriptionInstanceAlertRequest
+     * @return DescribeSubscriptionInstanceAlertResponse
+     */
     public DescribeSubscriptionInstanceAlertResponse describeSubscriptionInstanceAlert(DescribeSubscriptionInstanceAlertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSubscriptionInstanceAlertWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the status of a change tracking instance.
+     *
+     * @param request DescribeSubscriptionInstanceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSubscriptionInstanceStatusResponse
+     */
     public DescribeSubscriptionInstanceStatusResponse describeSubscriptionInstanceStatusWithOptions(DescribeSubscriptionInstanceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3942,11 +4385,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSubscriptionInstanceStatusResponse());
     }
 
+    /**
+     * @summary Queries the status of a change tracking instance.
+     *
+     * @param request DescribeSubscriptionInstanceStatusRequest
+     * @return DescribeSubscriptionInstanceStatusResponse
+     */
     public DescribeSubscriptionInstanceStatusResponse describeSubscriptionInstanceStatus(DescribeSubscriptionInstanceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSubscriptionInstanceStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the list of change tracking instances and the details of each instance.
+     *
+     * @param request DescribeSubscriptionInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSubscriptionInstancesResponse
+     */
     public DescribeSubscriptionInstancesResponse describeSubscriptionInstancesWithOptions(DescribeSubscriptionInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4003,18 +4459,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSubscriptionInstancesResponse());
     }
 
+    /**
+     * @summary Queries the list of change tracking instances and the details of each instance.
+     *
+     * @param request DescribeSubscriptionInstancesRequest
+     * @return DescribeSubscriptionInstancesResponse
+     */
     public DescribeSubscriptionInstancesResponse describeSubscriptionInstances(DescribeSubscriptionInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSubscriptionInstancesWithOptions(request, runtime);
     }
 
     /**
-      * *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
-      * *   You can call the [DescribeDtsJobs](~~209702~~) operation to query the ID of the change tracking instance and the ID of the consumer group.
-      *
-      * @param tmpReq DescribeSubscriptionMetaRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeSubscriptionMetaResponse
+     * @description *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
+     * *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the ID of the change tracking instance and the ID of the consumer group.
+     *
+     * @param tmpReq DescribeSubscriptionMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSubscriptionMetaResponse
      */
     public DescribeSubscriptionMetaResponse describeSubscriptionMetaWithOptions(DescribeSubscriptionMetaRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -4071,17 +4533,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
-      * *   You can call the [DescribeDtsJobs](~~209702~~) operation to query the ID of the change tracking instance and the ID of the consumer group.
-      *
-      * @param request DescribeSubscriptionMetaRequest
-      * @return DescribeSubscriptionMetaResponse
+     * @description *   When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.
+     * *   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the ID of the change tracking instance and the ID of the consumer group.
+     *
+     * @param request DescribeSubscriptionMetaRequest
+     * @return DescribeSubscriptionMetaResponse
      */
     public DescribeSubscriptionMetaResponse describeSubscriptionMeta(DescribeSubscriptionMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSubscriptionMetaWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 查看同步和迁移任务的增量写入延迟信息
+     *
+     * @param request DescribeSyncStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSyncStatusResponse
+     */
     public DescribeSyncStatusResponse describeSyncStatusWithOptions(DescribeSyncStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4122,11 +4591,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSyncStatusResponse());
     }
 
+    /**
+     * @summary 查看同步和迁移任务的增量写入延迟信息
+     *
+     * @param request DescribeSyncStatusRequest
+     * @return DescribeSyncStatusResponse
+     */
     public DescribeSyncStatusResponse describeSyncStatus(DescribeSyncStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSyncStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeSynchronizationJobAlertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSynchronizationJobAlertResponse
+     */
     public DescribeSynchronizationJobAlertResponse describeSynchronizationJobAlertWithOptions(DescribeSynchronizationJobAlertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4175,11 +4655,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSynchronizationJobAlertResponse());
     }
 
+    /**
+     * @param request DescribeSynchronizationJobAlertRequest
+     * @return DescribeSynchronizationJobAlertResponse
+     */
     public DescribeSynchronizationJobAlertResponse describeSynchronizationJobAlert(DescribeSynchronizationJobAlertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSynchronizationJobAlertWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeSynchronizationJobReplicatorCompareRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSynchronizationJobReplicatorCompareResponse
+     */
     public DescribeSynchronizationJobReplicatorCompareResponse describeSynchronizationJobReplicatorCompareWithOptions(DescribeSynchronizationJobReplicatorCompareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4228,11 +4717,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSynchronizationJobReplicatorCompareResponse());
     }
 
+    /**
+     * @param request DescribeSynchronizationJobReplicatorCompareRequest
+     * @return DescribeSynchronizationJobReplicatorCompareResponse
+     */
     public DescribeSynchronizationJobReplicatorCompareResponse describeSynchronizationJobReplicatorCompare(DescribeSynchronizationJobReplicatorCompareRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSynchronizationJobReplicatorCompareWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries the status of a data synchronization instance.
+     *
+     * @param request DescribeSynchronizationJobStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSynchronizationJobStatusResponse
+     */
     public DescribeSynchronizationJobStatusResponse describeSynchronizationJobStatusWithOptions(DescribeSynchronizationJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4281,11 +4781,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSynchronizationJobStatusResponse());
     }
 
+    /**
+     * @summary Queries the status of a data synchronization instance.
+     *
+     * @param request DescribeSynchronizationJobStatusRequest
+     * @return DescribeSynchronizationJobStatusResponse
+     */
     public DescribeSynchronizationJobStatusResponse describeSynchronizationJobStatus(DescribeSynchronizationJobStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSynchronizationJobStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeSynchronizationJobStatusListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSynchronizationJobStatusListResponse
+     */
     public DescribeSynchronizationJobStatusListResponse describeSynchronizationJobStatusListWithOptions(DescribeSynchronizationJobStatusListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4330,11 +4841,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSynchronizationJobStatusListResponse());
     }
 
+    /**
+     * @param request DescribeSynchronizationJobStatusListRequest
+     * @return DescribeSynchronizationJobStatusListResponse
+     */
     public DescribeSynchronizationJobStatusListResponse describeSynchronizationJobStatusList(DescribeSynchronizationJobStatusListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSynchronizationJobStatusListWithOptions(request, runtime);
     }
 
+    /**
+     * @summary The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+     *
+     * @param request DescribeSynchronizationJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSynchronizationJobsResponse
+     */
     public DescribeSynchronizationJobsResponse describeSynchronizationJobsWithOptions(DescribeSynchronizationJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4391,17 +4913,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSynchronizationJobsResponse());
     }
 
+    /**
+     * @summary The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+     *
+     * @param request DescribeSynchronizationJobsRequest
+     * @return DescribeSynchronizationJobsResponse
+     */
     public DescribeSynchronizationJobsResponse describeSynchronizationJobs(DescribeSynchronizationJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSynchronizationJobsWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, you must call the [ModifySynchronizationObject](~~49451~~) operation to obtain the task ID.
-      *
-      * @param request DescribeSynchronizationObjectModifyStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeSynchronizationObjectModifyStatusResponse
+     * @description Before you call this operation, you must call the [ModifySynchronizationObject](https://help.aliyun.com/document_detail/49451.html) operation to obtain the task ID.
+     *
+     * @param request DescribeSynchronizationObjectModifyStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSynchronizationObjectModifyStatusResponse
      */
     public DescribeSynchronizationObjectModifyStatusResponse describeSynchronizationObjectModifyStatusWithOptions(DescribeSynchronizationObjectModifyStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4448,16 +4976,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, you must call the [ModifySynchronizationObject](~~49451~~) operation to obtain the task ID.
-      *
-      * @param request DescribeSynchronizationObjectModifyStatusRequest
-      * @return DescribeSynchronizationObjectModifyStatusResponse
+     * @description Before you call this operation, you must call the [ModifySynchronizationObject](https://help.aliyun.com/document_detail/49451.html) operation to obtain the task ID.
+     *
+     * @param request DescribeSynchronizationObjectModifyStatusRequest
+     * @return DescribeSynchronizationObjectModifyStatusResponse
      */
     public DescribeSynchronizationObjectModifyStatusResponse describeSynchronizationObjectModifyStatus(DescribeSynchronizationObjectModifyStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSynchronizationObjectModifyStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeTagKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTagKeysResponse
+     */
     public DescribeTagKeysResponse describeTagKeysWithOptions(DescribeTagKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4506,11 +5039,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTagKeysResponse());
     }
 
+    /**
+     * @param request DescribeTagKeysRequest
+     * @return DescribeTagKeysResponse
+     */
     public DescribeTagKeysResponse describeTagKeys(DescribeTagKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTagKeysWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribeTagValuesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTagValuesResponse
+     */
     public DescribeTagValuesResponse describeTagValuesWithOptions(DescribeTagValuesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4563,18 +5105,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTagValuesResponse());
     }
 
+    /**
+     * @param request DescribeTagValuesRequest
+     * @return DescribeTagValuesResponse
+     */
     public DescribeTagValuesResponse describeTagValues(DescribeTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTagValuesWithOptions(request, runtime);
     }
 
     /**
-      * *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
-      * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
-      *
-      * @param request InitDtsRdsInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return InitDtsRdsInstanceResponse
+     * @summary Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.
+     *
+     * @description *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
+     * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
+     *
+     * @param request InitDtsRdsInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitDtsRdsInstanceResponse
      */
     public InitDtsRdsInstanceResponse initDtsRdsInstanceWithOptions(InitDtsRdsInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4625,17 +5173,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
-      * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
-      *
-      * @param request InitDtsRdsInstanceRequest
-      * @return InitDtsRdsInstanceResponse
+     * @summary Initializes a built-in account on a node of an active geo-redundancy database cluster. Data Transmission Service (DTS) uses the built-in account to connect to the node and perform data synchronization tasks.
+     *
+     * @description *   The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).
+     * *   This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.
+     *
+     * @param request InitDtsRdsInstanceRequest
+     * @return InitDtsRdsInstanceResponse
      */
     public InitDtsRdsInstanceResponse initDtsRdsInstance(InitDtsRdsInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.initDtsRdsInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.
+     *
+     * @param request ListDedicatedClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDedicatedClusterResponse
+     */
     public ListDedicatedClusterResponse listDedicatedClusterWithOptions(ListDedicatedClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4696,17 +5253,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDedicatedClusterResponse());
     }
 
+    /**
+     * @summary Queries all clusters that are created within an Alibaba Cloud account. You can also query clusters based on the specified conditions.
+     *
+     * @param request ListDedicatedClusterRequest
+     * @return ListDedicatedClusterResponse
+     */
     public ListDedicatedClusterResponse listDedicatedCluster(ListDedicatedClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDedicatedClusterWithOptions(request, runtime);
     }
 
     /**
-      * ****
-      *
-      * @param request ListTagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTagResourcesResponse
+     * @description ****
+     *
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
      */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4753,16 +5316,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ****
-      *
-      * @param request ListTagResourcesRequest
-      * @return ListTagResourcesResponse
+     * @description ****
+     *
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
      */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ModifyConsumerChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyConsumerChannelResponse
+     */
     public ModifyConsumerChannelResponse modifyConsumerChannelWithOptions(ModifyConsumerChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4815,19 +5383,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyConsumerChannelResponse());
     }
 
+    /**
+     * @param request ModifyConsumerChannelRequest
+     * @return ModifyConsumerChannelResponse
+     */
     public ModifyConsumerChannelResponse modifyConsumerChannel(ModifyConsumerChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyConsumerChannelWithOptions(request, runtime);
     }
 
     /**
-      * > 
-      * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-      * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
-      *
-      * @param request ModifyConsumerGroupPasswordRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyConsumerGroupPasswordResponse
+     * @description > 
+     * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
+     * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
+     *
+     * @param request ModifyConsumerGroupPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyConsumerGroupPasswordResponse
      */
     public ModifyConsumerGroupPasswordResponse modifyConsumerGroupPasswordWithOptions(ModifyConsumerGroupPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4890,12 +5462,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-      * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
-      *
-      * @param request ModifyConsumerGroupPasswordRequest
-      * @return ModifyConsumerGroupPasswordResponse
+     * @description > 
+     * *   This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
+     * *   When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.
+     *
+     * @param request ModifyConsumerGroupPasswordRequest
+     * @return ModifyConsumerGroupPasswordResponse
      */
     public ModifyConsumerGroupPasswordResponse modifyConsumerGroupPassword(ModifyConsumerGroupPasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4903,14 +5475,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](~~49437~~) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-      * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
-      * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
-      *
-      * @param request ModifyConsumptionTimestampRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyConsumptionTimestampResponse
+     * @description > 
+     * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](https://help.aliyun.com/document_detail/49437.html) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
+     * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
+     * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
+     *
+     * @param request ModifyConsumptionTimestampRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyConsumptionTimestampResponse
      */
     public ModifyConsumptionTimestampResponse modifyConsumptionTimestampWithOptions(ModifyConsumptionTimestampRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4957,13 +5529,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](~~49437~~) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
-      * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
-      * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
-      *
-      * @param request ModifyConsumptionTimestampRequest
-      * @return ModifyConsumptionTimestampResponse
+     * @description > 
+     * *   This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the [ConfigureSubscriptionInstance](https://help.aliyun.com/document_detail/49437.html) operation. If you use the previous version, you do not need to specify the **SubscriptionInstanceNetworkType** parameter.
+     * *   If you use the new version, you need to set the consumption checkpoint on the change tracking client.
+     * *   When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.
+     *
+     * @param request ModifyConsumptionTimestampRequest
+     * @return ModifyConsumptionTimestampResponse
      */
     public ModifyConsumptionTimestampResponse modifyConsumptionTimestamp(ModifyConsumptionTimestampRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4971,11 +5543,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can modify only the overcommit ratio.
-      *
-      * @param request ModifyDedicatedClusterRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDedicatedClusterResponse
+     * @summary Modifies the configuration of a cluster.
+     *
+     * @description You can modify only the overcommit ratio.
+     *
+     * @param request ModifyDedicatedClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDedicatedClusterResponse
      */
     public ModifyDedicatedClusterResponse modifyDedicatedClusterWithOptions(ModifyDedicatedClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -5026,10 +5600,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can modify only the overcommit ratio.
-      *
-      * @param request ModifyDedicatedClusterRequest
-      * @return ModifyDedicatedClusterResponse
+     * @summary Modifies the configuration of a cluster.
+     *
+     * @description You can modify only the overcommit ratio.
+     *
+     * @param request ModifyDedicatedClusterRequest
+     * @return ModifyDedicatedClusterResponse
      */
     public ModifyDedicatedClusterResponse modifyDedicatedCluster(ModifyDedicatedClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -5037,11 +5613,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
-      *
-      * @param tmpReq ModifyDtsJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDtsJobResponse
+     * @summary Modifies the configurations of a data synchronization task.
+     *
+     * @description When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+     *
+     * @param tmpReq ModifyDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDtsJobResponse
      */
     public ModifyDtsJobResponse modifyDtsJobWithOptions(ModifyDtsJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -5136,10 +5714,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
-      *
-      * @param request ModifyDtsJobRequest
-      * @return ModifyDtsJobResponse
+     * @summary Modifies the configurations of a data synchronization task.
+     *
+     * @description When you configure a data synchronization task in the Data Transmission Service (DTS) console, you can move the pointer over **Next: Save Task Settings and Precheck** in the **Advanced Settings** step and click **Preview OpenAPI parameters** to view the parameters that are used to configure the task by calling an API operation.
+     *
+     * @param request ModifyDtsJobRequest
+     * @return ModifyDtsJobResponse
      */
     public ModifyDtsJobResponse modifyDtsJob(ModifyDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -5153,7 +5733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -5177,12 +5757,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -5220,6 +5801,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return modifyDtsJobResp;
     }
 
+    /**
+     * @summary 修改DTS任务配置
+     *
+     * @param request ModifyDtsJobConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDtsJobConfigResponse
+     */
     public ModifyDtsJobConfigResponse modifyDtsJobConfigWithOptions(ModifyDtsJobConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5260,11 +5848,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDtsJobConfigResponse());
     }
 
+    /**
+     * @summary 修改DTS任务配置
+     *
+     * @param request ModifyDtsJobConfigRequest
+     * @return ModifyDtsJobConfigResponse
+     */
     public ModifyDtsJobConfigResponse modifyDtsJobConfig(ModifyDtsJobConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDtsJobConfigWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 迁移专属集群任务
+     *
+     * @param request ModifyDtsJobDedicatedClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDtsJobDedicatedClusterResponse
+     */
     public ModifyDtsJobDedicatedClusterResponse modifyDtsJobDedicatedClusterWithOptions(ModifyDtsJobDedicatedClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5305,18 +5906,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDtsJobDedicatedClusterResponse());
     }
 
+    /**
+     * @summary 迁移专属集群任务
+     *
+     * @param request ModifyDtsJobDedicatedClusterRequest
+     * @return ModifyDtsJobDedicatedClusterResponse
+     */
     public ModifyDtsJobDedicatedClusterResponse modifyDtsJobDedicatedCluster(ModifyDtsJobDedicatedClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDtsJobDedicatedClusterWithOptions(request, runtime);
     }
 
     /**
-      * *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
-      * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
-      *
-      * @param request ModifyDtsJobDuLimitRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDtsJobDuLimitResponse
+     * @summary Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.
+     *
+     * @description *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
+     * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
+     *
+     * @param request ModifyDtsJobDuLimitRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDtsJobDuLimitResponse
      */
     public ModifyDtsJobDuLimitResponse modifyDtsJobDuLimitWithOptions(ModifyDtsJobDuLimitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -5359,17 +5968,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
-      * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
-      *
-      * @param request ModifyDtsJobDuLimitRequest
-      * @return ModifyDtsJobDuLimitResponse
+     * @summary Modifies the upper limit of DTS units (DUs) for a Data Transmission Service (DTS) task.
+     *
+     * @description *   DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.
+     * *   Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.
+     *
+     * @param request ModifyDtsJobDuLimitRequest
+     * @return ModifyDtsJobDuLimitResponse
      */
     public ModifyDtsJobDuLimitResponse modifyDtsJobDuLimit(ModifyDtsJobDuLimitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDtsJobDuLimitWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 替换源端或目标端实例
+     *
+     * @param request ModifyDtsJobEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDtsJobEndpointResponse
+     */
     public ModifyDtsJobEndpointResponse modifyDtsJobEndpointWithOptions(ModifyDtsJobEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5470,11 +6088,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDtsJobEndpointResponse());
     }
 
+    /**
+     * @summary 替换源端或目标端实例
+     *
+     * @param request ModifyDtsJobEndpointRequest
+     * @return ModifyDtsJobEndpointResponse
+     */
     public ModifyDtsJobEndpointResponse modifyDtsJobEndpoint(ModifyDtsJobEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDtsJobEndpointWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ModifyDtsJobNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDtsJobNameResponse
+     */
     public ModifyDtsJobNameResponse modifyDtsJobNameWithOptions(ModifyDtsJobNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5515,11 +6144,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDtsJobNameResponse());
     }
 
+    /**
+     * @param request ModifyDtsJobNameRequest
+     * @return ModifyDtsJobNameResponse
+     */
     public ModifyDtsJobNameResponse modifyDtsJobName(ModifyDtsJobNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDtsJobNameWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ModifyDtsJobPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDtsJobPasswordResponse
+     */
     public ModifyDtsJobPasswordResponse modifyDtsJobPasswordWithOptions(ModifyDtsJobPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5568,11 +6206,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDtsJobPasswordResponse());
     }
 
+    /**
+     * @param request ModifyDtsJobPasswordRequest
+     * @return ModifyDtsJobPasswordResponse
+     */
     public ModifyDtsJobPasswordResponse modifyDtsJobPassword(ModifyDtsJobPasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDtsJobPasswordWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ModifyDynamicConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDynamicConfigResponse
+     */
     public ModifyDynamicConfigResponse modifyDynamicConfigWithOptions(ModifyDynamicConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5617,11 +6264,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDynamicConfigResponse());
     }
 
+    /**
+     * @param request ModifyDynamicConfigRequest
+     * @return ModifyDynamicConfigResponse
+     */
     public ModifyDynamicConfigResponse modifyDynamicConfig(ModifyDynamicConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDynamicConfigWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ModifySubscriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySubscriptionResponse
+     */
     public ModifySubscriptionResponse modifySubscriptionWithOptions(ModifySubscriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5670,20 +6326,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySubscriptionResponse());
     }
 
+    /**
+     * @param request ModifySubscriptionRequest
+     * @return ModifySubscriptionResponse
+     */
     public ModifySubscriptionResponse modifySubscription(ModifySubscriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySubscriptionWithOptions(request, runtime);
     }
 
     /**
-      * When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
-      * > 
-      * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](~~49438~~) to restart the task.
-      * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](~~49438~~) to restart the task.
-      *
-      * @param request ModifySubscriptionObjectRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifySubscriptionObjectResponse
+     * @description When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
+     * > 
+     * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
+     * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
+     *
+     * @param request ModifySubscriptionObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySubscriptionObjectResponse
      */
     public ModifySubscriptionObjectResponse modifySubscriptionObjectWithOptions(ModifySubscriptionObjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -5730,13 +6390,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
-      * > 
-      * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](~~49438~~) to restart the task.
-      * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](~~49438~~) to restart the task.
-      *
-      * @param request ModifySubscriptionObjectRequest
-      * @return ModifySubscriptionObjectResponse
+     * @description When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.
+     * > 
+     * *   If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
+     * *   If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the [StartSubscriptionInstance](https://help.aliyun.com/document_detail/49438.html) to restart the task.
+     *
+     * @param request ModifySubscriptionObjectRequest
+     * @return ModifySubscriptionObjectResponse
      */
     public ModifySubscriptionObjectResponse modifySubscriptionObject(ModifySubscriptionObjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -5744,11 +6404,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
-      *
-      * @param request ModifySynchronizationObjectRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifySynchronizationObjectResponse
+     * @description >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
+     *
+     * @param request ModifySynchronizationObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySynchronizationObjectResponse
      */
     public ModifySynchronizationObjectResponse modifySynchronizationObjectWithOptions(ModifySynchronizationObjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -5801,16 +6461,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
-      *
-      * @param request ModifySynchronizationObjectRequest
-      * @return ModifySynchronizationObjectResponse
+     * @description >  When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.
+     *
+     * @param request ModifySynchronizationObjectRequest
+     * @return ModifySynchronizationObjectResponse
      */
     public ModifySynchronizationObjectResponse modifySynchronizationObject(ModifySynchronizationObjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifySynchronizationObjectWithOptions(request, runtime);
     }
 
+    /**
+     * @param request RenewInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewInstanceResponse
+     */
     public RenewInstanceResponse renewInstanceWithOptions(RenewInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5855,17 +6520,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RenewInstanceResponse());
     }
 
+    /**
+     * @param request RenewInstanceRequest
+     * @return RenewInstanceResponse
+     */
     public RenewInstanceResponse renewInstance(RenewInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewInstanceWithOptions(request, runtime);
     }
 
     /**
-      * >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](~~208399~~) operation reconfigure the task.
-      *
-      * @param request ResetDtsJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ResetDtsJobResponse
+     * @description >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation reconfigure the task.
+     *
+     * @param request ResetDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetDtsJobResponse
      */
     public ResetDtsJobResponse resetDtsJobWithOptions(ResetDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -5908,10 +6577,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](~~208399~~) operation reconfigure the task.
-      *
-      * @param request ResetDtsJobRequest
-      * @return ResetDtsJobResponse
+     * @description >  If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the [ConfigureDtsJob](https://help.aliyun.com/document_detail/208399.html) operation reconfigure the task.
+     *
+     * @param request ResetDtsJobRequest
+     * @return ResetDtsJobResponse
      */
     public ResetDtsJobResponse resetDtsJob(ResetDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -5919,11 +6588,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
-      *
-      * @param request ResetSynchronizationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ResetSynchronizationJobResponse
+     * @description >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
+     *
+     * @param request ResetSynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetSynchronizationJobResponse
      */
     public ResetSynchronizationJobResponse resetSynchronizationJobWithOptions(ResetSynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -5970,16 +6639,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
-      *
-      * @param request ResetSynchronizationJobRequest
-      * @return ResetSynchronizationJobResponse
+     * @description >  If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the **ConfigureSynchronizationJob** operation to reconfigure the task.
+     *
+     * @param request ResetSynchronizationJobRequest
+     * @return ResetSynchronizationJobResponse
      */
     public ResetSynchronizationJobResponse resetSynchronizationJob(ResetSynchronizationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetSynchronizationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 调转双向任务的方向
+     *
+     * @param request ReverseTwoWayDirectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReverseTwoWayDirectionResponse
+     */
     public ReverseTwoWayDirectionResponse reverseTwoWayDirectionWithOptions(ReverseTwoWayDirectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6016,17 +6692,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReverseTwoWayDirectionResponse());
     }
 
+    /**
+     * @summary 调转双向任务的方向
+     *
+     * @param request ReverseTwoWayDirectionRequest
+     * @return ReverseTwoWayDirectionResponse
+     */
     public ReverseTwoWayDirectionResponse reverseTwoWayDirection(ReverseTwoWayDirectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reverseTwoWayDirectionWithOptions(request, runtime);
     }
 
     /**
-      * If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
-      *
-      * @param request ShieldPrecheckRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ShieldPrecheckResponse
+     * @summary Ignores the precheck items that a data migration or synchronization task may fail to pass.
+     *
+     * @description If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
+     *
+     * @param request ShieldPrecheckRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ShieldPrecheckResponse
      */
     public ShieldPrecheckResponse shieldPrecheckWithOptions(ShieldPrecheckRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6065,16 +6749,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
-      *
-      * @param request ShieldPrecheckRequest
-      * @return ShieldPrecheckResponse
+     * @summary Ignores the precheck items that a data migration or synchronization task may fail to pass.
+     *
+     * @description If you call this operation to ignore all precheck items, you must call the [StartMigrationJob](https://www.alibabacloud.com/help/zh/doc-detail/49429.htm) or [StartSynchronizationJob](https://www.alibabacloud.com/help/zh/doc-detail/49448.htm) operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.
+     *
+     * @param request ShieldPrecheckRequest
+     * @return ShieldPrecheckResponse
      */
     public ShieldPrecheckResponse shieldPrecheck(ShieldPrecheckRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.shieldPrecheckWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Skips one or more precheck items.
+     *
+     * @param request SkipPreCheckRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SkipPreCheckResponse
+     */
     public SkipPreCheckResponse skipPreCheckWithOptions(SkipPreCheckRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6123,11 +6816,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SkipPreCheckResponse());
     }
 
+    /**
+     * @summary Skips one or more precheck items.
+     *
+     * @param request SkipPreCheckRequest
+     * @return SkipPreCheckResponse
+     */
     public SkipPreCheckResponse skipPreCheck(SkipPreCheckRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.skipPreCheckWithOptions(request, runtime);
     }
 
+    /**
+     * @param request StartDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDtsJobResponse
+     */
     public StartDtsJobResponse startDtsJobWithOptions(StartDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6172,11 +6876,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDtsJobResponse());
     }
 
+    /**
+     * @param request StartDtsJobRequest
+     * @return StartDtsJobResponse
+     */
     public StartDtsJobResponse startDtsJob(StartDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDtsJobWithOptions(request, runtime);
     }
 
+    /**
+     * @param request StartDtsJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDtsJobsResponse
+     */
     public StartDtsJobsResponse startDtsJobsWithOptions(StartDtsJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6213,17 +6926,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartDtsJobsResponse());
     }
 
+    /**
+     * @param request StartDtsJobsRequest
+     * @return StartDtsJobsResponse
+     */
     public StartDtsJobsResponse startDtsJobs(StartDtsJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDtsJobsWithOptions(request, runtime);
     }
 
     /**
-      * >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
-      *
-      * @param request StartMigrationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartMigrationJobResponse
+     * @description >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
+     *
+     * @param request StartMigrationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartMigrationJobResponse
      */
     public StartMigrationJobResponse startMigrationJobWithOptions(StartMigrationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6266,10 +6983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
-      *
-      * @param request StartMigrationJobRequest
-      * @return StartMigrationJobResponse
+     * @description >  When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.
+     *
+     * @param request StartMigrationJobRequest
+     * @return StartMigrationJobResponse
      */
     public StartMigrationJobResponse startMigrationJob(StartMigrationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -6277,11 +6994,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
-      *
-      * @param request StartReverseWriterRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartReverseWriterResponse
+     * @summary Starts the reverse task that is created by calling the CreateReverseDtsJob operation.
+     *
+     * @description Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation.
+     *
+     * @param request StartReverseWriterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartReverseWriterResponse
      */
     public StartReverseWriterResponse startReverseWriterWithOptions(StartReverseWriterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6316,10 +7035,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
-      *
-      * @param request StartReverseWriterRequest
-      * @return StartReverseWriterResponse
+     * @summary Starts the reverse task that is created by calling the CreateReverseDtsJob operation.
+     *
+     * @description Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation.
+     *
+     * @param request StartReverseWriterRequest
+     * @return StartReverseWriterResponse
      */
     public StartReverseWriterResponse startReverseWriter(StartReverseWriterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -6327,11 +7048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, the change tracking task must be in the NotStarted or Failed state.
-      *
-      * @param request StartSubscriptionInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartSubscriptionInstanceResponse
+     * @description When you call this operation, the change tracking task must be in the NotStarted or Failed state.
+     *
+     * @param request StartSubscriptionInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartSubscriptionInstanceResponse
      */
     public StartSubscriptionInstanceResponse startSubscriptionInstanceWithOptions(StartSubscriptionInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6374,16 +7095,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, the change tracking task must be in the NotStarted or Failed state.
-      *
-      * @param request StartSubscriptionInstanceRequest
-      * @return StartSubscriptionInstanceResponse
+     * @description When you call this operation, the change tracking task must be in the NotStarted or Failed state.
+     *
+     * @param request StartSubscriptionInstanceRequest
+     * @return StartSubscriptionInstanceResponse
      */
     public StartSubscriptionInstanceResponse startSubscriptionInstance(StartSubscriptionInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startSubscriptionInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Starts a data synchronization task.
+     *
+     * @param request StartSynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartSynchronizationJobResponse
+     */
     public StartSynchronizationJobResponse startSynchronizationJobWithOptions(StartSynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6428,11 +7156,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartSynchronizationJobResponse());
     }
 
+    /**
+     * @summary Starts a data synchronization task.
+     *
+     * @param request StartSynchronizationJobRequest
+     * @return StartSynchronizationJobResponse
+     */
     public StartSynchronizationJobResponse startSynchronizationJob(StartSynchronizationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startSynchronizationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary Releases a cluster.
+     *
+     * @param request StopDedicatedClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDedicatedClusterResponse
+     */
     public StopDedicatedClusterResponse stopDedicatedClusterWithOptions(StopDedicatedClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6477,11 +7218,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDedicatedClusterResponse());
     }
 
+    /**
+     * @summary Releases a cluster.
+     *
+     * @param request StopDedicatedClusterRequest
+     * @return StopDedicatedClusterResponse
+     */
     public StopDedicatedClusterResponse stopDedicatedCluster(StopDedicatedClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDedicatedClusterWithOptions(request, runtime);
     }
 
+    /**
+     * @param request StopDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDtsJobResponse
+     */
     public StopDtsJobResponse stopDtsJobWithOptions(StopDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6526,11 +7278,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDtsJobResponse());
     }
 
+    /**
+     * @param request StopDtsJobRequest
+     * @return StopDtsJobResponse
+     */
     public StopDtsJobResponse stopDtsJob(StopDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDtsJobWithOptions(request, runtime);
     }
 
+    /**
+     * @param request StopDtsJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDtsJobsResponse
+     */
     public StopDtsJobsResponse stopDtsJobsWithOptions(StopDtsJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6567,17 +7328,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopDtsJobsResponse());
     }
 
+    /**
+     * @param request StopDtsJobsRequest
+     * @return StopDtsJobsResponse
+     */
     public StopDtsJobsResponse stopDtsJobs(StopDtsJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopDtsJobsWithOptions(request, runtime);
     }
 
     /**
-      * >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](~~49429~~) operation.
-      *
-      * @param request StopMigrationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StopMigrationJobResponse
+     * @description >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation.
+     *
+     * @param request StopMigrationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopMigrationJobResponse
      */
     public StopMigrationJobResponse stopMigrationJobWithOptions(StopMigrationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6624,16 +7389,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](~~49429~~) operation.
-      *
-      * @param request StopMigrationJobRequest
-      * @return StopMigrationJobResponse
+     * @description >  After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation.
+     *
+     * @param request StopMigrationJobRequest
+     * @return StopMigrationJobResponse
      */
     public StopMigrationJobResponse stopMigrationJob(StopMigrationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopMigrationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @param request SummaryJobDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SummaryJobDetailResponse
+     */
     public SummaryJobDetailResponse summaryJobDetailWithOptions(SummaryJobDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6686,17 +7456,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SummaryJobDetailResponse());
     }
 
+    /**
+     * @param request SummaryJobDetailRequest
+     * @return SummaryJobDetailResponse
+     */
     public SummaryJobDetailResponse summaryJobDetail(SummaryJobDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.summaryJobDetailWithOptions(request, runtime);
     }
 
     /**
-      * ****
-      *
-      * @param request SuspendDtsJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SuspendDtsJobResponse
+     * @description ****
+     *
+     * @param request SuspendDtsJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SuspendDtsJobResponse
      */
     public SuspendDtsJobResponse suspendDtsJobWithOptions(SuspendDtsJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6743,16 +7517,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ****
-      *
-      * @param request SuspendDtsJobRequest
-      * @return SuspendDtsJobResponse
+     * @description ****
+     *
+     * @param request SuspendDtsJobRequest
+     * @return SuspendDtsJobResponse
      */
     public SuspendDtsJobResponse suspendDtsJob(SuspendDtsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.suspendDtsJobWithOptions(request, runtime);
     }
 
+    /**
+     * @param request SuspendDtsJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SuspendDtsJobsResponse
+     */
     public SuspendDtsJobsResponse suspendDtsJobsWithOptions(SuspendDtsJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6789,19 +7568,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SuspendDtsJobsResponse());
     }
 
+    /**
+     * @param request SuspendDtsJobsRequest
+     * @return SuspendDtsJobsResponse
+     */
     public SuspendDtsJobsResponse suspendDtsJobs(SuspendDtsJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.suspendDtsJobsWithOptions(request, runtime);
     }
 
     /**
-      * > 
-      * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](~~49429~~) operation to restart the task.
-      * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
-      *
-      * @param request SuspendMigrationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SuspendMigrationJobResponse
+     * @description > 
+     * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the task.
+     * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
+     *
+     * @param request SuspendMigrationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SuspendMigrationJobResponse
      */
     public SuspendMigrationJobResponse suspendMigrationJobWithOptions(SuspendMigrationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6848,12 +7631,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](~~49429~~) operation to restart the task.
-      * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
-      *
-      * @param request SuspendMigrationJobRequest
-      * @return SuspendMigrationJobResponse
+     * @description > 
+     * *   If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the [StartMigrationJob](https://help.aliyun.com/document_detail/49429.html) operation to restart the task.
+     * *   If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.
+     *
+     * @param request SuspendMigrationJobRequest
+     * @return SuspendMigrationJobResponse
      */
     public SuspendMigrationJobResponse suspendMigrationJob(SuspendMigrationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -6861,14 +7644,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
-      * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
-      * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
-      *
-      * @param request SuspendSynchronizationJobRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SuspendSynchronizationJobResponse
+     * @description > 
+     * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
+     * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
+     * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
+     *
+     * @param request SuspendSynchronizationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SuspendSynchronizationJobResponse
      */
     public SuspendSynchronizationJobResponse suspendSynchronizationJobWithOptions(SuspendSynchronizationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6915,19 +7698,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
-      * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
-      * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
-      *
-      * @param request SuspendSynchronizationJobRequest
-      * @return SuspendSynchronizationJobResponse
+     * @description > 
+     * *   When you call this operation, the data synchronization task must be in the Synchronizing state.
+     * *   We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.
+     * *   If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.
+     *
+     * @param request SuspendSynchronizationJobRequest
+     * @return SuspendSynchronizationJobResponse
      */
     public SuspendSynchronizationJobResponse suspendSynchronizationJob(SuspendSynchronizationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.suspendSynchronizationJobWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 物理迁移任务切换上云
+     *
+     * @param request SwitchPhysicalDtsJobToCloudRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SwitchPhysicalDtsJobToCloudResponse
+     */
     public SwitchPhysicalDtsJobToCloudResponse switchPhysicalDtsJobToCloudWithOptions(SwitchPhysicalDtsJobToCloudRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6968,20 +7758,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchPhysicalDtsJobToCloudResponse());
     }
 
+    /**
+     * @summary 物理迁移任务切换上云
+     *
+     * @param request SwitchPhysicalDtsJobToCloudRequest
+     * @return SwitchPhysicalDtsJobToCloudResponse
+     */
     public SwitchPhysicalDtsJobToCloudResponse switchPhysicalDtsJobToCloud(SwitchPhysicalDtsJobToCloudRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.switchPhysicalDtsJobToCloudWithOptions(request, runtime);
     }
 
     /**
-      * *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
-      * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
-      * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-      *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
-      *
-      * @param request SwitchSynchronizationEndpointRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SwitchSynchronizationEndpointResponse
+     * @description *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
+     * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
+     * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
+     *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
+     *
+     * @param request SwitchSynchronizationEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SwitchSynchronizationEndpointResponse
      */
     public SwitchSynchronizationEndpointResponse switchSynchronizationEndpointWithOptions(SwitchSynchronizationEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7036,13 +7832,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
-      * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
-      * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-      *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
-      *
-      * @param request SwitchSynchronizationEndpointRequest
-      * @return SwitchSynchronizationEndpointResponse
+     * @description *   If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.
+     * *   If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.
+     * > *   For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
+     *         For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the **SynchronizationDirection** parameter to **Forward**, set the **Endpoint.Type **parameter to **Destination**, and configure the connection settings. In the second call, set the **SynchronizationDirection** parameter to **Reverse**, set the **Endpoint.Type **parameter to **Source**, and configure the connection settings.
+     *
+     * @param request SwitchSynchronizationEndpointRequest
+     * @return SwitchSynchronizationEndpointResponse
      */
     public SwitchSynchronizationEndpointResponse switchSynchronizationEndpoint(SwitchSynchronizationEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7050,16 +7846,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
-      * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-      * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-      * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-      * *   You can bind up to 20 tags to each instance.
-      * *   You can bind tags to up to 50 instances in each call.
-      *
-      * @param request TagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return TagResourcesResponse
+     * @description If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
+     * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+     * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
+     * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+     * *   You can bind up to 20 tags to each instance.
+     * *   You can bind tags to up to 50 instances in each call.
+     *
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
      */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7102,21 +7898,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
-      * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
-      * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
-      * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
-      * *   You can bind up to 20 tags to each instance.
-      * *   You can bind tags to up to 50 instances in each call.
-      *
-      * @param request TagResourcesRequest
-      * @return TagResourcesResponse
+     * @description If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.
+     * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+     * *   If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.
+     * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+     * *   You can bind up to 20 tags to each instance.
+     * *   You can bind tags to up to 50 instances in each call.
+     *
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
      */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * @param request TransferInstanceClassRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferInstanceClassResponse
+     */
     public TransferInstanceClassResponse transferInstanceClassWithOptions(TransferInstanceClassRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7157,24 +7958,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TransferInstanceClassResponse());
     }
 
+    /**
+     * @param request TransferInstanceClassRequest
+     * @return TransferInstanceClassResponse
+     */
     public TransferInstanceClassResponse transferInstanceClass(TransferInstanceClassRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.transferInstanceClassWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
-      * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
-      * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
-      * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
-      *
-      * @param request TransferPayTypeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return TransferPayTypeResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
+     * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
+     * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
+     * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
+     *
+     * @param request TransferPayTypeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferPayTypeResponse
      */
     public TransferPayTypeResponse transferPayTypeWithOptions(TransferPayTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.buyCount)) {
             query.put("BuyCount", request.buyCount);
         }
@@ -7225,13 +8034,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
-      * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
-      * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
-      * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
-      *
-      * @param request TransferPayTypeRequest
-      * @return TransferPayTypeResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of DTS.
+     * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
+     * *   Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.
+     * *   After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.
+     *
+     * @param request TransferPayTypeRequest
+     * @return TransferPayTypeResponse
      */
     public TransferPayTypeResponse transferPayType(TransferPayTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7239,11 +8048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
-      *
-      * @param request UntagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UntagResourcesResponse
+     * @description >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
+     *
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
      */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7290,10 +8099,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
-      *
-      * @param request UntagResourcesRequest
-      * @return UntagResourcesResponse
+     * @description >  If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.
+     *
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
      */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7301,16 +8110,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
-      * When you call this operation, take note of the following information:
-      * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
-      * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
-      * *   The data synchronization task is in the **Synchronizing** state.
-      * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
-      *
-      * @param request UpgradeTwoWayRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradeTwoWayResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
+     * When you call this operation, take note of the following information:
+     * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
+     * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
+     * *   The data synchronization task is in the **Synchronizing** state.
+     * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
+     *
+     * @param request UpgradeTwoWayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeTwoWayResponse
      */
     public UpgradeTwoWayResponse upgradeTwoWayWithOptions(UpgradeTwoWayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7349,15 +8158,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
-      * When you call this operation, take note of the following information:
-      * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
-      * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
-      * *   The data synchronization task is in the **Synchronizing** state.
-      * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
-      *
-      * @param request UpgradeTwoWayRequest
-      * @return UpgradeTwoWayResponse
+     * @description Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/data-transmission-service/pricing) of Data Transmission Service (DTS)
+     * When you call this operation, take note of the following information:
+     * *   The source and destination databases of the data synchronization task are both **MySQL** databases.
+     * *   The synchronization topology of the data synchronization task is **one-way synchronization**.
+     * *   The data synchronization task is in the **Synchronizing** state.
+     * *   The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.
+     *
+     * @param request UpgradeTwoWayRequest
+     * @return UpgradeTwoWayResponse
      */
     public UpgradeTwoWayResponse upgradeTwoWay(UpgradeTwoWayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7365,11 +8174,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **WhiteIpList**.
-      *
-      * @param request WhiteIpListRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return WhiteIpListResponse
+     * @summary If the **source or destination instance** is a **self-managed database** or a **third-party cloud database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
+     * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on Elastic Compute Service (ECS)**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.
+     *
+     * @description The operation that you want to perform. Set the value to **WhiteIpList**.
+     *
+     * @param request WhiteIpListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return WhiteIpListResponse
      */
     public WhiteIpListResponse whiteIpListWithOptions(WhiteIpListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7416,10 +8228,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **WhiteIpList**.
-      *
-      * @param request WhiteIpListRequest
-      * @return WhiteIpListResponse
+     * @summary If the **source or destination instance** is a **self-managed database** or a **third-party cloud database**, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see [Add the CIDR blocks of DTS servers to the security settings of on-premises databases](https://help.aliyun.com/document_detail/176627.html).
+     * >  If the **source or destination database** is an **ApsaraDB database instance** (such as RDS instance and ApsaraDB for MongoDB instance) or a **self-managed database hosted on Elastic Compute Service (ECS)**, you do not need to add the CIDR blocks. When you click **Set Whitelist and Next** in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.
+     *
+     * @description The operation that you want to perform. Set the value to **WhiteIpList**.
+     *
+     * @param request WhiteIpListRequest
+     * @return WhiteIpListResponse
      */
     public WhiteIpListResponse whiteIpList(WhiteIpListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

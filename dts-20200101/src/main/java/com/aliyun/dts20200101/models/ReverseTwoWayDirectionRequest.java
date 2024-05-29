@@ -10,6 +10,9 @@ public class ReverseTwoWayDirectionRequest extends TeaModel {
     @NameInMap("IgnoreErrorSubJob")
     public Boolean ignoreErrorSubJob;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

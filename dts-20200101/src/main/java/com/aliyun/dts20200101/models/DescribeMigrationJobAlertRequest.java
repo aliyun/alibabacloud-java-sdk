@@ -18,6 +18,8 @@ public class DescribeMigrationJobAlertRequest extends TeaModel {
 
     /**
      * <p>The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;

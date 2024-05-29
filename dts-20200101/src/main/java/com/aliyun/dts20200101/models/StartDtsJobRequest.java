@@ -7,7 +7,7 @@ public class StartDtsJobRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeMigrationJobs](~~208139~~), [DescribeSubscriptionInstances](~~49442~~), or [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID</p>
+     * <p>>  You can call the [DescribeMigrationJobs](https://help.aliyun.com/document_detail/208139.html), [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html), or [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
@@ -19,7 +19,7 @@ public class StartDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

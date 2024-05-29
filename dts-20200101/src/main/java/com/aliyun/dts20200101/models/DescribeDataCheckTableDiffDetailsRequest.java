@@ -4,12 +4,21 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CheckType")
     public Integer checkType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
@@ -22,6 +31,9 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TbName")
     public String tbName;
 

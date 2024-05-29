@@ -21,6 +21,8 @@ public class DeleteSynchronizationJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;

@@ -32,14 +32,16 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
      * <p>*   **false**: no</p>
      * <br>
      * <p>>  Default value: **true**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataInitialization")
     public Boolean dataInitialization;
 
     /**
-     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
      * <br>
-     * <p>>  This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see [Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances](~~155967~~).</p>
+     * <p>>  This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see [Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances](https://help.aliyun.com/document_detail/155967.html).</p>
      */
     @NameInMap("MigrationReserved")
     public String migrationReserved;
@@ -60,6 +62,8 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
      * <p>*   **false**: no</p>
      * <br>
      * <p>>  Default value: **true**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StructureInitialization")
     public Boolean structureInitialization;
@@ -78,7 +82,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID.</p>
+     * <p>The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
@@ -92,7 +98,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     public String synchronizationJobName;
 
     /**
-     * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see [SynchronizationObjects](~~141901~~).</p>
+     * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see [SynchronizationObjects](https://help.aliyun.com/document_detail/141901.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SynchronizationObjects")
     public String synchronizationObjects;
@@ -286,7 +294,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
          * <p>The database account of the destination database.</p>
          * <br>
          * <p>> </p>
-         * <p>*   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).</p>
+         * <p>*   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/140954.html).</p>
          * <p>*   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.UserName parameter.</p>
          * <p>*   If the **DestinationEndpoint.InstanceType** parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and **DestinationEndpoint.Password** parameters.</p>
          * <p>*   If the **DestinationEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the DestinationEndpoint.UserName parameter.</p>
@@ -509,7 +517,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         /**
          * <p>The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.</p>
          * <br>
-         * <p>>  You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).</p>
+         * <p>>  You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).</p>
          */
         @NameInMap("Role")
         public String role;
@@ -520,7 +528,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
          * <p>> </p>
          * <p>*   You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.</p>
          * <p>*   If the **SourceEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the database account.</p>
-         * <p>*   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).</p>
+         * <p>*   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/140954.html).</p>
          */
         @NameInMap("UserName")
         public String userName;

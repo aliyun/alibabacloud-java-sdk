@@ -25,7 +25,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
     /**
      * <p>The returned information about the migrated or synchronized objects in arrays.</p>
      * <br>
-     * <p>>  The arrays are in the following format: \[{"key":"Function","state":5,"totalCount":22},{"key":"Procedure","state":5,"totalCount":26},{"key":"Table","state":0,"totalCount":68},{"key":"View","state":5,"totalCount":100}].</p>
+     * <p>>  The arrays are in the following format: [{"key":"Function","state":5,"totalCount":22},{"key":"Procedure","state":5,"totalCount":26},{"key":"Table","state":0,"totalCount":68},{"key":"View","state":5,"totalCount":100}].</p>
      */
     @NameInMap("ProgressSummaryDetails")
     public java.util.List<SummaryJobDetailResponseBodyProgressSummaryDetails> progressSummaryDetails;

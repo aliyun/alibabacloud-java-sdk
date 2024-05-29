@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyDtsJobNameRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -14,12 +16,14 @@ public class ModifyDtsJobNameRequest extends TeaModel {
      * <p>The new name of the DTS task.</p>
      * <br>
      * <p>>  We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsJobName")
     public String dtsJobName;
 
     /**
-     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

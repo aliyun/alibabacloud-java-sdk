@@ -158,8 +158,8 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         /**
          * <p>The threshold that triggers the alert.</p>
          * <br>
-         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **delay**, the unit of DelayRuleTime is seconds.</p>
-         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.</p>
+         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **delay**, the unit of DelayRuleTime is seconds.</p>
+         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.</p>
          */
         @NameInMap("DelayRuleTime")
         public Long delayRuleTime;

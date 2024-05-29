@@ -29,25 +29,27 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public Boolean dataSynchronization;
 
     /**
-     * <p>The objects of the data synchronization task after modification. The value must be a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+     * <p>The objects of the data synchronization task after modification. The value must be a JSON string. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).</p>
      * <br>
      * <p>> </p>
      * <br>
      * <p>*   The new value of DbList overwrites the original value. Make sure that all the objects that you want to synchronize are specified. Otherwise, some objects may be lost. Specify this parameter with caution.</p>
      * <br>
-     * <p>*   Before you call the ModifyDtsJob operation, we recommend that you call the [DescribeDtsJobDetail](~~208925~~) operation to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.</p>
+     * <p>*   Before you call the ModifyDtsJob operation, we recommend that you call the [DescribeDtsJobDetail](https://help.aliyun.com/document_detail/208925.html) operation to query the current objects of the data synchronization task. Then, you can specify the new objects based on your business requirements. For example, if the current objects are Table A and Table B and you need to add Table C, you must specify Table A, Table B, and Table C for this parameter.</p>
      */
     @NameInMap("DbList")
     public java.util.Map<String, ?> dbList;
 
     /**
      * <p>The ID of the data synchronization instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
-     * <p>The synchronization task ID. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The synchronization task ID. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -77,13 +79,13 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     public String modifyTypeEnum;
 
     /**
-     * <p>The ID of the region in which the data synchronization instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region in which the data synchronization instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The reserved parameters of the data synchronization task. You can add reserved parameters instead of overwriting the existing reserved parameters. The value of the parameter is a MAP JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck of the data synchronization task. For more information, see [MigrationReserved](~~176470~~).</p>
+     * <p>The reserved parameters of the data synchronization task. You can add reserved parameters instead of overwriting the existing reserved parameters. The value of the parameter is a MAP JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck of the data synchronization task. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
      */
     @NameInMap("Reserved")
     public String reserved;

@@ -63,6 +63,8 @@ public class DescribeConnectionStatusRequest extends TeaModel {
      * <p>*   **PolarDB_o**: PolarDB for Oracle cluster</p>
      * <p>*   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0</p>
      * <p>*   **Greenplum**: AnalyticDB for PostgreSQL instance</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationEndpointInstanceType")
     public String destinationEndpointInstanceType;
@@ -93,7 +95,7 @@ public class DescribeConnectionStatusRequest extends TeaModel {
     public String destinationEndpointPort;
 
     /**
-     * <p>The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("DestinationEndpointRegion")
     public String destinationEndpointRegion;
@@ -101,13 +103,13 @@ public class DescribeConnectionStatusRequest extends TeaModel {
     /**
      * <p>The database account of the destination database.</p>
      * <br>
-     * <p>>  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).</p>
+     * <p>>  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html) and [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html).</p>
      */
     @NameInMap("DestinationEndpointUserName")
     public String destinationEndpointUserName;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -170,6 +172,8 @@ public class DescribeConnectionStatusRequest extends TeaModel {
      * <p>*   **MongoDB**: ApsaraDB for MongoDB instance</p>
      * <p>*   **POLARDB**: PolarDB for MySQL cluster</p>
      * <p>*   **PolarDB_o**: PolarDB for Oracle cluster</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceEndpointInstanceType")
     public String sourceEndpointInstanceType;
@@ -197,7 +201,7 @@ public class DescribeConnectionStatusRequest extends TeaModel {
     public String sourceEndpointPort;
 
     /**
-     * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
      */
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;
@@ -205,7 +209,7 @@ public class DescribeConnectionStatusRequest extends TeaModel {
     /**
      * <p>The database account of the source database.</p>
      * <br>
-     * <p>>  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).</p>
+     * <p>>  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](https://help.aliyun.com/document_detail/26618.html) and [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/130744.html).</p>
      */
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;

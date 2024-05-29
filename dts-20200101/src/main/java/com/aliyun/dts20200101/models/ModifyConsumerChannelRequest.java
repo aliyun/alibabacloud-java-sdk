@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyConsumerChannelRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group. You can call the [DescribeConsumerChannel](~~264169~~) operation to query the consumer group ID.</p>
+     * <p>The ID of the consumer group. You can call the [DescribeConsumerChannel](https://help.aliyun.com/document_detail/264169.html) operation to query the consumer group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerGroupId")
     public String consumerGroupId;
@@ -28,14 +30,14 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     /**
      * <p>The new username of the consumer group.</p>
      * <br>
-     * <p>*   A username can contain one or more of the following character types: uppercase letters, lowercase letters, digits, and underscores (\_).</p>
+     * <p>*   A username can contain one or more of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</p>
      * <p>*   A username cannot exceed 16 characters in length.</p>
      */
     @NameInMap("ConsumerGroupUserName")
     public String consumerGroupUserName;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
      * <br>
      * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
      */
@@ -43,7 +45,7 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
      * <br>
      * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
      */
@@ -51,7 +53,9 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

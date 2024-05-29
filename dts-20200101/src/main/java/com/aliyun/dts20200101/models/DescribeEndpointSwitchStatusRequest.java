@@ -26,7 +26,9 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The task ID, which is returned after you call the [SwitchSynchronizationEndpoint](~~201858~~) operation.</p>
+     * <p>The task ID, which is returned after you call the [SwitchSynchronizationEndpoint](https://help.aliyun.com/document_detail/201858.html) operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
