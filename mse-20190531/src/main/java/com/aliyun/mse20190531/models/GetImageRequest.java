@@ -15,6 +15,8 @@ public class GetImageRequest extends TeaModel {
 
     /**
      * <p>The version number of the current instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;

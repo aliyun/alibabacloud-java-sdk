@@ -21,6 +21,8 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
 
     /**
      * <p>The application name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -45,6 +47,8 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
      * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
@@ -75,6 +79,8 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
 
     /**
      * <p>The microservice namespace to which the application belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -87,6 +93,8 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the interface to which the rule applies. The interface name must be the same as the name on the interface details page in the console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")
     public String resource;
@@ -134,12 +142,16 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
      * <p>    abnormal proportion</p>
      * <br>
      * <p>    <!-- --></p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Strategy")
     public Integer strategy;
 
     /**
      * <p>A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Threshold")
     public Float threshold;

@@ -15,12 +15,16 @@ public class AddMockRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the custom application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerAppIds")
     public String consumerAppIds;
 
     /**
      * <p>The items in the recycle bin.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DubboMockItems")
     public String dubboMockItems;
@@ -36,6 +40,8 @@ public class AddMockRuleRequest extends TeaModel {
 
     /**
      * <p>The description.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExtraJson")
     public String extraJson;
@@ -43,16 +49,18 @@ public class AddMockRuleRequest extends TeaModel {
     /**
      * <p>The response time (RT) threshold of slow calls. Valid values:</p>
      * <br>
-     * <p>*   \- 15: 15 ms</p>
-     * <p>*   \- 30: 30 ms</p>
-     * <p>*   \- 60: 60 ms</p>
-     * <p>*   \- 120: 120 ms</p>
+     * <p>*   \\- 15: 15 ms</p>
+     * <p>*   \\- 30: 30 ms</p>
+     * <p>*   \\- 60: 60 ms</p>
+     * <p>*   \\- 120: 120 ms</p>
      */
     @NameInMap("MockType")
     public Long mockType;
 
     /**
      * <p>The name of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -71,18 +79,24 @@ public class AddMockRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The input parameters. The JSON format is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScMockItems")
     public String scMockItems;
 
     /**
      * <p>The rule source.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Source")
     public String source;

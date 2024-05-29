@@ -65,6 +65,9 @@ public class GatewayOption extends TeaModel {
     }
 
     public static class GatewayOptionLogConfigDetails extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("LogEnabled")
         public Boolean logEnabled;
 
@@ -115,6 +118,9 @@ public class GatewayOption extends TeaModel {
         @NameInMap("ServicePort")
         public String servicePort;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("TraceEnabled")
         public Boolean traceEnabled;
 

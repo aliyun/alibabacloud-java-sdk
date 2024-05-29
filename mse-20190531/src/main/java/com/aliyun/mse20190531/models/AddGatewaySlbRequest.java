@@ -15,6 +15,8 @@ public class AddGatewaySlbRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -45,6 +47,8 @@ public class AddGatewaySlbRequest extends TeaModel {
 
     /**
      * <p>The ID of the SLB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SlbId")
     public String slbId;

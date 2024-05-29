@@ -10,30 +10,48 @@ public class AddAuthPolicyRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthRule")
     public String authRule;
 
     @NameInMap("AuthType")
     public Integer authType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Enable")
     public String enable;
 
     @NameInMap("K8sNamespace")
     public String k8sNamespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Source")
     public String source;
 

@@ -207,13 +207,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
     public static class QueryClusterInfoResponseBodyDataMaintenancePeriod extends TeaModel {
         /**
-         * <p>The start time of the O\&M time window.</p>
+         * <p>The start time of the O\\&M time window.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The end time of the O\&M time window.</p>
+         * <p>The end time of the O\\&M time window.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -420,7 +420,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String intranetPort;
 
         /**
-         * <p>The O\&M time window.</p>
+         * <p>The O\\&M time window.</p>
          */
         @NameInMap("MaintenancePeriod")
         public QueryClusterInfoResponseBodyDataMaintenancePeriod maintenancePeriod;
@@ -450,7 +450,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String payInfo;
 
         /**
-         * <p>The public bandwidth. Unit: Mbit/s.\</p>
+         * <p>The public bandwidth. Unit: Mbit/s.\\</p>
          * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
          */
         @NameInMap("PubNetworkFlow")

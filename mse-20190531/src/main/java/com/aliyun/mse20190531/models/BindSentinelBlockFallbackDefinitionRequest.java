@@ -7,18 +7,33 @@ public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FallbackId")
     public Long fallbackId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Resource")
     public String resource;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

@@ -15,12 +15,16 @@ public class ListListenersByIpRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the listener.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ip")
     public String ip;

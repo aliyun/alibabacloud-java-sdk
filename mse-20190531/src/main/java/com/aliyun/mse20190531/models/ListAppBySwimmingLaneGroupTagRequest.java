@@ -15,6 +15,8 @@ public class ListAppBySwimmingLaneGroupTagRequest extends TeaModel {
 
     /**
      * <p>The ID of the lane group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -27,6 +29,8 @@ public class ListAppBySwimmingLaneGroupTagRequest extends TeaModel {
 
     /**
      * <p>The tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public String tag;

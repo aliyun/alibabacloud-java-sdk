@@ -15,18 +15,24 @@ public class DeleteNacosConfigsRequest extends TeaModel {
 
     /**
      * <p>The IDs of configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

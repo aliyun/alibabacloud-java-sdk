@@ -234,7 +234,7 @@ public class QueryConfigResponseBody extends TeaModel {
         public Boolean MCPSupported;
 
         /**
-         * <p>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\</p>
+         * <p>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\\</p>
          * <p>If this parameter is set to 0, no limits are imposed on the number of connections.</p>
          */
         @NameInMap("MaxClientCnxns")

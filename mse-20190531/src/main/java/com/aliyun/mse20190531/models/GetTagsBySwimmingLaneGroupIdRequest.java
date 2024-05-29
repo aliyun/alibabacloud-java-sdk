@@ -15,6 +15,8 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends TeaModel {
 
     /**
      * <p>The ID of the lane group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

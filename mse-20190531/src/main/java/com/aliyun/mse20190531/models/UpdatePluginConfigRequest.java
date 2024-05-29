@@ -42,6 +42,8 @@ public class UpdatePluginConfigRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -66,6 +68,8 @@ public class UpdatePluginConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway plug-in.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PluginId")
     public Long pluginId;

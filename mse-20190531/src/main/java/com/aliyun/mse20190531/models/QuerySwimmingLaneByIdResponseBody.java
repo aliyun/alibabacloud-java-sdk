@@ -253,6 +253,9 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     }
 
     public static class QuerySwimmingLaneByIdResponseBodyData extends TeaModel {
+        @NameInMap("PathIndependentPercentageEnable")
+        public Boolean pathIndependentPercentageEnable;
+
         @NameInMap("enable")
         public Boolean enable;
 
@@ -295,6 +298,14 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         public static QuerySwimmingLaneByIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySwimmingLaneByIdResponseBodyData self = new QuerySwimmingLaneByIdResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySwimmingLaneByIdResponseBodyData setPathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+            this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+            return this;
+        }
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
         }
 
         public QuerySwimmingLaneByIdResponseBodyData setEnable(Boolean enable) {

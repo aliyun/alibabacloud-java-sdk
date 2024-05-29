@@ -113,7 +113,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
          * <p>The type of the security group. Valid values:</p>
          * <br>
          * <p>*   normal: basic security group</p>
-         * <p>*   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).</p>
+         * <p>*   enterprise: advanced security group For more information, see [Advanced security groups](https://help.aliyun.com/document_detail/120621.html).</p>
          */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;

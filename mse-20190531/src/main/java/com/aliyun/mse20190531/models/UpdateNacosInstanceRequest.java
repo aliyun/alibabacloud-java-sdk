@@ -24,6 +24,8 @@ public class UpdateNacosInstanceRequest extends TeaModel {
      * <br>
      * <p>*   `true`: yes.</p>
      * <p>*   `false`: no.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
@@ -33,24 +35,32 @@ public class UpdateNacosInstanceRequest extends TeaModel {
      * <br>
      * <p>*   `true`: yes.</p>
      * <p>*   `false`: no.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
     /**
      * <p>The name of the group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the Nacos instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ip")
     public String ip;
@@ -69,18 +79,24 @@ public class UpdateNacosInstanceRequest extends TeaModel {
 
     /**
      * <p>The port number of the Nacos instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The name of the service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Weight")
     public String weight;

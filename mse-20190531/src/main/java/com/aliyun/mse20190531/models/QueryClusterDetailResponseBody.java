@@ -396,7 +396,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         public String payInfo;
 
         /**
-         * <p>The public bandwidth. Unit: Mbit/s.\</p>
+         * <p>The public bandwidth. Unit: Mbit/s.\\</p>
          * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
          */
         @NameInMap("PubNetworkFlow")

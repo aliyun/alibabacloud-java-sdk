@@ -15,6 +15,8 @@ public class QueryMonitorRequest extends TeaModel {
 
     /**
      * <p>The timestamp when the monitoring ends.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -28,7 +30,7 @@ public class QueryMonitorRequest extends TeaModel {
     /**
      * <p>The metric type. The following metric types are supported:</p>
      * <br>
-     * <p>\[Basic system metrics]</p>
+     * <p>[Basic system metrics]</p>
      * <br>
      * <p>*   cpuUsage</p>
      * <p>*   memoryUsage</p>
@@ -36,7 +38,7 @@ public class QueryMonitorRequest extends TeaModel {
      * <p>*   gcCount</p>
      * <p>*   gcTime</p>
      * <br>
-     * <p>\[Nacos registry]</p>
+     * <p>[Nacos registry]</p>
      * <br>
      * <p>*   serviceCount</p>
      * <p>*   writeCostTime</p>
@@ -44,16 +46,18 @@ public class QueryMonitorRequest extends TeaModel {
      * <p>*   TPS regCenterTps</p>
      * <p>*   QPS regCenterQps</p>
      * <br>
-     * <p>\[Nacos configuration center]</p>
+     * <p>[Nacos configuration center]</p>
      * <br>
      * <p>*   publish</p>
      * <p>*   getConfig</p>
      * <br>
-     * <p>\[zookeeper]</p>
+     * <p>[zookeeper]</p>
      * <br>
      * <p>*   TPS zk_TpsCount</p>
      * <p>*   QPS zk_QpsCount</p>
      * <p>*   zookeeper_AvgRequestLatency</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorType")
     public String monitorType;
@@ -66,6 +70,8 @@ public class QueryMonitorRequest extends TeaModel {
 
     /**
      * <p>The timestamp when the monitoring starts.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

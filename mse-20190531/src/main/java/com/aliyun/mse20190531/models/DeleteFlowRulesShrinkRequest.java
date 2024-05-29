@@ -15,6 +15,8 @@ public class DeleteFlowRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>The application name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -27,6 +29,8 @@ public class DeleteFlowRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>The microservice namespace to which the application belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

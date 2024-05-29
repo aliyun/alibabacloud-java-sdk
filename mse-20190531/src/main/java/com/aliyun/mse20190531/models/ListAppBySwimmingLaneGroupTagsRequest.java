@@ -12,12 +12,16 @@ public class ListAppBySwimmingLaneGroupTagsRequest extends TeaModel {
 
     /**
      * <p>The ID of the lane group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The name of the MSE namespace that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

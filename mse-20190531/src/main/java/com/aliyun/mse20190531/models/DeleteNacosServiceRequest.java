@@ -15,12 +15,16 @@ public class DeleteNacosServiceRequest extends TeaModel {
 
     /**
      * <p>The name of the group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -33,6 +37,8 @@ public class DeleteNacosServiceRequest extends TeaModel {
 
     /**
      * <p>The name of the service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

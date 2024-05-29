@@ -15,12 +15,16 @@ public class CloneNacosConfigRequest extends TeaModel {
 
     /**
      * <p>The data structure.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
      * <p>The ID of the destination namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -40,6 +44,8 @@ public class CloneNacosConfigRequest extends TeaModel {
      * <br>
      * <p>*   zh: Chinese</p>
      * <p>*   en: English</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Policy")
     public String policy;

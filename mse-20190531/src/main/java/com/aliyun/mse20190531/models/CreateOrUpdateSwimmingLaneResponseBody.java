@@ -311,6 +311,9 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("pathIndependentPercentageEnable")
+        public Boolean pathIndependentPercentageEnable;
+
         @NameInMap("regionId")
         public String regionId;
 
@@ -403,6 +406,14 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateOrUpdateSwimmingLaneResponseBodyData setPathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+            this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+            return this;
+        }
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
         }
 
         public CreateOrUpdateSwimmingLaneResponseBodyData setRegionId(String regionId) {

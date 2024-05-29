@@ -18,18 +18,24 @@ public class UpdateGatewayAuthConsumerStatusRequest extends TeaModel {
      * <br>
      * <p>*   true: The consumer is enabled.</p>
      * <p>*   false: The consumer is disabled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConsumerStatus")
     public Boolean consumerStatus;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The consumer ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

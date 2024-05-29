@@ -15,6 +15,8 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,12 +37,16 @@ public class TagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   CLUSTER: Microservices Engine (MSE) instance</p>
      * <p>*   GATEWAY: cloud-native gateway</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The list of tags. You can specify a maximum of 20 tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;

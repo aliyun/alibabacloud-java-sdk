@@ -18,6 +18,8 @@ public class UpdateCircuitBreakerRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -72,6 +74,8 @@ public class UpdateCircuitBreakerRuleRequest extends TeaModel {
 
     /**
      * <p>The microservice namespace to which the application belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -84,6 +88,8 @@ public class UpdateCircuitBreakerRuleRequest extends TeaModel {
 
     /**
      * <p>The rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

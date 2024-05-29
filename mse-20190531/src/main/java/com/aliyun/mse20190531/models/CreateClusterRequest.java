@@ -24,7 +24,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The engine specifications. Valid values:</p>
      * <br>
-     * <p>\[Professional Edition]</p>
+     * <p>[Professional Edition]</p>
      * <br>
      * <p>*   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory</p>
      * <p>*   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory</p>
@@ -32,20 +32,24 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   `MSE_SC_8_16_60_c`: 8 vCPUs and 16 GB of memory</p>
      * <p>*   `MSE_SC_16_32_60_c`: 16 vCPUs and 32 GB of memory</p>
      * <br>
-     * <p>\[Developer Edition]</p>
+     * <p>[Developer Edition]</p>
      * <br>
      * <p>*   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory</p>
      * <p>*   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory</p>
      * <br>
-     * <p>\[Serverless Edition]</p>
+     * <p>[Serverless Edition]</p>
      * <br>
      * <p>Ignore this parameter or set this parameter to `MSE_SC_SERVERLESS`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
 
     /**
      * <p>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
@@ -53,20 +57,22 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The engine version of the instance. Valid values:</p>
      * <br>
-     * <p>\[Professional Edition]</p>
+     * <p>[Professional Edition]</p>
      * <br>
      * <p>*   `NACOS_2_0_0`</p>
      * <p>*   `ZooKeeper_3_8_0`</p>
      * <br>
-     * <p>\[Developer Edition]</p>
+     * <p>[Developer Edition]</p>
      * <br>
      * <p>*   `NACOS_2_0_0`</p>
      * <p>*   `ZooKeeper_3_8_0`</p>
      * <br>
-     * <p>\[Serverless Edition]</p>
+     * <p>[Serverless Edition]</p>
      * <br>
      * <p>*   `NACOS_2_0_0`</p>
      * <p>*   `ZooKeeper_3_8_0`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterVersion")
     public String clusterVersion;
@@ -111,17 +117,19 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The number of nodes in the instance. Valid values: 1 to 9.</p>
      * <br>
-     * <p>\[Professional Edition]</p>
+     * <p>[Professional Edition]</p>
      * <br>
      * <p>*   The value must be greater than or equal to 3 and must be an odd number.</p>
      * <br>
-     * <p>\[Developer Edition]</p>
+     * <p>[Developer Edition]</p>
      * <br>
      * <p>*   The value must be 1.</p>
      * <br>
-     * <p>\[Serverless Edition]</p>
+     * <p>[Serverless Edition]</p>
      * <br>
      * <p>Ignore this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
@@ -147,6 +155,8 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>*   `privatenet`: VPC</p>
      * <p>*   `pubnet`: Internet</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetType")
     public String netType;
@@ -192,7 +202,7 @@ public class CreateClusterRequest extends TeaModel {
     public String requestPars;
 
     /**
-     * <p>The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](~~457230~~).</p>
+     * <p>The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](https://help.aliyun.com/document_detail/457230.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

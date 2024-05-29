@@ -124,6 +124,8 @@ public class ListGatewayRouteRequest extends TeaModel {
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;

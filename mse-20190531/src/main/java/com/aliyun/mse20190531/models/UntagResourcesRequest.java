@@ -26,12 +26,16 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. A maximum of 50 resource IDs can be specified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -41,6 +45,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   CLUSTER: MSE instance</p>
      * <p>*   GATEWAY: cloud-native gateway</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

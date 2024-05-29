@@ -148,8 +148,8 @@ public class CreateApplicationResponseBody extends TeaModel {
         /**
          * <p>The service where the application is deployed. Valid values:</p>
          * <br>
-         * <p>*   \- ACK: Container Service for Kubernetes</p>
-         * <p>*   \- Normal: another service</p>
+         * <p>*   \\- ACK: Container Service for Kubernetes</p>
+         * <p>*   \\- Normal: another service</p>
          */
         @NameInMap("Source")
         public String source;

@@ -21,12 +21,16 @@ public class UpdateNacosClusterRequest extends TeaModel {
 
     /**
      * <p>The name of the Nacos cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The name of the group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -39,6 +43,8 @@ public class UpdateNacosClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -51,6 +57,8 @@ public class UpdateNacosClusterRequest extends TeaModel {
 
     /**
      * <p>The name of the service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

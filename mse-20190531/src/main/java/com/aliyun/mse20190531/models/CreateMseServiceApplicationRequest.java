@@ -15,6 +15,8 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
 
     /**
      * <p>The name of the application.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -48,6 +50,8 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
      * <p>*   cn-shanghai: China (Shanghai)</p>
      * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
      * <p>*   cn-shenzhen: China (Shenzhen)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;

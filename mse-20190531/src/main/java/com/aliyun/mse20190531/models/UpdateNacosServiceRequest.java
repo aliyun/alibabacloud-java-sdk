@@ -49,6 +49,8 @@ public class UpdateNacosServiceRequest extends TeaModel {
 
     /**
      * <p>The name of the service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

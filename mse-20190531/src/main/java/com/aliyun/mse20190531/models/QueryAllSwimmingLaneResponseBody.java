@@ -304,6 +304,36 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
     }
 
+    public static class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList extends TeaModel {
+        @NameInMap("Percentage")
+        public String percentage;
+
+        @NameInMap("RouteId")
+        public String routeId;
+
+        public static QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList build(java.util.Map<String, ?> map) throws Exception {
+            QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList self = new QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList setPercentage(String percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public String getPercentage() {
+            return this.percentage;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList setRouteId(String routeId) {
+            this.routeId = routeId;
+            return this;
+        }
+        public String getRouteId() {
+            return this.routeId;
+        }
+
+    }
+
     public static class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute extends TeaModel {
         @NameInMap("CanaryModel")
         public Integer canaryModel;
@@ -322,6 +352,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         @NameInMap("RouteIdList")
         public java.util.List<Long> routeIdList;
+
+        @NameInMap("RouteIndependentPercentageEnable")
+        public String routeIndependentPercentageEnable;
+
+        @NameInMap("RouteIndependentPercentageList")
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList> routeIndependentPercentageList;
 
         public static QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute build(java.util.Map<String, ?> map) throws Exception {
             QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute self = new QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute();
@@ -376,6 +412,22 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             return this.routeIdList;
         }
 
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setRouteIndependentPercentageEnable(String routeIndependentPercentageEnable) {
+            this.routeIndependentPercentageEnable = routeIndependentPercentageEnable;
+            return this;
+        }
+        public String getRouteIndependentPercentageEnable() {
+            return this.routeIndependentPercentageEnable;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute setRouteIndependentPercentageList(java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList> routeIndependentPercentageList) {
+            this.routeIndependentPercentageList = routeIndependentPercentageList;
+            return this;
+        }
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteRouteIndependentPercentageList> getRouteIndependentPercentageList() {
+            return this.routeIndependentPercentageList;
+        }
+
     }
 
     public static class QueryAllSwimmingLaneResponseBodyData extends TeaModel {
@@ -402,6 +454,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         @NameInMap("Namespace")
         public String namespace;
+
+        @NameInMap("PathIndependentPercentageEnable")
+        public Boolean pathIndependentPercentageEnable;
 
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
@@ -491,6 +546,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyData setPathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+            this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+            return this;
+        }
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
         }
 
         public QueryAllSwimmingLaneResponseBodyData setRecordCanaryDetail(Boolean recordCanaryDetail) {

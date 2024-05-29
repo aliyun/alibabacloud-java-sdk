@@ -139,8 +139,8 @@ public class AddMockRuleResponseBody extends TeaModel {
         /**
          * <p>The mock type. Valid values:</p>
          * <br>
-         * <p>*   \- `[unk]0[unk]`: desktop client</p>
-         * <p>*   \- `[unk]1[unk]`: mobile client</p>
+         * <p>*   \\- `[unk]0[unk]`: desktop client</p>
+         * <p>*   \\- `[unk]1[unk]`: mobile client</p>
          */
         @NameInMap("MockType")
         public Long mockType;

@@ -9,6 +9,8 @@ public class ListGatewayFlowRuleRequest extends TeaModel {
 
     /**
      * <p>just for POP</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FilterParams")
     public String filterParams;

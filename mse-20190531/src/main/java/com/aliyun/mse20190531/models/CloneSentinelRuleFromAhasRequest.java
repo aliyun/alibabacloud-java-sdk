@@ -4,18 +4,37 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CloneSentinelRuleFromAhasRequest extends TeaModel {
+    /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The namespace (environment) of Application High Availability Service (AHAS).</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AhasNamespace")
     public String ahasNamespace;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>Specifies whether AHAS is deployed in the Internet region.</p>
+     */
     @NameInMap("IsAHASPublicRegion")
     public Boolean isAHASPublicRegion;
 
+    /**
+     * <p>The namespace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
