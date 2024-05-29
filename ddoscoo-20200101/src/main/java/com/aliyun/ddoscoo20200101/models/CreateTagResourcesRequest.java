@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateTagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -20,12 +22,16 @@ public class CreateTagResourcesRequest extends TeaModel {
 
     /**
      * <p>An array consisting of the IDs of the Anti-DDoS Pro instances to which you want to add the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
      * <p>The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

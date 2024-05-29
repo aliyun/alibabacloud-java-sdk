@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyElasticBizBandWidthRequest extends TeaModel {
     /**
      * <p>The burstable clean bandwidth. Unit: Mbit/s. The burstable clean bandwidth cannot exceed nine times the clean bandwidth of your Anti-DDoS Pro or Anti-DDoS Premium instance, and the sum of the clean bandwidth and the burstable clean bandwidth cannot exceed the maximum clean bandwidth that is supported by your instance. The value 0 indicates that the burstable clean bandwidth feature is disabled. You can disable the burstable clean bandwidth feature once a month.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ElasticBizBandwidth")
     public Integer elasticBizBandwidth;
@@ -13,7 +15,9 @@ public class ModifyElasticBizBandWidthRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

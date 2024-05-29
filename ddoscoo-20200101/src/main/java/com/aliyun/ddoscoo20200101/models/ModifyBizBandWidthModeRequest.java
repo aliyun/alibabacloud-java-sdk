@@ -7,7 +7,9 @@ public class ModifyBizBandWidthModeRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,6 +19,8 @@ public class ModifyBizBandWidthModeRequest extends TeaModel {
      * <br>
      * <p>*   **month**: the metering method of monthly 95th percentile</p>
      * <p>*   **day**: the metering method of daily 95th percentile</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mode")
     public String mode;

@@ -27,6 +27,8 @@ public class ModifySchedulerRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the rule that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -38,6 +40,8 @@ public class ModifySchedulerRuleRequest extends TeaModel {
      * <p>*   **3**: network acceleration</p>
      * <p>*   **5**: Alibaba Cloud CDN (CDN) interaction</p>
      * <p>*   **6**: cloud service interaction</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleType")
     public Integer ruleType;
@@ -63,6 +67,8 @@ public class ModifySchedulerRuleRequest extends TeaModel {
      * <p>    *   **6** the IP address of the interaction resource in the cloud service interaction scenario</p>
      * <br>
      * <p>*   **RegionId**: the region where the interaction resource is deployed. This parameter must be specified when **ValueType** is set to **2**. The value must be of the string type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rules;

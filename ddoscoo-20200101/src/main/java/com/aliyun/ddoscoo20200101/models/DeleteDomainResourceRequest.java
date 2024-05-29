@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteDomainResourceRequest extends TeaModel {
     /**
      * <p>The domain name for which the forwarding rule is configured.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;

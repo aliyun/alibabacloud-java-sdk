@@ -7,7 +7,7 @@ public class DescribeDomainOverviewRequest extends TeaModel {
     /**
      * <p>The domain name of the website that you want to query. If you leave this parameter unspecified, the statistics on all domain names are queried.</p>
      * <br>
-     * <p>> The domain name must be added to Anti-DDoS Pro or Anti-DDoS Premium. You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <p>> The domain name must be added to Anti-DDoS Pro or Anti-DDoS Premium. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -23,7 +23,7 @@ public class DescribeDomainOverviewRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
+     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,6 +32,8 @@ public class DescribeDomainOverviewRequest extends TeaModel {
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

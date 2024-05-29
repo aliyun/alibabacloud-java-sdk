@@ -7,7 +7,7 @@ public class DescribeDomainStatusCodeListRequest extends TeaModel {
     /**
      * <p>The domain name of the website. If you do not specify this parameter, the statistics on response status codes of all domain names are queried.</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -22,6 +22,8 @@ public class DescribeDomainStatusCodeListRequest extends TeaModel {
 
     /**
      * <p>The interval for returning data. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Interval")
     public Long interval;
@@ -31,6 +33,8 @@ public class DescribeDomainStatusCodeListRequest extends TeaModel {
      * <br>
      * <p>*   **gf**: Anti-DDoS Pro or Anti-DDoS Premium</p>
      * <p>*   **upstrem**: origin server</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QueryType")
     public String queryType;
@@ -45,6 +49,8 @@ public class DescribeDomainStatusCodeListRequest extends TeaModel {
      * <p>The start time of the event. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

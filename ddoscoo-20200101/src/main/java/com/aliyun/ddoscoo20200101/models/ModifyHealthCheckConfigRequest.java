@@ -9,12 +9,16 @@ public class ModifyHealthCheckConfigRequest extends TeaModel {
      * <br>
      * <p>*   **tcp**</p>
      * <p>*   **udp**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
     /**
      * <p>The forwarding port.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
@@ -45,6 +49,8 @@ public class ModifyHealthCheckConfigRequest extends TeaModel {
      * <p>*   **Up**: the number of consecutive successful health checks that must occur before declaring a port healthy, which must be of the INTEGER type. Valid values: **1** to **10**.</p>
      * <br>
      * <p>*   **Down**: the number of consecutive failed health checks that must occur before declaring a port unhealthy, which must be of the INTEGER type. Valid values: **1** to **10**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HealthCheck")
     public String healthCheck;
@@ -52,7 +58,9 @@ public class ModifyHealthCheckConfigRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

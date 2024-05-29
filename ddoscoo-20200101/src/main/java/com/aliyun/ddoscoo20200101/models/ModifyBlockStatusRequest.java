@@ -15,13 +15,17 @@ public class ModifyBlockStatusRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Pro instance to manage.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>An array consisting of the Internet service provider (ISP) lines from which traffic is blocked.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Lines")
     public java.util.List<String> lines;
@@ -31,6 +35,8 @@ public class ModifyBlockStatusRequest extends TeaModel {
      * <br>
      * <p>*   **do**: enables the policy.</p>
      * <p>*   **undo**: disables the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

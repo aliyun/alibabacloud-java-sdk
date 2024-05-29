@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeWebCacheConfigsRequest extends TeaModel {
     /**
      * <p>An array consisting of domain names for which you want to query the Static Page Caching configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domains")
     public java.util.List<String> domains;

@@ -39,7 +39,7 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
 
     public static class DescribeDDosEventAreaResponseBodyAreas extends TeaModel {
         /**
-         * <p>The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.</p>
+         * <p>The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html). For example, **110000** indicates Beijing, China, and **us** indicates the United States.</p>
          */
         @NameInMap("Area")
         public String area;

@@ -8,12 +8,16 @@ public class DescribeTotalAttackMaxFlowRequest extends TeaModel {
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The IDs of the instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -28,6 +32,8 @@ public class DescribeTotalAttackMaxFlowRequest extends TeaModel {
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDDosAllEventListRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The DDoS attack events occur before **EndTime** are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -27,18 +29,24 @@ public class DescribeDDosAllEventListRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query. The DDoS attack events occur after **StartTime** are queried. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

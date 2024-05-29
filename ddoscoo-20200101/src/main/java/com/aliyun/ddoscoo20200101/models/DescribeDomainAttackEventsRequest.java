@@ -7,7 +7,7 @@ public class DescribeDomainAttackEventsRequest extends TeaModel {
     /**
      * <p>The domain name of the website.</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -16,18 +16,24 @@ public class DescribeDomainAttackEventsRequest extends TeaModel {
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -42,6 +48,8 @@ public class DescribeDomainAttackEventsRequest extends TeaModel {
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

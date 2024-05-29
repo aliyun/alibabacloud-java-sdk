@@ -9,12 +9,16 @@ public class DescribeDDosEventAreaRequest extends TeaModel {
      * <br>
      * <p>*   **defense**: attack events that trigger traffic scrubbing</p>
      * <p>*   **blackhole**: attack events that trigger blackhole filtering</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ip")
     public String ip;
@@ -22,7 +26,9 @@ public class DescribeDDosEventAreaRequest extends TeaModel {
     /**
      * <p>The UNIX timestamp when the query starts. Unit: seconds.</p>
      * <br>
-     * <p>> You can call the [DescribeDDosAllEventList](~~188604~~) operation to query the beginning time of all attack events.</p>
+     * <p>> You can call the [DescribeDDosAllEventList](https://help.aliyun.com/document_detail/188604.html) operation to query the beginning time of all attack events.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

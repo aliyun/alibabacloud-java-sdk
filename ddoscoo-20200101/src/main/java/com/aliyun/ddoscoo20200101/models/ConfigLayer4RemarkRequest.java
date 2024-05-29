@@ -9,7 +9,7 @@ public class ConfigLayer4RemarkRequest extends TeaModel {
      * <br>
      * <p>This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.</p>
      * <br>
-     * <p>> You can call the [DescribeNetworkRules](~~157484~~) to query existing port forwarding rules.</p>
+     * <p>> You can call the [DescribeNetworkRules](https://help.aliyun.com/document_detail/157484.html) to query existing port forwarding rules.</p>
      * <br>
      * <p>Each port forwarding rule contains the following fields:</p>
      * <br>
@@ -17,6 +17,8 @@ public class ConfigLayer4RemarkRequest extends TeaModel {
      * <p>*   **Protocol**: the forwarding protocol. This field is required and must be of the STRING type. Valid values: **tcp** and **udp**.</p>
      * <p>*   **FrontendPort**: the forwarding port. This field is required and must be of the INTEGER type.</p>
      * <p>*   **Remark**: the remarks of the port forwarding rule. This field is required and must be of the STRING type. The value can contain letters, digits, and some special characters, such as `, . + - * / _`. The value can be up to 200 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Listeners")
     public String listeners;

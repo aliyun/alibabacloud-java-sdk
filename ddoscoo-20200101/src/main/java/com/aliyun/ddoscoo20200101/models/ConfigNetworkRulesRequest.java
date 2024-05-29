@@ -14,6 +14,8 @@ public class ConfigNetworkRulesRequest extends TeaModel {
      * <p>*   **RealServers**: the IP addresses of the origin server. This field is required and must be a JSON array. You can specify up to 20 IP addresses.</p>
      * <br>
      * <p>> You can modify only the value of **RealServers** when you modify a port forwarding rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkRules")
     public String networkRules;

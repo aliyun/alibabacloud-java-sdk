@@ -11,6 +11,8 @@ public class ModifyWebAreaBlockSwitchRequest extends TeaModel {
      * <br>
      * <p>    *   **1**: enables the policy.</p>
      * <p>    *   **0**: disables the policy.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -18,7 +20,9 @@ public class ModifyWebAreaBlockSwitchRequest extends TeaModel {
     /**
      * <p>The domain name for which you want to enable or disable the Location Blacklist policy.</p>
      * <br>
-     * <p>> You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <p>> You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;

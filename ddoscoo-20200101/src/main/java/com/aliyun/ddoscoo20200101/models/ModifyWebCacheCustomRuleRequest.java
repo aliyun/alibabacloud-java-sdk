@@ -7,7 +7,9 @@ public class ModifyWebCacheCustomRuleRequest extends TeaModel {
     /**
      * <p>The domain name of the website.</p>
      * <br>
-     * <p>> A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>> A forwarding rule must be configured for the domain name, and the domain name must be associated with an instance that uses the Enhanced function plan. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -32,6 +34,8 @@ public class ModifyWebCacheCustomRuleRequest extends TeaModel {
      * <p>    *   **bypass**: No data is cached.</p>
      * <br>
      * <p>*   **CacheTtl**: the expiration time of the page cache. This field is required and must be of the INTEGER type. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rules;

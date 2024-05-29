@@ -16,6 +16,9 @@ public class DescribeWebRulesRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

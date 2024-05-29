@@ -8,6 +8,8 @@ public class DescribeDefenseRecordsRequest extends TeaModel {
      * <p>The end of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
      * <br>
      * <p>> The time must be in the latest 90 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -15,19 +17,23 @@ public class DescribeDefenseRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: **50**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -42,6 +48,8 @@ public class DescribeDefenseRecordsRequest extends TeaModel {
      * <p>The beginning of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
      * <br>
      * <p>> The time must be in the latest 90 days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

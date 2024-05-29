@@ -7,7 +7,9 @@ public class DeleteWebCacheCustomRuleRequest extends TeaModel {
     /**
      * <p>The domain name for which you want to delete the custom rules of the Static Page Caching policy.</p>
      * <br>
-     * <p>> You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <p>> You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -22,6 +24,8 @@ public class DeleteWebCacheCustomRuleRequest extends TeaModel {
 
     /**
      * <p>An array consisting of the names of the rules that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;

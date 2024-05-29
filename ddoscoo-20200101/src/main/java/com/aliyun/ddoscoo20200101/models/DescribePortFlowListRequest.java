@@ -10,12 +10,16 @@ public class DescribePortFlowListRequest extends TeaModel {
      * <p>**</p>
      * <br>
      * <p>**This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>An array that consists of the IDs of instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
@@ -29,6 +33,8 @@ public class DescribePortFlowListRequest extends TeaModel {
      * <p>*   If the time range to query is greater than 24 hours but no greater than 7 days, we recommend that you specify the interval from 3,600 seconds to the time range to query.</p>
      * <p>*   If the time range to query is greater than 7 days but no greater than 15 days, we recommend that you specify the interval from 14,400 seconds to the time range to query.</p>
      * <p>*   If the time range to query is greater than 15 days, we recommend that you specify the interval from 43,200 seconds to the time range to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Interval")
     public Integer interval;
@@ -36,7 +42,7 @@ public class DescribePortFlowListRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
+     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -47,6 +53,8 @@ public class DescribePortFlowListRequest extends TeaModel {
      * <p>**</p>
      * <br>
      * <p>**This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

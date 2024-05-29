@@ -18,6 +18,8 @@ public class CreateWebRuleRequest extends TeaModel {
 
     /**
      * <p>The domain name of the website that you want to add to the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -49,7 +51,7 @@ public class CreateWebRuleRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * <br>
-     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
+     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -59,6 +61,8 @@ public class CreateWebRuleRequest extends TeaModel {
      * <br>
      * <p>*   **0**: IP address</p>
      * <p>*   **1**: domain name The domain name of the origin server is returned if you deploy proxies, such as Web Application Firewall (WAF), between the origin server and the instance. In this case, the address of the proxy, such as the CNAME provided by WAF, is returned.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RsType")
     public Integer rsType;
@@ -72,6 +76,8 @@ public class CreateWebRuleRequest extends TeaModel {
      * <p>    *   **RealServers**: the IP address. This field is required and must be a string array.</p>
      * <br>
      * <p>*   **ProxyType**: the protocol type. This field is required and must be a string. Valid values: **http**, **https**, **websocket**, and **websockets**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rules;

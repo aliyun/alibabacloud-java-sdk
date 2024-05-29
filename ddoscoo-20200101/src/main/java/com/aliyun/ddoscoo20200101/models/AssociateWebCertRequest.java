@@ -4,30 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class AssociateWebCertRequest extends TeaModel {
-    /**
-     * <p>The public key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Key**.</p>
-     * <br>
-     * <p>> If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.</p>
-     */
     @NameInMap("Cert")
     public String cert;
 
-    /**
-     * <p>The ID of the certificate that you want to associate. If the certificate that you want to associate has been issued in Certificate Management Service, you can specify the certificate ID to associate the certificate.</p>
-     * <br>
-     * <p>> If you specify the certificate ID, you do not need to specify a value for the **CertName**, **Cert**, and **Key** parameters.</p>
-     */
     @NameInMap("CertId")
     public Integer certId;
 
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
-    /**
-     * <p>The name of the certificate that you want to associate. This parameter must be used together with the **Cert** and **Key** parameters.</p>
-     * <br>
-     * <p>> If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.</p>
-     */
     @NameInMap("CertName")
     public String certName;
 
@@ -35,18 +20,11 @@ public class AssociateWebCertRequest extends TeaModel {
     public String certRegion;
 
     /**
-     * <p>The domain name of the website.</p>
-     * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
-    /**
-     * <p>The private key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Cert**.</p>
-     * <br>
-     * <p>> If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.</p>
-     */
     @NameInMap("Key")
     public String key;
 

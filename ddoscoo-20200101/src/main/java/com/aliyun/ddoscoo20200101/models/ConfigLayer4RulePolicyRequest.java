@@ -9,7 +9,7 @@ public class ConfigLayer4RulePolicyRequest extends TeaModel {
      * <br>
      * <p>This parameter is a string that consists of JSON arrays. Each element in a JSON array indicates a port forwarding rule. You can perform this operation only on one port forwarding rule at a time.</p>
      * <br>
-     * <p>> You can call the [DescribeNetworkRules](~~157484~~) to query existing port forwarding rules.</p>
+     * <p>> You can call the [DescribeNetworkRules](https://help.aliyun.com/document_detail/157484.html) to query existing port forwarding rules.</p>
      * <br>
      * <p>Each port forwarding rule contains the following fields:</p>
      * <br>
@@ -37,6 +37,8 @@ public class ConfigLayer4RulePolicyRequest extends TeaModel {
      * <br>
      * <p>    *   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</p>
      * <p>    *   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Listeners")
     public String listeners;

@@ -13,7 +13,9 @@ public class DeleteAsyncTaskRequest extends TeaModel {
     /**
      * <p>The ID of the task that you want to delete.</p>
      * <br>
-     * <p>> You can call the [DescribeAsyncTasks](~~159405~~) operation to query the IDs of all asynchronous export tasks.</p>
+     * <p>> You can call the [DescribeAsyncTasks](https://help.aliyun.com/document_detail/159405.html) operation to query the IDs of all asynchronous export tasks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

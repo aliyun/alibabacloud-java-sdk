@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class AddAutoCcBlacklistRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Blacklist")
     public String blacklist;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

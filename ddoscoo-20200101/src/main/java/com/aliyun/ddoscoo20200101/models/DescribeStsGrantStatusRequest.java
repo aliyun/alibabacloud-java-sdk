@@ -16,6 +16,8 @@ public class DescribeStsGrantStatusRequest extends TeaModel {
      * <p>The name of the RAM role to query. Set the value to **AliyunDDoSCOODefaultRole**, which indicates the default role of Anti-DDoS Pro or Anti-DDoS Premium.</p>
      * <br>
      * <p>> Anti-DDoS Pro or Anti-DDoS Premium uses the default role to access other cloud services.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Role")
     public String role;

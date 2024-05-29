@@ -4,6 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
@@ -13,15 +16,24 @@ public class ModifyWebRuleRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProxyTypes")
     public String proxyTypes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RealServers")
     public java.util.List<String> realServers;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RsType")
     public Integer rsType;
 

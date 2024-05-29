@@ -45,7 +45,7 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](~~167926~~) topic. For example, **cn** indicates China, and **us** indicates the United States.</p>
+         * <p>The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic. For example, **cn** indicates China, and **us** indicates the United States.</p>
          */
         @NameInMap("CountryId")
         public String countryId;

@@ -47,7 +47,7 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         /**
          * <p>The abbreviation of the country or area. For example, **cn** indicates China and **us** indicates the United States.</p>
          * <br>
-         * <p>> For more information, see [Location parameters](~~167926~~).</p>
+         * <p>> For more information, see [Location parameters](https://help.aliyun.com/document_detail/167926.html).</p>
          */
         @NameInMap("CountryId")
         public String countryId;

@@ -25,6 +25,8 @@ public class ConfigUdpReflectRequest extends TeaModel {
      * <p>    *   UDP 1900: SSDP reflection attacks</p>
      * <p>    *   UDP 3389: RDP reflection attacks</p>
      * <p>    *   UDP 11211: memcached reflection attacks</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
@@ -32,7 +34,9 @@ public class ConfigUdpReflectRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
