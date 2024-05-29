@@ -43,6 +43,9 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
     }
 
     public static class UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting extends TeaModel {
+        @NameInMap("CloudRecordOwnerUserId")
+        public String cloudRecordOwnerUserId;
+
         @NameInMap("EnableChat")
         public Integer enableChat;
 
@@ -58,12 +61,32 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         @NameInMap("LockNick")
         public Integer lockNick;
 
+        @NameInMap("MinutesOwnerUserId")
+        public String minutesOwnerUserId;
+
+        @NameInMap("PushAllMeetingRecords")
+        public Boolean pushAllMeetingRecords;
+
+        @NameInMap("PushCloudRecordCard")
+        public Boolean pushCloudRecordCard;
+
+        @NameInMap("PushMinutesCard")
+        public Boolean pushMinutesCard;
+
         @NameInMap("WaitingRoom")
         public Integer waitingRoom;
 
         public static UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting build(java.util.Map<String, ?> map) throws Exception {
             UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting self = new UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setCloudRecordOwnerUserId(String cloudRecordOwnerUserId) {
+            this.cloudRecordOwnerUserId = cloudRecordOwnerUserId;
+            return this;
+        }
+        public String getCloudRecordOwnerUserId() {
+            return this.cloudRecordOwnerUserId;
         }
 
         public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setEnableChat(Integer enableChat) {
@@ -104,6 +127,38 @@ public class UpdateScheduleConfSettingsRequest extends TeaModel {
         }
         public Integer getLockNick() {
             return this.lockNick;
+        }
+
+        public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setMinutesOwnerUserId(String minutesOwnerUserId) {
+            this.minutesOwnerUserId = minutesOwnerUserId;
+            return this;
+        }
+        public String getMinutesOwnerUserId() {
+            return this.minutesOwnerUserId;
+        }
+
+        public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setPushAllMeetingRecords(Boolean pushAllMeetingRecords) {
+            this.pushAllMeetingRecords = pushAllMeetingRecords;
+            return this;
+        }
+        public Boolean getPushAllMeetingRecords() {
+            return this.pushAllMeetingRecords;
+        }
+
+        public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setPushCloudRecordCard(Boolean pushCloudRecordCard) {
+            this.pushCloudRecordCard = pushCloudRecordCard;
+            return this;
+        }
+        public Boolean getPushCloudRecordCard() {
+            return this.pushCloudRecordCard;
+        }
+
+        public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setPushMinutesCard(Boolean pushMinutesCard) {
+            this.pushMinutesCard = pushMinutesCard;
+            return this;
+        }
+        public Boolean getPushMinutesCard() {
+            return this.pushMinutesCard;
         }
 
         public UpdateScheduleConfSettingsRequestScheduleConfSettingModelMoziConfVirtualExtraSetting setWaitingRoom(Integer waitingRoom) {
