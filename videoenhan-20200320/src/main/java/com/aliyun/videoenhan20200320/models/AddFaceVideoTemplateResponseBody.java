@@ -79,6 +79,9 @@ public class AddFaceVideoTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         public String templateId;
 
+        @NameInMap("TransResult")
+        public String transResult;
+
         public static AddFaceVideoTemplateResponseBodyDate build(java.util.Map<String, ?> map) throws Exception {
             AddFaceVideoTemplateResponseBodyDate self = new AddFaceVideoTemplateResponseBodyDate();
             return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class AddFaceVideoTemplateResponseBody extends TeaModel {
         }
         public String getTemplateId() {
             return this.templateId;
+        }
+
+        public AddFaceVideoTemplateResponseBodyDate setTransResult(String transResult) {
+            this.transResult = transResult;
+            return this;
+        }
+        public String getTransResult() {
+            return this.transResult;
         }
 
     }

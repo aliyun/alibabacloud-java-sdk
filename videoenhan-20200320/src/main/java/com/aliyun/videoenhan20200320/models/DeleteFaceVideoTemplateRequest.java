@@ -4,6 +4,9 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class DeleteFaceVideoTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

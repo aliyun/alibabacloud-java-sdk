@@ -4,12 +4,18 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AbstractEcommerceVideoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Duration")
     public Float duration;
 
     @NameInMap("Height")
     public Integer height;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 

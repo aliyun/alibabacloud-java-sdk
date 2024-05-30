@@ -4,6 +4,9 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ReduceVideoNoiseAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 

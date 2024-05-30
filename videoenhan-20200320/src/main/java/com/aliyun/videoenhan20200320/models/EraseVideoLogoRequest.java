@@ -7,6 +7,9 @@ public class EraseVideoLogoRequest extends TeaModel {
     @NameInMap("Boxes")
     public java.util.List<EraseVideoLogoRequestBoxes> boxes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 

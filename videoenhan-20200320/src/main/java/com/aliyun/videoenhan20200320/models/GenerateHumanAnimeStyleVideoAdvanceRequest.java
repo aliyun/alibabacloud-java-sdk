@@ -4,9 +4,15 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateHumanAnimeStyleVideoAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CartoonStyle")
     public String cartoonStyle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 

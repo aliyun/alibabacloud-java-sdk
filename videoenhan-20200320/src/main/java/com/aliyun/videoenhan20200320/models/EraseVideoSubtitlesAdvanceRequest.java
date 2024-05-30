@@ -16,6 +16,9 @@ public class EraseVideoSubtitlesAdvanceRequest extends TeaModel {
     @NameInMap("BY")
     public Float BY;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 

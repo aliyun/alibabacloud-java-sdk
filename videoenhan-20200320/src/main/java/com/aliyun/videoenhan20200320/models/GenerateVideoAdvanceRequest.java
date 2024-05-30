@@ -12,6 +12,8 @@ public class GenerateVideoAdvanceRequest extends TeaModel {
 
     /**
      * <p>1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileList")
     public java.util.List<GenerateVideoAdvanceRequestFileList> fileList;
@@ -134,12 +136,21 @@ public class GenerateVideoAdvanceRequest extends TeaModel {
     }
 
     public static class GenerateVideoAdvanceRequestFileList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FileUrl")
         public java.io.InputStream fileUrlObject;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

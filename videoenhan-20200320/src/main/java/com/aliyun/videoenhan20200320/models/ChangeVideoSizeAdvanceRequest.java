@@ -16,6 +16,9 @@ public class ChangeVideoSizeAdvanceRequest extends TeaModel {
     @NameInMap("G")
     public Integer g;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Height")
     public Integer height;
 
@@ -25,9 +28,15 @@ public class ChangeVideoSizeAdvanceRequest extends TeaModel {
     @NameInMap("Tightness")
     public Float tightness;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Width")
     public Integer width;
 

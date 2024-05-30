@@ -16,6 +16,9 @@ public class AdjustVideoColorRequest extends TeaModel {
     @NameInMap("VideoFormat")
     public String videoFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 

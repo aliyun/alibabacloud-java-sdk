@@ -7,6 +7,9 @@ public class AddFaceVideoTemplateAdvanceRequest extends TeaModel {
     @NameInMap("VideoScene")
     public String videoScene;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoURL")
     public java.io.InputStream videoURLObject;
 
