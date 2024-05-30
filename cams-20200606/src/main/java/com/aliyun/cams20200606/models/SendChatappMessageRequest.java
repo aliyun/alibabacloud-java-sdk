@@ -10,6 +10,8 @@ public class SendChatappMessageRequest extends TeaModel {
      * <p>*   **whatsapp**</p>
      * <p>*   **viber**</p>
      * <p>*   line. The feature that ChatAPP sends messages by using Line is under development.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
@@ -91,7 +93,6 @@ public class SendChatappMessageRequest extends TeaModel {
      * <p><props="china"></p>
      * <br>
      * <p>> 中国站此字段无效</p>
-     * <p></props></p>
      */
     @NameInMap("FallBackRule")
     public String fallBackRule;
@@ -106,6 +107,8 @@ public class SendChatappMessageRequest extends TeaModel {
      * <p>The phone number of the message sender.</p>
      * <br>
      * <p>> You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the ChatAPP console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
@@ -123,7 +126,7 @@ public class SendChatappMessageRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The language that is used in the message template. This parameter is required only if you set the Type parameter to **template**. For more information about language codes, see [Language codes](~~463420~~).</p>
+     * <p>The language that is used in the message template. This parameter is required only if you set the Type parameter to **template**. For more information about language codes, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
      */
     @NameInMap("Language")
     public String language;
@@ -156,7 +159,7 @@ public class SendChatappMessageRequest extends TeaModel {
      * <p>*   **text_video_button**: a message that contains multiple media objects, including text, video, and button.</p>
      * <p>*   **text_image**: a message that contains the text and image media objects.</p>
      * <br>
-     * <p>> For more information, see [Parameters of a message template](~~454530~~).</p>
+     * <p>> For more information, see [Parameters of a message template](https://help.aliyun.com/document_detail/454530.html).</p>
      */
     @NameInMap("MessageType")
     public String messageType;
@@ -202,6 +205,8 @@ public class SendChatappMessageRequest extends TeaModel {
 
     /**
      * <p>The phone number that receives the message.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("To")
     public String to;
@@ -223,6 +228,8 @@ public class SendChatappMessageRequest extends TeaModel {
      * <br>
      * <p>*   **template**: a template message. A template message is sent based on a template that is created in the ChatAPP console and is approved. You can send template messages at any time based on your business requirements.</p>
      * <p>*   **message**: a custom message. You can send a custom message to a user only within 24 hours after you receive the last message from the user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

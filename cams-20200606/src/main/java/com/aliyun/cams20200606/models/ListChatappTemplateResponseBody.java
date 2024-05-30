@@ -11,7 +11,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
      * <p>The HTTP status code returned.</p>
      * <br>
      * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
      */
     @NameInMap("Code")
     public String code;
@@ -128,7 +128,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+         * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
          */
         @NameInMap("Language")
         public String language;

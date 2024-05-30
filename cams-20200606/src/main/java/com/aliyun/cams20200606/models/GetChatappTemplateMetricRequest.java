@@ -12,6 +12,8 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("End")
     public Long end;
@@ -40,12 +42,16 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Start")
     public Long start;
 
     /**
      * <p>The template code.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;

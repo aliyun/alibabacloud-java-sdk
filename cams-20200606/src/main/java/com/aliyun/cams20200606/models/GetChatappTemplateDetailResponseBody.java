@@ -11,7 +11,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
      * <p>The HTTP status code.</p>
      * <br>
      * <p>*   Example: OK. This value indicates that the request is successful.</p>
-     * <p>*   Other codes indicate that the request fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   Other codes indicate that the request fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
      */
     @NameInMap("Code")
     public String code;
@@ -892,7 +892,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         public java.util.Map<String, String> example;
 
         /**
-         * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+         * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
          */
         @NameInMap("Language")
         public String language;

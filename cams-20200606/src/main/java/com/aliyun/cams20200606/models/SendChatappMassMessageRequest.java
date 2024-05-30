@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class SendChatappMassMessageRequest extends TeaModel {
     /**
      * <p>The channel type. Valid values: whatsapp, viber, and line.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
@@ -52,6 +54,8 @@ public class SendChatappMassMessageRequest extends TeaModel {
 
     /**
      * <p>The phone number of the message sender.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("From")
     public String from;
@@ -69,13 +73,17 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The language. For more information about language codes, see [Language codes](~~463420~~).</p>
+     * <p>The language. For more information about language codes, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The phone numbers to which the message is sent.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SenderList")
     public java.util.List<SendChatappMassMessageRequestSenderList> senderList;
@@ -396,6 +404,8 @@ public class SendChatappMassMessageRequest extends TeaModel {
 
         /**
          * <p>The phone number to which the message is sent.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("To")
         public String to;

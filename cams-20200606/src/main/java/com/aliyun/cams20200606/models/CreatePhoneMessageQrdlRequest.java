@@ -7,12 +7,21 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GenerateQrImage")
     public String generateQrImage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PrefilledMessage")
     public String prefilledMessage;
 

@@ -21,6 +21,8 @@ public class GetWhatsappConnectionCatalogRequest extends TeaModel {
 
     /**
      * <p>The WABA ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

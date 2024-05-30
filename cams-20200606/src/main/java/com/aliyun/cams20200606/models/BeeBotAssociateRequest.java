@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class BeeBotAssociateRequest extends TeaModel {
     /**
      * <p>The ID of a bot instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;

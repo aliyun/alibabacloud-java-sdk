@@ -28,6 +28,8 @@ public class CreateChatappTemplateRequest extends TeaModel {
      * <p>*   **text_video**: the template that contains text and videos</p>
      * <p>*   **text_video_button**: the template that contains text, videos, and buttons</p>
      * <p>*   **text_image**: the template that contains text and images</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -36,6 +38,8 @@ public class CreateChatappTemplateRequest extends TeaModel {
      * <p>The components of the message template.</p>
      * <br>
      * <p>>  If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter must be empty.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Components")
     public java.util.List<CreateChatappTemplateRequestComponents> components;
@@ -68,7 +72,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Language")
     public String language;
@@ -83,6 +89,8 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     /**
      * <p>The name of the message template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -93,6 +101,8 @@ public class CreateChatappTemplateRequest extends TeaModel {
      * <p>*   **WHATSAPP**</p>
      * <p>*   **VIBER**</p>
      * <p>*   LINE: the Line message template. This type of message template will be released later.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;
@@ -257,6 +267,8 @@ public class CreateChatappTemplateRequest extends TeaModel {
          * <p>*   If Category is set to AUTHENTICATION for a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the device. The value of Text indicates that you must manually copy the verification code.</p>
          * <br>
          * <p>*   You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -394,6 +406,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -460,6 +475,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -514,6 +532,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
 
     public static class CreateChatappTemplateRequestComponentsCards extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("CardComponents")
         public java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponents> cardComponents;
 
@@ -631,6 +652,8 @@ public class CreateChatappTemplateRequest extends TeaModel {
          * <p>*   **FOOTER** components are not supported in Viber message templates.</p>
          * <br>
          * <p>*   In Viber message templates, media resources such as images, videos, and documents are placed in the **HEADER** component. If a Viber message contains both text and an image, the image is placed below the text in the message received on a device.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;

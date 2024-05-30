@@ -16,6 +16,15 @@ public class QueryChatappBindWabaRequest extends TeaModel {
     @NameInMap("IsvCode")
     public String isvCode;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static QueryChatappBindWabaRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryChatappBindWabaRequest self = new QueryChatappBindWabaRequest();
         return TeaModel.build(map, self);
@@ -35,6 +44,30 @@ public class QueryChatappBindWabaRequest extends TeaModel {
     }
     public String getIsvCode() {
         return this.isvCode;
+    }
+
+    public QueryChatappBindWabaRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public QueryChatappBindWabaRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryChatappBindWabaRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

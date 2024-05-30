@@ -28,6 +28,8 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
      * <p>*   **text_video**: the template that contains text and videos</p>
      * <p>*   **text_video_button**: the template that contains text, videos, and buttons</p>
      * <p>*   **text_image**: the template that contains text and images</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -36,6 +38,8 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
      * <p>The components of the message template.</p>
      * <br>
      * <p>>  If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter must be empty.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Components")
     public String componentsShrink;
@@ -68,7 +72,9 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Language")
     public String language;
@@ -83,6 +89,8 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the message template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -93,6 +101,8 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
      * <p>*   **WHATSAPP**</p>
      * <p>*   **VIBER**</p>
      * <p>*   LINE: the Line message template. This type of message template will be released later.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

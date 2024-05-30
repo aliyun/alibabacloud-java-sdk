@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ChatappPhoneNumberRegisterRequest extends TeaModel {
     /**
      * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The phone number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

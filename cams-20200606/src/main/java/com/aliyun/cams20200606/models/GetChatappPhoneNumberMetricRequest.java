@@ -12,6 +12,8 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("End")
     public Long end;
@@ -36,6 +38,8 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Start")
     public Long start;

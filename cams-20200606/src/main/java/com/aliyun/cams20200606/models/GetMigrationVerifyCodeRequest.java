@@ -4,15 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetMigrationVerifyCodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Locale")
     public String locale;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

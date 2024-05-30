@@ -14,7 +14,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
      * <p>The HTTP status code returned.</p>
      * <br>
      * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
      */
     @NameInMap("Code")
     public String code;
@@ -36,6 +36,9 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static QueryChatappBindWabaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryChatappBindWabaResponseBody self = new QueryChatappBindWabaResponseBody();
@@ -82,6 +85,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryChatappBindWabaResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class QueryChatappBindWabaResponseBodyData extends TeaModel {
         /**
          * <p>The review state of the WhatsApp Business account (WABA).</p>
@@ -98,6 +109,9 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
          */
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
+
+        @NameInMap("AuthInternationalRateEligibility")
+        public java.util.Map<String, ?> authInternationalRateEligibility;
 
         /**
          * <p>The currency.</p>
@@ -123,6 +137,9 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("PrimaryBusinessLocation")
+        public String primaryBusinessLocation;
+
         public static QueryChatappBindWabaResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryChatappBindWabaResponseBodyData self = new QueryChatappBindWabaResponseBodyData();
             return TeaModel.build(map, self);
@@ -134,6 +151,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
         public String getAccountReviewStatus() {
             return this.accountReviewStatus;
+        }
+
+        public QueryChatappBindWabaResponseBodyData setAuthInternationalRateEligibility(java.util.Map<String, ?> authInternationalRateEligibility) {
+            this.authInternationalRateEligibility = authInternationalRateEligibility;
+            return this;
+        }
+        public java.util.Map<String, ?> getAuthInternationalRateEligibility() {
+            return this.authInternationalRateEligibility;
         }
 
         public QueryChatappBindWabaResponseBodyData setCurrency(String currency) {
@@ -166,6 +191,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryChatappBindWabaResponseBodyData setPrimaryBusinessLocation(String primaryBusinessLocation) {
+            this.primaryBusinessLocation = primaryBusinessLocation;
+            return this;
+        }
+        public String getPrimaryBusinessLocation() {
+            return this.primaryBusinessLocation;
         }
 
     }

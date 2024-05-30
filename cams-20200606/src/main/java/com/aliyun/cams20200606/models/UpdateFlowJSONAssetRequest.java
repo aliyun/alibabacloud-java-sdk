@@ -7,11 +7,16 @@ public class UpdateFlowJSONAssetRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
     /**
      * <p>Flow ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FlowId")
     public String flowId;
