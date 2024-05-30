@@ -116,6 +116,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataInternet extends TeaModel {
+        @NameInMap("HttpsCaCertId")
+        public String httpsCaCertId;
+
         /**
          * <p>The supported protocol.</p>
          */
@@ -143,6 +146,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static DescribeApplicationSlbsResponseBodyDataInternet build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyDataInternet self = new DescribeApplicationSlbsResponseBodyDataInternet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setHttpsCaCertId(String httpsCaCertId) {
+            this.httpsCaCertId = httpsCaCertId;
+            return this;
+        }
+        public String getHttpsCaCertId() {
+            return this.httpsCaCertId;
         }
 
         public DescribeApplicationSlbsResponseBodyDataInternet setHttpsCertId(String httpsCertId) {
@@ -180,6 +191,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataIntranet extends TeaModel {
+        @NameInMap("HttpsCaCertId")
+        public String httpsCaCertId;
+
         /**
          * <p>The supported protocol.</p>
          */
@@ -207,6 +221,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static DescribeApplicationSlbsResponseBodyDataIntranet build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyDataIntranet self = new DescribeApplicationSlbsResponseBodyDataIntranet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setHttpsCaCertId(String httpsCaCertId) {
+            this.httpsCaCertId = httpsCaCertId;
+            return this;
+        }
+        public String getHttpsCaCertId() {
+            return this.httpsCaCertId;
         }
 
         public DescribeApplicationSlbsResponseBodyDataIntranet setHttpsCertId(String httpsCertId) {
