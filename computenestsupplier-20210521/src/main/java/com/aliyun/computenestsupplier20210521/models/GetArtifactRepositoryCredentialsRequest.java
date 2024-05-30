@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactRepositoryCredentialsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ArtifactType")
     public String artifactType;
 

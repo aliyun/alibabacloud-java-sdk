@@ -7,12 +7,18 @@ public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Commodity")
+    public String commodityShrink;
+
     @NameInMap("Parameters")
     public String parametersShrink;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
@@ -39,6 +45,14 @@ public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public GetServiceEstimateCostShrinkRequest setCommodityShrink(String commodityShrink) {
+        this.commodityShrink = commodityShrink;
+        return this;
+    }
+    public String getCommodityShrink() {
+        return this.commodityShrink;
     }
 
     public GetServiceEstimateCostShrinkRequest setParametersShrink(String parametersShrink) {

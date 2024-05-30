@@ -7,12 +7,21 @@ public class DeleteServiceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 

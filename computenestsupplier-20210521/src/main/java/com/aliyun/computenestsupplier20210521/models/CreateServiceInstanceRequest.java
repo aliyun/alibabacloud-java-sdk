@@ -10,6 +10,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -19,12 +22,18 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 

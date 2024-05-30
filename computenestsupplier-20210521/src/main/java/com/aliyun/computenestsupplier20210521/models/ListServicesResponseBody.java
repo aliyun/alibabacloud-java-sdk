@@ -64,6 +64,47 @@ public class ListServicesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListServicesResponseBodyServicesCommodity extends TeaModel {
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
+        @NameInMap("SaasBoostMetadata")
+        public String saasBoostMetadata;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListServicesResponseBodyServicesCommodity build(java.util.Map<String, ?> map) throws Exception {
+            ListServicesResponseBodyServicesCommodity self = new ListServicesResponseBodyServicesCommodity();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyServicesCommodity setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
+        public ListServicesResponseBodyServicesCommodity setSaasBoostMetadata(String saasBoostMetadata) {
+            this.saasBoostMetadata = saasBoostMetadata;
+            return this;
+        }
+        public String getSaasBoostMetadata() {
+            return this.saasBoostMetadata;
+        }
+
+        public ListServicesResponseBodyServicesCommodity setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListServicesResponseBodyServicesServiceInfos extends TeaModel {
         @NameInMap("Image")
         public String image;
@@ -156,8 +197,14 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("ArtifactVersion")
         public String artifactVersion;
 
+        @NameInMap("BuildInfo")
+        public String buildInfo;
+
         @NameInMap("Categories")
         public String categories;
+
+        @NameInMap("Commodity")
+        public ListServicesResponseBodyServicesCommodity commodity;
 
         @NameInMap("CommodityCode")
         public String commodityCode;
@@ -281,12 +328,28 @@ public class ListServicesResponseBody extends TeaModel {
             return this.artifactVersion;
         }
 
+        public ListServicesResponseBodyServices setBuildInfo(String buildInfo) {
+            this.buildInfo = buildInfo;
+            return this;
+        }
+        public String getBuildInfo() {
+            return this.buildInfo;
+        }
+
         public ListServicesResponseBodyServices setCategories(String categories) {
             this.categories = categories;
             return this;
         }
         public String getCategories() {
             return this.categories;
+        }
+
+        public ListServicesResponseBodyServices setCommodity(ListServicesResponseBodyServicesCommodity commodity) {
+            this.commodity = commodity;
+            return this;
+        }
+        public ListServicesResponseBodyServicesCommodity getCommodity() {
+            return this.commodity;
         }
 
         public ListServicesResponseBodyServices setCommodityCode(String commodityCode) {

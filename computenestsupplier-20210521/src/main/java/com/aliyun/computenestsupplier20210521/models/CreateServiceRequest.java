@@ -19,6 +19,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("DeployMetadata")
     public String deployMetadata;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeployType")
     public String deployType;
 
@@ -40,6 +43,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("PolicyNames")
     public String policyNames;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -332,12 +338,18 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Locale")
         public String locale;
 
         @NameInMap("LongDescriptionUrl")
         public String longDescriptionUrl;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 

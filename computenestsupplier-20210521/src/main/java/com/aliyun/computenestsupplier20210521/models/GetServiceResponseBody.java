@@ -10,8 +10,8 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ApprovalType")
     public String approvalType;
 
-    @NameInMap("BillEntityMappings")
-    public GetServiceResponseBodyBillEntityMappings billEntityMappings;
+    @NameInMap("BuildInfo")
+    public String buildInfo;
 
     @NameInMap("Categories")
     public String categories;
@@ -21,15 +21,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("CommodityCode")
     public String commodityCode;
-
-    @NameInMap("CommodityEntities")
-    public java.util.List<GetServiceResponseBodyCommodityEntities> commodityEntities;
-
-    @NameInMap("CommoditySpecifications")
-    public java.util.List<GetServiceResponseBodyCommoditySpecifications> commoditySpecifications;
-
-    @NameInMap("ComponentsConfigs")
-    public java.util.List<GetServiceResponseBodyComponentsConfigs> componentsConfigs;
 
     @NameInMap("CreateTime")
     public String createTime;
@@ -48,9 +39,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("Duration")
     public Long duration;
-
-    @NameInMap("EntityAdditionalInfo")
-    public java.util.Map<String, EntityAdditionalInfoValue> entityAdditionalInfo;
 
     @NameInMap("EntitySource")
     public java.util.Map<String, String> entitySource;
@@ -202,12 +190,12 @@ public class GetServiceResponseBody extends TeaModel {
         return this.approvalType;
     }
 
-    public GetServiceResponseBody setBillEntityMappings(GetServiceResponseBodyBillEntityMappings billEntityMappings) {
-        this.billEntityMappings = billEntityMappings;
+    public GetServiceResponseBody setBuildInfo(String buildInfo) {
+        this.buildInfo = buildInfo;
         return this;
     }
-    public GetServiceResponseBodyBillEntityMappings getBillEntityMappings() {
-        return this.billEntityMappings;
+    public String getBuildInfo() {
+        return this.buildInfo;
     }
 
     public GetServiceResponseBody setCategories(String categories) {
@@ -232,30 +220,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
-    }
-
-    public GetServiceResponseBody setCommodityEntities(java.util.List<GetServiceResponseBodyCommodityEntities> commodityEntities) {
-        this.commodityEntities = commodityEntities;
-        return this;
-    }
-    public java.util.List<GetServiceResponseBodyCommodityEntities> getCommodityEntities() {
-        return this.commodityEntities;
-    }
-
-    public GetServiceResponseBody setCommoditySpecifications(java.util.List<GetServiceResponseBodyCommoditySpecifications> commoditySpecifications) {
-        this.commoditySpecifications = commoditySpecifications;
-        return this;
-    }
-    public java.util.List<GetServiceResponseBodyCommoditySpecifications> getCommoditySpecifications() {
-        return this.commoditySpecifications;
-    }
-
-    public GetServiceResponseBody setComponentsConfigs(java.util.List<GetServiceResponseBodyComponentsConfigs> componentsConfigs) {
-        this.componentsConfigs = componentsConfigs;
-        return this;
-    }
-    public java.util.List<GetServiceResponseBodyComponentsConfigs> getComponentsConfigs() {
-        return this.componentsConfigs;
     }
 
     public GetServiceResponseBody setCreateTime(String createTime) {
@@ -304,14 +268,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public Long getDuration() {
         return this.duration;
-    }
-
-    public GetServiceResponseBody setEntityAdditionalInfo(java.util.Map<String, EntityAdditionalInfoValue> entityAdditionalInfo) {
-        this.entityAdditionalInfo = entityAdditionalInfo;
-        return this;
-    }
-    public java.util.Map<String, EntityAdditionalInfoValue> getEntityAdditionalInfo() {
-        return this.entityAdditionalInfo;
     }
 
     public GetServiceResponseBody setEntitySource(java.util.Map<String, String> entitySource) {
@@ -658,79 +614,27 @@ public class GetServiceResponseBody extends TeaModel {
         return this.virtualInternetServiceId;
     }
 
-    public static class GetServiceResponseBodyBillEntityMappingsMappingConfigMappings extends TeaModel {
-        @NameInMap("BillCode")
-        public String billCode;
-
-        @NameInMap("Entity")
-        public String entity;
-
-        @NameInMap("MeteringAssist")
-        public String meteringAssist;
-
-        public static GetServiceResponseBodyBillEntityMappingsMappingConfigMappings build(java.util.Map<String, ?> map) throws Exception {
-            GetServiceResponseBodyBillEntityMappingsMappingConfigMappings self = new GetServiceResponseBodyBillEntityMappingsMappingConfigMappings();
-            return TeaModel.build(map, self);
-        }
-
-        public GetServiceResponseBodyBillEntityMappingsMappingConfigMappings setBillCode(String billCode) {
-            this.billCode = billCode;
-            return this;
-        }
-        public String getBillCode() {
-            return this.billCode;
-        }
-
-        public GetServiceResponseBodyBillEntityMappingsMappingConfigMappings setEntity(String entity) {
-            this.entity = entity;
-            return this;
-        }
-        public String getEntity() {
-            return this.entity;
-        }
-
-        public GetServiceResponseBodyBillEntityMappingsMappingConfigMappings setMeteringAssist(String meteringAssist) {
-            this.meteringAssist = meteringAssist;
-            return this;
-        }
-        public String getMeteringAssist() {
-            return this.meteringAssist;
-        }
-
-    }
-
-    public static class GetServiceResponseBodyBillEntityMappingsMappingConfig extends TeaModel {
+    public static class GetServiceResponseBodyCommodityCssMetadataComponentsMappings extends TeaModel {
         @NameInMap("Mappings")
-        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfigMappings> mappings;
-
-        @NameInMap("PredefinedParameters")
-        public String predefinedParameters;
+        public java.util.Map<String, String> mappings;
 
         @NameInMap("TemplateName")
         public String templateName;
 
-        public static GetServiceResponseBodyBillEntityMappingsMappingConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetServiceResponseBodyBillEntityMappingsMappingConfig self = new GetServiceResponseBodyBillEntityMappingsMappingConfig();
+        public static GetServiceResponseBodyCommodityCssMetadataComponentsMappings build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityCssMetadataComponentsMappings self = new GetServiceResponseBodyCommodityCssMetadataComponentsMappings();
             return TeaModel.build(map, self);
         }
 
-        public GetServiceResponseBodyBillEntityMappingsMappingConfig setMappings(java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfigMappings> mappings) {
+        public GetServiceResponseBodyCommodityCssMetadataComponentsMappings setMappings(java.util.Map<String, String> mappings) {
             this.mappings = mappings;
             return this;
         }
-        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfigMappings> getMappings() {
+        public java.util.Map<String, String> getMappings() {
             return this.mappings;
         }
 
-        public GetServiceResponseBodyBillEntityMappingsMappingConfig setPredefinedParameters(String predefinedParameters) {
-            this.predefinedParameters = predefinedParameters;
-            return this;
-        }
-        public String getPredefinedParameters() {
-            return this.predefinedParameters;
-        }
-
-        public GetServiceResponseBodyBillEntityMappingsMappingConfig setTemplateName(String templateName) {
+        public GetServiceResponseBodyCommodityCssMetadataComponentsMappings setTemplateName(String templateName) {
             this.templateName = templateName;
             return this;
         }
@@ -740,27 +644,49 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
 
-    public static class GetServiceResponseBodyBillEntityMappings extends TeaModel {
-        @NameInMap("MappingConfig")
-        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfig> mappingConfig;
+    public static class GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos extends TeaModel {
+        @NameInMap("EntityId")
+        public String entityId;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Promql")
+        public String promql;
 
         @NameInMap("Type")
         public String type;
 
-        public static GetServiceResponseBodyBillEntityMappings build(java.util.Map<String, ?> map) throws Exception {
-            GetServiceResponseBodyBillEntityMappings self = new GetServiceResponseBodyBillEntityMappings();
+        public static GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos self = new GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos();
             return TeaModel.build(map, self);
         }
 
-        public GetServiceResponseBodyBillEntityMappings setMappingConfig(java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfig> mappingConfig) {
-            this.mappingConfig = mappingConfig;
+        public GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos setEntityId(String entityId) {
+            this.entityId = entityId;
             return this;
         }
-        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfig> getMappingConfig() {
-            return this.mappingConfig;
+        public String getEntityId() {
+            return this.entityId;
         }
 
-        public GetServiceResponseBodyBillEntityMappings setType(String type) {
+        public GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos setPromql(String promql) {
+            this.promql = promql;
+            return this;
+        }
+        public String getPromql() {
+            return this.promql;
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos setType(String type) {
             this.type = type;
             return this;
         }
@@ -770,15 +696,369 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
 
+    public static class GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings extends TeaModel {
+        @NameInMap("EntityIds")
+        public String entityIds;
+
+        @NameInMap("SpecificationName")
+        public String specificationName;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        public static GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings self = new GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings setEntityIds(String entityIds) {
+            this.entityIds = entityIds;
+            return this;
+        }
+        public String getEntityIds() {
+            return this.entityIds;
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings setSpecificationName(String specificationName) {
+            this.specificationName = specificationName;
+            return this;
+        }
+        public String getSpecificationName() {
+            return this.specificationName;
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommodityCssMetadata extends TeaModel {
+        @NameInMap("ComponentsMappings")
+        public java.util.List<GetServiceResponseBodyCommodityCssMetadataComponentsMappings> componentsMappings;
+
+        @NameInMap("MeteringEntityExtraInfos")
+        public java.util.List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos;
+
+        @NameInMap("MeteringEntityMappings")
+        public java.util.List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings> meteringEntityMappings;
+
+        public static GetServiceResponseBodyCommodityCssMetadata build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityCssMetadata self = new GetServiceResponseBodyCommodityCssMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadata setComponentsMappings(java.util.List<GetServiceResponseBodyCommodityCssMetadataComponentsMappings> componentsMappings) {
+            this.componentsMappings = componentsMappings;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommodityCssMetadataComponentsMappings> getComponentsMappings() {
+            return this.componentsMappings;
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadata setMeteringEntityExtraInfos(java.util.List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos) {
+            this.meteringEntityExtraInfos = meteringEntityExtraInfos;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+            return this.meteringEntityExtraInfos;
+        }
+
+        public GetServiceResponseBodyCommodityCssMetadata setMeteringEntityMappings(java.util.List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings> meteringEntityMappings) {
+            this.meteringEntityMappings = meteringEntityMappings;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings> getMeteringEntityMappings() {
+            return this.meteringEntityMappings;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos extends TeaModel {
+        @NameInMap("EntityId")
+        public String entityId;
+
+        @NameInMap("MetricName")
+        public String metricName;
+
+        @NameInMap("Promql")
+        public String promql;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos self = new GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos setPromql(String promql) {
+            this.promql = promql;
+            return this;
+        }
+        public String getPromql() {
+            return this.promql;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings extends TeaModel {
+        @NameInMap("EntityIds")
+        public String entityIds;
+
+        @NameInMap("SpecificationName")
+        public String specificationName;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        public static GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings self = new GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings setEntityIds(String entityIds) {
+            this.entityIds = entityIds;
+            return this;
+        }
+        public String getEntityIds() {
+            return this.entityIds;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings setSpecificationName(String specificationName) {
+            this.specificationName = specificationName;
+            return this;
+        }
+        public String getSpecificationName() {
+            return this.specificationName;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings extends TeaModel {
+        @NameInMap("SpecificationCode")
+        public String specificationCode;
+
+        @NameInMap("SpecificationName")
+        public String specificationName;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        @NameInMap("TrialType")
+        public String trialType;
+
+        public static GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings self = new GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings setSpecificationCode(String specificationCode) {
+            this.specificationCode = specificationCode;
+            return this;
+        }
+        public String getSpecificationCode() {
+            return this.specificationCode;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings setSpecificationName(String specificationName) {
+            this.specificationName = specificationName;
+            return this;
+        }
+        public String getSpecificationName() {
+            return this.specificationName;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings setTrialType(String trialType) {
+            this.trialType = trialType;
+            return this;
+        }
+        public String getTrialType() {
+            return this.trialType;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommodityMarketplaceMetadata extends TeaModel {
+        @NameInMap("MeteringEntityExtraInfos")
+        public java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos;
+
+        @NameInMap("MeteringEntityMappings")
+        public java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings> meteringEntityMappings;
+
+        @NameInMap("SpecificationMappings")
+        public java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings> specificationMappings;
+
+        public static GetServiceResponseBodyCommodityMarketplaceMetadata build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityMarketplaceMetadata self = new GetServiceResponseBodyCommodityMarketplaceMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadata setMeteringEntityExtraInfos(java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos) {
+            this.meteringEntityExtraInfos = meteringEntityExtraInfos;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+            return this.meteringEntityExtraInfos;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadata setMeteringEntityMappings(java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings> meteringEntityMappings) {
+            this.meteringEntityMappings = meteringEntityMappings;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings> getMeteringEntityMappings() {
+            return this.meteringEntityMappings;
+        }
+
+        public GetServiceResponseBodyCommodityMarketplaceMetadata setSpecificationMappings(java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings> specificationMappings) {
+            this.specificationMappings = specificationMappings;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings> getSpecificationMappings() {
+            return this.specificationMappings;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommodityMeteringEntities extends TeaModel {
+        @NameInMap("EntityId")
+        public String entityId;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetServiceResponseBodyCommodityMeteringEntities build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommodityMeteringEntities self = new GetServiceResponseBodyCommodityMeteringEntities();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommodityMeteringEntities setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public GetServiceResponseBodyCommodityMeteringEntities setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyCommoditySpecifications extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Times")
+        public java.util.List<String> times;
+
+        public static GetServiceResponseBodyCommoditySpecifications build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyCommoditySpecifications self = new GetServiceResponseBodyCommoditySpecifications();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyCommoditySpecifications setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetServiceResponseBodyCommoditySpecifications setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetServiceResponseBodyCommoditySpecifications setTimes(java.util.List<String> times) {
+            this.times = times;
+            return this;
+        }
+        public java.util.List<String> getTimes() {
+            return this.times;
+        }
+
+    }
+
     public static class GetServiceResponseBodyCommodity extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
         @NameInMap("Components")
         public java.util.List<String> components;
 
-        @NameInMap("OrderTime")
-        public java.util.Map<String, java.util.List<String>> orderTime;
+        @NameInMap("CssMetadata")
+        public GetServiceResponseBodyCommodityCssMetadata cssMetadata;
+
+        @NameInMap("MarketplaceMetadata")
+        public GetServiceResponseBodyCommodityMarketplaceMetadata marketplaceMetadata;
+
+        @NameInMap("MeteringEntities")
+        public java.util.List<GetServiceResponseBodyCommodityMeteringEntities> meteringEntities;
+
+        @NameInMap("SaasBoostMetadata")
+        public String saasBoostMetadata;
+
+        @NameInMap("Specifications")
+        public java.util.List<GetServiceResponseBodyCommoditySpecifications> specifications;
 
         @NameInMap("Type")
         public String type;
@@ -796,6 +1076,14 @@ public class GetServiceResponseBody extends TeaModel {
             return this.chargeType;
         }
 
+        public GetServiceResponseBodyCommodity setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
         public GetServiceResponseBodyCommodity setComponents(java.util.List<String> components) {
             this.components = components;
             return this;
@@ -804,12 +1092,44 @@ public class GetServiceResponseBody extends TeaModel {
             return this.components;
         }
 
-        public GetServiceResponseBodyCommodity setOrderTime(java.util.Map<String, java.util.List<String>> orderTime) {
-            this.orderTime = orderTime;
+        public GetServiceResponseBodyCommodity setCssMetadata(GetServiceResponseBodyCommodityCssMetadata cssMetadata) {
+            this.cssMetadata = cssMetadata;
             return this;
         }
-        public java.util.Map<String, java.util.List<String>> getOrderTime() {
-            return this.orderTime;
+        public GetServiceResponseBodyCommodityCssMetadata getCssMetadata() {
+            return this.cssMetadata;
+        }
+
+        public GetServiceResponseBodyCommodity setMarketplaceMetadata(GetServiceResponseBodyCommodityMarketplaceMetadata marketplaceMetadata) {
+            this.marketplaceMetadata = marketplaceMetadata;
+            return this;
+        }
+        public GetServiceResponseBodyCommodityMarketplaceMetadata getMarketplaceMetadata() {
+            return this.marketplaceMetadata;
+        }
+
+        public GetServiceResponseBodyCommodity setMeteringEntities(java.util.List<GetServiceResponseBodyCommodityMeteringEntities> meteringEntities) {
+            this.meteringEntities = meteringEntities;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommodityMeteringEntities> getMeteringEntities() {
+            return this.meteringEntities;
+        }
+
+        public GetServiceResponseBodyCommodity setSaasBoostMetadata(String saasBoostMetadata) {
+            this.saasBoostMetadata = saasBoostMetadata;
+            return this;
+        }
+        public String getSaasBoostMetadata() {
+            return this.saasBoostMetadata;
+        }
+
+        public GetServiceResponseBodyCommodity setSpecifications(java.util.List<GetServiceResponseBodyCommoditySpecifications> specifications) {
+            this.specifications = specifications;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyCommoditySpecifications> getSpecifications() {
+            return this.specifications;
         }
 
         public GetServiceResponseBodyCommodity setType(String type) {
@@ -818,118 +1138,6 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-    }
-
-    public static class GetServiceResponseBodyCommodityEntities extends TeaModel {
-        @NameInMap("EntityIds")
-        public java.util.List<String> entityIds;
-
-        @NameInMap("PredefinedParameterName")
-        public String predefinedParameterName;
-
-        @NameInMap("TemplateName")
-        public String templateName;
-
-        public static GetServiceResponseBodyCommodityEntities build(java.util.Map<String, ?> map) throws Exception {
-            GetServiceResponseBodyCommodityEntities self = new GetServiceResponseBodyCommodityEntities();
-            return TeaModel.build(map, self);
-        }
-
-        public GetServiceResponseBodyCommodityEntities setEntityIds(java.util.List<String> entityIds) {
-            this.entityIds = entityIds;
-            return this;
-        }
-        public java.util.List<String> getEntityIds() {
-            return this.entityIds;
-        }
-
-        public GetServiceResponseBodyCommodityEntities setPredefinedParameterName(String predefinedParameterName) {
-            this.predefinedParameterName = predefinedParameterName;
-            return this;
-        }
-        public String getPredefinedParameterName() {
-            return this.predefinedParameterName;
-        }
-
-        public GetServiceResponseBodyCommodityEntities setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-    }
-
-    public static class GetServiceResponseBodyCommoditySpecifications extends TeaModel {
-        @NameInMap("PredefinedParameterName")
-        public String predefinedParameterName;
-
-        @NameInMap("SpecificationCode")
-        public String specificationCode;
-
-        @NameInMap("TemplateName")
-        public String templateName;
-
-        public static GetServiceResponseBodyCommoditySpecifications build(java.util.Map<String, ?> map) throws Exception {
-            GetServiceResponseBodyCommoditySpecifications self = new GetServiceResponseBodyCommoditySpecifications();
-            return TeaModel.build(map, self);
-        }
-
-        public GetServiceResponseBodyCommoditySpecifications setPredefinedParameterName(String predefinedParameterName) {
-            this.predefinedParameterName = predefinedParameterName;
-            return this;
-        }
-        public String getPredefinedParameterName() {
-            return this.predefinedParameterName;
-        }
-
-        public GetServiceResponseBodyCommoditySpecifications setSpecificationCode(String specificationCode) {
-            this.specificationCode = specificationCode;
-            return this;
-        }
-        public String getSpecificationCode() {
-            return this.specificationCode;
-        }
-
-        public GetServiceResponseBodyCommoditySpecifications setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-    }
-
-    public static class GetServiceResponseBodyComponentsConfigs extends TeaModel {
-        @NameInMap("ComponentsMappings")
-        public java.util.Map<String, String> componentsMappings;
-
-        @NameInMap("TemplateName")
-        public String templateName;
-
-        public static GetServiceResponseBodyComponentsConfigs build(java.util.Map<String, ?> map) throws Exception {
-            GetServiceResponseBodyComponentsConfigs self = new GetServiceResponseBodyComponentsConfigs();
-            return TeaModel.build(map, self);
-        }
-
-        public GetServiceResponseBodyComponentsConfigs setComponentsMappings(java.util.Map<String, String> componentsMappings) {
-            this.componentsMappings = componentsMappings;
-            return this;
-        }
-        public java.util.Map<String, String> getComponentsMappings() {
-            return this.componentsMappings;
-        }
-
-        public GetServiceResponseBodyComponentsConfigs setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
         }
 
     }

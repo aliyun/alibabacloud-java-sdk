@@ -7,9 +7,15 @@ public class DeployServiceInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
