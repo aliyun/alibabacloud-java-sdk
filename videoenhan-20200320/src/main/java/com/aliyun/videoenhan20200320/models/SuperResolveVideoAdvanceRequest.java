@@ -7,6 +7,9 @@ public class SuperResolveVideoAdvanceRequest extends TeaModel {
     @NameInMap("BitRate")
     public Integer bitRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 

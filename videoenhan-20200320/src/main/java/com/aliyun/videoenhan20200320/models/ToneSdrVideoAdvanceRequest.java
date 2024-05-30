@@ -10,6 +10,9 @@ public class ToneSdrVideoAdvanceRequest extends TeaModel {
     @NameInMap("RecolorModel")
     public String recolorModel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoURL")
     public java.io.InputStream videoURLObject;
 

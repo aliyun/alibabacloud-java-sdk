@@ -10,6 +10,9 @@ public class InterpolateVideoFrameAdvanceRequest extends TeaModel {
     @NameInMap("FrameRate")
     public Integer frameRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoURL")
     public java.io.InputStream videoURLObject;
 

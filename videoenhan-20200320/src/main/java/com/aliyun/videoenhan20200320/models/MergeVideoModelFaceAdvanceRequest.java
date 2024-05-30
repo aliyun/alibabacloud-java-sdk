@@ -16,6 +16,9 @@ public class MergeVideoModelFaceAdvanceRequest extends TeaModel {
     @NameInMap("MergeInfos")
     public java.util.List<MergeVideoModelFaceAdvanceRequestMergeInfos> mergeInfos;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

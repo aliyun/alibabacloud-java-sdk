@@ -22,6 +22,9 @@ public class EnhanceVideoQualityAdvanceRequest extends TeaModel {
     @NameInMap("OutPutWidth")
     public Integer outPutWidth;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoURL")
     public java.io.InputStream videoURLObject;
 

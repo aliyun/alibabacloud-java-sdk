@@ -16,6 +16,9 @@ public class EraseVideoSubtitlesRequest extends TeaModel {
     @NameInMap("BY")
     public Float BY;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 

@@ -13,6 +13,9 @@ public class ConvertHdrVideoAdvanceRequest extends TeaModel {
     @NameInMap("MaxIlluminance")
     public Integer maxIlluminance;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoURL")
     public java.io.InputStream videoURLObject;
 

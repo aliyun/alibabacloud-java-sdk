@@ -10,9 +10,15 @@ public class MergeVideoFaceRequest extends TeaModel {
     @NameInMap("Enhance")
     public Boolean enhance;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReferenceURL")
     public String referenceURL;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VideoURL")
     public String videoURL;
 
