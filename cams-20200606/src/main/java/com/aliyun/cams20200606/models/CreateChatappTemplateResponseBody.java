@@ -11,7 +11,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
      * <p>The HTTP status code returned.</p>
      * <br>
      * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
      */
     @NameInMap("Code")
     public String code;

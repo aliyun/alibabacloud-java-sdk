@@ -15,6 +15,9 @@ public class ListChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("AuditStatus")
     public String auditStatus;
 
+    @NameInMap("Code")
+    public String code;
+
     /**
      * <p>The space ID of the user under the ISV account.</p>
      */
@@ -37,7 +40,7 @@ public class ListChatappTemplateShrinkRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
      */
     @NameInMap("Language")
     public String language;
@@ -75,6 +78,14 @@ public class ListChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    public ListChatappTemplateShrinkRequest setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListChatappTemplateShrinkRequest setCustSpaceId(String custSpaceId) {

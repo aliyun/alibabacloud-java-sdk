@@ -9,6 +9,8 @@ public class DeprecateFlowRequest extends TeaModel {
 
     /**
      * <p>Flow ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FlowId")
     public String flowId;

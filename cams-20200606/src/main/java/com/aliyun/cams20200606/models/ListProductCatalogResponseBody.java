@@ -14,7 +14,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
      * <p>The response code.</p>
      * <br>
      * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).</p>
+     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
      */
     @NameInMap("Code")
     public String code;

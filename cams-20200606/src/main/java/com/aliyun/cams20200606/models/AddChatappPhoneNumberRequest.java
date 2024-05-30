@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class AddChatappPhoneNumberRequest extends TeaModel {
     /**
      * <p>The country code.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Cc")
     public String cc;
 
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The phone number without a country code.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
@@ -30,6 +36,8 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
 
     /**
      * <p>The display name of the phone number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VerifiedName")
     public String verifiedName;

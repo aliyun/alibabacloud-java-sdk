@@ -26,6 +26,8 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
      * <p>The components of the message template.</p>
      * <br>
      * <p>>  If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the Type sub-parameter is set to BODY or FOOTER, the Text sub-parameter of the Components parameter is empty and text in the body or footer is automatically generated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Components")
     public String componentsShrink;
@@ -58,7 +60,9 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Language")
     public String language;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class BeeBotChatShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the bot instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
@@ -14,7 +16,7 @@ public class BeeBotChatShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&A based on the intent.</p>
+     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\\&A based on the intent.</p>
      */
     @NameInMap("IntentName")
     public String intentName;
@@ -57,6 +59,8 @@ public class BeeBotChatShrinkRequest extends TeaModel {
 
     /**
      * <p>The input of the visitor.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Utterance")
     public String utterance;

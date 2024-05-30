@@ -7,9 +7,15 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EncryptionPublicKey")
     public String encryptionPublicKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

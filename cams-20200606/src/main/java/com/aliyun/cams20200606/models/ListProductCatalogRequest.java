@@ -18,6 +18,8 @@ public class ListProductCatalogRequest extends TeaModel {
 
     /**
      * <p>The Business Manager ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BusinessId")
     public Long businessId;
@@ -30,7 +32,7 @@ public class ListProductCatalogRequest extends TeaModel {
 
     /**
      * <p>The fields. Separate multiple fields with commas (,).</p>
-     * <p>see  [catalog fields](~~2579419~~)</p>
+     * <p>see  [catalog fields](https://help.aliyun.com/document_detail/2579419.html)</p>
      */
     @NameInMap("Fields")
     public String fields;

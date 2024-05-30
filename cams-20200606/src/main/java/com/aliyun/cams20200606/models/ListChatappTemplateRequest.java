@@ -15,6 +15,9 @@ public class ListChatappTemplateRequest extends TeaModel {
     @NameInMap("AuditStatus")
     public String auditStatus;
 
+    @NameInMap("Code")
+    public String code;
+
     /**
      * <p>The space ID of the user under the ISV account.</p>
      */
@@ -37,7 +40,7 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+     * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
      */
     @NameInMap("Language")
     public String language;
@@ -75,6 +78,14 @@ public class ListChatappTemplateRequest extends TeaModel {
     }
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    public ListChatappTemplateRequest setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListChatappTemplateRequest setCustSpaceId(String custSpaceId) {
@@ -136,12 +147,16 @@ public class ListChatappTemplateRequest extends TeaModel {
     public static class ListChatappTemplateRequestPage extends TeaModel {
         /**
          * <p>The page number. Default value: 1.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Index")
         public Integer index;
 
         /**
          * <p>The number of entries per page. Default value: 10.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Size")
         public Integer size;

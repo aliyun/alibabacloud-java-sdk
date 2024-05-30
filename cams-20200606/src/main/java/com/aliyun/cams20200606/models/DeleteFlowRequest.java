@@ -12,6 +12,8 @@ public class DeleteFlowRequest extends TeaModel {
 
     /**
      * <p>The Flow ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FlowId")
     public String flowId;

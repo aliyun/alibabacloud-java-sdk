@@ -15,6 +15,8 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
 
     /**
      * <p>Modifies the business information of the account to which a specified phone number is bound.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -33,6 +35,8 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
 
     /**
      * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

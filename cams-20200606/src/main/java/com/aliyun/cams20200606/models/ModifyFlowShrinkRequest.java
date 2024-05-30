@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyFlowShrinkRequest extends TeaModel {
     /**
      * <p>The categories of the Flow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Categories")
     public String categoriesShrink;
@@ -24,6 +26,8 @@ public class ModifyFlowShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the Flow.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FlowName")
     public String flowName;

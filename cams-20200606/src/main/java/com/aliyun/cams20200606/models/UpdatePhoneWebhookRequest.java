@@ -4,12 +4,18 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdatePhoneWebhookRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     @NameInMap("HttpFlag")
     public String httpFlag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

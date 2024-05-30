@@ -4,12 +4,21 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappMigrationInitiateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CountryCode")
     public String countryCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MobileNumber")
     public String mobileNumber;
 

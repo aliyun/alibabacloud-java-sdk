@@ -18,6 +18,8 @@ public class ListProductRequest extends TeaModel {
 
     /**
      * <p>The catalog ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
@@ -31,7 +33,7 @@ public class ListProductRequest extends TeaModel {
     /**
      * <p>The fields. Separate multiple fields with commas (,).</p>
      * <br>
-     * <p> see [product fields](~~2579419~~)</p>
+     * <p> see [product fields](https://help.aliyun.com/document_detail/2579419.html)</p>
      */
     @NameInMap("Fields")
     public String fields;
@@ -53,6 +55,8 @@ public class ListProductRequest extends TeaModel {
 
     /**
      * <p>The ID of the WhatsApp Business account (WABA).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

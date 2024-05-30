@@ -7,9 +7,15 @@ public class DeletePhoneMessageQrdlRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QrdlCode")
     public String qrdlCode;
 

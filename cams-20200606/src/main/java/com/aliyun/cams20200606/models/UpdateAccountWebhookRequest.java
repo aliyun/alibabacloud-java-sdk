@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateAccountWebhookRequest extends TeaModel {
     /**
      * <p>The space ID of the user under the ISV account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
