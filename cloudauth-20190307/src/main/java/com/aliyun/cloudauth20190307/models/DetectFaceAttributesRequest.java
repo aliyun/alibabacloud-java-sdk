@@ -7,6 +7,9 @@ public class DetectFaceAttributesRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaterialValue")
     public String materialValue;
 

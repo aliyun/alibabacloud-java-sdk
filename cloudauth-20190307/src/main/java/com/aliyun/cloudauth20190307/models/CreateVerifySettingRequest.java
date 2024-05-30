@@ -4,9 +4,15 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateVerifySettingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
@@ -19,6 +25,9 @@ public class CreateVerifySettingRequest extends TeaModel {
     @NameInMap("ResultStep")
     public Boolean resultStep;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Solution")
     public String solution;
 
