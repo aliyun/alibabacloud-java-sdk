@@ -7,6 +7,9 @@ public class ModifyServiceInstanceResourcesRequest extends TeaModel {
     @NameInMap("Resources")
     public String resources;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 

@@ -3,7 +3,7 @@ package com.aliyun.computenestsupplier20210521.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateServiceRequest extends TeaModel {
+public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("AlarmMetadata")
     public String alarmMetadata;
 
@@ -50,7 +50,7 @@ public class UpdateServiceRequest extends TeaModel {
     public String serviceId;
 
     @NameInMap("ServiceInfo")
-    public java.util.List<UpdateServiceRequestServiceInfo> serviceInfo;
+    public java.util.List<UpdateServiceShrinkRequestServiceInfo> serviceInfo;
 
     @NameInMap("ServiceType")
     public String serviceType;
@@ -65,7 +65,7 @@ public class UpdateServiceRequest extends TeaModel {
     public Integer trialDuration;
 
     @NameInMap("UpdateOption")
-    public UpdateServiceRequestUpdateOption updateOption;
+    public String updateOptionShrink;
 
     @NameInMap("UpgradeMetadata")
     public String upgradeMetadata;
@@ -73,12 +73,12 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("VersionName")
     public String versionName;
 
-    public static UpdateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateServiceRequest self = new UpdateServiceRequest();
+    public static UpdateServiceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateServiceShrinkRequest self = new UpdateServiceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateServiceRequest setAlarmMetadata(String alarmMetadata) {
+    public UpdateServiceShrinkRequest setAlarmMetadata(String alarmMetadata) {
         this.alarmMetadata = alarmMetadata;
         return this;
     }
@@ -86,7 +86,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.alarmMetadata;
     }
 
-    public UpdateServiceRequest setClientToken(String clientToken) {
+    public UpdateServiceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -94,7 +94,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateServiceRequest setDeployMetadata(String deployMetadata) {
+    public UpdateServiceShrinkRequest setDeployMetadata(String deployMetadata) {
         this.deployMetadata = deployMetadata;
         return this;
     }
@@ -102,7 +102,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.deployMetadata;
     }
 
-    public UpdateServiceRequest setDeployType(String deployType) {
+    public UpdateServiceShrinkRequest setDeployType(String deployType) {
         this.deployType = deployType;
         return this;
     }
@@ -110,7 +110,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.deployType;
     }
 
-    public UpdateServiceRequest setDuration(Long duration) {
+    public UpdateServiceShrinkRequest setDuration(Long duration) {
         this.duration = duration;
         return this;
     }
@@ -118,7 +118,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.duration;
     }
 
-    public UpdateServiceRequest setIsSupportOperated(Boolean isSupportOperated) {
+    public UpdateServiceShrinkRequest setIsSupportOperated(Boolean isSupportOperated) {
         this.isSupportOperated = isSupportOperated;
         return this;
     }
@@ -126,7 +126,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.isSupportOperated;
     }
 
-    public UpdateServiceRequest setLicenseMetadata(String licenseMetadata) {
+    public UpdateServiceShrinkRequest setLicenseMetadata(String licenseMetadata) {
         this.licenseMetadata = licenseMetadata;
         return this;
     }
@@ -134,7 +134,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.licenseMetadata;
     }
 
-    public UpdateServiceRequest setLogMetadata(String logMetadata) {
+    public UpdateServiceShrinkRequest setLogMetadata(String logMetadata) {
         this.logMetadata = logMetadata;
         return this;
     }
@@ -142,7 +142,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.logMetadata;
     }
 
-    public UpdateServiceRequest setOperationMetadata(String operationMetadata) {
+    public UpdateServiceShrinkRequest setOperationMetadata(String operationMetadata) {
         this.operationMetadata = operationMetadata;
         return this;
     }
@@ -150,7 +150,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.operationMetadata;
     }
 
-    public UpdateServiceRequest setPolicyNames(String policyNames) {
+    public UpdateServiceShrinkRequest setPolicyNames(String policyNames) {
         this.policyNames = policyNames;
         return this;
     }
@@ -158,7 +158,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.policyNames;
     }
 
-    public UpdateServiceRequest setRegionId(String regionId) {
+    public UpdateServiceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -166,7 +166,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpdateServiceRequest setResellable(Boolean resellable) {
+    public UpdateServiceShrinkRequest setResellable(Boolean resellable) {
         this.resellable = resellable;
         return this;
     }
@@ -174,7 +174,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.resellable;
     }
 
-    public UpdateServiceRequest setServiceId(String serviceId) {
+    public UpdateServiceShrinkRequest setServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
@@ -182,15 +182,15 @@ public class UpdateServiceRequest extends TeaModel {
         return this.serviceId;
     }
 
-    public UpdateServiceRequest setServiceInfo(java.util.List<UpdateServiceRequestServiceInfo> serviceInfo) {
+    public UpdateServiceShrinkRequest setServiceInfo(java.util.List<UpdateServiceShrinkRequestServiceInfo> serviceInfo) {
         this.serviceInfo = serviceInfo;
         return this;
     }
-    public java.util.List<UpdateServiceRequestServiceInfo> getServiceInfo() {
+    public java.util.List<UpdateServiceShrinkRequestServiceInfo> getServiceInfo() {
         return this.serviceInfo;
     }
 
-    public UpdateServiceRequest setServiceType(String serviceType) {
+    public UpdateServiceShrinkRequest setServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
@@ -198,7 +198,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.serviceType;
     }
 
-    public UpdateServiceRequest setServiceVersion(String serviceVersion) {
+    public UpdateServiceShrinkRequest setServiceVersion(String serviceVersion) {
         this.serviceVersion = serviceVersion;
         return this;
     }
@@ -206,7 +206,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.serviceVersion;
     }
 
-    public UpdateServiceRequest setTenantType(String tenantType) {
+    public UpdateServiceShrinkRequest setTenantType(String tenantType) {
         this.tenantType = tenantType;
         return this;
     }
@@ -214,7 +214,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.tenantType;
     }
 
-    public UpdateServiceRequest setTrialDuration(Integer trialDuration) {
+    public UpdateServiceShrinkRequest setTrialDuration(Integer trialDuration) {
         this.trialDuration = trialDuration;
         return this;
     }
@@ -222,15 +222,15 @@ public class UpdateServiceRequest extends TeaModel {
         return this.trialDuration;
     }
 
-    public UpdateServiceRequest setUpdateOption(UpdateServiceRequestUpdateOption updateOption) {
-        this.updateOption = updateOption;
+    public UpdateServiceShrinkRequest setUpdateOptionShrink(String updateOptionShrink) {
+        this.updateOptionShrink = updateOptionShrink;
         return this;
     }
-    public UpdateServiceRequestUpdateOption getUpdateOption() {
-        return this.updateOption;
+    public String getUpdateOptionShrink() {
+        return this.updateOptionShrink;
     }
 
-    public UpdateServiceRequest setUpgradeMetadata(String upgradeMetadata) {
+    public UpdateServiceShrinkRequest setUpgradeMetadata(String upgradeMetadata) {
         this.upgradeMetadata = upgradeMetadata;
         return this;
     }
@@ -238,7 +238,7 @@ public class UpdateServiceRequest extends TeaModel {
         return this.upgradeMetadata;
     }
 
-    public UpdateServiceRequest setVersionName(String versionName) {
+    public UpdateServiceShrinkRequest setVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
@@ -246,19 +246,19 @@ public class UpdateServiceRequest extends TeaModel {
         return this.versionName;
     }
 
-    public static class UpdateServiceRequestServiceInfoAgreements extends TeaModel {
+    public static class UpdateServiceShrinkRequestServiceInfoAgreements extends TeaModel {
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Url")
         public String url;
 
-        public static UpdateServiceRequestServiceInfoAgreements build(java.util.Map<String, ?> map) throws Exception {
-            UpdateServiceRequestServiceInfoAgreements self = new UpdateServiceRequestServiceInfoAgreements();
+        public static UpdateServiceShrinkRequestServiceInfoAgreements build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceShrinkRequestServiceInfoAgreements self = new UpdateServiceShrinkRequestServiceInfoAgreements();
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceRequestServiceInfoAgreements setName(String name) {
+        public UpdateServiceShrinkRequestServiceInfoAgreements setName(String name) {
             this.name = name;
             return this;
         }
@@ -266,7 +266,7 @@ public class UpdateServiceRequest extends TeaModel {
             return this.name;
         }
 
-        public UpdateServiceRequestServiceInfoAgreements setUrl(String url) {
+        public UpdateServiceShrinkRequestServiceInfoAgreements setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -276,9 +276,9 @@ public class UpdateServiceRequest extends TeaModel {
 
     }
 
-    public static class UpdateServiceRequestServiceInfo extends TeaModel {
+    public static class UpdateServiceShrinkRequestServiceInfo extends TeaModel {
         @NameInMap("Agreements")
-        public java.util.List<UpdateServiceRequestServiceInfoAgreements> agreements;
+        public java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> agreements;
 
         @NameInMap("Image")
         public String image;
@@ -295,20 +295,20 @@ public class UpdateServiceRequest extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
-        public static UpdateServiceRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
-            UpdateServiceRequestServiceInfo self = new UpdateServiceRequestServiceInfo();
+        public static UpdateServiceShrinkRequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceShrinkRequestServiceInfo self = new UpdateServiceShrinkRequestServiceInfo();
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceRequestServiceInfo setAgreements(java.util.List<UpdateServiceRequestServiceInfoAgreements> agreements) {
+        public UpdateServiceShrinkRequestServiceInfo setAgreements(java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> agreements) {
             this.agreements = agreements;
             return this;
         }
-        public java.util.List<UpdateServiceRequestServiceInfoAgreements> getAgreements() {
+        public java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> getAgreements() {
             return this.agreements;
         }
 
-        public UpdateServiceRequestServiceInfo setImage(String image) {
+        public UpdateServiceShrinkRequestServiceInfo setImage(String image) {
             this.image = image;
             return this;
         }
@@ -316,7 +316,7 @@ public class UpdateServiceRequest extends TeaModel {
             return this.image;
         }
 
-        public UpdateServiceRequestServiceInfo setLocale(String locale) {
+        public UpdateServiceShrinkRequestServiceInfo setLocale(String locale) {
             this.locale = locale;
             return this;
         }
@@ -324,7 +324,7 @@ public class UpdateServiceRequest extends TeaModel {
             return this.locale;
         }
 
-        public UpdateServiceRequestServiceInfo setLongDescriptionUrl(String longDescriptionUrl) {
+        public UpdateServiceShrinkRequestServiceInfo setLongDescriptionUrl(String longDescriptionUrl) {
             this.longDescriptionUrl = longDescriptionUrl;
             return this;
         }
@@ -332,7 +332,7 @@ public class UpdateServiceRequest extends TeaModel {
             return this.longDescriptionUrl;
         }
 
-        public UpdateServiceRequestServiceInfo setName(String name) {
+        public UpdateServiceShrinkRequestServiceInfo setName(String name) {
             this.name = name;
             return this;
         }
@@ -340,31 +340,12 @@ public class UpdateServiceRequest extends TeaModel {
             return this.name;
         }
 
-        public UpdateServiceRequestServiceInfo setShortDescription(String shortDescription) {
+        public UpdateServiceShrinkRequestServiceInfo setShortDescription(String shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
         public String getShortDescription() {
             return this.shortDescription;
-        }
-
-    }
-
-    public static class UpdateServiceRequestUpdateOption extends TeaModel {
-        @NameInMap("UpdateFrom")
-        public String updateFrom;
-
-        public static UpdateServiceRequestUpdateOption build(java.util.Map<String, ?> map) throws Exception {
-            UpdateServiceRequestUpdateOption self = new UpdateServiceRequestUpdateOption();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateServiceRequestUpdateOption setUpdateFrom(String updateFrom) {
-            this.updateFrom = updateFrom;
-            return this;
-        }
-        public String getUpdateFrom() {
-            return this.updateFrom;
         }
 
     }

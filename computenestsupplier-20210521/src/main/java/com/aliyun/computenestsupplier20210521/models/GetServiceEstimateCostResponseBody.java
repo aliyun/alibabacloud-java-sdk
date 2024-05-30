@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceEstimateCostResponseBody extends TeaModel {
+    @NameInMap("Commodity")
+    public java.util.Map<String, ?> commodity;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,6 +16,14 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
     public static GetServiceEstimateCostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceEstimateCostResponseBody self = new GetServiceEstimateCostResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceEstimateCostResponseBody setCommodity(java.util.Map<String, ?> commodity) {
+        this.commodity = commodity;
+        return this;
+    }
+    public java.util.Map<String, ?> getCommodity() {
+        return this.commodity;
     }
 
     public GetServiceEstimateCostResponseBody setRequestId(String requestId) {

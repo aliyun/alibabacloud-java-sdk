@@ -13,9 +13,15 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 

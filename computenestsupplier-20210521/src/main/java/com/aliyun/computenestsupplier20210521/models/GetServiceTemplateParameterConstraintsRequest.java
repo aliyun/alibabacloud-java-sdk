@@ -7,6 +7,9 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeployRegionId")
     public String deployRegionId;
 
@@ -16,9 +19,15 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<GetServiceTemplateParameterConstraintsRequestParameters> parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
@@ -28,6 +37,9 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

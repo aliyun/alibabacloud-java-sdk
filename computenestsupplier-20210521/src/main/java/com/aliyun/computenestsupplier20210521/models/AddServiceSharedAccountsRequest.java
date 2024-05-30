@@ -7,12 +7,21 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SharedAccounts")
     public java.util.List<AddServiceSharedAccountsRequestSharedAccounts> sharedAccounts;
 
@@ -65,9 +74,15 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
     }
 
     public static class AddServiceSharedAccountsRequestSharedAccounts extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Permission")
         public String permission;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("UserAliUid")
         public String userAliUid;
 

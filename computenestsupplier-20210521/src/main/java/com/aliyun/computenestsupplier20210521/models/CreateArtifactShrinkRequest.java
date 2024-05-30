@@ -10,12 +10,18 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     @NameInMap("ArtifactProperty")
     public String artifactPropertyShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ArtifactType")
     public String artifactType;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -28,6 +34,9 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateArtifactShrinkRequestTag> tag;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
