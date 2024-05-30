@@ -19,12 +19,13 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The keyword that you want to use to query containers. You must specify this parameter based on the value of the GroupField parameter.</p>
+     * <p>The keyword that you want to use to query containers. This parameter depends on the value of the GroupField parameter.</p>
      * <br>
      * <p>*   If the **GroupField** parameter is set to **pod**, set this parameter to the name of the pod that you want to query.</p>
      * <p>*   If the **GroupField** parameter is set to **appName**, set this parameter to the name of the application that you want to query.</p>
      * <p>*   If the **GroupField** parameter is set to **namespace**, set this parameter to the namespace that you want to query.</p>
      * <p>*   If the **GroupField** parameter is set to **clusterId**, set this parameter to the ID of the cluster that you want to query.</p>
+     * <p>*   If the **GroupField** parameter is set to **image**, set this parameter to the name of the image that you want to query.</p>
      * <br>
      * <p>>  Fuzzy match is supported.</p>
      */
@@ -38,6 +39,7 @@ public class DescribeGroupedContainerInstancesRequest extends TeaModel {
      * <p>*   **appName**</p>
      * <p>*   **namespace**</p>
      * <p>*   **clusterId**</p>
+     * <p>*   **image**</p>
      * <br>
      * <p>This parameter is required.</p>
      */

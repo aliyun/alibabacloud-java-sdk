@@ -16,9 +16,15 @@ public class CreateOssScanConfigRequest extends TeaModel {
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
+    /**
+     * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     */
     @NameInMap("DecompressMaxFileCount")
     public Integer decompressMaxFileCount;
 
+    /**
+     * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     */
     @NameInMap("DecompressMaxLayer")
     public Integer decompressMaxLayer;
 

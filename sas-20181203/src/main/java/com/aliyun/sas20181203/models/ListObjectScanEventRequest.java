@@ -53,6 +53,9 @@ public class ListObjectScanEventRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>When a file is a subfile within a compressed package, the ParentEventId represents the alert of the compressed package itself.</p>
+     */
     @NameInMap("ParentEventId")
     public Long parentEventId;
 

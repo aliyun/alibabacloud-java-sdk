@@ -55,7 +55,7 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
      * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <p>>  To obtain the Alibaba Cloud account ID, call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation.</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

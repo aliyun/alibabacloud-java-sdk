@@ -156,6 +156,12 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("CheckPolicies")
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> checkPolicies;
 
+        /**
+         * <p>The type of the check item. Valid values:</p>
+         * <br>
+         * <p>*   **0**: paid</p>
+         * <p>*   **1**: free</p>
+         */
         @NameInMap("CheckSaleType")
         public Integer checkSaleType;
 
@@ -168,29 +174,29 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The asset subtype of the cloud service. Valid values:</p>
          * <br>
-         * <p>*   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:</p>
+         * <p>*   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **INSTANCE**</p>
          * <p>    *   **DISK**</p>
          * <p>    *   **SECURITY_GROUP**</p>
          * <br>
-         * <p>*   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:</p>
+         * <p>*   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **REPOSITORY_ENTERPRISE**</p>
          * <p>    *   **REPOSITORY_PERSON**</p>
          * <br>
-         * <p>*   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:</p>
+         * <p>*   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **ALIAS**</p>
          * <p>    *   **USER**</p>
          * <p>    *   **POLICY**</p>
          * <p>    *   **GROUP**</p>
          * <br>
-         * <p>*   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:</p>
+         * <p>*   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **DOMAIN**</p>
          * <br>
-         * <p>*   If **InstanceType** is set to other values, this parameter supports the following valid value:</p>
+         * <p>*   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:</p>
          * <br>
          * <p>    *   **INSTANCE**</p>
          */

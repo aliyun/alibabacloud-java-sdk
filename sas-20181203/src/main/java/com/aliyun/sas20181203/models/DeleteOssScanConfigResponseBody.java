@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteOssScanConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -76,6 +76,9 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @NameInMap("Digest")
         public String digest;
 
+        @NameInMap("FirstScanTime")
+        public Long firstScanTime;
+
         /**
          * <p>The number of images on which **high** baseline risks are detected.</p>
          */
@@ -285,6 +288,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
         public String getDigest() {
             return this.digest;
+        }
+
+        public DescribeImageListWithBaselineNameResponseBodyImageInfos setFirstScanTime(Long firstScanTime) {
+            this.firstScanTime = firstScanTime;
+            return this;
+        }
+        public Long getFirstScanTime() {
+            return this.firstScanTime;
         }
 
         public DescribeImageListWithBaselineNameResponseBodyImageInfos setHighRiskImage(Integer highRiskImage) {

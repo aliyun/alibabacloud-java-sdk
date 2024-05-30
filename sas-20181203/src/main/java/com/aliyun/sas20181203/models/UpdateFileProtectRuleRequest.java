@@ -16,7 +16,7 @@ public class UpdateFileProtectRuleRequest extends TeaModel {
     public Integer alertLevel;
 
     /**
-     * <p>The operations performed on the files.</p>
+     * <p>The operations that you want to perform on the files.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

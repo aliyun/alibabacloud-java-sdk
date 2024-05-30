@@ -17,7 +17,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
     public ListOssScanConfigResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,82 +53,88 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
     public static class ListOssScanConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Whether to match all file prefixes.</p>
+         * <p>Indicates whether the prefixes of all objects are matched.</p>
          */
         @NameInMap("AllKeyPrefix")
         public Boolean allKeyPrefix;
 
         /**
-         * <p>The number of the buckets.</p>
+         * <p>The number of buckets.</p>
          */
         @NameInMap("BucketCount")
         public Integer bucketCount;
 
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The names of the buckets.</p>
          */
         @NameInMap("BucketNameList")
         public java.util.List<String> bucketNameList;
 
+        /**
+         * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         */
         @NameInMap("DecompressMaxFileCount")
         public Integer decompressMaxFileCount;
 
+        /**
+         * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         */
         @NameInMap("DecompressMaxLayer")
         public Integer decompressMaxLayer;
 
         /**
-         * <p>Indicates whether the check policy is enabled. Valid values:</p>
+         * <p>Indicates whether the policy is enabled. Valid values:</p>
          * <br>
-         * <p>*   **1**: enabled.</p>
-         * <p>*   **0**: disabled.</p>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
          */
         @NameInMap("Enable")
         public Integer enable;
 
         /**
-         * <p>The end time of the check. The time is in the HH:mm:ss format.</p>
+         * <p>The time when the scan ends. The time is in the HH:mm:ss format.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The configuration ID.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The prefix of the object that you want to check.</p>
+         * <p>The prefixes of the objects that are scanned.</p>
          */
         @NameInMap("KeyPrefixList")
         public java.util.List<String> keyPrefixList;
 
         /**
-         * <p>The suffix of the object that is checked.</p>
+         * <p>The suffixes of the objects that are scanned.</p>
          */
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
         /**
-         * <p>The time when the policy last update.</p>
+         * <p>The timestamp when the configuration was last modified.</p>
          */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The configuration name.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The day when the check is performed. The value indicates the day of the week.</p>
+         * <p>The days on which the scan is executed in a week.</p>
          */
         @NameInMap("ScanDayList")
         public java.util.List<Integer> scanDayList;
 
         /**
-         * <p>The start time of the check. The time is in the HH:mm:ss format.</p>
+         * <p>The time when the scan starts. The time is in the HH:mm:ss format.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -254,13 +260,13 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
     public static class ListOssScanConfigResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;

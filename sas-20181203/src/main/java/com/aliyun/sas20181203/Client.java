@@ -10,50 +10,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-qingdao", "tds.aliyuncs.com"),
+            new TeaPair("cn-beijing", "tds.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "tds.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "tds.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "tds.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "tds.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "tds.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "tds.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "tds.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "tds.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "tds.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "tds.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "tds.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "tds.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "tds.aliyuncs.com"),
             new TeaPair("eu-central-1", "tds.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "sas.aliyuncs.com"),
-            new TeaPair("ap-south-1", "tds-vpc.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-fujian", "sas.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "sas.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "sas.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "sas.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "sas.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhangbei", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "sas.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "sas.aliyuncs.com"),
-            new TeaPair("me-east-1", "sas.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "sas.aliyuncs.com"),
-            new TeaPair("us-east-1", "tds-vpc.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "tds.us-west-1.aliyuncs.com")
+            new TeaPair("us-east-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "tds.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-qingdao-acdr-ut-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-shanghai-mybk", "tds.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "tds.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "tds.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2284,10 +2279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @summary Pushes a file to the cloud for detection.
      *
      * @description You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the MD5 hash value before you call this operation.
-     * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
-     * 1\\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
-     * 2\\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
      *
      * @param request CreateFileDetectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2349,10 +2341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @summary Pushes a file to the cloud for detection.
      *
      * @description You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the MD5 hash value before you call this operation.
-     * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
-     * 1\\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
-     * 2\\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
      *
      * @param request CreateFileDetectRequest
      * @return CreateFileDetectResponse
@@ -5331,7 +5320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Delete oss scan policy.
+     * @summary Deletes the configuration of an Object Storage Service (OSS) file detection policy.
      *
      * @param request DeleteOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5362,7 +5351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Delete oss scan policy.
+     * @summary Deletes the configuration of an Object Storage Service (OSS) file detection policy.
      *
      * @param request DeleteOssScanConfigRequest
      * @return DeleteOssScanConfigResponse
@@ -6151,7 +6140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the installation status of the Security Center agent after you run an installation command by using Cloud Assistant.
+     * @summary Queries the installation status of the Security Center agent after you run an installation command by using Cloud Assistant. You can call this operation to query the installation status only if the installation request is initiated within 2 minutes.
      *
      * @param request DescribeAgentInstallStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6190,7 +6179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the installation status of the Security Center agent after you run an installation command by using Cloud Assistant.
+     * @summary Queries the installation status of the Security Center agent after you run an installation command by using Cloud Assistant. You can call this operation to query the installation status only if the installation request is initiated within 2 minutes.
      *
      * @param request DescribeAgentInstallStatusRequest
      * @return DescribeAgentInstallStatusResponse
@@ -9986,7 +9975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看漏洞修复使用次数
+     * @summary Queries the number of vulnerabilities that are fixed by the pay-as-you-go vulnerability fixing feature.
      *
      * @param request DescribeFixUsedCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10009,7 +9998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看漏洞修复使用次数
+     * @summary Queries the number of vulnerabilities that are fixed by the pay-as-you-go vulnerability fixing feature.
      *
      * @return DescribeFixUsedCountResponse
      */
@@ -12715,6 +12704,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
             query.put("SourceIp", request.sourceIp);
         }
@@ -12969,7 +12962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询恶意文件类型列表。
+     * @summary Queries a list of malicious image sample types.
      *
      * @param request DescribeMatchedMaliciousNamesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13004,7 +12997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询恶意文件类型列表。
+     * @summary Queries a list of malicious image sample types.
      *
      * @param request DescribeMatchedMaliciousNamesRequest
      * @return DescribeMatchedMaliciousNamesResponse
@@ -22074,6 +22067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LogStore", request.logStore);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -26542,7 +26539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary List image risk items.
+     * @summary Queries the types of risky image build commands.
      *
      * @param request ListImageBuildRiskItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26573,7 +26570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary List image risk items.
+     * @summary Queries the types of risky image build commands.
      *
      * @param request ListImageBuildRiskItemRequest
      * @return ListImageBuildRiskItemResponse
@@ -27391,7 +27388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries oss scan policies.
+     * @summary Queries the configuration of an Object Storage Service (OSS) file detection policy.
      *
      * @param request ListOssScanConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27418,7 +27415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries oss scan policies.
+     * @summary Queries the configuration of an Object Storage Service (OSS) file detection policy.
      *
      * @param request ListOssScanConfigRequest
      * @return ListOssScanConfigResponse
@@ -29407,7 +29404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the status of rules for non-image program defense.
+     * @summary Changes the status of non-image program defense rules.
      *
      * @param request ModifyContainerDefenseRuleSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29442,7 +29439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the status of rules for non-image program defense.
+     * @summary Changes the status of non-image program defense rules.
      *
      * @param request ModifyContainerDefenseRuleSwitchRequest
      * @return ModifyContainerDefenseRuleSwitchResponse
@@ -30226,6 +30223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Project", request.project);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }
@@ -30422,6 +30423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -32653,7 +32658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Change the rule status for non-image program defense.
+     * @summary Changes the status of a rule for container tamper-proofing.
      *
      * @param request OperateSwitchStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32688,7 +32693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Change the rule status for non-image program defense.
+     * @summary Changes the status of a rule for container tamper-proofing.
      *
      * @param request OperateSwitchStatusRequest
      * @return OperateSwitchStatusResponse
@@ -34179,7 +34184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reset the honeypot.
+     * @summary Resets a honeypot.
      *
      * @param request ResetHoneypotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34214,7 +34219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reset the honeypot.
+     * @summary Resets a honeypot.
      *
      * @param request ResetHoneypotRequest
      * @return ResetHoneypotResponse
@@ -34786,7 +34791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Start the honeypot.
+     * @summary Starts a honeypot.
      *
      * @param request StartHoneypotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34821,7 +34826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Start the honeypot.
+     * @summary Starts a honeypot.
      *
      * @param request StartHoneypotRequest
      * @return StartHoneypotResponse

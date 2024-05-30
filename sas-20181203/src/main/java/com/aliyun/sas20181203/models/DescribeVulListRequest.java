@@ -41,6 +41,9 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The IDs of vulnerabilities. You can specify up to 50 IDs. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("Ids")
     public String ids;
 

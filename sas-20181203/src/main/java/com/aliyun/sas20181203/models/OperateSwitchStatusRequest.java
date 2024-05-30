@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class OperateSwitchStatusRequest extends TeaModel {
     /**
-     * <p>The rule ID.</p>
+     * <p>The ID of the rule.</p>
      * <br>
-     * <p>>  You can call the [ListContainerDefenseRule](https://help.aliyun.com/document_detail/2590599.html) operation to query the rule ID.</p>
+     * <p>>  You can call the ListContainerWebDefenseRule operation to query the IDs of rules.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -15,9 +15,7 @@ public class OperateSwitchStatusRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The rule status for container tamper-proofing. Valid values:</p>
-     * <p>- **on**</p>
-     * <p>- **off**</p>
+     * <p>The status of the rule. Valid values: on and off.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

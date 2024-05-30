@@ -59,13 +59,13 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         public String advice;
 
         /**
-         * <p>The list of the baseline categories of attribution.</p>
+         * <p>The types of the baselines to which the check item belongs.</p>
          */
         @NameInMap("AffiliatedRiskTypes")
         public java.util.List<String> affiliatedRiskTypes;
 
         /**
-         * <p>The list of baselines attribution.</p>
+         * <p>The baselines to which the check item belongs.</p>
          */
         @NameInMap("AffiliatedRisks")
         public java.util.List<String> affiliatedRisks;
@@ -119,6 +119,9 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The baselines in which the check item is enabled.</p>
+         */
         @NameInMap("EnableRisks")
         public java.util.List<String> enableRisks;
 

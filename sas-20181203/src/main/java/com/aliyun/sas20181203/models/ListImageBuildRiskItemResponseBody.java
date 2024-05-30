@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListImageBuildRiskItemResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListImageBuildRiskItemResponseBodyData> data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
 
     public static class ListImageBuildRiskItemResponseBodyData extends TeaModel {
         /**
-         * <p>The key of the name for the image build risk item.</p>
+         * <p>The type key of the risky build command.</p>
          */
         @NameInMap("ItemKey")
         public String itemKey;
 
         /**
-         * <p>The name of the name for the image build risk item.</p>
+         * <p>The type name of the risky build command.</p>
          */
         @NameInMap("ItemName")
         public String itemName;

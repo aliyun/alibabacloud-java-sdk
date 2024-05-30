@@ -68,6 +68,11 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         @NameInMap("ConfigStatus")
         public Integer configStatus;
 
+        /**
+         * <p>Bucket decompression configuration status, valid values:</p>
+         * <p>- **0**: Decompression not configured.</p>
+         * <p>- **1**: Decompression configured.</p>
+         */
         @NameInMap("DecompressStatus")
         public Integer decompressStatus;
 

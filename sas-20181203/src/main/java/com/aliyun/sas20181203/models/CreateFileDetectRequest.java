@@ -4,12 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectRequest extends TeaModel {
+    /**
+     * <p>Whether to decompress or not. Valid values:</p>
+     * <br>
+     * <p>- true: To decompress.</p>
+     * <p>- false: Not to decompress.</p>
+     */
     @NameInMap("Decompress")
     public Boolean decompress;
 
+    /**
+     * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     */
     @NameInMap("DecompressMaxFileCount")
     public Integer decompressMaxFileCount;
 
+    /**
+     * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+     */
     @NameInMap("DecompressMaxLayer")
     public Integer decompressMaxLayer;
 
@@ -28,7 +40,7 @@ public class CreateFileDetectRequest extends TeaModel {
     public String hashKey;
 
     /**
-     * <p>The key of the file that is stored in the Object Storage Service (OSS) bucket. If you specify the DownloadUrl parameter, you can leave this parameter empty. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.</p>
+     * <p>The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.</p>
      */
     @NameInMap("OssKey")
     public String ossKey;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ResetHoneypotResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The information about the honeypot.</p>
      */
     @NameInMap("Data")
     public ResetHoneypotResponseBodyData data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class ResetHoneypotResponseBody extends TeaModel {
 
     public static class ResetHoneypotResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the management node.</p>
+         * <p>The name of the management node to which the honeypot belongs.</p>
          */
         @NameInMap("ControlNodeName")
         public String controlNodeName;
@@ -57,13 +57,13 @@ public class ResetHoneypotResponseBody extends TeaModel {
         public String honeypotImageDisplayName;
 
         /**
-         * <p>The name of the honeypot image.</p>
+         * <p>The name of the image that is used for the honeypot.</p>
          */
         @NameInMap("HoneypotImageName")
         public String honeypotImageName;
 
         /**
-         * <p>The name of the honeypot.</p>
+         * <p>The custom name of the honeypot.</p>
          */
         @NameInMap("HoneypotName")
         public String honeypotName;
@@ -75,13 +75,13 @@ public class ResetHoneypotResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The ID of the honeypot custom parameter.</p>
+         * <p>The ID of the custom configuration for the honeypot.</p>
          */
         @NameInMap("PresetId")
         public String presetId;
 
         /**
-         * <p>The status of the honeypot.</p>
+         * <p>The statuses of the honeypots.</p>
          */
         @NameInMap("State")
         public java.util.List<String> state;

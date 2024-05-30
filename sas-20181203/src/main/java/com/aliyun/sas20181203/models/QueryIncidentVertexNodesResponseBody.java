@@ -92,7 +92,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public String origin;
 
         /**
-         * <p>The edge properties. The value is in the text format.</p>
+         * <p>The properties of the edge. The value is in the text format.</p>
          */
         @NameInMap("Properties")
         public String properties;
@@ -104,7 +104,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public java.util.Map<String, ?> property;
 
         /**
-         * <p>The ID of the rule for which the edge was created.</p>
+         * <p>The ID of the rule based on which the edge was created.</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -140,7 +140,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The UNIX timestamp when the edge was created. Unit: milliseconds.</p>
+         * <p>The time when the edge was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
@@ -521,8 +521,8 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * <p>The direction of the relationship. Valid values:</p>
          * <br>
-         * <p>*   **1**: forward</p>
-         * <p>*   **0**: reverse</p>
+         * <p>*   **1**: forward.</p>
+         * <p>*   **0**: reverse.</p>
          */
         @NameInMap("Directed")
         public Integer directed;
@@ -787,13 +787,13 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public String aliuid;
 
         /**
-         * <p>The display information about the node.</p>
+         * <p>The display information of the node.</p>
          */
         @NameInMap("DisplayInfo")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesVertexListDisplayInfo> displayInfo;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -801,14 +801,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * <p>The display language of the neighboring node. Valid values:</p>
          * <br>
-         * <p>*   **zh**: Chinese</p>
-         * <p>*   **en**: English</p>
+         * <p>*   **zh**: Chinese.</p>
+         * <p>*   **en**: English.</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
-         * <p>The node name.</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -820,19 +820,19 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesVertexListNeighborList> neighborList;
 
         /**
-         * <p>The node properties. The value is in the text format.</p>
+         * <p>The properties of the node. The value is in the text format.</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
-         * <p>The node property.</p>
+         * <p>The property of the node.</p>
          */
         @NameInMap("Property")
         public java.util.Map<String, ?> property;
 
         /**
-         * <p>The ID of the rule for which the node was created.</p>
+         * <p>The ID of the rule based on which the node was created.</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -844,13 +844,13 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The UNIX timestamp when the node was created. Unit: milliseconds.</p>
+         * <p>The time when the node was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
-         * <p>The node type. Valid values include but are not limited to:</p>
+         * <p>The type of the node. Valid values include but are not limited to:</p>
          * <br>
          * <p>*   **process**</p>
          * <p>*   **file**</p>
@@ -868,7 +868,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The node UUID.</p>
+         * <p>The UUID of the node.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -1021,7 +1021,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesRelationTypeList> relationTypeList;
 
         /**
-         * <p>The detailed information about the node.</p>
+         * <p>The information about the node.</p>
          */
         @NameInMap("VertexList")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesVertexList> vertexList;

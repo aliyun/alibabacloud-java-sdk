@@ -44,6 +44,11 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Whether to identify as a compressed package. Valid values:</p>
+         * <p>- **true**: Yes.</p>
+         * <p>- **false**: No.</p>
+         */
         @NameInMap("Compress")
         public Boolean compress;
 

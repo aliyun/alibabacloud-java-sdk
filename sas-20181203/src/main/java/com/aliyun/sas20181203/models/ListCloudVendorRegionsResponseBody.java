@@ -169,7 +169,7 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the region is configured as a synchronization region on this site. Valid values:</p>
          * <br>
-         * <p>*   **0**: The region is configured as a synchronization region on this site.</p>
+         * <p>*   **0**: The region is not configured as a synchronization region on this site.</p>
          * <p>*   **1**: The region is configured as a synchronization region on this site.</p>
          */
         @NameInMap("Selected")

@@ -192,6 +192,9 @@ public class ListCheckItemResponseBody extends TeaModel {
         @NameInMap("Description")
         public ListCheckItemResponseBodyCheckItemsDescription description;
 
+        /**
+         * <p>The estimated number of authorizations that will be consumed by this check item.</p>
+         */
         @NameInMap("EstimatedCount")
         public Integer estimatedCount;
 

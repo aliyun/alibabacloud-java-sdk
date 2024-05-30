@@ -7,7 +7,7 @@ public class ResetHoneypotRequest extends TeaModel {
     /**
      * <p>The ID of the honeypot.</p>
      * <br>
-     * <p>> You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
+     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -15,9 +15,10 @@ public class ResetHoneypotRequest extends TeaModel {
     public String honeypotId;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
-     * <p>- **zh**: Chinese</p>
-     * <p>- **en**: English</p>
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;

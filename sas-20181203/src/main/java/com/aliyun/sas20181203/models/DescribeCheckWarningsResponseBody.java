@@ -101,7 +101,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public Long checkId;
 
         /**
-         * <p>The ID of the alert that is triggered by the check item.</p>
+         * <p>The ID of the alert that is generated for the baseline check result.</p>
          */
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
@@ -125,10 +125,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public String execErrorMessage;
 
         /**
-         * <p>Indicates whether the fix is supported. Valid values:</p>
+         * <p>Indicates whether fixing is supported. Valid values:</p>
          * <br>
-         * <p>*   **0**: The fix is not supported.</p>
-         * <p>*   **1**: The fix is supported.</p>
+         * <p>*   **0**: Fixing is not supported.</p>
+         * <p>*   **1**: Fixing is supported.</p>
          */
         @NameInMap("FixStatus")
         public Integer fixStatus;
@@ -146,7 +146,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public Long lastHandleTime;
 
         /**
-         * <p>The severity level of a risk item. Valid values:</p>
+         * <p>The risk level of the risk item. Valid values:</p>
          * <br>
          * <p>*   **high**</p>
          * <p>*   **medium**</p>
@@ -156,7 +156,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The description.</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -164,11 +164,11 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         /**
          * <p>The status of the check item. Valid values:</p>
          * <br>
-         * <p>*   **1**: failed</p>
-         * <p>*   **2**: verifying</p>
-         * <p>*   **3**: passed</p>
-         * <p>*   **5**: expired</p>
-         * <p>*   **6**: ignored</p>
+         * <p>*   **1**: failed.</p>
+         * <p>*   **2**: verifying.</p>
+         * <p>*   **3**: passed.</p>
+         * <p>*   **5**: expired.</p>
+         * <p>*   **6**: ignored.</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -180,7 +180,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The UUID of the server on which the baseline check is performed.</p>
+         * <p>The ID of the server on which the baseline check is performed.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
