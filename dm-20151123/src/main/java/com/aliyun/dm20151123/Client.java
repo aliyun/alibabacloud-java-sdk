@@ -1439,6 +1439,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 获取账号详情
+     *
+     * @param request GetUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserResponse
+     */
+    public GetUserResponse getUserWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUser"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserResponse());
+    }
+
+    /**
+     * @summary 获取账号详情
+     *
+     * @return GetUserResponse
+     */
+    public GetUserResponse getUser() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserWithOptions(runtime);
+    }
+
+    /**
      * @summary 列出用户无效地址
      *
      * @param request ListUserSuppressionRequest
@@ -2702,5 +2735,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIpProtectionResponse updateIpProtection(UpdateIpProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateIpProtectionWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 更新帐号信息
+     *
+     * @param tmpReq UpdateUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateUserResponse
+     */
+    public UpdateUserResponse updateUserWithOptions(UpdateUserRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateUserShrinkRequest request = new UpdateUserShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.user)) {
+            request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.user, "User", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userShrink)) {
+            body.put("User", request.userShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUser"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserResponse());
+    }
+
+    /**
+     * @summary 更新帐号信息
+     *
+     * @param request UpdateUserRequest
+     * @return UpdateUserResponse
+     */
+    public UpdateUserResponse updateUser(UpdateUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUserWithOptions(request, runtime);
     }
 }
