@@ -635,6 +635,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 配置新版基于匹配条件的cc规则
+     *
+     * @param request ConfigWebCCRuleV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigWebCCRuleV2Response
+     */
+    public ConfigWebCCRuleV2Response configWebCCRuleV2WithOptions(ConfigWebCCRuleV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expires)) {
+            query.put("Expires", request.expires);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleList)) {
+            query.put("RuleList", request.ruleList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConfigWebCCRuleV2"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigWebCCRuleV2Response());
+    }
+
+    /**
+     * @summary 配置新版基于匹配条件的cc规则
+     *
+     * @param request ConfigWebCCRuleV2Request
+     * @return ConfigWebCCRuleV2Response
+     */
+    public ConfigWebCCRuleV2Response configWebCCRuleV2(ConfigWebCCRuleV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.configWebCCRuleV2WithOptions(request, runtime);
+    }
+
+    /**
      * @summary Configures the mode of the Frequency Control policy for a website.
      *
      * @param request ConfigWebCCTemplateRequest
@@ -6414,6 +6464,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeWebCCRulesResponse describeWebCCRules(DescribeWebCCRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeWebCCRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 查询新版cc规则
+     *
+     * @param request DescribeWebCCRulesV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebCCRulesV2Response
+     */
+    public DescribeWebCCRulesV2Response describeWebCCRulesV2WithOptions(DescribeWebCCRulesV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebCCRulesV2"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebCCRulesV2Response());
+    }
+
+    /**
+     * @summary 查询新版cc规则
+     *
+     * @param request DescribeWebCCRulesV2Request
+     * @return DescribeWebCCRulesV2Response
+     */
+    public DescribeWebCCRulesV2Response describeWebCCRulesV2(DescribeWebCCRulesV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeWebCCRulesV2WithOptions(request, runtime);
     }
 
     /**

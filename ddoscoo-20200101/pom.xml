@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ddoscoo20200101</artifactId>
-  <version>3.1.0</version>
+  <version>3.2.0</version>
   <packaging>jar</packaging>
   <name>ddoscoo20200101</name>
   <description>Alibaba Cloud ddoscoo (20200101) SDK for Java
