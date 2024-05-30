@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sae20190506</artifactId>
-  <version>1.22.16</version>
+  <version>1.22.17</version>
   <packaging>jar</packaging>
   <name>sae20190506</name>
   <description>Alibaba Cloud Serverless App Engine (20190506) SDK for Java
