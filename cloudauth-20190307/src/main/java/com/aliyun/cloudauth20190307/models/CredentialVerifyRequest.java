@@ -28,6 +28,9 @@ public class CredentialVerifyRequest extends TeaModel {
     @NameInMap("IsOCR")
     public String isOCR;
 
+    @NameInMap("MerchantId")
+    public String merchantId;
+
     @NameInMap("UserName")
     public String userName;
 
@@ -98,6 +101,14 @@ public class CredentialVerifyRequest extends TeaModel {
     }
     public String getIsOCR() {
         return this.isOCR;
+    }
+
+    public CredentialVerifyRequest setMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
+    public String getMerchantId() {
+        return this.merchantId;
     }
 
     public CredentialVerifyRequest setUserName(String userName) {

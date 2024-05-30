@@ -54,6 +54,9 @@ public class CredentialVerifyResponseBody extends TeaModel {
     }
 
     public static class CredentialVerifyResponseBodyResultObject extends TeaModel {
+        @NameInMap("MaterialInfo")
+        public String materialInfo;
+
         @NameInMap("OcrInfo")
         public String ocrInfo;
 
@@ -75,6 +78,14 @@ public class CredentialVerifyResponseBody extends TeaModel {
         public static CredentialVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             CredentialVerifyResponseBodyResultObject self = new CredentialVerifyResponseBodyResultObject();
             return TeaModel.build(map, self);
+        }
+
+        public CredentialVerifyResponseBodyResultObject setMaterialInfo(String materialInfo) {
+            this.materialInfo = materialInfo;
+            return this;
+        }
+        public String getMaterialInfo() {
+            return this.materialInfo;
         }
 
         public CredentialVerifyResponseBodyResultObject setOcrInfo(String ocrInfo) {

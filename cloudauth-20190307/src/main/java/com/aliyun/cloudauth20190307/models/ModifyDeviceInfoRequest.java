@@ -7,6 +7,9 @@ public class ModifyDeviceInfoRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 

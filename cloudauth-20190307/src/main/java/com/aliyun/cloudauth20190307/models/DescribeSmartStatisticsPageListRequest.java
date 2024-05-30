@@ -4,21 +4,36 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeSmartStatisticsPageListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

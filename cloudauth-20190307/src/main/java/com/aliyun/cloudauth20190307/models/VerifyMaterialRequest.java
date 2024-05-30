@@ -4,12 +4,21 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class VerifyMaterialRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FaceImageUrl")
     public String faceImageUrl;
 
@@ -19,9 +28,15 @@ public class VerifyMaterialRequest extends TeaModel {
     @NameInMap("IdCardFrontImageUrl")
     public String idCardFrontImageUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdCardNumber")
     public String idCardNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
