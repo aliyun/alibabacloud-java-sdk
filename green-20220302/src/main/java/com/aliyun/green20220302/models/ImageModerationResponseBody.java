@@ -53,6 +53,170 @@ public class ImageModerationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ImageModerationResponseBodyDataExtCustomImage extends TeaModel {
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("LibId")
+        public String libId;
+
+        @NameInMap("LibName")
+        public String libName;
+
+        public static ImageModerationResponseBodyDataExtCustomImage build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtCustomImage self = new ImageModerationResponseBodyDataExtCustomImage();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtCustomImage setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public ImageModerationResponseBodyDataExtCustomImage setLibId(String libId) {
+            this.libId = libId;
+            return this;
+        }
+        public String getLibId() {
+            return this.libId;
+        }
+
+        public ImageModerationResponseBodyDataExtCustomImage setLibName(String libName) {
+            this.libName = libName;
+            return this;
+        }
+        public String getLibName() {
+            return this.libName;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtLogoDataLocation extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static ImageModerationResponseBodyDataExtLogoDataLocation build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtLogoDataLocation self = new ImageModerationResponseBodyDataExtLogoDataLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtLogoDataLocation setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public ImageModerationResponseBodyDataExtLogoDataLocation setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public ImageModerationResponseBodyDataExtLogoDataLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public ImageModerationResponseBodyDataExtLogoDataLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtLogoDataLogo extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static ImageModerationResponseBodyDataExtLogoDataLogo build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtLogoDataLogo self = new ImageModerationResponseBodyDataExtLogoDataLogo();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtLogoDataLogo setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public ImageModerationResponseBodyDataExtLogoDataLogo setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public ImageModerationResponseBodyDataExtLogoDataLogo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtLogoData extends TeaModel {
+        @NameInMap("Location")
+        public ImageModerationResponseBodyDataExtLogoDataLocation location;
+
+        @NameInMap("Logo")
+        public java.util.List<ImageModerationResponseBodyDataExtLogoDataLogo> logo;
+
+        public static ImageModerationResponseBodyDataExtLogoData build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtLogoData self = new ImageModerationResponseBodyDataExtLogoData();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtLogoData setLocation(ImageModerationResponseBodyDataExtLogoDataLocation location) {
+            this.location = location;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtLogoDataLocation getLocation() {
+            return this.location;
+        }
+
+        public ImageModerationResponseBodyDataExtLogoData setLogo(java.util.List<ImageModerationResponseBodyDataExtLogoDataLogo> logo) {
+            this.logo = logo;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtLogoDataLogo> getLogo() {
+            return this.logo;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExtOcrResultLocation extends TeaModel {
         @NameInMap("H")
         public Integer h;
@@ -135,6 +299,36 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
 
+    public static class ImageModerationResponseBodyDataExtPublicFigure extends TeaModel {
+        @NameInMap("FigureId")
+        public String figureId;
+
+        @NameInMap("FigureName")
+        public String figureName;
+
+        public static ImageModerationResponseBodyDataExtPublicFigure build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtPublicFigure self = new ImageModerationResponseBodyDataExtPublicFigure();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtPublicFigure setFigureId(String figureId) {
+            this.figureId = figureId;
+            return this;
+        }
+        public String getFigureId() {
+            return this.figureId;
+        }
+
+        public ImageModerationResponseBodyDataExtPublicFigure setFigureName(String figureName) {
+            this.figureName = figureName;
+            return this;
+        }
+        public String getFigureName() {
+            return this.figureName;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExtRecognition extends TeaModel {
         @NameInMap("Classification")
         public String classification;
@@ -165,16 +359,208 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
 
+    public static class ImageModerationResponseBodyDataExtTextInImageCustomText extends TeaModel {
+        @NameInMap("KeyWords")
+        public String keyWords;
+
+        @NameInMap("LibId")
+        public String libId;
+
+        @NameInMap("LibName")
+        public String libName;
+
+        public static ImageModerationResponseBodyDataExtTextInImageCustomText build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtTextInImageCustomText self = new ImageModerationResponseBodyDataExtTextInImageCustomText();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageCustomText setKeyWords(String keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageCustomText setLibId(String libId) {
+            this.libId = libId;
+            return this;
+        }
+        public String getLibId() {
+            return this.libId;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageCustomText setLibName(String libName) {
+            this.libName = libName;
+            return this;
+        }
+        public String getLibName() {
+            return this.libName;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtTextInImageOcrResultLocation extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static ImageModerationResponseBodyDataExtTextInImageOcrResultLocation build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtTextInImageOcrResultLocation self = new ImageModerationResponseBodyDataExtTextInImageOcrResultLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageOcrResultLocation setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageOcrResultLocation setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageOcrResultLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageOcrResultLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtTextInImageOcrResult extends TeaModel {
+        @NameInMap("Location")
+        public ImageModerationResponseBodyDataExtTextInImageOcrResultLocation location;
+
+        @NameInMap("Text")
+        public String text;
+
+        public static ImageModerationResponseBodyDataExtTextInImageOcrResult build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtTextInImageOcrResult self = new ImageModerationResponseBodyDataExtTextInImageOcrResult();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageOcrResult setLocation(ImageModerationResponseBodyDataExtTextInImageOcrResultLocation location) {
+            this.location = location;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtTextInImageOcrResultLocation getLocation() {
+            return this.location;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImageOcrResult setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class ImageModerationResponseBodyDataExtTextInImage extends TeaModel {
+        @NameInMap("CustomText")
+        public java.util.List<ImageModerationResponseBodyDataExtTextInImageCustomText> customText;
+
+        @NameInMap("OcrResult")
+        public java.util.List<ImageModerationResponseBodyDataExtTextInImageOcrResult> ocrResult;
+
+        @NameInMap("RiskWord")
+        public java.util.List<String> riskWord;
+
+        public static ImageModerationResponseBodyDataExtTextInImage build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtTextInImage self = new ImageModerationResponseBodyDataExtTextInImage();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImage setCustomText(java.util.List<ImageModerationResponseBodyDataExtTextInImageCustomText> customText) {
+            this.customText = customText;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtTextInImageCustomText> getCustomText() {
+            return this.customText;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImage setOcrResult(java.util.List<ImageModerationResponseBodyDataExtTextInImageOcrResult> ocrResult) {
+            this.ocrResult = ocrResult;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtTextInImageOcrResult> getOcrResult() {
+            return this.ocrResult;
+        }
+
+        public ImageModerationResponseBodyDataExtTextInImage setRiskWord(java.util.List<String> riskWord) {
+            this.riskWord = riskWord;
+            return this;
+        }
+        public java.util.List<String> getRiskWord() {
+            return this.riskWord;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExt extends TeaModel {
+        @NameInMap("CustomImage")
+        public java.util.List<ImageModerationResponseBodyDataExtCustomImage> customImage;
+
+        @NameInMap("LogoData")
+        public java.util.List<ImageModerationResponseBodyDataExtLogoData> logoData;
+
         @NameInMap("OcrResult")
         public java.util.List<ImageModerationResponseBodyDataExtOcrResult> ocrResult;
+
+        @NameInMap("PublicFigure")
+        public java.util.List<ImageModerationResponseBodyDataExtPublicFigure> publicFigure;
 
         @NameInMap("Recognition")
         public java.util.List<ImageModerationResponseBodyDataExtRecognition> recognition;
 
+        @NameInMap("TextInImage")
+        public ImageModerationResponseBodyDataExtTextInImage textInImage;
+
         public static ImageModerationResponseBodyDataExt build(java.util.Map<String, ?> map) throws Exception {
             ImageModerationResponseBodyDataExt self = new ImageModerationResponseBodyDataExt();
             return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExt setCustomImage(java.util.List<ImageModerationResponseBodyDataExtCustomImage> customImage) {
+            this.customImage = customImage;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtCustomImage> getCustomImage() {
+            return this.customImage;
+        }
+
+        public ImageModerationResponseBodyDataExt setLogoData(java.util.List<ImageModerationResponseBodyDataExtLogoData> logoData) {
+            this.logoData = logoData;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtLogoData> getLogoData() {
+            return this.logoData;
         }
 
         public ImageModerationResponseBodyDataExt setOcrResult(java.util.List<ImageModerationResponseBodyDataExtOcrResult> ocrResult) {
@@ -185,12 +571,28 @@ public class ImageModerationResponseBody extends TeaModel {
             return this.ocrResult;
         }
 
+        public ImageModerationResponseBodyDataExt setPublicFigure(java.util.List<ImageModerationResponseBodyDataExtPublicFigure> publicFigure) {
+            this.publicFigure = publicFigure;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtPublicFigure> getPublicFigure() {
+            return this.publicFigure;
+        }
+
         public ImageModerationResponseBodyDataExt setRecognition(java.util.List<ImageModerationResponseBodyDataExtRecognition> recognition) {
             this.recognition = recognition;
             return this;
         }
         public java.util.List<ImageModerationResponseBodyDataExtRecognition> getRecognition() {
             return this.recognition;
+        }
+
+        public ImageModerationResponseBodyDataExt setTextInImage(ImageModerationResponseBodyDataExtTextInImage textInImage) {
+            this.textInImage = textInImage;
+            return this;
+        }
+        public ImageModerationResponseBodyDataExtTextInImage getTextInImage() {
+            return this.textInImage;
         }
 
     }
