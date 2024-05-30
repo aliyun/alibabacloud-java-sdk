@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
-     * <p>The rule configuration.</p>
+     * <p>The risks that you want to detect by using the rule.</p>
      */
     @NameInMap("AlarmDetail")
     public String alarmDetailShrink;
@@ -70,9 +70,9 @@ public class UpdateOpaStrategyNewShrinkRequest extends TeaModel {
     public java.util.List<UpdateOpaStrategyNewShrinkRequestScopes> scopes;
 
     /**
-     * <p>The rule ID.</p>
+     * <p>The ID of the rule.</p>
      * <br>
-     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the rule ID.</p>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](https://help.aliyun.com/document_detail/2623574.html) operation to query the ID.</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;

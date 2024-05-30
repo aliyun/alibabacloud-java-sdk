@@ -39,13 +39,13 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
 
     public static class DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("ErrorStatus")
         public String errorStatus;

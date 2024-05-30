@@ -39,7 +39,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
     public static class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList extends TeaModel {
         /**
-         * <p>If the value of paramType is 2, this parameter provides the options that can be selected for paramType.</p>
+         * <p>The options that can be selected for the rule parameter if the value of ParamType is set to 2.</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
@@ -78,7 +78,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
          * <p>The type of the rule parameter. Valid values:</p>
          * <br>
          * <p>*   **1**: input</p>
-         * <p>*   **2**: select</p>
+         * <p>*   **2**: selection</p>
          */
         @NameInMap("ParamType")
         public Integer paramType;
@@ -168,7 +168,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Integer defaultValue;
 
         /**
-         * <p>Indicates whether the rule is included in the policy. Valid values:</p>
+         * <p>Indicates whether the rule can be selected. Valid values:</p>
          * <br>
          * <p>*   **1**: yes</p>
          * <p>*   **0**: no</p>
@@ -177,7 +177,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public Integer optional;
 
         /**
-         * <p>An array that consists of the parameters of the rule.</p>
+         * <p>The rule parameters.</p>
          */
         @NameInMap("ParamList")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList> paramList;
@@ -189,7 +189,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String ruleDesc;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -261,7 +261,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String checkItem;
 
         /**
-         * <p>An array that consists of rules.</p>
+         * <p>The details of rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRules> rules;
@@ -313,16 +313,16 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The details about the custom check item.</p>
+         * <p>The details of custom check items.</p>
          */
         @NameInMap("CheckDetails")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetails> checkDetails;
 
         /**
-         * <p>Indicates whether the sub-risk item is selected. Valid values:</p>
+         * <p>Indicates whether the sub-check item is selected. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("On")
         public Boolean on;
@@ -396,16 +396,16 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>Indicates whether the risk item is selected. Valid values:</p>
+         * <p>Indicates whether the check item is selected. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("On")
         public Boolean on;
 
         /**
-         * <p>An array that consists of sub-risk items.</p>
+         * <p>The information about sub-check items.</p>
          */
         @NameInMap("SubTypes")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypes> subTypes;
@@ -509,7 +509,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public String riskSubTypeName;
 
         /**
-         * <p>The whitelist of risk items.</p>
+         * <p>The information about the whitelist of risk items.</p>
          */
         @NameInMap("RiskTypeWhiteListQueryResultList")
         public java.util.List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;

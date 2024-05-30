@@ -11,7 +11,7 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The total number of rules whose status was changed.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("Data")
     public Long data;
@@ -23,7 +23,7 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

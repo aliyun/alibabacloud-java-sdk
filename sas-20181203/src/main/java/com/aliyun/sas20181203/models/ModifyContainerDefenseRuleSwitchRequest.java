@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyContainerDefenseRuleSwitchRequest extends TeaModel {
     /**
-     * <p>The IDs of rules.</p>
+     * <p>The IDs of the rules.</p>
      */
     @NameInMap("RuleIds")
     public java.util.List<Long> ruleIds;

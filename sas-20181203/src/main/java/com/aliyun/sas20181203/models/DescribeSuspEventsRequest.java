@@ -235,6 +235,11 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Whether it is strictly a mode flag.</p>
+     * <p>- N: No</p>
+     * <p>- Y: Yes</p>
+     */
     @NameInMap("StrictMode")
     public String strictMode;
 

@@ -354,6 +354,9 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         @NameInMap("SensitiveFileName")
         public String sensitiveFileName;
 
+        @NameInMap("UnprocessedNum")
+        public Integer unprocessedNum;
+
         public static DescribeImageSensitiveFileListResponseBodySensitiveFileList build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSensitiveFileListResponseBodySensitiveFileList self = new DescribeImageSensitiveFileListResponseBodySensitiveFileList();
             return TeaModel.build(map, self);
@@ -421,6 +424,14 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         }
         public String getSensitiveFileName() {
             return this.sensitiveFileName;
+        }
+
+        public DescribeImageSensitiveFileListResponseBodySensitiveFileList setUnprocessedNum(Integer unprocessedNum) {
+            this.unprocessedNum = unprocessedNum;
+            return this;
+        }
+        public Integer getUnprocessedNum() {
+            return this.unprocessedNum;
         }
 
     }

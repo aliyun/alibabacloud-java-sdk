@@ -15,6 +15,9 @@ public class ModifyOpenLogShipperRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static ModifyOpenLogShipperRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyOpenLogShipperRequest self = new ModifyOpenLogShipperRequest();
         return TeaModel.build(map, self);
@@ -26,6 +29,14 @@ public class ModifyOpenLogShipperRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public ModifyOpenLogShipperRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

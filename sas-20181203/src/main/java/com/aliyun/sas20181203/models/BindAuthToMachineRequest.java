@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BindAuthToMachineRequest extends TeaModel {
     /**
-     * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+     * <p>The edition of Security Center that is authorized to scan the asset. Valid values:</p>
      * <br>
-     * <p>*   **6**: Anti-virus edition</p>
-     * <p>*   **5**: Advanced edition</p>
-     * <p>*   **3**: Enterprise edition</p>
-     * <p>*   **7**: Ultimate edition</p>
-     * <p>*   **10**: Value-added Plan edition</p>
+     * <p>*   **6**: Anti-virus</p>
+     * <p>*   **5**: Advanced</p>
+     * <p>*   **3**: Enterprise</p>
+     * <p>*   **7**: Ultimate</p>
+     * <p>*   **10**: Value-added Plan</p>
      */
     @NameInMap("AuthVersion")
     public Integer authVersion;
@@ -50,6 +50,14 @@ public class BindAuthToMachineRequest extends TeaModel {
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <p>Specifies whether to specify servers for protection when you purchase Security Center. Valid values:</p>
+     * <br>
+     * <p>*   **0**: no</p>
+     * <p>*   **1**: yes</p>
+     * <br>
+     * <p>>  If you specify servers, the servers are automatically added to Security Center for protection after the purchase order is complete.</p>
+     */
     @NameInMap("IsPreBind")
     public Integer isPreBind;
 
@@ -62,9 +70,21 @@ public class BindAuthToMachineRequest extends TeaModel {
     @NameInMap("LogicalExp")
     public String logicalExp;
 
+    /**
+     * <p>The edition of Security Center that you purchase in the order. Valid values:</p>
+     * <br>
+     * <p>*   **level7**: Anti-virus</p>
+     * <p>*   **level3**: Advanced</p>
+     * <p>*   **level2**: Enterprise</p>
+     * <p>*   **level8**: Ultimate</p>
+     * <p>*   **level10**: Value-added Plan</p>
+     */
     @NameInMap("NtmVersion")
     public String ntmVersion;
 
+    /**
+     * <p>The ID of the order in which Security Center is purchased and servers are specified for protection.</p>
+     */
     @NameInMap("PreBindOrderId")
     public Long preBindOrderId;
 

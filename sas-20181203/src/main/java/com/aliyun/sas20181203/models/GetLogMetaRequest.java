@@ -14,6 +14,9 @@ public class GetLogMetaRequest extends TeaModel {
     @NameInMap("LogStore")
     public String logStore;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static GetLogMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLogMetaRequest self = new GetLogMetaRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class GetLogMetaRequest extends TeaModel {
     }
     public String getLogStore() {
         return this.logStore;
+    }
+
+    public GetLogMetaRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

@@ -70,7 +70,7 @@ public class ListCheckResultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Maximum value : 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

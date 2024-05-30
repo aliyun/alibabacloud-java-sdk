@@ -92,7 +92,9 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The UUID array of the servers.</p>
+     * <p>The UUIDs of the servers.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCloudCenterInstances](https://help.aliyun.com/document_detail/141932.html) operation to query the UUIDs of the servers.</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

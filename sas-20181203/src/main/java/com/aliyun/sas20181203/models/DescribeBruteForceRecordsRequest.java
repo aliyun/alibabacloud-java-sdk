@@ -16,6 +16,9 @@ public class DescribeBruteForceRecordsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -25,6 +28,9 @@ public class DescribeBruteForceRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name or IP address of the server to query.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

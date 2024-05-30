@@ -17,7 +17,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the restoration tasks.</p>
+     * <p>The details about the restoration tasks.</p>
      */
     @NameInMap("RestoreJobs")
     public java.util.List<DescribeRestoreJobsResponseBodyRestoreJobs> restoreJobs;
@@ -135,7 +135,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         public Long bytesTotal;
 
         /**
-         * <p>The ID of the anti-ransomware agent that is used to restore data.</p>
+         * <p>The ID of the anti-ransomware agent that is used to perform the restoration task.</p>
          */
         @NameInMap("ClientId")
         public String clientId;
@@ -213,7 +213,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy</p>
+         * <p>The directory in which the restored file is stored. The value is the directory that you specify for protection when you create the anti-ransomware policy</p>
          */
         @NameInMap("Includes")
         public String includes;
@@ -243,19 +243,19 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The number of files that are backed up.</p>
+         * <p>The number of files that are restored.</p>
          */
         @NameInMap("ItemsDone")
         public Long itemsDone;
 
         /**
-         * <p>The total number of files that you want to restore.</p>
+         * <p>The total number of files that need to be restored.</p>
          */
         @NameInMap("ItemsTotal")
         public Long itemsTotal;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -267,7 +267,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("RequestId")
         public String requestId;
@@ -312,7 +312,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         public String snapshotVersion;
 
         /**
-         * <p>The path to the source file that you want to restore.</p>
+         * <p>The restored content.</p>
          */
         @NameInMap("Source")
         public String source;
@@ -324,7 +324,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         public String sourceClientId;
 
         /**
-         * <p>The speed of data restoration. Unit: byte/s.</p>
+         * <p>The speed at which data is restored. Unit: byte/s.</p>
          */
         @NameInMap("Speed")
         public Long speed;
@@ -338,7 +338,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
          * <p>*   **CANCELING**: The task is being canceled.</p>
          * <p>*   **CANCELED**: The task is canceled.</p>
          * <p>*   **PARTIAL_COMPLETE**: The task is partially successful.</p>
-         * <p>*   **CREATED**: The task is created but is not run.</p>
+         * <p>*   **CREATED**: The task was created but is not run.</p>
          * <p>*   **EXPIRED**: The task is not updated.</p>
          * <p>*   **QUEUED**: The task is waiting to be run.</p>
          * <p>*   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.</p>

@@ -32,6 +32,8 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * <p>The region in which the server resides.</p>
+     * <br>
+     * <p>> This parameter is required if you do not specify the Uuid parameter.</p>
      */
     @NameInMap("MachineRegion")
     public String machineRegion;

@@ -126,11 +126,11 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String source;
 
     /**
-     * <p>The validity of the key associated with the AK. Value:</p>
+     * <p>The validity of the key that is associated with the AccessKey pair. Valid values:</p>
      * <br>
-     * <p>* 0: to be confirmed</p>
-     * <p>* 1: Valid</p>
-     * <p>* 2: Invalid</p>
+     * <p>*   **0**: to be confirmed.</p>
+     * <p>*   **1**: valid.</p>
+     * <p>*   **2**: invalid.</p>
      */
     @NameInMap("TokenValid")
     public Integer tokenValid;
@@ -151,7 +151,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     public String whitelistStatus;
 
     /**
-     * <p>The time when the AK whitelist was added. Unit: milliseconds.</p>
+     * <p>The time when the AccessKey pair was added to the whitelist. Unit: milliseconds.</p>
      */
     @NameInMap("WhitelistTime")
     public Long whitelistTime;

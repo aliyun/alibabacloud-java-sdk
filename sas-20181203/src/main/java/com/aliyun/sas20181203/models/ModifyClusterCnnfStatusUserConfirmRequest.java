@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterCnnfStatusUserConfirmRequest extends TeaModel {
     /**
-     * <p>The IDs of the clusters.</p>
+     * <p>The cluster IDs.</p>
      */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;

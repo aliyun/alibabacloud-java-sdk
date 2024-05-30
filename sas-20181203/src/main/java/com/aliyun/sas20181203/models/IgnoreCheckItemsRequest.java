@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IgnoreCheckItemsRequest extends TeaModel {
     /**
-     * <p>The risk items.</p>
+     * <p>The information about check items.</p>
      */
     @NameInMap("CheckAndRiskTypeList")
     public java.util.List<IgnoreCheckItemsRequestCheckAndRiskTypeList> checkAndRiskTypeList;

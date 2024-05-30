@@ -11,7 +11,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public GetOpaStrategyDetailNewResponseBodyData data;
@@ -394,13 +394,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem extends TeaModel {
         /**
-         * <p>The vulnerability ID.</p>
+         * <p>The ID of the vulnerability.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The vulnerability name.</p>
+         * <p>The name of the vulnerability.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -600,7 +600,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyDataScopes extends TeaModel {
         /**
-         * <p>The ID of the cluster node to which the rule is applied.</p>
+         * <p>The rule instance ID of the cluster.</p>
          */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
@@ -608,8 +608,8 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         /**
          * <p>Indicates whether all namespaces are included. Valid values:</p>
          * <br>
-         * <p>*   **1**: All namespaces are included.</p>
-         * <p>*   **0**: Not all namespaces are included.</p>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;

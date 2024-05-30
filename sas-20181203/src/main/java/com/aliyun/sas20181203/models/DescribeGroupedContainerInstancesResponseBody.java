@@ -87,7 +87,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The time when the cluster was created. Unit: milliseconds.</p>
+         * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -207,8 +207,8 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether risks were detected. Valid values:</p>
          * <br>
-         * <p>*   **NO**: No risks were detected.</p>
-         * <p>*   **YES**: Risks were detected.</p>
+         * <p>*   **NO**</p>
+         * <p>*   **YES**</p>
          */
         @NameInMap("RiskStatus")
         public String riskStatus;

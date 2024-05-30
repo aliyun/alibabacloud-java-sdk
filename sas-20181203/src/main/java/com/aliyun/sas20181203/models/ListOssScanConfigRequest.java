@@ -11,13 +11,13 @@ public class ListOssScanConfigRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The name of the config.</p>
+     * <p>The policy name.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

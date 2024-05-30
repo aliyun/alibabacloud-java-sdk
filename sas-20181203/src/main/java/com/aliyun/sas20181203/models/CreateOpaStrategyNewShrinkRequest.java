@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     /**
-     * <p>The rule configuration.</p>
+     * <p>The risks that you want to detect by using the rule.</p>
      */
     @NameInMap("AlarmDetail")
     public String alarmDetailShrink;

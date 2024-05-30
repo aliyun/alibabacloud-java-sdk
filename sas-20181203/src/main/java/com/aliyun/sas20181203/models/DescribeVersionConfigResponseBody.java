@@ -155,6 +155,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("MVUnusedAuthCount")
     public Integer MVUnusedAuthCount;
 
+    /**
+     * <p>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</p>
+     * <br>
+     * <p>*   **0**: no</p>
+     * <p>*   **1**: yes</p>
+     */
     @NameInMap("NewThreatAnalysis")
     public Integer newThreatAnalysis;
 
@@ -200,7 +206,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Long raspCapacity;
 
     /**
-     * <p>The timestamp when Security Center was expired. Unit: milliseconds. </p>
+     * <p>The timestamp when the Security Center subscription ends. Unit: milliseconds.</p>
      * <br>
      * <p>>  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](https://help.aliyun.com/document_detail/42308.html).</p>
      */
@@ -249,6 +255,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("ThreatAnalysisCapacity")
     public Long threatAnalysisCapacity;
 
+    /**
+     * <p>The amount of log data that you purchase for the threat analysis and response feature. Unit: GB-day.</p>
+     */
     @NameInMap("ThreatAnalysisFlow")
     public Integer threatAnalysisFlow;
 

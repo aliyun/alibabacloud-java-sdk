@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartHoneypotResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The information about the honeypot.</p>
      */
     @NameInMap("Data")
     public StartHoneypotResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,7 +51,7 @@ public class StartHoneypotResponseBody extends TeaModel {
         public String honeypotId;
 
         /**
-         * <p>The display name of the honeypot image.</p>
+         * <p>The display name of the image.</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
@@ -63,7 +63,7 @@ public class StartHoneypotResponseBody extends TeaModel {
         public String honeypotImageName;
 
         /**
-         * <p>The name of the honeypot.</p>
+         * <p>The custom name of the honeypot.</p>
          */
         @NameInMap("HoneypotName")
         public String honeypotName;
@@ -75,13 +75,13 @@ public class StartHoneypotResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The ID of the honeypot custom parameter.</p>
+         * <p>The ID of the custom configuration for the honeypot.</p>
          */
         @NameInMap("PresetId")
         public String presetId;
 
         /**
-         * <p>The status of the honeypot.</p>
+         * <p>The statuses of the honeypots.</p>
          */
         @NameInMap("State")
         public java.util.List<String> state;

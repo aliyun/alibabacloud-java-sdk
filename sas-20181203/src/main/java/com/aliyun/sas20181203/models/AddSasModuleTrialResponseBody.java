@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddSasModuleTrialResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public AddSasModuleTrialResponseBodyData data;
@@ -39,11 +39,14 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
 
     public static class AddSasModuleTrialResponseBodyDataTrialRecordList extends TeaModel {
         /**
-         * <p>The authorized quota.</p>
+         * <p>The purchased quota.</p>
          */
         @NameInMap("AuthLimit")
         public Long authLimit;
 
+        /**
+         * <p>List of purchased quotas.</p>
+         */
         @NameInMap("AuthLimitList")
         public String authLimitList;
 
@@ -60,7 +63,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         public Long gmtStart;
 
         /**
-         * <p>The module code. Valid values:</p>
+         * <p>The code of the module. Valid values:</p>
          * <br>
          * <p>*   **vulFix**: vulnerability fixing</p>
          * <p>*   **cloudSiem**: threat analysis</p>
@@ -71,8 +74,8 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         /**
          * <p>The status of the trial use. Valid values:</p>
          * <br>
-         * <p>*   **1**: The feature is in trial use.</p>
-         * <p>*   **0**: The trial use ends.</p>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: finished</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -134,7 +137,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
 
     public static class AddSasModuleTrialResponseBodyData extends TeaModel {
         /**
-         * <p>The trial use record.</p>
+         * <p>The information about the trial use.</p>
          */
         @NameInMap("TrialRecordList")
         public java.util.List<AddSasModuleTrialResponseBodyDataTrialRecordList> trialRecordList;

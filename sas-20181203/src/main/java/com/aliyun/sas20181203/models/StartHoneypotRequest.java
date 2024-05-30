@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class StartHoneypotRequest extends TeaModel {
     /**
-     * <p>The honeypot ID.</p>
+     * <p>The ID of the honeypot.</p>
      * <br>
-     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain IDs of honeypots.</p>
+     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -15,7 +15,7 @@ public class StartHoneypotRequest extends TeaModel {
     public String honeypotId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <p>The language of the content in the request and response messages. Default value: **zh**. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese</p>
      * <p>*   **en**: English</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackUpExportInfoRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -30,7 +30,7 @@ public class DescribeBackUpExportInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 1.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -28,6 +28,9 @@ public class ModifyLogMetaStatusRequest extends TeaModel {
     @NameInMap("Project")
     public String project;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The status of the log analysis feature. Valid values:</p>
      * <br>
@@ -66,6 +69,14 @@ public class ModifyLogMetaStatusRequest extends TeaModel {
     }
     public String getProject() {
         return this.project;
+    }
+
+    public ModifyLogMetaStatusRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public ModifyLogMetaStatusRequest setStatus(String status) {

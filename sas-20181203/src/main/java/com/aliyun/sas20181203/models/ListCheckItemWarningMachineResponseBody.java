@@ -53,7 +53,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     public static class ListCheckItemWarningMachineResponseBodyListFixList extends TeaModel {
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          */
         @NameInMap("RiskId")
         public Long riskId;
@@ -89,7 +89,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     public static class ListCheckItemWarningMachineResponseBodyListWarningRiskList extends TeaModel {
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          */
         @NameInMap("RiskId")
         public Long riskId;
@@ -147,7 +147,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public Boolean bind;
 
         /**
-         * <p>The container ID.</p>
+         * <p>The ID of the container.</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
@@ -248,7 +248,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the asset that is scanned.</p>
+         * <p>The name of the asset on which the malicious image sample is detected.</p>
          */
         @NameInMap("TargetName")
         public String targetName;

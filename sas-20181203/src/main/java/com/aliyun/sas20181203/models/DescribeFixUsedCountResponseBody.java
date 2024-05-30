@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeFixUsedCountResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature.</p>
+     */
     @NameInMap("UsedCount")
     public Integer usedCount;
 
+    /**
+     * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature in China.</p>
+     */
     @NameInMap("UsedCountCn")
     public Integer usedCountCn;
 
+    /**
+     * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature outside China.</p>
+     */
     @NameInMap("UsedCountSg")
     public Integer usedCountSg;
 

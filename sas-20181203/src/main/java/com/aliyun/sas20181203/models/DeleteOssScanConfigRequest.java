@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteOssScanConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The configuration ID.</p>
      * <br>
-     * <p>>  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query the IDs of rules.</p>
+     * <p>>  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query configuration IDs.</p>
      */
     @NameInMap("Id")
     public Long id;
