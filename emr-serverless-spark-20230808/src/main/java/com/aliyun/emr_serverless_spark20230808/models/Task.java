@@ -40,6 +40,9 @@ public class Task extends TeaModel {
     @NameInMap("defaultSqlComputeId")
     public String defaultSqlComputeId;
 
+    @NameInMap("deploymentId")
+    public String deploymentId;
+
     @NameInMap("extraArtifactIds")
     public java.util.List<String> extraArtifactIds;
 
@@ -69,6 +72,9 @@ public class Task extends TeaModel {
      */
     @NameInMap("hasCommited")
     public Boolean hasCommited;
+
+    @NameInMap("isStreaming")
+    public Boolean isStreaming;
 
     @NameInMap("jars")
     public java.util.List<String> jars;
@@ -135,6 +141,9 @@ public class Task extends TeaModel {
      */
     @NameInMap("sparkLogPath")
     public String sparkLogPath;
+
+    @NameInMap("sparkSubmitClause")
+    public String sparkSubmitClause;
 
     /**
      * <p>This parameter is required.</p>
@@ -236,6 +245,14 @@ public class Task extends TeaModel {
         return this.defaultSqlComputeId;
     }
 
+    public Task setDeploymentId(String deploymentId) {
+        this.deploymentId = deploymentId;
+        return this;
+    }
+    public String getDeploymentId() {
+        return this.deploymentId;
+    }
+
     public Task setExtraArtifactIds(java.util.List<String> extraArtifactIds) {
         this.extraArtifactIds = extraArtifactIds;
         return this;
@@ -290,6 +307,14 @@ public class Task extends TeaModel {
     }
     public Boolean getHasCommited() {
         return this.hasCommited;
+    }
+
+    public Task setIsStreaming(Boolean isStreaming) {
+        this.isStreaming = isStreaming;
+        return this;
+    }
+    public Boolean getIsStreaming() {
+        return this.isStreaming;
     }
 
     public Task setJars(java.util.List<String> jars) {
@@ -402,6 +427,14 @@ public class Task extends TeaModel {
     }
     public String getSparkLogPath() {
         return this.sparkLogPath;
+    }
+
+    public Task setSparkSubmitClause(String sparkSubmitClause) {
+        this.sparkSubmitClause = sparkSubmitClause;
+        return this;
+    }
+    public String getSparkSubmitClause() {
+        return this.sparkSubmitClause;
     }
 
     public Task setSparkVersion(String sparkVersion) {

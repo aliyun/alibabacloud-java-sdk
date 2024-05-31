@@ -127,6 +127,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 使用session运行SQL
+     *
+     * @param request CreateSqlStatementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSqlStatementResponse
+     */
+    public CreateSqlStatementResponse createSqlStatementWithOptions(String workspaceId, CreateSqlStatementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codeContent)) {
+            body.put("codeContent", request.codeContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultCatalog)) {
+            body.put("defaultCatalog", request.defaultCatalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultDatabase)) {
+            body.put("defaultDatabase", request.defaultDatabase);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sqlComputeId)) {
+            body.put("sqlComputeId", request.sqlComputeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSqlStatement"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/statement"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSqlStatementResponse());
+    }
+
+    /**
+     * @summary 使用session运行SQL
+     *
+     * @param request CreateSqlStatementRequest
+     * @return CreateSqlStatementResponse
+     */
+    public CreateSqlStatementResponse createSqlStatement(String workspaceId, CreateSqlStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSqlStatementWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
      * @summary 获取任务
      *
      * @param request GetJobRunRequest
@@ -169,6 +236,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
+    }
+
+    /**
+     * @summary 获取Sql Statement状态
+     *
+     * @param request GetSqlStatementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSqlStatementResponse
+     */
+    public GetSqlStatementResponse getSqlStatementWithOptions(String workspaceId, String statementId, GetSqlStatementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSqlStatement"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/statement/" + com.aliyun.openapiutil.Client.getEncodeParam(statementId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSqlStatementResponse());
+    }
+
+    /**
+     * @summary 获取Sql Statement状态
+     *
+     * @param request GetSqlStatementRequest
+     * @return GetSqlStatementResponse
+     */
+    public GetSqlStatementResponse getSqlStatement(String workspaceId, String statementId, GetSqlStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
     }
 
     /**
@@ -261,6 +373,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTimeShrink)) {
             query.put("endTime", request.endTimeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobRunDeploymentId)) {
+            query.put("jobRunDeploymentId", request.jobRunDeploymentId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobRunId)) {
@@ -642,5 +758,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startJobRunWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * @summary 终止 session statement
+     *
+     * @param request TerminateSqlStatementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TerminateSqlStatementResponse
+     */
+    public TerminateSqlStatementResponse terminateSqlStatementWithOptions(String workspaceId, String statementId, TerminateSqlStatementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TerminateSqlStatement"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/statement/" + com.aliyun.openapiutil.Client.getEncodeParam(statementId) + "/terminate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TerminateSqlStatementResponse());
+    }
+
+    /**
+     * @summary 终止 session statement
+     *
+     * @param request TerminateSqlStatementRequest
+     * @return TerminateSqlStatementResponse
+     */
+    public TerminateSqlStatementResponse terminateSqlStatement(String workspaceId, String statementId, TerminateSqlStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.terminateSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
     }
 }

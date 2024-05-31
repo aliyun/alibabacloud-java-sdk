@@ -13,6 +13,9 @@ public class ListJobRunsRequest extends TeaModel {
     @NameInMap("endTime")
     public ListJobRunsRequestEndTime endTime;
 
+    @NameInMap("jobRunDeploymentId")
+    public String jobRunDeploymentId;
+
     /**
      * <p>作业id。</p>
      */
@@ -77,6 +80,14 @@ public class ListJobRunsRequest extends TeaModel {
     }
     public ListJobRunsRequestEndTime getEndTime() {
         return this.endTime;
+    }
+
+    public ListJobRunsRequest setJobRunDeploymentId(String jobRunDeploymentId) {
+        this.jobRunDeploymentId = jobRunDeploymentId;
+        return this;
+    }
+    public String getJobRunDeploymentId() {
+        return this.jobRunDeploymentId;
     }
 
     public ListJobRunsRequest setJobRunId(String jobRunId) {
