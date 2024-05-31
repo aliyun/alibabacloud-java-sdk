@@ -13,6 +13,9 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     @NameInMap("endTime")
     public String endTimeShrink;
 
+    @NameInMap("jobRunDeploymentId")
+    public String jobRunDeploymentId;
+
     /**
      * <p>作业id。</p>
      */
@@ -77,6 +80,14 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     }
     public String getEndTimeShrink() {
         return this.endTimeShrink;
+    }
+
+    public ListJobRunsShrinkRequest setJobRunDeploymentId(String jobRunDeploymentId) {
+        this.jobRunDeploymentId = jobRunDeploymentId;
+        return this;
+    }
+    public String getJobRunDeploymentId() {
+        return this.jobRunDeploymentId;
     }
 
     public ListJobRunsShrinkRequest setJobRunId(String jobRunId) {
