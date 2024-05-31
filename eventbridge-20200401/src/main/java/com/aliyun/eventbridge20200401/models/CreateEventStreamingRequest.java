@@ -4437,6 +4437,157 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSourceSourceApacheKafkaParameters extends TeaModel {
+        @NameInMap("Bootstraps")
+        public String bootstraps;
+
+        @NameInMap("ConsumerGroup")
+        public String consumerGroup;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("OffsetReset")
+        public String offsetReset;
+
+        @NameInMap("SaslMechanism")
+        public String saslMechanism;
+
+        @NameInMap("SaslPassword")
+        public String saslPassword;
+
+        @NameInMap("SaslUser")
+        public String saslUser;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SecurityProtocol")
+        public String securityProtocol;
+
+        @NameInMap("Topic")
+        public String topic;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("ValueDataType")
+        public String valueDataType;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static CreateEventStreamingRequestSourceSourceApacheKafkaParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSourceSourceApacheKafkaParameters self = new CreateEventStreamingRequestSourceSourceApacheKafkaParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setBootstraps(String bootstraps) {
+            this.bootstraps = bootstraps;
+            return this;
+        }
+        public String getBootstraps() {
+            return this.bootstraps;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setConsumerGroup(String consumerGroup) {
+            this.consumerGroup = consumerGroup;
+            return this;
+        }
+        public String getConsumerGroup() {
+            return this.consumerGroup;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setOffsetReset(String offsetReset) {
+            this.offsetReset = offsetReset;
+            return this;
+        }
+        public String getOffsetReset() {
+            return this.offsetReset;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSaslMechanism(String saslMechanism) {
+            this.saslMechanism = saslMechanism;
+            return this;
+        }
+        public String getSaslMechanism() {
+            return this.saslMechanism;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSaslPassword(String saslPassword) {
+            this.saslPassword = saslPassword;
+            return this;
+        }
+        public String getSaslPassword() {
+            return this.saslPassword;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSaslUser(String saslUser) {
+            this.saslUser = saslUser;
+            return this;
+        }
+        public String getSaslUser() {
+            return this.saslUser;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSecurityProtocol(String securityProtocol) {
+            this.securityProtocol = securityProtocol;
+            return this;
+        }
+        public String getSecurityProtocol() {
+            return this.securityProtocol;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setValueDataType(String valueDataType) {
+            this.valueDataType = valueDataType;
+            return this;
+        }
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSourceSourceDTSParameters extends TeaModel {
         /**
          * <p>The URL and port number of the change tracking instance.</p>
@@ -4931,6 +5082,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("AuthType")
         public String authType;
 
+        @NameInMap("BodyDataType")
+        public String bodyDataType;
+
         /**
          * <p>The SQL statement that you want to use to filter messages.</p>
          */
@@ -5077,6 +5231,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public CreateEventStreamingRequestSourceSourceRocketMQParameters setBodyDataType(String bodyDataType) {
+            this.bodyDataType = bodyDataType;
+            return this;
+        }
+        public String getBodyDataType() {
+            return this.bodyDataType;
         }
 
         public CreateEventStreamingRequestSourceSourceRocketMQParameters setFilterSql(String filterSql) {
@@ -5314,6 +5476,9 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSource extends TeaModel {
+        @NameInMap("SourceApacheKafkaParameters")
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters sourceApacheKafkaParameters;
+
         /**
          * <p>The parameters that are configured if you specify Data Transmission Service (DTS) as the event source.</p>
          */
@@ -5365,6 +5530,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         public static CreateEventStreamingRequestSource build(java.util.Map<String, ?> map) throws Exception {
             CreateEventStreamingRequestSource self = new CreateEventStreamingRequestSource();
             return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSource setSourceApacheKafkaParameters(CreateEventStreamingRequestSourceSourceApacheKafkaParameters sourceApacheKafkaParameters) {
+            this.sourceApacheKafkaParameters = sourceApacheKafkaParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters getSourceApacheKafkaParameters() {
+            return this.sourceApacheKafkaParameters;
         }
 
         public CreateEventStreamingRequestSource setSourceDTSParameters(CreateEventStreamingRequestSourceSourceDTSParameters sourceDTSParameters) {
