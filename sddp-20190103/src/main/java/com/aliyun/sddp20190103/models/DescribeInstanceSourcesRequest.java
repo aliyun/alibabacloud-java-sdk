@@ -90,7 +90,7 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     public String searchType;
 
     /**
-     * <p>The region in which the data asset resides. For more information, see [Supported regions](~~214257~~).</p>
+     * <p>The region in which the data asset resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/214257.html).</p>
      */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;

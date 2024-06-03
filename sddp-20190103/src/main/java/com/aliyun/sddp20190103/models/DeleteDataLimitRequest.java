@@ -14,6 +14,8 @@ public class DeleteDataLimitRequest extends TeaModel {
      * <p>The ID of the data asset.</p>
      * <br>
      * <p>You can call the DescribeDataLimits operation to query the IDs of data assets. The value of the Id response parameter indicates the ID of a data asset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

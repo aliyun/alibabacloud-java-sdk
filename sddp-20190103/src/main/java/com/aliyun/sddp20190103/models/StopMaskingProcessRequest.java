@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class StopMaskingProcessRequest extends TeaModel {
     /**
      * <p>The unique ID of the de-identification task. You can query the task ID by calling the [DescribeDataMaskingTasks](~~DescribeDataMaskingTasks~~) operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

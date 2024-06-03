@@ -52,6 +52,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

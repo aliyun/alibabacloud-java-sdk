@@ -188,7 +188,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets that DSC can scan to detect sensitive data, see [Supported data assets](~~212906~~).</p>
+         * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets that DSC can scan to detect sensitive data, see [Supported data assets](https://help.aliyun.com/document_detail/212906.html).</p>
          */
         @NameInMap("ProductCode")
         public String productCode;

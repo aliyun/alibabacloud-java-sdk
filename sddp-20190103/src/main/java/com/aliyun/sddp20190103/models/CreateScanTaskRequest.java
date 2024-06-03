@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateScanTaskRequest extends TeaModel {
     /**
      * <p>The unique ID of the data asset, such as an instance, a database, and a bucket. You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the unique ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DataLimitId")
     public Long dataLimitId;
@@ -18,6 +20,8 @@ public class CreateScanTaskRequest extends TeaModel {
 
     /**
      * <p>The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IntervalDay")
     public Integer intervalDay;
@@ -39,18 +43,24 @@ public class CreateScanTaskRequest extends TeaModel {
 
     /**
      * <p>The type of the service to which the data assets to be scanned belong. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public Long resourceType;
 
     /**
      * <p>The time when the scan task is executed next time. Unit: hours.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RunHour")
     public Integer runHour;
 
     /**
      * <p>The time when the scan task is executed next time. Unit: minutes.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RunMinute")
     public Integer runMinute;
@@ -62,12 +72,16 @@ public class CreateScanTaskRequest extends TeaModel {
      * <p>*   **1**: prefix match</p>
      * <p>*   **2**: suffix match</p>
      * <p>*   **3**: regular expression match</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScanRange")
     public Integer scanRange;
 
     /**
      * <p>The data to be scanned in a structured data asset. Prefix match, suffix match, and regular expression match are supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScanRangeContent")
     public String scanRangeContent;
@@ -80,6 +94,8 @@ public class CreateScanTaskRequest extends TeaModel {
 
     /**
      * <p>The name of the scan task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskName")
     public String taskName;

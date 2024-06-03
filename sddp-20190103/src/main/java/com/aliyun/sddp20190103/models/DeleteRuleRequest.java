@@ -12,6 +12,8 @@ public class DeleteRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the sensitive data detection rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

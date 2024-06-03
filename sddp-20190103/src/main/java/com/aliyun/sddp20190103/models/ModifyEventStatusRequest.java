@@ -23,6 +23,8 @@ public class ModifyEventStatusRequest extends TeaModel {
      * <p>The ID of the anomalous event.</p>
      * <br>
      * <p>> You can call the **DescribeEvents** operation to query the ID of the anomalous event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -41,6 +43,8 @@ public class ModifyEventStatusRequest extends TeaModel {
      * <br>
      * <p>*   **1**: marks the anomalous event as a false positive.</p>
      * <p>*   **2**: confirms and handles the anomalous event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public Integer status;

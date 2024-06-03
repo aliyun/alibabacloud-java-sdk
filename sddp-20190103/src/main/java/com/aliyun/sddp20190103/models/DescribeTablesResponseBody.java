@@ -179,7 +179,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the service to which the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](~~212906~~).</p>
+         * <p>The name of the service to which the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](https://help.aliyun.com/document_detail/212906.html).</p>
          */
         @NameInMap("ProductCode")
         public String productCode;

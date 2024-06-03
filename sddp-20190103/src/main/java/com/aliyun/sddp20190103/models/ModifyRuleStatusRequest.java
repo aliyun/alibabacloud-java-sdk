@@ -34,6 +34,8 @@ public class ModifyRuleStatusRequest extends TeaModel {
      * <br>
      * <p>*   **0**: disables the sensitive data detection rule.</p>
      * <p>*   **1**: enables the sensitive data detection rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public Integer status;

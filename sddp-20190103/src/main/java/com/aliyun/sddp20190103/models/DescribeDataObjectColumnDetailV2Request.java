@@ -10,6 +10,9 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     @NameInMap("FeatureType")
     public Integer featureType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Id")
     public String id;
 
@@ -22,6 +25,9 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     @NameInMap("ProductId")
     public Long productId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

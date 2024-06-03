@@ -43,6 +43,8 @@ public class ModifyDataLimitRequest extends TeaModel {
      * <p>The unique ID of the data asset for which you want to modify configuration items.</p>
      * <br>
      * <p>> You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the ID of the data asset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -96,6 +98,8 @@ public class ModifyDataLimitRequest extends TeaModel {
      * <p>*   **3**: AnalyticDB for MySQL</p>
      * <p>*   **4**: Tablestore</p>
      * <p>*   **5**: ApsaraDB RDS</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public Integer resourceType;
