@@ -248,6 +248,179 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
     }
 
+    public static class FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList extends TeaModel {
+        @NameInMap("arr_airport_name")
+        public String arrAirportName;
+
+        @NameInMap("arr_city")
+        public String arrCity;
+
+        @NameInMap("arr_city_name")
+        public String arrCityName;
+
+        @NameInMap("arr_time")
+        public String arrTime;
+
+        @NameInMap("cabin")
+        public String cabin;
+
+        @NameInMap("cabin_class")
+        public Integer cabinClass;
+
+        @NameInMap("cabin_class_str")
+        public String cabinClassStr;
+
+        @NameInMap("dep_airport_name")
+        public String depAirportName;
+
+        @NameInMap("dep_city")
+        public String depCity;
+
+        @NameInMap("dep_city_name")
+        public String depCityName;
+
+        @NameInMap("dep_time")
+        public String depTime;
+
+        @NameInMap("discount")
+        public String discount;
+
+        @NameInMap("flight_no")
+        public String flightNo;
+
+        @NameInMap("price")
+        public Long price;
+
+        @NameInMap("type")
+        public Integer type;
+
+        public static FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList build(java.util.Map<String, ?> map) throws Exception {
+            FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList self = new FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setArrAirportName(String arrAirportName) {
+            this.arrAirportName = arrAirportName;
+            return this;
+        }
+        public String getArrAirportName() {
+            return this.arrAirportName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setArrCity(String arrCity) {
+            this.arrCity = arrCity;
+            return this;
+        }
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setArrCityName(String arrCityName) {
+            this.arrCityName = arrCityName;
+            return this;
+        }
+        public String getArrCityName() {
+            return this.arrCityName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setArrTime(String arrTime) {
+            this.arrTime = arrTime;
+            return this;
+        }
+        public String getArrTime() {
+            return this.arrTime;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setCabin(String cabin) {
+            this.cabin = cabin;
+            return this;
+        }
+        public String getCabin() {
+            return this.cabin;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setCabinClass(Integer cabinClass) {
+            this.cabinClass = cabinClass;
+            return this;
+        }
+        public Integer getCabinClass() {
+            return this.cabinClass;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setCabinClassStr(String cabinClassStr) {
+            this.cabinClassStr = cabinClassStr;
+            return this;
+        }
+        public String getCabinClassStr() {
+            return this.cabinClassStr;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setDepAirportName(String depAirportName) {
+            this.depAirportName = depAirportName;
+            return this;
+        }
+        public String getDepAirportName() {
+            return this.depAirportName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setDepCity(String depCity) {
+            this.depCity = depCity;
+            return this;
+        }
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setDepCityName(String depCityName) {
+            this.depCityName = depCityName;
+            return this;
+        }
+        public String getDepCityName() {
+            return this.depCityName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setDepTime(String depTime) {
+            this.depTime = depTime;
+            return this;
+        }
+        public String getDepTime() {
+            return this.depTime;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setDiscount(String discount) {
+            this.discount = discount;
+            return this;
+        }
+        public String getDiscount() {
+            return this.discount;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setFlightNo(String flightNo) {
+            this.flightNo = flightNo;
+            return this;
+        }
+        public String getFlightNo() {
+            return this.flightNo;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setPrice(Long price) {
+            this.price = price;
+            return this;
+        }
+        public Long getPrice() {
+            return this.price;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
     public static class FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights extends TeaModel {
         @NameInMap("arr_airport_name")
         public String arrAirportName;
@@ -406,6 +579,9 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         @NameInMap("apply_intention_info_do")
         public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo applyIntentionInfoDo;
 
+        @NameInMap("apply_intention_info_do_list")
+        public java.util.List<FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList> applyIntentionInfoDoList;
+
         @NameInMap("apply_recommend_flights")
         public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights applyRecommendFlights;
 
@@ -458,6 +634,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         }
         public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo getApplyIntentionInfoDo() {
             return this.applyIntentionInfoDo;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModule setApplyIntentionInfoDoList(java.util.List<FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList> applyIntentionInfoDoList) {
+            this.applyIntentionInfoDoList = applyIntentionInfoDoList;
+            return this;
+        }
+        public java.util.List<FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDoList> getApplyIntentionInfoDoList() {
+            return this.applyIntentionInfoDoList;
         }
 
         public FlightExceedApplyQueryResponseBodyModule setApplyRecommendFlights(FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights applyRecommendFlights) {
