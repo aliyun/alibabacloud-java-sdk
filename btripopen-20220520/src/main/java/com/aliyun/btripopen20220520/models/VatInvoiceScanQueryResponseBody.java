@@ -249,6 +249,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("password_area")
         public String passwordArea;
 
+        @NameInMap("pdf_oss_url")
+        public String pdfOssUrl;
+
         @NameInMap("purchaser_bank_account_info")
         public String purchaserBankAccountInfo;
 
@@ -444,6 +447,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getPasswordArea() {
             return this.passwordArea;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setPdfOssUrl(String pdfOssUrl) {
+            this.pdfOssUrl = pdfOssUrl;
+            return this;
+        }
+        public String getPdfOssUrl() {
+            return this.pdfOssUrl;
         }
 
         public VatInvoiceScanQueryResponseBodyModuleItems setPurchaserBankAccountInfo(String purchaserBankAccountInfo) {
