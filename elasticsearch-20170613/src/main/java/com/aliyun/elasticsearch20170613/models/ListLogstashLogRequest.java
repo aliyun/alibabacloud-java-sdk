@@ -24,6 +24,8 @@ public class ListLogstashLogRequest extends TeaModel {
 
     /**
      * <p>1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("query")
     public String query;
@@ -36,6 +38,8 @@ public class ListLogstashLogRequest extends TeaModel {
 
     /**
      * <p>1531910852074</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;

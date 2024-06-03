@@ -12,6 +12,8 @@ public class CancelTaskRequest extends TeaModel {
 
     /**
      * <p>The type of the data migration task. Set the value to MigrateData.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("taskType")
     public String taskType;

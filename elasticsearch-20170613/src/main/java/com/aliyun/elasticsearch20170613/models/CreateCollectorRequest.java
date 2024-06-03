@@ -7,24 +7,45 @@ public class CreateCollectorRequest extends TeaModel {
     @NameInMap("collectorPaths")
     public java.util.List<String> collectorPaths;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configs")
     public java.util.List<CreateCollectorRequestConfigs> configs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("extendConfigs")
     public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resType")
     public String resType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resVersion")
     public String resVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
@@ -112,9 +133,15 @@ public class CreateCollectorRequest extends TeaModel {
     }
 
     public static class CreateCollectorRequestConfigs extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 

@@ -7,6 +7,9 @@ public class ValidateSlrPermissionRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("rolename")
     public String rolename;
 

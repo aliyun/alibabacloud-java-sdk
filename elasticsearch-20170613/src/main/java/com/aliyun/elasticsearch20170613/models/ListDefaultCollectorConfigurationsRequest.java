@@ -11,6 +11,8 @@ public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
      * <p>*   metricBeat</p>
      * <p>*   heartBeat</p>
      * <p>*   auditBeat</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resType")
     public String resType;
@@ -18,8 +20,10 @@ public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     /**
      * <p>The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:</p>
      * <br>
-     * <p>*   ECS: 6.8.5\_with_community</p>
-     * <p>*   ACK: 6.8.13\_with_community</p>
+     * <p>*   ECS: 6.8.5_with_community</p>
+     * <p>*   ACK: 6.8.13_with_community</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resVersion")
     public String resVersion;

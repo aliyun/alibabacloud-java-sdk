@@ -4,27 +4,48 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CollectorTargetInstance extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configType")
     public String configType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("enableMonitoring")
     public Boolean enableMonitoring;
 
     @NameInMap("hosts")
     public java.util.List<String> hosts;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userName")
     public String userName;
 

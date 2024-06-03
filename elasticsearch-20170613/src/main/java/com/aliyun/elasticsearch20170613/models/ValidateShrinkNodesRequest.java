@@ -21,6 +21,8 @@ public class ValidateShrinkNodesRequest extends TeaModel {
      * <br>
      * <p>*   true: can be scaled in</p>
      * <p>*   false: cannot be scaled in.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("nodeType")
     public String nodeType;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListDiagnoseReportIdsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The value must be a UNIX timestamp.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("endTime")
     public Long endTime;
@@ -30,6 +32,8 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The value must be a UNIX timestamp.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("startTime")
     public Long startTime;

@@ -10,6 +10,9 @@ public class KibanaNodeConfiguration extends TeaModel {
     @NameInMap("disk")
     public Long disk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spec")
     public String spec;
 

@@ -7,12 +7,21 @@ public class CreateLogstashRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("networkConfig")
     public CreateLogstashRequestNetworkConfig networkConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nodeSpec")
     public CreateLogstashRequestNodeSpec nodeSpec;
 
@@ -25,6 +34,9 @@ public class CreateLogstashRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("version")
     public String version;
 
@@ -112,12 +124,21 @@ public class CreateLogstashRequest extends TeaModel {
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -167,6 +188,9 @@ public class CreateLogstashRequest extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("spec")
         public String spec;
 

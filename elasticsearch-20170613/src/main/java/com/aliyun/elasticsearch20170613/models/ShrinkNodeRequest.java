@@ -16,6 +16,9 @@ public class ShrinkNodeRequest extends TeaModel {
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nodeType")
     public String nodeType;
 

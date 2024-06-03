@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListLogstashRequest extends TeaModel {
     /**
-     * <p>rg-acfm2h5vbzd\*\*\*\*</p>
+     * <p>rg-acfm2h5vbzd\\*\\*\\*\\*</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>\[{"tagKey":"key1","tagValue":"value1"}]</p>
+     * <p>[{"tagKey":"key1","tagValue":"value1"}]</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>ls-cn-n6w1o5jq\*\*\*\*</p>
+     * <p>ls-cn-n6w1o5jq\\*\\*\\*\\*</p>
      */
     @NameInMap("page")
     public Integer page;
@@ -29,7 +29,7 @@ public class ListLogstashRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>5.5.3\_with_X-Pack</p>
+     * <p>5.5.3_with_X-Pack</p>
      */
     @NameInMap("size")
     public Integer size;

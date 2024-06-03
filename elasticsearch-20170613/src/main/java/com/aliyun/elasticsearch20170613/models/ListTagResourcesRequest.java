@@ -11,7 +11,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>1d2db86sca4384811e0b5e8707e\*\*\*\*\*\*</p>
+     * <p>1d2db86sca4384811e0b5e8707e\\*\\*\\*\\*\\*\\*</p>
      */
     @NameInMap("Page")
     @Deprecated
@@ -24,13 +24,15 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>\[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]</p>
+     * <p>[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>\["es-cn-aaa","es-cn-bbb"]</p>
+     * <p>["es-cn-aaa","es-cn-bbb"]</p>
      */
     @NameInMap("Size")
     @Deprecated

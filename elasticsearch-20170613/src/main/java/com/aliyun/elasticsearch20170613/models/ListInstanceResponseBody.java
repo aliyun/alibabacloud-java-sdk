@@ -189,7 +189,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The instance type of the node. For more information, see [Specifications](https://help.aliyun.com/document_detail/271718.html).</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -645,7 +645,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public Boolean advancedDedicateMaster;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The instance type of the node. For more information, see [Specifications](https://help.aliyun.com/document_detail/271718.html).</p>
          */
         @NameInMap("clientNodeConfiguration")
         public ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration;
@@ -694,7 +694,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The instance type of the node. For more information, see [Specifications](https://help.aliyun.com/document_detail/271718.html).</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -706,7 +706,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public String isNewDeployment;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The instance type of the node. For more information, see [Specifications](https://help.aliyun.com/document_detail/271718.html).</p>
          */
         @NameInMap("kibanaConfiguration")
         public ListInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
@@ -724,7 +724,7 @@ public class ListInstanceResponseBody extends TeaModel {
         public ListInstanceResponseBodyResultMasterConfiguration masterConfiguration;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The instance type of the node. For more information, see [Specifications](https://help.aliyun.com/document_detail/271718.html).</p>
          */
         @NameInMap("networkConfig")
         public ListInstanceResponseBodyResultNetworkConfig networkConfig;

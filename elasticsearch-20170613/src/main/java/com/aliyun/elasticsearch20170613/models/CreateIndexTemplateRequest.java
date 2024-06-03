@@ -7,15 +7,24 @@ public class CreateIndexTemplateRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("dataStream")
     public Boolean dataStream;
 
     @NameInMap("ilmPolicy")
     public String ilmPolicy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("indexPatterns")
     public java.util.List<String> indexPatterns;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("indexTemplate")
     public String indexTemplate;
 

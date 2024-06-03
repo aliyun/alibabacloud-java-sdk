@@ -384,8 +384,8 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         /**
          * <p>The version of the shipper. The version of a shipper depends on the type of the machine on which the shipper is deployed.</p>
          * <br>
-         * <p>*   Elastic Compute Service (ECS) instance: 6.8.5\_with_community</p>
-         * <p>*   Container Service for Kubernetes (ACK) cluster: 6.8.13\_with_community</p>
+         * <p>*   Elastic Compute Service (ECS) instance: 6.8.5_with_community</p>
+         * <p>*   Container Service for Kubernetes (ACK) cluster: 6.8.13_with_community</p>
          */
         @NameInMap("resVersion")
         public String resVersion;
