@@ -8,6 +8,8 @@ public class DescribeEventDetailRequest extends TeaModel {
      * <p>The ID of the anomalous event.</p>
      * <br>
      * <p>> You can call the **DescribeEvents** operation to query the ID of the anomalous event.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

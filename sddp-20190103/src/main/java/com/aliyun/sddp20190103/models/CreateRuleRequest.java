@@ -15,6 +15,8 @@ public class CreateRuleRequest extends TeaModel {
 
     /**
      * <p>The content of the sensitive data detection rule. You can specify a regular expression or keywords that are used to match sensitive fields or text.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String content;
@@ -51,6 +53,8 @@ public class CreateRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the sensitive data detection rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

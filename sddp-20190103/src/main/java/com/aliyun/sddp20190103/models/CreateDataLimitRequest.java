@@ -123,6 +123,8 @@ public class CreateDataLimitRequest extends TeaModel {
      * <p>*   **3**: AnalyticDB for MySQL</p>
      * <p>*   **4** :Tablestore</p>
      * <p>*   **5**: ApsaraDB RDS</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public Integer resourceType;

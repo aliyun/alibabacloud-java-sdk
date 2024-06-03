@@ -14,6 +14,8 @@ public class DescribeDataLimitDetailRequest extends TeaModel {
      * <p>The unique ID of the data asset that you want to query.</p>
      * <br>
      * <p>> You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the ID of the data asset.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

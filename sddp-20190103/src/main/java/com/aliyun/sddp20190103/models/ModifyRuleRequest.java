@@ -16,6 +16,8 @@ public class ModifyRuleRequest extends TeaModel {
 
     /**
      * <p>The content of the sensitive data detection rule. You can specify a regular expression, an algorithm, or keywords that are used to match sensitive fields or text.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String content;
@@ -24,6 +26,8 @@ public class ModifyRuleRequest extends TeaModel {
      * <p>The ID of the sensitive data detection rule.</p>
      * <br>
      * <p>You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -50,6 +54,8 @@ public class ModifyRuleRequest extends TeaModel {
      * <p>The name of the sensitive data detection rule.</p>
      * <br>
      * <p>You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the rule name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

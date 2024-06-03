@@ -38,7 +38,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](~~212906~~).</p>
+     * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](https://help.aliyun.com/document_detail/212906.html).</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
@@ -74,7 +74,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The region where the data asset resides. For more information, see [Supported regions](~~214257~~).</p>
+     * <p>The region where the data asset resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/214257.html).</p>
      */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;

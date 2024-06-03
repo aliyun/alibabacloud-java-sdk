@@ -184,6 +184,9 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        @NameInMap("LastModifiedTime")
+        public Long lastModifiedTime;
+
         /**
          * <p>The name of the OSS object.</p>
          */
@@ -305,6 +308,14 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
         public Long getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setLastModifiedTime(Long lastModifiedTime) {
+            this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
         }
 
         public DescribeOssObjectsResponseBodyItems setName(String name) {

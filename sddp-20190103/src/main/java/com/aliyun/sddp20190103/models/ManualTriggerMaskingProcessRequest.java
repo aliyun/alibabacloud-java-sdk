@@ -8,6 +8,8 @@ public class ManualTriggerMaskingProcessRequest extends TeaModel {
      * <p>The ID of the de-identification task.</p>
      * <br>
      * <p>The ID of the de-identification task is a string. You can call the DescribeDataMaskingTasks operation to query the ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Id")
     public Long id;

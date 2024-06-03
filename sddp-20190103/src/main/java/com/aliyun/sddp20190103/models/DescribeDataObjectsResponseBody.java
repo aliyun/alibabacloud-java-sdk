@@ -170,6 +170,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("LastModifiedTime")
+        public Long lastModifiedTime;
+
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
@@ -244,6 +247,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setLastModifiedTime(Long lastModifiedTime) {
+            this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
         }
 
         public DescribeDataObjectsResponseBodyItems setLastScanTime(Long lastScanTime) {
