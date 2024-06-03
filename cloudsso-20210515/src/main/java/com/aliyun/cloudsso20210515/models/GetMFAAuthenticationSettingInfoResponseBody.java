@@ -42,7 +42,7 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
          * <p>The MFA policy of all users. Valid values:</p>
          * <br>
          * <p>*   Enabled: MFA is enabled for all users.</p>
-         * <p>*   Byuser: User-specific settings are applied. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](~~450135~~).</p>
+         * <p>*   Byuser: User-specific settings are applied. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](https://help.aliyun.com/document_detail/450135.html).</p>
          * <p>*   Disabled: MFA is disabled for all users.</p>
          * <p>*   OnlyRiskyLogin: MFA is required only for unusual logons.</p>
          */

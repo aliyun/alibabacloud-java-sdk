@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +38,15 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUserExternalId extends TeaModel {
+        /**
+         * <p>The identifier of the user that is synchronized from an external IdP.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
@@ -69,7 +75,7 @@ public class GetUserResponseBody extends TeaModel {
 
     public static class GetUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created.</p>
+         * <p>The time when the user was created. The value is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -92,6 +98,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The identifier information about the user synchronized from an external IdP.</p>
+         */
         @NameInMap("ExternalId")
         public GetUserResponseBodyUserExternalId externalId;
 
@@ -126,7 +135,7 @@ public class GetUserResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the information about the user was modified.</p>
+         * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

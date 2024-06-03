@@ -14,7 +14,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
      * <p>Specifies whether to enable MFA for all users. Valid value:</p>
      * <br>
      * <p>- Enabled: enables MFA for all users.</p>
-     * <p>- Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](~~450135~~).</p>
+     * <p>- Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](https://help.aliyun.com/document_detail/450135.html).</p>
      * <p>- Disabled: disables MFA for all users.</p>
      * <p>- OnlyRiskyLogin: MFA is required only for unusual logons.</p>
      */

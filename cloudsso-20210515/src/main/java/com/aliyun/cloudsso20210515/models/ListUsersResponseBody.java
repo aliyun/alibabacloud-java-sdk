@@ -7,28 +7,28 @@ public class ListUsersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
      * <br>
-     * <p>*   true: The queried entries are truncated.</p>
-     * <p>*   false: The queried entries are not truncated.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is returned for the next page.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <br>
-     * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
+     * <p>>  This parameter is returned only when the `IsTruncated` parameter is `true`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -99,9 +99,15 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersExternalId extends TeaModel {
+        /**
+         * <p>The identifier of the user that is synchronized from an external IdP.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
@@ -130,7 +136,7 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
         /**
-         * <p>The time when the user was created.</p>
+         * <p>The time when the user was created. The value is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -153,6 +159,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The identifier information about the user synchronized from an external IdP.</p>
+         */
         @NameInMap("ExternalId")
         public ListUsersResponseBodyUsersExternalId externalId;
 
@@ -187,7 +196,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the information about the user was modified.</p>
+         * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

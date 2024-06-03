@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetUserIdShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The identifier information about the user that is synchronized from an external identity provider (IdP).</p>
+     */
     @NameInMap("ExternalId")
     public String externalIdShrink;
 

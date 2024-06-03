@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The ID of the resource directory.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
