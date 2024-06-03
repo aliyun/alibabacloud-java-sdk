@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class PutAutoScalingPolicyRequest extends TeaModel {
     /**
      * <p>集群ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -18,12 +20,16 @@ public class PutAutoScalingPolicyRequest extends TeaModel {
 
     /**
      * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>区域ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

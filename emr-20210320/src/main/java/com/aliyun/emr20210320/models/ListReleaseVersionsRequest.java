@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListReleaseVersionsRequest extends TeaModel {
     /**
      * <p>The type of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
@@ -18,6 +20,8 @@ public class ListReleaseVersionsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -12,6 +12,9 @@ public class RunApplicationActionRequest extends TeaModel {
      * <p>*   config</p>
      * <p>*   restart</p>
      * <p>*   refresh_queues</p>
+     * <p>*   refresh_labels</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ActionName")
     public String actionName;
@@ -24,12 +27,16 @@ public class RunApplicationActionRequest extends TeaModel {
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The operation object.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ComponentInstanceSelector")
     public ComponentInstanceSelector componentInstanceSelector;
@@ -57,6 +64,8 @@ public class RunApplicationActionRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

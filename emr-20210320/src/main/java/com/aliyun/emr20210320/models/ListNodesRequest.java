@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListNodesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -60,6 +62,8 @@ public class ListNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which you want to create the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -24,18 +24,24 @@ public class NodeAttributes extends TeaModel {
 
     /**
      * <p>安全组ID。EMR只支持普通安全组，不支持企业安全组。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>专有网络ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>可用区ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

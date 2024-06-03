@@ -30,6 +30,8 @@ public class Promotion extends TeaModel {
 
     /**
      * <p>优惠券号。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;

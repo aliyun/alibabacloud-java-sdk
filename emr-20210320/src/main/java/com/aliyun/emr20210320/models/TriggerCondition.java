@@ -12,12 +12,16 @@ public class TriggerCondition extends TeaModel {
      * <p>- LT:小于。</p>
      * <p>- GE:大于等于。</p>
      * <p>- LE:小于等于。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ComparisonOperator")
     public String comparisonOperator;
 
     /**
      * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MetricName")
     public String metricName;
@@ -27,6 +31,8 @@ public class TriggerCondition extends TeaModel {
      * <p>- MAX：最大值。</p>
      * <p>- MIN：最小值。</p>
      * <p>- AVG：平均值。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Statistics")
     public String statistics;
@@ -39,6 +45,8 @@ public class TriggerCondition extends TeaModel {
 
     /**
      * <p>阈值。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Threshold")
     public Double threshold;

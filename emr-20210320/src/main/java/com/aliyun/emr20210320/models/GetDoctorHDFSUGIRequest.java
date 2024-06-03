@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class GetDoctorHDFSUGIRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>Set this parameter based on the value of Type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -33,6 +41,8 @@ public class GetDoctorHDFSUGIRequest extends TeaModel {
      * <br>
      * <p>*   user</p>
      * <p>*   group</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

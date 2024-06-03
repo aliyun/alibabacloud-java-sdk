@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class GetOperationRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the operation.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The district ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -10,6 +10,9 @@ public class NodeCountConstraint extends TeaModel {
     @NameInMap("Min")
     public Integer min;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

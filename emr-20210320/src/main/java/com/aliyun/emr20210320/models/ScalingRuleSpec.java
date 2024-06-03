@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ScalingRuleSpec extends TeaModel {
     /**
      * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
@@ -24,24 +26,32 @@ public class ScalingRuleSpec extends TeaModel {
 
     /**
      * <p>冷却时间。单位为秒，取值范围在30~10800秒之间。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CoolDownInterval")
     public Integer coolDownInterval;
 
     /**
      * <p>伸缩活动类型。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
 
     /**
      * <p>规则名称。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
     /**
      * <p>伸缩规则类型。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
@@ -110,36 +120,48 @@ public class ScalingRuleSpec extends TeaModel {
     public static class ByLoadScalingRuleSpec extends TeaModel {
         /**
          * <p>比较符。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>统计次数。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
         /**
          * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>统计量名称。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>阈值。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Threshold")
         public Double threshold;
 
         /**
          * <p>统计窗口。单位为秒。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TimeWindow")
         public Integer timeWindow;
@@ -208,6 +230,8 @@ public class ScalingRuleSpec extends TeaModel {
 
         /**
          * <p>启动时间戳。单位为毫秒。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("LaunchTime")
         public Long launchTime;

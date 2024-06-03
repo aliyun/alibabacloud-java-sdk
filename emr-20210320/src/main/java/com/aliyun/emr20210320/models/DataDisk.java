@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DataDisk extends TeaModel {
     /**
      * <p>磁盘类型。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -30,6 +32,8 @@ public class DataDisk extends TeaModel {
 
     /**
      * <p>单位GB。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Size")
     public Integer size;

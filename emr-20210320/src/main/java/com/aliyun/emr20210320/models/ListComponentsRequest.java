@@ -12,6 +12,8 @@ public class ListComponentsRequest extends TeaModel {
 
     /**
      * <p>集群ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -45,6 +47,8 @@ public class ListComponentsRequest extends TeaModel {
 
     /**
      * <p>地域ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

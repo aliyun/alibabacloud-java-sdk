@@ -76,6 +76,8 @@ public class ListClustersRequest extends TeaModel {
      * <p>*   eu-central-1</p>
      * <p>*   eu-west-1</p>
      * <p>*   cn-north-2-gov-1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

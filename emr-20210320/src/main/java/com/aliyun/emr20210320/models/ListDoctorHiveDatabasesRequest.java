@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListDoctorHiveDatabasesRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -18,6 +20,8 @@ public class ListDoctorHiveDatabasesRequest extends TeaModel {
 
     /**
      * <p>The query date.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
@@ -53,6 +57,8 @@ public class ListDoctorHiveDatabasesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

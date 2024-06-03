@@ -90,6 +90,8 @@ public class ComponentLayout extends TeaModel {
 
         /**
          * <p>节点选择类型。</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("NodeSelectType")
         public String nodeSelectType;

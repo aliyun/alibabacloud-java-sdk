@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class UpdateApiTemplateRequest extends TeaModel {
     /**
      * <p>接口名。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
     /**
      * <p>接口request内容。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>区域ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,12 +36,16 @@ public class UpdateApiTemplateRequest extends TeaModel {
 
     /**
      * <p>集群模板id。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>集群模板名字。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

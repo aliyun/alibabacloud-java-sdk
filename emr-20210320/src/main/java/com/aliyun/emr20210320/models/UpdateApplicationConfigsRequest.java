@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class UpdateApplicationConfigsRequest extends TeaModel {
     /**
      * <p>The application configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<UpdateApplicationConfig> applicationConfigs;
 
     /**
      * <p>The application name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -61,6 +67,8 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

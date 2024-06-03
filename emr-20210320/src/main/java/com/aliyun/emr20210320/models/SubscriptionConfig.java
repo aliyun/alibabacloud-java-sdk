@@ -27,6 +27,8 @@ public class SubscriptionConfig extends TeaModel {
 
     /**
      * <p>付费时长。PaymentDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
@@ -34,6 +36,8 @@ public class SubscriptionConfig extends TeaModel {
     /**
      * <p>付费时长单位。取值范围：</p>
      * <p>- Month：月。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;

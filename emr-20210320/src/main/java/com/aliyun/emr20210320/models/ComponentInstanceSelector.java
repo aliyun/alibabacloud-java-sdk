@@ -32,6 +32,8 @@ public class ComponentInstanceSelector extends TeaModel {
      * <p>- APPLICATION：应用级别。</p>
      * <p>- COMPONENT：组件级别。</p>
      * <p>- COMPONENT_INSTANCE：组件实例级别。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RunActionScope")
     public String runActionScope;
