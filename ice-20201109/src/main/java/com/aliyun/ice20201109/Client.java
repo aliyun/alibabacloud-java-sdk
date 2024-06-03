@@ -4110,7 +4110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
             new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
+            new TeaPair("authType", "Anonymous"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
@@ -7332,6 +7332,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchMediaByFaceResponse searchMediaByFace(SearchMediaByFaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchMediaByFaceWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 混合搜索
+     *
+     * @param request SearchMediaByHybridRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchMediaByHybridResponse
+     */
+    public SearchMediaByHybridResponse searchMediaByHybridWithOptions(SearchMediaByHybridRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchMediaByHybrid"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchMediaByHybridResponse());
+    }
+
+    /**
+     * @summary 混合搜索
+     *
+     * @param request SearchMediaByHybridRequest
+     * @return SearchMediaByHybridResponse
+     */
+    public SearchMediaByHybridResponse searchMediaByHybrid(SearchMediaByHybridRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchMediaByHybridWithOptions(request, runtime);
     }
 
     /**
