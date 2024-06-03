@@ -12,6 +12,8 @@ public class ListDiagnoseReportRequest extends TeaModel {
 
     /**
      * <p>1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("endTime")
     public Long endTime;
@@ -36,6 +38,8 @@ public class ListDiagnoseReportRequest extends TeaModel {
 
     /**
      * <p>1595174399999</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("startTime")
     public Long startTime;

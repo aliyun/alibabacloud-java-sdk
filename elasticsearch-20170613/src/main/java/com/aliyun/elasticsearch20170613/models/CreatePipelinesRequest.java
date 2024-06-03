@@ -49,12 +49,18 @@ public class CreatePipelinesRequest extends TeaModel {
         @NameInMap("batchSize")
         public Integer batchSize;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("config")
         public String config;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("pipelineId")
         public String pipelineId;
 

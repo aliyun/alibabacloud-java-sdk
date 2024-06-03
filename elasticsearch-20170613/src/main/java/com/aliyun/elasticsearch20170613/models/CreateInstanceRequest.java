@@ -13,9 +13,15 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("elasticDataNodeConfiguration")
     public ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("esAdminPassword")
     public String esAdminPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("esVersion")
     public String esVersion;
 
@@ -28,9 +34,15 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("masterConfiguration")
     public MasterNodeConfiguration masterConfiguration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("networkConfig")
     public NetworkConfig networkConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
 

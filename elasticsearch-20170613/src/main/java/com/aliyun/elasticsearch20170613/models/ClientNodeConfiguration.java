@@ -4,15 +4,27 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ClientNodeConfiguration extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("amount")
     public Long amount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("disk")
     public Long disk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("diskType")
     public String diskType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spec")
     public String spec;
 

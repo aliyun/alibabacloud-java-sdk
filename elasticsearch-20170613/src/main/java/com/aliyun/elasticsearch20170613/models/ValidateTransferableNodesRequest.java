@@ -7,6 +7,9 @@ public class ValidateTransferableNodesRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<ValidateTransferableNodesRequestBody> body;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nodeType")
     public String nodeType;
 

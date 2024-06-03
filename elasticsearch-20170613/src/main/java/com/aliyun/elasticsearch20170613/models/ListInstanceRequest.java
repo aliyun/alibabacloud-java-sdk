@@ -29,7 +29,7 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>\[{"tagKey":"key1","tagValue":"value1"}]</p>
+     * <p>[{"tagKey":"key1","tagValue":"value1"}]</p>
      */
     @NameInMap("page")
     public Integer page;
@@ -50,7 +50,7 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\*\*\*\*</p>
+     * <p>vpc-bp16k1dvzxtmagcva\\*\\*\\*\\*</p>
      */
     @NameInMap("size")
     public Integer size;

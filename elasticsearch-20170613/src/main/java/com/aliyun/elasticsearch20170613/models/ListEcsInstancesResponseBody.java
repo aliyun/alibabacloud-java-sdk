@@ -370,7 +370,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         public String resId;
 
         /**
-         * <p>The version of the collector. If the machine type of the collector is ECS, only **6.8.5\_with_community** is supported.</p>
+         * <p>The version of the collector. If the machine type of the collector is ECS, only **6.8.5_with_community** is supported.</p>
          */
         @NameInMap("resType")
         public String resType;

@@ -7,9 +7,15 @@ public class ListDictInformationRequest extends TeaModel {
     @NameInMap("analyzerType")
     public String analyzerType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bucketName")
     public String bucketName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("key")
     public String key;
 

@@ -14,6 +14,8 @@ public class RecommendTemplatesRequest extends TeaModel {
      * <p>**</p>
      * <br>
      * <p>****</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("usageScenario")
     public String usageScenario;

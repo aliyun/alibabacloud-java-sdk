@@ -11,7 +11,7 @@ public class ListEcsInstancesRequest extends TeaModel {
     public String ecsInstanceIds;
 
     /**
-     * <p>\[{ "tagKey":"a","tagValue":"b"}]</p>
+     * <p>[{ "tagKey":"a","tagValue":"b"}]</p>
      */
     @NameInMap("ecsInstanceName")
     public String ecsInstanceName;
@@ -23,13 +23,13 @@ public class ListEcsInstancesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>\["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]</p>
+     * <p>["i-bp13y63575oypr9d\\*\\*\\*\\*","i-bp1gyhphjaj73jsr\\*\\*\\*\\*"]</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\*\*\*\*</p>
+     * <p>vpc-bp16k1dvzxtmagcva\\*\\*\\*\\*</p>
      */
     @NameInMap("tags")
     public String tags;

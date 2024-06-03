@@ -12,6 +12,8 @@ public class DeleteConnectedClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the remote instance for which the network connection is established.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("connectedInstanceId")
     public String connectedInstanceId;

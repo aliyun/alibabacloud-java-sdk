@@ -284,7 +284,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The version of the instance. Currently, only 6.7.0\_with_X-Pack and 7.4.0\_with_X-Pack are supported.</p>
+         * <p>The version of the instance. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</p>
          */
         @NameInMap("status")
         public String status;

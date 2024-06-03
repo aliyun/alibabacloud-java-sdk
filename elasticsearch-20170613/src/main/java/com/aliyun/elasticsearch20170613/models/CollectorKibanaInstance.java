@@ -4,24 +4,45 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CollectorKibanaInstance extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configType")
     public String configType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("host")
     public String host;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("kibanaHost")
     public String kibanaHost;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("userName")
     public String userName;
 

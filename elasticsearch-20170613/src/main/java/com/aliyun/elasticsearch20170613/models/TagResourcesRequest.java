@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>A tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
      * <p>The request ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The value of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
     public java.util.List<TagResourcesRequestTags> tags;
@@ -54,6 +60,8 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTags extends TeaModel {
         /**
          * <p>The returned object.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("key")
         public String key;
@@ -63,6 +71,8 @@ public class TagResourcesRequest extends TeaModel {
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("value")
         public String value;

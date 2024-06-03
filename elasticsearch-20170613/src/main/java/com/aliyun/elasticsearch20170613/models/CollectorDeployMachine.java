@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CollectorDeployMachine extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("configType")
     public String configType;
 
@@ -22,6 +25,9 @@ public class CollectorDeployMachine extends TeaModel {
     @NameInMap("totalPodsCount")
     public String totalPodsCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

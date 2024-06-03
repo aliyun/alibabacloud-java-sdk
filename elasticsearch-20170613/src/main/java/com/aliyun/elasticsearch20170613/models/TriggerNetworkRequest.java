@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TriggerNetworkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("actionType")
     public String actionType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("networkType")
     public String networkType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nodeType")
     public String nodeType;
 

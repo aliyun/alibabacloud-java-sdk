@@ -11,6 +11,8 @@ public class ListDictsRequest extends TeaModel {
      * <p>*   IK_HOT: IK dictionary after a rolling update</p>
      * <p>*   SYNONYMS: synonym dictionary</p>
      * <p>*   ALIWS: Alibaba Cloud dictionary</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("analyzerType")
     public String analyzerType;

@@ -19,6 +19,9 @@ public class WarmNodeConfiguration extends TeaModel {
     @NameInMap("performanceLevel")
     public String performanceLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("spec")
     public String spec;
 

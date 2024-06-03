@@ -10,6 +10,9 @@ public class UpdateKibanaPvlNetworkRequest extends TeaModel {
     @NameInMap("securityGroups")
     public java.util.List<String> securityGroups;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("pvlId")
     public String pvlId;
 

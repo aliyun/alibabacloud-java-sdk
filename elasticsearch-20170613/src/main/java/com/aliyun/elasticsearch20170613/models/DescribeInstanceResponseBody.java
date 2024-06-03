@@ -832,6 +832,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("aliwsDicts")
         public java.util.List<DescribeInstanceResponseBodyResultAliwsDicts> aliwsDicts;
 
+        @NameInMap("archType")
+        public String archType;
+
         @NameInMap("clientNodeConfiguration")
         public DescribeInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration;
 
@@ -1009,6 +1012,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public java.util.List<DescribeInstanceResponseBodyResultAliwsDicts> getAliwsDicts() {
             return this.aliwsDicts;
+        }
+
+        public DescribeInstanceResponseBodyResult setArchType(String archType) {
+            this.archType = archType;
+            return this;
+        }
+        public String getArchType() {
+            return this.archType;
         }
 
         public DescribeInstanceResponseBodyResult setClientNodeConfiguration(DescribeInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration) {

@@ -10,6 +10,9 @@ public class TransferNodeRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("nodeType")
     public String nodeType;
 

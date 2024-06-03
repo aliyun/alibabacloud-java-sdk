@@ -4,15 +4,27 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class EnableKibanaPvlNetworkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("endpointName")
     public String endpointName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("securityGroups")
     public java.util.List<String> securityGroups;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("vSwitchIdsZone")
     public java.util.List<EnableKibanaPvlNetworkRequestVSwitchIdsZone> vSwitchIdsZone;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 
@@ -54,9 +66,15 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
     }
 
     public static class EnableKibanaPvlNetworkRequestVSwitchIdsZone extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
