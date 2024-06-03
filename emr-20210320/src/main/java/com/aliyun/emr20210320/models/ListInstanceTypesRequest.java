@@ -18,6 +18,8 @@ public class ListInstanceTypesRequest extends TeaModel {
      * <p>- DATASERVING：数据服务。</p>
      * <p>- CUSTOM：自定义集群。</p>
      * <p>- HADOOP：旧版数据湖（不推荐使用，建议使用新版数据湖）。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
@@ -55,6 +57,8 @@ public class ListInstanceTypesRequest extends TeaModel {
      * <p>- MASTER：管理类型节点组。</p>
      * <p>- CORE：存储类型节点组。</p>
      * <p>- TASK：计算类型节点组。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroupType")
     public String nodeGroupType;
@@ -65,12 +69,16 @@ public class ListInstanceTypesRequest extends TeaModel {
      * <p>- Subscription：预付费。</p>
      * <br>
      * <p>默认值：PayAsYouGo。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;
 
     /**
      * <p>区域ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -83,6 +91,8 @@ public class ListInstanceTypesRequest extends TeaModel {
 
     /**
      * <p>可用区ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

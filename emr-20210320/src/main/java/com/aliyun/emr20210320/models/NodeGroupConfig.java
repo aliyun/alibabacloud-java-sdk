@@ -69,6 +69,8 @@ public class NodeGroupConfig extends TeaModel {
      * <p>- MASTER：管理类型节点组。</p>
      * <p>- CORE：存储类型节点组。</p>
      * <p>- TASK：计算类型节点组。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroupType")
     public String nodeGroupType;

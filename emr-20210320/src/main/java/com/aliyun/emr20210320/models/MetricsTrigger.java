@@ -26,6 +26,8 @@ public class MetricsTrigger extends TeaModel {
 
     /**
      * <p>统计次数。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
@@ -38,6 +40,8 @@ public class MetricsTrigger extends TeaModel {
 
     /**
      * <p>统计窗口。单位为秒。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TimeWindow")
     public Integer timeWindow;

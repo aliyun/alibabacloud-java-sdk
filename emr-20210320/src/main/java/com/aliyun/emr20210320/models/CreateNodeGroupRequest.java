@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class CreateNodeGroupRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The information about a machine group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroup")
     public NodeGroupConfig nodeGroup;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

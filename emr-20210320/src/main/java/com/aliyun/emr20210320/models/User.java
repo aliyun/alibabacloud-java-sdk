@@ -12,18 +12,24 @@ public class User extends TeaModel {
 
     /**
      * <p>用户密码。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>用户ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>用户名称。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserName")
     public String userName;

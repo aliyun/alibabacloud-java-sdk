@@ -8,12 +8,16 @@ public class RecommendScalingRule extends TeaModel {
      * <p>伸缩活动类型。取值范围：</p>
      * <p>- SCALE_OUT：扩容。</p>
      * <p>- SCALE_IN：缩容。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ActivityType")
     public String activityType;
 
     /**
      * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
@@ -39,6 +43,8 @@ public class RecommendScalingRule extends TeaModel {
 
     /**
      * <p>规则名称。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -54,6 +60,8 @@ public class RecommendScalingRule extends TeaModel {
      * <p>伸缩规则类型。 取值范围：</p>
      * <p>- TIME_TRIGGER: 按时间伸缩。</p>
      * <p>- METRICS_TRIGGER: 按负载伸缩。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerType")
     public String triggerType;

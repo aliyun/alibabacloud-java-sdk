@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class GetAutoScalingActivityRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the scaling activity.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;

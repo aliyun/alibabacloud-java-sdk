@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListScriptsRequest extends TeaModel {
     /**
      * <p>集群ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -24,12 +26,16 @@ public class ListScriptsRequest extends TeaModel {
 
     /**
      * <p>区域ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>集群脚本类型。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ScriptType")
     public String scriptType;

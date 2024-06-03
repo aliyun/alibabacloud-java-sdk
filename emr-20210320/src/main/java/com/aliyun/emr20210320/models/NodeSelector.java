@@ -8,13 +8,21 @@ public class NodeSelector extends TeaModel {
      * <p>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</p>
      */
     @NameInMap("NodeGroupId")
+    @Deprecated
     public String nodeGroupId;
+
+    @NameInMap("NodeGroupIds")
+    public java.util.List<String> nodeGroupIds;
 
     /**
      * <p>节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。</p>
      */
     @NameInMap("NodeGroupName")
+    @Deprecated
     public String nodeGroupName;
+
+    @NameInMap("NodeGroupNames")
+    public java.util.List<String> nodeGroupNames;
 
     /**
      * <p>节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。</p>
@@ -33,6 +41,8 @@ public class NodeSelector extends TeaModel {
      * <p>- CLUSTER：集群。</p>
      * <p>- NODE_GROUP：节点组。</p>
      * <p>- NODE：节点。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeSelectType")
     public String nodeSelectType;
@@ -50,12 +60,28 @@ public class NodeSelector extends TeaModel {
         return this.nodeGroupId;
     }
 
+    public NodeSelector setNodeGroupIds(java.util.List<String> nodeGroupIds) {
+        this.nodeGroupIds = nodeGroupIds;
+        return this;
+    }
+    public java.util.List<String> getNodeGroupIds() {
+        return this.nodeGroupIds;
+    }
+
     public NodeSelector setNodeGroupName(String nodeGroupName) {
         this.nodeGroupName = nodeGroupName;
         return this;
     }
     public String getNodeGroupName() {
         return this.nodeGroupName;
+    }
+
+    public NodeSelector setNodeGroupNames(java.util.List<String> nodeGroupNames) {
+        this.nodeGroupNames = nodeGroupNames;
+        return this;
+    }
+    public java.util.List<String> getNodeGroupNames() {
+        return this.nodeGroupNames;
     }
 
     public NodeSelector setNodeGroupTypes(java.util.List<String> nodeGroupTypes) {

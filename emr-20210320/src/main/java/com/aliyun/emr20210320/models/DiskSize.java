@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DiskSize extends TeaModel {
     /**
      * <p>磁盘类型。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Category")
     public String category;

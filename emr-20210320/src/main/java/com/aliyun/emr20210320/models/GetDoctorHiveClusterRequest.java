@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class GetDoctorHiveClusterRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

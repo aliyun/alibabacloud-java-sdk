@@ -18,6 +18,8 @@ public class ByTimeScalingRule extends TeaModel {
 
     /**
      * <p>启动时间戳。单位为毫秒。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LaunchTime")
     public Long launchTime;

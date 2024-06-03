@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>The configurations of the applications. Valid values of N: 1 to 1000.</p>
+     * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>The applications that you want to add to the cluster. Valid values of N: 1 to 100.</p>
+     * <p>The applications. You can specify a maximum of 100 items.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Application> applications;
 
     /**
-     * <p>The array of scripts for the bootstrap actions. Valid values of N: 1 to 10.</p>
+     * <p>The bootstrap actions. You can specify a maximum of 10 items.</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
@@ -29,7 +31,9 @@ public class CreateClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
@@ -45,27 +49,33 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   HADOOP: the old data lake. We recommend that you use the new data lake.</p>
      * <br>
      * <p>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>The deployment mode of applications in the cluster. Valid values:</p>
+     * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
      * <br>
-     * <p>*   NORMAL: regular mode. A master node is deployed in the cluster.</p>
-     * <p>*   HA: high availability mode. At least three master nodes are deployed in the cluster.</p>
+     * <p>*   NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</p>
+     * <p>*   HA: high availability (HA) mode. A cluster that contains three master nodes is created.</p>
      */
     @NameInMap("DeployMode")
     public String deployMode;
 
     /**
-     * <p>The attributes of all Elastic Compute Service (ECS) nodes in the cluster. The basic attributes of all ECS nodes in the cluster.</p>
+     * <p>The attributes of all ECS instances.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>The array of configurations of the node groups. Valid values of N: 1 to 100.</p>
+     * <p>The node groups. You can specify a maximum of 100 items.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroupConfig> nodeGroups;
@@ -82,13 +92,17 @@ public class CreateClusterRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
@@ -102,20 +116,20 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The security mode of the cluster. Valid values:</p>
      * <br>
-     * <p>*   NORMAL: regular mode. Kerberos is not enabled.</p>
-     * <p>*   KERBEROS: Kerberos mode. Kerberos is enabled.</p>
+     * <p>*   NORMAL: disables Kerberos authentication for the cluster. This is the default value.</p>
+     * <p>*   KERBEROS: enables Kerberos authentication for the cluster.</p>
      */
     @NameInMap("SecurityMode")
     public String securityMode;
 
     /**
-     * <p>The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.</p>
+     * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The tag that you want to add to the cloud desktop. Valid values of N: 0 to 20.</p>
+     * <p>The tags. You can specify a maximum of 20 items.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

@@ -23,12 +23,16 @@ public class IncreaseNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The number of nodes. The number of incremental nodes for this scale-out. Valid values: 1 to 500.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IncreaseNodeCount")
     public Integer increaseNodeCount;
@@ -38,6 +42,8 @@ public class IncreaseNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the node group. The target node group to which you want to scale out the cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
@@ -58,6 +64,8 @@ public class IncreaseNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which you want to create the instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

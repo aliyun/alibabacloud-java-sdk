@@ -4,15 +4,24 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ConvertNodeGroupParam extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PaymentDuration")
     public Long paymentDuration;
 
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 

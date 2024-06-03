@@ -36,6 +36,8 @@ public class AutoRenewInstance extends TeaModel {
 
     /**
      * <p>节点ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

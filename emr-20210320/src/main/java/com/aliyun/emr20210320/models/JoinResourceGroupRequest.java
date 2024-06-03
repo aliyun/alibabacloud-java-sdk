@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class JoinResourceGroupRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -26,6 +32,8 @@ public class JoinResourceGroupRequest extends TeaModel {
      * <p>The type of the resource. Valid values:</p>
      * <br>
      * <p>*   cluster: cluster</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

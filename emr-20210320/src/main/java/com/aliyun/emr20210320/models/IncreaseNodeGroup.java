@@ -12,12 +12,16 @@ public class IncreaseNodeGroup extends TeaModel {
 
     /**
      * <p>节点数量。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
     /**
      * <p>节点组ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;

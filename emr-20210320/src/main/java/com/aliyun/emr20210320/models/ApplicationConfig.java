@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class ApplicationConfig extends TeaModel {
     /**
      * <p>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>应用配置文件名。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigFileName")
     public String configFileName;
 
     /**
      * <p>配置项键。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigItemKey")
     public String configItemKey;

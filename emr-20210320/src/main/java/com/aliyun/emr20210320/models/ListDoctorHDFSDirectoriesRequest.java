@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class ListDoctorHDFSDirectoriesRequest extends TeaModel {
     /**
      * <p>集群ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DateTime")
     public String dateTime;
 
@@ -36,6 +41,8 @@ public class ListDoctorHDFSDirectoriesRequest extends TeaModel {
 
     /**
      * <p>区域ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

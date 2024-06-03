@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class GetDoctorReportComponentSummaryRequest extends TeaModel {
     /**
      * <p>集群ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>component type</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ComponentType")
     public String componentType;
 
     /**
      * <p>dateTime for specify report</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>区域ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class DecreaseNodeGroupParam extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReleaseInstanceIds")
     public java.util.List<String> releaseInstanceIds;
 
