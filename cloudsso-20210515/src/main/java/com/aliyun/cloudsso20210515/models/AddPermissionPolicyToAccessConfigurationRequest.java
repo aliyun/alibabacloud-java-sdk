@@ -21,7 +21,7 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends TeaModel {
      * <br>
      * <p>The value can be up to 4,096 characters in length.</p>
      * <br>
-     * <p>If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).</p>
+     * <p>If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).</p>
      */
     @NameInMap("InlinePolicyDocument")
     public String inlinePolicyDocument;

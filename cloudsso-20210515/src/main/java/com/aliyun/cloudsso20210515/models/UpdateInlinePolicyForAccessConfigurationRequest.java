@@ -27,7 +27,7 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends TeaModel {
      * <br>
      * <p>The value can be up to 4,096 characters in length.</p>
      * <br>
-     * <p>For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).</p>
+     * <p>For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).</p>
      */
     @NameInMap("NewInlinePolicyDocument")
     public String newInlinePolicyDocument;

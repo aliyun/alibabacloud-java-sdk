@@ -13,7 +13,7 @@ public class DeleteMFADeviceForUserRequest extends TeaModel {
     /**
      * <p>The ID of the MFA device.</p>
      * <br>
-     * <p>You can call the [ListMFADevicesForUser](~~333531~~) operation to query the IDs of MFA devices.</p>
+     * <p>You can call the [ListMFADevicesForUser](https://help.aliyun.com/document_detail/333531.html) operation to query the IDs of MFA devices.</p>
      */
     @NameInMap("MFADeviceId")
     public String MFADeviceId;
