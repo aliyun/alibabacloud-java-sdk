@@ -4,12 +4,18 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
@@ -19,6 +25,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

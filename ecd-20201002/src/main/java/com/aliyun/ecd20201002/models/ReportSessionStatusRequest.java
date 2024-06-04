@@ -7,18 +7,33 @@ public class ReportSessionStatusRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SessionChangeTime")
     public Long sessionChangeTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SessionStatus")
     public String sessionStatus;
 

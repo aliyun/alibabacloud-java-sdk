@@ -4,6 +4,9 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDesktopsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
@@ -31,6 +34,9 @@ public class DescribeGlobalDesktopsRequest extends TeaModel {
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 

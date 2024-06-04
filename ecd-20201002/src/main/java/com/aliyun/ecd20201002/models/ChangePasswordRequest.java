@@ -4,24 +4,45 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class ChangePasswordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NewPassword")
     public String newPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OldPassword")
     public String oldPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

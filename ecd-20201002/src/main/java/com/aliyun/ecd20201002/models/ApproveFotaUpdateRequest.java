@@ -4,18 +4,30 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class ApproveFotaUpdateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

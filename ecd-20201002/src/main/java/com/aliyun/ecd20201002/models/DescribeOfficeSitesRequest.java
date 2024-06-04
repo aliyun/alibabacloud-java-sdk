@@ -4,12 +4,18 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeOfficeSitesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
     @NameInMap("OfficeSiteId")
     public java.util.List<String> officeSiteId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

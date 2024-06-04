@@ -4,18 +4,30 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class ResetSnapshotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

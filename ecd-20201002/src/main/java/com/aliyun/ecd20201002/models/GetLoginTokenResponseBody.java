@@ -51,6 +51,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("NextStage")
     public String nextStage;
 
+    @NameInMap("PasswordStrategy")
+    public GetLoginTokenResponseBodyPasswordStrategy passwordStrategy;
+
     /**
      * <p>Enter the mobile number of the convenience user. For an AD user, null is returned.</p>
      */
@@ -70,6 +73,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     @NameInMap("QrCodePng")
     public String qrCodePng;
+
+    @NameInMap("Reason")
+    public String reason;
 
     /**
      * <p>The ID of the request.</p>
@@ -169,6 +175,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         return this.nextStage;
     }
 
+    public GetLoginTokenResponseBody setPasswordStrategy(GetLoginTokenResponseBodyPasswordStrategy passwordStrategy) {
+        this.passwordStrategy = passwordStrategy;
+        return this;
+    }
+    public GetLoginTokenResponseBodyPasswordStrategy getPasswordStrategy() {
+        return this.passwordStrategy;
+    }
+
     public GetLoginTokenResponseBody setPhone(String phone) {
         this.phone = phone;
         return this;
@@ -191,6 +205,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getQrCodePng() {
         return this.qrCodePng;
+    }
+
+    public GetLoginTokenResponseBody setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
     public GetLoginTokenResponseBody setRequestId(String requestId) {
@@ -239,6 +261,36 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getWindowDisplayMode() {
         return this.windowDisplayMode;
+    }
+
+    public static class GetLoginTokenResponseBodyPasswordStrategy extends TeaModel {
+        @NameInMap("TenantAlternativeChars")
+        public java.util.List<String> tenantAlternativeChars;
+
+        @NameInMap("TenantPasswordLength")
+        public String tenantPasswordLength;
+
+        public static GetLoginTokenResponseBodyPasswordStrategy build(java.util.Map<String, ?> map) throws Exception {
+            GetLoginTokenResponseBodyPasswordStrategy self = new GetLoginTokenResponseBodyPasswordStrategy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLoginTokenResponseBodyPasswordStrategy setTenantAlternativeChars(java.util.List<String> tenantAlternativeChars) {
+            this.tenantAlternativeChars = tenantAlternativeChars;
+            return this;
+        }
+        public java.util.List<String> getTenantAlternativeChars() {
+            return this.tenantAlternativeChars;
+        }
+
+        public GetLoginTokenResponseBodyPasswordStrategy setTenantPasswordLength(String tenantPasswordLength) {
+            this.tenantPasswordLength = tenantPasswordLength;
+            return this;
+        }
+        public String getTenantPasswordLength() {
+            return this.tenantPasswordLength;
+        }
+
     }
 
     public static class GetLoginTokenResponseBodyRiskVerifyInfo extends TeaModel {

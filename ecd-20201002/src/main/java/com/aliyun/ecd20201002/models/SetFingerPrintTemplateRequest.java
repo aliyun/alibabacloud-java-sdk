@@ -4,6 +4,9 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class SetFingerPrintTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
@@ -22,15 +25,27 @@ public class SetFingerPrintTemplateRequest extends TeaModel {
     @NameInMap("FingerPrintTemplate")
     public String fingerPrintTemplate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
