@@ -644,6 +644,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("advancedDedicateMaster")
         public Boolean advancedDedicateMaster;
 
+        @NameInMap("archType")
+        public String archType;
+
         /**
          * <p>The instance type of the node. For more information, see [Specifications](https://help.aliyun.com/document_detail/271718.html).</p>
          */
@@ -803,6 +806,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public Boolean getAdvancedDedicateMaster() {
             return this.advancedDedicateMaster;
+        }
+
+        public ListInstanceResponseBodyResult setArchType(String archType) {
+            this.archType = archType;
+            return this;
+        }
+        public String getArchType() {
+            return this.archType;
         }
 
         public ListInstanceResponseBodyResult setClientNodeConfiguration(ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration) {
