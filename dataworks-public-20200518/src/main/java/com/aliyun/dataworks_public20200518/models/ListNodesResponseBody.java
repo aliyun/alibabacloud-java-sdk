@@ -112,11 +112,17 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("Connection")
         public String connection;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         /**
          * <p>The name of the workflow.</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
+
+        @NameInMap("DeployDate")
+        public Long deployDate;
 
         /**
          * <p>The priority for running the node. Valid values: 1, 3, 5, 7, and 8.</p>
@@ -136,8 +142,17 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("DqcType")
         public Integer dqcType;
 
+        @NameInMap("FileId")
+        public Long fileId;
+
         @NameInMap("FileType")
         public Integer fileType;
+
+        @NameInMap("FileVersion")
+        public Integer fileVersion;
+
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
 
         /**
          * <p>The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.</p>
@@ -243,12 +258,28 @@ public class ListNodesResponseBody extends TeaModel {
             return this.connection;
         }
 
+        public ListNodesResponseBodyDataNodes setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
         public ListNodesResponseBodyDataNodes setCronExpress(String cronExpress) {
             this.cronExpress = cronExpress;
             return this;
         }
         public String getCronExpress() {
             return this.cronExpress;
+        }
+
+        public ListNodesResponseBodyDataNodes setDeployDate(Long deployDate) {
+            this.deployDate = deployDate;
+            return this;
+        }
+        public Long getDeployDate() {
+            return this.deployDate;
         }
 
         public ListNodesResponseBodyDataNodes setDescription(String description) {
@@ -275,12 +306,36 @@ public class ListNodesResponseBody extends TeaModel {
             return this.dqcType;
         }
 
+        public ListNodesResponseBodyDataNodes setFileId(Long fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public Long getFileId() {
+            return this.fileId;
+        }
+
         public ListNodesResponseBodyDataNodes setFileType(Integer fileType) {
             this.fileType = fileType;
             return this;
         }
         public Integer getFileType() {
             return this.fileType;
+        }
+
+        public ListNodesResponseBodyDataNodes setFileVersion(Integer fileVersion) {
+            this.fileVersion = fileVersion;
+            return this;
+        }
+        public Integer getFileVersion() {
+            return this.fileVersion;
+        }
+
+        public ListNodesResponseBodyDataNodes setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         public ListNodesResponseBodyDataNodes setNodeId(Long nodeId) {

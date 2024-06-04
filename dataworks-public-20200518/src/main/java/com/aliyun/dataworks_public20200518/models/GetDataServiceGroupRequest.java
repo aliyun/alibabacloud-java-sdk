@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the business process.</p>
+     * <p>The business process ID.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

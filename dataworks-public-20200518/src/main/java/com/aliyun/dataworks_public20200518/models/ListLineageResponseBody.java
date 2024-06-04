@@ -4,21 +4,42 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListLineageResponseBody extends TeaModel {
+    /**
+     * <p>The structure returned.</p>
+     */
     @NameInMap("Data")
     public ListLineageResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -131,6 +152,9 @@ public class ListLineageResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The array of the entity structure.</p>
+         */
         @NameInMap("Entity")
         public Entity entity;
 
@@ -169,9 +193,15 @@ public class ListLineageResponseBody extends TeaModel {
     }
 
     public static class ListLineageResponseBodyData extends TeaModel {
+        /**
+         * <p>The array of the entity structure.</p>
+         */
         @NameInMap("DataEntityList")
         public java.util.List<ListLineageResponseBodyDataDataEntityList> dataEntityList;
 
+        /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddMetaCollectionEntityRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the entity.</p>
-     * <br>
-     * <p>Example: maxcompute-table.projectA.tableA.</p>
+     * <p>The unique identifier of the collection.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -15,13 +13,18 @@ public class AddMetaCollectionEntityRequest extends TeaModel {
     public String collectionQualifiedName;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The unique identifier of the entity.</p>
+     * <br>
+     * <p>Example: maxcompute-table.projectA.tableA.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;
 
+    /**
+     * <p>The remarks on the entity. Example: latest product table.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

@@ -289,6 +289,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @NameInMap("RealtimeResourceSettings")
         public GetDIJobResponseBodyDataResourceSettingsRealtimeResourceSettings realtimeResourceSettings;
 
+        @NameInMap("RequestedCu")
+        public Float requestedCu;
+
         public static GetDIJobResponseBodyDataResourceSettings build(java.util.Map<String, ?> map) throws Exception {
             GetDIJobResponseBodyDataResourceSettings self = new GetDIJobResponseBodyDataResourceSettings();
             return TeaModel.build(map, self);
@@ -308,6 +311,14 @@ public class GetDIJobResponseBody extends TeaModel {
         }
         public GetDIJobResponseBodyDataResourceSettingsRealtimeResourceSettings getRealtimeResourceSettings() {
             return this.realtimeResourceSettings;
+        }
+
+        public GetDIJobResponseBodyDataResourceSettings setRequestedCu(Float requestedCu) {
+            this.requestedCu = requestedCu;
+            return this;
+        }
+        public Float getRequestedCu() {
+            return this.requestedCu;
         }
 
     }

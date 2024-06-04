@@ -162,6 +162,9 @@ public class GetNodeParentsResponseBody extends TeaModel {
         @NameInMap("SchedulerType")
         public String schedulerType;
 
+        @NameInMap("StepType")
+        public String stepType;
+
         public static GetNodeParentsResponseBodyDataNodes build(java.util.Map<String, ?> map) throws Exception {
             GetNodeParentsResponseBodyDataNodes self = new GetNodeParentsResponseBodyDataNodes();
             return TeaModel.build(map, self);
@@ -245,6 +248,14 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
         public String getSchedulerType() {
             return this.schedulerType;
+        }
+
+        public GetNodeParentsResponseBodyDataNodes setStepType(String stepType) {
+            this.stepType = stepType;
+            return this;
+        }
+        public String getStepType() {
+            return this.stepType;
         }
 
     }

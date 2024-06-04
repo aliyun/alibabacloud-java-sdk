@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionEntitiesRequest extends TeaModel {
     /**
-     * <p>The type of the entities.</p>
-     * <br>
-     * <p>For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.</p>
+     * <p>The unique identifier of the collection.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -15,25 +13,27 @@ public class ListMetaCollectionEntitiesRequest extends TeaModel {
     public String collectionQualifiedName;
 
     /**
-     * <p>The search keyword.</p>
+     * <p>The type of the entities.</p>
+     * <br>
+     * <p>For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
-     * <p>The paging information. This parameter specifies the start point of the query.</p>
+     * <p>The search keyword.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The paging information. This parameter specifies the start point of the query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The object returned.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
