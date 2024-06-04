@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMigrationSummaryRequest extends TeaModel {
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -13,9 +13,7 @@ public class GetMigrationSummaryRequest extends TeaModel {
     public Long migrationId;
 
     /**
-     * <p>The ID of the migration task.</p>
-     * <br>
-     * <p>You can call the [CreateImportMigration](https://help.aliyun.com/document_detail/2809123.html) operation to obtain the ID of the import task and call the [CreateExportMigration](https://help.aliyun.com/document_detail/3241603.html) operation to obtain the ID of the export task.</p>
+     * <p>The operation that you want to perform.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

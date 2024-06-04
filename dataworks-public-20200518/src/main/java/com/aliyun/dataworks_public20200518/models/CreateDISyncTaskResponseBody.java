@@ -4,12 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDISyncTaskResponseBody extends TeaModel {
+    /**
+     * <p>The information that indicates whether the data synchronization task is created.</p>
+     */
     @NameInMap("Data")
     public CreateDISyncTaskResponseBodyData data;
 
+    /**
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +52,23 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
     }
 
     public static class CreateDISyncTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the data synchronization task that is created.</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <p>The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the "Invalid path: Business Flow/xxxx/Data Integration" format is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The creation status of the data synchronization task. Valid values:</p>
+         * <p>- success </p>
+         * <p>- fail</p>
+         */
         @NameInMap("Status")
         public String status;
 

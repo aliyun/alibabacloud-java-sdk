@@ -112,11 +112,17 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("Connection")
         public String connection;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         /**
          * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
+
+        @NameInMap("DeployDate")
+        public Long deployDate;
 
         /**
          * <p>The name of the resource group.</p>
@@ -136,8 +142,17 @@ public class GetNodeResponseBody extends TeaModel {
         @NameInMap("DqcType")
         public Integer dqcType;
 
+        @NameInMap("FileId")
+        public Long fileId;
+
         @NameInMap("FileType")
         public Integer fileType;
+
+        @NameInMap("FileVersion")
+        public Integer fileVersion;
+
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
 
         /**
          * <p>The HTTP status code returned.</p>
@@ -248,12 +263,28 @@ public class GetNodeResponseBody extends TeaModel {
             return this.connection;
         }
 
+        public GetNodeResponseBodyData setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
         public GetNodeResponseBodyData setCronExpress(String cronExpress) {
             this.cronExpress = cronExpress;
             return this;
         }
         public String getCronExpress() {
             return this.cronExpress;
+        }
+
+        public GetNodeResponseBodyData setDeployDate(Long deployDate) {
+            this.deployDate = deployDate;
+            return this;
+        }
+        public Long getDeployDate() {
+            return this.deployDate;
         }
 
         public GetNodeResponseBodyData setDescription(String description) {
@@ -280,12 +311,36 @@ public class GetNodeResponseBody extends TeaModel {
             return this.dqcType;
         }
 
+        public GetNodeResponseBodyData setFileId(Long fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public Long getFileId() {
+            return this.fileId;
+        }
+
         public GetNodeResponseBodyData setFileType(Integer fileType) {
             this.fileType = fileType;
             return this;
         }
         public Integer getFileType() {
             return this.fileType;
+        }
+
+        public GetNodeResponseBodyData setFileVersion(Integer fileVersion) {
+            this.fileVersion = fileVersion;
+            return this;
+        }
+        public Integer getFileVersion() {
+            return this.fileVersion;
+        }
+
+        public GetNodeResponseBodyData setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         public GetNodeResponseBodyData setNodeId(Long nodeId) {

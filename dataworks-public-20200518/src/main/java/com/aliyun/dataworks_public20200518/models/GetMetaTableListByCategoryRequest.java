@@ -5,14 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableListByCategoryRequest extends TeaModel {
     /**
+     * <p>The ID of the category. You can call the [GetMetaCategory](https://help.aliyun.com/document_detail/173932.html) operation to query the ID of the category. Categories allow you to efficiently organize and manage tables by category. You can search for the desired table by category.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

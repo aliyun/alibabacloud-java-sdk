@@ -5,34 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionsResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query.</p>
+     * <p>The object returned.</p>
      */
     @NameInMap("Data")
     public ListMetaCollectionsResponseBodyData data;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The object returned.</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -92,16 +98,13 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
 
     public static class ListMetaCollectionsResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   true: The request was successful.</p>
-         * <p>*   false: The request failed.</p>
+         * <p>The collections.</p>
          */
         @NameInMap("CollectionList")
         public java.util.List<Collection> collectionList;
 
         /**
-         * <p>The collections.</p>
+         * <p>The token that is used for the next query.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

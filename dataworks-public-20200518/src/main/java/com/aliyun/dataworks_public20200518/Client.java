@@ -103,7 +103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform. Set the value to **AddMetaCollectionEntity**.
+     * @summary Adds an entity to a collection.
      *
      * @param request AddMetaCollectionEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -142,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform. Set the value to **AddMetaCollectionEntity**.
+     * @summary Adds an entity to a collection.
      *
      * @param request AddMetaCollectionEntityRequest
      * @return AddMetaCollectionEntityResponse
@@ -1073,7 +1073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+     * @summary Creates a data synchronization task.
      *
      * @param request CreateDISyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1124,7 +1124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](https://help.aliyun.com/document_detail/383463.html) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](https://help.aliyun.com/document_detail/383465.html) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
+     * @summary Creates a data synchronization task.
      *
      * @param request CreateDISyncTaskRequest
      * @return CreateDISyncTaskResponse
@@ -2011,7 +2011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2035,12 +2035,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2939,7 +2940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2963,12 +2964,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -3181,6 +3183,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Creates a table folder. This API operation will be replaced soon. We recommend that you do not call this API operation.
+     *
      * @param request CreateTableThemeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTableThemeResponse
@@ -3222,6 +3226,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Creates a table folder. This API operation will be replaced soon. We recommend that you do not call this API operation.
+     *
      * @param request CreateTableThemeRequest
      * @return CreateTableThemeResponse
      */
@@ -7838,9 +7844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform. Set the value to **GetMetaTableBasicInfo**.
-     *
-     * @description ****
+     * @summary Queries the basic information about a metatable.
      *
      * @param request GetMetaTableBasicInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7867,9 +7871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform. Set the value to **GetMetaTableBasicInfo**.
-     *
-     * @description ****
+     * @summary Queries the basic information about a metatable.
      *
      * @param request GetMetaTableBasicInfoRequest
      * @return GetMetaTableBasicInfoResponse
@@ -8138,6 +8140,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries metatables in a specified category.
+     *
      * @param request GetMetaTableListByCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMetaTableListByCategoryResponse
@@ -8163,6 +8167,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries metatables in a specified category.
+     *
      * @param request GetMetaTableListByCategoryRequest
      * @return GetMetaTableListByCategoryResponse
      */
@@ -8230,9 +8236,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary For more information about the example on how to use the GetMetaTablePartition operation, see [Examples of DataWorks API operations](https://developer.aliyun.com/article/780879?groupCode=dataworks).
+     * @summary Queries the partitions of a metatable.
      *
-     * @description The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+     * @description You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
      *
      * @param tmpReq GetMetaTablePartitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8297,9 +8303,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary For more information about the example on how to use the GetMetaTablePartition operation, see [Examples of DataWorks API operations](https://developer.aliyun.com/article/780879?groupCode=dataworks).
+     * @summary Queries the partitions of a metatable.
      *
-     * @description The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+     * @description You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
      *
      * @param request GetMetaTablePartitionRequest
      * @return GetMetaTablePartitionResponse
@@ -8452,7 +8458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform.
+     * @summary Queries the information about a migration task.
      *
      * @param request GetMigrationSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8487,7 +8493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform.
+     * @summary Queries the information about a migration task.
      *
      * @param request GetMigrationSummaryRequest
      * @return GetMigrationSummaryResponse
@@ -8676,6 +8682,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the ancestor nodes of a node.
+     *
      * @param request GetNodeParentsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNodeParentsResponse
@@ -8709,6 +8717,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the ancestor nodes of a node.
+     *
      * @param request GetNodeParentsRequest
      * @return GetNodeParentsResponse
      */
@@ -9178,6 +9188,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the details of a custom alert rule.
+     *
+     * @description ## Debugging
+     * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+     *
      * @param request GetRemindRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRemindResponse
@@ -9207,6 +9222,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the details of a custom alert rule.
+     *
+     * @description ## Debugging
+     * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+     *
      * @param request GetRemindRequest
      * @return GetRemindResponse
      */
@@ -9766,6 +9786,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries compute engine instances.
+     *
      * @param request ListCalcEnginesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCalcEnginesResponse
@@ -9815,6 +9837,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries compute engine instances.
+     *
      * @param request ListCalcEnginesRequest
      * @return ListCalcEnginesResponse
      */
@@ -11472,7 +11496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform. Set the value to **ListMetaCollectionEntities**.
+     * @summary Queries the entities in a collection.
      *
      * @param request ListMetaCollectionEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11519,7 +11543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The operation that you want to perform. Set the value to **ListMetaCollectionEntities**.
+     * @summary Queries the entities in a collection.
      *
      * @param request ListMetaCollectionEntitiesRequest
      * @return ListMetaCollectionEntitiesResponse
@@ -11530,9 +11554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+     * @summary Queries information about collections. Collections include data albums that are displayed on the DataMap page and categories that are created in the data albums. You can call this API operation to query collections by type.
      *
-     * @description You can configure only one of the Creator, Administrator, and Follower parameters.
+     * @description The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
      *
      * @param request ListMetaCollectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11595,9 +11619,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
+     * @summary Queries information about collections. Collections include data albums that are displayed on the DataMap page and categories that are created in the data albums. You can call this API operation to query collections by type.
      *
-     * @description You can configure only one of the Creator, Administrator, and Follower parameters.
+     * @description The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
      *
      * @param request ListMetaCollectionsRequest
      * @return ListMetaCollectionsResponse
@@ -12120,6 +12144,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries members in a DataWorks workspace.
+     *
      * @param request ListProjectMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProjectMembersResponse
@@ -12157,6 +12183,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries members in a DataWorks workspace.
+     *
      * @param request ListProjectMembersRequest
      * @return ListProjectMembersResponse
      */
@@ -12166,7 +12194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Dataworks ID of the workspace.
+     * @summary A topic is added to describe how to call the ListProjectRoles operation to query all roles in a workspace.
+     *
+     * @description ## Debugging
+     * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
      *
      * @param request ListProjectRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12197,7 +12228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Dataworks ID of the workspace.
+     * @summary A topic is added to describe how to call the ListProjectRoles operation to query all roles in a workspace.
+     *
+     * @description ## Debugging
+     * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
      *
      * @param request ListProjectRolesRequest
      * @return ListProjectRolesResponse
@@ -12792,6 +12826,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries table levels. This API operation will be replaced soon. We recommend that you do not call this API operation.
+     *
      * @param request ListTableLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTableLevelResponse
@@ -12817,6 +12853,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries table levels. This API operation will be replaced soon. We recommend that you do not call this API operation.
+     *
      * @param request ListTableLevelRequest
      * @return ListTableLevelResponse
      */
@@ -12826,6 +12864,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries table folders. This API operation will be replaced soon. We recommend that you do not call this API operation.
+     *
      * @param request ListTableThemeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTableThemeResponse
@@ -12851,6 +12891,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries table folders. This API operation will be replaced soon. We recommend that you do not call this API operation.
+     *
      * @param request ListTableThemeRequest
      * @return ListTableThemeResponse
      */
@@ -16253,6 +16295,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Updates the metadata information about a table.
+     *
      * @param request UpdateMetaTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMetaTableResponse
@@ -16324,6 +16368,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Updates the metadata information about a table.
+     *
      * @param request UpdateMetaTableRequest
      * @return UpdateMetaTableResponse
      */

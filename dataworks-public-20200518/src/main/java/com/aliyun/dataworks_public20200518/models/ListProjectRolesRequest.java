@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectRolesRequest extends TeaModel {
     /**
-     * <p>Dataworks ID of the region where the workspace is located.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
