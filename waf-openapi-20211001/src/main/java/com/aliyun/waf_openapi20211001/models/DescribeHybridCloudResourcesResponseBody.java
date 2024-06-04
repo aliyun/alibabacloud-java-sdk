@@ -163,7 +163,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         public Integer xffHeaderMode;
 
         /**
-         * <p>The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the \["header1","header2",...] format.</p>
+         * <p>The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the ["header1","header2",...] format.</p>
          * <br>
          * <p>>  This parameter is returned only if the value of **XffHeaderMode** is 2.</p>
          */

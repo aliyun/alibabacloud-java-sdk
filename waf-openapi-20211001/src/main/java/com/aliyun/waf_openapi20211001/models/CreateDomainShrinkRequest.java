@@ -15,6 +15,8 @@ public class CreateDomainShrinkRequest extends TeaModel {
 
     /**
      * <p>The domain name that you want to add to WAF.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -22,19 +24,25 @@ public class CreateDomainShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
-     * <p>> You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>> You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The configurations of the listeners.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
      * <p>The configurations of the forwarding rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Redirect")
     public String redirectShrink;
@@ -44,6 +52,8 @@ public class CreateDomainShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **cn-hangzhou**: the Chinese mainland</p>
      * <p>*   **ap-southeast-1**: outside the Chinese mainland</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

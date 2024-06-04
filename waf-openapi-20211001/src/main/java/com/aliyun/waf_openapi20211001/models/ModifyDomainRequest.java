@@ -14,6 +14,8 @@ public class ModifyDomainRequest extends TeaModel {
 
     /**
      * <p>The domain name whose access configurations you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -21,19 +23,25 @@ public class ModifyDomainRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The configurations of the listeners.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public ModifyDomainRequestListen listen;
 
     /**
      * <p>The configurations of the forwarding rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Redirect")
     public ModifyDomainRequestRedirect redirect;
@@ -43,6 +51,8 @@ public class ModifyDomainRequest extends TeaModel {
      * <br>
      * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
      * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -160,13 +170,13 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean http2Enabled;
 
         /**
-         * <p>An array of HTTP listener ports. Specify the value of this parameter in the \[port1,port2,...] format.</p>
+         * <p>An array of HTTP listener ports. Specify the value of this parameter in the [port1,port2,...] format.</p>
          */
         @NameInMap("HttpPorts")
         public java.util.List<Integer> httpPorts;
 
         /**
-         * <p>An array of HTTPS listener ports. Specify the value of this parameter in the \[port1,port2,...] format.</p>
+         * <p>An array of HTTPS listener ports. Specify the value of this parameter in the [port1,port2,...] format.</p>
          */
         @NameInMap("HttpsPorts")
         public java.util.List<Integer> httpsPorts;
@@ -234,7 +244,7 @@ public class ModifyDomainRequest extends TeaModel {
         public Integer xffHeaderMode;
 
         /**
-         * <p>The custom header fields that you want to use to obtain the actual IP address of a client. Specify the value of this parameter in the \["header1","header2",...] format.</p>
+         * <p>The custom header fields that you want to use to obtain the actual IP address of a client. Specify the value of this parameter in the ["header1","header2",...] format.</p>
          * <br>
          * <p>>  If you set the **XffHeaderMode** parameter to 2, this parameter is required.</p>
          */
@@ -422,10 +432,10 @@ public class ModifyDomainRequest extends TeaModel {
 
     public static class ModifyDomainRequestRedirect extends TeaModel {
         /**
-         * <p>An array of the IP addresses or domain names of the origin servers. You can specify only one type of address. If you use the domain name type, only IPv4 is supported.</p>
+         * <p>The IP addresses or domain names of the origin server. You can use only one of the address types. If you use the domain name type, the domain name can be resolved only to an IPv4 address.</p>
          * <br>
-         * <p>*   If you use the IP address type, specify the value of this parameter in the \["ip1","ip2",...] format. You can add up to 20 IP addresses.</p>
-         * <p>*   If you use the domain name type, specify the value of this parameter in the \["domain"] format. You can add up to 20 domain names.</p>
+         * <p>*   If you use the IP address type, specify the value in the ["ip1","ip2",...] format. You can enter up to 20 IP addresses.</p>
+         * <p>*   If you use the domain name type, specify the value in the ["domain"] format. You can enter up to 20 domain names.</p>
          */
         @NameInMap("Backends")
         public java.util.List<String> backends;
@@ -440,16 +450,16 @@ public class ModifyDomainRequest extends TeaModel {
         public Boolean cnameEnabled;
 
         /**
-         * <p>The connection timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period for connections. Unit: seconds. Valid values: 1 to 3600.</p>
          */
         @NameInMap("ConnectTimeout")
         public Integer connectTimeout;
 
         /**
-         * <p>Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests of the domain name. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <p>Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests. This parameter is available only if you specify **HttpsPorts**. Valid values:</p>
          * <br>
-         * <p>*   **true:** enables HTTPS to HTTP redirection for back-to-origin requests of the domain name.</p>
-         * <p>*   **false:** disables HTTPS to HTTP redirection for back-to-origin requests of the domain name.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
@@ -457,8 +467,8 @@ public class ModifyDomainRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
          * <br>
-         * <p>*   **true:** enables the persistent connection feature. This is the default value.</p>
-         * <p>*   **false:** disables the persistent connection feature.</p>
+         * <p>*   **true** (default)</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Keepalive")
         public Boolean keepalive;
@@ -466,48 +476,50 @@ public class ModifyDomainRequest extends TeaModel {
         /**
          * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
          * <br>
-         * <p>>  This parameter specifies the number of reused persistent connections when you enable the persistent connection feature.</p>
+         * <p>>  This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.</p>
          */
         @NameInMap("KeepaliveRequests")
         public Integer keepaliveRequests;
 
         /**
-         * <p>The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+         * <p>The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.</p>
+         * <p>>  This parameter specifies the time for which a reused persistent connection can remain in the Idle state before the persistent connection is released.</p>
          */
         @NameInMap("KeepaliveTimeout")
         public Integer keepaliveTimeout;
 
         /**
-         * <p>The load balancing algorithm that you want to use when WAF forwards requests to the origin server. Valid values:</p>
+         * <p>The load balancing algorithm that you want to use to forward requests to the origin server. Valid values:</p>
          * <br>
-         * <p>*   **ip_hash:** the IP hash algorithm.</p>
-         * <p>*   **roundRobin:** the round-robin algorithm.</p>
-         * <p>*   **leastTime:** the least response time algorithm. You can select this value only when you set the **ProtectionResource** parameter to **gslb**.</p>
+         * <p>*   **ip_hash**</p>
+         * <p>*   **roundRobin**</p>
+         * <p>*   **leastTime** You can set the parameter to this value only if you set **ProtectionResource** to **gslb**.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Loadbalance")
         public String loadbalance;
 
         /**
-         * <p>The read timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          */
         @NameInMap("ReadTimeout")
         public Integer readTimeout;
 
         /**
-         * <p>The key-value pairs that you want to use to mark the requests that pass through the WAF instance.</p>
+         * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
          * <br>
-         * <p>WAF automatically adds the key-value pairs to the request headers to identify the requests that pass through WAF.</p>
+         * <p>When a request passes through WAF, the custom header field is automatically used to label the request. This way, the backend service can identify requests that are processed by WAF.</p>
          */
         @NameInMap("RequestHeaders")
         public java.util.List<ModifyDomainRequestRedirectRequestHeaders> requestHeaders;
 
         /**
-         * <p>Specifies whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:</p>
+         * <p>Specifies whether WAF retries forwarding requests to the origin server when the requests fail to be forwarded to the origin server. Valid values:</p>
          * <br>
-         * <p>*   **true:** WAF retries to forward requests. This is the default value.</p>
-         * <p>*   **false:** WAF does not retry to forward requests.</p>
+         * <p>*   **true** (default)</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Retry")
         public Boolean retry;
@@ -523,30 +535,30 @@ public class ModifyDomainRequest extends TeaModel {
         public String routingRules;
 
         /**
-         * <p>Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:</p>
+         * <p>Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only if you specify **HttpsPorts**. Valid values:</p>
          * <br>
-         * <p>*   **true:** enables origin SNI.</p>
-         * <p>*   **false:** disables origin SNI. This is the default value.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          */
         @NameInMap("SniEnabled")
         public Boolean sniEnabled;
 
         /**
-         * <p>The value of the custom SNI field. If you do not specify this parameter, the value of the **Host** field in the request header is automatically used. If you want WAF to use an SNI field value that is different from the value of the Host field in back-to-origin requests, you can specify a custom value for the SNI field.</p>
+         * <p>The value of the SNI field. If you do not specify this parameter, the value of the **Host** field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.</p>
          * <br>
-         * <p>>  If you set the **SniEnabled** parameter to true, this parameter is required.</p>
+         * <p>>  This parameter is required only if you set **SniEnalbed** to xxx.</p>
          */
         @NameInMap("SniHost")
         public String sniHost;
 
         /**
-         * <p>The write timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
          */
         @NameInMap("WriteTimeout")
         public Integer writeTimeout;
 
         /**
-         * <p>Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+         * <p>Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
          * <br>
          * <p>*   **true** (default)</p>
          * <p>*   **false**</p>

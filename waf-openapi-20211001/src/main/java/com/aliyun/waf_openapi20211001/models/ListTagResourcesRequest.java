@@ -15,6 +15,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   **cn-hangzhou**: Chinese mainland.</p>
      * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -27,6 +29,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

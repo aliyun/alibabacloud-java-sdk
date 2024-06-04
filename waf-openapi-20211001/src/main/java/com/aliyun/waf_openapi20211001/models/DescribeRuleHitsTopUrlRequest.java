@@ -13,7 +13,9 @@ public class DescribeRuleHitsTopUrlRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -29,6 +31,8 @@ public class DescribeRuleHitsTopUrlRequest extends TeaModel {
 
     /**
      * <p>The protected object.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")
     public String resource;
@@ -53,6 +57,8 @@ public class DescribeRuleHitsTopUrlRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Unit: seconds.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTimestamp")
     public String startTimestamp;

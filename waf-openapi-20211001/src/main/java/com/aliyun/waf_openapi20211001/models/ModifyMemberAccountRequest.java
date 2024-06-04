@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyMemberAccountRequest extends TeaModel {
     /**
-     * <p>The description of the member. The description must be 1 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and asterisks (\*).</p>
+     * <p>The description of the member. The description must be 1 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and asterisks (\\*).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -13,13 +15,17 @@ public class ModifyMemberAccountRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The Alibaba Cloud account ID of the managed member.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MemberAccountId")
     public String memberAccountId;

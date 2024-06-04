@@ -17,6 +17,8 @@ public class CreateDefenseRuleRequest extends TeaModel {
      * <p>*   **cc:** the HTTP flood protection module.</p>
      * <p>*   **tamperproof:** the website tamper-proofing module.</p>
      * <p>*   **dlp:** the data leakage prevention module.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefenseScene")
     public String defenseScene;
@@ -24,7 +26,9 @@ public class CreateDefenseRuleRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -48,12 +52,16 @@ public class CreateDefenseRuleRequest extends TeaModel {
      * <p>The configurations of the protection rule. Specify a string that contains multiple parameters in the JSON format.</p>
      * <br>
      * <p>>  The parameters vary based on the value of the **DefenseScene** parameter. For more information, see the "**Protection rule parameters**" section in this topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
      * <p>The ID of the protection rule template for which you want to create a protection rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

@@ -7,7 +7,7 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,12 +23,16 @@ public class ListTagKeysRequest extends TeaModel {
      * <br>
      * <p>*   **cn-hangzhou**: Chinese mainland.</p>
      * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
