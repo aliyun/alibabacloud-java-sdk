@@ -1035,6 +1035,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        @NameInMap("Snapshots")
+        public String snapshots;
+
         @NameInMap("Source")
         public String source;
 
@@ -1176,6 +1179,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
         public String getReferenceId() {
             return this.referenceId;
+        }
+
+        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setSnapshots(String snapshots) {
+            this.snapshots = snapshots;
+            return this;
+        }
+        public String getSnapshots() {
+            return this.snapshots;
         }
 
         public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setSource(String source) {
