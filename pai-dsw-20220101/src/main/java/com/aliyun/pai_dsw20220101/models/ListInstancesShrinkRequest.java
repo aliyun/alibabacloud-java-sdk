@@ -3,7 +3,7 @@ package com.aliyun.pai_dsw20220101.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstancesRequest extends TeaModel {
+public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
@@ -17,7 +17,7 @@ public class ListInstancesRequest extends TeaModel {
     public String instanceName;
 
     @NameInMap("Labels")
-    public java.util.Map<String, ?> labels;
+    public String labelsShrink;
 
     @NameInMap("Order")
     public String order;
@@ -43,12 +43,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListInstancesRequest self = new ListInstancesRequest();
+    public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListInstancesRequest setAcceleratorType(String acceleratorType) {
+    public ListInstancesShrinkRequest setAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
     }
@@ -56,7 +56,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.acceleratorType;
     }
 
-    public ListInstancesRequest setAccessibility(String accessibility) {
+    public ListInstancesShrinkRequest setAccessibility(String accessibility) {
         this.accessibility = accessibility;
         return this;
     }
@@ -64,7 +64,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.accessibility;
     }
 
-    public ListInstancesRequest setInstanceId(String instanceId) {
+    public ListInstancesShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -72,7 +72,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListInstancesRequest setInstanceName(String instanceName) {
+    public ListInstancesShrinkRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -80,15 +80,15 @@ public class ListInstancesRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public ListInstancesRequest setLabels(java.util.Map<String, ?> labels) {
-        this.labels = labels;
+    public ListInstancesShrinkRequest setLabelsShrink(String labelsShrink) {
+        this.labelsShrink = labelsShrink;
         return this;
     }
-    public java.util.Map<String, ?> getLabels() {
-        return this.labels;
+    public String getLabelsShrink() {
+        return this.labelsShrink;
     }
 
-    public ListInstancesRequest setOrder(String order) {
+    public ListInstancesShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -96,7 +96,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.order;
     }
 
-    public ListInstancesRequest setPageNumber(Long pageNumber) {
+    public ListInstancesShrinkRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -104,7 +104,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListInstancesRequest setPageSize(Long pageSize) {
+    public ListInstancesShrinkRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -112,7 +112,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListInstancesRequest setPaymentType(String paymentType) {
+    public ListInstancesShrinkRequest setPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
     }
@@ -120,7 +120,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.paymentType;
     }
 
-    public ListInstancesRequest setResourceId(String resourceId) {
+    public ListInstancesShrinkRequest setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -128,7 +128,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public ListInstancesRequest setSortBy(String sortBy) {
+    public ListInstancesShrinkRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
@@ -136,7 +136,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListInstancesRequest setStatus(String status) {
+    public ListInstancesShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -144,7 +144,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.status;
     }
 
-    public ListInstancesRequest setWorkspaceId(String workspaceId) {
+    public ListInstancesShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
