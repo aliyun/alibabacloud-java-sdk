@@ -4,6 +4,9 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceStatisticsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceIds")
     public String workspaceIds;
 

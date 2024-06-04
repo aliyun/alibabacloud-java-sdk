@@ -7,6 +7,9 @@ public class GetTokenRequest extends TeaModel {
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

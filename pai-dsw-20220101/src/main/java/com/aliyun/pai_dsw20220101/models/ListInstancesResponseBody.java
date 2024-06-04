@@ -145,6 +145,15 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("MountPath")
         public String mountPath;
 
+        @NameInMap("OptionType")
+        public String optionType;
+
+        @NameInMap("Options")
+        public String options;
+
+        @NameInMap("Uri")
+        public String uri;
+
         public static ListInstancesResponseBodyInstancesDatasets build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstancesDatasets self = new ListInstancesResponseBodyInstancesDatasets();
             return TeaModel.build(map, self);
@@ -164,6 +173,30 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+        public ListInstancesResponseBodyInstancesDatasets setOptionType(String optionType) {
+            this.optionType = optionType;
+            return this;
+        }
+        public String getOptionType() {
+            return this.optionType;
+        }
+
+        public ListInstancesResponseBodyInstancesDatasets setOptions(String options) {
+            this.options = options;
+            return this;
+        }
+        public String getOptions() {
+            return this.options;
+        }
+
+        public ListInstancesResponseBodyInstancesDatasets setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
         }
 
     }
