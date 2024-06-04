@@ -18,18 +18,20 @@ public class DescribeDomainsRequest extends TeaModel {
 
     /**
      * <p>The page number of the page to return. Default value: 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The HTTPS address of the origin server.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>Queries the list of a domain name that is added to Web Application Firewall (WAF).</p>
+     * <p>The number of entries per page. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

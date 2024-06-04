@@ -164,7 +164,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static class DescribeInstanceResponseBodyDetails extends TeaModel {
         /**
-         * <p>The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see [Match conditions](~~374354~~).</p>
+         * <p>The maximum number of IP addresses that can be added to the match content of a match condition. For more information, see [Match conditions](https://help.aliyun.com/document_detail/374354.html).</p>
          */
         @NameInMap("AclRuleMaxIpCount")
         public Long aclRuleMaxIpCount;
@@ -374,13 +374,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean gslb;
 
         /**
-         * <p>The HTTP port range that is supported. For more information, see [View supported ports](~~385578~~).</p>
+         * <p>The HTTP port range that is supported. For more information, see [View supported ports](https://help.aliyun.com/document_detail/385578.html).</p>
          */
         @NameInMap("HttpPorts")
         public String httpPorts;
 
         /**
-         * <p>The HTTPS port range that is supported. For more information, see [View supported ports](~~385578~~).</p>
+         * <p>The HTTPS port range that is supported. For more information, see [View supported ports](https://help.aliyun.com/document_detail/385578.html).</p>
          */
         @NameInMap("HttpsPorts")
         public String httpsPorts;

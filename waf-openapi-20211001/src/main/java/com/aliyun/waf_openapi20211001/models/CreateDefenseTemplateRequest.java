@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateDefenseTemplateRequest extends TeaModel {
     /**
      * <p>The scenario in which you want to use the protection rule template. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DefenseScene")
     public String defenseScene;
@@ -19,7 +21,9 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -41,12 +45,16 @@ public class CreateDefenseTemplateRequest extends TeaModel {
 
     /**
      * <p>The name of the protection rule template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
      * <p>The origin of the protection rule template that you want to create. Set the value to **custom**. The value specifies that the protection rule template is a custom template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateOrigin")
     public String templateOrigin;
@@ -56,6 +64,8 @@ public class CreateDefenseTemplateRequest extends TeaModel {
      * <br>
      * <p>*   **0:** disabled.</p>
      * <p>*   **1:** enabled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateStatus")
     public Integer templateStatus;
@@ -65,6 +75,8 @@ public class CreateDefenseTemplateRequest extends TeaModel {
      * <br>
      * <p>*   **user_default:** default template.</p>
      * <p>*   **user_custom:** custom template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

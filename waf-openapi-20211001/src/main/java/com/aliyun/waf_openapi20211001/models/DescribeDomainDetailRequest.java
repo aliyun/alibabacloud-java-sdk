@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeDomainDetailRequest extends TeaModel {
     /**
      * <p>The domain name that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -13,7 +15,9 @@ public class DescribeDomainDetailRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

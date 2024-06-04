@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClusterResourceId")
     public String clusterResourceId;
@@ -15,7 +17,9 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
      * <br>
      * <p>**</p>
      * <br>
-     * <p>**You can call the **DescribeInstanceInfo[ operation to obtain the ID of the WAF instance.](~~140857~~)</p>
+     * <p>**You can call the **DescribeInstanceInfo[ operation to obtain the ID of the WAF instance.](https://help.aliyun.com/document_detail/140857.html)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,6 +29,8 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
      * <br>
      * <p>*   **on**: enabled.</p>
      * <p>*   **off**: disabled. This is the default value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleStatus")
     public String ruleStatus;

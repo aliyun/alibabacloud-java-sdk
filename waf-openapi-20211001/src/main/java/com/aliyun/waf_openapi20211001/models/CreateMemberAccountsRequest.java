@@ -7,13 +7,17 @@ public class CreateMemberAccountsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The Alibaba Cloud account IDs of the members that you want to add. You can add up to 10 members at the same time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MemberAccountIds")
     public java.util.List<String> memberAccountIds;

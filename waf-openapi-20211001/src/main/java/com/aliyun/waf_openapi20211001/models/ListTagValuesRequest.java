@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListTagValuesRequest extends TeaModel {
     /**
      * <p>The tag key.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
@@ -21,12 +23,16 @@ public class ListTagValuesRequest extends TeaModel {
      * <br>
      * <p>*   **cn-hangzhou**: Chinese mainland.</p>
      * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

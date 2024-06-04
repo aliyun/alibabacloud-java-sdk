@@ -18,18 +18,24 @@ public class UntagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   **cn-hangzhou**: Chinese mainland.</p>
      * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

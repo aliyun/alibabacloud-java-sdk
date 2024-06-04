@@ -15,6 +15,8 @@ public class DeleteDomainRequest extends TeaModel {
 
     /**
      * <p>The domain name that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -28,7 +30,9 @@ public class DeleteDomainRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -38,6 +42,8 @@ public class DeleteDomainRequest extends TeaModel {
      * <br>
      * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
      * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

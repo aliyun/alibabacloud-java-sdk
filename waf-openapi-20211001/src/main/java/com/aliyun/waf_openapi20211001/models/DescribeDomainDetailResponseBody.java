@@ -643,10 +643,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         public java.util.List<DescribeDomainDetailResponseBodyRedirectRequestHeaders> requestHeaders;
 
         /**
-         * <p>Indicates whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:</p>
+         * <p>Indicates whether WAF retries when requests fail to be forwarded to the origin server. Valid values:</p>
          * <br>
-         * <p>*   **true:** WAF retries to forward requests. This is the default value.</p>
-         * <p>*   **false:** WAF does not retry to forward requests.</p>
+         * <p>*   **true:** WAF retries. This is the default value.</p>
+         * <p>*   **false:** WAF does not retry.</p>
          */
         @NameInMap("Retry")
         public Boolean retry;

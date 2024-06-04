@@ -7,7 +7,9 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
+     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -29,12 +31,16 @@ public class DeleteDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The IDs of the protection rules that you want to delete. Separate the IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleIds")
     public String ruleIds;
 
     /**
      * <p>The ID of the protection rule template to which the protection rule that you want to delete belongs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
