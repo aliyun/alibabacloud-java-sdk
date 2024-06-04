@@ -4,9 +4,15 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class VerifyCredentialRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Credential")
     public String credential;
 
@@ -16,12 +22,21 @@ public class VerifyCredentialRequest extends TeaModel {
     @NameInMap("EncryptedKey")
     public String encryptedKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -12,6 +12,8 @@ public class GetLoginTokenRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud Workspace client. The system generates a unique ID for each client.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClientId")
     public String clientId;
@@ -100,7 +102,9 @@ public class GetLoginTokenRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/436773.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,24 +4,39 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class EncryptPasswordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

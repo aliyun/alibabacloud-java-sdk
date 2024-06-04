@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class StartDesktopsRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client). The system generates a unique ID for each client.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClientId")
     public String clientId;
@@ -17,7 +19,7 @@ public class StartDesktopsRequest extends TeaModel {
     public String clientOS;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -30,18 +32,24 @@ public class StartDesktopsRequest extends TeaModel {
 
     /**
      * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
      * <p>The logon token.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoginToken")
     public String loginToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/196646.html) operation to query the regions supported by WUYING Workspace.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
