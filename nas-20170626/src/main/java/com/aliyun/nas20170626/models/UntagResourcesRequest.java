@@ -19,6 +19,8 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -27,6 +29,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>The resource type.</p>
      * <br>
      * <p>Set the value to filesystem.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

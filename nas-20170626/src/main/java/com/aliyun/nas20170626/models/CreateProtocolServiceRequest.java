@@ -7,7 +7,7 @@ public class CreateProtocolServiceRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](https://help.aliyun.com/document_detail/25693.html)</p>
      * <br>
      * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
@@ -21,7 +21,7 @@ public class CreateProtocolServiceRequest extends TeaModel {
      * <br>
      * <p>*   The description must be 2 to 128 characters in length.</p>
      * <p>*   The description must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -41,6 +41,8 @@ public class CreateProtocolServiceRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -55,6 +57,8 @@ public class CreateProtocolServiceRequest extends TeaModel {
      * <p>*   CL2</p>
      * <p>*   General</p>
      * <p>*   CL1</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolSpec")
     public String protocolSpec;
@@ -63,6 +67,8 @@ public class CreateProtocolServiceRequest extends TeaModel {
      * <p>The protocol type of the protocol service.</p>
      * <br>
      * <p>Valid value: NFS (default). Only NFSv3 is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
@@ -77,12 +83,16 @@ public class CreateProtocolServiceRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID of the protocol service.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The virtual private cloud (VPC) ID of the protocol service. The VPC ID of the protocol service must be the same as the VPC ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

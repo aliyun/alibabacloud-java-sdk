@@ -7,6 +7,9 @@ public class DescribeAccessPointResponseBody extends TeaModel {
     @NameInMap("AccessPoint")
     public DescribeAccessPointResponseBodyAccessPoint accessPoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

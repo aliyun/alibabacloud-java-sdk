@@ -7,7 +7,9 @@ public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the automatic snapshot policy.</p>
      * <br>
-     * <p>You can call the [DescribeAutoSnapshotPolicies](~~126583~~) operation to view available automatic snapshot policies.</p>
+     * <p>You can call the [DescribeAutoSnapshotPolicies](https://help.aliyun.com/document_detail/126583.html) operation to view available automatic snapshot policies.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;

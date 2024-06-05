@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The resource type. Set the value to filesystem.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The details about the tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -62,6 +68,8 @@ public class TagResourcesRequest extends TeaModel {
          * <p>*   The tag key must be 1 to 128 characters in length.</p>
          * <p>*   The tag key cannot start with `aliyun` or `acs:`.</p>
          * <p>*   The tag key cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -75,6 +83,8 @@ public class TagResourcesRequest extends TeaModel {
          * <p>*   The tag value must be 1 to 128 characters in length.</p>
          * <p>*   The tag value cannot start with `aliyun` or `acs:`.</p>
          * <p>*   The tag value cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Value")
         public String value;

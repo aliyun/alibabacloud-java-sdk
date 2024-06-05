@@ -24,6 +24,8 @@ public class DescribeAutoSnapshotTasksRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <br>
      * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemType")
     public String fileSystemType;

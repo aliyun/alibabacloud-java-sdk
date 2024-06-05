@@ -16,12 +16,16 @@ public class SetDirQuotaRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The absolute path of a directory.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Path")
     public String path;
@@ -33,6 +37,8 @@ public class SetDirQuotaRequest extends TeaModel {
      * <br>
      * <p>*   Accounting: a statistical quota. If you set this parameter to Accounting, NAS calculates only the storage usage of the directory.</p>
      * <p>*   Enforcement: a restricted quota. If you set this parameter to Enforcement and the storage usage exceeds the quota, you can no longer create files or subdirectories for the directory, or write data to the directory.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("QuotaType")
     public String quotaType;
@@ -68,6 +74,8 @@ public class SetDirQuotaRequest extends TeaModel {
      * <p>*   Uid: user ID</p>
      * <p>*   Gid: user group ID</p>
      * <p>*   AllUsers: all users</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserType")
     public String userType;

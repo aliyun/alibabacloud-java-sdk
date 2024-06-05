@@ -4,21 +4,36 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateDirRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerGroupId")
     public Integer ownerGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerUserId")
     public Integer ownerUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Permission")
     public String permission;
 
     @NameInMap("Recursion")
     public Boolean recursion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RootDirectory")
     public String rootDirectory;
 

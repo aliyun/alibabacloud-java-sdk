@@ -11,12 +11,12 @@ public class DeleteLifecyclePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
      * <p>*   true</p>
-     * <p>*   false: The request failed.</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;

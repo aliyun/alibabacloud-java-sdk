@@ -74,7 +74,7 @@ public class DescribeZonesResponseBody extends TeaModel {
          * <br>
          * <p>*   If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</p>
          * <p>*   If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</p>
-         * <p>*   If the FileSystemType parameter is set to cpfs, the storage type is advance\_100 (100 MB/s/TiB baseline) or advance\_200 (200 MB/s/TiB baseline).</p>
+         * <p>*   If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</p>
          * <br>
          * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
          */

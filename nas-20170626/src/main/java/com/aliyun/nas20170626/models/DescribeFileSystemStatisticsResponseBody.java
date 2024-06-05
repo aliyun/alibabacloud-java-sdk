@@ -398,7 +398,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
          * <br>
          * <p>*   Valid values for General-purpose NAS file systems: Capacity and Performance.</p>
          * <p>*   Valid values for Extreme NAS file systems: standard and advance.</p>
-         * <p>*   Valid values for CPFS file systems: advance\_100 (100 MB/s/TiB baseline) and advance\_200 (200 MB/s/TiB baseline).</p>
+         * <p>*   Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).</p>
          */
         @NameInMap("StorageType")
         public String storageType;

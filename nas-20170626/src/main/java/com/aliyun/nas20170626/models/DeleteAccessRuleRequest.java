@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteAccessRuleRequest extends TeaModel {
     /**
      * <p>The name of the permission group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
     /**
      * <p>The rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessRuleId")
     public String accessRuleId;

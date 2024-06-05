@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ResetFileSystemRequest extends TeaModel {
     /**
      * <p>The ID of the advanced Extreme NAS file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The snapshot ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

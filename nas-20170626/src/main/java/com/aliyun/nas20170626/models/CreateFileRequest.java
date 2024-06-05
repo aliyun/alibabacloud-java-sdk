@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateFileRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -30,6 +32,8 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The absolute path of the directory or file. The path must start and end with a forward slash (/) and must be 2 to 1024 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Path")
     public String path;
@@ -39,6 +43,8 @@ public class CreateFileRequest extends TeaModel {
      * <br>
      * <p>*   File</p>
      * <p>*   Directory</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

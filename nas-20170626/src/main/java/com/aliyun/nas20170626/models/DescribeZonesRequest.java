@@ -22,6 +22,8 @@ public class DescribeZonesRequest extends TeaModel {
      * <p>The ID of the region where you want to query zones.</p>
      * <br>
      * <p>You can call the DescribeRegions operation to query the latest region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

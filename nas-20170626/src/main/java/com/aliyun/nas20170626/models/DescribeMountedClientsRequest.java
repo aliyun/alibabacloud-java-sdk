@@ -15,12 +15,16 @@ public class DescribeMountedClientsRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The domain name of the mount target.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
@@ -45,6 +49,8 @@ public class DescribeMountedClientsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -106,6 +106,9 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         @NameInMap("FileSystemNums")
         public Integer fileSystemNums;
 
+        @NameInMap("FileSystemType")
+        public String fileSystemType;
+
         /**
          * <p>The region ID of the automatic snapshot policy.</p>
          */
@@ -129,7 +132,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   \-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</p>
+         * <p>*   \\-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</p>
          * <p>*   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</p>
          */
         @NameInMap("RetentionDays")
@@ -191,6 +194,14 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
         public Integer getFileSystemNums() {
             return this.fileSystemNums;
+        }
+
+        public DescribeAutoSnapshotPoliciesResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setFileSystemType(String fileSystemType) {
+            this.fileSystemType = fileSystemType;
+            return this;
+        }
+        public String getFileSystemType() {
+            return this.fileSystemType;
         }
 
         public DescribeAutoSnapshotPoliciesResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setRegionId(String regionId) {

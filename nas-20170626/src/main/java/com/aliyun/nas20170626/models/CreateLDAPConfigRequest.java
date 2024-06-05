@@ -12,18 +12,24 @@ public class CreateLDAPConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>An LDAP search base.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SearchBase")
     public String searchBase;
 
     /**
      * <p>An LDAP URI.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("URI")
     public String URI;

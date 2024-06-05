@@ -18,6 +18,8 @@ public class CreateSnapshotRequest extends TeaModel {
 
     /**
      * <p>The ID of the advanced Extreme NAS file system. The value must start with `extreme-`, for example, `extreme-01dd****`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -29,7 +31,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   \-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</p>
+     * <p>*   \\-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</p>
      * <p>*   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</p>
      */
     @NameInMap("RetentionDays")
@@ -41,7 +43,7 @@ public class CreateSnapshotRequest extends TeaModel {
      * <p>Limits:</p>
      * <br>
      * <p>*   The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <p>*   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>*   The name cannot start with auto because snapshots whose names start with auto are recognized as auto snapshots.</p>
      */
     @NameInMap("SnapshotName")

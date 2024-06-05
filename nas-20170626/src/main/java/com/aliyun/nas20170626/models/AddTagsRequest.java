@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class AddTagsRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<AddTagsRequestTag> tag;
 

@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessPointRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccessGroup")
     public String accessGroup;
 
@@ -13,6 +16,9 @@ public class CreateAccessPointRequest extends TeaModel {
     @NameInMap("EnabledRam")
     public Boolean enabledRam;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
@@ -37,9 +43,15 @@ public class CreateAccessPointRequest extends TeaModel {
     @NameInMap("RootDirectory")
     public String rootDirectory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VswId")
     public String vswId;
 

@@ -38,7 +38,7 @@ public class CreateFileSystemRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](https://help.aliyun.com/document_detail/25693.html)</p>
      * <br>
      * <p>> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
@@ -52,7 +52,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * <br>
      * <p>*   The description must be 2 to 128 characters in length.</p>
      * <p>*   The description must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -123,6 +123,8 @@ public class CreateFileSystemRequest extends TeaModel {
      * <br>
      * <p>*   If the FileSystemType parameter is set to standard, you can set the ProtocolType parameter to NFS or SMB.</p>
      * <p>*   If the FileSystemType parameter is set to extreme, you can set the ProtocolType parameter to NFS.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
@@ -145,6 +147,8 @@ public class CreateFileSystemRequest extends TeaModel {
      * <br>
      * <p>*   If the FileSystemType parameter is set to standard, you can set the StorageType parameter to Performance or Capacity.</p>
      * <p>*   If the FileSystemType parameter is set to extreme, you can set the StorageType parameter to standard or advance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageType")
     public String storageType;

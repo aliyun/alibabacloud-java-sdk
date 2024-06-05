@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateRecycleBinAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -16,6 +18,8 @@ public class UpdateRecycleBinAttributeRequest extends TeaModel {
      * <p>Valid values: 1 to 180.</p>
      * <br>
      * <p>Default value: 3.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReservedDays")
     public Long reservedDays;

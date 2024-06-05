@@ -8,6 +8,8 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
      * <p>The IDs of file systems.</p>
      * <br>
      * <p>You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemIds")
     public String fileSystemIds;
