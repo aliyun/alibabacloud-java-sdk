@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateFacegroupRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
@@ -18,6 +20,8 @@ public class UpdateFacegroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the face-based group. You can call the ListFacegroups operation to query the group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("group_id")
     public String groupId;

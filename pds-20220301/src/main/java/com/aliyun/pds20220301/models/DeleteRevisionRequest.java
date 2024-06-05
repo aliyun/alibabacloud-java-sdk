@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteRevisionRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The version ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("revision_id")
     public String revisionId;

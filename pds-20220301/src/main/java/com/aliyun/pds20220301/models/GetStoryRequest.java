@@ -12,6 +12,9 @@ public class GetStoryRequest extends TeaModel {
     @Deprecated
     public String coverVideoThumbnailProcess;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
@@ -23,6 +26,9 @@ public class GetStoryRequest extends TeaModel {
     @Deprecated
     public String imageUrlProcess;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_id")
     public String storyId;
 

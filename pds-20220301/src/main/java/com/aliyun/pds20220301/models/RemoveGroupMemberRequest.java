@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class RemoveGroupMemberRequest extends TeaModel {
     /**
      * <p>The ID of the group from which you want to remove a member.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("group_id")
     public String groupId;
 
     /**
      * <p>The ID of the member. If member_type is set to user, set this parameter to the ID of the corresponding user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("member_id")
     public String memberId;
@@ -22,6 +26,8 @@ public class RemoveGroupMemberRequest extends TeaModel {
      * <p>*   user</p>
      * <br>
      * <p>Note: A group can be a member of only one group. It cannot be a member of multiple groups. A user can be a member of multiple groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("member_type")
     public String memberType;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AddGroupMemberRequest extends TeaModel {
     /**
      * <p>The ID of the destination group to which the member is added.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("group_id")
     public String groupId;
 
     /**
      * <p>The member ID. If member_type is set to user, set this parameter to a user ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("member_id")
     public String memberId;
@@ -19,9 +23,11 @@ public class AddGroupMemberRequest extends TeaModel {
     /**
      * <p>The type of the member. Set the value to user. When you create a group, you can directly add the group to a parent group.</p>
      * <br>
-     * <p>*</p>
+     * <p>* user</p>
      * <br>
      * <p>Note: A group can be added to only one group. A user can be added to multiple groups.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("member_type")
     public String memberType;

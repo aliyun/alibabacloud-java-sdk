@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListRecyclebinRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
@@ -13,9 +15,9 @@ public class ListRecyclebinRequest extends TeaModel {
     /**
      * <p>Specifies the returned fields.</p>
      * <br>
-     * <p>1\. If you set this parameter to \*, all fields of the file are returned.</p>
+     * <p>1\\. If you set this parameter to \\*, all fields of the file are returned.</p>
      * <br>
-     * <p>2\. If you set this parameter to a null value or leave this parameter empty, the fields, such as file creator, file modifier, and custom tags, are not returned.</p>
+     * <p>2\\. If you set this parameter to a null value or leave this parameter empty, the fields, such as file creator, file modifier, and custom tags, are not returned.</p>
      * <br>
      * <p>The default value is a null value, which indicates that only some fields are returned.</p>
      */

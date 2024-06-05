@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class FileDeleteUserTagsRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The tags that you want to remove from a file. You cannot leave this parameter empty. You can specify up to 1,000 tags.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("key_list")
     public java.util.List<String> keyList;

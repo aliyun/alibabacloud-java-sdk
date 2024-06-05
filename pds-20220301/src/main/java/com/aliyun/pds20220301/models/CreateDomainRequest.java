@@ -12,6 +12,8 @@ public class CreateDomainRequest extends TeaModel {
 
     /**
      * <p>The name of the domain.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("domain_name")
     public String domainName;

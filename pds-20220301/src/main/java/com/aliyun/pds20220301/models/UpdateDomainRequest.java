@@ -12,6 +12,8 @@ public class UpdateDomainRequest extends TeaModel {
 
     /**
      * <p>The domain ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("domain_id")
     public String domainId;

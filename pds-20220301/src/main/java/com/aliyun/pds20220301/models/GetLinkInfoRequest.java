@@ -7,9 +7,15 @@ public class GetLinkInfoRequest extends TeaModel {
     @NameInMap("extra")
     public String extra;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("identity")
     public String identity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("type")
     public String type;
 

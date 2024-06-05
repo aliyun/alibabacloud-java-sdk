@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class TrashFileRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The ID of the file or folder.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;

@@ -18,6 +18,8 @@ public class CreateDriveRequest extends TeaModel {
 
     /**
      * <p>The name of the drive. The name can be up to 128 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_name")
     public String driveName;
@@ -30,6 +32,8 @@ public class CreateDriveRequest extends TeaModel {
 
     /**
      * <p>The owner of the drive.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("owner")
     public String owner;
@@ -38,6 +42,8 @@ public class CreateDriveRequest extends TeaModel {
      * <p>The type of the owner. Valid values:</p>
      * <br>
      * <p>user and group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("owner_type")
     public String ownerType;

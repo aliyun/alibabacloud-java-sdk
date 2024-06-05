@@ -23,7 +23,7 @@ public class ListFileRequest extends TeaModel {
     /**
      * <p>The fields to return.</p>
      * <br>
-     * <p>1.  If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.</p>
+     * <p>1.  If this parameter is set to \\*, all fields of the file except the fields that must be specified are returned.</p>
      * <p>2.  If only specific fields are required, you can specify the following fields: url, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,exif.</p>
      * <p>3.  The investigation_info field is returned only if you specify this field.</p>
      * <br>
@@ -41,7 +41,7 @@ public class ListFileRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\</p>
      * <p>By default, this parameter is empty.</p>
      */
     @NameInMap("marker")
@@ -125,6 +125,8 @@ public class ListFileRequest extends TeaModel {
 
     /**
      * <p>The ID of the parent folder. If the parent folder is a root directory, set this parameter to root.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("parent_file_id")
     public String parentFileId;

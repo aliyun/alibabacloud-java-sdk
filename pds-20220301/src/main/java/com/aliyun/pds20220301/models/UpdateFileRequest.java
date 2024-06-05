@@ -9,7 +9,7 @@ public class UpdateFileRequest extends TeaModel {
      * <br>
      * <p>ignore: allows you to modify the file by using the same name as an existing file on the cloud.</p>
      * <br>
-     * <p>auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.</p>
+     * <p>auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
      * <br>
      * <p>refuse: does not modify the file that you want to modify but returns the information about the file that has the same name on the cloud.</p>
      * <br>
@@ -26,12 +26,16 @@ public class UpdateFileRequest extends TeaModel {
 
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;

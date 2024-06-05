@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListRevisionRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
@@ -13,13 +15,15 @@ public class ListRevisionRequest extends TeaModel {
     /**
      * <p>Specifies the returned fields.</p>
      * <br>
-     * <p>By default, this parameter is left empty. If you set this parameter to \*, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.</p>
+     * <p>By default, this parameter is left empty. If you set this parameter to \\*, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.</p>
      */
     @NameInMap("fields")
     public String fields;
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;

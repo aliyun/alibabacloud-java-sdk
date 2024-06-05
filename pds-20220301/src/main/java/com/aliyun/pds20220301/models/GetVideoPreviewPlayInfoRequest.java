@@ -11,6 +11,8 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
      * <p>*   quick_video: previews a video while transcoding is in progress.</p>
      * <p>*   offline_audio: previews a piece of audio after the audio is transcoded offline.</p>
      * <p>*   offline_video: previews a video after the video is transcoded offline.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("category")
     public String category;
@@ -23,6 +25,8 @@ public class GetVideoPreviewPlayInfoRequest extends TeaModel {
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;

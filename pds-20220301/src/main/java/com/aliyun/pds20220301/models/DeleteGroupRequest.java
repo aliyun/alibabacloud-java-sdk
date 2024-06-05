@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteGroupRequest extends TeaModel {
     /**
      * <p>The group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("group_id")
     public String groupId;

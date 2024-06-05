@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class GetDomainRequest extends TeaModel {
     /**
      * <p>The ID of the domain.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("domain_id")
     public String domainId;
+
+    @NameInMap("fields")
+    public String fields;
 
     /**
      * <p>Specifies whether to return the used quota of the domain. Default value: false. If the quota of the domain is greater than 0 and you set this parameter to true, the used quota of the domain is returned.</p>
@@ -27,6 +32,14 @@ public class GetDomainRequest extends TeaModel {
     }
     public String getDomainId() {
         return this.domainId;
+    }
+
+    public GetDomainRequest setFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    public String getFields() {
+        return this.fields;
     }
 
     public GetDomainRequest setGetQuotaUsed(Boolean getQuotaUsed) {

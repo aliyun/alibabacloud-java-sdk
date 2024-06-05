@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class DeleteStoryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_id")
     public String storyId;
 

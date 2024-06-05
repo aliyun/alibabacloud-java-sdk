@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateFileRequest extends TeaModel {
     /**
-     * <p>The processing method that is used if the file that you want to create has the same name as an existing file on the cloud. Valid values:</p>
+     * <p>The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values:</p>
      * <br>
-     * <p>ignore: allows you to create the file by using the same name as an existing file on the cloud.</p>
+     * <p>ignore: allows you to create the file by using the same name as an existing file in the cloud.</p>
      * <br>
-     * <p>auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.</p>
+     * <p>auto_rename: automatically renames the file that you want to create. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
      * <br>
-     * <p>refuse: does not create the file that you want to create but returns the information about the file that has the same name on the cloud.</p>
+     * <p>refuse: does not create the file that you want to create but returns the information about the file that has the same name in the cloud.</p>
      * <br>
      * <p>Default value: ignore.</p>
      */
@@ -31,7 +31,7 @@ public class CreateFileRequest extends TeaModel {
     public String contentHashName;
 
     /**
-     * <p>The type of the file content. Default value: application/oct-stream. For more information about common content types, see [How do I configure the Content-Type header?](https://help.aliyun.com/document_detail/39522.htm?spm=a2c4g.11186623.0.0.5a0b7dbb1TPnWF#concept-5041)</p>
+     * <p>The type of the file content. Default value: application/oct-stream.</p>
      */
     @NameInMap("content_type")
     public String contentType;
@@ -67,19 +67,21 @@ public class CreateFileRequest extends TeaModel {
     public ImageMediaMetadata imageMediaMetadata;
 
     /**
-     * <p>The local time when the file was created. By default, this parameter is left empty. The time is specified in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     * <p>The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
      */
     @NameInMap("local_created_at")
     public String localCreatedAt;
 
     /**
-     * <p>The local time when the file was modified. By default, this parameter is left empty. The time is specified in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     * <p>The time when the local file was modified. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
      */
     @NameInMap("local_modified_at")
     public String localModifiedAt;
 
     /**
      * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("name")
     public String name;
@@ -92,6 +94,8 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The ID of the parent directory. If you want to create a file or folder in the root directory, set this parameter to root.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("parent_file_id")
     public String parentFileId;
@@ -115,7 +119,7 @@ public class CreateFileRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The file size. Unit: bytes.</p>
+     * <p>The size of the file. Unit: bytes.</p>
      */
     @NameInMap("size")
     public Long size;
@@ -124,6 +128,8 @@ public class CreateFileRequest extends TeaModel {
      * <p>The type of the file. Valid values:</p>
      * <br>
      * <p>file folder</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;
@@ -315,13 +321,13 @@ public class CreateFileRequest extends TeaModel {
 
     public static class CreateFileRequestPartInfoListParallelSha1Ctx extends TeaModel {
         /**
-         * <p>该分片前所有数据的SHA1上下文的第1-5个32位变量，该字段只在多分片并发上传的模式下有效</p>
+         * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
          */
         @NameInMap("h")
         public java.util.List<Long> h;
 
         /**
-         * <p>到上一个数据块为止的总长度，字节，需要为64的倍数，该字段只在多分片并发上传的模式下有效</p>
+         * <p>The size of the file content before the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
          */
         @NameInMap("part_offset")
         public Long partOffset;
@@ -350,17 +356,20 @@ public class CreateFileRequest extends TeaModel {
     }
 
     public static class CreateFileRequestPartInfoList extends TeaModel {
+        /**
+         * <p>The MD5 hash value of the file part. This parameter is required when the MD5 hash value of the file part needs to be verified during part upload.</p>
+         */
         @NameInMap("content_md5")
         public String contentMd5;
 
         /**
-         * <p>该分片前所有数据的SHA1上下文，该字段只在多分片并发上传的模式下有效</p>
+         * <p>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
          */
         @NameInMap("parallel_sha1_ctx")
         public CreateFileRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
 
         /**
-         * <p>The serial number of a part. The number starts from 1.</p>
+         * <p>The serial number of a file part. The number starts from 1.</p>
          */
         @NameInMap("part_number")
         public Integer partNumber;

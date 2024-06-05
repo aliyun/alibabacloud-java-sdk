@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class FileRemovePermissionRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The identities with whom the file is shared.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("member_list")
     public java.util.List<FileRemovePermissionRequestMemberList> memberList;
@@ -54,6 +60,8 @@ public class FileRemovePermissionRequest extends TeaModel {
     public static class FileRemovePermissionRequestMemberList extends TeaModel {
         /**
          * <p>The identity to whom the permissions are granted, which is a user or a group.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("identity")
         public Identity identity;
@@ -86,6 +94,8 @@ public class FileRemovePermissionRequest extends TeaModel {
          * <p>SystemFileUploaderWithShareLink: uploader and sharer.</p>
          * <br>
          * <p>SystemFileViewer: viewer.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("role_id")
         public String roleId;

@@ -11,6 +11,7 @@ public class SearchFileRequest extends TeaModel {
     public String driveId;
 
     @NameInMap("fields")
+    @Deprecated
     public String fields;
 
     /**
@@ -22,7 +23,7 @@ public class SearchFileRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\</p>
      * <p>By default, this parameter is left empty.</p>
      */
     @NameInMap("marker")
@@ -41,7 +42,7 @@ public class SearchFileRequest extends TeaModel {
      * <p>*   ASC: sorts the results in ascending order.</p>
      * <p>*   DESC: sorts the results in descending order.</p>
      * <br>
-     * <p>You must specify this parameter in the \<field name> \<ASC or DESC> format. Separate multiple field names with commas (,). A preceding field has a higher priority than a following field. Examples:</p>
+     * <p>You must specify this parameter in the \\<field name> \\<ASC or DESC> format. Separate multiple field names with commas (,). A preceding field has a higher priority than a following field. Examples:</p>
      * <br>
      * <p>*   If you want to sort the results based on the file name in ascending order, set this parameter to "name ASC".</p>
      * <p>*   If you want to sort the results based on the creation time in descending order, set this parameter to "created_at DESC".</p>
@@ -52,6 +53,8 @@ public class SearchFileRequest extends TeaModel {
 
     /**
      * <p>The search condition. Fuzzy searches based on the file name or directory name are supported. The search condition can be up to 4,096 characters in length.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("query")
     public String query;

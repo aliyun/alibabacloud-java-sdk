@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
+     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
      */
     @NameInMap("limit")
     public Integer limit;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AuthorizeRequest extends TeaModel {
     /**
      * <p>The application ID returned when the application was created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("client_id")
     public String clientId;
@@ -25,18 +27,24 @@ public class AuthorizeRequest extends TeaModel {
      * <p>*   ram: logs on as an Alibaba Cloud Resource Access Management (RAM) user.</p>
      * <p>*   wechat: logs on by scanning a WeCom QR code.</p>
      * <p>*   wechat_app: logs on without authentication in WeCom.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("login_type")
     public String loginType;
 
     /**
      * <p>The callback URL specified when the application was created.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("redirect_uri")
     public String redirectUri;
 
     /**
      * <p>The format in which to return the response. Set the value to code.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("response_type")
     public String responseType;

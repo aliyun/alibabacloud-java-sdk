@@ -12,6 +12,8 @@ public class GetShareLinkTokenRequest extends TeaModel {
 
     /**
      * <p>The share ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("share_id")
     public String shareId;

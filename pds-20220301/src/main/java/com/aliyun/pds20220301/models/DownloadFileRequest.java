@@ -12,6 +12,8 @@ public class DownloadFileRequest extends TeaModel {
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;

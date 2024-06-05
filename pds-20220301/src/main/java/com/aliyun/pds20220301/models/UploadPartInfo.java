@@ -16,12 +16,18 @@ public class UploadPartInfo extends TeaModel {
     @NameInMap("parallel_sha256_ctx")
     public UploadPartInfoParallelSha256Ctx parallelSha256Ctx;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("part_number")
     public Integer partNumber;
 
     @NameInMap("part_size")
     public Long partSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("upload_url")
     public String uploadUrl;
 

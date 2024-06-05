@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UserTag extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Value")
     public String value;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("key")
     public String key;
 

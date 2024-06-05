@@ -14,6 +14,8 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends TeaModel {
 
     /**
      * <p>The unique identifier of the benefit package.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("benefit_pkg_id")
     public String benefitPkgId;
@@ -30,12 +32,16 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends TeaModel {
      * <p>The unique identifier of the entity.</p>
      * <br>
      * <p>If you call this operation to manage the benefits of a user, set this parameter to the ID of the user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("identity_id")
     public String identityId;
 
     /**
      * <p>The type of the entity. If you call this operation to manage the benefits of a user, set this parameter to user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("identity_type")
     public String identityType;

@@ -12,6 +12,8 @@ public class ListDeltaRequest extends TeaModel {
 
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;

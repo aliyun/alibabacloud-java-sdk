@@ -13,6 +13,9 @@ public class VideoPreviewPlayInfo extends TeaModel {
     @NameInMap("meta")
     public VideoPreviewPlayInfoMeta meta;
 
+    @NameInMap("offline_video_transcoding_list")
+    public java.util.List<VideoPreviewPlayInfoOfflineVideoTranscodingList> offlineVideoTranscodingList;
+
     public static VideoPreviewPlayInfo build(java.util.Map<String, ?> map) throws Exception {
         VideoPreviewPlayInfo self = new VideoPreviewPlayInfo();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class VideoPreviewPlayInfo extends TeaModel {
     }
     public VideoPreviewPlayInfoMeta getMeta() {
         return this.meta;
+    }
+
+    public VideoPreviewPlayInfo setOfflineVideoTranscodingList(java.util.List<VideoPreviewPlayInfoOfflineVideoTranscodingList> offlineVideoTranscodingList) {
+        this.offlineVideoTranscodingList = offlineVideoTranscodingList;
+        return this;
+    }
+    public java.util.List<VideoPreviewPlayInfoOfflineVideoTranscodingList> getOfflineVideoTranscodingList() {
+        return this.offlineVideoTranscodingList;
     }
 
     public static class VideoPreviewPlayInfoLiveTranscodingTaskList extends TeaModel {
@@ -131,6 +142,58 @@ public class VideoPreviewPlayInfo extends TeaModel {
         }
         public Long getWidth() {
             return this.width;
+        }
+
+    }
+
+    public static class VideoPreviewPlayInfoOfflineVideoTranscodingList extends TeaModel {
+        @NameInMap("keep_original_resolution")
+        public Boolean keepOriginalResolution;
+
+        @NameInMap("status")
+        public String status;
+
+        @NameInMap("template_id")
+        public String templateId;
+
+        @NameInMap("url")
+        public String url;
+
+        public static VideoPreviewPlayInfoOfflineVideoTranscodingList build(java.util.Map<String, ?> map) throws Exception {
+            VideoPreviewPlayInfoOfflineVideoTranscodingList self = new VideoPreviewPlayInfoOfflineVideoTranscodingList();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoPreviewPlayInfoOfflineVideoTranscodingList setKeepOriginalResolution(Boolean keepOriginalResolution) {
+            this.keepOriginalResolution = keepOriginalResolution;
+            return this;
+        }
+        public Boolean getKeepOriginalResolution() {
+            return this.keepOriginalResolution;
+        }
+
+        public VideoPreviewPlayInfoOfflineVideoTranscodingList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public VideoPreviewPlayInfoOfflineVideoTranscodingList setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public VideoPreviewPlayInfoOfflineVideoTranscodingList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }

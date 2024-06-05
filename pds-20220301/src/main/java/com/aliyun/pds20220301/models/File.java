@@ -43,8 +43,8 @@ public class File extends TeaModel {
     @NameInMap("hidden")
     public Boolean hidden;
 
-    @NameInMap("investigation_info")
-    public FileInvestigationInfo investigationInfo;
+    @NameInMap("image_media_metadata")
+    public ImageMediaMetadata imageMediaMetadata;
 
     @NameInMap("labels")
     public java.util.List<String> labels;
@@ -206,12 +206,12 @@ public class File extends TeaModel {
         return this.hidden;
     }
 
-    public File setInvestigationInfo(FileInvestigationInfo investigationInfo) {
-        this.investigationInfo = investigationInfo;
+    public File setImageMediaMetadata(ImageMediaMetadata imageMediaMetadata) {
+        this.imageMediaMetadata = imageMediaMetadata;
         return this;
     }
-    public FileInvestigationInfo getInvestigationInfo() {
-        return this.investigationInfo;
+    public ImageMediaMetadata getImageMediaMetadata() {
+        return this.imageMediaMetadata;
     }
 
     public File setLabels(java.util.List<String> labels) {
@@ -348,36 +348,6 @@ public class File extends TeaModel {
     }
     public VideoMediaMetadata getVideoMediaMetadata() {
         return this.videoMediaMetadata;
-    }
-
-    public static class FileInvestigationInfo extends TeaModel {
-        @NameInMap("status")
-        public Long status;
-
-        @NameInMap("suggestion")
-        public String suggestion;
-
-        public static FileInvestigationInfo build(java.util.Map<String, ?> map) throws Exception {
-            FileInvestigationInfo self = new FileInvestigationInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public FileInvestigationInfo setStatus(Long status) {
-            this.status = status;
-            return this;
-        }
-        public Long getStatus() {
-            return this.status;
-        }
-
-        public FileInvestigationInfo setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
     }
 
 }

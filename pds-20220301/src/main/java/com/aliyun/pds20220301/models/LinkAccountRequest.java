@@ -12,6 +12,8 @@ public class LinkAccountRequest extends TeaModel {
 
     /**
      * <p>The unique identifier of the account, such as a mobile number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("identity")
     public String identity;
@@ -26,12 +28,16 @@ public class LinkAccountRequest extends TeaModel {
      * <p>*   wechat: a WeCom account.</p>
      * <p>*   ldap: a Lightweight Directory Access Protocol (LDAP) account.</p>
      * <p>*   custom: a custom account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>The ID of the user with which you want to associate an account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("user_id")
     public String userId;

@@ -19,6 +19,9 @@ public class SearchStoriesRequest extends TeaModel {
     @Deprecated
     public String customLabels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 

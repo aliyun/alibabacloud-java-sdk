@@ -16,6 +16,9 @@ public class ListMyGroupDriveResponseBody extends TeaModel {
     @NameInMap("next_marker")
     public String nextMarker;
 
+    @NameInMap("root_group_drive")
+    public Drive rootGroupDrive;
+
     public static ListMyGroupDriveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMyGroupDriveResponseBody self = new ListMyGroupDriveResponseBody();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class ListMyGroupDriveResponseBody extends TeaModel {
     }
     public String getNextMarker() {
         return this.nextMarker;
+    }
+
+    public ListMyGroupDriveResponseBody setRootGroupDrive(Drive rootGroupDrive) {
+        this.rootGroupDrive = rootGroupDrive;
+        return this;
+    }
+    public Drive getRootGroupDrive() {
+        return this.rootGroupDrive;
     }
 
 }

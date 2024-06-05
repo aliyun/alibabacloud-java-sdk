@@ -28,7 +28,7 @@ public class BatchResponseBody extends TeaModel {
          * <p>The response parameters of a child request. For more information, see the topic of the corresponding child request.</p>
          */
         @NameInMap("body")
-        public java.util.Map<String, String> body;
+        public java.util.Map<String, ?> body;
 
         /**
          * <p>The ID of the child request. The ID is used to associate a child request with a response.</p>
@@ -47,11 +47,11 @@ public class BatchResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BatchResponseBodyResponses setBody(java.util.Map<String, String> body) {
+        public BatchResponseBodyResponses setBody(java.util.Map<String, ?> body) {
             this.body = body;
             return this;
         }
-        public java.util.Map<String, String> getBody() {
+        public java.util.Map<String, ?> getBody() {
             return this.body;
         }
 

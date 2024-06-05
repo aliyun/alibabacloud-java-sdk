@@ -115,6 +115,8 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The user ID. The ID can be up to 64 characters in length and cannot contain number signs (#).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("user_id")
     public String userId;

@@ -55,6 +55,9 @@ public class ShareLink extends TeaModel {
     @NameInMap("save_count")
     public Long saveCount;
 
+    @NameInMap("save_download_limit")
+    public Long saveDownloadLimit;
+
     @NameInMap("save_limit")
     public Long saveLimit;
 
@@ -218,6 +221,14 @@ public class ShareLink extends TeaModel {
     }
     public Long getSaveCount() {
         return this.saveCount;
+    }
+
+    public ShareLink setSaveDownloadLimit(Long saveDownloadLimit) {
+        this.saveDownloadLimit = saveDownloadLimit;
+        return this;
+    }
+    public Long getSaveDownloadLimit() {
+        return this.saveDownloadLimit;
     }
 
     public ShareLink setSaveLimit(Long saveLimit) {

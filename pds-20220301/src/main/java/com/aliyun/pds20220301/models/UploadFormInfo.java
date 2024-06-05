@@ -7,6 +7,12 @@ public class UploadFormInfo extends TeaModel {
     @NameInMap("bucket_name")
     public String bucketName;
 
+    @NameInMap("endpoint")
+    public String endpoint;
+
+    @NameInMap("form_data")
+    public java.util.Map<String, String> formData;
+
     @NameInMap("object_key")
     public String objectKey;
 
@@ -36,6 +42,22 @@ public class UploadFormInfo extends TeaModel {
     }
     public String getBucketName() {
         return this.bucketName;
+    }
+
+    public UploadFormInfo setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public String getEndpoint() {
+        return this.endpoint;
+    }
+
+    public UploadFormInfo setFormData(java.util.Map<String, String> formData) {
+        this.formData = formData;
+        return this;
+    }
+    public java.util.Map<String, String> getFormData() {
+        return this.formData;
     }
 
     public UploadFormInfo setObjectKey(String objectKey) {
