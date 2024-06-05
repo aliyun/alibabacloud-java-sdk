@@ -4,12 +4,18 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class AddStoryFilesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
     @NameInMap("files")
     public java.util.List<AddStoryFilesRequestFiles> files;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_id")
     public String storyId;
 
@@ -43,6 +49,9 @@ public class AddStoryFilesRequest extends TeaModel {
     }
 
     public static class AddStoryFilesRequestFiles extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("file_id")
         public String fileId;
 

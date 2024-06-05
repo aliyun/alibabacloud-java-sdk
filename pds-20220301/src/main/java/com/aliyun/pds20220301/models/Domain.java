@@ -7,6 +7,9 @@ public class Domain extends TeaModel {
     @NameInMap("created_at")
     public String createdAt;
 
+    @NameInMap("data_hash_name")
+    public String dataHashName;
+
     @NameInMap("description")
     public String description;
 
@@ -60,6 +63,14 @@ public class Domain extends TeaModel {
     }
     public String getCreatedAt() {
         return this.createdAt;
+    }
+
+    public Domain setDataHashName(String dataHashName) {
+        this.dataHashName = dataHashName;
+        return this;
+    }
+    public String getDataHashName() {
+        return this.dataHashName;
     }
 
     public Domain setDescription(String description) {

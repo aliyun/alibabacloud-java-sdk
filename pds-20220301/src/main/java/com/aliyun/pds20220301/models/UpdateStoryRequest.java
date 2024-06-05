@@ -11,9 +11,15 @@ public class UpdateStoryRequest extends TeaModel {
     @Deprecated
     public java.util.Map<String, String> customLabels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_id")
     public String storyId;
 

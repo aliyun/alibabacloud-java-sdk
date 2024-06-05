@@ -11,6 +11,9 @@ public class CreateStoryRequest extends TeaModel {
     @Deprecated
     public java.util.Map<String, String> customLabels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
@@ -35,6 +38,9 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("story_sub_type")
     public String storySubType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_type")
     public String storyType;
 

@@ -8,21 +8,39 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     @Deprecated
     public java.util.Map<String, String> customLabels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_cover")
     public CreateCustomizedStoryRequestStoryCover storyCover;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_files")
     public java.util.List<CreateCustomizedStoryRequestStoryFiles> storyFiles;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_name")
     public String storyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_sub_type")
     public String storySubType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("story_type")
     public String storyType;
 
@@ -88,6 +106,9 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     }
 
     public static class CreateCustomizedStoryRequestStoryCover extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("file_id")
         public String fileId;
 
@@ -118,6 +139,9 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     }
 
     public static class CreateCustomizedStoryRequestStoryFiles extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("file_id")
         public String fileId;
 

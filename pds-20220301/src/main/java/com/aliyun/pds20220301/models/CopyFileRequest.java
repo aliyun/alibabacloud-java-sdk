@@ -18,6 +18,8 @@ public class CopyFileRequest extends TeaModel {
 
     /**
      * <p>The file ID or folder ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;
@@ -36,6 +38,8 @@ public class CopyFileRequest extends TeaModel {
 
     /**
      * <p>The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("to_parent_file_id")
     public String toParentFileId;

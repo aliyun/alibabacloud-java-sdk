@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetDriveRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;

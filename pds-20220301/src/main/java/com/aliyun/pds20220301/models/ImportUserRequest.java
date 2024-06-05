@@ -20,6 +20,8 @@ public class ImportUserRequest extends TeaModel {
      * <p>*   wechat: WeCom account.</p>
      * <p>*   ldap: Lightweight Directory Access Protocol (LDAP) account.</p>
      * <p>*   custom: custom account.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("authentication_type")
     public String authenticationType;
@@ -46,12 +48,16 @@ public class ImportUserRequest extends TeaModel {
 
     /**
      * <p>The unique identifier.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("identity")
     public String identity;
 
     /**
      * <p>The nickname of the user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("nick_name")
     public String nickName;

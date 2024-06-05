@@ -12,6 +12,8 @@ public class TokenRequest extends TeaModel {
 
     /**
      * <p>The AppId of the application that is created in the Drive and Photo Service console.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("client_id")
     public String clientId;
@@ -36,6 +38,8 @@ public class TokenRequest extends TeaModel {
      * <p>refresh_token: generates an access token by using the refresh token that is returned after the authorization process is complete.</p>
      * <br>
      * <p>urn:ietf:params:oauth:grant-type:jwt-bearer: generates an access token by using a JWT assertion.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("grant_type")
     public String grantType;

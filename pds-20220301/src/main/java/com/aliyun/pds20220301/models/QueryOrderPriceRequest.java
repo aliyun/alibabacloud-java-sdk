@@ -4,27 +4,51 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderPriceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("instance_id")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("order_type")
     public String orderType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("package")
     public String _package;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period")
     public Long period;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("period_unit")
     public String periodUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("total_size")
     public Long totalSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_count")
     public Long userCount;
 

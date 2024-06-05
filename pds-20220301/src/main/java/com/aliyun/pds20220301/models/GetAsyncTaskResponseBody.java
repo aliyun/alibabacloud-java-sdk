@@ -29,9 +29,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     public String createdAt;
 
     /**
-     * <p>**</p>
-     * <br>
-     * <p>**Warning **This parameter is no longer used. We recommend that you use error_code instead.</p>
+     * <p><warning>This parameter is no longer used. We recommend that you use error_code instead.</warning></p>
      * <br>
      * <p>The error code returned if the asynchronous task failed.</p>
      */
@@ -60,9 +58,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     public String finishedAt;
 
     /**
-     * <p>**</p>
-     * <br>
-     * <p>**Warning **This parameter is no longer used. We recommend that you use error_message instead.</p>
+     * <p><warning>This parameter is no longer used. We recommend that you use error_message instead.</warning></p>
      * <br>
      * <p>The error message returned if the asynchronous task failed.</p>
      */
@@ -90,9 +86,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>**</p>
-     * <br>
-     * <p>**Warning **This parameter is no longer used. We recommend that you use state instead.</p>
+     * <p><warning>This parameter is no longer used. We recommend that you use state instead.</warning></p>
      * <br>
      * <p>The state of the task. Valid values:</p>
      * <br>

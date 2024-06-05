@@ -8,6 +8,8 @@ public class BatchRequest extends TeaModel {
      * <p>The child requests.</p>
      * <br>
      * <p>The number of child requests. Valid value: 1 to 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("requests")
     public java.util.List<BatchRequestRequests> requests;
@@ -66,6 +68,8 @@ public class BatchRequest extends TeaModel {
      * <p>    <!-- --></p>
      * <br>
      * <p>    <!-- --></p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("resource")
     public String resource;
@@ -98,7 +102,7 @@ public class BatchRequest extends TeaModel {
          * <p>Before you specify the request body, you must specify a header by using Content-Type. Content-Type can only be set to application/json.</p>
          */
         @NameInMap("body")
-        public java.util.Map<String, String> body;
+        public java.util.Map<String, ?> body;
 
         /**
          * <p>The header of a child request, which indicates the type of the data specified in the request body.</p>
@@ -108,6 +112,8 @@ public class BatchRequest extends TeaModel {
 
         /**
          * <p>The ID of the child request. The ID is used to associate a child request with a response. The ID of a child request must be unique.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("id")
         public String id;
@@ -120,6 +126,8 @@ public class BatchRequest extends TeaModel {
          * <p>*   PUT</p>
          * <p>*   DELETE</p>
          * <p>*   HEAD</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("method")
         public String method;
@@ -149,6 +157,8 @@ public class BatchRequest extends TeaModel {
          * <p>*   /share_link/get: queries the information about a share.</p>
          * <p>*   /share_link/get_share_token: queries an access token of a share.</p>
          * <p>*   /async_task/get: queries the information about an asynchronous task.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("url")
         public String url;
@@ -158,11 +168,11 @@ public class BatchRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BatchRequestRequests setBody(java.util.Map<String, String> body) {
+        public BatchRequestRequests setBody(java.util.Map<String, ?> body) {
             this.body = body;
             return this;
         }
-        public java.util.Map<String, String> getBody() {
+        public java.util.Map<String, ?> getBody() {
             return this.body;
         }
 

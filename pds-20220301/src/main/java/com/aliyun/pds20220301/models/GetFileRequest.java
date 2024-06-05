@@ -13,7 +13,7 @@ public class GetFileRequest extends TeaModel {
     /**
      * <p>The fields to return.</p>
      * <br>
-     * <p>1.  If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.</p>
+     * <p>1.  If this parameter is set to \\*, all fields of the file except the fields that must be specified are returned.</p>
      * <p>2.  If only specific fields are required, you can specify the following fields: url, thumbnail, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,thumbnail.</p>
      * <p>3.  The investigation_info field is returned only if you specify this field.</p>
      * <br>
@@ -24,6 +24,8 @@ public class GetFileRequest extends TeaModel {
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;

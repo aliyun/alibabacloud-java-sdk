@@ -4,6 +4,12 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateShareLinkRequest extends TeaModel {
+    @NameInMap("creatable")
+    public Boolean creatable;
+
+    @NameInMap("creatable_file_id_list")
+    public java.util.List<String> creatableFileIdList;
+
     /**
      * <p>The description of the share. The description must be 0 to 1,024 characters in length.</p>
      */
@@ -36,6 +42,8 @@ public class CreateShareLinkRequest extends TeaModel {
 
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
@@ -51,9 +59,6 @@ public class CreateShareLinkRequest extends TeaModel {
      */
     @NameInMap("file_id_list")
     public java.util.List<String> fileIdList;
-
-    @NameInMap("office_editable")
-    public Boolean officeEditable;
 
     /**
      * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
@@ -94,6 +99,22 @@ public class CreateShareLinkRequest extends TeaModel {
     public static CreateShareLinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateShareLinkRequest self = new CreateShareLinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateShareLinkRequest setCreatable(Boolean creatable) {
+        this.creatable = creatable;
+        return this;
+    }
+    public Boolean getCreatable() {
+        return this.creatable;
+    }
+
+    public CreateShareLinkRequest setCreatableFileIdList(java.util.List<String> creatableFileIdList) {
+        this.creatableFileIdList = creatableFileIdList;
+        return this;
+    }
+    public java.util.List<String> getCreatableFileIdList() {
+        return this.creatableFileIdList;
     }
 
     public CreateShareLinkRequest setDescription(String description) {
@@ -158,14 +179,6 @@ public class CreateShareLinkRequest extends TeaModel {
     }
     public java.util.List<String> getFileIdList() {
         return this.fileIdList;
-    }
-
-    public CreateShareLinkRequest setOfficeEditable(Boolean officeEditable) {
-        this.officeEditable = officeEditable;
-        return this;
-    }
-    public Boolean getOfficeEditable() {
-        return this.officeEditable;
     }
 
     public CreateShareLinkRequest setPreviewLimit(Long previewLimit) {

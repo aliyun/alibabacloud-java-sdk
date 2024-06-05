@@ -4,12 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class RemoveFaceGroupFileRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("face_group_id")
     public String faceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 

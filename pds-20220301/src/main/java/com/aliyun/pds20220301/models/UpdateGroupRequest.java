@@ -12,6 +12,8 @@ public class UpdateGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the group that you want to modify.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("group_id")
     public String groupId;

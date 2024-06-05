@@ -9,7 +9,7 @@ public class MoveFileRequest extends TeaModel {
      * <br>
      * <p>ignore: allows you to move the file by using the same name as an existing file in the destination directory.</p>
      * <br>
-     * <p>auto_rename: automatically renames the file that has the same name exists in the destination directory. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.</p>
+     * <p>auto_rename: automatically renames the file that has the same name exists in the destination directory. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
      * <br>
      * <p>refuse: does not move the file that you want to move but returns the information about the file that has the same name in the destination directory.</p>
      * <br>
@@ -20,18 +20,24 @@ public class MoveFileRequest extends TeaModel {
 
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The ID of the destination parent directory to which you want to move a file or folder. If you want to move a file or folder to the root directory, set this parameter to root.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("to_parent_file_id")
     public String toParentFileId;

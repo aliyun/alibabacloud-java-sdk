@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class AssignRoleRequest extends TeaModel {
     /**
      * <p>The unique identifier of a user. The group administrator role can only be assigned to a user.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("identity")
     public Identity identity;
 
     /**
      * <p>The ID of the resource that the role can manage. You can only set this parameter to the ID of a group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("manage_resource_id")
     public String manageResourceId;
 
     /**
      * <p>The type of the resource that the role can manage. Valid value: RT_Group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("manage_resource_type")
     public String manageResourceType;
 
     /**
      * <p>The ID of the role that is assigned to a user. Valid value: SystemGroupAdmin.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("role_id")
     public String roleId;

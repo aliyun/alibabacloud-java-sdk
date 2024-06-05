@@ -22,6 +22,9 @@ public class ListDomainsRequest extends TeaModel {
     @NameInMap("parent_domain_id")
     public String parentDomainId;
 
+    @NameInMap("service_code")
+    public String serviceCode;
+
     public static ListDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsRequest self = new ListDomainsRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class ListDomainsRequest extends TeaModel {
     }
     public String getParentDomainId() {
         return this.parentDomainId;
+    }
+
+    public ListDomainsRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
     }
 
 }

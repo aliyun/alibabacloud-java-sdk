@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class GetUploadUrlRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The information about the file parts.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("part_info_list")
     public java.util.List<GetUploadUrlRequestPartInfoList> partInfoList;
@@ -30,6 +36,8 @@ public class GetUploadUrlRequest extends TeaModel {
 
     /**
      * <p>The ID of the upload task.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("upload_id")
     public String uploadId;
@@ -115,6 +123,36 @@ public class GetUploadUrlRequest extends TeaModel {
 
     }
 
+    public static class GetUploadUrlRequestPartInfoListParallelSha256Ctx extends TeaModel {
+        @NameInMap("h")
+        public java.util.List<Long> h;
+
+        @NameInMap("part_offset")
+        public Long partOffset;
+
+        public static GetUploadUrlRequestPartInfoListParallelSha256Ctx build(java.util.Map<String, ?> map) throws Exception {
+            GetUploadUrlRequestPartInfoListParallelSha256Ctx self = new GetUploadUrlRequestPartInfoListParallelSha256Ctx();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUploadUrlRequestPartInfoListParallelSha256Ctx setH(java.util.List<Long> h) {
+            this.h = h;
+            return this;
+        }
+        public java.util.List<Long> getH() {
+            return this.h;
+        }
+
+        public GetUploadUrlRequestPartInfoListParallelSha256Ctx setPartOffset(Long partOffset) {
+            this.partOffset = partOffset;
+            return this;
+        }
+        public Long getPartOffset() {
+            return this.partOffset;
+        }
+
+    }
+
     public static class GetUploadUrlRequestPartInfoList extends TeaModel {
         @NameInMap("content_md5")
         public String contentMd5;
@@ -127,6 +165,9 @@ public class GetUploadUrlRequest extends TeaModel {
          */
         @NameInMap("parallel_sha1_ctx")
         public GetUploadUrlRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
+
+        @NameInMap("parallel_sha256_ctx")
+        public GetUploadUrlRequestPartInfoListParallelSha256Ctx parallelSha256Ctx;
 
         /**
          * <p>The serial number of a part.</p>
@@ -161,6 +202,14 @@ public class GetUploadUrlRequest extends TeaModel {
         }
         public GetUploadUrlRequestPartInfoListParallelSha1Ctx getParallelSha1Ctx() {
             return this.parallelSha1Ctx;
+        }
+
+        public GetUploadUrlRequestPartInfoList setParallelSha256Ctx(GetUploadUrlRequestPartInfoListParallelSha256Ctx parallelSha256Ctx) {
+            this.parallelSha256Ctx = parallelSha256Ctx;
+            return this;
+        }
+        public GetUploadUrlRequestPartInfoListParallelSha256Ctx getParallelSha256Ctx() {
+            return this.parallelSha256Ctx;
         }
 
         public GetUploadUrlRequestPartInfoList setPartNumber(Integer partNumber) {

@@ -4,27 +4,51 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CdnFileDownloadCallbackInfo extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("bucket")
     public String bucket;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("expire")
     public Long expire;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("object")
     public String object;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("token")
     public String token;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
