@@ -80,7 +80,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code returned after backend servers pass health checks.</p>
          * <br>
-         * <p>Valid values: **HTTP\_2xx**, **HTTP\_3xx**, **HTTP\_4xx**, and **HTTP\_5xx**. Multiple status codes are separated by commas (,).</p>
+         * <p>Valid values: **HTTP_2xx**, **HTTP_3xx**, **HTTP_4xx**, and **HTTP_5xx**. Multiple status codes are separated by commas (,).</p>
          * <br>
          * <p>> This value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.</p>
          */
@@ -356,7 +356,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code returned after backend servers pass health checks.</p>
          * <br>
-         * <p>Valid values: **HTTP\_2xx**, **HTTP\_3xx**, **HTTP\_4xx**, and **HTTP\_5xx**. Multiple status codes are separated by commas (,).</p>
+         * <p>Valid values: **HTTP_2xx**, **HTTP_3xx**, **HTTP_4xx**, and **HTTP_5xx**. Multiple status codes are separated by commas (,).</p>
          * <br>
          * <p>> A value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.</p>
          */

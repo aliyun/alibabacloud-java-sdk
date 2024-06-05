@@ -104,7 +104,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * <p>The name of the ALB instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
@@ -173,7 +173,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * <p>The zone ID of the ALB instance.</p>
      * <br>
-     * <p>You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.</p>
+     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the zones of the ALB instance.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappings> zoneMappings;
@@ -474,7 +474,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The reason why the configuration read-only mode was enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         * <p>The reason why the configuration read-only mode was enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
          * <br>
          * <p>This parameter is valid only if you set the **ModificationProtectionStatus** parameter to **ConsoleProtection**.</p>
          */
@@ -506,7 +506,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
     public static class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig extends TeaModel {
         /**
-         * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
          * <br>
          * <p>This parameter is valid only if **ModificationProtectionStatus** is set to **ConsoleProtection**.</p>
          */
@@ -587,7 +587,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the zone where the ALB instance was deployed.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.</p>
+         * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the zones of the ALB instance.</p>
          */
         @NameInMap("Address")
         public String address;

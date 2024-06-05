@@ -29,6 +29,8 @@ public class CreateAScriptsRequest extends TeaModel {
 
     /**
      * <p>The listener ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -74,7 +76,9 @@ public class CreateAScriptsRequest extends TeaModel {
         /**
          * <p>The name of the AScript rule.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AScriptName")
         public String AScriptName;
@@ -90,6 +94,8 @@ public class CreateAScriptsRequest extends TeaModel {
 
         /**
          * <p>The content of the AScript rule.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ScriptContent")
         public String scriptContent;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class RemoveEntriesFromAclRequest extends TeaModel {
     /**
      * <p>The ACL ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -31,6 +33,8 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
 
     /**
      * <p>The entries that you want to remove. You can remove up to 20 entries in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Entries")
     public java.util.List<String> entries;

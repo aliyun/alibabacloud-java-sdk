@@ -25,6 +25,8 @@ public class StartShiftLoadBalancerZonesRequest extends TeaModel {
 
     /**
      * <p>The ALB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,6 +35,8 @@ public class StartShiftLoadBalancerZonesRequest extends TeaModel {
      * <p>The mappings between zones and vSwitches.</p>
      * <br>
      * <p>>  You can remove only one zone in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<StartShiftLoadBalancerZonesRequestZoneMappings> zoneMappings;
@@ -77,12 +81,16 @@ public class StartShiftLoadBalancerZonesRequest extends TeaModel {
     public static class StartShiftLoadBalancerZonesRequestZoneMappings extends TeaModel {
         /**
          * <p>The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The zone ID. You can call the [DescribeZones](~~189196~~) operation to query the most recent zone list.</p>
+         * <p>The zone ID. You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the most recent zone list.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

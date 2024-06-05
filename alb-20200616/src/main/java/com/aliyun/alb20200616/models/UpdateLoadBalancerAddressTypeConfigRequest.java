@@ -9,6 +9,8 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
      * <br>
      * <p>*   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
      * <p>*   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the virtual private cloud (VPC) where the ALB instance is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddressType")
     public String addressType;
@@ -34,6 +36,8 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
 
     /**
      * <p>The ALB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -107,7 +111,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         /**
          * <p>The ID of the zone where the ALB instance is deployed. You can specify up to 10 zone IDs.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~189196~~) operation to query the most recent zone list.</p>
+         * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the most recent zone list.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

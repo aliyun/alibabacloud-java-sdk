@@ -45,12 +45,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the forwarding rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
-     * <p>The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -229,7 +231,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The HTTP status code in the response. Valid values: **HTTP\_2xx**, **HTTP\_4xx**, and **HTTP\_5xx**. **x** must be a digit.</p>
+         * <p>The HTTP status code in the response. Valid values: **HTTP_2xx**, **HTTP_4xx**, and **HTTP_5xx**. **x** must be a digit.</p>
          */
         @NameInMap("HttpCode")
         public String httpCode;
@@ -384,7 +386,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public Boolean coverEnabled;
 
         /**
-         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.</p>
+         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.</p>
          * <br>
          * <p>> You cannot specify the following header keys (case-insensitive): `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`.</p>
          */
@@ -402,9 +404,9 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <p>    *   **SLBId**: the ID of the ALB instance.</p>
          * <p>    *   **SLBPort**: the listening port.</p>
          * <br>
-         * <p>*   If **ValueType** is set to **UserDefined**, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\*) and question marks (?) as wildcards. The value cannot start or end with a space character.</p>
+         * <p>*   If **ValueType** is set to **UserDefined**, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\\*) and question marks (?) as wildcards. The value cannot start or end with a space character.</p>
          * <br>
-         * <p>*   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-).</p>
+         * <p>*   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-).</p>
          */
         @NameInMap("Value")
         public String value;
@@ -466,11 +468,11 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <br>
          * <p>*   Limits on the value:</p>
          * <br>
-         * <p>    *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcards.</p>
+         * <p>    *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\\*) and question marks (?) can be used as wildcards.</p>
          * <p>    *   The hostname must contain at least one period (.) but cannot start or end with a period (.).</p>
          * <p>    *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).</p>
          * <p>    *   The domain labels cannot start or end with a hyphen (-).</p>
-         * <p>    *   You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
+         * <p>    *   You can use asterisks (\\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
          */
         @NameInMap("Host")
         public String host;
@@ -484,12 +486,12 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         /**
          * <p>The path to which requests are redirected. Valid values:</p>
          * <br>
-         * <p>*   Default value: **${path}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * <p>*   Default value: **${path}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
          * <br>
          * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
          * <br>
          * <p>    *   The value is 1 to 128 characters in length.</p>
-         * <p>    *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\*) and question marks (?) as wildcards.</p>
+         * <p>    *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\\*) and question marks (?) as wildcards.</p>
          */
         @NameInMap("Path")
         public String path;
@@ -517,12 +519,12 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         /**
          * <p>The query string of the URL to which requests are redirected. Valid values:</p>
          * <br>
-         * <p>*   Default value: **${query}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * <p>*   Default value: **${query}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
          * <br>
          * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
          * <br>
          * <p>    *   The value must be 1 to 128 characters in length.</p>
-         * <p>    *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.</p>
+         * <p>    *   It can contain printable characters, except space characters, the special characters `# [ ] { } \\ | < > &`, and uppercase letters.</p>
          */
         @NameInMap("Query")
         public String query;
@@ -609,10 +611,10 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <br>
          * <p>*   If you want to specify a custom value, make sure that the following requirements are met:</p>
          * <br>
-         * <p>    *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\*) and question marks (?) as wildcard characters.</p>
+         * <p>    *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\\*) and question marks (?) as wildcard characters.</p>
          * <p>    *   The hostname must contain at least one period (.) but cannot start or end with a period (.).</p>
          * <p>    *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).</p>
-         * <p>    *   The domain labels cannot start or end with a hyphen (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
+         * <p>    *   The domain labels cannot start or end with a hyphen (-). You can use asterisks (\\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
          */
         @NameInMap("Host")
         public String host;
@@ -620,12 +622,12 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         /**
          * <p>The path to which requests are redirected. Valid values:</p>
          * <br>
-         * <p>*   Default value: **${path}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * <p>*   Default value: **${path}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
          * <br>
          * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
          * <br>
          * <p>    *   The value is 1 to 128 characters in length.</p>
-         * <p>    *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\*) and question marks (?) as wildcards.</p>
+         * <p>    *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\\*) and question marks (?) as wildcards.</p>
          */
         @NameInMap("Path")
         public String path;
@@ -633,12 +635,12 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         /**
          * <p>The query string of the URL to which requests are distributed. Valid values:</p>
          * <br>
-         * <p>*   Default value: **${query}**. \*\*${host}**, **${protocol}**, and **${port}\*\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * <p>*   Default value: **${query}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
          * <br>
          * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
          * <br>
          * <p>    *   The value must be 1 to 128 characters in length.</p>
-         * <p>    *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.</p>
+         * <p>    *   It can contain printable characters, except space characters, the special characters `# [ ] { } \\ | < > &`, and uppercase letters.</p>
          */
         @NameInMap("Query")
         public String query;
@@ -971,13 +973,13 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues extends TeaModel {
         /**
-         * <p>The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.</p>
+         * <p>The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the cookie. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.</p>
+         * <p>The value of the cookie. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1029,7 +1031,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsHeaderConfig extends TeaModel {
         /**
-         * <p>The key of the header. The key must be 1 to 40 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). You cannot specify Cookie or Host.</p>
+         * <p>The key of the header. The key must be 1 to 40 characters in length and can contain letters, digits, hyphens (-), and underscores (_). You cannot specify Cookie or Host.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -1131,13 +1133,13 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues extends TeaModel {
         /**
-         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.</p>
+         * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1192,7 +1194,7 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          * <p>The key of the header.</p>
          * <br>
          * <p>*   The key must be 1 to 40 characters in length.</p>
-         * <p>*   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).</p>
+         * <p>*   It can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
          * <p>*   Cookie and Host are not supported.</p>
          */
         @NameInMap("Key")

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteAclRequest extends TeaModel {
     /**
      * <p>The ACL ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;

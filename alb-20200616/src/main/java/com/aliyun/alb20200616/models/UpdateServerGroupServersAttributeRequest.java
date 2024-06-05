@@ -25,12 +25,16 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
 
     /**
      * <p>The server group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
     /**
      * <p>The backend servers that you want to add to the server group. You can specify up to 40 servers in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
     public java.util.List<UpdateServerGroupServersAttributeRequestServers> servers;
@@ -74,7 +78,7 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
 
     public static class UpdateServerGroupServersAttributeRequestServers extends TeaModel {
         /**
-         * <p>The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.</p>
+         * <p>The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -93,6 +97,8 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
          * <p>*   If **ServerType** is set to **Ecs**, **Eni**, or **Eci**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance.</p>
          * <p>*   If **ServerType** is set to **Ip**, set the ServerId parameter to an IP address.</p>
          * <p>*   If **ServerType** is set to **Fc**, set the ServerId parameter to the Alibaba Cloud Resource Name (ARN) of a function.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -111,6 +117,8 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
          * <p>*   **Eci**</p>
          * <p>*   **Ip**</p>
          * <p>*   **Fc**</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerType")
         public String serverType;

@@ -38,6 +38,8 @@ public class ListTagValuesRequest extends TeaModel {
 
     /**
      * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TagKey")
     public String tagKey;

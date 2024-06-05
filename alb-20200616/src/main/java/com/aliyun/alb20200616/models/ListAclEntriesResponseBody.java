@@ -84,7 +84,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
 
     public static class ListAclEntriesResponseBodyAclEntries extends TeaModel {
         /**
-         * <p>The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+         * <p>The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
          */
         @NameInMap("Description")
         public String description;

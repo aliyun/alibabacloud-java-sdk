@@ -99,7 +99,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     /**
      * <p>The ID of the zone where the ALB instance is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeZones](~~189196~~) operation to query zones.</p>
+     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query zones.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

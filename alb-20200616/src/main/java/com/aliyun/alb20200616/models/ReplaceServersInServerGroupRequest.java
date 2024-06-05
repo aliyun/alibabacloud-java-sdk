@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ReplaceServersInServerGroupRequest extends TeaModel {
     /**
      * <p>The backend servers that you want to add to the server group. You can specify up to 40 backend servers in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddedServers")
     public java.util.List<ReplaceServersInServerGroupRequestAddedServers> addedServers;
@@ -31,6 +33,8 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
 
     /**
      * <p>The backend servers that you want to remove.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemovedServers")
     public java.util.List<ReplaceServersInServerGroupRequestRemovedServers> removedServers;
@@ -39,6 +43,8 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
      * <p>The ID of the server group.</p>
      * <br>
      * <p>> You cannot perform this operation on a server group of the Function type.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
@@ -90,7 +96,7 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
 
     public static class ReplaceServersInServerGroupRequestAddedServers extends TeaModel {
         /**
-         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.</p>
+         * <p>The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -107,7 +113,9 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
          * <p>*   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.</p>
          * <p>*   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.</p>
          * <br>
-         * <p>> You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <p>> You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -204,7 +212,9 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
          * <p>*   If the server group type is **Instance**, set the ServerId parameter to the ID of an ECS instance, an ENI, or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.</p>
          * <p>*   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.</p>
          * <br>
-         * <p>> You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <p>> You cannot perform this operation on a server group of the Function type. You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerId")
         public String serverId;

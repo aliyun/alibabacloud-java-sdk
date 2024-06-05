@@ -25,12 +25,16 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
 
     /**
      * <p>The server group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
     /**
      * <p>The backend servers that you want to remove from the server group. You can specify up to 40 backend servers in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
     public java.util.List<RemoveServersFromServerGroupRequestServers> servers;
@@ -88,7 +92,9 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
          * <p>*   If the server group type is **Ip**, set the ServerId parameter to an IP address specified in the server group.</p>
          * <p>*   If the server group type is **Fc**, set the ServerId parameter to the ARN of a function specified in the server group.</p>
          * <br>
-         * <p>> You can call the [ListServerGroups](~~213627~~) operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <p>> You can call the [ListServerGroups](https://help.aliyun.com/document_detail/213627.html) operation to query information about the server group type so that you can set ServerId to a proper value.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
@@ -107,6 +113,8 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
          * <p>*   **Eci**</p>
          * <p>*   **Ip**</p>
          * <p>*   **Fc**</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerType")
         public String serverType;

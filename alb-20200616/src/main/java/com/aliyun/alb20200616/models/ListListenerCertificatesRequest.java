@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
+    @NameInMap("CertificateIds")
+    public java.util.List<String> certificateIds;
+
     /**
      * <p>The type of the certificate. Valid values: **Ca** and **Server**.</p>
      */
@@ -12,6 +15,8 @@ public class ListListenerCertificatesRequest extends TeaModel {
 
     /**
      * <p>The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -34,6 +39,14 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public static ListListenerCertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListListenerCertificatesRequest self = new ListListenerCertificatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListListenerCertificatesRequest setCertificateIds(java.util.List<String> certificateIds) {
+        this.certificateIds = certificateIds;
+        return this;
+    }
+    public java.util.List<String> getCertificateIds() {
+        return this.certificateIds;
     }
 
     public ListListenerCertificatesRequest setCertificateType(String certificateType) {

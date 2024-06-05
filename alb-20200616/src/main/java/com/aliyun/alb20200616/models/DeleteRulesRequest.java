@@ -25,6 +25,8 @@ public class DeleteRulesRequest extends TeaModel {
 
     /**
      * <p>The ID of the forwarding rule. Valid values of N: **1** to **5**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RuleIds")
     public java.util.List<String> ruleIds;

@@ -29,12 +29,16 @@ public class UpdateLoadBalancerEditionRequest extends TeaModel {
      * <p>*   **Basic**: basic</p>
      * <p>*   **Standard**: standard</p>
      * <p>*   **StandardWithWaf**: WAF-enabled</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerEdition")
     public String loadBalancerEdition;
 
     /**
      * <p>The ID of the ALB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

@@ -25,12 +25,14 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the ALB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
@@ -88,7 +90,7 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
 
     public static class UpdateLoadBalancerAttributeRequestModificationProtectionConfig extends TeaModel {
         /**
-         * <p>It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+         * <p>It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
          * <br>
          * <p>This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.</p>
          */

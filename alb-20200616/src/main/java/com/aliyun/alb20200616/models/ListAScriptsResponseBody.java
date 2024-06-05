@@ -21,6 +21,8 @@ public class ListAScriptsResponseBody extends TeaModel {
      * <br>
      * <p>*   If **NextToken** is empty, no next page exists.</p>
      * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

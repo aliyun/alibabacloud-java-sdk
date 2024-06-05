@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel {
     /**
      * <p>The additional certificates.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Certificates")
     public java.util.List<AssociateAdditionalCertificatesWithListenerRequestCertificates> certificates;
@@ -31,6 +33,8 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
 
     /**
      * <p>The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -75,6 +79,8 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public static class AssociateAdditionalCertificatesWithListenerRequestCertificates extends TeaModel {
         /**
          * <p>The certificate ID. Only server certificates are supported.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;

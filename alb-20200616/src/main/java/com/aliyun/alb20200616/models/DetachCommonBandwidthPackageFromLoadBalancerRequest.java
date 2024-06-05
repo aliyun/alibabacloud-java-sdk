@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaModel {
     /**
      * <p>The EIP bandwidth plan ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -31,6 +33,8 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaMode
 
     /**
      * <p>The ALB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -38,7 +42,9 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaMode
     /**
      * <p>The region ID of the ALB instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

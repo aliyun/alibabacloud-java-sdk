@@ -21,6 +21,8 @@ public class DeleteHealthCheckTemplatesRequest extends TeaModel {
 
     /**
      * <p>The ID of the health check template.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HealthCheckTemplateIds")
     public java.util.List<String> healthCheckTemplateIds;

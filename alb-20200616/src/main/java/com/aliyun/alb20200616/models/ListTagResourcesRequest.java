@@ -32,6 +32,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>*   **loadbalancer**: an Application Load Balancer (ALB) instance</p>
      * <p>*   **securitypolicy**: a security policy</p>
      * <p>*   **servergroup**: a server group</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

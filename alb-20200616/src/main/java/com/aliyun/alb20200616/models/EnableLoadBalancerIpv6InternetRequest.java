@@ -25,6 +25,8 @@ public class EnableLoadBalancerIpv6InternetRequest extends TeaModel {
 
     /**
      * <p>The ALB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
