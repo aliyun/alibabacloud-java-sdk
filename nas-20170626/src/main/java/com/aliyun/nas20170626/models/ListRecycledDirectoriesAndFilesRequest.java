@@ -7,13 +7,17 @@ public class ListRecycledDirectoriesAndFilesRequest extends TeaModel {
     /**
      * <p>The ID of the directory that you want to query.</p>
      * <br>
-     * <p>You can call the [ListRecycleBinJobs](~~264192~~) operation to query the value of the FileId parameter.</p>
+     * <p>You can call the [ListRecycleBinJobs](https://help.aliyun.com/document_detail/264192.html) operation to query the value of the FileId parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileId")
     public String fileId;
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogAnalysisRequest extends TeaModel {
+    @NameInMap("FileSystemType")
+    public String fileSystemType;
+
     /**
      * <p>The page number. Default value: 1.</p>
      */
@@ -18,6 +21,8 @@ public class DescribeLogAnalysisRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,6 +30,14 @@ public class DescribeLogAnalysisRequest extends TeaModel {
     public static DescribeLogAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogAnalysisRequest self = new DescribeLogAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogAnalysisRequest setFileSystemType(String fileSystemType) {
+        this.fileSystemType = fileSystemType;
+        return this;
+    }
+    public String getFileSystemType() {
+        return this.fileSystemType;
     }
 
     public DescribeLogAnalysisRequest setPageNumber(Integer pageNumber) {

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteAccessGroupRequest extends TeaModel {
     /**
      * <p>The name of the permission group to be deleted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;

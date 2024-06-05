@@ -41,17 +41,21 @@ public class CreateMountTargetRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
      * <br>
-     * <p>*   Sample ID of a General-purpose NAS file system: 31a8e4\*\*\*\*.</p>
-     * <p>*   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\*\*\*\*.</p>
-     * <p>*   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\*\*\*\*.</p>
+     * <p>*   Sample ID of a General-purpose NAS file system: 31a8e4\\*\\*\\*\\*.</p>
+     * <p>*   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\\*\\*\\*\\*.</p>
+     * <p>*   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\\*\\*\\*\\*.</p>
      * <br>
      * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The network type of the mount target. Valid value: **Vpc**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkType")
     public String networkType;

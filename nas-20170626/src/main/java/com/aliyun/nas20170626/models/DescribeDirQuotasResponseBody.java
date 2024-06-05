@@ -110,6 +110,9 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         @NameInMap("SizeReal")
         public Long sizeReal;
 
+        @NameInMap("SizeRealInByte")
+        public Long sizeRealInByte;
+
         /**
          * <p>The ID of the user that you specify to create a quota for the directory. The value depends on the value of the UserType parameter. Valid values: Uid and Gid.</p>
          */
@@ -168,6 +171,14 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
         public Long getSizeReal() {
             return this.sizeReal;
+        }
+
+        public DescribeDirQuotasResponseBodyDirQuotaInfosUserQuotaInfos setSizeRealInByte(Long sizeRealInByte) {
+            this.sizeRealInByte = sizeRealInByte;
+            return this;
+        }
+        public Long getSizeRealInByte() {
+            return this.sizeRealInByte;
         }
 
         public DescribeDirQuotasResponseBodyDirQuotaInfosUserQuotaInfos setUserId(String userId) {

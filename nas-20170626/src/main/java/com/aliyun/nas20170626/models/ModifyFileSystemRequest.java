@@ -11,7 +11,7 @@ public class ModifyFileSystemRequest extends TeaModel {
      * <br>
      * <p>*   The description must be 2 to 128 characters in length.</p>
      * <p>*   It must start with a letter but cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -23,6 +23,8 @@ public class ModifyFileSystemRequest extends TeaModel {
      * <p>*   The IDs of Extreme NAS file systems must start with `extreme-`. Example: `extreme-0015****`.</p>
      * <p>*   The IDs of Cloud Paralleled File System (CPFS) file systems must start with `cpfs-`. Example: `cpfs-125487****`.</p>
      * <p>>CPFS file systems are available only on the China site (aliyun.com).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

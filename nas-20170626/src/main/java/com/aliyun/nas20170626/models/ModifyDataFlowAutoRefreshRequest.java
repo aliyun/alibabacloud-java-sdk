@@ -13,12 +13,18 @@ public class ModifyDataFlowAutoRefreshRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DataFlowId")
     public String dataFlowId;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 

@@ -7,6 +7,9 @@ public class ModifyAccessPointRequest extends TeaModel {
     @NameInMap("AccessGroup")
     public String accessGroup;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccessPointId")
     public String accessPointId;
 
@@ -16,6 +19,9 @@ public class ModifyAccessPointRequest extends TeaModel {
     @NameInMap("EnabledRam")
     public Boolean enabledRam;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 

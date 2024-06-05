@@ -23,6 +23,8 @@ public class ModifyMountTargetRequest extends TeaModel {
      * <br>
      * <p>*   Sample ID of a General-purpose NAS file system: `31a8e4****`.</p>
      * <p>*   The IDs of Extreme NAS file systems must start with `extreme-`, for example, `extreme-0015****`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

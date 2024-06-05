@@ -7,12 +7,21 @@ public class ModifyLDAPConfigRequest extends TeaModel {
     @NameInMap("BindDN")
     public String bindDN;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SearchBase")
     public String searchBase;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URI")
     public String URI;
 

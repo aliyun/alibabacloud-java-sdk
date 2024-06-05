@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class EnableSmbAclRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

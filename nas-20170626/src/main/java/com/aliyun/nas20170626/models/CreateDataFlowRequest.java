@@ -30,7 +30,7 @@ public class CreateDataFlowRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](https://help.aliyun.com/document_detail/25693.html)</p>
      * <br>
      * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
      */
@@ -44,7 +44,7 @@ public class CreateDataFlowRequest extends TeaModel {
      * <br>
      * <p>*   The description must be 2 to 128 characters in length.</p>
      * <p>*   The description must start with a letter but cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -64,6 +64,8 @@ public class CreateDataFlowRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -101,6 +103,8 @@ public class CreateDataFlowRequest extends TeaModel {
      * <p>    *   The name cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>>  The OSS bucket must be an existing bucket in the region.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceStorage")
     public String sourceStorage;

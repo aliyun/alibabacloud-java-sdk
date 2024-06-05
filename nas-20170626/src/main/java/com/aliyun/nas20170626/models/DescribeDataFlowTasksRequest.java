@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataFlowTasksRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 

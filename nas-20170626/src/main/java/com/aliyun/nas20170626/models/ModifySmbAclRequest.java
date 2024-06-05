@@ -24,6 +24,8 @@ public class ModifySmbAclRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -31,14 +33,14 @@ public class ModifySmbAclRequest extends TeaModel {
     /**
      * <p>The home directory of each user. Each user-specific home directory must meet the following requirements:</p>
      * <br>
-     * <p>*   Each segment starts with a forward slash (/) or a backward slash (\\).</p>
+     * <p>*   Each segment starts with a forward slash (/) or a backward slash (\\\\).</p>
      * <p>*   Each segment does not contain the following special characters: `<>":|?*`.</p>
      * <p>*   Each segment is 0 to 255 characters in length.</p>
      * <p>*   The total length is 0 to 32,767 characters.</p>
      * <br>
      * <p>For example, if you create a user named A and the home directory is `/home`, the file system automatically creates a directory named `/home/A` when User A logs on to the file system. If the `/home/A` directory already exists, the file system does not create the directory.</p>
      * <br>
-     * <p>> User A must have the permissions to create folders in the \home directory. Otherwise, the file system cannot create the `/home/A` directory when User A logs on to the file system.</p>
+     * <p>> User A must have the permissions to create folders in the \\home directory. Otherwise, the file system cannot create the `/home/A` directory when User A logs on to the file system.</p>
      */
     @NameInMap("HomeDirPath")
     public String homeDirPath;

@@ -105,10 +105,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   DEFAULT_ATIME\_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</p>
-         * <p>*   DEFAULT_ATIME\_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</p>
-         * <p>*   DEFAULT_ATIME\_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</p>
-         * <p>*   DEFAULT_ATIME\_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</p>
+         * <p>*   DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</p>
+         * <p>*   DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</p>
+         * <p>*   DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</p>
+         * <p>*   DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</p>
          */
         @NameInMap("LifecycleRuleName")
         public String lifecycleRuleName;

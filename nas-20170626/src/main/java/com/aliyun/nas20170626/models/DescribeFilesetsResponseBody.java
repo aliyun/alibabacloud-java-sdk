@@ -74,6 +74,9 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
+
         /**
          * <p>The fileset description.</p>
          */
@@ -122,6 +125,14 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeFilesetsResponseBodyEntriesEntrie setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public DescribeFilesetsResponseBodyEntriesEntrie setDescription(String description) {

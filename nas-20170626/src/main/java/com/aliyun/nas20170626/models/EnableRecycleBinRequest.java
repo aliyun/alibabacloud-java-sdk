@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class EnableRecycleBinRequest extends TeaModel {
     /**
      * <p>The ID of the file system for which you want to enable the recycle bin feature.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

@@ -10,7 +10,7 @@ public class DescribeAccessGroupsRequest extends TeaModel {
      * <p>Limits:</p>
      * <br>
      * <p>*   The name must be 3 to 64 characters in length.</p>
-     * <p>*   The name must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</p>
      */
     @NameInMap("AccessGroupName")
     public String accessGroupName;

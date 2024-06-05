@@ -17,6 +17,8 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -41,6 +43,8 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
      * <p>The absolute path of the directory.</p>
      * <br>
      * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Path")
     public String path;
@@ -49,6 +53,8 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
      * <p>The storage type of the files.</p>
      * <br>
      * <p>Default value: InfrequentAccess (IA).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageType")
     public String storageType;

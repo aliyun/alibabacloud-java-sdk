@@ -4,15 +4,24 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

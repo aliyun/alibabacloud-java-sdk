@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class CreateLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
-     * <p>The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LifecyclePolicyName")
     public String lifecyclePolicyName;
@@ -21,10 +25,12 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   DEFAULT_ATIME\_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</p>
-     * <p>*   DEFAULT_ATIME\_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</p>
-     * <p>*   DEFAULT_ATIME\_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</p>
-     * <p>*   DEFAULT_ATIME\_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</p>
+     * <p>*   DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</p>
+     * <p>*   DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</p>
+     * <p>*   DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</p>
+     * <p>*   DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LifecycleRuleName")
     public String lifecycleRuleName;
@@ -51,6 +57,8 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
      * <p>The storage type of the data that is dumped to the IA storage medium.</p>
      * <br>
      * <p>Default value: InfrequentAccess (IA).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StorageType")
     public String storageType;

@@ -7,19 +7,22 @@ public class CreateFilesetRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](https://help.aliyun.com/document_detail/25693.html)</p>
      * <br>
      * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The description of the fileset.</p>
      * <br>
      * <p>*   The description must be 2 to 128 characters in length.</p>
      * <p>*   The description must start with a letter but cannot start with http:// or https://.</p>
-     * <p>*   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -39,6 +42,8 @@ public class CreateFilesetRequest extends TeaModel {
 
     /**
      * <p>The ID of the file system.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
@@ -49,6 +54,8 @@ public class CreateFilesetRequest extends TeaModel {
      * <p>*   The parent directory of the path that you specify must be an existing directory in the file system.</p>
      * <p>*   The path must be 2 to 1,024 characters in length.</p>
      * <p>*   The path must start and end with a forward slash (/).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("FileSystemPath")
     public String fileSystemPath;
@@ -64,6 +71,14 @@ public class CreateFilesetRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateFilesetRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public CreateFilesetRequest setDescription(String description) {

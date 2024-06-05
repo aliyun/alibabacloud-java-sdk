@@ -105,6 +105,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("EncryptType")
         public Integer encryptType;
 
+        @NameInMap("FileSystemType")
+        public String fileSystemType;
+
         /**
          * <p>The progress of the snapshot creation. The value of this parameter is expressed as a percentage.</p>
          */
@@ -126,7 +129,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   \-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</p>
+         * <p>*   \\-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</p>
          * <p>*   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</p>
          */
         @NameInMap("RetentionDays")
@@ -145,6 +148,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
+
+        @NameInMap("SnapshotType")
+        public String snapshotType;
 
         /**
          * <p>The ID of the source file system.</p>
@@ -209,6 +215,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.encryptType;
         }
 
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setFileSystemType(String fileSystemType) {
+            this.fileSystemType = fileSystemType;
+            return this;
+        }
+        public String getFileSystemType() {
+            return this.fileSystemType;
+        }
+
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -247,6 +261,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getSnapshotName() {
             return this.snapshotName;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotType(String snapshotType) {
+            this.snapshotType = snapshotType;
+            return this;
+        }
+        public String getSnapshotType() {
+            return this.snapshotType;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceFileSystemId(String sourceFileSystemId) {
