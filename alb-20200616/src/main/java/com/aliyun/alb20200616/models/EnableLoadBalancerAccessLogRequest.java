@@ -23,18 +23,24 @@ public class EnableLoadBalancerAccessLogRequest extends TeaModel {
 
     /**
      * <p>The ALB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The project to which the access log is shipped.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
      * <p>The Logstore to which the access log is shipped.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LogStore")
     public String logStore;

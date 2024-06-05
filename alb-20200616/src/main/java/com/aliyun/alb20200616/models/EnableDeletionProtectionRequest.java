@@ -21,6 +21,8 @@ public class EnableDeletionProtectionRequest extends TeaModel {
 
     /**
      * <p>The Application Load Balancer (ALB) instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

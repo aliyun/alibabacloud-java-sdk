@@ -195,7 +195,7 @@ public class ListRulesResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The HTTP status code in the response. Valid values: **HTTP\_2xx**, **HTTP\_4xx**, and **HTTP\_5xx**. **x** must be a digit.</p>
+         * <p>The HTTP status code in the response. Valid values: **HTTP_2xx**, **HTTP_4xx**, and **HTTP_5xx**. **x** must be a digit.</p>
          */
         @NameInMap("HttpCode")
         public String httpCode;
@@ -332,7 +332,7 @@ public class ListRulesResponseBody extends TeaModel {
 
     public static class ListRulesResponseBodyRulesRuleActionsInsertHeaderConfig extends TeaModel {
         /**
-         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The key specified in `InsertHeader` must be unique.</p>
+         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The key specified in `InsertHeader` must be unique.</p>
          * <br>
          * <p>> **Cookie** and **Host** are not supported.</p>
          */
@@ -350,9 +350,9 @@ public class ListRulesResponseBody extends TeaModel {
          * <p>    *   **SLBId**: the ID of the ALB instance.</p>
          * <p>    *   **SLBPort**: the listener port.</p>
          * <br>
-         * <p>*   If **ValueType** is set to **UserDefined**, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\*) and question marks (?) as wildcard characters. The header value cannot start or end with a space character.</p>
+         * <p>*   If **ValueType** is set to **UserDefined**, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\\*) and question marks (?) as wildcard characters. The header value cannot start or end with a space character.</p>
          * <br>
-         * <p>*   If **ValueType** is set to **ReferenceHeader**, one of the request headers is referenced. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-).</p>
+         * <p>*   If **ValueType** is set to **ReferenceHeader**, one of the request headers is referenced. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-).</p>
          */
         @NameInMap("Value")
         public String value;
@@ -406,11 +406,11 @@ public class ListRulesResponseBody extends TeaModel {
          * <br>
          * <p>*   Limits on a custom value:</p>
          * <br>
-         * <p>    *   The hostname is 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcard characters.</p>
+         * <p>    *   The hostname is 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\\*) and question marks (?) can be used as wildcard characters.</p>
          * <p>    *   The hostname contains at least one period (.) but does not start or end with a period (.).</p>
          * <p>    *   The rightmost domain label contains only letters and wildcard characters. It does not contain digits or hyphens (-).</p>
          * <p>    *   The domain labels do not start or end with hyphens (-).</p>
-         * <p>    *   You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
+         * <p>    *   You can use asterisks (\\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
          */
         @NameInMap("Host")
         public String host;
@@ -424,12 +424,12 @@ public class ListRulesResponseBody extends TeaModel {
         /**
          * <p>The path to which requests are redirected. Valid values:</p>
          * <br>
-         * <p>*   **${path}** (default): You can reference \*\*${host}**, **${protocol}**, and**${port}**. The path can consist of **${host}**,**${protocol}**, and **${port}\*\*. Each variable can be used only once. The preceding variables can be used at the same time or combined with a custom value.</p>
+         * <p>*   **${path}** (default): You can reference \\*\\*${host}**, **${protocol}**, and**${port}**. The path can consist of **${host}**,**${protocol}**, and **${port}\\*\\*. Each variable can be used only once. The preceding variables can be used at the same time or combined with a custom value.</p>
          * <br>
          * <p>*   Limits on a custom value:</p>
          * <br>
          * <p>    *   The value is 1 to 128 characters in length.</p>
-         * <p>    *   It starts with a forward slash (/) and contains letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It does not contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.</p>
+         * <p>    *   It starts with a forward slash (/) and contains letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It does not contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\\*) and question marks (?) as wildcard characters.</p>
          */
         @NameInMap("Path")
         public String path;
@@ -455,7 +455,7 @@ public class ListRulesResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The query string to which requests are redirected. The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>The query string to which requests are redirected. The query string must be 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Query")
         public String query;
@@ -548,23 +548,23 @@ public class ListRulesResponseBody extends TeaModel {
          * <br>
          * <p>*   Limits on a custom value:</p>
          * <br>
-         * <p>    *   The hostname is 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcard characters.</p>
+         * <p>    *   The hostname is 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\\*) and question marks (?) can be used as wildcard characters.</p>
          * <p>    *   The hostname contains at least one period (.) but does not start or end with a period (.).</p>
          * <p>    *   The rightmost domain label contains only letters and wildcard characters. It does not contain digits or hyphens (-).</p>
          * <p>    *   The domain labels do not start or end with hyphens (-).</p>
-         * <p>    *   You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
+         * <p>    *   You can use asterisks (\\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
-         * <p>The path to which requests are forwarded. The path is 1 to 128 characters in length and starts with a forward slash (/). The path can contain letters, digits, asterisks (\*), question marks (?), and the following special characters: `$ - _ . + / & ~ @ :`. The path does not contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`.</p>
+         * <p>The path to which requests are forwarded. The path is 1 to 128 characters in length and starts with a forward slash (/). The path can contain letters, digits, asterisks (\\*), question marks (?), and the following special characters: `$ - _ . + / & ~ @ :`. The path does not contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>The query string of the URL to which requests are forwarded. The query string is 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>The query string of the URL to which requests are forwarded. The query string is 1 to 128 characters in length, and can contain printable characters, excluding uppercase letters and the following special characters: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Query")
         public String query;
@@ -908,13 +908,13 @@ public class ListRulesResponseBody extends TeaModel {
 
     public static class ListRulesResponseBodyRulesRuleConditionsCookieConfigValues extends TeaModel {
         /**
-         * <p>The key of the cookie. The key is 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>The key of the cookie. The key is 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the cookie. The value is 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). Uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.</p>
+         * <p>The value of the cookie. The value is 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). Uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -966,7 +966,7 @@ public class ListRulesResponseBody extends TeaModel {
 
     public static class ListRulesResponseBodyRulesRuleConditionsHeaderConfig extends TeaModel {
         /**
-         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_). Cookie and Host are not supported.</p>
+         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -1068,13 +1068,13 @@ public class ListRulesResponseBody extends TeaModel {
 
     public static class ListRulesResponseBodyRulesRuleConditionsQueryStringConfigValues extends TeaModel {
         /**
-         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.</p>
+         * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1126,7 +1126,7 @@ public class ListRulesResponseBody extends TeaModel {
 
     public static class ListRulesResponseBodyRulesRuleConditionsResponseHeaderConfig extends TeaModel {
         /**
-         * <p>The header key. The key must be 1 to 40 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_). Cookie and Host are not supported.</p>
+         * <p>The header key. The key must be 1 to 40 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -1441,7 +1441,7 @@ public class ListRulesResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;

@@ -747,7 +747,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>> This parameter is available only when you create an HTTPS listener.</p>
          */
@@ -768,7 +768,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>> This parameter is available only when you create an HTTPS listener.</p>
          */
@@ -789,7 +789,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>> This parameter is available only when you create an HTTPS listener.</p>
          */
@@ -810,7 +810,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>> This parameter is available only when you create an HTTPS listener.</p>
          */

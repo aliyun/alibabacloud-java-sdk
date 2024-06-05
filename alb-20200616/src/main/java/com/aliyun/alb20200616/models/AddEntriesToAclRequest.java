@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class AddEntriesToAclRequest extends TeaModel {
     /**
      * <p>The IP entries that you want to add. You can add up to 20 IP entries in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclEntries")
     public java.util.List<AddEntriesToAclRequestAclEntries> aclEntries;
 
     /**
      * <p>The ACL ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -74,7 +78,7 @@ public class AddEntriesToAclRequest extends TeaModel {
 
     public static class AddEntriesToAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The description of the IP entry. The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
+         * <p>The description of the IP entry. The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.</p>
          * <br>
          * <p>You can add up to 20 IP entries in each call.</p>
          */
@@ -85,6 +89,8 @@ public class AddEntriesToAclRequest extends TeaModel {
          * <p>The CIDR block of the IP entry.</p>
          * <br>
          * <p>You can add up to 20 IP entries in each call.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Entry")
         public String entry;

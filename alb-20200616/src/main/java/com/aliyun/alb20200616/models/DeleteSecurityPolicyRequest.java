@@ -23,6 +23,8 @@ public class DeleteSecurityPolicyRequest extends TeaModel {
 
     /**
      * <p>The security policy ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;

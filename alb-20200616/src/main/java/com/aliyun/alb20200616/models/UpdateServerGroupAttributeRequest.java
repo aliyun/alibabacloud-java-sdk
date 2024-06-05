@@ -44,6 +44,8 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The server group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
@@ -51,7 +53,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     /**
      * <p>The server group name.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("ServerGroupName")
     public String serverGroupName;
@@ -292,7 +294,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         /**
          * <p>The path that is used for health checks.</p>
          * <br>
-         * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The path must start with a forward slash (`/`).</p>
+         * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The path must start with a forward slash (`/`).</p>
          * <br>
          * <p>> This parameter takes effect when the **HealthCheckEnabled** parameter is set to **true** and the **HealthCheckProtocol** parameter is set to **HTTP**.</p>
          */
@@ -560,12 +562,16 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public static class UpdateServerGroupAttributeRequestUchConfig extends TeaModel {
         /**
          * <p>The type of the parameter.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The setting of consistent hashing.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -31,6 +31,8 @@ public class UpdateSecurityPolicyAttributeRequest extends TeaModel {
 
     /**
      * <p>The security policy ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
@@ -38,7 +40,7 @@ public class UpdateSecurityPolicyAttributeRequest extends TeaModel {
     /**
      * <p>The name of the security policy.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("SecurityPolicyName")
     public String securityPolicyName;

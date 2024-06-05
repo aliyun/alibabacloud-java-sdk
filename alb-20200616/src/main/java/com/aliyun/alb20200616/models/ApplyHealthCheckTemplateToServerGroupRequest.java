@@ -25,12 +25,16 @@ public class ApplyHealthCheckTemplateToServerGroupRequest extends TeaModel {
 
     /**
      * <p>The template ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HealthCheckTemplateId")
     public String healthCheckTemplateId;
 
     /**
      * <p>The server group ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;

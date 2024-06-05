@@ -25,6 +25,8 @@ public class DeleteServerGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the server group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;

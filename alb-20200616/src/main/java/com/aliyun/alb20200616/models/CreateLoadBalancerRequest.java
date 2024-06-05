@@ -27,6 +27,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * <br>
      * <p>*   **Internet:** The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. In this case, the ALB instance can be accessed over the Internet.</p>
      * <p>*   **Intranet:** The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AddressType")
     public String addressType;
@@ -61,6 +63,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * <p>The configuration of the billing method of the ALB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerBillingConfig")
     public CreateLoadBalancerRequestLoadBalancerBillingConfig loadBalancerBillingConfig;
@@ -71,6 +75,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * <p>*   **Basic:** basic.</p>
      * <p>*   **Standard:** standard.</p>
      * <p>*   **StandardWithWaf:** WAF-enabled.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerEdition")
     public String loadBalancerEdition;
@@ -78,7 +84,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * <p>The name of the ALB instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
@@ -103,12 +109,16 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) in which you want to create the ALB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The zones and the vSwitches in the zones. You must specify at least two zones.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<CreateLoadBalancerRequestZoneMappings> zoneMappings;
@@ -241,6 +251,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
          * <p>The billing method of the ALB instance.</p>
          * <br>
          * <p>Set the value to **PostPay**, which specifies the pay-as-you-go billing method.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -270,7 +282,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestModificationProtectionConfig extends TeaModel {
         /**
-         * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
          * <br>
          * <p>> This parameter takes effect only if `Status` is set to **ConsoleProtection**.</p>
          */
@@ -362,6 +374,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
         /**
          * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 zones.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -369,7 +383,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
         /**
          * <p>The zone ID of the ALB instance. You can specify up to 10 zones for an ALB instance.</p>
          * <br>
-         * <p>You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+         * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

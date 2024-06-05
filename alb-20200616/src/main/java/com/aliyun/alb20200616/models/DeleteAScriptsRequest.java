@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteAScriptsRequest extends TeaModel {
     /**
      * <p>The AScript rule IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AScriptIds")
     public java.util.List<String> AScriptIds;

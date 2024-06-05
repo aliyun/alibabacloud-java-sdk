@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DissociateAclsFromListenerRequest extends TeaModel {
     /**
      * <p>The ACL IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
@@ -31,6 +33,8 @@ public class DissociateAclsFromListenerRequest extends TeaModel {
 
     /**
      * <p>The listener ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

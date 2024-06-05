@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateAclAttributeRequest extends TeaModel {
     /**
      * <p>The ACL ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ACL name. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The ACL name. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclName")
     public String aclName;

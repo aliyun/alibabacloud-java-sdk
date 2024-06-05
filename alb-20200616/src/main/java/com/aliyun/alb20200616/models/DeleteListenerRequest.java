@@ -25,6 +25,8 @@ public class DeleteListenerRequest extends TeaModel {
 
     /**
      * <p>The ID of the Application Load Balancer (ALB) listener.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

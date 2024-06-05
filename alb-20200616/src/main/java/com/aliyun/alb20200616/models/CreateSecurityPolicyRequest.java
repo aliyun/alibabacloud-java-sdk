@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateSecurityPolicyRequest extends TeaModel {
     /**
      * <p>The supported cipher suites.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Ciphers")
     public java.util.List<String> ciphers;
@@ -36,13 +38,17 @@ public class CreateSecurityPolicyRequest extends TeaModel {
     /**
      * <p>The name of the security policy.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityPolicyName")
     public String securityPolicyName;
 
     /**
      * <p>The supported Transport Layer Security (TLS) protocol versions.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TLSVersions")
     public java.util.List<String> TLSVersions;

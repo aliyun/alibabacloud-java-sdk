@@ -15,6 +15,8 @@ public class GetListenerHealthStatusRequest extends TeaModel {
 
     /**
      * <p>The listener ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

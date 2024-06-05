@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListAclRelationsRequest extends TeaModel {
     /**
      * <p>The ACL IDs.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;

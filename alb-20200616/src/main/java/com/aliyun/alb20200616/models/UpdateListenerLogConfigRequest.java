@@ -42,6 +42,8 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the Application Load Balancer (ALB) listener.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -99,6 +101,8 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
          * <p>*   **false** (default)</p>
          * <br>
          * <p>> You can set this parameter to **true** only if the access log feature is enabled by specifying **AccessLogEnabled**.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TracingEnabled")
         public Boolean tracingEnabled;

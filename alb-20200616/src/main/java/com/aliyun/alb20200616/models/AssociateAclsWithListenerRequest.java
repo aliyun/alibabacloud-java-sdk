@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AssociateAclsWithListenerRequest extends TeaModel {
     /**
      * <p>The ACL IDs. You can specify up to three IDs in each call.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
@@ -15,6 +17,8 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
      * <br>
      * <p>*   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. The whitelist applies to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured for a listener, only requests from IP addresses that are added to the whitelist are forwarded by the listener. If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.</p>
      * <p>*   **Black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. The blacklist applies to scenarios in which you want to block access from specific IP addresses to an application. If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AclType")
     public String aclType;
@@ -40,6 +44,8 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
 
     /**
      * <p>The listener ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

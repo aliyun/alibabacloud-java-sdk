@@ -25,12 +25,16 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
 
     /**
      * <p>The ID of the ALB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The zones and the vSwitches. You must specify at least two zones. The specified zones overwrite the existing configurations.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<UpdateLoadBalancerZonesRequestZoneMappings> zoneMappings;
@@ -78,12 +82,16 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch in the zone. By default, you can specify only one vSwitch (subnet) for each zone of an ALB instance. You can specify up to 10 zone IDs.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The name of the zone. You can call the [DescribeZones](~~189196~~) operation to query the zones. You can specify up to 10 zone IDs.</p>
+         * <p>The name of the zone. You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query the zones. You can specify up to 10 zone IDs.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

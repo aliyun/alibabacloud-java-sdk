@@ -23,6 +23,8 @@ public class DisableLoadBalancerAccessLogRequest extends TeaModel {
 
     /**
      * <p>The SLB instance ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

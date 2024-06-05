@@ -29,6 +29,9 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DefaultActions")
     public java.util.List<CreateListenerRequestDefaultActions> defaultActions;
 
@@ -76,7 +79,7 @@ public class CreateListenerRequest extends TeaModel {
     /**
      * <p>The name of the listener.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). Regular expressions are supported.</p>
+     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). Regular expressions are supported.</p>
      */
     @NameInMap("ListenerDescription")
     public String listenerDescription;
@@ -85,6 +88,8 @@ public class CreateListenerRequest extends TeaModel {
      * <p>The frontend port that is used by the ALB instance.</p>
      * <br>
      * <p>Valid values: **1 to 65535**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
@@ -93,12 +98,16 @@ public class CreateListenerRequest extends TeaModel {
      * <p>The listener protocol.</p>
      * <br>
      * <p>Valid values: **HTTP**, **HTTPS**, and **QUIC**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the ALB instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -121,7 +130,7 @@ public class CreateListenerRequest extends TeaModel {
     /**
      * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
      * <br>
-     * <p>Default value: **tls_cipher_policy\_1\_0** (system security policy).</p>
+     * <p>Default value: **tls_cipher_policy_1_0** (system security policy).</p>
      * <br>
      * <p>>  Only HTTPS listeners support this parameter.</p>
      */
@@ -330,6 +339,8 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         /**
          * <p>The ID of the server group to which requests are forwarded.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -350,6 +361,9 @@ public class CreateListenerRequest extends TeaModel {
     }
 
     public static class CreateListenerRequestDefaultActionsForwardGroupConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ServerGroupTuples")
         public java.util.List<CreateListenerRequestDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -369,6 +383,9 @@ public class CreateListenerRequest extends TeaModel {
     }
 
     public static class CreateListenerRequestDefaultActions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ForwardGroupConfig")
         public CreateListenerRequestDefaultActionsForwardGroupConfig forwardGroupConfig;
 
@@ -376,6 +393,8 @@ public class CreateListenerRequest extends TeaModel {
          * <p>The action type. You can specify only one action type. Valid value:</p>
          * <br>
          * <p>**ForwardGroup**: forwards requests to multiple vServer groups.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -486,7 +505,7 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>>  Only HTTPS listeners support this parameter.</p>
          */
@@ -507,7 +526,7 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>>  Only HTTPS listeners support this parameter.</p>
          */
@@ -528,7 +547,7 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>>  Only HTTPS listeners support this parameter.</p>
          */
@@ -549,7 +568,7 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.</p>
          * <br>
-         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (\_), and digits.</p>
+         * <p>The name must be 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
          * <br>
          * <p>>  Only HTTPS listeners support this parameter.</p>
          */

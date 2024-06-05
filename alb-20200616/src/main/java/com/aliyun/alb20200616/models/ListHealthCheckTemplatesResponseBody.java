@@ -128,7 +128,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         /**
          * <p>The port that is used for health checks.</p>
          * <br>
-         * <p>Valid values: \*\* 0 to 65535\*\*.</p>
+         * <p>Valid values: \\*\\* 0 to 65535\\*\\*.</p>
          * <br>
          * <p>Default value: **0**. This value indicates that the port on a backend server is used for health checks.</p>
          */
@@ -180,7 +180,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         /**
          * <p>The URL that is used for health checks.</p>
          * <br>
-         * <p>The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).</p>
+         * <p>The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The URL must start with a forward slash (/).</p>
          */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
@@ -204,7 +204,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         /**
          * <p>The name of the health check template.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          */
         @NameInMap("HealthCheckTemplateName")
         public String healthCheckTemplateName;

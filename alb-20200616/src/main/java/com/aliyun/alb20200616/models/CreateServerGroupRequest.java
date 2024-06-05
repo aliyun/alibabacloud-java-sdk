@@ -28,6 +28,8 @@ public class CreateServerGroupRequest extends TeaModel {
 
     /**
      * <p>The configuration of health checks.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
@@ -63,7 +65,9 @@ public class CreateServerGroupRequest extends TeaModel {
     public String scheduler;
 
     /**
-     * <p>The name of the server group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the server group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroupName")
     public String serverGroupName;
@@ -308,6 +312,8 @@ public class CreateServerGroupRequest extends TeaModel {
          * <p>*   **false**: disables the health check feature.</p>
          * <br>
          * <p>>  If the **ServerGroupType** parameter is set to **Instance** or **Ip**, the health check feature is enabled by default. If the **ServerGroupType** parameter is set to **Fc**, the health check feature is disabled by default.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
@@ -359,7 +365,7 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The path that is used for health checks.</p>
          * <br>
-         * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).</p>
+         * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: `- / . % ? # & =`. It can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \\" , +`. The URL must start with a forward slash (/).</p>
          * <br>
          * <p>>  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.</p>
          */
@@ -672,12 +678,16 @@ public class CreateServerGroupRequest extends TeaModel {
     public static class CreateServerGroupRequestUchConfig extends TeaModel {
         /**
          * <p>The type of the parameter.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The parameter value for consistent hashing.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Value")
         public String value;

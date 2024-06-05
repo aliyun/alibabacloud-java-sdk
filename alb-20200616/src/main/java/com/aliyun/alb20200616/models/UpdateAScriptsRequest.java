@@ -61,6 +61,8 @@ public class UpdateAScriptsRequest extends TeaModel {
     public static class UpdateAScriptsRequestAScripts extends TeaModel {
         /**
          * <p>The AScript rule ID.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("AScriptId")
         public String AScriptId;
@@ -68,7 +70,7 @@ public class UpdateAScriptsRequest extends TeaModel {
         /**
          * <p>The name of the AScript rule.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          */
         @NameInMap("AScriptName")
         public String AScriptName;
