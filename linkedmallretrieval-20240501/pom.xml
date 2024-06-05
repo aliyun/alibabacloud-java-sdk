@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>linkedmallretrieval20240501</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>linkedmallretrieval20240501</name>
   <description>Alibaba Cloud LinkedmallRetrieval (20240501) SDK for Java
