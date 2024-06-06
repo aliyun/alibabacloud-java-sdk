@@ -4,15 +4,27 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class UpdateAuthenticatorAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthenticatorName")
     public String authenticatorName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

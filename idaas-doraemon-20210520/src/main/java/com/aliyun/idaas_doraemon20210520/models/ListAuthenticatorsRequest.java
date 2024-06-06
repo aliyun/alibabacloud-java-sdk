@@ -4,6 +4,9 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListAuthenticatorsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
@@ -16,6 +19,9 @@ public class ListAuthenticatorsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

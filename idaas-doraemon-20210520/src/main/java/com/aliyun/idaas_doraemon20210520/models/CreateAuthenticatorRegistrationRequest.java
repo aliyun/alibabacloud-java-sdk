@@ -4,9 +4,15 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthenticatorRegistrationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
 
@@ -25,6 +31,9 @@ public class CreateAuthenticatorRegistrationRequest extends TeaModel {
     @NameInMap("UserDisplayName")
     public String userDisplayName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

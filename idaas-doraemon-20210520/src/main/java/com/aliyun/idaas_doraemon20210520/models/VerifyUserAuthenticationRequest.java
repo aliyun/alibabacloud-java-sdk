@@ -4,12 +4,21 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class VerifyUserAuthenticationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthenticationContext")
     public String authenticationContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
 
@@ -34,6 +43,9 @@ public class VerifyUserAuthenticationRequest extends TeaModel {
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
