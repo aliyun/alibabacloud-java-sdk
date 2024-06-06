@@ -7,6 +7,9 @@ public class GetJobMetricsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 

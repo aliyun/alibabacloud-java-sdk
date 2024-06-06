@@ -13,6 +13,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("DebuggerConfigContent")
     public String debuggerConfigContent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
@@ -25,9 +28,15 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("JobMaxRunningTimeMinutes")
     public Long jobMaxRunningTimeMinutes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
@@ -52,6 +61,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserCommand")
     public String userCommand;
 

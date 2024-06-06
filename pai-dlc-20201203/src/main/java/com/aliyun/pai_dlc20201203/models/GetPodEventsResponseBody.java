@@ -10,6 +10,9 @@ public class GetPodEventsResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PodId")
     public String podId;
 

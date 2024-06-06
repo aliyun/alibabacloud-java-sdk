@@ -16,6 +16,9 @@ public class Tensorboard extends TeaModel {
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    @NameInMap("GmtFinishTime")
+    public String gmtFinishTime;
+
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
@@ -52,6 +55,9 @@ public class Tensorboard extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
+    @NameInMap("Username")
+    public String username;
+
     public static Tensorboard build(java.util.Map<String, ?> map) throws Exception {
         Tensorboard self = new Tensorboard();
         return TeaModel.build(map, self);
@@ -87,6 +93,14 @@ public class Tensorboard extends TeaModel {
     }
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    public Tensorboard setGmtFinishTime(String gmtFinishTime) {
+        this.gmtFinishTime = gmtFinishTime;
+        return this;
+    }
+    public String getGmtFinishTime() {
+        return this.gmtFinishTime;
     }
 
     public Tensorboard setGmtModifyTime(String gmtModifyTime) {
@@ -183,6 +197,14 @@ public class Tensorboard extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public Tensorboard setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
 }

@@ -46,6 +46,12 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
+    @NameInMap("UserId")
+    public String userId;
+
+    @NameInMap("Username")
+    public String username;
+
     @NameInMap("Verbose")
     public Boolean verbose;
 
@@ -167,6 +173,22 @@ public class ListTensorboardsRequest extends TeaModel {
     }
     public String getTensorboardId() {
         return this.tensorboardId;
+    }
+
+    public ListTensorboardsRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public ListTensorboardsRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
     public ListTensorboardsRequest setVerbose(Boolean verbose) {
