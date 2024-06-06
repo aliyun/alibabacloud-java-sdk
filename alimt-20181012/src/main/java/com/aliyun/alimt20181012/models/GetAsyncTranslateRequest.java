@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncTranslateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

@@ -4,9 +4,15 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleIntelligenceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CatLevelThreeId")
     public Long catLevelThreeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CatLevelTwoId")
     public Long catLevelTwoId;
 
@@ -16,6 +22,9 @@ public class GetTitleIntelligenceRequest extends TeaModel {
     @NameInMap("Keywords")
     public String keywords;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Platform")
     public String platform;
 

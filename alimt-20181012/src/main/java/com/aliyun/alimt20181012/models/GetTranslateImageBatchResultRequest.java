@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTranslateImageBatchResultRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

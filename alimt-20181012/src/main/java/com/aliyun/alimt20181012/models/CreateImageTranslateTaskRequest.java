@@ -10,12 +10,21 @@ public class CreateImageTranslateTaskRequest extends TeaModel {
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UrlList")
     public String urlList;
 

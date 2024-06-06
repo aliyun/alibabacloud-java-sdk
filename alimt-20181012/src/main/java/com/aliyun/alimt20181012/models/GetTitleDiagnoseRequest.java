@@ -4,18 +4,30 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleDiagnoseRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CategoryId")
     public String categoryId;
 
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 
