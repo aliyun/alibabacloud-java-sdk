@@ -97,6 +97,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
+        @NameInMap("CallsAbandoned")
+        public Long callsAbandoned;
+
         @NameInMap("CallsAttendedTransferOut")
         public Long callsAttendedTransferOut;
 
@@ -108,6 +111,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
         @NameInMap("CallsOffered")
         public Long callsOffered;
+
+        @NameInMap("CallsOverflow")
+        public String callsOverflow;
 
         @NameInMap("CallsQueuingCanceled")
         public String callsQueuingCanceled;
@@ -242,6 +248,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             return this.averageWorkTime;
         }
 
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsAbandoned(Long callsAbandoned) {
+            this.callsAbandoned = callsAbandoned;
+            return this;
+        }
+        public Long getCallsAbandoned() {
+            return this.callsAbandoned;
+        }
+
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
             this.callsAttendedTransferOut = callsAttendedTransferOut;
             return this;
@@ -272,6 +286,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
         public Long getCallsOffered() {
             return this.callsOffered;
+        }
+
+        public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsOverflow(String callsOverflow) {
+            this.callsOverflow = callsOverflow;
+            return this;
+        }
+        public String getCallsOverflow() {
+            return this.callsOverflow;
         }
 
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound setCallsQueuingCanceled(String callsQueuingCanceled) {
