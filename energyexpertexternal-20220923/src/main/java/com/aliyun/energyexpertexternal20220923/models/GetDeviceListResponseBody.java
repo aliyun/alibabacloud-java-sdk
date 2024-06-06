@@ -4,18 +4,33 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceListResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetDeviceListResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,18 +80,34 @@ public class GetDeviceListResponseBody extends TeaModel {
     }
 
     public static class GetDeviceListResponseBodyDataDeviceListInfo extends TeaModel {
+        /**
+         * <p>The rated capacity.</p>
+         * <p>Unit is kVA.</p>
+         */
         @NameInMap("constKva")
         public Integer constKva;
 
+        /**
+         * <p>The transformation ratio of current.</p>
+         */
         @NameInMap("ct")
         public Integer ct;
 
+        /**
+         * <p>The magnification ratio.</p>
+         */
         @NameInMap("magnification")
         public Integer magnification;
 
+        /**
+         * <p>The high and low voltage.</p>
+         */
         @NameInMap("pressure")
         public Integer pressure;
 
+        /**
+         * <p>The transformation ratio of voltage.</p>
+         */
         @NameInMap("pt")
         public Integer pt;
 
@@ -128,21 +159,39 @@ public class GetDeviceListResponseBody extends TeaModel {
     }
 
     public static class GetDeviceListResponseBodyDataDeviceList extends TeaModel {
+        /**
+         * <p>The device ID.</p>
+         */
         @NameInMap("deviceId")
         public String deviceId;
 
+        /**
+         * <p>The device name.</p>
+         */
         @NameInMap("deviceName")
         public String deviceName;
 
+        /**
+         * <p>The level 1 meter type.</p>
+         */
         @NameInMap("firstTypeName")
         public String firstTypeName;
 
+        /**
+         * <p>The device information.</p>
+         */
         @NameInMap("info")
         public GetDeviceListResponseBodyDataDeviceListInfo info;
 
+        /**
+         * <p>The ID of the parent device.</p>
+         */
         @NameInMap("parentDevice")
         public String parentDevice;
 
+        /**
+         * <p>The level 2 meter type.</p>
+         */
         @NameInMap("secondTypeName")
         public String secondTypeName;
 
@@ -202,18 +251,33 @@ public class GetDeviceListResponseBody extends TeaModel {
     }
 
     public static class GetDeviceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The code returned for the request.</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The devices.</p>
+         */
         @NameInMap("deviceList")
         public java.util.List<GetDeviceListResponseBodyDataDeviceList> deviceList;
 
+        /**
+         * <p>The ID of the site.</p>
+         */
         @NameInMap("factoryId")
         public String factoryId;
 
+        /**
+         * <p>The HTTP status code.</p>
+         */
         @NameInMap("httpCode")
         public Integer httpCode;
 
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         */
         @NameInMap("success")
         public Boolean success;
 

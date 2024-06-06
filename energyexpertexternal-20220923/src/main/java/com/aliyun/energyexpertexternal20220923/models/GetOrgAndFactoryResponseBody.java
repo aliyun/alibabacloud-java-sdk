@@ -4,18 +4,33 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class GetOrgAndFactoryResponseBody extends TeaModel {
+    /**
+     * <p>The code returned for the request.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>data</p>
+     */
     @NameInMap("data")
     public java.util.List<GetOrgAndFactoryResponseBodyData> data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,9 +80,15 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     }
 
     public static class GetOrgAndFactoryResponseBodyDataFactoryList extends TeaModel {
+        /**
+         * <p>The site ID.</p>
+         */
         @NameInMap("factoryId")
         public String factoryId;
 
+        /**
+         * <p>The site name.</p>
+         */
         @NameInMap("factoryName")
         public String factoryName;
 
@@ -95,15 +116,27 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     }
 
     public static class GetOrgAndFactoryResponseBodyData extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID.</p>
+         */
         @NameInMap("aliyunPk")
         public String aliyunPk;
 
+        /**
+         * <p>The sites.</p>
+         */
         @NameInMap("factoryList")
         public java.util.List<GetOrgAndFactoryResponseBodyDataFactoryList> factoryList;
 
+        /**
+         * <p>The enterprise ID.</p>
+         */
         @NameInMap("organizationId")
         public String organizationId;
 
+        /**
+         * <p>The enterprise name.</p>
+         */
         @NameInMap("organizationName")
         public String organizationName;
 

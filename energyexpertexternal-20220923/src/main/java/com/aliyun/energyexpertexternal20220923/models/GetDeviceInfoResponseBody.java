@@ -4,18 +4,33 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceInfoResponseBody extends TeaModel {
+    /**
+     * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public GetDeviceInfoResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,21 +80,39 @@ public class GetDeviceInfoResponseBody extends TeaModel {
     }
 
     public static class GetDeviceInfoResponseBodyDataRecordList extends TeaModel {
+        /**
+         * <p>The device identifier.</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
+        /**
+         * <p>The parameter name.</p>
+         */
         @NameInMap("paramName")
         public String paramName;
 
+        /**
+         * <p>The date on which the statistics were collected.</p>
+         */
         @NameInMap("statisticsDate")
         public String statisticsDate;
 
+        /**
+         * <p>The type of the measuring point.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The unit of the parameter value.</p>
+         */
         @NameInMap("unit")
         public String unit;
 
+        /**
+         * <p>The value of the measuring point.</p>
+         */
         @NameInMap("value")
         public Double value;
 
@@ -139,18 +172,33 @@ public class GetDeviceInfoResponseBody extends TeaModel {
     }
 
     public static class GetDeviceInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the device.</p>
+         */
         @NameInMap("deviceId")
         public String deviceId;
 
+        /**
+         * <p>The name of the device.</p>
+         */
         @NameInMap("deviceName")
         public String deviceName;
 
+        /**
+         * <p>The level 1 meter type.</p>
+         */
         @NameInMap("firstTypeName")
         public String firstTypeName;
 
+        /**
+         * <p>The device parameters.</p>
+         */
         @NameInMap("recordList")
         public java.util.List<GetDeviceInfoResponseBodyDataRecordList> recordList;
 
+        /**
+         * <p>The level 2 meter type.</p>
+         */
         @NameInMap("secondTypeName")
         public String secondTypeName;
 

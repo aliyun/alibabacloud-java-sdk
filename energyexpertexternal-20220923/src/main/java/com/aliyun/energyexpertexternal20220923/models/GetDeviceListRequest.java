@@ -4,6 +4,11 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceListRequest extends TeaModel {
+    /**
+     * <p>The ID of the site.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("factoryId")
     public String factoryId;
 
