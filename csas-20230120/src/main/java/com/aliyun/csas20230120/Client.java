@@ -2427,6 +2427,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 吊销用户登录会话
+     *
+     * @param request RevokeUserSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeUserSessionResponse
+     */
+    public RevokeUserSessionResponse revokeUserSessionWithOptions(RevokeUserSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.externalIds)) {
+            query.put("ExternalIds", request.externalIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idpId)) {
+            query.put("IdpId", request.idpId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeUserSession"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeUserSessionResponse());
+    }
+
+    /**
+     * @summary 吊销用户登录会话
+     *
+     * @param request RevokeUserSessionRequest
+     * @return RevokeUserSessionResponse
+     */
+    public RevokeUserSessionResponse revokeUserSession(RevokeUserSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeUserSessionWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 修改自定义身份源指定用户
      *
      * @param request UpdateClientUserRequest
