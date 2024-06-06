@@ -55,11 +55,7 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag value.</p>
-     * <br>
-     * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
-     * <br>
-     * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</p>
+     * <p>The tags to be added to the customer gateway.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCustomerGatewaysRequestTag> tag;
@@ -151,21 +147,21 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
 
     public static class DescribeCustomerGatewaysRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key cannot be an empty string.</p>
+         * <p>The key of the tag. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          * <br>
-         * <p>You can specify at most 20 tag keys in each call.</p>
+         * <p>You can specify at most 20 tag keys at a time.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * <br>
-         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
          */
         @NameInMap("Value")
         public String value;

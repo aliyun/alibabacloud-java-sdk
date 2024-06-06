@@ -85,7 +85,9 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The weight of the policy-based route.</p>
+     * <p>The weight of the policy-based route. Valid values:</p>
+     * <br>
+     * <p>You can call [DescribeVpnPbrRouteEntries](https://help.aliyun.com/document_detail/2526959.html) to query weights of policy-based routes.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

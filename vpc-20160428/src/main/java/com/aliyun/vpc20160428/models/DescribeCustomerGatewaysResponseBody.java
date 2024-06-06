@@ -81,13 +81,13 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
     public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -142,21 +142,21 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         public Long asn;
 
         /**
-         * <p>The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.</p>
+         * <p>The authentication key that is used to connect to the gateway device in the data center by using Border Gateway Protocol (BGP).</p>
          */
         @NameInMap("AuthKey")
         public String authKey;
 
         /**
-         * <p>The timestamp generated when the customer gateway was created. Unit: millisecond.</p>
+         * <p>The time when the customer gateway was created. Unit: millisecond.</p>
          * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The ID of the customer gateway.</p>
+         * <p>The customer gateway ID.</p>
          */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
@@ -168,7 +168,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The public IP address of the gateway device in the data center.</p>
+         * <p>The IP address of the gateway device in the data center.</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -182,13 +182,13 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         /**
          * <p>The ID of the resource group to which the customer gateway belongs.</p>
          * <br>
-         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.</p>
+         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The list of tags added to the customer gateway.</p>
+         * <p>The tags that are added to the customer gateway.</p>
          */
         @NameInMap("Tags")
         public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags tags;

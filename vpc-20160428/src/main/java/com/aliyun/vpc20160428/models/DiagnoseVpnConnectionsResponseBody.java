@@ -4,18 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The diagnostic information.</p>
+     */
     @NameInMap("VpnConnections")
     public java.util.List<DiagnoseVpnConnectionsResponseBodyVpnConnections> vpnConnections;
 
@@ -65,30 +80,63 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     }
 
     public static class DiagnoseVpnConnectionsResponseBodyVpnConnections extends TeaModel {
+        /**
+         * <p>The cause of the error.</p>
+         */
         @NameInMap("FailedReason")
         public String failedReason;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("FailedReasonCode")
         public String failedReasonCode;
 
+        /**
+         * <p>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: millisecond.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("FailedTime")
         public Long failedTime;
 
+        /**
+         * <p>If the values of the parameters configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameters configured for the IPsec-VPN connection.</p>
+         */
         @NameInMap("MismatchLocalParam")
         public String mismatchLocalParam;
 
+        /**
+         * <p>If the parameter values configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameter configured for the peer gateway device.</p>
+         */
         @NameInMap("MismatchRemoteParam")
         public String mismatchRemoteParam;
 
+        /**
+         * <p>The error level. Valid values:</p>
+         * <br>
+         * <p>*   **Critical**</p>
+         * <p>*   **Warn**</p>
+         * <p>*   **Normal**</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The log information about the error.</p>
+         */
         @NameInMap("SourceLog")
         public String sourceLog;
 
+        /**
+         * <p>The tunnel ID.</p>
+         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
+        /**
+         * <p>The ID of the IPsec-VPN connection.</p>
+         */
         @NameInMap("VpnConnectionId")
         public String vpnConnectionId;
 

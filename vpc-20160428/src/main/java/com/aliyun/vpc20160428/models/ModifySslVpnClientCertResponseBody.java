@@ -11,13 +11,13 @@ public class ModifySslVpnClientCertResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the SSL-VPN client certificate.</p>
+     * <p>The ID of the SSL client certificate.</p>
      */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;

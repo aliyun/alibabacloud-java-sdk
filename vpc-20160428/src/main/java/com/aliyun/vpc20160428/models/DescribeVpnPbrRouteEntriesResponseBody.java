@@ -81,7 +81,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry extends TeaModel {
         /**
-         * <p>The time when the policy-based route was created. Unit: milliseconds.</p>
+         * <p>The time when the policy-based route was created. Unit: millisecond.</p>
          * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
@@ -97,7 +97,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The ID of the tunnel associated with the next hop of the policy-based route.</p>
          * <br>
-         * <p>This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
+         * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
          */
         @NameInMap("NextHopTunnelId")
         public String nextHopTunnelId;
@@ -132,20 +132,20 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The VPN gateway ID.</p>
+         * <p>The ID of the VPN gateway.</p>
          */
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
 
         /**
-         * <p>The weight of the policy-based route. Valid values:</p>
+         * <p>The weight of the policy-based route.</p>
          * <br>
-         * <p>*   For a VPN gateway that supports the dual-tunnel mode, the default value is **100**.</p>
+         * <p>For a VPN gateway that supports IPsec-VPN connections in single-tunnel mode, the weight of a policy-based route indicates the priority of the route.</p>
          * <br>
-         * <p>*   For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.</p>
+         * <p>*   **100**: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.</p>
+         * <p>*   **0**: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.</p>
          * <br>
-         * <p>    *   **100**: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.</p>
-         * <p>    *   **0**: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.</p>
+         * <p>>  For a VPN gateway that does not support IPsec-VPN connections in single-tunnel mode, this parameter does not take effect.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

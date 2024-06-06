@@ -23,7 +23,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The detailed information about the SSL servers.</p>
+     * <p>The detailed information about the SSL-VPN server.</p>
      */
     @NameInMap("SslVpnServers")
     public DescribeSslVpnServersResponseBodySslVpnServers sslVpnServers;
@@ -108,7 +108,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         public Integer connections;
 
         /**
-         * <p>The timestamp generated when the SSL server was created.</p>
+         * <p>The timestamp generated when the SSL-VPN server was created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -135,7 +135,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         public String IDaaSInstanceVersion;
 
         /**
-         * <p>The ID of the region where the IDaaS instance is created.</p>
+         * <p>The region ID of the IDaaS instance.</p>
          */
         @NameInMap("IDaaSRegionId")
         public String IDaaSRegionId;
@@ -159,39 +159,39 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
-         * <p>The name of the SSL server.</p>
+         * <p>The name of the SSL-VPN server.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The port that is used by the SSL server.</p>
+         * <p>The port that is used by the SSL-VPN server.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The protocol that is used by the SSL server.</p>
+         * <p>The protocol that is used by the SSL-VPN server.</p>
          */
         @NameInMap("Proto")
         public String proto;
 
         /**
-         * <p>The ID of the region where the SSL server is created.</p>
+         * <p>The region ID of the SSL-VPN server.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the SSL server belongs.</p>
+         * <p>The resource group ID of the SSL-VPN server.</p>
          * <br>
-         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.</p>
+         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the SSL server.</p>
+         * <p>The ID of the SSL-VPN server.</p>
          */
         @NameInMap("SslVpnServerId")
         public String sslVpnServerId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRouteEntryRequest extends TeaModel {
     /**
-     * <p>The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</p>
+     * <p>The destination CIDR block of the route. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;

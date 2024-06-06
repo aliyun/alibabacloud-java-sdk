@@ -65,9 +65,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
      * <br>
-     * <p>The SSL client certificate is the same as the resource group of the SSL server associated with it.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.</p>
+     * <p>The SSL client certificate and the SSL server associated with the SSL client certificate belong to the same resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

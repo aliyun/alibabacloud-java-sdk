@@ -15,7 +15,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new weight that you want to set for the destination-based route. Valid values:</p>
+     * <p>The new weight of the destination-based route. Valid values:</p>
      * <br>
      * <p>*   **0**: a low priority</p>
      * <p>*   **100**: a high priority</p>
@@ -76,7 +76,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The previous weight of the destination-based route. Valid values:</p>
+     * <p>The original weight of the destination-based route. Valid values:</p>
      * <br>
      * <p>*   **0**: a low priority</p>
      * <p>*   **100**: a high priority</p>
