@@ -97,6 +97,9 @@ public class ListCampaignsResponseBody extends TeaModel {
         @NameInMap("CompletionRate")
         public Float completionRate;
 
+        @NameInMap("ContactFlowId")
+        public String contactFlowId;
+
         @NameInMap("MaxAttemptCount")
         public Long maxAttemptCount;
 
@@ -192,6 +195,14 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
         public Float getCompletionRate() {
             return this.completionRate;
+        }
+
+        public ListCampaignsResponseBodyDataList setContactFlowId(String contactFlowId) {
+            this.contactFlowId = contactFlowId;
+            return this;
+        }
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         public ListCampaignsResponseBodyDataList setMaxAttemptCount(Long maxAttemptCount) {

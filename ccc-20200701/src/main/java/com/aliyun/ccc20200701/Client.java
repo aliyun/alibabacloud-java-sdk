@@ -1569,12 +1569,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
+     *
      * @summary 创建呼入控制号码
      *
      * @param request CreateCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCustomCallTaggingResponse
      */
+    // Deprecated
     public CreateCustomCallTaggingResponse createCustomCallTaggingWithOptions(CreateCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1604,11 +1607,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
+     *
      * @summary 创建呼入控制号码
      *
      * @param request CreateCustomCallTaggingRequest
      * @return CreateCustomCallTaggingResponse
      */
+    // Deprecated
     public CreateCustomCallTaggingResponse createCustomCallTagging(CreateCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCustomCallTaggingWithOptions(request, runtime);
@@ -6143,12 +6149,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+     *
      * @summary ListLegacyAgentEventLogs
      *
      * @param request ListLegacyAgentEventLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLegacyAgentEventLogsResponse
      */
+    // Deprecated
     public ListLegacyAgentEventLogsResponse listLegacyAgentEventLogsWithOptions(ListLegacyAgentEventLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6194,23 +6203,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+     *
      * @summary ListLegacyAgentEventLogs
      *
      * @param request ListLegacyAgentEventLogsRequest
      * @return ListLegacyAgentEventLogsResponse
      */
+    // Deprecated
     public ListLegacyAgentEventLogsResponse listLegacyAgentEventLogs(ListLegacyAgentEventLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listLegacyAgentEventLogsWithOptions(request, runtime);
     }
 
     /**
+     * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+     *
      * @summary ListLegacyAgentStatusLogs
      *
      * @param request ListLegacyAgentStatusLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLegacyAgentStatusLogsResponse
      */
+    // Deprecated
     public ListLegacyAgentStatusLogsResponse listLegacyAgentStatusLogsWithOptions(ListLegacyAgentStatusLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6256,11 +6271,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
+     *
      * @summary ListLegacyAgentStatusLogs
      *
      * @param request ListLegacyAgentStatusLogsRequest
      * @return ListLegacyAgentStatusLogsResponse
      */
+    // Deprecated
     public ListLegacyAgentStatusLogsResponse listLegacyAgentStatusLogs(ListLegacyAgentStatusLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listLegacyAgentStatusLogsWithOptions(request, runtime);
