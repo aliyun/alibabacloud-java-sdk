@@ -1,3 +1,7 @@
+2024-06-06 Version: 1.6.0
+- Support API RevokeUserSession.
+
+
 2024-05-17 Version: 1.5.1
 - Update API ListUserDevices: add param InnerIp.
 
