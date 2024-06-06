@@ -4,18 +4,30 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateCertificateAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CertificateType")
     public String certificateType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageUrl")
     public java.io.InputStream imageUrlObject;
 
     @NameInMap("ResultType")
     public String resultType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 

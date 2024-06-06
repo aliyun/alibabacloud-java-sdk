@@ -54,9 +54,15 @@ public class CreateAsyncTranslateResponseBody extends TeaModel {
     }
 
     public static class CreateAsyncTranslateResponseBodyData extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Status")
         public String status;
 

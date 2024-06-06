@@ -7,6 +7,9 @@ public class GetTitleGenerateRequest extends TeaModel {
     @NameInMap("Attributes")
     public String attributes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CategoryId")
     public String categoryId;
 
@@ -16,12 +19,21 @@ public class GetTitleGenerateRequest extends TeaModel {
     @NameInMap("HotWords")
     public String hotWords;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Title")
     public String title;
 

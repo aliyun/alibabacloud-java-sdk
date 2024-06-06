@@ -7,6 +7,9 @@ public class GetDetectLanguageResponseBody extends TeaModel {
     @NameInMap("DetectedLanguage")
     public String detectedLanguage;
 
+    @NameInMap("LanguageProbabilities")
+    public String languageProbabilities;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class GetDetectLanguageResponseBody extends TeaModel {
     }
     public String getDetectedLanguage() {
         return this.detectedLanguage;
+    }
+
+    public GetDetectLanguageResponseBody setLanguageProbabilities(String languageProbabilities) {
+        this.languageProbabilities = languageProbabilities;
+        return this;
+    }
+    public String getLanguageProbabilities() {
+        return this.languageProbabilities;
     }
 
     public GetDetectLanguageResponseBody setRequestId(String requestId) {

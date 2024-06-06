@@ -13,12 +13,21 @@ public class TranslateImageBatchRequest extends TeaModel {
     @NameInMap("Field")
     public String field;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageUrls")
     public String imageUrls;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 

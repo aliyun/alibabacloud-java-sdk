@@ -83,6 +83,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 大文本异步翻译，支持5000-50000字翻译
+     *
+     * @param request CreateAsyncTranslateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAsyncTranslateResponse
+     */
     public CreateAsyncTranslateResponse createAsyncTranslateWithOptions(CreateAsyncTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -127,11 +134,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAsyncTranslateResponse());
     }
 
+    /**
+     * @summary 大文本异步翻译，支持5000-50000字翻译
+     *
+     * @param request CreateAsyncTranslateRequest
+     * @return CreateAsyncTranslateResponse
+     */
     public CreateAsyncTranslateResponse createAsyncTranslate(CreateAsyncTranslateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAsyncTranslateWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CreateDocTranslateTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDocTranslateTaskResponse
+     */
     public CreateDocTranslateTaskResponse createDocTranslateTaskWithOptions(CreateDocTranslateTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -176,6 +194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDocTranslateTaskResponse());
     }
 
+    /**
+     * @param request CreateDocTranslateTaskRequest
+     * @return CreateDocTranslateTaskResponse
+     */
     public CreateDocTranslateTaskResponse createDocTranslateTask(CreateDocTranslateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDocTranslateTaskWithOptions(request, runtime);
@@ -188,7 +210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -212,12 +234,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -255,6 +278,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return createDocTranslateTaskResp;
     }
 
+    /**
+     * @param request CreateImageTranslateTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateImageTranslateTaskResponse
+     */
     public CreateImageTranslateTaskResponse createImageTranslateTaskWithOptions(CreateImageTranslateTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -295,11 +323,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageTranslateTaskResponse());
     }
 
+    /**
+     * @param request CreateImageTranslateTaskRequest
+     * @return CreateImageTranslateTaskResponse
+     */
     public CreateImageTranslateTaskResponse createImageTranslateTask(CreateImageTranslateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createImageTranslateTaskWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 大文本异步翻译，支持5000-50000字翻译
+     *
+     * @param request GetAsyncTranslateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAsyncTranslateResponse
+     */
     public GetAsyncTranslateResponse getAsyncTranslateWithOptions(GetAsyncTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -324,11 +363,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAsyncTranslateResponse());
     }
 
+    /**
+     * @summary 大文本异步翻译，支持5000-50000字翻译
+     *
+     * @param request GetAsyncTranslateRequest
+     * @return GetAsyncTranslateResponse
+     */
     public GetAsyncTranslateResponse getAsyncTranslate(GetAsyncTranslateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAsyncTranslateWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetBatchTranslateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBatchTranslateResponse
+     */
     public GetBatchTranslateResponse getBatchTranslateWithOptions(GetBatchTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -373,11 +423,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetBatchTranslateResponse());
     }
 
+    /**
+     * @param request GetBatchTranslateRequest
+     * @return GetBatchTranslateResponse
+     */
     public GetBatchTranslateResponse getBatchTranslate(GetBatchTranslateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getBatchTranslateWithOptions(request, runtime);
     }
 
+    /**
+     * @summary GetBatchTranslateByVPC
+     *
+     * @param request GetBatchTranslateByVPCRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBatchTranslateByVPCResponse
+     */
     public GetBatchTranslateByVPCResponse getBatchTranslateByVPCWithOptions(GetBatchTranslateByVPCRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -422,11 +483,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetBatchTranslateByVPCResponse());
     }
 
+    /**
+     * @summary GetBatchTranslateByVPC
+     *
+     * @param request GetBatchTranslateByVPCRequest
+     * @return GetBatchTranslateByVPCResponse
+     */
     public GetBatchTranslateByVPCResponse getBatchTranslateByVPC(GetBatchTranslateByVPCRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getBatchTranslateByVPCWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 语种识别
+     *
+     * @param request GetDetectLanguageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDetectLanguageResponse
+     */
     public GetDetectLanguageResponse getDetectLanguageWithOptions(GetDetectLanguageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -451,11 +525,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDetectLanguageResponse());
     }
 
+    /**
+     * @summary 语种识别
+     *
+     * @param request GetDetectLanguageRequest
+     * @return GetDetectLanguageResponse
+     */
     public GetDetectLanguageResponse getDetectLanguage(GetDetectLanguageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDetectLanguageWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetDocTranslateTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocTranslateTaskResponse
+     */
     public GetDocTranslateTaskResponse getDocTranslateTaskWithOptions(GetDocTranslateTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -476,11 +561,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocTranslateTaskResponse());
     }
 
+    /**
+     * @param request GetDocTranslateTaskRequest
+     * @return GetDocTranslateTaskResponse
+     */
     public GetDocTranslateTaskResponse getDocTranslateTask(GetDocTranslateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDocTranslateTaskWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetImageDiagnoseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageDiagnoseResponse
+     */
     public GetImageDiagnoseResponse getImageDiagnoseWithOptions(GetImageDiagnoseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -509,11 +603,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageDiagnoseResponse());
     }
 
+    /**
+     * @param request GetImageDiagnoseRequest
+     * @return GetImageDiagnoseResponse
+     */
     public GetImageDiagnoseResponse getImageDiagnose(GetImageDiagnoseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getImageDiagnoseWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetImageTranslateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageTranslateResponse
+     */
     public GetImageTranslateResponse getImageTranslateWithOptions(GetImageTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -550,11 +653,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageTranslateResponse());
     }
 
+    /**
+     * @param request GetImageTranslateRequest
+     * @return GetImageTranslateResponse
+     */
     public GetImageTranslateResponse getImageTranslate(GetImageTranslateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getImageTranslateWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetImageTranslateTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageTranslateTaskResponse
+     */
     public GetImageTranslateTaskResponse getImageTranslateTaskWithOptions(GetImageTranslateTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -579,11 +691,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetImageTranslateTaskResponse());
     }
 
+    /**
+     * @param request GetImageTranslateTaskRequest
+     * @return GetImageTranslateTaskResponse
+     */
     public GetImageTranslateTaskResponse getImageTranslateTask(GetImageTranslateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getImageTranslateTaskWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetTitleDiagnoseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTitleDiagnoseResponse
+     */
     public GetTitleDiagnoseResponse getTitleDiagnoseWithOptions(GetTitleDiagnoseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -624,11 +745,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTitleDiagnoseResponse());
     }
 
+    /**
+     * @param request GetTitleDiagnoseRequest
+     * @return GetTitleDiagnoseResponse
+     */
     public GetTitleDiagnoseResponse getTitleDiagnose(GetTitleDiagnoseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTitleDiagnoseWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetTitleGenerateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTitleGenerateResponse
+     */
     public GetTitleGenerateResponse getTitleGenerateWithOptions(GetTitleGenerateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -677,11 +807,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTitleGenerateResponse());
     }
 
+    /**
+     * @param request GetTitleGenerateRequest
+     * @return GetTitleGenerateResponse
+     */
     public GetTitleGenerateResponse getTitleGenerate(GetTitleGenerateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTitleGenerateWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetTitleIntelligenceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTitleIntelligenceResponse
+     */
     public GetTitleIntelligenceResponse getTitleIntelligenceWithOptions(GetTitleIntelligenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -722,11 +861,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTitleIntelligenceResponse());
     }
 
+    /**
+     * @param request GetTitleIntelligenceRequest
+     * @return GetTitleIntelligenceResponse
+     */
     public GetTitleIntelligenceResponse getTitleIntelligence(GetTitleIntelligenceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTitleIntelligenceWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 获取图片批量翻译结果
+     *
+     * @param request GetTranslateImageBatchResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTranslateImageBatchResultResponse
+     */
     public GetTranslateImageBatchResultResponse getTranslateImageBatchResultWithOptions(GetTranslateImageBatchResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -751,11 +901,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTranslateImageBatchResultResponse());
     }
 
+    /**
+     * @summary 获取图片批量翻译结果
+     *
+     * @param request GetTranslateImageBatchResultRequest
+     * @return GetTranslateImageBatchResultResponse
+     */
     public GetTranslateImageBatchResultResponse getTranslateImageBatchResult(GetTranslateImageBatchResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTranslateImageBatchResultWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetTranslateReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTranslateReportResponse
+     */
     public GetTranslateReportResponse getTranslateReportWithOptions(GetTranslateReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -792,11 +953,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTranslateReportResponse());
     }
 
+    /**
+     * @param request GetTranslateReportRequest
+     * @return GetTranslateReportResponse
+     */
     public GetTranslateReportResponse getTranslateReport(GetTranslateReportRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTranslateReportWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 开通服务
+     *
+     * @param request OpenAlimtServiceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OpenAlimtServiceResponse
+     */
     public OpenAlimtServiceResponse openAlimtServiceWithOptions(OpenAlimtServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -825,11 +997,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenAlimtServiceResponse());
     }
 
+    /**
+     * @summary 开通服务
+     *
+     * @param request OpenAlimtServiceRequest
+     * @return OpenAlimtServiceResponse
+     */
     public OpenAlimtServiceResponse openAlimtService(OpenAlimtServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openAlimtServiceWithOptions(request, runtime);
     }
 
+    /**
+     * @param request TranslateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateResponse
+     */
     public TranslateResponse translateWithOptions(TranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -876,11 +1059,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateResponse());
     }
 
+    /**
+     * @param request TranslateRequest
+     * @return TranslateResponse
+     */
     public TranslateResponse translate(TranslateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateWithOptions(request, runtime);
     }
 
+    /**
+     * @param request TranslateCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateCertificateResponse
+     */
     public TranslateCertificateResponse translateCertificateWithOptions(TranslateCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -921,6 +1113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateCertificateResponse());
     }
 
+    /**
+     * @param request TranslateCertificateRequest
+     * @return TranslateCertificateResponse
+     */
     public TranslateCertificateResponse translateCertificate(TranslateCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateCertificateWithOptions(request, runtime);
@@ -933,7 +1129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -957,12 +1153,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1001,11 +1198,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-      *
-      * @param request TranslateECommerceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return TranslateECommerceResponse
+     * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+     *
+     * @param request TranslateECommerceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateECommerceResponse
      */
     // Deprecated
     public TranslateECommerceResponse translateECommerceWithOptions(TranslateECommerceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1055,10 +1252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
-      *
-      * @param request TranslateECommerceRequest
-      * @return TranslateECommerceResponse
+     * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
+     *
+     * @param request TranslateECommerceRequest
+     * @return TranslateECommerceResponse
      */
     // Deprecated
     public TranslateECommerceResponse translateECommerce(TranslateECommerceRequest request) throws Exception {
@@ -1066,6 +1263,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.translateECommerceWithOptions(request, runtime);
     }
 
+    /**
+     * @param request TranslateGeneralRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateGeneralResponse
+     */
     public TranslateGeneralResponse translateGeneralWithOptions(TranslateGeneralRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1112,11 +1314,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateGeneralResponse());
     }
 
+    /**
+     * @param request TranslateGeneralRequest
+     * @return TranslateGeneralResponse
+     */
     public TranslateGeneralResponse translateGeneral(TranslateGeneralRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateGeneralWithOptions(request, runtime);
     }
 
+    /**
+     * @summary TranslateGeneralVpc
+     *
+     * @param request TranslateGeneralVpcRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateGeneralVpcResponse
+     */
     public TranslateGeneralVpcResponse translateGeneralVpcWithOptions(TranslateGeneralVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1163,11 +1376,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateGeneralVpcResponse());
     }
 
+    /**
+     * @summary TranslateGeneralVpc
+     *
+     * @param request TranslateGeneralVpcRequest
+     * @return TranslateGeneralVpcResponse
+     */
     public TranslateGeneralVpcResponse translateGeneralVpc(TranslateGeneralVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateGeneralVpcWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 公有云图片翻译产品API
+     *
+     * @param request TranslateImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateImageResponse
+     */
     public TranslateImageResponse translateImageWithOptions(TranslateImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1212,11 +1438,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateImageResponse());
     }
 
+    /**
+     * @summary 公有云图片翻译产品API
+     *
+     * @param request TranslateImageRequest
+     * @return TranslateImageResponse
+     */
     public TranslateImageResponse translateImage(TranslateImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateImageWithOptions(request, runtime);
     }
 
+    /**
+     * @summary 批量图片翻译接口
+     *
+     * @param request TranslateImageBatchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TranslateImageBatchResponse
+     */
     public TranslateImageBatchResponse translateImageBatchWithOptions(TranslateImageBatchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1261,6 +1500,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateImageBatchResponse());
     }
 
+    /**
+     * @summary 批量图片翻译接口
+     *
+     * @param request TranslateImageBatchRequest
+     * @return TranslateImageBatchResponse
+     */
     public TranslateImageBatchResponse translateImageBatch(TranslateImageBatchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateImageBatchWithOptions(request, runtime);

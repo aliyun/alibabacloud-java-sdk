@@ -4,21 +4,39 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetBatchTranslateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApiType")
     public String apiType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormatType")
     public String formatType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Scene")
     public String scene;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceText")
     public String sourceText;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 

@@ -10,15 +10,24 @@ public class CreateDocTranslateTaskAdvanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
     @NameInMap("Scene")
     public String scene;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 

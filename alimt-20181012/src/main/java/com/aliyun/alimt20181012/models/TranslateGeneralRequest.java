@@ -7,18 +7,30 @@ public class TranslateGeneralRequest extends TeaModel {
     @NameInMap("Context")
     public String context;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FormatType")
     public String formatType;
 
     @NameInMap("Scene")
     public String scene;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceText")
     public String sourceText;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 

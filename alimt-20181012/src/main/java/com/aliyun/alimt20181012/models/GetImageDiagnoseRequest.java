@@ -7,6 +7,9 @@ public class GetImageDiagnoseRequest extends TeaModel {
     @NameInMap("Extra")
     public String extra;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Url")
     public String url;
 
