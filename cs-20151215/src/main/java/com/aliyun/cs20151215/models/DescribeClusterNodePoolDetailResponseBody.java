@@ -418,6 +418,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
+        /**
+         * <p>扩容后的节点是否可调度。</p>
+         */
         @NameInMap("unschedulable")
         public Boolean unschedulable;
 
@@ -1021,6 +1024,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        /**
+         * <p>【已废弃】请使用参数security_hardening_os替代。</p>
+         */
         @NameInMap("cis_enabled")
         @Deprecated
         public Boolean cisEnabled;
@@ -1058,6 +1064,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <p>操作系统镜像类型。</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
@@ -1094,6 +1103,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("key_pair")
         public String keyPair;
 
+        /**
+         * <p>弹出的ECS实例是否使用以非root用户登录。</p>
+         */
         @NameInMap("login_as_non_root")
         public Boolean loginAsNonRoot;
 
@@ -1207,9 +1219,20 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <p>阿里云OS安全加固。取值：</p>
+         * <br>
+         * <p>- `true`：开启阿里云OS安全加固。</p>
+         * <p>- `false`：不开启阿里云OS安全加固。</p>
+         * <br>
+         * <p>默认值：`false`。</p>
+         */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 
+        /**
+         * <p>是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。</p>
+         */
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
 
@@ -1246,9 +1269,23 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        /**
+         * <p>节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。</p>
+         */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        /**
+         * <p>系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值：</p>
+         * <p>- `cloud`：普通云盘。</p>
+         * <p>- `cloud_efficiency`：高效云盘。</p>
+         * <p>- `cloud_ssd`：SSD云盘。</p>
+         * <p>- `cloud_essd`：ESSD云盘。</p>
+         * <p>- `cloud_auto`：ESSD AutoPL 云盘。</p>
+         * <p>- `cloud_essd_entry`：ESSD Entry 云盘。</p>
+         * <br>
+         * <p>默认值：`cloud_efficiency`</p>
+         */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
@@ -1261,12 +1298,23 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        /**
+         * <p>系统盘采用的加密算法。取值范围：aes-256。</p>
+         */
         @NameInMap("system_disk_encrypt_algorithm")
         public String systemDiskEncryptAlgorithm;
 
+        /**
+         * <p>是否加密系统盘。取值：</p>
+         * <p>- `true`：加密。</p>
+         * <p>- `false`：不加密。</p>
+         */
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;
 
+        /**
+         * <p>系统盘使用的KMS密钥ID。</p>
+         */
         @NameInMap("system_disk_kms_key_id")
         public String systemDiskKmsKeyId;
 
@@ -1276,6 +1324,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <p>节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。</p>
+         */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 

@@ -123,7 +123,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestAutoScaling extends TeaModel {
         /**
-         * <p>The maximum bandwidth of the elastic IP address (EIP).</p>
+         * <p>The maximum bandwidth of the EIP.</p>
          */
         @NameInMap("eip_bandwidth")
         @Deprecated
@@ -153,7 +153,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Specifies whether to associate an EIP with the node pool. Valid values:</p>
+         * <p>Specifies whether to associate an elastic IP address (EIP) with the node pool. Valid values:</p>
          * <br>
          * <p>*   `true`: associates an EIP with the node pool.</p>
          * <p>*   `false`: does not associate an EIP with the node pool.</p>
@@ -177,12 +177,12 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Long minInstances;
 
         /**
-         * <p>The instance types that can be used for the auto scaling of the node pool. Valid values:</p>
+         * <p>The instance types that can be used for auto scaling of the node pool. Valid values:</p>
          * <br>
          * <p>*   `cpu`: regular instance.</p>
          * <p>*   `gpu`: GPU-accelerated instance.</p>
-         * <p>*   `gpushare`: shared GPU-accelerated instance</p>
-         * <p>*   `spot`: preemptible instance</p>
+         * <p>*   `gpushare`: shared GPU-accelerated instance.</p>
+         * <p>*   `spot`: preemptible instance.</p>
          * <br>
          * <p>Default value: `cpu`.</p>
          */
@@ -298,11 +298,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String runtimeVersion;
 
         /**
-         * <p>The configurations of node taints.</p>
+         * <p>The configuration of a node taint.</p>
          */
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
+        /**
+         * <p>Specifies whether the nodes are unschedulable after a scale-out activity is performed.</p>
+         */
         @NameInMap("unschedulable")
         public Boolean unschedulable;
 
@@ -385,10 +388,10 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     public static class ModifyClusterNodePoolRequestManagementAutoRepairPolicy extends TeaModel {
         /**
-         * <p>Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:</p>
+         * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
          * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <p>*   `true`: yes.</p>
+         * <p>*   `false`: no.</p>
          */
         @NameInMap("restart_node")
         public Boolean restartNode;
@@ -412,15 +415,31 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         /**
          * <p>Specifies whether ACK is allowed to automatically update the kubelet. Valid values:</p>
          * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <p>*   `true`: yes.</p>
+         * <p>*   `false`: no.</p>
          */
         @NameInMap("auto_upgrade_kubelet")
         public Boolean autoUpgradeKubelet;
 
+        /**
+         * <p>Specifies whether ACK is allowed to automatically update the operating system. This parameter takes effect only when you specify `auto_upgrade=true`. Valid values:</p>
+         * <br>
+         * <p>*   `true`: yes.</p>
+         * <p>*   `false`: no.</p>
+         * <br>
+         * <p>Default value: `false`.</p>
+         */
         @NameInMap("auto_upgrade_os")
         public Boolean autoUpgradeOs;
 
+        /**
+         * <p>Specifies whether ACK is allowed to automatically update the runtime. This parameter takes effect only when you specify `auto_upgrade=true`. Valid values:</p>
+         * <br>
+         * <p>*   `true`: yes.</p>
+         * <p>*   `false`: no.</p>
+         * <br>
+         * <p>Default value: `false`.</p>
+         */
         @NameInMap("auto_upgrade_runtime")
         public Boolean autoUpgradeRuntime;
 
@@ -459,8 +478,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         /**
          * <p>Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:</p>
          * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <p>*   `true`: yes.</p>
+         * <p>*   `false`: no.</p>
          */
         @NameInMap("restart_node")
         public Boolean restartNode;
@@ -606,8 +625,8 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         /**
          * <p>Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:</p>
          * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `true`: no</p>
+         * <p>*   `true`: yes.</p>
+         * <p>*   `true`: no.</p>
          */
         @NameInMap("auto_vul_fix")
         public Boolean autoVulFix;
@@ -753,7 +772,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The type of private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:</p>
+         * <p>The type of the private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:</p>
          * <br>
          * <p>*   `Open`: specifies an open private node pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.</p>
          * <p>*   `Target`: specifies a private node pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be launched.</p>
@@ -836,7 +855,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The duration of the auto-renewal. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.</p>
+         * <p>The auto-renewal duration. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.</p>
          * <br>
          * <p>If you specify `PeriodUnit=Month`, the valid values are 1, 2, 3, 6, and 12.</p>
          */
@@ -853,7 +872,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Boolean compensateWithOnDemand;
 
         /**
-         * <p>The configurations of the data disks that are mounted to the nodes in the node pool. You can mount 0 to 10 data disks. You can mount at most 10 data disks to the nodes in the node pool.</p>
+         * <p>The configurations of the data disks that are mounted to the nodes in the node pool. You can mount at most 10 data disks to the nodes in the node pool.</p>
          */
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
@@ -951,7 +970,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public Long onDemandPercentageAboveBaseCapacity;
 
         /**
-         * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when `instance_charge_type` is set to `PrePaid`.</p>
+         * <p>The subscription duration of the nodes in the node pool. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.</p>
          * <br>
          * <p>If `PeriodUnit=Month` is specified, the valid values are 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
          */
@@ -1035,22 +1054,22 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>Indicates whether Burst is enabled for the system disk when the disk type is cloud_auto.</p>
+         * <p>Specifies whether to enable Burst for the system disk when the disk type is cloud_auto.</p>
          */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: ultra disk cloud_ssd: standard SSD cloud_essd: indicates an enhanced SSD (ESSD).</p>
+         * <p>The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk. cloud_efficiency: ultra disk. cloud_ssd: standard SSD. cloud_essd: enhanced SSD (ESSD).</p>
          */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
         /**
-         * <p>The type of system disk. Valid values:</p>
+         * <p>The type of the system disk. Valid values:</p>
          * <br>
          * <p>*   `cloud_efficiency`: ultra disk.</p>
-         * <p>*   `cloud_ssd`: standard SSD</p>
+         * <p>*   `cloud_ssd`: standard SSD.</p>
          * <br>
          * <p>Default value: `cloud_ssd`.</p>
          */
@@ -1064,7 +1083,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public String systemDiskEncryptAlgorithm;
 
         /**
-         * <p>Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
+         * <p>Specifies whether to encrypt the system disk. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
          */
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;

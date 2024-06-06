@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNodePoolsRequest extends TeaModel {
+    /**
+     * <p>The name of the node pool.</p>
+     */
     @NameInMap("NodepoolName")
     public String nodepoolName;
 
