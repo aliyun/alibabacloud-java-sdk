@@ -81,6 +81,15 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DestCaCertificatePassword")
     public String destCaCertificatePassword;
 
+    @NameInMap("DestClientCertOssUrl")
+    public String destClientCertOssUrl;
+
+    @NameInMap("DestClientKeyOssUrl")
+    public String destClientKeyOssUrl;
+
+    @NameInMap("DestClientPassword")
+    public String destClientPassword;
+
     /**
      * <p>The password of the destination database account.</p>
      * <br>
@@ -474,6 +483,15 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("SrcCaCertificatePassword")
     public String srcCaCertificatePassword;
 
+    @NameInMap("SrcClientCertOssUrl")
+    public String srcClientCertOssUrl;
+
+    @NameInMap("SrcClientKeyOssUrl")
+    public String srcClientKeyOssUrl;
+
+    @NameInMap("SrcClientPassword")
+    public String srcClientPassword;
+
     /**
      * <p>Specifies whether to perform incremental data migration or synchronization. Default value: false. Valid values:</p>
      * <br>
@@ -584,6 +602,30 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getDestCaCertificatePassword() {
         return this.destCaCertificatePassword;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDestClientCertOssUrl(String destClientCertOssUrl) {
+        this.destClientCertOssUrl = destClientCertOssUrl;
+        return this;
+    }
+    public String getDestClientCertOssUrl() {
+        return this.destClientCertOssUrl;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDestClientKeyOssUrl(String destClientKeyOssUrl) {
+        this.destClientKeyOssUrl = destClientKeyOssUrl;
+        return this;
+    }
+    public String getDestClientKeyOssUrl() {
+        return this.destClientKeyOssUrl;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDestClientPassword(String destClientPassword) {
+        this.destClientPassword = destClientPassword;
+        return this;
+    }
+    public String getDestClientPassword() {
+        return this.destClientPassword;
     }
 
     public ConfigureDtsJobAdvanceRequest setDestinationEndpointDataBaseName(String destinationEndpointDataBaseName) {
@@ -920,6 +962,30 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getSrcCaCertificatePassword() {
         return this.srcCaCertificatePassword;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setSrcClientCertOssUrl(String srcClientCertOssUrl) {
+        this.srcClientCertOssUrl = srcClientCertOssUrl;
+        return this;
+    }
+    public String getSrcClientCertOssUrl() {
+        return this.srcClientCertOssUrl;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setSrcClientKeyOssUrl(String srcClientKeyOssUrl) {
+        this.srcClientKeyOssUrl = srcClientKeyOssUrl;
+        return this;
+    }
+    public String getSrcClientKeyOssUrl() {
+        return this.srcClientKeyOssUrl;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setSrcClientPassword(String srcClientPassword) {
+        this.srcClientPassword = srcClientPassword;
+        return this;
+    }
+    public String getSrcClientPassword() {
+        return this.srcClientPassword;
     }
 
     public ConfigureDtsJobAdvanceRequest setStructureInitialization(Boolean structureInitialization) {
