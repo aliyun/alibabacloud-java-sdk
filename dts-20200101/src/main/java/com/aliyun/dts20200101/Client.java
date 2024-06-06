@@ -135,6 +135,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestCaCertificatePassword", request.destCaCertificatePassword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destClientCertOssUrl)) {
+            query.put("DestClientCertOssUrl", request.destClientCertOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destClientKeyOssUrl)) {
+            query.put("DestClientKeyOssUrl", request.destClientKeyOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destClientPassword)) {
+            query.put("DestClientPassword", request.destClientPassword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.destinationEndpointDataBaseName)) {
             query.put("DestinationEndpointDataBaseName", request.destinationEndpointDataBaseName);
         }
@@ -297,6 +309,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.srcCaCertificatePassword)) {
             query.put("SrcCaCertificatePassword", request.srcCaCertificatePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcClientCertOssUrl)) {
+            query.put("SrcClientCertOssUrl", request.srcClientCertOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcClientKeyOssUrl)) {
+            query.put("SrcClientKeyOssUrl", request.srcClientKeyOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcClientPassword)) {
+            query.put("SrcClientPassword", request.srcClientPassword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.structureInitialization)) {
