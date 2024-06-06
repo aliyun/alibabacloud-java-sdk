@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionLogsRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.</p>
+     * <p>The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
-     * <p>>  If you specify **From**, you must also specify **To** or **MinutePeriod**.</p>
+     * <p>>  If you specify **From**, you must specify **To** or **MinutePeriod**.</p>
      */
     @NameInMap("From")
     public Integer from;
 
     /**
-     * <p>The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.</p>
+     * <p>The interval at which log data is collected. Valid values: **1** to **10**. Unit: minutes.</p>
      * <br>
-     * <p>>  If both **From** and **To** are not specified, you must specify **MinutePeriod**.</p>
+     * <p>>  If you do not specify **From** and **To**, you must specify **MinutePeriod**.</p>
      */
     @NameInMap("MinutePeriod")
     public Integer minutePeriod;
@@ -27,19 +27,19 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
+     * <p>The region ID of the IPsec-VPN connection.</p>
      * <br>
      * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
      * <br>
@@ -55,15 +55,17 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The end of the time range to query. The value must be a UNIX timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.</p>
+     * <p>The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
-     * <p>>  If you specify **To**, you must also specify **From** or **MinutePeriod**.</p>
+     * <p>>  If you specify **To**, you must specify **From** or **MinutePeriod**.</p>
      */
     @NameInMap("To")
     public Integer to;
 
     /**
-     * <p>The tunnel ID of the IPsec-VPN connection. You can specify this parameter only for IPsec-VPN connections in dual-tunnel mode.</p>
+     * <p>The ID of the IPsec-VPN connection.</p>
+     * <br>
+     * <p>This parameter is available only for a dual-tunnel IPsec-VPN connection.</p>
      */
     @NameInMap("TunnelId")
     public String tunnelId;

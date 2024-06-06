@@ -82,8 +82,6 @@ public class CreateFullNatEntryRequest extends TeaModel {
 
     /**
      * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("NatIpPort")
     public String natIpPort;

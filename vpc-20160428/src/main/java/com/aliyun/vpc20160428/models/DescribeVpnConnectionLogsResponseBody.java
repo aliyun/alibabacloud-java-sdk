@@ -11,9 +11,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>An array of strings.</p>
-     * <br>
-     * <p>Each item in the array is a log entry.</p>
+     * <p>The log list.</p>
      */
     @NameInMap("Data")
     public DescribeVpnConnectionLogsResponseBodyData data;
@@ -21,26 +19,26 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the log is accurate. Valid values:</p>
      * <br>
-     * <p>*   **true**: accurate</p>
-     * <p>*   **false**: inaccurate</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsCompleted")
     public Boolean isCompleted;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
