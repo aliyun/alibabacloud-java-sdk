@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>energyexpertexternal20220923</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>energyexpertexternal20220923</name>
   <description>Alibaba Cloud energyExpertExternal (20220923) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.18</version>
+      <version>0.2.22</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.3</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -62,6 +62,26 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>oss-client</artifactId>
+      <version>3.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openplatform20191219</artifactId>
+      <version>5.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>oss-util</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-fileform</artifactId>
+      <version>0.0.3</version>
     </dependency>
   </dependencies>
   <build>
