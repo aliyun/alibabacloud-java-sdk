@@ -78,6 +78,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @summary 创建一个DLC作业
+     *
+     * @param request CreateJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateJobResponse
+     */
     public CreateJobResponse createJobWithOptions(CreateJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -175,12 +183,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateJobResponse());
     }
 
+    /**
+     * @summary 创建一个DLC作业
+     *
+     * @param request CreateJobRequest
+     * @return CreateJobResponse
+     */
     public CreateJobResponse createJob(CreateJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createJobWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 创建一个Tensorboard
+     *
+     * @param request CreateTensorboardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTensorboardResponse
+     */
     public CreateTensorboardResponse createTensorboardWithOptions(CreateTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -270,12 +292,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTensorboardResponse());
     }
 
+    /**
+     * @summary 创建一个Tensorboard
+     *
+     * @param request CreateTensorboardRequest
+     * @return CreateTensorboardResponse
+     */
     public CreateTensorboardResponse createTensorboard(CreateTensorboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createTensorboardWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 删除一个DLC作业
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteJobResponse
+     */
     public DeleteJobResponse deleteJobWithOptions(String JobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -294,12 +329,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteJobResponse());
     }
 
+    /**
+     * @summary 删除一个DLC作业
+     *
+     * @return DeleteJobResponse
+     */
     public DeleteJobResponse deleteJob(String JobId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteJobWithOptions(JobId, headers, runtime);
     }
 
+    /**
+     * @summary 删除一个数据源配置
+     *
+     * @param request DeleteTensorboardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTensorboardResponse
+     */
     public DeleteTensorboardResponse deleteTensorboardWithOptions(String TensorboardId, DeleteTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -325,12 +373,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTensorboardResponse());
     }
 
+    /**
+     * @summary 删除一个数据源配置
+     *
+     * @param request DeleteTensorboardRequest
+     * @return DeleteTensorboardResponse
+     */
     public DeleteTensorboardResponse deleteTensorboard(String TensorboardId, DeleteTensorboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取一个DLC作业详情
+     *
+     * @param request GetJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobResponse
+     */
     public GetJobResponse getJobWithOptions(String JobId, GetJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -356,12 +418,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobResponse());
     }
 
+    /**
+     * @summary 获取一个DLC作业详情
+     *
+     * @param request GetJobRequest
+     * @return GetJobResponse
+     */
     public GetJobResponse getJob(String JobId, GetJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobWithOptions(JobId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取作业的事件
+     *
+     * @param request GetJobEventsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobEventsResponse
+     */
     public GetJobEventsResponse getJobEventsWithOptions(String JobId, GetJobEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -395,12 +471,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobEventsResponse());
     }
 
+    /**
+     * @summary 获取作业的事件
+     *
+     * @param request GetJobEventsRequest
+     * @return GetJobEventsResponse
+     */
     public GetJobEventsResponse getJobEvents(String JobId, GetJobEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobEventsWithOptions(JobId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取一个作业的资源监控指标
+     *
+     * @param request GetJobMetricsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobMetricsResponse
+     */
     public GetJobMetricsResponse getJobMetricsWithOptions(String JobId, GetJobMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -442,12 +532,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobMetricsResponse());
     }
 
+    /**
+     * @summary 获取一个作业的资源监控指标
+     *
+     * @param request GetJobMetricsRequest
+     * @return GetJobMetricsResponse
+     */
     public GetJobMetricsResponse getJobMetrics(String JobId, GetJobMetricsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobMetricsWithOptions(JobId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取DLC作业某次算力健康检测结果
+     *
+     * @param request GetJobSanityCheckResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobSanityCheckResultResponse
+     */
     public GetJobSanityCheckResultResponse getJobSanityCheckResultWithOptions(String JobId, GetJobSanityCheckResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -481,12 +585,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobSanityCheckResultResponse());
     }
 
+    /**
+     * @summary 获取DLC作业某次算力健康检测结果
+     *
+     * @param request GetJobSanityCheckResultRequest
+     * @return GetJobSanityCheckResultResponse
+     */
     public GetJobSanityCheckResultResponse getJobSanityCheckResult(String JobId, GetJobSanityCheckResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobSanityCheckResultWithOptions(JobId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取作业中一个运行实例的系统事件
+     *
+     * @param request GetPodEventsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPodEventsResponse
+     */
     public GetPodEventsResponse getPodEventsWithOptions(String JobId, String PodId, GetPodEventsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -524,12 +642,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPodEventsResponse());
     }
 
+    /**
+     * @summary 获取作业中一个运行实例的系统事件
+     *
+     * @param request GetPodEventsRequest
+     * @return GetPodEventsResponse
+     */
     public GetPodEventsResponse getPodEvents(String JobId, String PodId, GetPodEventsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPodEventsWithOptions(JobId, PodId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取作业中一个运行实例的日志
+     *
+     * @param request GetPodLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPodLogsResponse
+     */
     public GetPodLogsResponse getPodLogsWithOptions(String JobId, String PodId, GetPodLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -571,12 +703,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPodLogsResponse());
     }
 
+    /**
+     * @summary 获取作业中一个运行实例的日志
+     *
+     * @param request GetPodLogsRequest
+     * @return GetPodLogsResponse
+     */
     public GetPodLogsResponse getPodLogs(String JobId, String PodId, GetPodLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPodLogsWithOptions(JobId, PodId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取一个Tensorboard
+     *
+     * @param request GetTensorboardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTensorboardResponse
+     */
     public GetTensorboardResponse getTensorboardWithOptions(String TensorboardId, GetTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -610,12 +756,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTensorboardResponse());
     }
 
+    /**
+     * @summary 获取一个Tensorboard
+     *
+     * @param request GetTensorboardRequest
+     * @return GetTensorboardResponse
+     */
     public GetTensorboardResponse getTensorboard(String TensorboardId, GetTensorboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
+    /**
+     * @summary Get the shared url for tensorboard
+     *
+     * @param request GetTensorboardSharedUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTensorboardSharedUrlResponse
+     */
     public GetTensorboardSharedUrlResponse getTensorboardSharedUrlWithOptions(String TensorboardId, GetTensorboardSharedUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -641,12 +801,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTensorboardSharedUrlResponse());
     }
 
+    /**
+     * @summary Get the shared url for tensorboard
+     *
+     * @param request GetTensorboardSharedUrlRequest
+     * @return GetTensorboardSharedUrlResponse
+     */
     public GetTensorboardSharedUrlResponse getTensorboardSharedUrl(String TensorboardId, GetTensorboardSharedUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTensorboardSharedUrlWithOptions(TensorboardId, request, headers, runtime);
     }
 
+    /**
+     * @summary 获取用户Token
+     *
+     * @param request GetTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTokenResponse
+     */
     public GetTokenResponse getTokenWithOptions(GetTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -680,12 +854,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTokenResponse());
     }
 
+    /**
+     * @summary 获取用户Token
+     *
+     * @param request GetTokenRequest
+     * @return GetTokenResponse
+     */
     public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTokenWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary Get the url for accessing pod's terminal in k8s
+     *
+     * @param request GetWebTerminalRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWebTerminalResponse
+     */
     public GetWebTerminalResponse getWebTerminalWithOptions(String JobId, String PodId, GetWebTerminalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -715,12 +903,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetWebTerminalResponse());
     }
 
+    /**
+     * @summary Get the url for accessing pod's terminal in k8s
+     *
+     * @param request GetWebTerminalRequest
+     * @return GetWebTerminalResponse
+     */
     public GetWebTerminalResponse getWebTerminal(String JobId, String PodId, GetWebTerminalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getWebTerminalWithOptions(JobId, PodId, request, headers, runtime);
     }
 
+    /**
+     * @summary ListEcsSpecs
+     *
+     * @param request ListEcsSpecsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEcsSpecsResponse
+     */
     public ListEcsSpecsResponse listEcsSpecsWithOptions(ListEcsSpecsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -770,12 +972,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEcsSpecsResponse());
     }
 
+    /**
+     * @summary ListEcsSpecs
+     *
+     * @param request ListEcsSpecsRequest
+     * @return ListEcsSpecsResponse
+     */
     public ListEcsSpecsResponse listEcsSpecs(ListEcsSpecsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listEcsSpecsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取某个DLC作业的多次算力健康检测结果
+     *
+     * @param request ListJobSanityCheckResultsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobSanityCheckResultsResponse
+     */
     public ListJobSanityCheckResultsResponse listJobSanityCheckResultsWithOptions(String JobId, ListJobSanityCheckResultsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -801,12 +1017,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobSanityCheckResultsResponse());
     }
 
+    /**
+     * @summary 获取某个DLC作业的多次算力健康检测结果
+     *
+     * @param request ListJobSanityCheckResultsRequest
+     * @return ListJobSanityCheckResultsResponse
+     */
     public ListJobSanityCheckResultsResponse listJobSanityCheckResults(String JobId, ListJobSanityCheckResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listJobSanityCheckResultsWithOptions(JobId, request, headers, runtime);
     }
 
+    /**
+     * @summary 根据过滤条件获取DLC作业列表
+     *
+     * @param tmpReq ListJobsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListJobsResponse
+     */
     public ListJobsResponse listJobsWithOptions(ListJobsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListJobsShrinkRequest request = new ListJobsShrinkRequest();
@@ -918,12 +1148,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListJobsResponse());
     }
 
+    /**
+     * @summary 根据过滤条件获取DLC作业列表
+     *
+     * @param request ListJobsRequest
+     * @return ListJobsResponse
+     */
     public ListJobsResponse listJobs(ListJobsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listJobsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 获取Tensorboard
+     *
+     * @param request ListTensorboardsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTensorboardsResponse
+     */
     public ListTensorboardsResponse listTensorboardsWithOptions(ListTensorboardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -983,6 +1227,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TensorboardId", request.tensorboardId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.verbose)) {
             query.put("Verbose", request.verbose);
         }
@@ -1009,12 +1261,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTensorboardsResponse());
     }
 
+    /**
+     * @summary 获取Tensorboard
+     *
+     * @param request ListTensorboardsRequest
+     * @return ListTensorboardsResponse
+     */
     public ListTensorboardsResponse listTensorboards(ListTensorboardsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTensorboardsWithOptions(request, headers, runtime);
     }
 
+    /**
+     * @summary 开始运行tensorboard
+     *
+     * @param request StartTensorboardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartTensorboardResponse
+     */
     public StartTensorboardResponse startTensorboardWithOptions(String TensorboardId, StartTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1040,12 +1306,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartTensorboardResponse());
     }
 
+    /**
+     * @summary 开始运行tensorboard
+     *
+     * @param request StartTensorboardRequest
+     * @return StartTensorboardResponse
+     */
     public StartTensorboardResponse startTensorboard(String TensorboardId, StartTensorboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
+    /**
+     * @summary 停止一个DLC作业
+     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopJobResponse
+     */
     public StopJobResponse stopJobWithOptions(String JobId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1064,12 +1343,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopJobResponse());
     }
 
+    /**
+     * @summary 停止一个DLC作业
+     *
+     * @return StopJobResponse
+     */
     public StopJobResponse stopJob(String JobId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopJobWithOptions(JobId, headers, runtime);
     }
 
+    /**
+     * @summary 停止运行tensorboard
+     *
+     * @param request StopTensorboardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopTensorboardResponse
+     */
     public StopTensorboardResponse stopTensorboardWithOptions(String TensorboardId, StopTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1095,12 +1387,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopTensorboardResponse());
     }
 
+    /**
+     * @summary 停止运行tensorboard
+     *
+     * @param request StopTensorboardRequest
+     * @return StopTensorboardResponse
+     */
     public StopTensorboardResponse stopTensorboard(String TensorboardId, StopTensorboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopTensorboardWithOptions(TensorboardId, request, headers, runtime);
     }
 
+    /**
+     * @summary 更新一个Job
+     *
+     * @param request UpdateJobRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateJobResponse
+     */
     public UpdateJobResponse updateJobWithOptions(String JobId, UpdateJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1126,12 +1432,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateJobResponse());
     }
 
+    /**
+     * @summary 更新一个Job
+     *
+     * @param request UpdateJobRequest
+     * @return UpdateJobResponse
+     */
     public UpdateJobResponse updateJob(String JobId, UpdateJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateJobWithOptions(JobId, request, headers, runtime);
     }
 
+    /**
+     * @summary 更新tensorboard
+     *
+     * @param request UpdateTensorboardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTensorboardResponse
+     */
     public UpdateTensorboardResponse updateTensorboardWithOptions(String TensorboardId, UpdateTensorboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1161,6 +1481,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTensorboardResponse());
     }
 
+    /**
+     * @summary 更新tensorboard
+     *
+     * @param request UpdateTensorboardRequest
+     * @return UpdateTensorboardResponse
+     */
     public UpdateTensorboardResponse updateTensorboard(String TensorboardId, UpdateTensorboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

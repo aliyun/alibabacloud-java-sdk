@@ -4,6 +4,9 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobSanityCheckResultRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SanityCheckNumber")
     public Integer sanityCheckNumber;
 
