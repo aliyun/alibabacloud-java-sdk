@@ -31,6 +31,9 @@ public class Product extends TeaModel {
     @NameInMap("images")
     public java.util.List<String> images;
 
+    @NameInMap("lmItemId")
+    public String lmItemId;
+
     @NameInMap("picUrl")
     public String picUrl;
 
@@ -148,6 +151,14 @@ public class Product extends TeaModel {
     }
     public java.util.List<String> getImages() {
         return this.images;
+    }
+
+    public Product setLmItemId(String lmItemId) {
+        this.lmItemId = lmItemId;
+        return this;
+    }
+    public String getLmItemId() {
+        return this.lmItemId;
     }
 
     public Product setPicUrl(String picUrl) {

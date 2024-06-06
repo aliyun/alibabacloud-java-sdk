@@ -13,6 +13,9 @@ public class ProductSaleInfo extends TeaModel {
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
+    @NameInMap("lmItemId")
+    public String lmItemId;
+
     @NameInMap("productId")
     public String productId;
 
@@ -61,6 +64,14 @@ public class ProductSaleInfo extends TeaModel {
     }
     public String getFuzzyQuantity() {
         return this.fuzzyQuantity;
+    }
+
+    public ProductSaleInfo setLmItemId(String lmItemId) {
+        this.lmItemId = lmItemId;
+        return this;
+    }
+    public String getLmItemId() {
+        return this.lmItemId;
     }
 
     public ProductSaleInfo setProductId(String productId) {
