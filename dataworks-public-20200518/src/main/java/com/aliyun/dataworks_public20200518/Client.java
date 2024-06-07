@@ -11494,6 +11494,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 查询DataWorks计量数据
+     *
+     * @param request ListMeasureDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMeasureDataResponse
+     */
+    public ListMeasureDataResponse listMeasureDataWithOptions(ListMeasureDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.componentCode)) {
+            query.put("ComponentCode", request.componentCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainCode)) {
+            query.put("DomainCode", request.domainCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMeasureData"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMeasureDataResponse());
+    }
+
+    /**
+     * @summary 查询DataWorks计量数据
+     *
+     * @param request ListMeasureDataRequest
+     * @return ListMeasureDataResponse
+     */
+    public ListMeasureDataResponse listMeasureData(ListMeasureDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMeasureDataWithOptions(request, runtime);
+    }
+
+    /**
      * @summary Queries the entities in a collection.
      *
      * @param request ListMetaCollectionEntitiesRequest
