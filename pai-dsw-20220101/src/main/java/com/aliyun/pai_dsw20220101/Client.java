@@ -738,6 +738,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 获取metrics数据
+     *
+     * @param request GetMetricsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMetricsResponse
+     */
+    public GetMetricsResponse getMetricsWithOptions(String InstanceId, GetMetricsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dimensions)) {
+            query.put("Dimensions", request.dimensions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
+            query.put("Length", request.length);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
+            query.put("MetricName", request.metricName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMetrics"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/instance/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/cms/metrics"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetricsResponse());
+    }
+
+    /**
+     * @summary 获取metrics数据
+     *
+     * @param request GetMetricsRequest
+     * @return GetMetricsResponse
+     */
+    public GetMetricsResponse getMetrics(String InstanceId, GetMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMetricsWithOptions(InstanceId, request, headers, runtime);
+    }
+
+    /**
      * @param request GetResourceGroupStatisticsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
