@@ -23,7 +23,7 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
     public Boolean outputBarCode;
 
     @NameInMap("OutputCoordinate")
-    public byte[] outputCoordinate;
+    public String outputCoordinate;
 
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
@@ -46,6 +46,9 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
     @NameInMap("TableConfig")
     public String tableConfigShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -108,11 +111,11 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
         return this.outputBarCode;
     }
 
-    public RecognizeAllTextShrinkRequest setOutputCoordinate(byte[] outputCoordinate) {
+    public RecognizeAllTextShrinkRequest setOutputCoordinate(String outputCoordinate) {
         this.outputCoordinate = outputCoordinate;
         return this;
     }
-    public byte[] getOutputCoordinate() {
+    public String getOutputCoordinate() {
         return this.outputCoordinate;
     }
 

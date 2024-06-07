@@ -7,12 +7,18 @@ public class VerifyVATInvoiceRequest extends TeaModel {
     @NameInMap("InvoiceCode")
     public String invoiceCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InvoiceDate")
     public String invoiceDate;
 
     @NameInMap("InvoiceKind")
     public Integer invoiceKind;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InvoiceNo")
     public String invoiceNo;
 
