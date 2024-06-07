@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaCollectionRequest extends TeaModel {
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The comment of the collection.</p>
+     * <br>
+     * <p>The comment must be 1 to 64 characters in length.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The comment of the collection.</p>
-     * <br>
-     * <p>The comment must be 1 to 64 characters in length.</p>
+     * <p>The name of the collection.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The name of the collection.</p>
+     * <p>The unique identifier of the collection.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
