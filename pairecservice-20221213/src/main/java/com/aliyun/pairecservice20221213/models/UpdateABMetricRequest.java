@@ -4,24 +4,39 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateABMetricRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Definition")
     public String definition;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("LeftMetricId")
     public String leftMetricId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Realtime")
     public Boolean realtime;
 
@@ -31,15 +46,24 @@ public class UpdateABMetricRequest extends TeaModel {
     @NameInMap("RightMetricId")
     public String rightMetricId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
     @NameInMap("StatisticsCycle")
     public Integer statisticsCycle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TableMetaId")
     public String tableMetaId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

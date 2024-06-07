@@ -4,9 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CompareFeature")
     public Boolean compareFeature;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EasServiceName")
     public String easServiceName;
 
@@ -19,6 +25,9 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("FeatureDisplayExclude")
     public String featureDisplayExclude;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FeatureLandingResourceId")
     public String featureLandingResourceId;
 
@@ -46,54 +55,96 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("FgJarVersion")
     public String fgJarVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FgJsonFileName")
     public String fgJsonFileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GenerateZip")
     public Boolean generateZip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IsUseFeatureStore")
     public Boolean isUseFeatureStore;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemIdField")
     public String itemIdField;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemTable")
     public String itemTable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemTablePartitionField")
     public String itemTablePartitionField;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemTablePartitionFieldFormat")
     public String itemTablePartitionFieldFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OssResourceId")
     public String ossResourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SampleRate")
     public Double sampleRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserIdField")
     public String userIdField;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserTable")
     public String userTable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserTablePartitionField")
     public String userTablePartitionField;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserTablePartitionFieldFormat")
     public String userTablePartitionFieldFormat;
 

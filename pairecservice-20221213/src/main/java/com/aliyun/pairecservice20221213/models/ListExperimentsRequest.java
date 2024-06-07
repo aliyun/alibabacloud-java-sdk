@@ -7,6 +7,9 @@ public class ListExperimentsRequest extends TeaModel {
     @NameInMap("ExperimentGroupId")
     public String experimentGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

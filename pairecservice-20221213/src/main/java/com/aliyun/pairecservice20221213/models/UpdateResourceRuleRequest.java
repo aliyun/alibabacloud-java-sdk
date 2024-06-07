@@ -7,9 +7,15 @@ public class UpdateResourceRuleRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetricOperationType")
     public String metricOperationType;
 
@@ -19,9 +25,15 @@ public class UpdateResourceRuleRequest extends TeaModel {
     @NameInMap("MetricPullPeriod")
     public String metricPullPeriod;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RuleComputingDefinition")
     public String ruleComputingDefinition;
 

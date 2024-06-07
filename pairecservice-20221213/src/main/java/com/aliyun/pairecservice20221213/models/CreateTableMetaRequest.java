@@ -4,24 +4,45 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateTableMetaRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<CreateTableMetaRequestFields> fields;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
@@ -90,18 +111,33 @@ public class CreateTableMetaRequest extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("IsPartitionField")
         public String isPartitionField;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Meaning")
         public String meaning;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

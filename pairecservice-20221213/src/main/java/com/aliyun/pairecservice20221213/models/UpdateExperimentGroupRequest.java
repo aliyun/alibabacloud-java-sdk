@@ -19,6 +19,9 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     @NameInMap("DebugUsers")
     public String debugUsers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -31,12 +34,21 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LayerId")
     public String layerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
