@@ -7,6 +7,13 @@ public class QuerySecretNoDetailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The key of the phone number pool.</p>
+     * <br>
+     * <p>Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 
@@ -16,6 +23,11 @@ public class QuerySecretNoDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The private number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecretNo")
     public String secretNo;
 

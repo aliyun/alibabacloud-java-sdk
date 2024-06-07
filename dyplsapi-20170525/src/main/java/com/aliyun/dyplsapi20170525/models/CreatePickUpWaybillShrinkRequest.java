@@ -4,51 +4,126 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillShrinkRequest extends TeaModel {
+    /**
+     * <p>The end time of the door-to-door pickup in the appointment. The value of **AppointGotEndTime** is the value of **EndTime** of **AppointTimes** in **CpTimeSelectList** returned by the [CreatePickUpWaybillPreQuery](~~CreatePickUpWaybillPreQuery~~#resultMapping) operation.</p>
+     * <br>
+     * <p>>  This parameter is required when **BizType** is set to **1**.</p>
+     */
     @NameInMap("AppointGotEndTime")
     public String appointGotEndTime;
 
+    /**
+     * <p>The start time of the door-to-door pickup in the appointment. The value of **AppointGotStartTime** is the value of **StartTime** of **AppointTimes** in **CpTimeSelectList** returned by the [CreatePickUpWaybillPreQuery](~~CreatePickUpWaybillPreQuery~~#resultMapping) operation.</p>
+     * <br>
+     * <p>>  This parameter is required when **BizType** is set to **1**.</p>
+     */
     @NameInMap("AppointGotStartTime")
     public String appointGotStartTime;
 
+    /**
+     * <p>The pickup mode. Valid values:</p>
+     * <br>
+     * <p>*   **0** (default): real-time order.</p>
+     * <p>*   **1**: appointment order.</p>
+     */
     @NameInMap("BizType")
     public Integer bizType;
 
+    /**
+     * <p>The address of the consignee.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConsigneeAddress")
     public String consigneeAddressShrink;
 
+    /**
+     * <p>The mobile phone number of the consignee.</p>
+     * <br>
+     * <p>>  Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     */
     @NameInMap("ConsigneeMobile")
     public String consigneeMobile;
 
+    /**
+     * <p>The name of the consignee.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConsigneeName")
     public String consigneeName;
 
+    /**
+     * <p>The landline phone number of the consignee.</p>
+     * <br>
+     * <p>>  Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     */
     @NameInMap("ConsigneePhone")
     public String consigneePhone;
 
+    /**
+     * <p>The code of the courier company.</p>
+     */
     @NameInMap("CpCode")
     public String cpCode;
 
+    /**
+     * <p>The items.</p>
+     */
     @NameInMap("GoodsInfos")
     public String goodsInfosShrink;
 
+    /**
+     * <p>The external channel sources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderChannels")
     public String orderChannels;
 
+    /**
+     * <p>The ID of the external order.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OuterOrderCode")
     public String outerOrderCode;
 
+    /**
+     * <p>The additional information about the order. The additional information will be printed on the order.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The address of the sender.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SendAddress")
     public String sendAddressShrink;
 
+    /**
+     * <p>The mobile phone number of the sender.</p>
+     * <br>
+     * <p>>  Either SendMobile or SendPhone must be set.</p>
+     */
     @NameInMap("SendMobile")
     public String sendMobile;
 
+    /**
+     * <p>The name of the sender.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SendName")
     public String sendName;
 
+    /**
+     * <p>The landline phone number of the sender.</p>
+     * <br>
+     * <p>>  Either SendMobile or SendPhone must be set.</p>
+     */
     @NameInMap("SendPhone")
     public String sendPhone;
 

@@ -4,12 +4,18 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
+    /**
+     * <p>The cabinet number.</p>
+     */
     @NameInMap("CabinetNo")
     public String cabinetNo;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Phone number X returned by the API operation for creating a binding.</p>
+     */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
@@ -19,6 +25,11 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tracking number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trackNo")
     public String trackNo;
 

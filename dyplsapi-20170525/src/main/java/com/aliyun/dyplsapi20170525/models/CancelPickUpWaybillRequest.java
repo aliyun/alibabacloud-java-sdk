@@ -4,9 +4,19 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CancelPickUpWaybillRequest extends TeaModel {
+    /**
+     * <p>The cancellation reason.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CancelDesc")
     public String cancelDesc;
 
+    /**
+     * <p>The ID of the external order.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OuterOrderCode")
     public String outerOrderCode;
 

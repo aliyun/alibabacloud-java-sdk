@@ -4,15 +4,27 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetSecretAsrDetailResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ASR details.</p>
+     */
     @NameInMap("Data")
     public GetSecretAsrDetailResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,45 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
     }
 
     public static class GetSecretAsrDetailResponseBodyDataSentences extends TeaModel {
+        /**
+         * <p>The start time offset of the sentence. Unit: milliseconds.</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <p>The ID of the audio track to which the sentence belongs.</p>
+         */
         @NameInMap("ChannelId")
         public Integer channelId;
 
+        /**
+         * <p>The emotion value. Value range: 1 to 10. The higher the value, the stronger the emotion.</p>
+         */
         @NameInMap("EmotionValue")
         public String emotionValue;
 
+        /**
+         * <p>The end time offset of the sentence. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The silence duration between the current sentence and the previous sentence. Unit: seconds.</p>
+         */
         @NameInMap("SilenceDuration")
         public Long silenceDuration;
 
+        /**
+         * <p>The average speech rate of the sentence. Unit: number of words per minute.</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
+        /**
+         * <p>The recognition result of the sentence.</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -139,27 +172,51 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
     }
 
     public static class GetSecretAsrDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The total duration of the audio file that was recognized. Unit: milliseconds.</p>
+         */
         @NameInMap("BizDuration")
         public Long bizDuration;
 
+        /**
+         * <p>The ID of the business process.</p>
+         */
         @NameInMap("BusinessId")
         public String businessId;
 
+        /**
+         * <p>The business keyword.</p>
+         */
         @NameInMap("BusinessKey")
         public String businessKey;
 
+        /**
+         * <p>The status code. The status code 21050000 indicates that the request was successful.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <p>The request ID.</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The ASR result.</p>
+         */
         @NameInMap("Sentences")
         public java.util.List<GetSecretAsrDetailResponseBodyDataSentences> sentences;
 
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

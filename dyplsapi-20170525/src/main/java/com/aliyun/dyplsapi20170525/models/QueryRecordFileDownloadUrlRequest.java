@@ -4,18 +4,45 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRecordFileDownloadUrlRequest extends TeaModel {
+    /**
+     * <p>The ID of the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>The call initiation time in the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.</p>
+     */
     @NameInMap("CallTime")
     public String callTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
+     * <br>
+     * <p>>  This parameter is required when **ProductType** is left empty.</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 
+    /**
+     * <p>The product type. Valid values:</p>
+     * <br>
+     * <p>*   **AXB_170**.</p>
+     * <p>*   **AXN_170**.</p>
+     * <p>*   **AXN_95**.</p>
+     * <p>*   **AXN_EXTENSION_REUSE**</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
+     * <br>
+     * <p>*   This parameter is required when **PoolKey** is left empty.</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

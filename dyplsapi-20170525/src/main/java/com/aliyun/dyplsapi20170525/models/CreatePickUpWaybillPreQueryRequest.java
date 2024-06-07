@@ -4,21 +4,47 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillPreQueryRequest extends TeaModel {
+    /**
+     * <p>The consignee information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConsigneeInfo")
     public CreatePickUpWaybillPreQueryRequestConsigneeInfo consigneeInfo;
 
+    /**
+     * <p>The code of the courier company. If no courier company is specified, the system allocates a courier company.</p>
+     */
     @NameInMap("CpCode")
     public String cpCode;
 
+    /**
+     * <p>The identifier of the external channel source. It cannot contain underscores.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderChannels")
     public String orderChannels;
 
+    /**
+     * <p>The order number of the access system.</p>
+     */
     @NameInMap("OuterOrderCode")
     public String outerOrderCode;
 
+    /**
+     * <p>The estimated weight. Unit: gram.</p>
+     * <br>
+     * <p>>  If you need to query the estimated price, this parameter is required.</p>
+     */
     @NameInMap("PreWeight")
     public String preWeight;
 
+    /**
+     * <p>The sender information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SenderInfo")
     public CreatePickUpWaybillPreQueryRequestSenderInfo senderInfo;
 
@@ -76,18 +102,33 @@ public class CreatePickUpWaybillPreQueryRequest extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryRequestConsigneeInfoAddressInfo extends TeaModel {
+        /**
+         * <p>The detailed address of the consignee.</p>
+         */
         @NameInMap("AddressDetail")
         public String addressDetail;
 
+        /**
+         * <p>The district where the consignee is located.</p>
+         */
         @NameInMap("AreaName")
         public String areaName;
 
+        /**
+         * <p>The city where the consignee is located.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>The province where the consignee is located.</p>
+         */
         @NameInMap("ProvinceName")
         public String provinceName;
 
+        /**
+         * <p>The street where the consignee is located.</p>
+         */
         @NameInMap("TownName")
         public String townName;
 
@@ -139,12 +180,25 @@ public class CreatePickUpWaybillPreQueryRequest extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryRequestConsigneeInfo extends TeaModel {
+        /**
+         * <p>The address of the consignee.</p>
+         */
         @NameInMap("AddressInfo")
         public CreatePickUpWaybillPreQueryRequestConsigneeInfoAddressInfo addressInfo;
 
+        /**
+         * <p>The mobile phone number of the consignee.</p>
+         * <br>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>The name of the consignee.</p>
+         * <br>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -180,18 +234,33 @@ public class CreatePickUpWaybillPreQueryRequest extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryRequestSenderInfoAddressInfo extends TeaModel {
+        /**
+         * <p>The detailed address of the sender.</p>
+         */
         @NameInMap("AddressDetail")
         public String addressDetail;
 
+        /**
+         * <p>The district where the sender is located.</p>
+         */
         @NameInMap("AreaName")
         public String areaName;
 
+        /**
+         * <p>The city where the sender is located.</p>
+         */
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <p>The province where the sender is located.</p>
+         */
         @NameInMap("ProvinceName")
         public String provinceName;
 
+        /**
+         * <p>The street where the sender is located.</p>
+         */
         @NameInMap("TownName")
         public String townName;
 
@@ -243,12 +312,25 @@ public class CreatePickUpWaybillPreQueryRequest extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryRequestSenderInfo extends TeaModel {
+        /**
+         * <p>The address of the sender.</p>
+         */
         @NameInMap("AddressInfo")
         public CreatePickUpWaybillPreQueryRequestSenderInfoAddressInfo addressInfo;
 
+        /**
+         * <p>The mobile phone number of the sender.</p>
+         * <br>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>The name of the sender.</p>
+         * <br>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 

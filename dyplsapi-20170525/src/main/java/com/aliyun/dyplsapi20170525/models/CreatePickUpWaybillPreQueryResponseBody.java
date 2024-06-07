@@ -4,15 +4,27 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("Data")
     public CreatePickUpWaybillPreQueryResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimesTimeList extends TeaModel {
+        /**
+         * <p>The end of the time range.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The tip displayed when the scheduled pickup is not available.</p>
+         */
         @NameInMap("SelectDisableTip")
         public String selectDisableTip;
 
+        /**
+         * <p>Indicates whether the time range can be selected for the scheduled pickup.</p>
+         */
         @NameInMap("Selectable")
         public Boolean selectable;
 
+        /**
+         * <p>The beginning of the time range.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -106,12 +130,21 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimes extends TeaModel {
+        /**
+         * <p>The date in the YYYY-MM-DD format.</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>Indicates whether the date is selectable.</p>
+         */
         @NameInMap("DateSelectable")
         public Boolean dateSelectable;
 
+        /**
+         * <p>The time range for the scheduled pickup for this date.</p>
+         */
         @NameInMap("TimeList")
         public java.util.List<CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimesTimeList> timeList;
 
@@ -147,12 +180,21 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListRealTime extends TeaModel {
+        /**
+         * <p>The name of the real-time order type.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The tip displayed when the real-time order cannot be placed.</p>
+         */
         @NameInMap("SelectDisableTip")
         public String selectDisableTip;
 
+        /**
+         * <p>Indicates whether the real-time order can be placed after the deadline for placing a real-time order is reached.</p>
+         */
         @NameInMap("Selectable")
         public Boolean selectable;
 
@@ -188,12 +230,21 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectList extends TeaModel {
+        /**
+         * <p>The available time for the scheduled pickup. If the current courier company cannot accept the scheduled pickup, this field is left empty.</p>
+         */
         @NameInMap("AppointTimes")
         public java.util.List<CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimes> appointTimes;
 
+        /**
+         * <p>The estimated price. Unit: CNY. The value is accurate to two decimal places. The value of this parameter is displayed if an estimated weight is specified.</p>
+         */
         @NameInMap("PrePrice")
         public String prePrice;
 
+        /**
+         * <p>The information about whether the real-time order can be selected.</p>
+         */
         @NameInMap("RealTime")
         public CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListRealTime realTime;
 
@@ -229,21 +280,39 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     }
 
     public static class CreatePickUpWaybillPreQueryResponseBodyData extends TeaModel {
+        /**
+         * <p>The response code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The information about whether the courier company can accept the order.</p>
+         */
         @NameInMap("CpTimeSelectList")
         public java.util.List<CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectList> cpTimeSelectList;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The response content.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

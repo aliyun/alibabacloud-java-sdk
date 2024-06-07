@@ -4,15 +4,30 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetTotalPublicUrlResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The download URLs of the recording files.</p>
+     */
     @NameInMap("Data")
     public GetTotalPublicUrlResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +69,19 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
     }
 
     public static class GetTotalPublicUrlResponseBodyData extends TeaModel {
+        /**
+         * <p>The download URL of the recorded call.</p>
+         * <br>
+         * <p>>  The download URL of the recorded call is valid for 30 days.</p>
+         */
         @NameInMap("PhonePublicUrl")
         public String phonePublicUrl;
 
+        /**
+         * <p>The download URL of the recorded ringing tone.</p>
+         * <br>
+         * <p>>  The download URL of the recorded ringing tone is valid for 30 days.</p>
+         */
         @NameInMap("RingPublicUrl")
         public String ringPublicUrl;
 

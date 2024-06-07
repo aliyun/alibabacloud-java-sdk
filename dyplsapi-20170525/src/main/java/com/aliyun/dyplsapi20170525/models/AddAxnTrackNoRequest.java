@@ -7,9 +7,21 @@ public class AddAxnTrackNoRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The private number in the AXN binding, that is, phone number X.</p>
+     * <br>
+     * <p>You can call the [BindAxn](https://help.aliyun.com/document_detail/110258.html) operation to obtain the value of PhoneNoX.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
+    /**
+     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 
@@ -19,9 +31,21 @@ public class AddAxnTrackNoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The binding ID.</p>
+     * <br>
+     * <p>You can call the [BindAxn](https://help.aliyun.com/document_detail/110258.html) operation to obtain the value of SubsId.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubsId")
     public String subsId;
 
+    /**
+     * <p>The tracking number.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("trackNo")
     public String trackNo;
 
