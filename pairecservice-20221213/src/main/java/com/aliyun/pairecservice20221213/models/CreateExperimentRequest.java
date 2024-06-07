@@ -13,21 +13,36 @@ public class CreateExperimentRequest extends TeaModel {
     @NameInMap("DebugUsers")
     public String debugUsers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExperimentGroupId")
     public String experimentGroupId;
 
     @NameInMap("FlowPercent")
     public Integer flowPercent;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

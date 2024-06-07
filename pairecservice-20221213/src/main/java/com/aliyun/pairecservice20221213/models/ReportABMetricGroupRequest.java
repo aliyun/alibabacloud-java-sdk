@@ -4,6 +4,9 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ReportABMetricGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BaseExperimentId")
     public String baseExperimentId;
 
@@ -16,12 +19,21 @@ public class ReportABMetricGroupRequest extends TeaModel {
     @NameInMap("ExperimentGroupId")
     public String experimentGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExperimentIds")
     public String experimentIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReportType")
     public String reportType;
 

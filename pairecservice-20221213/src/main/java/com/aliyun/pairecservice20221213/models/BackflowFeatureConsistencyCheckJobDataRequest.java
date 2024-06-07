@@ -4,33 +4,63 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FeatureConsistencyCheckJobConfigId")
     public String featureConsistencyCheckJobConfigId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemFeatures")
     public String itemFeatures;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogItemId")
     public String logItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogRequestId")
     public String logRequestId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogRequestTime")
     public Long logRequestTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogUserId")
     public String logUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Scores")
     public String scores;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserFeatures")
     public String userFeatures;
 

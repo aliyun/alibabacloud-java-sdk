@@ -7,6 +7,9 @@ public class ListResourceRulesRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

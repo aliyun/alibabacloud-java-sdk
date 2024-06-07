@@ -7,9 +7,15 @@ public class ListLaboratoriesRequest extends TeaModel {
     @NameInMap("Environment")
     public String environment;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

@@ -4,21 +4,39 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateABMetricGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ABMetricIds")
     public String ABMetricIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Realtime")
     public Boolean realtime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

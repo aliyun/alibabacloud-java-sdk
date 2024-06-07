@@ -4,15 +4,27 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateCalculationJobsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ABMetricIds")
     public String ABMetricIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

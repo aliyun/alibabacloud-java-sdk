@@ -7,6 +7,9 @@ public class UpdateLaboratoryRequest extends TeaModel {
     @NameInMap("BucketCount")
     public Integer bucketCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BucketType")
     public String bucketType;
 
@@ -28,12 +31,21 @@ public class UpdateLaboratoryRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

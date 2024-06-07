@@ -7,18 +7,33 @@ public class CreateResourceRuleItemRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaxValue")
     public Double maxValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MinValue")
     public Double minValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Value")
     public Double value;
 

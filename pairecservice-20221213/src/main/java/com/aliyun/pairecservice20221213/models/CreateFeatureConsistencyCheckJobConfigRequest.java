@@ -4,9 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CompareFeature")
     public Boolean compareFeature;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EasServiceName")
     public String easServiceName;
 
@@ -19,6 +25,9 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("FeatureDisplayExclude")
     public String featureDisplayExclude;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FeatureLandingResourceId")
     public String featureLandingResourceId;
 
@@ -46,12 +55,21 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("FgJarVersion")
     public String fgJarVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FgJsonFileName")
     public String fgJsonFileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GenerateZip")
     public Boolean generateZip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -67,21 +85,36 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("ItemTablePartitionFieldFormat")
     public String itemTablePartitionFieldFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OssResourceId")
     public String ossResourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SampleRate")
     public Double sampleRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UseFeatureStore")
     public Boolean useFeatureStore;
 

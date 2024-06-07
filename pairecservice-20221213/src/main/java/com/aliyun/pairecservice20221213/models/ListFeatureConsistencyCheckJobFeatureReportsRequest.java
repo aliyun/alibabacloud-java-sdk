@@ -4,15 +4,27 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogItemId")
     public String logItemId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogRequestId")
     public String logRequestId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LogUserId")
     public String logUserId;
 
