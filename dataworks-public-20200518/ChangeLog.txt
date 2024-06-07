@@ -1,3 +1,7 @@
+2024-06-07 Version: 5.6.0
+- Support API ListMeasureData.
+
+
 2024-06-07 Version: 5.5.2
 - Generated java 2020-05-18 for dataworks-public.
 
