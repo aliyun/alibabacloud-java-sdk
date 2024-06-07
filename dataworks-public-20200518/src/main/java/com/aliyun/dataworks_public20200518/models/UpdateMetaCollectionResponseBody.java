@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaCollectionResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The error code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>The result of the operation. Valid values:</p>
@@ -32,15 +35,15 @@ public class UpdateMetaCollectionResponseBody extends TeaModel {
      * <br>
      * <p>false: failed</p>
      */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
     @NameInMap("Status")
     public Boolean status;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

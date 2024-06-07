@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMetaCollectionEntityRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the entity.</p>
+     * <p>The unique identifier of the collection.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -13,7 +13,7 @@ public class DeleteMetaCollectionEntityRequest extends TeaModel {
     public String collectionQualifiedName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique identifier of the entity.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
