@@ -4,12 +4,21 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class VerifyBusinessLicenseRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CompanyName")
     public String companyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CreditCode")
     public String creditCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LegalPerson")
     public String legalPerson;
 

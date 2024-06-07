@@ -4,9 +4,15 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeEduPaperCutRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CutType")
     public String cutType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 

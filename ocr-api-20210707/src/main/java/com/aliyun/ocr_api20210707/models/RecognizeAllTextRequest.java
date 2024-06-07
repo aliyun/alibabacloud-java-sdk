@@ -23,7 +23,7 @@ public class RecognizeAllTextRequest extends TeaModel {
     public Boolean outputBarCode;
 
     @NameInMap("OutputCoordinate")
-    public byte[] outputCoordinate;
+    public String outputCoordinate;
 
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
@@ -46,6 +46,9 @@ public class RecognizeAllTextRequest extends TeaModel {
     @NameInMap("TableConfig")
     public RecognizeAllTextRequestTableConfig tableConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -108,11 +111,11 @@ public class RecognizeAllTextRequest extends TeaModel {
         return this.outputBarCode;
     }
 
-    public RecognizeAllTextRequest setOutputCoordinate(byte[] outputCoordinate) {
+    public RecognizeAllTextRequest setOutputCoordinate(String outputCoordinate) {
         this.outputCoordinate = outputCoordinate;
         return this;
     }
-    public byte[] getOutputCoordinate() {
+    public String getOutputCoordinate() {
         return this.outputCoordinate;
     }
 
