@@ -4,21 +4,47 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillPreQueryShrinkRequest extends TeaModel {
+    /**
+     * <p>The consignee information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConsigneeInfo")
     public String consigneeInfoShrink;
 
+    /**
+     * <p>The code of the courier company. If no courier company is specified, the system allocates a courier company.</p>
+     */
     @NameInMap("CpCode")
     public String cpCode;
 
+    /**
+     * <p>The identifier of the external channel source. It cannot contain underscores.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderChannels")
     public String orderChannels;
 
+    /**
+     * <p>The order number of the access system.</p>
+     */
     @NameInMap("OuterOrderCode")
     public String outerOrderCode;
 
+    /**
+     * <p>The estimated weight. Unit: gram.</p>
+     * <br>
+     * <p>>  If you need to query the estimated price, this parameter is required.</p>
+     */
     @NameInMap("PreWeight")
     public String preWeight;
 
+    /**
+     * <p>The sender information.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SenderInfo")
     public String senderInfoShrink;
 

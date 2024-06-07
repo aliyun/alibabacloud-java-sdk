@@ -4,15 +4,27 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreatePickUpWaybillResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,39 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
     }
 
     public static class CreatePickUpWaybillResponseBodyData extends TeaModel {
+        /**
+         * <p>The code of the courier company.</p>
+         */
         @NameInMap("CpCode")
         public String cpCode;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The pickup code.</p>
+         */
         @NameInMap("GotCode")
         public String gotCode;
 
+        /**
+         * <p>The order ID.</p>
+         */
         @NameInMap("MailNo")
         public String mailNo;
 
+        /**
+         * <p>Indicates whether the request was successful.</p>
+         */
         @NameInMap("Success")
         public String success;
 

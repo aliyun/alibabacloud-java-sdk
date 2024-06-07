@@ -7,9 +7,19 @@ public class QuerySubsIdRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The private number in the binding, that is, phone number X.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
+    /**
+     * <p>The key of the phone number pool.</p>
+     * <br>
+     * <p>Log on to the [Phone Number Protection console](https://dyplsnext.console.aliyun.com/overview) and view the key of the phone number pool on the Number Pool Management page.</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 

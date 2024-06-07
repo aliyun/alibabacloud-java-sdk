@@ -4,15 +4,33 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class OperateBlackNoRequest extends TeaModel {
+    /**
+     * <p>The phone number to be added to or deleted from the blacklist.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BlackNo")
     public String blackNo;
 
+    /**
+     * <p>The type of the operation on the phone number. Valid values:</p>
+     * <br>
+     * <p>*   **AddBlack**: adds the phone number to the blacklist.</p>
+     * <p>*   **DeleteBlack**: deletes the phone number from the blacklist.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OperateType")
     public String operateType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
+     * <br>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 
@@ -22,6 +40,9 @@ public class OperateBlackNoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Tips")
     public String tips;
 

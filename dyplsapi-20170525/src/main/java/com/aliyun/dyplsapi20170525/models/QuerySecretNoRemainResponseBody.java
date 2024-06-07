@@ -4,15 +4,30 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySecretNoRemainResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information returned after the operation was called.</p>
+     */
     @NameInMap("SecretRemainDTO")
     public QuerySecretNoRemainResponseBodySecretRemainDTO secretRemainDTO;
 
@@ -54,9 +69,15 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
     }
 
     public static class QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOListRemainDTO extends TeaModel {
+        /**
+         * <p>The quantity of remaining phone numbers available for online purchase for the city.</p>
+         */
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <p>The home location of the phone numbers.</p>
+         */
         @NameInMap("City")
         public String city;
 
@@ -103,12 +124,21 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
     }
 
     public static class QuerySecretNoRemainResponseBodySecretRemainDTO extends TeaModel {
+        /**
+         * <p>The quantity of remaining phone numbers available for online purchase.</p>
+         */
         @NameInMap("Amount")
         public Long amount;
 
+        /**
+         * <p>The home location of the phone numbers.</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>The information about remaining phone numbers available for online purchase.</p>
+         */
         @NameInMap("RemainDTOList")
         public QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOList remainDTOList;
 

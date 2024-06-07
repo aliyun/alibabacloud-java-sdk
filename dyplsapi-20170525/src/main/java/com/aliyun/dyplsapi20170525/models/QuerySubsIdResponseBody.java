@@ -4,15 +4,27 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySubsIdResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The value OK indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The binding ID.</p>
+     */
     @NameInMap("SubsId")
     public String subsId;
 

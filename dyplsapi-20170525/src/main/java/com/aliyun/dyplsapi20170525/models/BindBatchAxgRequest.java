@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BindBatchAxgRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AxgBindList")
     public java.util.List<BindBatchAxgRequestAxgBindList> axgBindList;
 
@@ -83,6 +86,9 @@ public class BindBatchAxgRequest extends TeaModel {
         @NameInMap("Expiration")
         public String expiration;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
@@ -95,6 +101,9 @@ public class BindBatchAxgRequest extends TeaModel {
         @NameInMap("OutOrderId")
         public String outOrderId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("PhoneNoA")
         public String phoneNoA;
 

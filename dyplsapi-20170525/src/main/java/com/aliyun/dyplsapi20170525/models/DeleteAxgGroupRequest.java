@@ -4,12 +4,18 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DeleteAxgGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 

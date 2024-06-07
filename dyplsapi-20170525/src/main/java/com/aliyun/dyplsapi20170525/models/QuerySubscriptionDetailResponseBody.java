@@ -4,15 +4,30 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySubscriptionDetailResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information returned after the QuerySubscriptionDetail operation was called.</p>
+     */
     @NameInMap("SecretBindDetailDTO")
     public QuerySubscriptionDetailResponseBodySecretBindDetailDTO secretBindDetailDTO;
 
@@ -54,42 +69,93 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
     }
 
     public static class QuerySubscriptionDetailResponseBodySecretBindDetailDTO extends TeaModel {
+        /**
+         * <p>The ID of the ASR model.</p>
+         */
         @NameInMap("ASRModelId")
         public String ASRModelId;
 
+        /**
+         * <p>Indicates whether automatic speech recognition (ASR) is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **false**: ASR is disabled.</p>
+         * <p>*   **true**: ASR is enabled.</p>
+         */
         @NameInMap("ASRStatus")
         public Boolean ASRStatus;
 
+        /**
+         * <p>The status of one-way call restrictions. No value is returned for this parameter if one-way call restrictions are not set. Valid values:</p>
+         * <br>
+         * <p>*   **CONTROL_AX_DISABLE**: Phone number A cannot be used to call phone number X.</p>
+         * <p>*   **CONTROL_BX_DISABLE**: Phone number B cannot be used to call phone number X.</p>
+         */
         @NameInMap("CallRestrict")
         public String callRestrict;
 
+        /**
+         * <p>The expiration time of the binding.</p>
+         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <p>The extension in the AXG extension binding.</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <p>The creation time of the binding.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The ID of number group G in the binding.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>Indicates whether all calls made by the bound phone numbers are recorded. Valid values:</p>
+         * <br>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
+         */
         @NameInMap("NeedRecord")
         public Boolean needRecord;
 
+        /**
+         * <p>Phone number A in the binding.</p>
+         */
         @NameInMap("PhoneNoA")
         public String phoneNoA;
 
+        /**
+         * <p>Phone number B in the binding.</p>
+         */
         @NameInMap("PhoneNoB")
         public String phoneNoB;
 
+        /**
+         * <p>The private number in the binding, that is, phone number X.</p>
+         */
         @NameInMap("PhoneNoX")
         public String phoneNoX;
 
+        /**
+         * <p>The binding status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The binding expired.</p>
+         * <p>*   **1**: The binding is in effect.</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The binding ID.</p>
+         */
         @NameInMap("SubsId")
         public String subsId;
 
