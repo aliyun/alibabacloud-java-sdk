@@ -937,6 +937,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 批量删除用户非在线设备
+     *
+     * @param request DeleteUserDevicesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteUserDevicesResponse
+     */
+    public DeleteUserDevicesResponse deleteUserDevicesWithOptions(DeleteUserDevicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceTags)) {
+            bodyFlat.put("DeviceTags", request.deviceTags);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUserDevices"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserDevicesResponse());
+    }
+
+    /**
+     * @summary 批量删除用户非在线设备
+     *
+     * @param request DeleteUserDevicesRequest
+     * @return DeleteUserDevicesResponse
+     */
+    public DeleteUserDevicesResponse deleteUserDevices(DeleteUserDevicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUserDevicesWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 删除用户组
      *
      * @param request DeleteUserGroupRequest
@@ -1028,6 +1075,109 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetachApplication2ConnectorResponse detachApplication2Connector(DetachApplication2ConnectorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachApplication2ConnectorWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 批量查询用户设备列表
+     *
+     * @param request ExportUserDevicesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportUserDevicesResponse
+     */
+    public ExportUserDevicesResponse exportUserDevicesWithOptions(ExportUserDevicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appStatuses)) {
+            bodyFlat.put("AppStatuses", request.appStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.department)) {
+            body.put("Department", request.department);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceBelong)) {
+            body.put("DeviceBelong", request.deviceBelong);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceStatuses)) {
+            bodyFlat.put("DeviceStatuses", request.deviceStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceTags)) {
+            bodyFlat.put("DeviceTags", request.deviceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceTypes)) {
+            bodyFlat.put("DeviceTypes", request.deviceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dlpStatuses)) {
+            bodyFlat.put("DlpStatuses", request.dlpStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostname)) {
+            body.put("Hostname", request.hostname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iaStatuses)) {
+            bodyFlat.put("IaStatuses", request.iaStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mac)) {
+            body.put("Mac", request.mac);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nacStatuses)) {
+            bodyFlat.put("NacStatuses", request.nacStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paStatuses)) {
+            bodyFlat.put("PaStatuses", request.paStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saseUserId)) {
+            body.put("SaseUserId", request.saseUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharingStatus)) {
+            body.put("SharingStatus", request.sharingStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            body.put("Username", request.username);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportUserDevices"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportUserDevicesResponse());
+    }
+
+    /**
+     * @summary 批量查询用户设备列表
+     *
+     * @param request ExportUserDevicesRequest
+     * @return ExportUserDevicesResponse
+     */
+    public ExportUserDevicesResponse exportUserDevices(ExportUserDevicesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportUserDevicesWithOptions(request, runtime);
     }
 
     /**
