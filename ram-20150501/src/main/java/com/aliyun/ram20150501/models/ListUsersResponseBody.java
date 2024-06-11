@@ -4,15 +4,27 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set `Marker` to obtain the truncated part.``</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The RAM users.</p>
+     */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
 
@@ -54,27 +66,55 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUser extends TeaModel {
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The time when the RAM user was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address of the RAM user.</p>
+         * <br>
+         * <p>> This parameter is unavailable.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The mobile phone number of the RAM user.</p>
+         * <br>
+         * <p>> This parameter is unavailable.</p>
+         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        /**
+         * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The logon name of the RAM user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

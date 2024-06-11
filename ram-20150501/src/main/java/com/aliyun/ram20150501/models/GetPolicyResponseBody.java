@@ -4,12 +4,21 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The information of the default policy version.</p>
+     */
     @NameInMap("DefaultPolicyVersion")
     public GetPolicyResponseBodyDefaultPolicyVersion defaultPolicyVersion;
 
+    /**
+     * <p>The basic information of the policy.</p>
+     */
     @NameInMap("Policy")
     public GetPolicyResponseBodyPolicy policy;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class GetPolicyResponseBody extends TeaModel {
     }
 
     public static class GetPolicyResponseBodyDefaultPolicyVersion extends TeaModel {
+        /**
+         * <p>The time when the default policy version was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>An attribute in the `DefaultPolicyVersion` parameter. The value of the `IsDefaultVersion` parameter is `true`.</p>
+         */
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
+        /**
+         * <p>The script of the default policy version.</p>
+         */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
+        /**
+         * <p>The ID of the default policy version.</p>
+         */
         @NameInMap("VersionId")
         public String versionId;
 
@@ -95,27 +116,51 @@ public class GetPolicyResponseBody extends TeaModel {
     }
 
     public static class GetPolicyResponseBodyPolicy extends TeaModel {
+        /**
+         * <p>The number of references to the policy.</p>
+         */
         @NameInMap("AttachmentCount")
         public Integer attachmentCount;
 
+        /**
+         * <p>The time when the policy was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The default version ID of the policy.</p>
+         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the policy.</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The time when the policy was modified.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

@@ -4,6 +4,11 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class DeleteGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM user group.</p>
+     * <br>
+     * <p>If you want to query the name of a RAM user group, call the [ListGroups](https://help.aliyun.com/document_detail/28703.html) operation.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 

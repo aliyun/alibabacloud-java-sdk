@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetAccountAliasResponseBody extends TeaModel {
+    /**
+     * <p>The alias of the Alibaba Cloud account.</p>
+     */
     @NameInMap("AccountAlias")
     public String accountAlias;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

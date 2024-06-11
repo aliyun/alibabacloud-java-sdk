@@ -4,15 +4,27 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value of IsTruncated is `true`, you can call this operation again and set `Marker` to obtain the truncated part.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The list of policies.</p>
+     */
     @NameInMap("Policies")
     public ListPoliciesResponseBodyPolicies policies;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,45 @@ public class ListPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
+        /**
+         * <p>The number of references to the policy.</p>
+         */
         @NameInMap("AttachmentCount")
         public Integer attachmentCount;
 
+        /**
+         * <p>The time when the policy was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The default version of the policy.</p>
+         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the policy.</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The time when the policy was modified.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

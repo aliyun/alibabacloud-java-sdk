@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class AddUserToGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM user group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The name of the RAM user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

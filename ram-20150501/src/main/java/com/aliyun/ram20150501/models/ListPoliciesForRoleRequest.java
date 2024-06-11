@@ -4,6 +4,9 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesForRoleRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM role.</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

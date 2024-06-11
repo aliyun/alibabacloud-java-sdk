@@ -4,18 +4,45 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <p>The description of the RAM user.</p>
+     * <br>
+     * <p>The description must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("Comments")
     public String comments;
 
+    /**
+     * <p>The display name of the RAM user.</p>
+     * <br>
+     * <p>The display name must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The email address of the RAM user.</p>
+     * <br>
+     * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The mobile phone number of the RAM user.</p>
+     * <br>
+     * <p>Format: Country code-Mobile phone number.</p>
+     * <br>
+     * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+     */
     @NameInMap("MobilePhone")
     public String mobilePhone;
 
+    /**
+     * <p>The username of the RAM user.</p>
+     * <br>
+     * <p>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

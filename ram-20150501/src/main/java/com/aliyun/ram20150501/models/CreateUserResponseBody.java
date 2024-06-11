@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the RAM user.</p>
+     */
     @NameInMap("User")
     public CreateUserResponseBodyUser user;
 
@@ -32,24 +38,49 @@ public class CreateUserResponseBody extends TeaModel {
     }
 
     public static class CreateUserResponseBodyUser extends TeaModel {
+        /**
+         * <p>The description of the RAM user.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The mobile phone number of the RAM user.</p>
+         * <br>
+         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        /**
+         * <p>The ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username of the RAM user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

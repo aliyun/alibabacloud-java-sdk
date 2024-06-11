@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualMFADevicesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of MFA devices.</p>
+     */
     @NameInMap("VirtualMFADevices")
     public ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices;
 
@@ -32,12 +38,21 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser extends TeaModel {
+        /**
+         * <p>The display name of the RAM user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The unique ID of the RAM user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The name of the RAM user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -73,12 +88,21 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     }
 
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice extends TeaModel {
+        /**
+         * <p>The time when the MFA device was enabled.</p>
+         */
         @NameInMap("ActivateDate")
         public String activateDate;
 
+        /**
+         * <p>The serial number of the MFA device.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        /**
+         * <p>The basic information of the RAM user to which the MFA device is attached.</p>
+         */
         @NameInMap("User")
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser user;
 

@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information of the RAM user group.</p>
+     */
     @NameInMap("Group")
     public UpdateGroupResponseBodyGroup group;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class UpdateGroupResponseBody extends TeaModel {
     }
 
     public static class UpdateGroupResponseBodyGroup extends TeaModel {
+        /**
+         * <p>The description of the RAM user group.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The time when the RAM user group was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The ID of the RAM user group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The new name of the RAM user group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The time when the information of the RAM user group was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

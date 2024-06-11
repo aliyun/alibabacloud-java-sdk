@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UnbindMFADeviceResponseBody extends TeaModel {
+    /**
+     * <p>The information of the MFA device.</p>
+     */
     @NameInMap("MFADevice")
     public UnbindMFADeviceResponseBodyMFADevice MFADevice;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
     }
 
     public static class UnbindMFADeviceResponseBodyMFADevice extends TeaModel {
+        /**
+         * <p>The serial number of the MFA device.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 

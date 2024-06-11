@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetSecurityPreferenceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The security preferences.</p>
+     */
     @NameInMap("SecurityPreference")
     public GetSecurityPreferenceResponseBodySecurityPreference securityPreference;
 
@@ -32,6 +38,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
+         * <br>
+         * <p>*   true: RAM users can manage their AccessKey pairs.</p>
+         * <p>*   false: RAM users cannot manage their AccessKey pairs.</p>
+         */
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
 
@@ -51,15 +63,38 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
+         * <br>
+         * <p>*   true: RAM users can change their passwords.</p>
+         * <p>*   false: RAM users cannot change their passwords.</p>
+         */
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
+        /**
+         * <p>Indicates whether RAM users can save security codes for multi-factor authentication (MFA) during logon. Each security code is valid for seven days. Valid values:</p>
+         * <br>
+         * <p>*   true: RAM users can save MFA security codes during logon.</p>
+         * <p>*   false: RAM users cannot save MFA security codes during logon.</p>
+         */
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
+        /**
+         * <p>The subnet mask that indicates the IP addresses from which logon to the Alibaba Cloud Management Console is allowed. This parameter applies to password-based logon and single sign-on (SSO). However, this parameter does not apply to API calls that are authenticated based on AccessKey pairs.</p>
+         * <br>
+         * <p>*   If a subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console only by using the IP addresses in the subnetwork.</p>
+         * <p>*   If no subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console by using all IP addresses.</p>
+         * <br>
+         * <p>If more than one subnet mask is specified, the masks are separated with semicolons (;), for example, 192.168.0.0/16;10.0.0.0/8.</p>
+         */
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
+        /**
+         * <p>The validity period of a logon session of a RAM user. Unit: hours.</p>
+         */
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
 
@@ -103,6 +138,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
+         * <br>
+         * <p>*   true: RAM users can manage their MFA devices.</p>
+         * <p>*   false: RAM users cannot manage their MFA devices.</p>
+         */
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
 
@@ -122,6 +163,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their public keys. Valid values:</p>
+         * <br>
+         * <p>*   true: RAM users can manage their public keys.</p>
+         * <p>*   false: RAM users cannot manage their public keys.</p>
+         */
         @NameInMap("AllowUserToManagePublicKeys")
         public Boolean allowUserToManagePublicKeys;
 
@@ -141,15 +188,29 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreference extends TeaModel {
+        /**
+         * <p>The AccessKey pair preference.</p>
+         */
         @NameInMap("AccessKeyPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference accessKeyPreference;
 
+        /**
+         * <p>The logon preferences.</p>
+         */
         @NameInMap("LoginProfilePreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference;
 
+        /**
+         * <p>The MFA preference.</p>
+         */
         @NameInMap("MFAPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
+        /**
+         * <p>The public key preference.</p>
+         * <br>
+         * <p>>  The public key preference is valid only for the Japan site.</p>
+         */
         @NameInMap("PublicKeyPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference publicKeyPreference;
 

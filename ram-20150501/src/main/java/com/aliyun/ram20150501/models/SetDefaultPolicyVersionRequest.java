@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultPolicyVersionRequest extends TeaModel {
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The ID of the policy version that you want to set as the default version.</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 

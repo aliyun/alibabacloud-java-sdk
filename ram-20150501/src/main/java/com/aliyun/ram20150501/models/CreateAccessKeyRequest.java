@@ -4,6 +4,9 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessKeyRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM user. If a RAM user calls this operation and does not specify this parameter, an AccessKey pair is created for the RAM user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

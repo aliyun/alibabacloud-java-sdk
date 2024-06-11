@@ -4,9 +4,17 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UpdatePolicyDescriptionRequest extends TeaModel {
+    /**
+     * <p>The description of the policy.</p>
+     * <br>
+     * <p>The value of the parameter must be 1 to 1,024 characters in length.</p>
+     */
     @NameInMap("NewDescription")
     public String newDescription;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
