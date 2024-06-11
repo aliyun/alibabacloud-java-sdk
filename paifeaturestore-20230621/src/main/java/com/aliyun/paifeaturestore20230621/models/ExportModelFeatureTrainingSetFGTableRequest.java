@@ -4,6 +4,9 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ExportModelFeatureTrainingSetFGTableRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TrainingSetFgConfig")
     public ExportModelFeatureTrainingSetFGTableRequestTrainingSetFgConfig trainingSetFgConfig;
 
@@ -27,6 +30,9 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends TeaModel {
         @NameInMap("JarName")
         public String jarName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Partitions")
         public java.util.Map<String, java.util.Map<String, ?>> partitions;
 

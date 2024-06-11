@@ -10,6 +10,9 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     @NameInMap("RawFeatures")
     public java.util.List<UpdateModelFeatureFGFeatureRequestRawFeatures> rawFeatures;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Reserves")
     public java.util.List<String> reserves;
 
@@ -54,24 +57,45 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     }
 
     public static class UpdateModelFeatureFGFeatureRequestLookupFeatures extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("KeyFeatureDomain")
         public String keyFeatureDomain;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("KeyFeatureName")
         public String keyFeatureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MapFeatureDomain")
         public String mapFeatureDomain;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MapFeatureName")
         public String mapFeatureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 
@@ -139,21 +163,39 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     }
 
     public static class UpdateModelFeatureFGFeatureRequestRawFeatures extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureDomain")
         public String featureDomain;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureType")
         public String featureType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("InputFeatureName")
         public String inputFeatureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 
@@ -213,21 +255,39 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     }
 
     public static class UpdateModelFeatureFGFeatureRequestSequenceFeaturesSubFeatures extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureDomain")
         public String featureDomain;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureType")
         public String featureType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("InputFeatureName")
         public String inputFeatureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 
@@ -287,15 +347,27 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     }
 
     public static class UpdateModelFeatureFGFeatureRequestSequenceFeatures extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("AttributeDelim")
         public String attributeDelim;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SequenceDelim")
         public String sequenceDelim;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SequenceLength")
         public Long sequenceLength;
 

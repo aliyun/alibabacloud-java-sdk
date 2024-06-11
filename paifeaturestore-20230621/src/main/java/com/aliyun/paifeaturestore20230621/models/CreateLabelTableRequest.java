@@ -4,15 +4,27 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CreateLabelTableRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DatasourceId")
     public String datasourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<CreateLabelTableRequestFields> fields;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -54,12 +66,21 @@ public class CreateLabelTableRequest extends TeaModel {
     }
 
     public static class CreateLabelTableRequestFields extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

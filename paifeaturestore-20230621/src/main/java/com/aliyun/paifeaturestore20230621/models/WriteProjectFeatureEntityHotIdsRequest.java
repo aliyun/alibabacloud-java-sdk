@@ -4,9 +4,15 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class WriteProjectFeatureEntityHotIdsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HotIds")
     public String hotIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Version")
     public String version;
 
