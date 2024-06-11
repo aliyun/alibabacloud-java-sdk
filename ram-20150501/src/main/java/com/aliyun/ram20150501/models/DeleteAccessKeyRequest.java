@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessKeyRequest extends TeaModel {
+    /**
+     * <p>The AccessKey ID in the AccessKey pair that you want to delete.</p>
+     */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
+    /**
+     * <p>The name of the RAM user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

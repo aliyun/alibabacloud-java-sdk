@@ -4,15 +4,27 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the response is truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value is `true`, you can call this operation again and set the `Marker` parameter to obtain the truncated part.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of RAM roles.</p>
+     */
     @NameInMap("Roles")
     public ListRolesResponseBodyRoles roles;
 
@@ -54,24 +66,45 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRolesRole extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The time when the RAM role was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description of the RAM role.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The maximum session duration of the RAM role.</p>
+         */
         @NameInMap("MaxSessionDuration")
         public Long maxSessionDuration;
 
+        /**
+         * <p>The ID of the RAM role.</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <p>The name of the RAM role.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <p>The time when the RAM role was modified.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

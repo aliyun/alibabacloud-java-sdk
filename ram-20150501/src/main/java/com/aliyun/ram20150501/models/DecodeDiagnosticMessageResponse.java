@@ -3,7 +3,7 @@ package com.aliyun.ram20150501.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteVirtualMFADeviceResponse extends TeaModel {
+public class DecodeDiagnosticMessageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteVirtualMFADeviceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteVirtualMFADeviceResponseBody body;
+    public DecodeDiagnosticMessageResponseBody body;
 
-    public static DeleteVirtualMFADeviceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteVirtualMFADeviceResponse self = new DeleteVirtualMFADeviceResponse();
+    public static DecodeDiagnosticMessageResponse build(java.util.Map<String, ?> map) throws Exception {
+        DecodeDiagnosticMessageResponse self = new DecodeDiagnosticMessageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVirtualMFADeviceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DecodeDiagnosticMessageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteVirtualMFADeviceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteVirtualMFADeviceResponse setStatusCode(Integer statusCode) {
+    public DecodeDiagnosticMessageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteVirtualMFADeviceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteVirtualMFADeviceResponse setBody(DeleteVirtualMFADeviceResponseBody body) {
+    public DecodeDiagnosticMessageResponse setBody(DecodeDiagnosticMessageResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteVirtualMFADeviceResponseBody getBody() {
+    public DecodeDiagnosticMessageResponseBody getBody() {
         return this.body;
     }
 

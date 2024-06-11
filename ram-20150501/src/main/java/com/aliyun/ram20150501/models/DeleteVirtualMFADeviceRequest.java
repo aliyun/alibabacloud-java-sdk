@@ -4,6 +4,9 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class DeleteVirtualMFADeviceRequest extends TeaModel {
+    /**
+     * <p>The serial number of the MFA device.</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 

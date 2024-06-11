@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class SetSecurityPreferenceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The security preferences.</p>
+     */
     @NameInMap("SecurityPreference")
     public SetSecurityPreferenceResponseBodySecurityPreference securityPreference;
 
@@ -32,6 +38,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their AccessKey pairs.</p>
+         */
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
 
@@ -51,15 +60,27 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can change their passwords.</p>
+         */
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
+        /**
+         * <p>Indicates whether the MFA devices of RAM users are remembered.</p>
+         */
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
+        /**
+         * <p>The subnet mask.</p>
+         */
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
+        /**
+         * <p>The validity period of the logon session of RAM users.</p>
+         */
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
 
@@ -103,6 +124,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their MFA devices.</p>
+         */
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
 
@@ -122,6 +146,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference extends TeaModel {
+        /**
+         * <p>Indicates whether RAM users can manage their public keys.</p>
+         */
         @NameInMap("AllowUserToManagePublicKeys")
         public Boolean allowUserToManagePublicKeys;
 
@@ -141,15 +168,29 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreference extends TeaModel {
+        /**
+         * <p>The AccessKey pair preference.</p>
+         */
         @NameInMap("AccessKeyPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference accessKeyPreference;
 
+        /**
+         * <p>The logon preference.</p>
+         */
         @NameInMap("LoginProfilePreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference;
 
+        /**
+         * <p>The MFA preference.</p>
+         */
         @NameInMap("MFAPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
+        /**
+         * <p>The public key preference.</p>
+         * <br>
+         * <p>>  This parameter is valid only for the Japan site.</p>
+         */
         @NameInMap("PublicKeyPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference publicKeyPreference;
 

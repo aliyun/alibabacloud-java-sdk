@@ -4,6 +4,9 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicyRequest extends TeaModel {
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 

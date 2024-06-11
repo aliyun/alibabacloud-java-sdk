@@ -4,6 +4,11 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM user.</p>
+     * <br>
+     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

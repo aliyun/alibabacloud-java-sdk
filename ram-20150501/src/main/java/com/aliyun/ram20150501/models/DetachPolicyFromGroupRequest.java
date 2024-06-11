@@ -4,12 +4,21 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class DetachPolicyFromGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM user group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>The type of the policy. Valid values: `System` and `Custom`.</p>
+     */
     @NameInMap("PolicyType")
     public String policyType;
 

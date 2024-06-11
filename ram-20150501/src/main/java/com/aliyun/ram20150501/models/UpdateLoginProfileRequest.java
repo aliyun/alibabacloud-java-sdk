@@ -4,15 +4,27 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoginProfileRequest extends TeaModel {
+    /**
+     * <p>Specifies whether an MFA device must be attached to the RAM user upon logon.</p>
+     */
     @NameInMap("MFABindRequired")
     public Boolean MFABindRequired;
 
+    /**
+     * <p>The logon password of the RAM user. The password must meet the password strength requirements.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>Specifies whether the RAM user must change the password upon logon.</p>
+     */
     @NameInMap("PasswordResetRequired")
     public Boolean passwordResetRequired;
 
+    /**
+     * <p>The name of the RAM user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

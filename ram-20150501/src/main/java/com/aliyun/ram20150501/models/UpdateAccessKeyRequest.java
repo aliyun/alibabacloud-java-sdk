@@ -4,12 +4,21 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UpdateAccessKeyRequest extends TeaModel {
+    /**
+     * <p>The status of the AccessKey pair. Valid values: `Active` and `Inactive`.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The AccessKey ID in the AccessKey pair whose status you want to change.</p>
+     */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
+    /**
+     * <p>The name of the RAM user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

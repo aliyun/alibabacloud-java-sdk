@@ -4,6 +4,9 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetUserMFAInfoRequest extends TeaModel {
+    /**
+     * <p>The username of the RAM user.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

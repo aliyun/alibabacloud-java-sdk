@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessKeyResponseBody extends TeaModel {
+    /**
+     * <p>The information of the AccessKey pair.</p>
+     */
     @NameInMap("AccessKey")
     public CreateAccessKeyResponseBodyAccessKey accessKey;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class CreateAccessKeyResponseBody extends TeaModel {
     }
 
     public static class CreateAccessKeyResponseBodyAccessKey extends TeaModel {
+        /**
+         * <p>The AccessKey ID.</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret.</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The time when the AccessKey pair was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The status of the AccessKey pair. Valid values: Active and Inactive.</p>
+         */
         @NameInMap("Status")
         public String status;
 

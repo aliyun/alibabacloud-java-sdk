@@ -4,6 +4,9 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesForGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the RAM user group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 

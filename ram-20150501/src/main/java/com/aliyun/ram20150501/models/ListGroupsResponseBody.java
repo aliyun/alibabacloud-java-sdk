@@ -4,15 +4,27 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The list of the RAM user groups.</p>
+     */
     @NameInMap("Groups")
     public ListGroupsResponseBodyGroups groups;
 
+    /**
+     * <p>Indicates whether the response is truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If `true` is returned, you can call this operation again and set the `Marker` parameter to obtain the truncated part.</p>
+     */
     @NameInMap("Marker")
     public String marker;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,33 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyGroupsGroup extends TeaModel {
+        /**
+         * <p>The description of the RAM user group.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The time when the RAM user group was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The ID of the RAM user group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the RAM user group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The time when the information of the RAM user group was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

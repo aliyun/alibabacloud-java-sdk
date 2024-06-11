@@ -4,9 +4,15 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualMFADeviceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the MFA device.</p>
+     */
     @NameInMap("VirtualMFADevice")
     public CreateVirtualMFADeviceResponseBodyVirtualMFADevice virtualMFADevice;
 
@@ -32,12 +38,21 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
     }
 
     public static class CreateVirtualMFADeviceResponseBodyVirtualMFADevice extends TeaModel {
+        /**
+         * <p>The key of the MFA device.</p>
+         */
         @NameInMap("Base32StringSeed")
         public String base32StringSeed;
 
+        /**
+         * <p>The Base64-encoded QR code, in the PNG format.</p>
+         */
         @NameInMap("QRCodePNG")
         public String QRCodePNG;
 
+        /**
+         * <p>The serial number of the MFA device.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
