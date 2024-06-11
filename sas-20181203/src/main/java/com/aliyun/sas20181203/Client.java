@@ -17599,6 +17599,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 查询漏洞rasp防御统计
+     *
+     * @param request DescribeVulDefendCountStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVulDefendCountStatisticsResponse
+     */
+    public DescribeVulDefendCountStatisticsResponse describeVulDefendCountStatisticsWithOptions(DescribeVulDefendCountStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.vulType)) {
+            query.put("VulType", request.vulType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVulDefendCountStatistics"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulDefendCountStatisticsResponse());
+    }
+
+    /**
+     * @summary 查询漏洞rasp防御统计
+     *
+     * @param request DescribeVulDefendCountStatisticsRequest
+     * @return DescribeVulDefendCountStatisticsResponse
+     */
+    public DescribeVulDefendCountStatisticsResponse describeVulDefendCountStatistics(DescribeVulDefendCountStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVulDefendCountStatisticsWithOptions(request, runtime);
+    }
+
+    /**
      * @summary Queries the details about a vulnerability.
      *
      * @param request DescribeVulDetailsRequest
@@ -17867,8 +17909,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.raspDefend)) {
+            query.put("RaspDefend", request.raspDefend);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vulNameLike)) {
             query.put("VulNameLike", request.vulNameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vulType)) {
+            query.put("VulType", request.vulType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -17897,6 +17947,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVulListPageResponse describeVulListPage(DescribeVulListPageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVulListPageWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 查询漏洞库信息统计
+     *
+     * @param request DescribeVulMetaCountStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVulMetaCountStatisticsResponse
+     */
+    public DescribeVulMetaCountStatisticsResponse describeVulMetaCountStatisticsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVulMetaCountStatistics"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulMetaCountStatisticsResponse());
+    }
+
+    /**
+     * @summary 查询漏洞库信息统计
+     *
+     * @return DescribeVulMetaCountStatisticsResponse
+     */
+    public DescribeVulMetaCountStatisticsResponse describeVulMetaCountStatistics() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVulMetaCountStatisticsWithOptions(runtime);
     }
 
     /**
@@ -23376,6 +23459,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
             query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectoryAccountId)) {
+            query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityEventIds)) {

@@ -56,6 +56,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("AzureInstanceCount")
         public Integer azureInstanceCount;
 
+        @NameInMap("ExposedInstanceCoreCount")
+        public Long exposedInstanceCoreCount;
+
         /**
          * <p>The number of exposed servers.</p>
          */
@@ -92,6 +95,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("ImportantAssetCount")
         public Integer importantAssetCount;
 
+        @NameInMap("InstanceCoreCount")
+        public Long instanceCoreCount;
+
         /**
          * <p>The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.</p>
          */
@@ -104,6 +110,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("InstanceSyncTaskCount")
         public Integer instanceSyncTaskCount;
 
+        @NameInMap("NewInstanceCoreCount")
+        public Long newInstanceCoreCount;
+
         /**
          * <p>The number of newly added servers.</p>
          */
@@ -115,6 +124,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         @NameInMap("NoRiskInstanceCount")
         public Integer noRiskInstanceCount;
+
+        @NameInMap("NotRunningStatusCoreCount")
+        public Long notRunningStatusCoreCount;
 
         /**
          * <p>The number of servers that are shut down.</p>
@@ -146,6 +158,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("RegionCount")
         public Integer regionCount;
 
+        @NameInMap("RiskInstanceCoreCount")
+        public Long riskInstanceCoreCount;
+
         /**
          * <p>The number of assets that are at risk.</p>
          */
@@ -175,6 +190,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         @NameInMap("UnKnowStatusInstanceCount")
         public Integer unKnowStatusInstanceCount;
+
+        @NameInMap("UnprotectedInstanceCoreCount")
+        public Long unprotectedInstanceCoreCount;
 
         /**
          * <p>The number of unprotected assets.</p>
@@ -215,6 +233,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getAzureInstanceCount() {
             return this.azureInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setExposedInstanceCoreCount(Long exposedInstanceCoreCount) {
+            this.exposedInstanceCoreCount = exposedInstanceCoreCount;
+            return this;
+        }
+        public Long getExposedInstanceCoreCount() {
+            return this.exposedInstanceCoreCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setExposedInstanceCount(Integer exposedInstanceCount) {
@@ -265,6 +291,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.importantAssetCount;
         }
 
+        public DescribeFieldStatisticsResponseBodyGroupedFields setInstanceCoreCount(Long instanceCoreCount) {
+            this.instanceCoreCount = instanceCoreCount;
+            return this;
+        }
+        public Long getInstanceCoreCount() {
+            return this.instanceCoreCount;
+        }
+
         public DescribeFieldStatisticsResponseBodyGroupedFields setInstanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
@@ -281,6 +315,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.instanceSyncTaskCount;
         }
 
+        public DescribeFieldStatisticsResponseBodyGroupedFields setNewInstanceCoreCount(Long newInstanceCoreCount) {
+            this.newInstanceCoreCount = newInstanceCoreCount;
+            return this;
+        }
+        public Long getNewInstanceCoreCount() {
+            return this.newInstanceCoreCount;
+        }
+
         public DescribeFieldStatisticsResponseBodyGroupedFields setNewInstanceCount(Integer newInstanceCount) {
             this.newInstanceCount = newInstanceCount;
             return this;
@@ -295,6 +337,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getNoRiskInstanceCount() {
             return this.noRiskInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setNotRunningStatusCoreCount(Long notRunningStatusCoreCount) {
+            this.notRunningStatusCoreCount = notRunningStatusCoreCount;
+            return this;
+        }
+        public Long getNotRunningStatusCoreCount() {
+            return this.notRunningStatusCoreCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setNotRunningStatusCount(Integer notRunningStatusCount) {
@@ -337,6 +387,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.regionCount;
         }
 
+        public DescribeFieldStatisticsResponseBodyGroupedFields setRiskInstanceCoreCount(Long riskInstanceCoreCount) {
+            this.riskInstanceCoreCount = riskInstanceCoreCount;
+            return this;
+        }
+        public Long getRiskInstanceCoreCount() {
+            return this.riskInstanceCoreCount;
+        }
+
         public DescribeFieldStatisticsResponseBodyGroupedFields setRiskInstanceCount(Integer riskInstanceCount) {
             this.riskInstanceCount = riskInstanceCount;
             return this;
@@ -375,6 +433,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getUnKnowStatusInstanceCount() {
             return this.unKnowStatusInstanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setUnprotectedInstanceCoreCount(Long unprotectedInstanceCoreCount) {
+            this.unprotectedInstanceCoreCount = unprotectedInstanceCoreCount;
+            return this;
+        }
+        public Long getUnprotectedInstanceCoreCount() {
+            return this.unprotectedInstanceCoreCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setUnprotectedInstanceCount(Integer unprotectedInstanceCount) {

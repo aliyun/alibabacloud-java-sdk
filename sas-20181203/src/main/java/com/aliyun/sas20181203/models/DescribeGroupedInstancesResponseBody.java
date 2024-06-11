@@ -79,6 +79,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @NameInMap("GroupFlag")
         public Integer groupFlag;
 
+        @NameInMap("InstanceCoreCount")
+        public Long instanceCoreCount;
+
         /**
          * <p>The total number of assets that belong to the specified type.</p>
          * <br>
@@ -145,6 +148,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
         public Integer getGroupFlag() {
             return this.groupFlag;
+        }
+
+        public DescribeGroupedInstancesResponseBodyInstances setInstanceCoreCount(Long instanceCoreCount) {
+            this.instanceCoreCount = instanceCoreCount;
+            return this;
+        }
+        public Long getInstanceCoreCount() {
+            return this.instanceCoreCount;
         }
 
         public DescribeGroupedInstancesResponseBodyInstances setInstanceCount(String instanceCount) {

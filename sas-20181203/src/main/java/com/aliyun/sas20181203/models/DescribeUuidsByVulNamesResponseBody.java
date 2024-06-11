@@ -52,6 +52,12 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     }
 
     public static class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics extends TeaModel {
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("IntranetIp")
+        public String intranetIp;
+
         /**
          * <p>The instance ID.</p>
          */
@@ -91,6 +97,22 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         public static DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics self = new DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         public DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics setMachineInstanceId(String machineInstanceId) {

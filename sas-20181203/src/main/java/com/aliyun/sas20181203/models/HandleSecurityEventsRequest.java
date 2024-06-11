@@ -72,6 +72,14 @@ public class HandleSecurityEventsRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     */
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
+    /**
      * <p>The IDs of the alert events.</p>
      * <br>
      * <p>This parameter is required.</p>
@@ -128,6 +136,14 @@ public class HandleSecurityEventsRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public HandleSecurityEventsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public HandleSecurityEventsRequest setSecurityEventIds(java.util.List<String> securityEventIds) {
