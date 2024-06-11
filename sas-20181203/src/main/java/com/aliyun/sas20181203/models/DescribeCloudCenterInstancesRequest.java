@@ -80,6 +80,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
      * <p>The ID of the region in which the asset resides.</p>
      */
     @NameInMap("RegionId")
+    @Deprecated
     public String regionId;
 
     /**

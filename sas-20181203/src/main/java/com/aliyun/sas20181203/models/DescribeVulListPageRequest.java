@@ -22,11 +22,17 @@ public class DescribeVulListPageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RaspDefend")
+    public Integer raspDefend;
+
     /**
      * <p>The name of the vulnerability.</p>
      */
     @NameInMap("VulNameLike")
     public String vulNameLike;
+
+    @NameInMap("VulType")
+    public String vulType;
 
     public static DescribeVulListPageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulListPageRequest self = new DescribeVulListPageRequest();
@@ -57,12 +63,28 @@ public class DescribeVulListPageRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeVulListPageRequest setRaspDefend(Integer raspDefend) {
+        this.raspDefend = raspDefend;
+        return this;
+    }
+    public Integer getRaspDefend() {
+        return this.raspDefend;
+    }
+
     public DescribeVulListPageRequest setVulNameLike(String vulNameLike) {
         this.vulNameLike = vulNameLike;
         return this;
     }
     public String getVulNameLike() {
         return this.vulNameLike;
+    }
+
+    public DescribeVulListPageRequest setVulType(String vulType) {
+        this.vulType = vulType;
+        return this;
+    }
+    public String getVulType() {
+        return this.vulType;
     }
 
 }

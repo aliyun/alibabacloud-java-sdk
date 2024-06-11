@@ -7,7 +7,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](https://help.aliyun.com/document_detail/116179.html) operation to query the IDs of check items.</p>
+     * <p>>  You can call the [ListCheckItemWarningSummary](~~ListCheckItemWarningSummary~~) operation to query the IDs of the check items.</p>
      */
     @NameInMap("CheckId")
     public String checkId;
