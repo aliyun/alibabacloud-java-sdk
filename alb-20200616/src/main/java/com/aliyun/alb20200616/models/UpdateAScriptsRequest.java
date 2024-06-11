@@ -58,6 +58,42 @@ public class UpdateAScriptsRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public static class UpdateAScriptsRequestAScriptsExtAttributes extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("AttributeKey")
+        public String attributeKey;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("AttributeValue")
+        public String attributeValue;
+
+        public static UpdateAScriptsRequestAScriptsExtAttributes build(java.util.Map<String, ?> map) throws Exception {
+            UpdateAScriptsRequestAScriptsExtAttributes self = new UpdateAScriptsRequestAScriptsExtAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateAScriptsRequestAScriptsExtAttributes setAttributeKey(String attributeKey) {
+            this.attributeKey = attributeKey;
+            return this;
+        }
+        public String getAttributeKey() {
+            return this.attributeKey;
+        }
+
+        public UpdateAScriptsRequestAScriptsExtAttributes setAttributeValue(String attributeValue) {
+            this.attributeValue = attributeValue;
+            return this;
+        }
+        public String getAttributeValue() {
+            return this.attributeValue;
+        }
+
+    }
+
     public static class UpdateAScriptsRequestAScripts extends TeaModel {
         /**
          * <p>The AScript rule ID.</p>
@@ -83,6 +119,12 @@ public class UpdateAScriptsRequest extends TeaModel {
          */
         @NameInMap("Enabled")
         public Boolean enabled;
+
+        @NameInMap("ExtAttributeEnabled")
+        public Boolean extAttributeEnabled;
+
+        @NameInMap("ExtAttributes")
+        public java.util.List<UpdateAScriptsRequestAScriptsExtAttributes> extAttributes;
 
         /**
          * <p>The content of the AScript rule.</p>
@@ -117,6 +159,22 @@ public class UpdateAScriptsRequest extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+        public UpdateAScriptsRequestAScripts setExtAttributeEnabled(Boolean extAttributeEnabled) {
+            this.extAttributeEnabled = extAttributeEnabled;
+            return this;
+        }
+        public Boolean getExtAttributeEnabled() {
+            return this.extAttributeEnabled;
+        }
+
+        public UpdateAScriptsRequestAScripts setExtAttributes(java.util.List<UpdateAScriptsRequestAScriptsExtAttributes> extAttributes) {
+            this.extAttributes = extAttributes;
+            return this;
+        }
+        public java.util.List<UpdateAScriptsRequestAScriptsExtAttributes> getExtAttributes() {
+            return this.extAttributes;
         }
 
         public UpdateAScriptsRequestAScripts setScriptContent(String scriptContent) {

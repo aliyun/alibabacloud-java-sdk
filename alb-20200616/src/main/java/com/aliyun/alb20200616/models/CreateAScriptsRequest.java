@@ -72,6 +72,36 @@ public class CreateAScriptsRequest extends TeaModel {
         return this.listenerId;
     }
 
+    public static class CreateAScriptsRequestAScriptsExtAttributes extends TeaModel {
+        @NameInMap("AttributeKey")
+        public String attributeKey;
+
+        @NameInMap("AttributeValue")
+        public String attributeValue;
+
+        public static CreateAScriptsRequestAScriptsExtAttributes build(java.util.Map<String, ?> map) throws Exception {
+            CreateAScriptsRequestAScriptsExtAttributes self = new CreateAScriptsRequestAScriptsExtAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAScriptsRequestAScriptsExtAttributes setAttributeKey(String attributeKey) {
+            this.attributeKey = attributeKey;
+            return this;
+        }
+        public String getAttributeKey() {
+            return this.attributeKey;
+        }
+
+        public CreateAScriptsRequestAScriptsExtAttributes setAttributeValue(String attributeValue) {
+            this.attributeValue = attributeValue;
+            return this;
+        }
+        public String getAttributeValue() {
+            return this.attributeValue;
+        }
+
+    }
+
     public static class CreateAScriptsRequestAScripts extends TeaModel {
         /**
          * <p>The name of the AScript rule.</p>
@@ -91,6 +121,12 @@ public class CreateAScriptsRequest extends TeaModel {
          */
         @NameInMap("Enabled")
         public Boolean enabled;
+
+        @NameInMap("ExtAttributeEnabled")
+        public Boolean extAttributeEnabled;
+
+        @NameInMap("ExtAttributes")
+        public java.util.List<CreateAScriptsRequestAScriptsExtAttributes> extAttributes;
 
         /**
          * <p>The content of the AScript rule.</p>
@@ -119,6 +155,22 @@ public class CreateAScriptsRequest extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+        public CreateAScriptsRequestAScripts setExtAttributeEnabled(Boolean extAttributeEnabled) {
+            this.extAttributeEnabled = extAttributeEnabled;
+            return this;
+        }
+        public Boolean getExtAttributeEnabled() {
+            return this.extAttributeEnabled;
+        }
+
+        public CreateAScriptsRequestAScripts setExtAttributes(java.util.List<CreateAScriptsRequestAScriptsExtAttributes> extAttributes) {
+            this.extAttributes = extAttributes;
+            return this;
+        }
+        public java.util.List<CreateAScriptsRequestAScriptsExtAttributes> getExtAttributes() {
+            return this.extAttributes;
         }
 
         public CreateAScriptsRequestAScripts setScriptContent(String scriptContent) {
