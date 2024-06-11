@@ -13,9 +13,15 @@ public class CreateFeatureViewRequest extends TeaModel {
     @NameInMap("Fields")
     public java.util.List<CreateFeatureViewRequestFields> fields;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -25,6 +31,9 @@ public class CreateFeatureViewRequest extends TeaModel {
     @NameInMap("RegisterTable")
     public String registerTable;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SyncOnlineTable")
     public Boolean syncOnlineTable;
 
@@ -34,9 +43,15 @@ public class CreateFeatureViewRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WriteMethod")
     public String writeMethod;
 

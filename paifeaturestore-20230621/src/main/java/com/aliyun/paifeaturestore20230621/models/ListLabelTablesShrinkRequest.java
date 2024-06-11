@@ -22,6 +22,9 @@ public class ListLabelTablesShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

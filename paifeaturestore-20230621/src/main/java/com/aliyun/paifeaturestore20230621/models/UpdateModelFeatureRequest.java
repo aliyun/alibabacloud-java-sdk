@@ -46,12 +46,21 @@ public class UpdateModelFeatureRequest extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,15 +4,27 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CreateModelFeatureRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Features")
     public java.util.List<CreateModelFeatureRequestFeatures> features;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LabelTableId")
     public String labelTableId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -68,12 +80,21 @@ public class CreateModelFeatureRequest extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

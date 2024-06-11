@@ -7,18 +7,30 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OfflineDatasourceId")
     public String offlineDatasourceId;
 
     @NameInMap("OfflineLifeCycle")
     public Integer offlineLifeCycle;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OnlineDatasourceId")
     public String onlineDatasourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -7,9 +7,15 @@ public class UpdateDatasourceRequest extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

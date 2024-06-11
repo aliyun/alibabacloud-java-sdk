@@ -10,9 +10,15 @@ public class PublishFeatureViewTableRequest extends TeaModel {
     @NameInMap("EventTime")
     public String eventTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OfflineToOnline")
     public Boolean offlineToOnline;
 

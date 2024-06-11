@@ -7,6 +7,9 @@ public class UpdateLabelTableRequest extends TeaModel {
     @NameInMap("DatasourceId")
     public String datasourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<UpdateLabelTableRequestFields> fields;
 
@@ -43,12 +46,21 @@ public class UpdateLabelTableRequest extends TeaModel {
     }
 
     public static class UpdateLabelTableRequestFields extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 
