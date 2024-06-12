@@ -3,7 +3,7 @@ package com.aliyun.dytnsapi20200217.models;
 
 import com.aliyun.tea.*;
 
-public class CertNoTwoElementVerificationRequest extends TeaModel {
+public class UAIDConversionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
@@ -13,14 +13,11 @@ public class CertNoTwoElementVerificationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("CertName")
-    public String certName;
+    @NameInMap("Carrier")
+    public String carrier;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("CertNo")
-    public String certNo;
+    @NameInMap("OutId")
+    public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -31,12 +28,15 @@ public class CertNoTwoElementVerificationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static CertNoTwoElementVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
-        CertNoTwoElementVerificationRequest self = new CertNoTwoElementVerificationRequest();
+    @NameInMap("UaidList")
+    public String uaidList;
+
+    public static UAIDConversionRequest build(java.util.Map<String, ?> map) throws Exception {
+        UAIDConversionRequest self = new UAIDConversionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CertNoTwoElementVerificationRequest setAuthCode(String authCode) {
+    public UAIDConversionRequest setAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
     }
@@ -44,23 +44,23 @@ public class CertNoTwoElementVerificationRequest extends TeaModel {
         return this.authCode;
     }
 
-    public CertNoTwoElementVerificationRequest setCertName(String certName) {
-        this.certName = certName;
+    public UAIDConversionRequest setCarrier(String carrier) {
+        this.carrier = carrier;
         return this;
     }
-    public String getCertName() {
-        return this.certName;
+    public String getCarrier() {
+        return this.carrier;
     }
 
-    public CertNoTwoElementVerificationRequest setCertNo(String certNo) {
-        this.certNo = certNo;
+    public UAIDConversionRequest setOutId(String outId) {
+        this.outId = outId;
         return this;
     }
-    public String getCertNo() {
-        return this.certNo;
+    public String getOutId() {
+        return this.outId;
     }
 
-    public CertNoTwoElementVerificationRequest setOwnerId(Long ownerId) {
+    public UAIDConversionRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -68,7 +68,7 @@ public class CertNoTwoElementVerificationRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CertNoTwoElementVerificationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public UAIDConversionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -76,12 +76,20 @@ public class CertNoTwoElementVerificationRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CertNoTwoElementVerificationRequest setResourceOwnerId(Long resourceOwnerId) {
+    public UAIDConversionRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public UAIDConversionRequest setUaidList(String uaidList) {
+        this.uaidList = uaidList;
+        return this;
+    }
+    public String getUaidList() {
+        return this.uaidList;
     }
 
 }

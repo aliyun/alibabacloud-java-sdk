@@ -11,7 +11,7 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
      * <p>*   **PortabilityNumberNotSupported**: The phone number that is involved in mobile number portability is not supported.</p>
      * <p>*   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</p>
      * <br>
-     * <p>>  You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see [Pricing](~~154751~~).</p>
+     * <p>>  You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see [Pricing](https://help.aliyun.com/document_detail/154751.html).</p>
      */
     @NameInMap("Code")
     public String code;
@@ -88,8 +88,8 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
          * <br>
          * <p>*   **-1**: No usage period information is available for the phone number.</p>
          * <p>*   **0**: The phone number status is abnormal. For example, the phone number is a nonexistent number.</p>
-         * <p>*   **1** :\[0-3) months.</p>
-         * <p>*   **2** :\[3-6] months.</p>
+         * <p>*   **1** :[0-3) months.</p>
+         * <p>*   **2** :[3-6] months.</p>
          * <p>*   **3** :(6-12] months.</p>
          * <p>*   **4** :(12-24] months.</p>
          * <p>*   **5** :(24,+) months.</p>

@@ -9,6 +9,8 @@ public class DescribePhoneNumberAttributeRequest extends TeaModel {
 
     /**
      * <p>The phone number that you want to query.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

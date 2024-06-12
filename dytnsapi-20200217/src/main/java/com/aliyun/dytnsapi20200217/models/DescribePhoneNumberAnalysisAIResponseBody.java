@@ -4,6 +4,9 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The response code. Valid values:</p>
      * <br>
@@ -33,6 +36,14 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
     public static DescribePhoneNumberAnalysisAIResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePhoneNumberAnalysisAIResponseBody self = new DescribePhoneNumberAnalysisAIResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePhoneNumberAnalysisAIResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DescribePhoneNumberAnalysisAIResponseBody setCode(String code) {

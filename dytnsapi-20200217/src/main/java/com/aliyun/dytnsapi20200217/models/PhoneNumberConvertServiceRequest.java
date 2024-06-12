@@ -4,12 +4,21 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class PhoneNumberConvertServiceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputNumber")
     public String inputNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mask")
     public String mask;
 

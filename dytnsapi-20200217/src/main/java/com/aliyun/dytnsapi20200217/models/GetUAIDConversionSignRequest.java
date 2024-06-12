@@ -3,7 +3,7 @@ package com.aliyun.dytnsapi20200217.models;
 
 import com.aliyun.tea.*;
 
-public class GetUAIDApplyTokenSignRequest extends TeaModel {
+public class GetUAIDConversionSignRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
@@ -16,18 +16,12 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
     @NameInMap("Carrier")
     public String carrier;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("ClientType")
     public String clientType;
 
     @NameInMap("Format")
     public String format;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("OutId")
     public String outId;
 
@@ -46,18 +40,15 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Time")
     public String time;
 
-    public static GetUAIDApplyTokenSignRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetUAIDApplyTokenSignRequest self = new GetUAIDApplyTokenSignRequest();
+    public static GetUAIDConversionSignRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetUAIDConversionSignRequest self = new GetUAIDConversionSignRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetUAIDApplyTokenSignRequest setAuthCode(String authCode) {
+    public GetUAIDConversionSignRequest setAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
     }
@@ -65,7 +56,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.authCode;
     }
 
-    public GetUAIDApplyTokenSignRequest setCarrier(String carrier) {
+    public GetUAIDConversionSignRequest setCarrier(String carrier) {
         this.carrier = carrier;
         return this;
     }
@@ -73,7 +64,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.carrier;
     }
 
-    public GetUAIDApplyTokenSignRequest setClientType(String clientType) {
+    public GetUAIDConversionSignRequest setClientType(String clientType) {
         this.clientType = clientType;
         return this;
     }
@@ -81,7 +72,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.clientType;
     }
 
-    public GetUAIDApplyTokenSignRequest setFormat(String format) {
+    public GetUAIDConversionSignRequest setFormat(String format) {
         this.format = format;
         return this;
     }
@@ -89,7 +80,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.format;
     }
 
-    public GetUAIDApplyTokenSignRequest setOutId(String outId) {
+    public GetUAIDConversionSignRequest setOutId(String outId) {
         this.outId = outId;
         return this;
     }
@@ -97,7 +88,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.outId;
     }
 
-    public GetUAIDApplyTokenSignRequest setOwnerId(Long ownerId) {
+    public GetUAIDConversionSignRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -105,7 +96,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public GetUAIDApplyTokenSignRequest setParamKey(String paramKey) {
+    public GetUAIDConversionSignRequest setParamKey(String paramKey) {
         this.paramKey = paramKey;
         return this;
     }
@@ -113,7 +104,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.paramKey;
     }
 
-    public GetUAIDApplyTokenSignRequest setParamStr(String paramStr) {
+    public GetUAIDConversionSignRequest setParamStr(String paramStr) {
         this.paramStr = paramStr;
         return this;
     }
@@ -121,7 +112,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.paramStr;
     }
 
-    public GetUAIDApplyTokenSignRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetUAIDConversionSignRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -129,7 +120,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public GetUAIDApplyTokenSignRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetUAIDConversionSignRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -137,7 +128,7 @@ public class GetUAIDApplyTokenSignRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetUAIDApplyTokenSignRequest setTime(String time) {
+    public GetUAIDConversionSignRequest setTime(String time) {
         this.time = time;
         return this;
     }

@@ -8,6 +8,8 @@ public class DescribeEmptyNumberRequest extends TeaModel {
      * <p>The authorization code.</p>
      * <br>
      * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
@@ -16,6 +18,8 @@ public class DescribeEmptyNumberRequest extends TeaModel {
      * <p>The phone number to be queried.</p>
      * <br>
      * <p>>  You can query only one phone number a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
@@ -26,6 +30,8 @@ public class DescribeEmptyNumberRequest extends TeaModel {
      * <p>*   **NORMAL**: The phone number is not encrypted.</p>
      * <p>*   **MD5**</p>
      * <p>*   **SHA256**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mask")
     public String mask;

@@ -8,7 +8,7 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
      * <p>The response code.</p>
      * <br>
      * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).</p>
+     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
      */
     @NameInMap("Code")
     public String code;

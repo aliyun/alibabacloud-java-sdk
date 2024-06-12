@@ -3,22 +3,22 @@ package com.aliyun.dytnsapi20200217.models;
 
 import com.aliyun.tea.*;
 
-public class UAIDVerificationRequest extends TeaModel {
+public class UAIDCollectionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Carrier")
     public String carrier;
 
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
@@ -43,12 +43,12 @@ public class UAIDVerificationRequest extends TeaModel {
     @NameInMap("UserGrantId")
     public String userGrantId;
 
-    public static UAIDVerificationRequest build(java.util.Map<String, ?> map) throws Exception {
-        UAIDVerificationRequest self = new UAIDVerificationRequest();
+    public static UAIDCollectionRequest build(java.util.Map<String, ?> map) throws Exception {
+        UAIDCollectionRequest self = new UAIDCollectionRequest();
         return TeaModel.build(map, self);
     }
 
-    public UAIDVerificationRequest setAuthCode(String authCode) {
+    public UAIDCollectionRequest setAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
     }
@@ -56,7 +56,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.authCode;
     }
 
-    public UAIDVerificationRequest setCarrier(String carrier) {
+    public UAIDCollectionRequest setCarrier(String carrier) {
         this.carrier = carrier;
         return this;
     }
@@ -64,7 +64,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.carrier;
     }
 
-    public UAIDVerificationRequest setIp(String ip) {
+    public UAIDCollectionRequest setIp(String ip) {
         this.ip = ip;
         return this;
     }
@@ -72,7 +72,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.ip;
     }
 
-    public UAIDVerificationRequest setOutId(String outId) {
+    public UAIDCollectionRequest setOutId(String outId) {
         this.outId = outId;
         return this;
     }
@@ -80,7 +80,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.outId;
     }
 
-    public UAIDVerificationRequest setOwnerId(Long ownerId) {
+    public UAIDCollectionRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -88,7 +88,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public UAIDVerificationRequest setProvince(String province) {
+    public UAIDCollectionRequest setProvince(String province) {
         this.province = province;
         return this;
     }
@@ -96,7 +96,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.province;
     }
 
-    public UAIDVerificationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public UAIDCollectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -104,7 +104,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public UAIDVerificationRequest setResourceOwnerId(Long resourceOwnerId) {
+    public UAIDCollectionRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -112,7 +112,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UAIDVerificationRequest setToken(String token) {
+    public UAIDCollectionRequest setToken(String token) {
         this.token = token;
         return this;
     }
@@ -120,7 +120,7 @@ public class UAIDVerificationRequest extends TeaModel {
         return this.token;
     }
 
-    public UAIDVerificationRequest setUserGrantId(String userGrantId) {
+    public UAIDCollectionRequest setUserGrantId(String userGrantId) {
         this.userGrantId = userGrantId;
         return this;
     }
