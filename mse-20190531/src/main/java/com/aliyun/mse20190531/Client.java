@@ -8502,6 +8502,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 获取网关可用区列表
+     *
+     * @param request ListGatewayZoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGatewayZoneResponse
+     */
+    public ListGatewayZoneResponse listGatewayZoneWithOptions(ListGatewayZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGatewayZone"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGatewayZoneResponse());
+    }
+
+    /**
+     * @summary 获取网关可用区列表
+     *
+     * @param request ListGatewayZoneRequest
+     * @return ListGatewayZoneResponse
+     */
+    public ListGatewayZoneResponse listGatewayZone(ListGatewayZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listGatewayZoneWithOptions(request, runtime);
+    }
+
+    /**
      * @summary Displays the number of nodes that can be deployed for an instance.
      *
      * @param request ListInstanceCountRequest
@@ -13928,12 +13970,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary Updates the configuration of a plug-in.
      *
-     * @param request UpdatePluginConfigRequest
+     * @param tmpReq UpdatePluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePluginConfigResponse
      */
-    public UpdatePluginConfigResponse updatePluginConfigWithOptions(UpdatePluginConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdatePluginConfigResponse updatePluginConfigWithOptions(UpdatePluginConfigRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdatePluginConfigShrinkRequest request = new UpdatePluginConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceIdList)) {
+            request.resourceIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceIdList, "ResourceIdList", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -13973,6 +14021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
             query.put("PluginId", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdListShrink)) {
+            query.put("ResourceIdList", request.resourceIdListShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class UpdatePluginConfigRequest extends TeaModel {
+public class UpdatePluginConfigShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
@@ -74,14 +74,14 @@ public class UpdatePluginConfigRequest extends TeaModel {
     public Long pluginId;
 
     @NameInMap("ResourceIdList")
-    public java.util.List<Long> resourceIdList;
+    public String resourceIdListShrink;
 
-    public static UpdatePluginConfigRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdatePluginConfigRequest self = new UpdatePluginConfigRequest();
+    public static UpdatePluginConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdatePluginConfigShrinkRequest self = new UpdatePluginConfigShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePluginConfigRequest setAcceptLanguage(String acceptLanguage) {
+    public UpdatePluginConfigShrinkRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -89,7 +89,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public UpdatePluginConfigRequest setConfig(String config) {
+    public UpdatePluginConfigShrinkRequest setConfig(String config) {
         this.config = config;
         return this;
     }
@@ -97,7 +97,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdatePluginConfigRequest setConfigLevel(Integer configLevel) {
+    public UpdatePluginConfigShrinkRequest setConfigLevel(Integer configLevel) {
         this.configLevel = configLevel;
         return this;
     }
@@ -105,7 +105,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.configLevel;
     }
 
-    public UpdatePluginConfigRequest setEnable(Boolean enable) {
+    public UpdatePluginConfigShrinkRequest setEnable(Boolean enable) {
         this.enable = enable;
         return this;
     }
@@ -113,7 +113,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.enable;
     }
 
-    public UpdatePluginConfigRequest setGatewayId(Long gatewayId) {
+    public UpdatePluginConfigShrinkRequest setGatewayId(Long gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
@@ -121,7 +121,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.gatewayId;
     }
 
-    public UpdatePluginConfigRequest setGatewayUniqueId(String gatewayUniqueId) {
+    public UpdatePluginConfigShrinkRequest setGatewayUniqueId(String gatewayUniqueId) {
         this.gatewayUniqueId = gatewayUniqueId;
         return this;
     }
@@ -129,7 +129,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
-    public UpdatePluginConfigRequest setGmtCreate(String gmtCreate) {
+    public UpdatePluginConfigShrinkRequest setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
     }
@@ -137,7 +137,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.gmtCreate;
     }
 
-    public UpdatePluginConfigRequest setGmtModified(String gmtModified) {
+    public UpdatePluginConfigShrinkRequest setGmtModified(String gmtModified) {
         this.gmtModified = gmtModified;
         return this;
     }
@@ -145,7 +145,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.gmtModified;
     }
 
-    public UpdatePluginConfigRequest setId(Long id) {
+    public UpdatePluginConfigShrinkRequest setId(Long id) {
         this.id = id;
         return this;
     }
@@ -153,7 +153,7 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.id;
     }
 
-    public UpdatePluginConfigRequest setPluginId(Long pluginId) {
+    public UpdatePluginConfigShrinkRequest setPluginId(Long pluginId) {
         this.pluginId = pluginId;
         return this;
     }
@@ -161,12 +161,12 @@ public class UpdatePluginConfigRequest extends TeaModel {
         return this.pluginId;
     }
 
-    public UpdatePluginConfigRequest setResourceIdList(java.util.List<Long> resourceIdList) {
-        this.resourceIdList = resourceIdList;
+    public UpdatePluginConfigShrinkRequest setResourceIdListShrink(String resourceIdListShrink) {
+        this.resourceIdListShrink = resourceIdListShrink;
         return this;
     }
-    public java.util.List<Long> getResourceIdList() {
-        return this.resourceIdList;
+    public String getResourceIdListShrink() {
+        return this.resourceIdListShrink;
     }
 
 }

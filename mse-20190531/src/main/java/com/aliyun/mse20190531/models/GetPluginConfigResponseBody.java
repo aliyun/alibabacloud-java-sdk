@@ -135,6 +135,36 @@ public class GetPluginConfigResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetPluginConfigResponseBodyDataGatewayConfigListResourceList extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetPluginConfigResponseBodyDataGatewayConfigListResourceList build(java.util.Map<String, ?> map) throws Exception {
+            GetPluginConfigResponseBodyDataGatewayConfigListResourceList self = new GetPluginConfigResponseBodyDataGatewayConfigListResourceList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPluginConfigResponseBodyDataGatewayConfigListResourceList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetPluginConfigResponseBodyDataGatewayConfigListResourceList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetPluginConfigResponseBodyDataGatewayConfigList extends TeaModel {
         /**
          * <p>The plug-in configuration.</p>
@@ -195,6 +225,9 @@ public class GetPluginConfigResponseBody extends TeaModel {
          */
         @NameInMap("PluginId")
         public Long pluginId;
+
+        @NameInMap("ResourceList")
+        public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigListResourceList> resourceList;
 
         public static GetPluginConfigResponseBodyDataGatewayConfigList build(java.util.Map<String, ?> map) throws Exception {
             GetPluginConfigResponseBodyDataGatewayConfigList self = new GetPluginConfigResponseBodyDataGatewayConfigList();
@@ -273,6 +306,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
             return this.pluginId;
         }
 
+        public GetPluginConfigResponseBodyDataGatewayConfigList setResourceList(java.util.List<GetPluginConfigResponseBodyDataGatewayConfigListResourceList> resourceList) {
+            this.resourceList = resourceList;
+            return this;
+        }
+        public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigListResourceList> getResourceList() {
+            return this.resourceList;
+        }
+
     }
 
     public static class GetPluginConfigResponseBodyData extends TeaModel {
@@ -300,11 +341,20 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @NameInMap("ConfigCheck")
         public String configCheck;
 
+        @NameInMap("ConfigExample")
+        public String configExample;
+
+        @NameInMap("DomainConfigStartIndex")
+        public Integer domainConfigStartIndex;
+
         /**
          * <p>The list of gateway plug-in configurations.</p>
          */
         @NameInMap("GatewayConfigList")
         public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigList> gatewayConfigList;
+
+        @NameInMap("GatewayConfigStartIndex")
+        public Integer gatewayConfigStartIndex;
 
         /**
          * <p>The ID of the plug-in.</p>
@@ -374,6 +424,9 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @NameInMap("ReadmeEn")
         public String readmeEn;
 
+        @NameInMap("RouteConfigStartIndex")
+        public Integer routeConfigStartIndex;
+
         /**
          * <p>Indicates whether the plug-in is enabled. Valid values:</p>
          * <br>
@@ -442,12 +495,36 @@ public class GetPluginConfigResponseBody extends TeaModel {
             return this.configCheck;
         }
 
+        public GetPluginConfigResponseBodyData setConfigExample(String configExample) {
+            this.configExample = configExample;
+            return this;
+        }
+        public String getConfigExample() {
+            return this.configExample;
+        }
+
+        public GetPluginConfigResponseBodyData setDomainConfigStartIndex(Integer domainConfigStartIndex) {
+            this.domainConfigStartIndex = domainConfigStartIndex;
+            return this;
+        }
+        public Integer getDomainConfigStartIndex() {
+            return this.domainConfigStartIndex;
+        }
+
         public GetPluginConfigResponseBodyData setGatewayConfigList(java.util.List<GetPluginConfigResponseBodyDataGatewayConfigList> gatewayConfigList) {
             this.gatewayConfigList = gatewayConfigList;
             return this;
         }
         public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigList> getGatewayConfigList() {
             return this.gatewayConfigList;
+        }
+
+        public GetPluginConfigResponseBodyData setGatewayConfigStartIndex(Integer gatewayConfigStartIndex) {
+            this.gatewayConfigStartIndex = gatewayConfigStartIndex;
+            return this;
+        }
+        public Integer getGatewayConfigStartIndex() {
+            return this.gatewayConfigStartIndex;
         }
 
         public GetPluginConfigResponseBodyData setId(Long id) {
@@ -528,6 +605,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
         public String getReadmeEn() {
             return this.readmeEn;
+        }
+
+        public GetPluginConfigResponseBodyData setRouteConfigStartIndex(Integer routeConfigStartIndex) {
+            this.routeConfigStartIndex = routeConfigStartIndex;
+            return this;
+        }
+        public Integer getRouteConfigStartIndex() {
+            return this.routeConfigStartIndex;
         }
 
         public GetPluginConfigResponseBodyData setStatus(String status) {
