@@ -4,15 +4,24 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberAnalysisTransparentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputNumber")
     public String inputNumber;
 
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NumberType")
     public String numberType;
 

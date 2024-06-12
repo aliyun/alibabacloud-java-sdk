@@ -8,6 +8,8 @@ public class PhoneNumberEncryptRequest extends TeaModel {
      * <p>The authorization code.</p>
      * <br>
      * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
@@ -16,6 +18,8 @@ public class PhoneNumberEncryptRequest extends TeaModel {
      * <p>The phone number to be queried.</p>
      * <br>
      * <p>>  You can query only one phone number at a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
@@ -24,6 +28,8 @@ public class PhoneNumberEncryptRequest extends TeaModel {
      * <p>The encryption method of the phone number. Set the value to **NORMAL**.</p>
      * <br>
      * <p>>  Only the NORMAL encryption method is supported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mask")
     public String mask;

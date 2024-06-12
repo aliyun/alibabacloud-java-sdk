@@ -8,6 +8,8 @@ public class PhoneNumberStatusForVoiceRequest extends TeaModel {
      * <p>The authorization code.</p>
      * <br>
      * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
@@ -20,6 +22,8 @@ public class PhoneNumberStatusForVoiceRequest extends TeaModel {
      * <p>*   If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</p>
      * <br>
      * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
@@ -30,6 +34,8 @@ public class PhoneNumberStatusForVoiceRequest extends TeaModel {
      * <p>*   **NORMAL**: plaintext</p>
      * <p>*   **MD5**</p>
      * <p>*   **SHA256**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mask")
     public String mask;

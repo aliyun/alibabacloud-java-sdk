@@ -8,12 +8,16 @@ public class DescribePhoneNumberAnalysisAIRequest extends TeaModel {
      * <p>The authorization code.</p>
      * <br>
      * <p>>  On the ****[**Labels**](https://dytns.console.aliyun.com/analysis/square) page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>The phone number to be queried.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;

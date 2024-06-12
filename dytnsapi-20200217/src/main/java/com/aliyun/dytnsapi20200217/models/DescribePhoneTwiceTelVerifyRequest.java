@@ -8,6 +8,8 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
      * <p>The authorization code.</p>
      * <br>
      * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
@@ -20,6 +22,8 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
      * <p>*   If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</p>
      * <br>
      * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
@@ -30,6 +34,8 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
      * <p>*   **NORMAL**: The phone number is not encrypted.</p>
      * <p>*   **MD5**</p>
      * <p>*   **SHA256**</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mask")
     public String mask;
@@ -51,6 +57,8 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
      * <p>*   If a carrier allocates a single number multiple times, the system will determine whether the phone number is a reassigned number based on the time when the carrier last allocated the phone number.</p>
      * <br>
      * <p>*   The service registration time must be later than 00:00:00 on January 1, 1970.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

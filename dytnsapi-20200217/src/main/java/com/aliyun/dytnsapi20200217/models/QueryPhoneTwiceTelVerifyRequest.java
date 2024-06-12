@@ -4,12 +4,21 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class QueryPhoneTwiceTelVerifyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InputNumber")
     public String inputNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
@@ -22,6 +31,9 @@ public class QueryPhoneTwiceTelVerifyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
