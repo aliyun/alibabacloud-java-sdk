@@ -12,6 +12,8 @@ public class CreateCompliancePackRequest extends TeaModel {
 
     /**
      * <p>The name of the compliance package.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
@@ -19,13 +21,13 @@ public class CreateCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package template.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).</p>
+     * <p>You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the ID of the compliance package.</p>
      */
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
     /**
-     * <p>The rules in the compliance package.</p>
+     * <p>The rules in the compliance package. You must specify either this parameter or TemplateContent.</p>
      */
     @NameInMap("ConfigRules")
     public java.util.List<CreateCompliancePackRequestConfigRules> configRules;
@@ -64,11 +66,11 @@ public class CreateCompliancePackRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:</p>
      * <br>
-     * <p>*   1: high risk level</p>
-     * <p>*   2: medium risk level</p>
-     * <p>*   3: low risk level</p>
+     * <p>*   1: high.</p>
+     * <p>*   2: medium.</p>
+     * <p>*   3: low.</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
@@ -87,6 +89,9 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>The information about the template that is used to generate the compliance package. You can call an API operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html). You must specify one of ConfigRules and TemplateContent.</p>
+     */
     @NameInMap("TemplateContent")
     public String templateContent;
 
@@ -203,7 +208,7 @@ public class CreateCompliancePackRequest extends TeaModel {
         /**
          * <p>The name of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the names of input parameters of the managed rule.</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -211,7 +216,7 @@ public class CreateCompliancePackRequest extends TeaModel {
         /**
          * <p>The value of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists you must configure this parameter. For more information about how to obtain the expected value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the values of input parameters of the managed rule.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -241,9 +246,9 @@ public class CreateCompliancePackRequest extends TeaModel {
 
     public static class CreateCompliancePackRequestConfigRules extends TeaModel {
         /**
-         * <p>The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.</p>
+         * <p>The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+         * <p>You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListConfigRules](https://help.aliyun.com/document_detail/169607.html) operation to obtain the rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -255,7 +260,7 @@ public class CreateCompliancePackRequest extends TeaModel {
         public String configRuleName;
 
         /**
-         * <p>The details of the input parameters of the rule.</p>
+         * <p>The input parameters of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<CreateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
@@ -267,19 +272,19 @@ public class CreateCompliancePackRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the managed rule. Cloud Config automatically creates a managed rule based on the specified ID and adds the rule to the compliance package.</p>
+         * <p>The identifier of the managed rule. Cloud Config automatically creates a managed rule based on the specified identifier and adds the rule to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter take precedence. For more information about how to obtain the identifier of a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the identifier of the managed rule.</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high.</p>
+         * <p>*   2: medium.</p>
+         * <p>*   3: low.</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;

@@ -7,7 +7,9 @@ public class DeleteRemediationsRequest extends TeaModel {
     /**
      * <p>The ID of the remediation template. Separate multiple remediation template IDs with commas (,).</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a remediation template, see [ListRemediations](~~270772~~).</p>
+     * <p>For more information about how to obtain the ID of a remediation template, see [ListRemediations](https://help.aliyun.com/document_detail/270772.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemediationIds")
     public String remediationIds;

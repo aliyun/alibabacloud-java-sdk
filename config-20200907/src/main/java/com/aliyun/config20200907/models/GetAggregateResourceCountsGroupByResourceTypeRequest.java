@@ -7,7 +7,9 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends TeaMod
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -15,7 +17,7 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends TeaMod
     /**
      * <p>The ID of the folder in the resource directory.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a folder, see [View the basic information of a folder](~~111223~~).</p>
+     * <p>For more information about how to obtain the ID of a folder, see [View the basic information of a folder](https://help.aliyun.com/document_detail/111223.html).</p>
      */
     @NameInMap("FolderId")
     public String folderId;

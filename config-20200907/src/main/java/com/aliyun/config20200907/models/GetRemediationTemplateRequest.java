@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetRemediationTemplateRequest extends TeaModel {
     /**
-     * <p>The identifier of the automatic remediation template.</p>
+     * <p>The ID of the automatic remediation template.</p>
      * <br>
-     * <p>For more information about how to obtain the identifier of a remediation template, see [Compliance library](~~2337741~~).</p>
+     * <p>For more information about how to obtain the ID of a remediation template, see [Compliance library](https://help.aliyun.com/document_detail/2337741.html).</p>
      */
     @NameInMap("TemplateIdentifier")
     public String templateIdentifier;

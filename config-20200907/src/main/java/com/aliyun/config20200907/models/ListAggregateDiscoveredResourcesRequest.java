@@ -7,13 +7,17 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -31,7 +35,7 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     public String regions;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+     * <p>The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
@@ -39,8 +43,8 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     /**
      * <p>The status of the resource. Valid values:</p>
      * <br>
-     * <p>*   0: The resource is deleted.</p>
-     * <p>*   1 (default): The resource is retained.</p>
+     * <p>*   0: The resource is deleted. If a resource is deleted from the desired cloud service, **Deleted** is displayed in the resource list in the Cloud Config console.</p>
+     * <p>*   1 (default): The resource is retained. If a resource is managed as expected, **Active** is displayed in the resource list in the Cloud Config console.</p>
      */
     @NameInMap("ResourceDeleted")
     public Integer resourceDeleted;

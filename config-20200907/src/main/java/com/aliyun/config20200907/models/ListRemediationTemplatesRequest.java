@@ -7,7 +7,7 @@ public class ListRemediationTemplatesRequest extends TeaModel {
     /**
      * <p>The identifier of the managed rule.</p>
      * <br>
-     * <p>You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the managed rule identifier.</p>
+     * <p>You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the managed rule identifier.</p>
      */
     @NameInMap("ManagedRuleIdentifier")
     public String managedRuleIdentifier;

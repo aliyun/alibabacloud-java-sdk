@@ -18,6 +18,8 @@ public class ListResourceRelationsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the resource resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -28,48 +30,25 @@ public class ListResourceRelationsRequest extends TeaModel {
      * <p>Valid values:</p>
      * <br>
      * <p>*   IsContained: The object is included as part of the resource.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
      * <p>*   IsAttachedTo: The object is added to the resource.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
      * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Contains: The actual value contains the expected value.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   Contains: The object contains the resource.</p>
      */
     @NameInMap("RelationType")
     public String relationType;
 
     /**
      * <p>The resource ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -7,7 +7,7 @@ public class CreateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests.</p>
      * <br>
-     * <p>The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -70,6 +70,8 @@ public class CreateConfigDeliveryChannelRequest extends TeaModel {
      * <p>*   `acs:oss:{RegionId}:{accountId}:{bucketName}` if your delivery destination is an OSS bucket. Example: `acs:oss:cn-shanghai:100931896542****:new-bucket`.</p>
      * <p>*   `acs:mns:{RegionId}:{accountId}:/topics/{topicName}` if your delivery destination is an MNS topic. Example: `acs:mns:cn-shanghai:100931896542****:/topics/topic1`.</p>
      * <p>*   `acs:log:{RegionId}:{accountId}:project/{projectName}/logstore/{logstoreName}` if your delivery destination is a Log Service Logstore. Example: `acs:log:cn-shanghai:100931896542****:project/project1/logstore/logstore1`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelTargetArn")
     public String deliveryChannelTargetArn;
@@ -80,6 +82,8 @@ public class CreateConfigDeliveryChannelRequest extends TeaModel {
      * <p>*   OSS: Object Storage Service (OSS)</p>
      * <p>*   MNS: Message Service (MNS)</p>
      * <p>*   SLS: Log Service</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelType")
     public String deliveryChannelType;

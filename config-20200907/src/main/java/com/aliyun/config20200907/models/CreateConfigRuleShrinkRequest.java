@@ -12,6 +12,8 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
@@ -23,6 +25,8 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
      * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
      * <br>
      * <p>>  If a rule supports the preceding trigger types, separate the types with a comma (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleTriggerTypes")
     public String configRuleTriggerTypes;
@@ -79,16 +83,20 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceTypesScope")
     public String resourceTypesScopeShrink;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
      * <br>
-     * <p>*   1: high risk level</p>
-     * <p>*   2: medium risk level</p>
-     * <p>*   3: low risk level</p>
+     * <p>*   1: high.</p>
+     * <p>*   2: medium.</p>
+     * <p>*   3: low.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
@@ -99,7 +107,9 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
      * <p>*   If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.</p>
      * <p>*   If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</p>
      * <br>
-     * <p>For more information about how to query the name of a managed rule, see [Managed rules](~~127404~~).</p>
+     * <p>For more information about how to query the name of a managed rule, see [Managed rules](https://help.aliyun.com/document_detail/127404.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceIdentifier")
     public String sourceIdentifier;
@@ -109,31 +119,33 @@ public class CreateConfigRuleShrinkRequest extends TeaModel {
      * <br>
      * <p>*   ALIYUN: managed rule.</p>
      * <p>*   CUSTOM_FC: custom rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceOwner")
     public String sourceOwner;
 
     /**
-     * <p>The logical relationship among the tag keys if you specify multiple tag keys for the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:</p>
+     * <p>The logical relationship among the tag keys if you specify multiple tag keys for `TagKeyScope`. For example, if you set `TagKeyScope` to `ECS,OSS` and set TagKeyLogicScope to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:</p>
      * <br>
-     * <p>*   AND: logical AND</p>
-     * <p>*   OR: logical OR</p>
+     * <p>*   AND</p>
+     * <p>*   OR</p>
      */
     @NameInMap("TagKeyLogicScope")
     public String tagKeyLogicScope;
 
     /**
-     * <p>The tag key used to filter resources. The rule applies only to the resources with a specified tag key.</p>
+     * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
      * <br>
-     * <p>>  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.</p>
+     * <p>>  This parameter applies only to managed rules. You must specify both `TagKeyScope` and `TagValueScope`.</p>
      */
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
 
     /**
-     * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
+     * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
      * <br>
-     * <p>>  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.</p>
+     * <p>>  This parameter applies only to managed rules. You must specify both `TagKeyScope` and `TagValueScope`.</p>
      */
     @NameInMap("TagValueScope")
     public String tagValueScope;

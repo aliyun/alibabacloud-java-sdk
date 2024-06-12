@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConfigRulesResponseBody extends TeaModel {
     /**
-     * <p>The queried rules.</p>
+     * <p>The information about the rules.</p>
      */
     @NameInMap("ConfigRules")
     public ListConfigRulesResponseBodyConfigRules configRules;
@@ -39,21 +39,18 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance extends TeaModel {
         /**
-         * <p>The compliance evaluation result. Valid values:</p>
+         * <p>The compliance evaluation result of the rule. Valid values:</p>
          * <br>
-         * <p>- COMPLIANT: The resource is evaluated as compliant.</p>
-         * <br>
-         * <p>- NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-         * <br>
-         * <p>- NOT_APPLICABLE: The rule does not apply to the resource.</p>
-         * <br>
-         * <p>- INSUFFICIENT_DATA: No resource data is available.</p>
+         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
-         * <p>The number of evaluated resources.</p>
+         * <p>The number of resources that are evaluated based on the rule.</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -83,7 +80,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy extends TeaModel {
         /**
-         * <p>The ID of the compliance package.</p>
+         * <p>The compliance package ID.</p>
          */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
@@ -155,19 +152,19 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
         /**
-         * <p>The ID of the management account to which the rule belongs.</p>
+         * <p>The ID of the account to which the rule belongs.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.</p>
+         * <p>The type of the remediation template. Only OOS is returned, which indicates CloudOps Orchestration Service.</p>
          */
         @NameInMap("AutomationType")
         public String automationType;
 
         /**
-         * <p>The compliance evaluation result.</p>
+         * <p>The compliance aggregation result of the rule.</p>
          */
         @NameInMap("Compliance")
         public ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance;
@@ -185,7 +182,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -193,13 +190,10 @@ public class ListConfigRulesResponseBody extends TeaModel {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <br>
-         * <p>- ACTIVE: The rule is enabled.</p>
-         * <br>
-         * <p>- DELETING: The rule is being deleted.</p>
-         * <br>
-         * <p>- EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
-         * <br>
-         * <p>- INACTIVE: The rule is disabled.</p>
+         * <p>*   ACTIVE: The rule is enabled.</p>
+         * <p>*   DELETING: The rule is being deleted.</p>
+         * <p>*   EVALUATING: The rule is being used to evaluate resource configurations.</p>
+         * <p>*   INACTIVE: The rule is disabled.</p>
          */
         @NameInMap("ConfigRuleState")
         public String configRuleState;
@@ -223,23 +217,20 @@ public class ListConfigRulesResponseBody extends TeaModel {
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <br>
-         * <p>- 1: high</p>
-         * <br>
-         * <p>- 2: medium</p>
-         * <br>
-         * <p>- 3: low</p>
+         * <p>*   1: high.</p>
+         * <p>*   2: medium.</p>
+         * <p>*   3: low.</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The identifier of the rule.</p>
          * <br>
-         * <p>- If the rule is a managed rule, the value of this parameter is the name of the managed rule.</p>
-         * <br>
-         * <p>- If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</p>
+         * <p>*   If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.</p>
+         * <p>*   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the rule.</p>
          */
         @NameInMap("SourceIdentifier")
         public String sourceIdentifier;
@@ -247,9 +238,8 @@ public class ListConfigRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <br>
-         * <p>- CUSTOM_FC: custom rule</p>
-         * <br>
-         * <p>- ALIYUN: managed rule</p>
+         * <p>*   CUSTOM_FC: a custom rule.</p>
+         * <p>*   ALIYUN: a managed rule.</p>
          */
         @NameInMap("SourceOwner")
         public String sourceOwner;
@@ -381,7 +371,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     public static class ListConfigRulesResponseBodyConfigRules extends TeaModel {
         /**
-         * <p>The rule list.</p>
+         * <p>The details of the rule.</p>
          */
         @NameInMap("ConfigRuleList")
         public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleList> configRuleList;

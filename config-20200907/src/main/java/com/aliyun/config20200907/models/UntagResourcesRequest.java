@@ -15,6 +15,8 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,6 +25,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>The resource ID.</p>
      * <br>
      * <p>You can remove tags from up to 50 resources at a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -35,6 +39,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>*   `ACS::Config::Aggregator`</p>
      * <p>*   `ACS::Config::CompliancePack`</p>
      * <p>*   `ACS::Config::AggregateCompliancePack`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

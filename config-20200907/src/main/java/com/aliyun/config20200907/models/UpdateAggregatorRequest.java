@@ -15,7 +15,9 @@ public class UpdateAggregatorRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -23,7 +25,7 @@ public class UpdateAggregatorRequest extends TeaModel {
     /**
      * <p>The name of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the name of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the name of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
      */
     @NameInMap("AggregatorName")
     public String aggregatorName;
@@ -37,7 +39,7 @@ public class UpdateAggregatorRequest extends TeaModel {
     /**
      * <p>The description of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the description of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the description of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -91,7 +93,7 @@ public class UpdateAggregatorRequest extends TeaModel {
         /**
          * <p>The member account ID, which indicates the Alibaba Cloud account ID of the member account.</p>
          * <br>
-         * <p>For more information about how to obtain the ID of a member account, see [ListAccounts](~~160016~~).</p>
+         * <p>For more information about how to obtain the ID of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).</p>
          * <br>
          * <p>>  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.</p>
          */
@@ -101,7 +103,7 @@ public class UpdateAggregatorRequest extends TeaModel {
         /**
          * <p>The member account name, which indicates the name of the Alibaba Cloud account that corresponds to the member account.</p>
          * <br>
-         * <p>For more information about how to obtain the name of a member account, see [ListAccounts](~~160016~~).</p>
+         * <p>For more information about how to obtain the name of a member account, see [ListAccounts](https://help.aliyun.com/document_detail/160016.html).</p>
          * <br>
          * <p>>  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.</p>
          */

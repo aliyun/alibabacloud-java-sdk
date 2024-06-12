@@ -5,13 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateAggregatorShrinkRequest extends TeaModel {
     /**
-     * <p>The type of the member account. Valid value: ResourceDirectory.</p>
+     * <p>The information about the member accounts in the account group. Example:</p>
+     * <br>
+     * <p>    [{</p>
+     * <p>    	"accountId": 171322098523****,</p>
+     * <p>    	"accountType":"ResourceDirectory",</p>
+     * <p>                    "accountName":"Alice"</p>
+     * <p>    }, {</p>
+     * <p>    	"accountId": 100532098349****,</p>
+     * <p>    	"accountType":"ResourceDirectory",</p>
+     * <p>                    "accountName":"Tom"</p>
+     * <p>    }]</p>
+     * <br>
+     * <p>>  If `AggregatorType` is set to `RD` or `FOLDER`, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</p>
      */
     @NameInMap("AggregatorAccounts")
     public String aggregatorAccountsShrink;
 
     /**
      * <p>The name of the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorName")
     public String aggregatorName;
@@ -19,8 +33,9 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The type of the account group. Valid values:</p>
      * <br>
-     * <p>*   RD: global account group</p>
-     * <p>*   CUSTOM (default): custom account group</p>
+     * <p>*   RD: global account group.</p>
+     * <p>*   FOLDER: account group of the folder.</p>
+     * <p>*   CUSTOM (default): custom account group.</p>
      */
     @NameInMap("AggregatorType")
     public String aggregatorType;
@@ -33,10 +48,15 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the folder to which the account group is attached. You must specify this parameter if `AggregatorType` is set to `FOLDER`.</p>
+     */
     @NameInMap("FolderId")
     public String folderId;
 

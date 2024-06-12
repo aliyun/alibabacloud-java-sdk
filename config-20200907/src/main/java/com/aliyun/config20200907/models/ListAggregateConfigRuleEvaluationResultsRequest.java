@@ -7,7 +7,9 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -15,7 +17,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
@@ -25,29 +27,29 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
      * <br>
      * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
      * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to your resource.</p>
+     * <p>*   INSUFFICIENT_DATA: No data is available.</p>
      * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     * <p>For more information about how to query the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
-     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to initiate the next request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

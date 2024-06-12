@@ -7,13 +7,17 @@ public class RevertEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The resources that are to be re-evaluated.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public java.util.List<RevertEvaluationResultsRequestResources> resources;
@@ -43,13 +47,17 @@ public class RevertEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The ID of the region in which the resource resides.</p>
          * <br>
-         * <p>For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](~~169620~~).</p>
+         * <p>For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
@@ -57,7 +65,9 @@ public class RevertEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The resource ID.</p>
          * <br>
-         * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+         * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
@@ -65,7 +75,9 @@ public class RevertEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The resource type.</p>
          * <br>
-         * <p>For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+         * <p>For more information about how to query the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

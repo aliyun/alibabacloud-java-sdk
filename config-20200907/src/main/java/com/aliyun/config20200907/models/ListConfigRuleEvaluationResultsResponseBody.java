@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
     /**
-     * <p>The compliance evaluation result returned.</p>
+     * <p>The compliance evaluation results returned.</p>
      */
     @NameInMap("EvaluationResults")
     public ListConfigRuleEvaluationResultsResponseBodyEvaluationResults evaluationResults;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,19 +45,19 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String compliancePackId;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+         * <p>The ARN of the rule.</p>
          */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -65,37 +65,37 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         /**
          * <p>The date on which the system automatically re-evaluates the ignored incompliant resources.</p>
          * <br>
-         * <p>>  If this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
+         * <p>>  If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</p>
          */
         @NameInMap("IgnoreDate")
         public String ignoreDate;
 
         /**
-         * <p>The ID of the region where the resource resides.</p>
+         * <p>The ID of the region in which your resources reside.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          */
         @NameInMap("ResourceOwnerId")
         public Long resourceOwnerId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The type of the resource that is monitored by Cloud Config.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -225,7 +225,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
 
     public static class ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList extends TeaModel {
         /**
-         * <p>The annotation to the resource that is evaluated as non-compliant. The following parameters may be returned:</p>
+         * <p>The annotation to the resource that is evaluated as non-compliant. The following section describe the parameters that can be returned:</p>
          * <br>
          * <p>*   `configuration`: the current resource configuration that is evaluated as non-compliant.</p>
          * <p>*   `desiredValue`: the expected resource configuration that is evaluated as compliant.</p>
@@ -237,12 +237,12 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String annotation;
 
         /**
-         * <p>The compliance evaluation result of the resources. Valid values:</p>
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
          * <br>
          * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
          * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
          * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         * <p>*   INSUFFICIENT_DATA: No data is available.</p>
          * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
          */
         @NameInMap("ComplianceType")
@@ -255,7 +255,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Long configRuleInvokedTimestamp;
 
         /**
-         * <p>The identifier of the compliance evaluation result.</p>
+         * <p>The identifying information about the compliance evaluation result.</p>
          */
         @NameInMap("EvaluationResultIdentifier")
         public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier;
@@ -272,8 +272,8 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the remediation template is enabled. Valid values:</p>
          * <br>
-         * <p>- true: The remediation template is enabled.</p>
-         * <p>- false: The remediation template is disabled.</p>
+         * <p>*   true: The remediation template is enabled.</p>
+         * <p>*   false: The remediation template is disabled.</p>
          */
         @NameInMap("RemediationEnabled")
         public Boolean remediationEnabled;
@@ -285,11 +285,11 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Long resultRecordedTimestamp;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -379,7 +379,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that was used to initiate the next request.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

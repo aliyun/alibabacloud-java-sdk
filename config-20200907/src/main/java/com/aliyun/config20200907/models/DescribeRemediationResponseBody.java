@@ -92,6 +92,8 @@ public class DescribeRemediationResponseBody extends TeaModel {
 
         /**
          * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("RemediationOriginParams")
         public String remediationOriginParams;

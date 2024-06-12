@@ -18,7 +18,9 @@ public class GetResourceComplianceByConfigRuleRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;

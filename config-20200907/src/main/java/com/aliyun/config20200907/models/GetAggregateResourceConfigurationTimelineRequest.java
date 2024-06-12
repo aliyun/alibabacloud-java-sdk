@@ -7,7 +7,9 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -33,7 +35,9 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the resource resides.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -47,7 +51,9 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     /**
      * <p>The resource ID.</p>
      * <br>
-     * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -59,7 +65,9 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     /**
      * <p>The type of the resource.</p>
      * <br>
-     * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

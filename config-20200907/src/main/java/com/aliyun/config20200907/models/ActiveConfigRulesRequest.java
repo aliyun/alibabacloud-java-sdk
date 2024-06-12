@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ActiveConfigRulesRequest extends TeaModel {
     /**
      * <p>The rule IDs. Separate multiple rule IDs with commas (,). You can specify a maximum of 20 rule IDs at a time.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;

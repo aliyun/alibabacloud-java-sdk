@@ -11,10 +11,10 @@ public class PutEvaluationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The submission status of the evaluation results of the custom rule. Valid values:</p>
+     * <p>Indicates whether the evaluation results of the custom rule are submitted. Valid values:</p>
      * <br>
      * <p>*   true: The evaluation results are submitted.</p>
-     * <p>*   false: The evaluation results failed to be submitted.</p>
+     * <p>*   false: The evaluation results fail to be submitted.</p>
      */
     @NameInMap("Result")
     public Boolean result;

@@ -51,7 +51,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the input parameter is required. Valid values:</p>
+         * <p>Indicates whether the input parameters are required. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -110,7 +110,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
-         * <p>The rule description.</p>
+         * <p>The description of the rule.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -130,9 +130,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         /**
          * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <br>
-         * <p>*   1: high</p>
-         * <p>*   2: medium</p>
-         * <p>*   3: low</p>
+         * <p>*   1: high.</p>
+         * <p>*   2: medium.</p>
+         * <p>*   3: low.</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -352,6 +352,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+         */
         @NameInMap("TemplateContent")
         public String templateContent;
 

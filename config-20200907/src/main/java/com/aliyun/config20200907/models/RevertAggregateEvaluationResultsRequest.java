@@ -7,19 +7,25 @@ public class RevertAggregateEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The ID of the rule in the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
      * <p>The resources that you want to re-evaluate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public java.util.List<RevertAggregateEvaluationResultsRequestResources> resources;
@@ -57,7 +63,9 @@ public class RevertAggregateEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The ID of the region where the resource resides.</p>
          * <br>
-         * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Region")
         public String region;
@@ -66,6 +74,8 @@ public class RevertAggregateEvaluationResultsRequest extends TeaModel {
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * <br>
          * <p>> You must specify the ID of the current management account or a member account in the account group of the management account.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
@@ -73,7 +83,9 @@ public class RevertAggregateEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The resource ID.</p>
          * <br>
-         * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
@@ -81,7 +93,9 @@ public class RevertAggregateEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The type of resource.</p>
          * <br>
-         * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

@@ -50,36 +50,9 @@ public class ListResourceRelationsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   IsContained: The object is included as part of the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   IsAttachedTo: The object is added to the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   Contains: The object contains the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("RelationType")
         public String relationType;
@@ -91,7 +64,7 @@ public class ListResourceRelationsResponseBody extends TeaModel {
         public String sourceResourceId;
 
         /**
-         * <p>The ID of the region to which the current resource belongs.</p>
+         * <p>The ID of the region in which the resource resides.</p>
          */
         @NameInMap("SourceResourceRegionId")
         public String sourceResourceRegionId;
@@ -103,13 +76,13 @@ public class ListResourceRelationsResponseBody extends TeaModel {
         public String sourceResourceType;
 
         /**
-         * <p>The ID of the resource that is associated with the object.</p>
+         * <p>The ID of the associated resource.</p>
          */
         @NameInMap("TargetResourceId")
         public String targetResourceId;
 
         /**
-         * <p>The type of the resource that is associated with the object.</p>
+         * <p>The type of the associated resource.</p>
          */
         @NameInMap("TargetResourceType")
         public String targetResourceType;
@@ -191,41 +164,7 @@ public class ListResourceRelationsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The type of the relationship between the resource and the object.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   IsContained: The object is included as part of the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   IsAttachedTo: The object is added to the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Contains: The actual value contains the expected value.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>An array that contains the relationships.</p>
          */
         @NameInMap("ResourceRelationList")
         public java.util.List<ListResourceRelationsResponseBodyResourceRelationsResourceRelationList> resourceRelationList;

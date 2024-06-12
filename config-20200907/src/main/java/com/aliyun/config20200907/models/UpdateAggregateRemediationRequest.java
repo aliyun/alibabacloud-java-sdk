@@ -7,7 +7,9 @@ public class UpdateAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>You can the [ListAggregators](~~255797~~) operation to obtain the ID of the account group.</p>
+     * <p>You can the [ListAggregators](https://help.aliyun.com/document_detail/255797.html) operation to obtain the ID of the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -32,7 +34,9 @@ public class UpdateAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the remediation setting.</p>
      * <br>
-     * <p>You can call the [ListAggregateRemediations](~~270036~~) operation to obtain the ID of the remediation setting.</p>
+     * <p>You can call the [ListAggregateRemediations](https://help.aliyun.com/document_detail/270036.html) operation to obtain the ID of the remediation setting.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemediationId")
     public String remediationId;
@@ -40,7 +44,7 @@ public class UpdateAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the remediation template.</p>
      * <br>
-     * <p>You can call the [ListRemediationTemplates](~~270066~~) operation to obtain the ID of the remediation template.</p>
+     * <p>You can call the [ListRemediationTemplates](https://help.aliyun.com/document_detail/270066.html) operation to obtain the ID of the remediation template.</p>
      */
     @NameInMap("RemediationTemplateId")
     public String remediationTemplateId;

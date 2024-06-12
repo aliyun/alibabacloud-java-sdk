@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel {
     /**
-     * <p>The result of the request.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("QueryResults")
     public ListAggregateResourcesByAdvancedSearchResponseBodyQueryResults queryResults;

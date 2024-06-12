@@ -13,7 +13,9 @@ public class CreateRemediationRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
@@ -25,6 +27,8 @@ public class CreateRemediationRequest extends TeaModel {
      * <p>*   AUTO_EXECUTION: The remediation template is automatically executed.</p>
      * <p>*   MANUAL_EXECUTION: The remediation template is manually executed.</p>
      * <p>*   NOT_CONFIG: The execution mode is not specified.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InvokeType")
     public String invokeType;
@@ -32,7 +36,9 @@ public class CreateRemediationRequest extends TeaModel {
     /**
      * <p>The configuration of the remediation template.</p>
      * <br>
-     * <p>For more information about how to obtain the remediation template configuration, see the `TemplateDefinition` response parameter provided in [ListRemediationTemplates](~~416781~~).</p>
+     * <p>For more information about how to obtain the remediation template configuration, see the `TemplateDefinition` response parameter provided in [ListRemediationTemplates](https://help.aliyun.com/document_detail/416781.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Params")
     public String params;
@@ -40,8 +46,10 @@ public class CreateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the remediation template.</p>
      * <br>
-     * <p>*   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](~~416781~~).</p>
+     * <p>*   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](https://help.aliyun.com/document_detail/416781.html).</p>
      * <p>*   If you set the `RemediationType` parameter to `FC`, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as `acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemediationTemplateId")
     public String remediationTemplateId;
@@ -51,6 +59,8 @@ public class CreateRemediationRequest extends TeaModel {
      * <br>
      * <p>*   OOS: Operation Orchestration Service (official remediation)</p>
      * <p>*   FC: Function Compute (custom remediation)</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemediationType")
     public String remediationType;

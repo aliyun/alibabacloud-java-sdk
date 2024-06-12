@@ -17,6 +17,8 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
 
     /**
      * <p>The resources that you want to evaluate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceEvaluateItems")
     public java.util.List<EvaluatePreConfigRulesRequestResourceEvaluateItems> resourceEvaluateItems;
@@ -46,7 +48,7 @@ public class EvaluatePreConfigRulesRequest extends TeaModel {
         /**
          * <p>The identifier of the evaluation rule.</p>
          * <br>
-         * <p>For more information about how to obtain the identifier of an evaluation rule, see [ListManagedRules](~~467810~~).</p>
+         * <p>For more information about how to obtain the identifier of an evaluation rule, see [ListManagedRules](https://help.aliyun.com/document_detail/467810.html).</p>
          */
         @NameInMap("Identifier")
         public String identifier;

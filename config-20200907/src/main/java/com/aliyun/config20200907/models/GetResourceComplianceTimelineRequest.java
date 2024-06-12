@@ -24,6 +24,8 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the resource resides.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -31,7 +33,9 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+     * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -39,7 +43,9 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     /**
      * <p>The type of the resource.</p>
      * <br>
-     * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+     * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

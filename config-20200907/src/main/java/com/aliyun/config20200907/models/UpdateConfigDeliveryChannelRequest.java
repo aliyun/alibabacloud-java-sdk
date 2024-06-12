@@ -7,7 +7,7 @@ public class UpdateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests.</p>
      * <br>
-     * <p>The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25693.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -59,7 +59,9 @@ public class UpdateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ID of the delivery channel.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a delivery channel, see [DescribeDeliveryChannels](~~429841~~).</p>
+     * <p>For more information about how to obtain the ID of a delivery channel, see [DescribeDeliveryChannels](https://help.aliyun.com/document_detail/429841.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;

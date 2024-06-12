@@ -7,13 +7,17 @@ public class CreateAggregateAdvancedSearchFileRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
      * <p>The SQL statement used to query resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sql")
     public String sql;

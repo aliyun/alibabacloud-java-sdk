@@ -7,7 +7,9 @@ public class DeleteConfigRulesRequest extends TeaModel {
     /**
      * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~609222~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/609222.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;

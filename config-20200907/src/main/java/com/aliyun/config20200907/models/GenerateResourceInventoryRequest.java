@@ -10,6 +10,9 @@ public class GenerateResourceInventoryRequest extends TeaModel {
     @NameInMap("Regions")
     public String regions;
 
+    @NameInMap("ResourceDeleted")
+    public Integer resourceDeleted;
+
     /**
      * <p>The resource types. Separate multiple resource types with commas (,).</p>
      */
@@ -27,6 +30,14 @@ public class GenerateResourceInventoryRequest extends TeaModel {
     }
     public String getRegions() {
         return this.regions;
+    }
+
+    public GenerateResourceInventoryRequest setResourceDeleted(Integer resourceDeleted) {
+        this.resourceDeleted = resourceDeleted;
+        return this;
+    }
+    public Integer getResourceDeleted() {
+        return this.resourceDeleted;
     }
 
     public GenerateResourceInventoryRequest setResourceTypes(String resourceTypes) {

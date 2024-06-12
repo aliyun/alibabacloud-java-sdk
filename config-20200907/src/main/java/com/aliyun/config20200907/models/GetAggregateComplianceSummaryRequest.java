@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetAggregateComplianceSummaryRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;

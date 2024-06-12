@@ -41,10 +41,10 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
         /**
          * <p>The evaluation result. Valid values:</p>
          * <br>
-         * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
-         * <p>*   INSUFFICIENT_DATA: No data is available.</p>
+         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;

@@ -7,7 +7,9 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -21,7 +23,9 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
@@ -29,7 +33,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     /**
      * <p>The name of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the name of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).</p>
+     * <p>For more information about how to obtain the name of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
@@ -45,7 +49,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     /**
      * <p>The description of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](~~262059~~).</p>
+     * <p>For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -197,7 +201,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         /**
          * <p>The name of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -205,7 +209,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         /**
          * <p>The value of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -237,7 +241,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         /**
          * <p>The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -263,7 +267,7 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         /**
          * <p>The ID of the managed rule. Cloud Config automatically creates a managed rule based on the specified ID and adds the rule to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;

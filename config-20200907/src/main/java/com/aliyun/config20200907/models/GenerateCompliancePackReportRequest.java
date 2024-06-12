@@ -13,7 +13,9 @@ public class GenerateCompliancePackReportRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;

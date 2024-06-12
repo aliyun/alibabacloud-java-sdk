@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesResponseBody extends TeaModel {
     /**
-     * <p>The resources.</p>
+     * <p>The information about the resources.</p>
      */
     @NameInMap("DiscoveredResourceProfiles")
     public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
@@ -45,7 +45,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
@@ -78,7 +78,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
@@ -86,8 +86,8 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         /**
          * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</p>
          * <br>
-         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
-         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</p>
+         * <p>*   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
+         * <p>*   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
@@ -219,7 +219,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

@@ -30,7 +30,9 @@ public class UpdateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the remediation setting.</p>
      * <br>
-     * <p>You can call the [ListRemediations](~~270772~~) operation to obtain the ID of the remediation setting.</p>
+     * <p>You can call the [ListRemediations](https://help.aliyun.com/document_detail/270772.html) operation to obtain the ID of the remediation setting.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RemediationId")
     public String remediationId;
@@ -38,7 +40,7 @@ public class UpdateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the remediation template.</p>
      * <br>
-     * <p>You can call the [ListRemediationTemplates](~~270066~~) operation to obtain the ID of the remediation template.</p>
+     * <p>You can call the [ListRemediationTemplates](https://help.aliyun.com/document_detail/270066.html) operation to obtain the ID of the remediation template.</p>
      */
     @NameInMap("RemediationTemplateId")
     public String remediationTemplateId;

@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListRemediationExecutionsRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;

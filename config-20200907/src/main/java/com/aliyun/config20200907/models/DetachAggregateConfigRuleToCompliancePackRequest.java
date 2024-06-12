@@ -7,7 +7,9 @@ public class DetachAggregateConfigRuleToCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -15,7 +17,9 @@ public class DetachAggregateConfigRuleToCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](https://help.aliyun.com/document_detail/262059.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
@@ -23,7 +27,9 @@ public class DetachAggregateConfigRuleToCompliancePackRequest extends TeaModel {
     /**
      * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;

@@ -7,7 +7,9 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to query the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -21,7 +23,9 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
      * <br>
-     * <p>For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     * <p>For more information about how to query the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
@@ -29,7 +33,7 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <br>
-     * <p>For more information about how to query the name of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     * <p>For more information about how to query the name of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
