@@ -1484,6 +1484,9 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         @NameInMap("Cores")
         public Integer cores;
 
+        @NameInMap("CpuArchitectures")
+        public java.util.List<String> cpuArchitectures;
+
         /**
          * <p>The instance types that you want to exclude. You can use wildcard characters, such as asterisks (\\*), to exclude an instance type or an instance family. Examples:</p>
          * <br>
@@ -1492,6 +1495,12 @@ public class CreateScalingConfigurationRequest extends TeaModel {
          */
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
+
+        @NameInMap("GpuSpecs")
+        public java.util.List<String> gpuSpecs;
+
+        @NameInMap("InstanceCategories")
+        public java.util.List<String> instanceCategories;
 
         /**
          * <p>The level of the instance type, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:</p>
@@ -1503,6 +1512,9 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
+        @NameInMap("InstanceTypeFamilies")
+        public java.util.List<String> instanceTypeFamilies;
+
         /**
          * <p>The maximum hourly price of a pay-as-you-go or preemptible instance in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria.</p>
          * <br>
@@ -1511,11 +1523,47 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
+        @NameInMap("MaximumCpuCoreCount")
+        public Integer maximumCpuCoreCount;
+
+        @NameInMap("MaximumGpuAmount")
+        public Integer maximumGpuAmount;
+
+        @NameInMap("MaximumMemorySize")
+        public Float maximumMemorySize;
+
         /**
          * <p>The memory size that you want to allocate to an instance type in intelligent configuration mode. Unit: GiB. This parameter is used to filter the available instance types that meet the specified criteria.</p>
          */
         @NameInMap("Memory")
         public Float memory;
+
+        @NameInMap("MinimumBaselineCredit")
+        public Integer minimumBaselineCredit;
+
+        @NameInMap("MinimumCpuCoreCount")
+        public Integer minimumCpuCoreCount;
+
+        @NameInMap("MinimumEniIpv6AddressQuantity")
+        public Integer minimumEniIpv6AddressQuantity;
+
+        @NameInMap("MinimumEniPrivateIpAddressQuantity")
+        public Integer minimumEniPrivateIpAddressQuantity;
+
+        @NameInMap("MinimumEniQuantity")
+        public Integer minimumEniQuantity;
+
+        @NameInMap("MinimumGpuAmount")
+        public Integer minimumGpuAmount;
+
+        @NameInMap("MinimumInitialCredit")
+        public Integer minimumInitialCredit;
+
+        @NameInMap("MinimumMemorySize")
+        public Float minimumMemorySize;
+
+        @NameInMap("PhysicalProcessorModels")
+        public java.util.List<String> physicalProcessorModels;
 
         public static CreateScalingConfigurationRequestInstancePatternInfos build(java.util.Map<String, ?> map) throws Exception {
             CreateScalingConfigurationRequestInstancePatternInfos self = new CreateScalingConfigurationRequestInstancePatternInfos();
@@ -1546,12 +1594,36 @@ public class CreateScalingConfigurationRequest extends TeaModel {
             return this.cores;
         }
 
+        public CreateScalingConfigurationRequestInstancePatternInfos setCpuArchitectures(java.util.List<String> cpuArchitectures) {
+            this.cpuArchitectures = cpuArchitectures;
+            return this;
+        }
+        public java.util.List<String> getCpuArchitectures() {
+            return this.cpuArchitectures;
+        }
+
         public CreateScalingConfigurationRequestInstancePatternInfos setExcludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
         public java.util.List<String> getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setGpuSpecs(java.util.List<String> gpuSpecs) {
+            this.gpuSpecs = gpuSpecs;
+            return this;
+        }
+        public java.util.List<String> getGpuSpecs() {
+            return this.gpuSpecs;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setInstanceCategories(java.util.List<String> instanceCategories) {
+            this.instanceCategories = instanceCategories;
+            return this;
+        }
+        public java.util.List<String> getInstanceCategories() {
+            return this.instanceCategories;
         }
 
         public CreateScalingConfigurationRequestInstancePatternInfos setInstanceFamilyLevel(String instanceFamilyLevel) {
@@ -1562,6 +1634,14 @@ public class CreateScalingConfigurationRequest extends TeaModel {
             return this.instanceFamilyLevel;
         }
 
+        public CreateScalingConfigurationRequestInstancePatternInfos setInstanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
+            this.instanceTypeFamilies = instanceTypeFamilies;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypeFamilies() {
+            return this.instanceTypeFamilies;
+        }
+
         public CreateScalingConfigurationRequestInstancePatternInfos setMaxPrice(Float maxPrice) {
             this.maxPrice = maxPrice;
             return this;
@@ -1570,12 +1650,108 @@ public class CreateScalingConfigurationRequest extends TeaModel {
             return this.maxPrice;
         }
 
+        public CreateScalingConfigurationRequestInstancePatternInfos setMaximumCpuCoreCount(Integer maximumCpuCoreCount) {
+            this.maximumCpuCoreCount = maximumCpuCoreCount;
+            return this;
+        }
+        public Integer getMaximumCpuCoreCount() {
+            return this.maximumCpuCoreCount;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMaximumGpuAmount(Integer maximumGpuAmount) {
+            this.maximumGpuAmount = maximumGpuAmount;
+            return this;
+        }
+        public Integer getMaximumGpuAmount() {
+            return this.maximumGpuAmount;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMaximumMemorySize(Float maximumMemorySize) {
+            this.maximumMemorySize = maximumMemorySize;
+            return this;
+        }
+        public Float getMaximumMemorySize() {
+            return this.maximumMemorySize;
+        }
+
         public CreateScalingConfigurationRequestInstancePatternInfos setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
         public Float getMemory() {
             return this.memory;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumBaselineCredit(Integer minimumBaselineCredit) {
+            this.minimumBaselineCredit = minimumBaselineCredit;
+            return this;
+        }
+        public Integer getMinimumBaselineCredit() {
+            return this.minimumBaselineCredit;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumCpuCoreCount(Integer minimumCpuCoreCount) {
+            this.minimumCpuCoreCount = minimumCpuCoreCount;
+            return this;
+        }
+        public Integer getMinimumCpuCoreCount() {
+            return this.minimumCpuCoreCount;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
+            this.minimumEniIpv6AddressQuantity = minimumEniIpv6AddressQuantity;
+            return this;
+        }
+        public Integer getMinimumEniIpv6AddressQuantity() {
+            return this.minimumEniIpv6AddressQuantity;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
+            this.minimumEniPrivateIpAddressQuantity = minimumEniPrivateIpAddressQuantity;
+            return this;
+        }
+        public Integer getMinimumEniPrivateIpAddressQuantity() {
+            return this.minimumEniPrivateIpAddressQuantity;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumEniQuantity(Integer minimumEniQuantity) {
+            this.minimumEniQuantity = minimumEniQuantity;
+            return this;
+        }
+        public Integer getMinimumEniQuantity() {
+            return this.minimumEniQuantity;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumGpuAmount(Integer minimumGpuAmount) {
+            this.minimumGpuAmount = minimumGpuAmount;
+            return this;
+        }
+        public Integer getMinimumGpuAmount() {
+            return this.minimumGpuAmount;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumInitialCredit(Integer minimumInitialCredit) {
+            this.minimumInitialCredit = minimumInitialCredit;
+            return this;
+        }
+        public Integer getMinimumInitialCredit() {
+            return this.minimumInitialCredit;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setMinimumMemorySize(Float minimumMemorySize) {
+            this.minimumMemorySize = minimumMemorySize;
+            return this;
+        }
+        public Float getMinimumMemorySize() {
+            return this.minimumMemorySize;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfos setPhysicalProcessorModels(java.util.List<String> physicalProcessorModels) {
+            this.physicalProcessorModels = physicalProcessorModels;
+            return this;
+        }
+        public java.util.List<String> getPhysicalProcessorModels() {
+            return this.physicalProcessorModels;
         }
 
     }

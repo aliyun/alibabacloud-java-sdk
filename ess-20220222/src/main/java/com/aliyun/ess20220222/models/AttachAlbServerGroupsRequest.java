@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachAlbServerGroupsRequest extends TeaModel {
     /**
-     * <p>Details of the ALB server group.</p>
+     * <p>The information about the ALB server groups.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -13,16 +13,18 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
     public java.util.List<AttachAlbServerGroupsRequestAlbServerGroups> albServerGroups;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new ALB server groups. Valid values:</p>
+     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the ALB server group. Valid values:</p>
      * <br>
-     * <p>*   true: adds ECS instances in the scaling group to new ALB server groups and returns the value of `ScalingActivityId`. You can check whether ECS instances are added to new ALB server groups by the scaling activity ID.</p>
-     * <p>*   false: does not add ECS instances in the scaling group to new ALB server groups.</p>
+     * <p>*   true: adds the existing ECS instances or elastic container instances in the scaling group to the ALB server group. In this case, the system returns the value of `ScalingActivityId`.</p>
+     * <p>*   false: does not add the existing ECS instances or elastic container instances in the scaling group to the ALB server group.</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -33,7 +35,9 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the scaling group, such as cn-hangzhou and cn-shanghai. For more information, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
+     * <p>The region ID of the scaling group.</p>
+     * <br>
+     * <p>Examples: `cn-hangzhou` and `cn-shanghai`. For more information about regions and zones, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -116,7 +120,7 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
         /**
          * <p>The ID of the ALB server group.</p>
          * <br>
-         * <p>You can associate only a limited number of ALB server groups with a scaling group. To view the quota or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
+         * <p>You can attach only a limited number of ALB server groups to a scaling group. To view the predefined quota limit or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
          * <br>
          * <p>This parameter is required.</p>
          */
@@ -124,7 +128,9 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
         public String albServerGroupId;
 
         /**
-         * <p>The port number used by the ECS instance after the ECS instance is added to the ALB server group. Valid values: 1 to 65535.</p>
+         * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the ALB server group.</p>
+         * <br>
+         * <p>Valid values: 1 to 65535.</p>
          * <br>
          * <p>This parameter is required.</p>
          */
@@ -132,9 +138,9 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The weight of the ECS instance as a backend server after the instance is added to the ALB server group.</p>
+         * <p>The weight of an ECS instance or elastic container instance after being added as a backend server to the ALB server group. Valid values: 0 to 100.</p>
          * <br>
-         * <p>If you increase the weight of an ECS instance in an ALB server group, the number of access requests that are forwarded to the ECS instance increases. If you set the Weight parameter for an ECS instance to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
+         * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</p>
          * <br>
          * <p>This parameter is required.</p>
          */

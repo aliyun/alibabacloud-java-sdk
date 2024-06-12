@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Auto Scaling resource. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/2679950.html) operation to query the most recent region list.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -31,7 +31,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the Auto Scaling resource. Only scaling groups are supported. Set the value to scalinggroup.</p>
+     * <p>The resource type. Set the value to scalinggroup.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

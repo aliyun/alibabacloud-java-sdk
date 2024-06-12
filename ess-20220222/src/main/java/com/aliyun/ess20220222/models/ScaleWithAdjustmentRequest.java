@@ -180,7 +180,10 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
     public static class ScaleWithAdjustmentRequestLifecycleHookContext extends TeaModel {
         /**
-         * <p>Specifies whether to disable the lifecycle hook.</p>
+         * <p>Specifies whether to disable the Lifecycle Hook feature. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("DisableLifecycleHook")
         public Boolean disableLifecycleHook;
@@ -216,7 +219,7 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
     public static class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars extends TeaModel {
         /**
-         * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.</p>
+         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -252,13 +255,13 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
     public static class ScaleWithAdjustmentRequestOverridesContainerOverrides extends TeaModel {
         /**
-         * <p>The container startup arguments. You can specify up to 10 arguments.</p>
+         * <p>The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.</p>
          */
         @NameInMap("Args")
         public java.util.List<String> args;
 
         /**
-         * <p>The container startup commands. You can specify up to 20 commands. Each command contains up to 256 characters.</p>
+         * <p>The startup commands of the container. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;

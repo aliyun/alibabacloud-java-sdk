@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class AttachServerGroupsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add the Elastic Compute Service (ECS) instances in the scaling group to the new server group.</p>
+     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the server group. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -46,7 +46,7 @@ public class AttachServerGroupsRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>Details of the server groups.</p>
+     * <p>The information about the server groups.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -116,7 +116,9 @@ public class AttachServerGroupsRequest extends TeaModel {
 
     public static class AttachServerGroupsRequestServerGroups extends TeaModel {
         /**
-         * <p>The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group. Valid values: 1 to 65535.</p>
+         * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the server group.</p>
+         * <br>
+         * <p>Valid values: 1 to 65535.</p>
          * <br>
          * <p>This parameter is required.</p>
          */
@@ -143,9 +145,9 @@ public class AttachServerGroupsRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The weight of an ECS instance after Auto Scaling adds the ECS instance to the server group as a backend server.</p>
+         * <p>The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.</p>
          * <br>
-         * <p>A higher weight specifies that a larger number of requests are forwarded to the ECS instance. If you set the Weight parameter for an ECS instance in the server group to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
+         * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</p>
          * <br>
          * <p>This parameter is required.</p>
          */

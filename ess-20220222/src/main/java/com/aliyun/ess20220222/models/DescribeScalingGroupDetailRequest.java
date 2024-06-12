@@ -14,7 +14,7 @@ public class DescribeScalingGroupDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the scaling group. For more information, see the "Regions and zones" topic.</p>
+     * <p>The region ID of the scaling group. For more information, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
      * <br>
      * <p>This parameter is required.</p>
      */

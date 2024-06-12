@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ess20220222</artifactId>
-  <version>1.5.1</version>
+  <version>1.5.2</version>
   <packaging>jar</packaging>
   <name>ess20220222</name>
   <description>Alibaba Cloud Auto Scaling (20220222) SDK for Java
