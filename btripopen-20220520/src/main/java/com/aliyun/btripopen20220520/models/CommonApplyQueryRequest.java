@@ -4,9 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CommonApplyQueryRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("apply_id")
     public Long applyId;
 
@@ -15,6 +12,9 @@ public class CommonApplyQueryRequest extends TeaModel {
      */
     @NameInMap("biz_category")
     public Integer bizCategory;
+
+    @NameInMap("business_instance_id")
+    public String businessInstanceId;
 
     @NameInMap("user_id")
     public String userId;
@@ -38,6 +38,14 @@ public class CommonApplyQueryRequest extends TeaModel {
     }
     public Integer getBizCategory() {
         return this.bizCategory;
+    }
+
+    public CommonApplyQueryRequest setBusinessInstanceId(String businessInstanceId) {
+        this.businessInstanceId = businessInstanceId;
+        return this;
+    }
+    public String getBusinessInstanceId() {
+        return this.businessInstanceId;
     }
 
     public CommonApplyQueryRequest setUserId(String userId) {

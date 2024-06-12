@@ -197,6 +197,9 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
         @NameInMap("user_id")
         public String userId;
 
+        @NameInMap("user_name")
+        public String userName;
+
         public static HotelExceedApplyQueryResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             HotelExceedApplyQueryResponseBodyModule self = new HotelExceedApplyQueryResponseBodyModule();
             return TeaModel.build(map, self);
@@ -296,6 +299,14 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public HotelExceedApplyQueryResponseBodyModule setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

@@ -1243,6 +1243,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 执行审批任务
+     *
+     * @param request ApplyTripTaskExecuteRequest
+     * @param headers ApplyTripTaskExecuteHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyTripTaskExecuteResponse
+     */
+    public ApplyTripTaskExecuteResponse applyTripTaskExecuteWithOptions(ApplyTripTaskExecuteRequest request, ApplyTripTaskExecuteHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.actionFrom)) {
+            body.put("action_from", request.actionFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskAction)) {
+            body.put("task_action", request.taskAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("task_id", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("user_name", request.userName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyTripTaskExecute"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apply/v1/trip-task/action/execute"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyTripTaskExecuteResponse());
+    }
+
+    /**
+     * @summary 执行审批任务
+     *
+     * @param request ApplyTripTaskExecuteRequest
+     * @return ApplyTripTaskExecuteResponse
+     */
+    public ApplyTripTaskExecuteResponse applyTripTaskExecute(ApplyTripTaskExecuteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ApplyTripTaskExecuteHeaders headers = new ApplyTripTaskExecuteHeaders();
+        return this.applyTripTaskExecuteWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @summary 搜索国内/国际（港澳台）城市基础行政区划数据
      *
      * @param request BaseCityInfoSearchRequest
@@ -1976,6 +2050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizCategory)) {
             query.put("biz_category", request.bizCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInstanceId)) {
+            query.put("business_instance_id", request.businessInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -3760,6 +3838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applyId)) {
             query.put("apply_id", request.applyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInstanceId)) {
+            query.put("business_instance_id", request.businessInstanceId);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -6324,6 +6406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applyId)) {
             query.put("apply_id", request.applyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInstanceId)) {
+            query.put("business_instance_id", request.businessInstanceId);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -11283,6 +11369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("apply_id", request.applyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInstanceId)) {
+            query.put("business_instance_id", request.businessInstanceId);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -12520,6 +12610,200 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         TravelStandardQueryHeaders headers = new TravelStandardQueryHeaders();
         return this.travelStandardQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 查询业务流程
+     *
+     * @param request TripBusinessInstanceQueryRequest
+     * @param headers TripBusinessInstanceQueryHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TripBusinessInstanceQueryResponse
+     */
+    public TripBusinessInstanceQueryResponse tripBusinessInstanceQueryWithOptions(TripBusinessInstanceQueryRequest request, TripBusinessInstanceQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInstanceId)) {
+            query.put("business_instance_id", request.businessInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdBusinessId)) {
+            query.put("third_business_id", request.thirdBusinessId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("user_id", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("user_name", request.userName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TripBusinessInstanceQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apply/v1/business"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TripBusinessInstanceQueryResponse());
+    }
+
+    /**
+     * @summary 查询业务流程
+     *
+     * @param request TripBusinessInstanceQueryRequest
+     * @return TripBusinessInstanceQueryResponse
+     */
+    public TripBusinessInstanceQueryResponse tripBusinessInstanceQuery(TripBusinessInstanceQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TripBusinessInstanceQueryHeaders headers = new TripBusinessInstanceQueryHeaders();
+        return this.tripBusinessInstanceQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 查询抄送信息
+     *
+     * @param request TripCCInfoQueryRequest
+     * @param headers TripCCInfoQueryHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TripCCInfoQueryResponse
+     */
+    public TripCCInfoQueryResponse tripCCInfoQueryWithOptions(TripCCInfoQueryRequest request, TripCCInfoQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInstanceId)) {
+            query.put("business_instance_id", request.businessInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("node_id", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdBusinessId)) {
+            query.put("third_business_id", request.thirdBusinessId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TripCCInfoQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apply/v1/cc"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TripCCInfoQueryResponse());
+    }
+
+    /**
+     * @summary 查询抄送信息
+     *
+     * @param request TripCCInfoQueryRequest
+     * @return TripCCInfoQueryResponse
+     */
+    public TripCCInfoQueryResponse tripCCInfoQuery(TripCCInfoQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TripCCInfoQueryHeaders headers = new TripCCInfoQueryHeaders();
+        return this.tripCCInfoQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @summary 查询审批任务列表
+     *
+     * @param request TripTaskQueryRequest
+     * @param headers TripTaskQueryHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TripTaskQueryResponse
+     */
+    public TripTaskQueryResponse tripTaskQueryWithOptions(TripTaskQueryRequest request, TripTaskQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessInstanceId)) {
+            query.put("business_instance_id", request.businessInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdBusinessId)) {
+            query.put("third_business_id", request.thirdBusinessId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("user_id", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("user_name", request.userName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TripTaskQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apply/v1/tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TripTaskQueryResponse());
+    }
+
+    /**
+     * @summary 查询审批任务列表
+     *
+     * @param request TripTaskQueryRequest
+     * @return TripTaskQueryResponse
+     */
+    public TripTaskQueryResponse tripTaskQuery(TripTaskQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TripTaskQueryHeaders headers = new TripTaskQueryHeaders();
+        return this.tripTaskQueryWithOptions(request, headers, runtime);
     }
 
     /**
