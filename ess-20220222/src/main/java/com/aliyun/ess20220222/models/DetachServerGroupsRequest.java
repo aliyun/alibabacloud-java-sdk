@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DetachServerGroupsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to remove the Elastic Compute Service (ECS) instances in the scaling group from the server group that you want to detach.</p>
+     * <p>Specifies whether to remove the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group from the server group marked for detachment.</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -46,7 +46,7 @@ public class DetachServerGroupsRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>Details of the server groups.</p>
+     * <p>The information about the server groups.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -116,7 +116,7 @@ public class DetachServerGroupsRequest extends TeaModel {
 
     public static class DetachServerGroupsRequestServerGroups extends TeaModel {
         /**
-         * <p>The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group.</p>
+         * <p>The port used by ECS instances or elastic container instances as backend servers of the server group.</p>
          * <br>
          * <p>This parameter is required.</p>
          */

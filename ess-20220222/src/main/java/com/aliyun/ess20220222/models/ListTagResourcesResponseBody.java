@@ -17,7 +17,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.</p>
+     * <p>An array that encompasses both the resource details and its tags, comprising elements like the resource ID, the resource type, the tag key, and the tag value.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -53,34 +53,34 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>Indicates whether the tag can be propagated.</p>
+         * <p>Indicates whether the tags of the scaling group can be propagated to instances. Valid values:</p>
          * <br>
-         * <p>*   true: The tag can be propagated only to instances that are to be added to the scaling group. The tag cannot be propagated to instances that are already running in the scaling group.</p>
-         * <p>*   false: The tag cannot be propagated to an instance.</p>
+         * <p>*   true: The tags of the scaling group can be propagated to only instances that are newly created.</p>
+         * <p>*   false: The tags of the scaling group cannot be propagated to instances.</p>
          */
         @NameInMap("Propagate")
         public Boolean propagate;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key of the resource.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value of the resource.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

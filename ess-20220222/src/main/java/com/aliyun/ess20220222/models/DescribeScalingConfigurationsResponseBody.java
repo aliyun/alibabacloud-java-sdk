@@ -381,6 +381,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("Cores")
         public Integer cores;
 
+        @NameInMap("CpuArchitectures")
+        public java.util.List<String> cpuArchitectures;
+
         /**
          * <p>The instance types that are excluded. You can use wildcard characters, such as an asterisk (\\*), to exclude an instance type or an instance family. Examples:</p>
          * <br>
@@ -389,6 +392,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
+
+        @NameInMap("GpuSpecs")
+        public java.util.List<String> gpuSpecs;
+
+        @NameInMap("InstanceCategories")
+        public java.util.List<String> instanceCategories;
 
         /**
          * <p>The level of the instance family.</p>
@@ -400,17 +409,56 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
+        @NameInMap("InstanceTypeFamilies")
+        public java.util.List<String> instanceTypeFamilies;
+
         /**
          * <p>The maximum hourly price for pay-as-you-go or preemptible instances.</p>
          */
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
+        @NameInMap("MaximumCpuCoreCount")
+        public Integer maximumCpuCoreCount;
+
+        @NameInMap("MaximumGpuAmount")
+        public Integer maximumGpuAmount;
+
+        @NameInMap("MaximumMemorySize")
+        public Float maximumMemorySize;
+
         /**
          * <p>The memory size of the instance type. Unit: GiB.</p>
          */
         @NameInMap("Memory")
         public Float memory;
+
+        @NameInMap("MinimumBaselineCredit")
+        public Integer minimumBaselineCredit;
+
+        @NameInMap("MinimumCpuCoreCount")
+        public Integer minimumCpuCoreCount;
+
+        @NameInMap("MinimumEniIpv6AddressQuantity")
+        public Integer minimumEniIpv6AddressQuantity;
+
+        @NameInMap("MinimumEniPrivateIpAddressQuantity")
+        public Integer minimumEniPrivateIpAddressQuantity;
+
+        @NameInMap("MinimumEniQuantity")
+        public Integer minimumEniQuantity;
+
+        @NameInMap("MinimumGpuAmount")
+        public Integer minimumGpuAmount;
+
+        @NameInMap("MinimumInitialCredit")
+        public Integer minimumInitialCredit;
+
+        @NameInMap("MinimumMemorySize")
+        public Float minimumMemorySize;
+
+        @NameInMap("PhysicalProcessorModels")
+        public java.util.List<String> physicalProcessorModels;
 
         public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos();
@@ -441,12 +489,36 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.cores;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setCpuArchitectures(java.util.List<String> cpuArchitectures) {
+            this.cpuArchitectures = cpuArchitectures;
+            return this;
+        }
+        public java.util.List<String> getCpuArchitectures() {
+            return this.cpuArchitectures;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setExcludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
         public java.util.List<String> getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setGpuSpecs(java.util.List<String> gpuSpecs) {
+            this.gpuSpecs = gpuSpecs;
+            return this;
+        }
+        public java.util.List<String> getGpuSpecs() {
+            return this.gpuSpecs;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setInstanceCategories(java.util.List<String> instanceCategories) {
+            this.instanceCategories = instanceCategories;
+            return this;
+        }
+        public java.util.List<String> getInstanceCategories() {
+            return this.instanceCategories;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setInstanceFamilyLevel(String instanceFamilyLevel) {
@@ -457,6 +529,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.instanceFamilyLevel;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setInstanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
+            this.instanceTypeFamilies = instanceTypeFamilies;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypeFamilies() {
+            return this.instanceTypeFamilies;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMaxPrice(Float maxPrice) {
             this.maxPrice = maxPrice;
             return this;
@@ -465,12 +545,108 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.maxPrice;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMaximumCpuCoreCount(Integer maximumCpuCoreCount) {
+            this.maximumCpuCoreCount = maximumCpuCoreCount;
+            return this;
+        }
+        public Integer getMaximumCpuCoreCount() {
+            return this.maximumCpuCoreCount;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMaximumGpuAmount(Integer maximumGpuAmount) {
+            this.maximumGpuAmount = maximumGpuAmount;
+            return this;
+        }
+        public Integer getMaximumGpuAmount() {
+            return this.maximumGpuAmount;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMaximumMemorySize(Float maximumMemorySize) {
+            this.maximumMemorySize = maximumMemorySize;
+            return this;
+        }
+        public Float getMaximumMemorySize() {
+            return this.maximumMemorySize;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
         public Float getMemory() {
             return this.memory;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumBaselineCredit(Integer minimumBaselineCredit) {
+            this.minimumBaselineCredit = minimumBaselineCredit;
+            return this;
+        }
+        public Integer getMinimumBaselineCredit() {
+            return this.minimumBaselineCredit;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumCpuCoreCount(Integer minimumCpuCoreCount) {
+            this.minimumCpuCoreCount = minimumCpuCoreCount;
+            return this;
+        }
+        public Integer getMinimumCpuCoreCount() {
+            return this.minimumCpuCoreCount;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
+            this.minimumEniIpv6AddressQuantity = minimumEniIpv6AddressQuantity;
+            return this;
+        }
+        public Integer getMinimumEniIpv6AddressQuantity() {
+            return this.minimumEniIpv6AddressQuantity;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
+            this.minimumEniPrivateIpAddressQuantity = minimumEniPrivateIpAddressQuantity;
+            return this;
+        }
+        public Integer getMinimumEniPrivateIpAddressQuantity() {
+            return this.minimumEniPrivateIpAddressQuantity;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumEniQuantity(Integer minimumEniQuantity) {
+            this.minimumEniQuantity = minimumEniQuantity;
+            return this;
+        }
+        public Integer getMinimumEniQuantity() {
+            return this.minimumEniQuantity;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumGpuAmount(Integer minimumGpuAmount) {
+            this.minimumGpuAmount = minimumGpuAmount;
+            return this;
+        }
+        public Integer getMinimumGpuAmount() {
+            return this.minimumGpuAmount;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumInitialCredit(Integer minimumInitialCredit) {
+            this.minimumInitialCredit = minimumInitialCredit;
+            return this;
+        }
+        public Integer getMinimumInitialCredit() {
+            return this.minimumInitialCredit;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setMinimumMemorySize(Float minimumMemorySize) {
+            this.minimumMemorySize = minimumMemorySize;
+            return this;
+        }
+        public Float getMinimumMemorySize() {
+            return this.minimumMemorySize;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos setPhysicalProcessorModels(java.util.List<String> physicalProcessorModels) {
+            this.physicalProcessorModels = physicalProcessorModels;
+            return this;
+        }
+        public java.util.List<String> getPhysicalProcessorModels() {
+            return this.physicalProcessorModels;
         }
 
     }

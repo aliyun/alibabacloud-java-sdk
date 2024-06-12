@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribePatternTypesResponseBody extends TeaModel {
+    /**
+     * <p>The instance types that meet the specified requirements.</p>
+     */
     @NameInMap("PatternTypes")
     public java.util.List<DescribePatternTypesResponseBodyPatternTypes> patternTypes;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,37 @@ public class DescribePatternTypesResponseBody extends TeaModel {
     }
 
     public static class DescribePatternTypesResponseBodyPatternTypes extends TeaModel {
+        /**
+         * <p>The number of vCPUs that are assigned to the instance type.</p>
+         */
         @NameInMap("Cores")
         public Integer cores;
 
+        /**
+         * <p>The level of the instance family.</p>
+         * <br>
+         * <p>*   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).</p>
+         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+         * <p>*   CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
+         */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
+        /**
+         * <p>The name of the instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The instance family.</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <p>The memory size that are assigned to the instance type. Unit: GiB.</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 

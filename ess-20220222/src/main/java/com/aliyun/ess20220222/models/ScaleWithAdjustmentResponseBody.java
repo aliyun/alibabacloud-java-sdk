@@ -4,6 +4,13 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ScaleWithAdjustmentResponseBody extends TeaModel {
+    /**
+     * <p>The type of the scaling activity.</p>
+     * <br>
+     * <p>If `ActivityType` is set to `CapacityChange`, only the expected number of instances is changed during the scaling activity specified by ScalingActivityId and no scale-out is triggered.</p>
+     * <br>
+     * <p>This parameter is applicable to only scaling groups that have an expected number of instances.</p>
+     */
     @NameInMap("ActivityType")
     public String activityType;
 

@@ -20,16 +20,16 @@ public class DescribeAlarmsRequest extends TeaModel {
     public Boolean isEnable;
 
     /**
-     * <p>The name of the event-triggered task.</p>
+     * <p>The metric name.</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
-     * <p>The type of the metric. Valid values:</p>
+     * <p>The metric type. Valid values:</p>
      * <br>
      * <p>*   system: system metrics of CloudMonitor</p>
-     * <p>*   custom: custom metrics that are reported to CloudMonitor</p>
+     * <p>*   custom: custom metrics that are reported to CloudMonitor.</p>
      */
     @NameInMap("MetricType")
     public String metricType;

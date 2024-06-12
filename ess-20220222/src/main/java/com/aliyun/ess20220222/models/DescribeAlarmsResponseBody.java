@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlarmsResponseBody extends TeaModel {
     /**
-     * <p>The list of event-triggered tasks.</p>
+     * <p>The event-triggered tasks.</p>
      */
     @NameInMap("AlarmList")
     public java.util.List<DescribeAlarmsResponseBodyAlarmList> alarmList;
@@ -81,32 +81,32 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
     public static class DescribeAlarmsResponseBodyAlarmListDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension. Valid values:</p>
+         * <p>The dimension key of the metric. Valid values:</p>
          * <br>
-         * <p>*   user_id: the ID of your Alibaba Cloud account</p>
-         * <p>*   scaling_group: the scaling group that you want to monitor</p>
-         * <p>*   device: the type of the NIC</p>
-         * <p>*   state: the state of the TCP connection</p>
+         * <p>*   user_id: the ID of your Alibaba Cloud account.</p>
+         * <p>*   scaling_group: the scaling group that is monitored by the event-triggered task.</p>
+         * <p>*   device: the NIC type.</p>
+         * <p>*   state: the status of the TCP connection.</p>
          */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
         /**
-         * <p>The value of the dimension. The value of the DimensionValue parameter varies based on the value of the DimensionKey parameter.</p>
+         * <p>The dimension value of the metric. The value of DimensionValue varies based on the value of DimensionKey.</p>
          * <br>
-         * <p>*   If you set the DimensionKey parameter to `user_id`, the system specifies the value of the DimensionValue parameter.</p>
+         * <p>*   If you set DimensionKey to `user_id`, the system specifies the value of DimensionValue.</p>
          * <br>
-         * <p>*   If you set the DimensionKey parameter to `scaling_group`, the system specifies the value of the DimensionValue parameter.</p>
+         * <p>*   If you set DimensionKey to `scaling_group`, the system specifies the value of DimensionValue.</p>
          * <br>
-         * <p>*   If you set the DimensionKey parameter to `device`, you can set the DimensionValue parameter to eth0 or eth1.</p>
+         * <p>*   If you set DimensionKey to `device`, you can set DimensionValue to eth0 or eth1.</p>
          * <br>
-         * <p>    *   For instances that reside in the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in a VPC.</p>
-         * <p>    *   For instances that reside in the classic network, eth1 specifies the public NIC.</p>
+         * <p>    *   For instances of the classic network type, eth0 indicates the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.</p>
+         * <p>    *   For instances of the classic network type, eth1 indicates the public NIC.</p>
          * <br>
-         * <p>*   If you set the DimensionKey parameter to `state`, you can set the DimensionValue parameter to TCP_TOTAL or ESTABLISHED.</p>
+         * <p>*   If you set DimensionKey to `state`, you can set DimensionValue to TCP_TOTAL or ESTABLISHED.</p>
          * <br>
-         * <p>    *   TCP_TOTAL specifies the total number of TCP connections.</p>
-         * <p>    *   ESTABLISHED specifies the number of established TCP connections.</p>
+         * <p>    *   TCP_TOTAL indicates the total number of TCP connections.</p>
+         * <p>    *   ESTABLISHED indicates the number of TCP connections that are established.</p>
          */
         @NameInMap("DimensionValue")
         public String dimensionValue;
@@ -138,12 +138,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * <p>The operator that is used to compare the metric value and the threshold.</p>
          * <br>
-         * <p>*   Valid value if the metric value is greater than or equal to the threshold: >=</p>
-         * <p>*   Valid value if the metric value is less than or equal to the threshold: <=</p>
-         * <p>*   Valid value if the metric value is greater than the threshold: ></p>
-         * <p>*   Valid value if the metric value is less than the threshold: <</p>
-         * <br>
-         * <p>Default value: >=.</p>
+         * <p>*   Valid value if the metric value is greater than or equal to the threshold: >=.</p>
+         * <p>*   Valid value if the metric value is less than or equal to the threshold: <=.</p>
+         * <p>*   Valid value if the metric value is greater than the threshold: >.</p>
+         * <p>*   Valid value if the metric value is less than the threshold: <.</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
@@ -152,34 +150,38 @@ public class DescribeAlarmsResponseBody extends TeaModel {
          * <p>The name of the metric that is specified in the multi-metric alert rule. Valid values:</p>
          * <br>
          * <p>*   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.</p>
-         * <p>*   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.</p>
-         * <p>*   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.</p>
-         * <p>*   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.</p>
-         * <p>*   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.</p>
-         * <p>*   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.</p>
-         * <p>*   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.</p>
-         * <p>*   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.</p>
-         * <p>*   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.</p>
-         * <p>*   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.</p>
-         * <p>*   GpuUtilizationAgent: the GPU utilization of an agent. Unit: %.</p>
-         * <p>*   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.</p>
-         * <p>*   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.</p>
-         * <p>*   MemoryUtilization: the memory usage of an agent. Unit: %.</p>
-         * <p>*   LoadAverage: the average system load of an agent.</p>
-         * <p>*   TcpConnection: the total number of TCP connections of an agent.</p>
-         * <p>*   TcpConnection: the number of established TCP connections of an agent.</p>
-         * <p>*   PackagesNetOut: the number of packets that are sent by the internal NIC used by an agent.</p>
-         * <p>*   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.</p>
-         * <p>*   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.</p>
-         * <p>*   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.</p>
+         * <p>*   ConcurrentConnections: the number of current connections to an ECS instance.</p>
+         * <p>*   IntranetTx: the outbound traffic over an internal network. Unit: KB/min.</p>
+         * <p>*   IntranetRx: the inbound traffic over an internal network. Unit: KB/min.</p>
+         * <p>*   VpcInternetTx: the outbound traffic over a VPC. Unit: KB/min.</p>
+         * <p>*   VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.</p>
+         * <p>*   SystemDiskReadBps: the number of bytes read from the system disk per second.</p>
+         * <p>*   SystemDiskWriteBps: the number of bytes written to the system disk per second.</p>
+         * <p>*   SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.</p>
+         * <p>*   SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.</p>
+         * <p>*   CpuUtilizationAgent: the CPU utilization. Unit: %.</p>
+         * <p>*   GpuUtilizationAgent: the GPU utilization. Unit: %.</p>
+         * <p>*   GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.</p>
+         * <p>*   GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.</p>
+         * <p>*   MemoryUtilization: the memory usage. Unit: %.</p>
+         * <p>*   LoadAverage: the average system load.</p>
+         * <p>*   TcpConnection: the total number of TCP connections.</p>
+         * <p>*   TcpConnection: the number of established TCP connections.</p>
+         * <p>*   PackagesNetOut: the number of packets sent by the internal NIC. Unit: counts/s.</p>
+         * <p>*   PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.</p>
+         * <p>*   PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.</p>
+         * <p>*   PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.</p>
+         * <p>*   EciPodCpuUtilization: the CPU utilization. Unit: %.</p>
+         * <p>*   EciPodMemoryUtilization: the memory usage. Unit: %.</p>
+         * <p>*   LoadBalancerRealServerAverageQps: the QPS of an instance.</p>
          * <br>
-         * <p>For more information, see [Event-triggered task for system monitoring](https://help.aliyun.com/document_detail/74854.html).</p>
+         * <p>For more information, see [Event-triggered tasks of the system monitoring type](https://help.aliyun.com/document_detail/74854.html).</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
-         * <p>The period of time during which statistics about the metrics in the multi-metric alert rule is collected. Unit: seconds. Valid values:</p>
+         * <p>The statistical period of the metric data in the multi-metric alert rule. Unit: seconds. Valid values:</p>
          * <br>
          * <p>*   15</p>
          * <p>*   60</p>
@@ -187,7 +189,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
          * <p>*   300</p>
          * <p>*   900</p>
          * <br>
-         * <p>> If your scaling group is of the ECS type and the event-triggered task associated with your scaling group monitors CloudMonitor metrics, you can set the Period parameter to 15. In most cases, the name of a CloudMonitor metric contains Agent.</p>
+         * <p>>  If your scaling group is of the ECS type and the event-triggered task that is associated with your scaling group monitors CloudMonitor metrics, you can set Period to 15. In most cases, the name of a CloudMonitor metric contains Agent.</p>
          */
         @NameInMap("Period")
         public Integer period;
@@ -195,15 +197,15 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * <p>The method that is used to aggregate statistics about the metrics in the multi-metric alert rule. Valid values:</p>
          * <br>
-         * <p>*   Average</p>
-         * <p>*   Minimum</p>
-         * <p>*   Maximum</p>
+         * <p>*   Average: the average value</p>
+         * <p>*   Minimum: the minimum value</p>
+         * <p>*   Maximum: the maximum value</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
-         * <p>The thresholds of the metric values in the multi-metric alert rule. If the thresholds are reached the specified number of times within the specified period, a scaling rule is executed.</p>
+         * <p>The threshold of the metric value. If the threshold is reached the specified number of times within the specified period, a scaling rule is executed.</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
@@ -257,7 +259,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
     public static class DescribeAlarmsResponseBodyAlarmList extends TeaModel {
         /**
-         * <p>The list of unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
+         * <p>The unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
          */
         @NameInMap("AlarmActions")
         public java.util.List<String> alarmActions;
@@ -269,12 +271,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         public String alarmTaskId;
 
         /**
-         * <p>The operator that is used to compare the metric value and the threshold.</p>
+         * <p>The operator that is used to compare the metric value and the metric threshold.</p>
          * <br>
-         * <p>*   Valid value if the metric value is greater than or equal to the threshold: >=</p>
-         * <p>*   Valid value if the metric value is less than or equal to the threshold: <=</p>
-         * <p>*   Valid value if the metric value is greater than the threshold: ></p>
-         * <p>*   Valid value if the metric value is less than the threshold: <</p>
+         * <p>*   Valid value if the metric value is greater than or equal to the threshold: >=.</p>
+         * <p>*   Valid value if the metric value is less than or equal to the threshold: <=.</p>
+         * <p>*   Valid value if the metric value is greater than the threshold: >.</p>
+         * <p>*   Valid value if the metric value is less than the threshold: <.</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
@@ -286,34 +288,34 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Details of the dimensions.</p>
+         * <p>The metric dimensions.</p>
          */
         @NameInMap("Dimensions")
         public java.util.List<DescribeAlarmsResponseBodyAlarmListDimensions> dimensions;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>The effective period of the event-triggered task.</p>
          */
         @NameInMap("Effective")
         public String effective;
 
         /**
-         * <p>Indicates whether the event-triggered task is enabled. Valid values:</p>
+         * <p>Indicates whether the event-triggered task feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The event-triggered task is enabled.</p>
-         * <p>*   false: The event-triggered task is disabled.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.</p>
+         * <p>The number of consecutive times that the threshold must be reached before a scaling rule is executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is executed.</p>
          */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
         /**
-         * <p>The expressions that are specified in the multi-metric alert rule.</p>
+         * <p>The alert conditions of the multi-metric alert rule.</p>
          */
         @NameInMap("Expressions")
         public java.util.List<DescribeAlarmsResponseBodyAlarmListExpressions> expressions;
@@ -321,46 +323,51 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         /**
          * <p>The relationship between the trigger conditions that are specified in the multi-metric alert rule. Valid values:</p>
          * <br>
-         * <p>*   `&&`: An alert is triggered only if all metrics in the multi-metric alert rule meet the trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are `true`.</p>
-         * <p>*   `||`: An alert is triggered if one of the metrics in the multi-metric alert rule meets the trigger conditions.</p>
+         * <p>*   `&&`: An alert is triggered only if all metrics in the multi-metric alert rule meet their trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are `true`.</p>
+         * <p>*   `||`: An alert is triggered only if one of the metrics in the multi-metric alert rule meets its trigger condition.</p>
          */
         @NameInMap("ExpressionsLogicOperator")
         public String expressionsLogicOperator;
 
         /**
-         * <p>The name of the metric. Valid values:</p>
+         * <p>The metric name. Valid values:</p>
          * <br>
-         * <p>*   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.</p>
-         * <p>*   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.</p>
-         * <p>*   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.</p>
-         * <p>*   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.</p>
-         * <p>*   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.</p>
-         * <p>*   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.</p>
-         * <p>*   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.</p>
-         * <p>*   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.</p>
-         * <p>*   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.</p>
-         * <p>*   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.</p>
-         * <p>*   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.</p>
-         * <p>*   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.</p>
-         * <p>*   MemoryUtilization: the memory usage of an agent. Unit: %.</p>
-         * <p>*   LoadAverage: the average system load of an agent.</p>
-         * <p>*   TcpConnection: the total number of TCP connections of an agent.</p>
-         * <p>*   TcpConnection: the number of established TCP connections of an agent.</p>
-         * <p>*   PackagesNetOut: the number of packets that are sent by the internal NIC used by an agent.</p>
-         * <p>*   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.</p>
-         * <p>*   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.</p>
-         * <p>*   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.</p>
+         * <p>*   CpuUtilization: the CPU utilization of an Elastic Compute Service (ECS) instance. Unit: %.</p>
+         * <p>*   ConcurrentConnections: the number of current connections to an ECS instance.</p>
+         * <p>*   IntranetTx: the outbound traffic over an internal network. Unit: KB/min.</p>
+         * <p>*   IntranetRx: the inbound traffic over an internal network. Unit: KB/min.</p>
+         * <p>*   VpcInternetTx: the outbound traffic over a virtual private cloud (VPC). Unit: KB/min.</p>
+         * <p>*   VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.</p>
+         * <p>*   SystemDiskReadBps: the number of bytes read from the system disk per second.</p>
+         * <p>*   SystemDiskWriteBps: the number of bytes written to the system disk per second.</p>
+         * <p>*   SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.</p>
+         * <p>*   SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.</p>
+         * <p>*   CpuUtilizationAgent: the CPU utilization. Unit: %.</p>
+         * <p>*   GpuUtilizationAgent: the GPU utilization. Unit: %.</p>
+         * <p>*   GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.</p>
+         * <p>*   GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.</p>
+         * <p>*   MemoryUtilization: the memory usage. Unit: %.</p>
+         * <p>*   LoadAverage: the average system load.</p>
+         * <p>*   TcpConnection: the total number of TCP connections.</p>
+         * <p>*   TcpConnection: the number of established TCP connections.</p>
+         * <p>*   PackagesNetOut: the number of packets sent by the internal NIC. Unit: counts/s.</p>
+         * <p>*   PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.</p>
+         * <p>*   PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.</p>
+         * <p>*   PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.</p>
+         * <p>*   EciPodCpuUtilization: the CPU utilization. Unit: %.</p>
+         * <p>*   EciPodMemoryUtilization: the memory usage. Unit: %.</p>
+         * <p>*   LoadBalancerRealServerAverageQps: the queries per second (QPS) of an instance.</p>
          * <br>
-         * <p>For more information, see [Event-triggered task for system monitoring](https://help.aliyun.com/document_detail/74854.html).</p>
+         * <p>For more information, see [Event-triggered tasks of the system monitoring type](https://help.aliyun.com/document_detail/74854.html).</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
-         * <p>The type of the metric. Valid values:</p>
+         * <p>The metric type. Valid values:</p>
          * <br>
          * <p>*   system: system metrics of CloudMonitor</p>
-         * <p>*   custom: custom metrics that are reported to CloudMonitor</p>
+         * <p>*   custom: custom metrics that are reported to CloudMonitor.</p>
          */
         @NameInMap("MetricType")
         public String metricType;
@@ -372,7 +379,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The period of time during which statistics about the metric is collected. Unit: seconds. Valid values:</p>
+         * <p>The statistical period of the metric data. Unit: seconds. Valid values:</p>
          * <br>
          * <p>*   15</p>
          * <p>*   60</p>
@@ -380,13 +387,13 @@ public class DescribeAlarmsResponseBody extends TeaModel {
          * <p>*   300</p>
          * <p>*   900</p>
          * <br>
-         * <p>> If your scaling group is of the ECS type and the event-triggered task associated with your scaling group monitors CloudMonitor metrics, you can set the Period parameter to 15. In most cases, the name of a CloudMonitor metric contains Agent.</p>
+         * <p>>  You can set the value of this parameter to 15 Seconds only for scaling groups of the ECS type.</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
-         * <p>The scaling group ID of the event-triggered task.</p>
+         * <p>The ID of the scaling group to which the event-triggered task is associated.</p>
          */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
@@ -402,17 +409,17 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The method that is used to aggregate statistics for the metric. Valid values:</p>
+         * <p>The method that is used to aggregate the metric data. Valid values:</p>
          * <br>
-         * <p>*   Average</p>
-         * <p>*   Minimum</p>
-         * <p>*   Maximum</p>
+         * <p>*   Average: the average value</p>
+         * <p>*   Minimum: the minimum value</p>
+         * <p>*   Maximum: the maximum value</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
-         * <p>The threshold of the metric value. If the threshold is reached the specified times within the specified period, a scaling rule is executed.</p>
+         * <p>The threshold of the metric. If the threshold is reached the specified number of times within the statistical period, a scaling rule is executed.</p>
          */
         @NameInMap("Threshold")
         public Float threshold;

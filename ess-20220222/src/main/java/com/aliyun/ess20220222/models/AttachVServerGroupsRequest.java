@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class AttachVServerGroupsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new vServer groups. Valid values:</p>
+     * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new vServer group. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -27,7 +27,7 @@ public class AttachVServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.</p>
+     * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai. For information about regions and zones, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -46,7 +46,7 @@ public class AttachVServerGroupsRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>Details of the vServer groups.</p>
+     * <p>The information about the vServer groups.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -116,7 +116,7 @@ public class AttachVServerGroupsRequest extends TeaModel {
 
     public static class AttachVServerGroupsRequestVServerGroupsVServerGroupAttributes extends TeaModel {
         /**
-         * <p>The port number that is used when Auto Scaling adds ECS instances to the vServer group. Valid values: 1 to 65535.</p>
+         * <p>The port number over which Auto Scaling adds ECS instances or elastic container instances to the new vServer group. Valid values: 1 to 65535.</p>
          */
         @NameInMap("Port")
         public Integer port;
@@ -128,7 +128,7 @@ public class AttachVServerGroupsRequest extends TeaModel {
         public String VServerGroupId;
 
         /**
-         * <p>The weight of an ECS instance as a backend server in the vServer group. Valid values: 0 to 100.</p>
+         * <p>The weight of an ECS instance or elastic container instance as a backend server. Valid values: 0 to 100.</p>
          * <br>
          * <p>Default value: 50.</p>
          */
@@ -168,13 +168,13 @@ public class AttachVServerGroupsRequest extends TeaModel {
 
     public static class AttachVServerGroupsRequestVServerGroups extends TeaModel {
         /**
-         * <p>The ID of the CLB instance to which the vServer group belongs.</p>
+         * <p>The ID of the CLB instance to which the new vServer group belongs.</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
-         * <p>Details of the vServer group attributes.</p>
+         * <p>The attributes of the vServer group.</p>
          */
         @NameInMap("VServerGroupAttributes")
         public java.util.List<AttachVServerGroupsRequestVServerGroupsVServerGroupAttributes> VServerGroupAttributes;
