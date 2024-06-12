@@ -263,6 +263,9 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         @NameInMap("user_id")
         public String userId;
 
+        @NameInMap("user_name")
+        public String userName;
+
         public static TrainExceedApplyQueryResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             TrainExceedApplyQueryResponseBodyModule self = new TrainExceedApplyQueryResponseBodyModule();
             return TeaModel.build(map, self);
@@ -362,6 +365,14 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public TrainExceedApplyQueryResponseBodyModule setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

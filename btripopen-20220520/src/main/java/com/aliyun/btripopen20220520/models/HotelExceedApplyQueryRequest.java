@@ -4,11 +4,11 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelExceedApplyQueryRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("apply_id")
     public Long applyId;
+
+    @NameInMap("business_instance_id")
+    public String businessInstanceId;
 
     public static HotelExceedApplyQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         HotelExceedApplyQueryRequest self = new HotelExceedApplyQueryRequest();
@@ -21,6 +21,14 @@ public class HotelExceedApplyQueryRequest extends TeaModel {
     }
     public Long getApplyId() {
         return this.applyId;
+    }
+
+    public HotelExceedApplyQueryRequest setBusinessInstanceId(String businessInstanceId) {
+        this.businessInstanceId = businessInstanceId;
+        return this;
+    }
+    public String getBusinessInstanceId() {
+        return this.businessInstanceId;
     }
 
 }
