@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateCompliancePackResponseBody extends TeaModel {
     /**
-     * <p>The ID of the compliance package.</p>
+     * <p>The compliance package ID.</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

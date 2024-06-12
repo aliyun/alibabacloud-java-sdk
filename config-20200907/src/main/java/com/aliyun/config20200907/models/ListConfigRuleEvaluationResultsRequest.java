@@ -7,7 +7,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
@@ -15,9 +15,9 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The compliance evaluation result of the resource. Valid values:</p>
      * <br>
-     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
      * <p>*   INSUFFICIENT_DATA: No data is available.</p>
      * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
      */
@@ -25,9 +25,9 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String complianceType;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     * <p>You can call the [ListConfigRules](https://help.aliyun.com/document_detail/169607.html) operation to obtain the rule ID.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
@@ -39,7 +39,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to initiate the next request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

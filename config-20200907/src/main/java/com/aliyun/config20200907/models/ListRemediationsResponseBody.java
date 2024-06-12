@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ListRemediationsResponseBody extends TeaModel {
     /**
      * <p>The page number. Pages start from page 1.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -30,6 +34,8 @@ public class ListRemediationsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of remediation settings.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;

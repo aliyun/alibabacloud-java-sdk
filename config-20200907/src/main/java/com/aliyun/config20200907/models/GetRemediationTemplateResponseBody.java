@@ -40,12 +40,14 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
     public static class GetRemediationTemplateResponseBodyRemediationTemplates extends TeaModel {
         /**
          * <p>The ID of the supported rule template.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
         /**
-         * <p>The type of the automatic remediation template. Valid value: OOS.</p>
+         * <p>The type of the automatic remediation template. The value is set to OOS.</p>
          */
         @NameInMap("RemediationType")
         public String remediationType;
@@ -58,12 +60,14 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The description of the automatic remediation template.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
         /**
-         * <p>The identifier of the automatic remediation template.</p>
+         * <p>The ID of the automatic remediation template.</p>
          */
         @NameInMap("TemplateIdentifier")
         public String templateIdentifier;

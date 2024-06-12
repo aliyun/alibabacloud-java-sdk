@@ -7,7 +7,9 @@ public class GetConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ID of the delivery channel.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a delivery channel, see [DescribeDeliveryChannels](~~429841~~).</p>
+     * <p>For more information about how to obtain the ID of a delivery channel, see [DescribeDeliveryChannels](https://help.aliyun.com/document_detail/429841.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;

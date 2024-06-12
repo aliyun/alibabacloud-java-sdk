@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteAggregatorsRequest extends TeaModel {
     /**
      * <p>The ID of the account group. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorIds")
     public String aggregatorIds;

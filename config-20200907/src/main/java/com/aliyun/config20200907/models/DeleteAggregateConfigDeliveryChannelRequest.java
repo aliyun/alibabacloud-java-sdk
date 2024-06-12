@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -13,7 +15,9 @@ public class DeleteAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ID of the delivery channel.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](~~429842~~).</p>
+     * <p>For more information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](https://help.aliyun.com/document_detail/429842.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;

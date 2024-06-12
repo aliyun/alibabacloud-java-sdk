@@ -7,7 +7,9 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -15,7 +17,9 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
@@ -36,6 +40,8 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
 
     /**
      * <p>The resources to be ignored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public java.util.List<IgnoreAggregateEvaluationResultsRequestResources> resources;
@@ -89,7 +95,9 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The ID of the region in which the resource resides.</p>
          * <br>
-         * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Region")
         public String region;
@@ -98,6 +106,8 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
          * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
          * <br>
          * <p>>  You must specify the ID of the current management account or a member account in the account group of the management account.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
@@ -105,7 +115,9 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
          * <br>
-         * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
@@ -113,7 +125,9 @@ public class IgnoreAggregateEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The type of the resource.</p>
          * <br>
-         * <p>For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+         * <p>For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

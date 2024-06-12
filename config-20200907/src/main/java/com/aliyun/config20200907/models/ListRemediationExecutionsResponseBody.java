@@ -51,7 +51,7 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
         public String executionInvocationId;
 
         /**
-         * <p>The IDs of the remediated resources. Multiple resource IDs are separated with commas (,).</p>
+         * <p>The IDs of the resources to which the remediation belongs. Separate multiple resource IDs with commas (,).</p>
          */
         @NameInMap("ExecutionResourceIds")
         public String executionResourceIds;
@@ -63,7 +63,7 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
         public String executionResourceType;
 
         /**
-         * <p>The status of the remediation. Valid values:</p>
+         * <p>The status of the remediation record. Valid values:</p>
          * <br>
          * <p>*   Success</p>
          * <p>*   Failed</p>
@@ -134,7 +134,7 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
 
     public static class ListRemediationExecutionsResponseBodyRemediationExecutionData extends TeaModel {
         /**
-         * <p>The maximum number of entries returned for a single request.</p>
+         * <p>The maximum number of entries to return for a single request.</p>
          */
         @NameInMap("MaxResults")
         public Long maxResults;

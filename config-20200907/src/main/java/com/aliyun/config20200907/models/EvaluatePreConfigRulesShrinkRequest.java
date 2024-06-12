@@ -17,6 +17,8 @@ public class EvaluatePreConfigRulesShrinkRequest extends TeaModel {
 
     /**
      * <p>The resources that you want to evaluate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceEvaluateItems")
     public String resourceEvaluateItemsShrink;

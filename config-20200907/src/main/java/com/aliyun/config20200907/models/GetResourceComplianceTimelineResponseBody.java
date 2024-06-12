@@ -45,7 +45,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The zone where the resource resides.</p>
+         * <p>The ID of the zone in which the resource resides.</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
@@ -57,46 +57,46 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         public Long captureTime;
 
         /**
-         * <p>The information about the rules that evaluated the resource and the compliance evaluation result.</p>
+         * <p>The rules associated with the resource and the compliance details of the rules.</p>
          */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
-         * <p>The details of the configuration change that triggered the compliance evaluation.</p>
+         * <p>The details of the resource changes that trigger the compliance evaluation.</p>
          */
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
 
         /**
-         * <p>The ID of the region where the resource resides.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+         * <p>The time when the resource was created. Unit: milliseconds.</p>
          */
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The status of the resource. The parameter value varies with the resource type and may be left empty. Examples:</p>
+         * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
          * <br>
-         * <p>*   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, valid values of this parameter include Running and Stopped.</p>
-         * <p>*   If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that does not have a specific state. In this case, this parameter is left empty.</p>
+         * <p>*   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
+         * <p>*   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;

@@ -15,7 +15,9 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -23,7 +25,7 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The name of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the name of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the name of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
      */
     @NameInMap("AggregatorName")
     public String aggregatorName;
@@ -37,7 +39,7 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The description of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the description of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the description of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
      */
     @NameInMap("Description")
     public String description;

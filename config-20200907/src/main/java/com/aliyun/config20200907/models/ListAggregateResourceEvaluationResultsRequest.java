@@ -7,7 +7,9 @@ public class ListAggregateResourceEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -39,7 +41,7 @@ public class ListAggregateResourceEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the region where one or more resources that you want to query reside. For example, the value `global` indicates global regions and the value `cn-hangzhou` indicates the China (Hangzhou) region.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
      */
     @NameInMap("Region")
     public String region;
@@ -47,7 +49,7 @@ public class ListAggregateResourceEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -55,7 +57,7 @@ public class ListAggregateResourceEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The type of the resource.</p>
      * <br>
-     * <p>For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>For more information about how to query the type of a resource, see [ListAggregateDiscoveredResources](https://help.aliyun.com/document_detail/265983.html).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

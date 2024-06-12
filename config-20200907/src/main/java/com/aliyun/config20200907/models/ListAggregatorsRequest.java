@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListAggregatorsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

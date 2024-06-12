@@ -7,7 +7,9 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -20,6 +22,8 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The rule name.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
@@ -29,6 +33,8 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
      * <br>
      * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
      * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleTriggerTypes")
     public String configRuleTriggerTypes;
@@ -117,6 +123,8 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceTypesScope")
     public String resourceTypesScopeShrink;
@@ -127,6 +135,8 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
      * <p>*   1: high risk level</p>
      * <p>*   2: medium risk level</p>
      * <p>*   3: low risk level</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
@@ -137,7 +147,9 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
      * <p>*   If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.</p>
      * <p>*   If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</p>
      * <br>
-     * <p>For more information about how to query the name of a managed rule, see [Managed rules](~~127404~~).</p>
+     * <p>For more information about how to query the name of a managed rule, see [Managed rules](https://help.aliyun.com/document_detail/127404.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceIdentifier")
     public String sourceIdentifier;
@@ -147,6 +159,8 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
      * <br>
      * <p>*   ALIYUN: managed rule</p>
      * <p>*   CUSTOM_FC: custom rule</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SourceOwner")
     public String sourceOwner;

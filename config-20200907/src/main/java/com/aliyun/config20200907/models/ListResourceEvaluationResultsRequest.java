@@ -31,7 +31,7 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the region where one or more resources you want to query reside. For example, the value `global` indicates global regions and the value `cn-hangzhou` indicates the China (Hangzhou) region.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of the region where a resource resides, see [ListDiscoveredResources](~~169620~~).</p>
+     * <p>For more information about how to obtain the ID of the region where a resource resides, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
      */
     @NameInMap("Region")
     public String region;
@@ -39,7 +39,7 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+     * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -47,7 +47,7 @@ public class ListResourceEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The type of the resource.</p>
      * <br>
-     * <p>For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+     * <p>For more information about how to query the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

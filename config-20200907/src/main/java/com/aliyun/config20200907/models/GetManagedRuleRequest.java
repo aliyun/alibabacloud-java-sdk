@@ -7,7 +7,9 @@ public class GetManagedRuleRequest extends TeaModel {
     /**
      * <p>The identifier of the managed rule.</p>
      * <br>
-     * <p>You can call the [ListManagedRules](~~421144~~) operation to obtain the managed rule identifier.</p>
+     * <p>You can call the [ListManagedRules](https://help.aliyun.com/document_detail/421144.html) operation to obtain the managed rule identifier.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Identifier")
     public String identifier;

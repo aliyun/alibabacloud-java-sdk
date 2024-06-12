@@ -12,6 +12,8 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the compliance package.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
@@ -19,13 +21,13 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package template.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).</p>
+     * <p>You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the ID of the compliance package.</p>
      */
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
     /**
-     * <p>The rules in the compliance package.</p>
+     * <p>The rules in the compliance package. You must specify either this parameter or TemplateContent.</p>
      */
     @NameInMap("ConfigRules")
     public String configRulesShrink;
@@ -64,11 +66,11 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:</p>
      * <br>
-     * <p>*   1: high risk level</p>
-     * <p>*   2: medium risk level</p>
-     * <p>*   3: low risk level</p>
+     * <p>*   1: high.</p>
+     * <p>*   2: medium.</p>
+     * <p>*   3: low.</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
@@ -87,6 +89,9 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>The information about the template that is used to generate the compliance package. You can call an API operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html). You must specify one of ConfigRules and TemplateContent.</p>
+     */
     @NameInMap("TemplateContent")
     public String templateContent;
 

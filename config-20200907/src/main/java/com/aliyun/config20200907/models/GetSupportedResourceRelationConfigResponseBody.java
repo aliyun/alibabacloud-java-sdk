@@ -11,7 +11,7 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The supported resource relationships.</p>
+     * <p>An array that contains the relationships.</p>
      */
     @NameInMap("ResourceRelationConfigList")
     public java.util.List<GetSupportedResourceRelationConfigResponseBodyResourceRelationConfigList> resourceRelationConfigList;
@@ -39,7 +39,12 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
 
     public static class GetSupportedResourceRelationConfigResponseBodyResourceRelationConfigList extends TeaModel {
         /**
-         * <p>The relationship type.</p>
+         * <p>The type of the relationship between the resource and the object. Valid values:</p>
+         * <br>
+         * <p>*   IsContained: The object is included as part of the resource.</p>
+         * <p>*   IsAttachedTo: The object is added to the resource.</p>
+         * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
+         * <p>*   Contains: The actual value contains the expected value.</p>
          */
         @NameInMap("RelationType")
         public String relationType;

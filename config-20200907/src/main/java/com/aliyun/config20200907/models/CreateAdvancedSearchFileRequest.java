@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateAdvancedSearchFileRequest extends TeaModel {
     /**
      * <p>The SQL statement used to query resources.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sql")
     public String sql;

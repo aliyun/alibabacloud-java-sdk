@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListDiscoveredResourcesRequest extends TeaModel {
     /**
      * <p>The maximum number of entries returned for a single request. Valid values: 1 to 100.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -25,8 +27,8 @@ public class ListDiscoveredResourcesRequest extends TeaModel {
     /**
      * <p>The status of the resource. Valid values:</p>
      * <br>
-     * <p>*   0: The resource is deleted.</p>
-     * <p>*   1 (default): The resource is retained.</p>
+     * <p>*   0: The resource is deleted. If a resource is deleted from the desired cloud service, **Deleted** is displayed in the resource list in the Cloud Config console.</p>
+     * <p>*   1 (default): The resource is retained. If a resource is managed as expected, **Active** is displayed in the resource list in the Cloud Config console.</p>
      */
     @NameInMap("ResourceDeleted")
     public Integer resourceDeleted;

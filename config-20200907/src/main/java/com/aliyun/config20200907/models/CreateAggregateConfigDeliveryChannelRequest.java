@@ -7,7 +7,9 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -15,7 +17,7 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <br>
-     * <p>The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~)</p>
+     * <p>The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25693.html)</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -78,6 +80,8 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
      * <p>*   `acs:oss:{RegionId}:{accountId}:{bucketName}` if your delivery destination is an OSS bucket. Example: `acs:oss:cn-shanghai:100931896542****:new-bucket`.</p>
      * <p>*   `acs:mns:{RegionId}:{accountId}:/topics/{topicName}` if your delivery destination is an MNS topic. Example: `acs:mns:cn-shanghai:100931896542****:/topics/topic1`.</p>
      * <p>*   `acs:log:{RegionId}:{accountId}:project/{projectName}/logstore/{logstoreName}` if your delivery destination is a Log Service Logstore. Example: `acs:log:cn-shanghai:100931896542****:project/project1/logstore/logstore1`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelTargetArn")
     public String deliveryChannelTargetArn;
@@ -88,6 +92,8 @@ public class CreateAggregateConfigDeliveryChannelRequest extends TeaModel {
      * <p>*   OSS: Object Storage Service (OSS)</p>
      * <p>*   MNS: Message Service (MNS)</p>
      * <p>*   SLS: Log Service</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelType")
     public String deliveryChannelType;

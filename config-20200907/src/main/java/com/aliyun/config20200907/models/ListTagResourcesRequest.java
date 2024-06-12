@@ -12,6 +12,8 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the tag.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,6 +34,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>*   `ACS::Config::Aggregator`</p>
      * <p>*   `ACS::Config::CompliancePack`</p>
      * <p>*   `ACS::Config::AggregateCompliancePack`</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

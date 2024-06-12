@@ -7,7 +7,9 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -20,20 +22,22 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
 
     /**
      * <p>The name of the compliance package.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
 
     /**
-     * <p>The ID of the compliance package template.</p>
+     * <p>The ID of the compliance package template from which you want to create a compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
      */
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
     /**
-     * <p>The rules in the compliance package.</p>
+     * <p>The rules in the compliance package. You must specify one of ConfigRules and TemplateContent.</p>
      */
     @NameInMap("ConfigRules")
     public java.util.List<CreateAggregateCompliancePackRequestConfigRules> configRules;
@@ -72,11 +76,11 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:</p>
      * <br>
-     * <p>*   1: high</p>
-     * <p>*   2: medium</p>
-     * <p>*   3: low</p>
+     * <p>*   1: high.</p>
+     * <p>*   2: medium.</p>
+     * <p>*   3: low.</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
@@ -95,6 +99,9 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>The information about the template that is used to create the compliance package. You can call the GetAggregateCompliancePack operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html). You must specify one of ConfigRules and TemplateContent.</p>
+     */
     @NameInMap("TemplateContent")
     public String templateContent;
 
@@ -219,7 +226,7 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         /**
          * <p>The name of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the names of input parameters of the managed rule.</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -227,7 +234,7 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         /**
          * <p>The value of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the values of input parameters of the managed rule.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -257,9 +264,9 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
 
     public static class CreateAggregateCompliancePackRequestConfigRules extends TeaModel {
         /**
-         * <p>The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.</p>
+         * <p>The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+         * <p>You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListAggregateConfigRules](https://help.aliyun.com/document_detail/264148.html) operation to obtain the rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -271,7 +278,7 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         public String configRuleName;
 
         /**
-         * <p>The details of the input parameter of the rule.</p>
+         * <p>The input parameters of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<CreateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
@@ -283,19 +290,19 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the managed rule. Cloud Config automatically create a managed rule of the specified ID and adds the rule to the compliance package.</p>
+         * <p>The identifier of the managed rule. Cloud Config automatically creates a managed rule based on the specified identifier and adds the rule to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter take precedence. For more information about how to obtain the identifier of a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html) operation to obtain the identifier of the managed rule.</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high.</p>
+         * <p>*   2: medium.</p>
+         * <p>*   3: low.</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;

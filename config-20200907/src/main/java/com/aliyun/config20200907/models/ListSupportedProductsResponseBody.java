@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSupportedProductsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned for a single request. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 500.</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
@@ -131,13 +131,13 @@ public class ListSupportedProductsResponseBody extends TeaModel {
 
     public static class ListSupportedProductsResponseBodyProducts extends TeaModel {
         /**
-         * <p>The English name of the cloud service.</p>
+         * <p>The English name of the Alibaba Cloud service.</p>
          */
         @NameInMap("ProductNameEn")
         public String productNameEn;
 
         /**
-         * <p>The Chinese name of the cloud service.</p>
+         * <p>The Chinese name of the Alibaba Cloud service.</p>
          */
         @NameInMap("ProductNameZh")
         public String productNameZh;

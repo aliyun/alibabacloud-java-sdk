@@ -13,7 +13,9 @@ public class UpdateCompliancePackRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
@@ -21,7 +23,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
     /**
      * <p>The name of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the name of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
+     * <p>For more information about how to obtain the name of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
@@ -37,7 +39,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
     /**
      * <p>The description of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
+     * <p>For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/263332.html).</p>
      */
     @NameInMap("Description")
     public String description;
@@ -181,7 +183,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
         /**
          * <p>The name of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -189,7 +191,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
         /**
          * <p>The value of the input parameter.</p>
          * <br>
-         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -221,7 +223,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
         /**
          * <p>The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -247,7 +249,7 @@ public class UpdateCompliancePackRequest extends TeaModel {
         /**
          * <p>The ID of the managed rule. Cloud Config automatically create a managed rule of the specified ID and adds the rule to the compliance package.</p>
          * <br>
-         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter take precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](~~261176~~).</p>
+         * <p>You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter take precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;

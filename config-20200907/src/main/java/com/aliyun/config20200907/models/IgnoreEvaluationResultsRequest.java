@@ -7,7 +7,9 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the rule.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/169607.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
@@ -28,6 +30,8 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
 
     /**
      * <p>The resources to be ignored.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public java.util.List<IgnoreEvaluationResultsRequestResources> resources;
@@ -73,13 +77,17 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The ID of the region in which the resource resides.</p>
          * <br>
-         * <p>For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](~~169620~~).</p>
+         * <p>For more information about how to obtain the ID of the region in which a resource resides, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceAccountId")
         public Long resourceAccountId;
@@ -87,7 +95,9 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
          * <br>
-         * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+         * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
@@ -95,7 +105,9 @@ public class IgnoreEvaluationResultsRequest extends TeaModel {
         /**
          * <p>The type of the resource.</p>
          * <br>
-         * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+         * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](https://help.aliyun.com/document_detail/169620.html).</p>
+         * <br>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

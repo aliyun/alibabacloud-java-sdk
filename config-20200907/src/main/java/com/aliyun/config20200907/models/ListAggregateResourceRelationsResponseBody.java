@@ -39,7 +39,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
 
     public static class ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The Alibaba Cloud account ID of the resource owner.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
@@ -50,48 +50,21 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <br>
          * <p>*   IsContained: The object is included as part of the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   IsAttachedTo: The object is added to the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   Contains: The object contains the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("RelationType")
         public String relationType;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The resource ID of the current resource.</p>
          */
         @NameInMap("SourceResourceId")
         public String sourceResourceId;
 
         /**
-         * <p>The ID of the region to which the current resource belongs.</p>
+         * <p>The region ID of the current resource.</p>
          */
         @NameInMap("SourceResourceRegionId")
         public String sourceResourceRegionId;
@@ -103,7 +76,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         public String sourceResourceType;
 
         /**
-         * <p>The ID of the resource that is associated with the object.</p>
+         * <p>The resource ID of the resource that is associated with the object.</p>
          */
         @NameInMap("TargetResourceId")
         public String targetResourceId;
@@ -191,41 +164,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The type of the relationship between the resource and the object.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   IsContained: The object is included as part of the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   IsAttachedTo: The object is added to the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Contains: The actual value contains the expected value.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>An array that contains the relationships.</p>
          */
         @NameInMap("ResourceRelationList")
         public java.util.List<ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList> resourceRelationList;

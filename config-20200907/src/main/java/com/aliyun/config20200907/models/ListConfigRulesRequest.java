@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConfigRulesRequest extends TeaModel {
     /**
-     * <p>The compliance evaluation result. Valid values:</p>
+     * <p>The compliance evaluation result of the rule. Valid values:</p>
      * <br>
      * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
      * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
@@ -26,7 +26,7 @@ public class ListConfigRulesRequest extends TeaModel {
      * <br>
      * <p>*   ACTIVE: The rule is enabled.</p>
      * <p>*   DELETING: The rule is being deleted.</p>
-     * <p>*   EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
+     * <p>*   EVALUATING: The rule is being used to evaluate resource configurations.</p>
      * <p>*   INACTIVE: The rule is disabled.</p>
      */
     @NameInMap("ConfigRuleState")
@@ -43,7 +43,7 @@ public class ListConfigRulesRequest extends TeaModel {
     /**
      * <p>The page number.</p>
      * <br>
-     * <p>Pages start from page 1. Default value: 1</p>
+     * <p>Page numbers start from 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -51,7 +51,7 @@ public class ListConfigRulesRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <br>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class ListAggregateResourcesByAdvancedSearchRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The SQL statement used to query resources.</p>
+     * <p>The SQL query statement.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sql")
     public String sql;

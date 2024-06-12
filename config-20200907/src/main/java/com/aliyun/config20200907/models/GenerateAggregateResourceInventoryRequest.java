@@ -12,6 +12,8 @@ public class GenerateAggregateResourceInventoryRequest extends TeaModel {
 
     /**
      * <p>The ID of the account group.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -21,6 +23,9 @@ public class GenerateAggregateResourceInventoryRequest extends TeaModel {
      */
     @NameInMap("Regions")
     public String regions;
+
+    @NameInMap("ResourceDeleted")
+    public Integer resourceDeleted;
 
     /**
      * <p>The resource types. Separate multiple resource types with commas (,).</p>
@@ -55,6 +60,14 @@ public class GenerateAggregateResourceInventoryRequest extends TeaModel {
     }
     public String getRegions() {
         return this.regions;
+    }
+
+    public GenerateAggregateResourceInventoryRequest setResourceDeleted(Integer resourceDeleted) {
+        this.resourceDeleted = resourceDeleted;
+        return this;
+    }
+    public Integer getResourceDeleted() {
+        return this.resourceDeleted;
     }
 
     public GenerateAggregateResourceInventoryRequest setResourceTypes(String resourceTypes) {

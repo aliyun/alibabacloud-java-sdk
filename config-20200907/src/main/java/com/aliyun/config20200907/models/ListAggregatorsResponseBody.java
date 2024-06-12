@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAggregatorsResponseBody extends TeaModel {
     /**
-     * <p>The account groups returned.</p>
+     * <p>The account groups.</p>
      */
     @NameInMap("AggregatorsResult")
     public ListAggregatorsResponseBodyAggregatorsResult aggregatorsResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
 
     public static class ListAggregatorsResponseBodyAggregatorsResultAggregators extends TeaModel {
         /**
-         * <p>The ID of the management account used to create the account group.</p>
+         * <p>The ID of the management account that is used to create the account group.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
@@ -51,7 +51,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
         public Long aggregatorAccountCount;
 
         /**
-         * <p>The timestamp when the account group was created.</p>
+         * <p>The timestamp generated when the account group was created.</p>
          */
         @NameInMap("AggregatorCreateTimestamp")
         public Long aggregatorCreateTimestamp;
@@ -71,8 +71,8 @@ public class ListAggregatorsResponseBody extends TeaModel {
         /**
          * <p>The status of the account group. Valid values:</p>
          * <br>
-         * <p>*   0: being created.</p>
-         * <p>*   1: created.</p>
+         * <p>*   0: The account group is being created.</p>
+         * <p>*   1: The account group was created.</p>
          */
         @NameInMap("AggregatorStatus")
         public Integer aggregatorStatus;
@@ -81,6 +81,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
          * <p>The type of the account group. Valid values:</p>
          * <br>
          * <p>*   RD: global account group.</p>
+         * <p>*   FOLDER: account group of the folder.</p>
          * <p>*   CUSTOM: custom account group.</p>
          */
         @NameInMap("AggregatorType")
@@ -92,6 +93,9 @@ public class ListAggregatorsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The information about the member accounts in the account group.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
@@ -182,7 +186,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
         public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregators> aggregators;
 
         /**
-         * <p>The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

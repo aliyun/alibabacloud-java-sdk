@@ -7,7 +7,7 @@ public class StartConfigRuleEvaluationRequest extends TeaModel {
     /**
      * <p>The ID of the compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~606968~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](https://help.aliyun.com/document_detail/606968.html).</p>
      * <br>
      * <p>>  You must set either the CompliancePackId or ConfigRuleId parameter.</p>
      */
@@ -17,7 +17,7 @@ public class StartConfigRuleEvaluationRequest extends TeaModel {
     /**
      * <p>The rule ID.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~609222~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](https://help.aliyun.com/document_detail/609222.html).</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;

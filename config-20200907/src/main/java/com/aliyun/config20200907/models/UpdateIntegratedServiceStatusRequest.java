@@ -17,6 +17,8 @@ public class UpdateIntegratedServiceStatusRequest extends TeaModel {
      * <p>The product code of the cloud product. Valid values:</p>
      * <br>
      * <p>*   cadt: Cloud Architecture Design Tool</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
@@ -26,6 +28,8 @@ public class UpdateIntegratedServiceStatusRequest extends TeaModel {
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public Boolean status;

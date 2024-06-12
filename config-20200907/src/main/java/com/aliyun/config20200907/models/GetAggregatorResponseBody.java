@@ -11,7 +11,7 @@ public class GetAggregatorResponseBody extends TeaModel {
     public GetAggregatorResponseBodyAggregator aggregator;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,7 +51,7 @@ public class GetAggregatorResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The affiliation of the member account. The value is fixed to ResourceDirectory.</p>
+         * <p>The type of the member account. Only ResourceDirectory is returned, which indicates that the account is a resource directory account.</p>
          */
         @NameInMap("AccountType")
         public String accountType;
@@ -59,9 +59,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         /**
          * <p>The status of the configuration recorder for the member account. Valid values:</p>
          * <br>
-         * <p>*   REGISTRABLE: The configuration recorder has not been registered.</p>
+         * <p>*   REGISTRABLE: The configuration recorder is not registered.</p>
          * <p>*   BUILDING: The configuration recorder is being deployed.</p>
-         * <p>*   REGISTERED: The configuration recorder has been registered.</p>
+         * <p>*   REGISTERED: The configuration recorder is registered.</p>
          * <p>*   REBUILDING: The configuration recorder is being redeployed.</p>
          */
         @NameInMap("RecorderStatus")
@@ -108,7 +108,7 @@ public class GetAggregatorResponseBody extends TeaModel {
 
     public static class GetAggregatorResponseBodyAggregator extends TeaModel {
         /**
-         * <p>The ID of the management account used to create the account group.</p>
+         * <p>The ID of the management account that is used to create the account group.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
@@ -126,7 +126,7 @@ public class GetAggregatorResponseBody extends TeaModel {
         public java.util.List<GetAggregatorResponseBodyAggregatorAggregatorAccounts> aggregatorAccounts;
 
         /**
-         * <p>The timestamp when the account group was created.</p>
+         * <p>The timestamp generated when the account group was created.</p>
          */
         @NameInMap("AggregatorCreateTimestamp")
         public String aggregatorCreateTimestamp;
@@ -147,7 +147,7 @@ public class GetAggregatorResponseBody extends TeaModel {
          * <p>The status of the account group. Valid values:</p>
          * <br>
          * <p>*   0: The account group is being created.</p>
-         * <p>*   1: The account group has been created.</p>
+         * <p>*   1: The account group was created.</p>
          */
         @NameInMap("AggregatorStatus")
         public Integer aggregatorStatus;
@@ -155,8 +155,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         /**
          * <p>The type of the account group. Valid values:</p>
          * <br>
-         * <p>*   RD: global account group</p>
-         * <p>*   CUSTOM: custom account group</p>
+         * <p>*   RD: a global account group.</p>
+         * <p>*   FOLDER: an account group for a folder.</p>
+         * <p>*   CUSTOM: a custom account group.</p>
          */
         @NameInMap("AggregatorType")
         public String aggregatorType;
@@ -167,6 +168,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the attached folder of the account group.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 

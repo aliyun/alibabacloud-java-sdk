@@ -50,6 +50,9 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
+        @NameInMap("ComplianceType")
+        public String complianceType;
+
         /**
          * <p>The configuration of the resource.</p>
          */
@@ -129,6 +132,14 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
         }
         public String getAvailabilityZone() {
             return this.availabilityZone;
+        }
+
+        public GetDiscoveredResourceResponseBodyDiscoveredResourceDetail setComplianceType(String complianceType) {
+            this.complianceType = complianceType;
+            return this;
+        }
+        public String getComplianceType() {
+            return this.complianceType;
         }
 
         public GetDiscoveredResourceResponseBodyDiscoveredResourceDetail setConfiguration(String configuration) {

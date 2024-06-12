@@ -23,6 +23,8 @@ public class PutEvaluationsRequest extends TeaModel {
 
     /**
      * <p>The callback token. When Cloud Config triggers a custom rule to evaluate resources, the token information is sent to Function Compute as an input parameter. The token must be specified when you submit the evaluation results.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResultToken")
     public String resultToken;

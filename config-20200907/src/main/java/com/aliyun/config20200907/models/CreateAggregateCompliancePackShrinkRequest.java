@@ -7,7 +7,9 @@ public class CreateAggregateCompliancePackShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](https://help.aliyun.com/document_detail/255797.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -20,20 +22,22 @@ public class CreateAggregateCompliancePackShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the compliance package.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CompliancePackName")
     public String compliancePackName;
 
     /**
-     * <p>The ID of the compliance package template.</p>
+     * <p>The ID of the compliance package template from which you want to create a compliance package.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).</p>
+     * <p>For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](https://help.aliyun.com/document_detail/261176.html).</p>
      */
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
     /**
-     * <p>The rules in the compliance package.</p>
+     * <p>The rules in the compliance package. You must specify one of ConfigRules and TemplateContent.</p>
      */
     @NameInMap("ConfigRules")
     public String configRulesShrink;
@@ -72,11 +76,11 @@ public class CreateAggregateCompliancePackShrinkRequest extends TeaModel {
     public String resourceGroupIdsScope;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+     * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:</p>
      * <br>
-     * <p>*   1: high</p>
-     * <p>*   2: medium</p>
-     * <p>*   3: low</p>
+     * <p>*   1: high.</p>
+     * <p>*   2: medium.</p>
+     * <p>*   3: low.</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
@@ -95,6 +99,9 @@ public class CreateAggregateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    /**
+     * <p>The information about the template that is used to create the compliance package. You can call the GetAggregateCompliancePack operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](https://help.aliyun.com/document_detail/2659733.html). You must specify one of ConfigRules and TemplateContent.</p>
+     */
     @NameInMap("TemplateContent")
     public String templateContent;
 
