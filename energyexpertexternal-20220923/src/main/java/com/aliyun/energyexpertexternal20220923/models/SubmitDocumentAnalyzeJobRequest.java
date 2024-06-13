@@ -4,14 +4,14 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocumentAnalyzeJobRequest extends TeaModel {
+    @NameInMap("fileName")
+    public String fileName;
+
     @NameInMap("fileUrl")
     public String fileUrl;
 
     @NameInMap("folderId")
     public String folderId;
-
-    @NameInMap("ossUrl")
-    public String ossUrl;
 
     /**
      * <p>This parameter is required.</p>
@@ -22,6 +22,14 @@ public class SubmitDocumentAnalyzeJobRequest extends TeaModel {
     public static SubmitDocumentAnalyzeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocumentAnalyzeJobRequest self = new SubmitDocumentAnalyzeJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitDocumentAnalyzeJobRequest setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
     }
 
     public SubmitDocumentAnalyzeJobRequest setFileUrl(String fileUrl) {
@@ -38,14 +46,6 @@ public class SubmitDocumentAnalyzeJobRequest extends TeaModel {
     }
     public String getFolderId() {
         return this.folderId;
-    }
-
-    public SubmitDocumentAnalyzeJobRequest setOssUrl(String ossUrl) {
-        this.ossUrl = ossUrl;
-        return this;
-    }
-    public String getOssUrl() {
-        return this.ossUrl;
     }
 
     public SubmitDocumentAnalyzeJobRequest setTemplateId(String templateId) {

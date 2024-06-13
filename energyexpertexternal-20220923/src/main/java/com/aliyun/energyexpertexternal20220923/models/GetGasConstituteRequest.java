@@ -14,8 +14,6 @@ public class GetGasConstituteRequest extends TeaModel {
 
     /**
      * <p>Module code.</p>
-     * <br>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("moduleCode")
     public String moduleCode;
