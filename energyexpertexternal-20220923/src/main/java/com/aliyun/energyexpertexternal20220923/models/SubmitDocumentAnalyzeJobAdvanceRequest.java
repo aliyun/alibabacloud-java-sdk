@@ -4,14 +4,14 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocumentAnalyzeJobAdvanceRequest extends TeaModel {
+    @NameInMap("fileName")
+    public String fileName;
+
     @NameInMap("fileUrl")
-    public String fileUrl;
+    public java.io.InputStream fileUrlObject;
 
     @NameInMap("folderId")
     public String folderId;
-
-    @NameInMap("ossUrl")
-    public java.io.InputStream ossUrlObject;
 
     /**
      * <p>This parameter is required.</p>
@@ -24,12 +24,20 @@ public class SubmitDocumentAnalyzeJobAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SubmitDocumentAnalyzeJobAdvanceRequest setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
+    public SubmitDocumentAnalyzeJobAdvanceRequest setFileName(String fileName) {
+        this.fileName = fileName;
         return this;
     }
-    public String getFileUrl() {
-        return this.fileUrl;
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    public SubmitDocumentAnalyzeJobAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
+        this.fileUrlObject = fileUrlObject;
+        return this;
+    }
+    public java.io.InputStream getFileUrlObject() {
+        return this.fileUrlObject;
     }
 
     public SubmitDocumentAnalyzeJobAdvanceRequest setFolderId(String folderId) {
@@ -38,14 +46,6 @@ public class SubmitDocumentAnalyzeJobAdvanceRequest extends TeaModel {
     }
     public String getFolderId() {
         return this.folderId;
-    }
-
-    public SubmitDocumentAnalyzeJobAdvanceRequest setOssUrlObject(java.io.InputStream ossUrlObject) {
-        this.ossUrlObject = ossUrlObject;
-        return this;
-    }
-    public java.io.InputStream getOssUrlObject() {
-        return this.ossUrlObject;
     }
 
     public SubmitDocumentAnalyzeJobAdvanceRequest setTemplateId(String templateId) {

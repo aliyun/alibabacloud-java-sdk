@@ -1716,16 +1716,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitDocumentAnalyzeJobResponse submitDocumentAnalyzeJobWithOptions(SubmitDocumentAnalyzeJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
             query.put("fileUrl", request.fileUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
             query.put("folderId", request.folderId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ossUrl)) {
-            query.put("ossUrl", request.ossUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
@@ -1807,14 +1807,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         SubmitDocumentAnalyzeJobRequest submitDocumentAnalyzeJobReq = new SubmitDocumentAnalyzeJobRequest();
         com.aliyun.openapiutil.Client.convert(request, submitDocumentAnalyzeJobReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.ossUrlObject)) {
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
             authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
             ossConfig.accessKeyId = authResponse.body.accessKeyId;
             ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
             ossClient = new com.aliyun.oss.Client(ossConfig);
             fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
                 new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.ossUrlObject),
+                new TeaPair("content", request.fileUrlObject),
                 new TeaPair("contentType", "")
             ));
             ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
@@ -1830,7 +1830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
                 new TeaPair("header", ossHeader)
             ));
             ossClient.postObject(uploadRequest, ossRuntime);
-            submitDocumentAnalyzeJobReq.ossUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
+            submitDocumentAnalyzeJobReq.fileUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
         }
 
         SubmitDocumentAnalyzeJobResponse submitDocumentAnalyzeJobResp = this.submitDocumentAnalyzeJobWithOptions(submitDocumentAnalyzeJobReq, headers, runtime);
