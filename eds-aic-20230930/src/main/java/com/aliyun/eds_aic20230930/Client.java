@@ -1042,6 +1042,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeImageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeImageListResponse
+     */
+    public DescribeImageListResponse describeImageListWithOptions(DescribeImageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            body.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageType)) {
+            body.put("ImageType", request.imageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeImageList"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeImageListResponse());
+    }
+
+    /**
+     * @param request DescribeImageListRequest
+     * @return DescribeImageListResponse
+     */
+    public DescribeImageListResponse describeImageList(DescribeImageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeImageListWithOptions(request, runtime);
+    }
+
+    /**
      * @summary 查询命令结果
      *
      * @param request DescribeInvocationsRequest
@@ -1879,6 +1937,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 重启安卓实例
+     *
+     * @param request RebootAndroidInstancesInGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RebootAndroidInstancesInGroupResponse
+     */
+    public RebootAndroidInstancesInGroupResponse rebootAndroidInstancesInGroupWithOptions(RebootAndroidInstancesInGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            query.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RebootAndroidInstancesInGroup"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RebootAndroidInstancesInGroupResponse());
+    }
+
+    /**
+     * @summary 重启安卓实例
+     *
+     * @param request RebootAndroidInstancesInGroupRequest
+     * @return RebootAndroidInstancesInGroupResponse
+     */
+    public RebootAndroidInstancesInGroupResponse rebootAndroidInstancesInGroup(RebootAndroidInstancesInGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rebootAndroidInstancesInGroupWithOptions(request, runtime);
+    }
+
+    /**
      * @param request RecoveryFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecoveryFileResponse
@@ -2218,6 +2318,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartAndroidInstanceResponse startAndroidInstance(StartAndroidInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startAndroidInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * @summary 实例关机
+     *
+     * @param request StopAndroidInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopAndroidInstanceResponse
+     */
+    public StopAndroidInstanceResponse stopAndroidInstanceWithOptions(StopAndroidInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            query.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopAndroidInstance"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopAndroidInstanceResponse());
+    }
+
+    /**
+     * @summary 实例关机
+     *
+     * @param request StopAndroidInstanceRequest
+     * @return StopAndroidInstanceResponse
+     */
+    public StopAndroidInstanceResponse stopAndroidInstance(StopAndroidInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopAndroidInstanceWithOptions(request, runtime);
     }
 
     /**
