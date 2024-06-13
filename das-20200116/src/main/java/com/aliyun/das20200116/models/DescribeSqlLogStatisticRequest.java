@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogStatisticRequest extends TeaModel {
     /**
+     * <p>The ID of the database instance.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")

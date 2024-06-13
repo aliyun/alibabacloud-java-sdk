@@ -21,7 +21,7 @@ public class GetStorageAnalysisResultRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The task ID, which is returned after you call the CreateStorageAnalysisTask operation.</p>
+     * <p>The task ID. You can obtain the task ID from the response of the [CreateStorageAnalysisTask](https://help.aliyun.com/document_detail/2639140.html) operation.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

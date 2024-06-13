@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogConfigRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the database instance.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

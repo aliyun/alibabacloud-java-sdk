@@ -23,9 +23,9 @@ public class GetMySQLAllSessionAsyncRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The ID of the asynchronous request.</p>
+     * <p>The asynchronous request ID.</p>
      * <br>
-     * <p>>  You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</p>
+     * <p>>  GetMySQLAllSessionAsync is an asynchronous operation. After a request is sent, the system does not return complete results but returns a **request ID**. You need to use the **request ID** to initiate requests until the value of the **isFinish** field in the returned results is **true**, the complete results are returned. This indicates that to obtain complete data, you must call this operation at least twice.</p>
      */
     @NameInMap("ResultId")
     public String resultId;

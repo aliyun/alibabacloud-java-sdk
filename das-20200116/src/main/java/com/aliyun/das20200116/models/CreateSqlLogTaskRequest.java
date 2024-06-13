@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSqlLogTaskRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -17,34 +17,36 @@ public class CreateSqlLogTaskRequest extends TeaModel {
     public java.util.List<CreateSqlLogTaskRequestFilters> filters;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the database instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The node ID.</p>
+     * <br>
+     * <p>>  This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The role of the node in the PolarDB-X 2.0 instance. Valid values:</p>
+     * <p>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</p>
      * <br>
-     * <p>*   **polarx_cn**: compute node.</p>
-     * <p>*   **polarx_dn**: data node.</p>
+     * <p>*   **polarx_cn**: compute node</p>
+     * <p>*   **polarx_dn**: data node</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -52,8 +54,9 @@ public class CreateSqlLogTaskRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <br>
-     * <p>*   Export</p>
-     * <p>*   Query</p>
+     * <p>*   **Export**</p>
+     * <p>*   **Query**</p>
+     * <p>*   **Insight**</p>
      */
     @NameInMap("Type")
     public String type;
@@ -130,6 +133,8 @@ public class CreateSqlLogTaskRequest extends TeaModel {
     public static class CreateSqlLogTaskRequestFilters extends TeaModel {
         /**
          * <p>The name of the filter parameter.</p>
+         * <br>
+         * <p>>  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.</p>
          */
         @NameInMap("Key")
         public String key;

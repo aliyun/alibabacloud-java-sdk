@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogConfigResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The response code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>SqlLogConfig</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public DescribeSqlLogConfigResponseBodyData data;
@@ -19,7 +19,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <br>
-     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -33,8 +33,8 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public String success;
@@ -86,43 +86,57 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
 
     public static class DescribeSqlLogConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The cold storage duration.</p>
+         * <p>Indicates whether the cold data storage is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ColdEnable")
         public Boolean coldEnable;
 
         /**
-         * <p>The cold storage duration.</p>
+         * <p>The number of days for which the SQL Explorer and Audit data is stored in cold storage.</p>
          */
         @NameInMap("ColdRetention")
         public Integer coldRetention;
 
         /**
-         * <p>The time when cold storage was enabled.</p>
+         * <p>The time when the cold data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ColdStartTime")
         public Long coldStartTime;
 
         /**
-         * <p>The version of the collector.</p>
+         * <p>The collector version. Valid values:</p>
+         * <br>
+         * <p>*   **MYSQL_V0**</p>
+         * <p>*   **MYSQL_V1**</p>
+         * <p>*   **MYSQL_V2**</p>
+         * <p>*   **MYSQL_V3**</p>
+         * <p>*   **PG_V1**</p>
+         * <p>*   **rdspg_v1**</p>
+         * <p>*   **polarpg_v1**</p>
          */
         @NameInMap("CollectorVersion")
         public String collectorVersion;
 
         /**
-         * <p>Indicates whether hot storage was enabled.</p>
+         * <p>Indicates whether the hot data storage is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("HotEnable")
         public Boolean hotEnable;
 
         /**
-         * <p>The hot storage duration.</p>
+         * <p>The number of days for which the SQL Explorer and Audit data is stored in hot storage.</p>
          */
         @NameInMap("HotRetention")
         public Integer hotRetention;
 
         /**
-         * <p>The time when hot storage was enabled.</p>
+         * <p>The time when the hot data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("HotStartTime")
         public Long hotStartTime;
@@ -134,57 +148,79 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         public String logFilter;
 
         /**
-         * <p>Indicates whether SQL Explorer and Audit was enabled.</p>
+         * <p>Indicates whether the SQL Explorer feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("RequestEnable")
         public Boolean requestEnable;
 
         /**
-         * <p>The time when SQL Explorer and Audit was enabled.</p>
+         * <p>The time when the SQL Explorer feature was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("RequestStartTime")
         public Long requestStartTime;
 
         /**
-         * <p>The time when SQL Explorer and Audit was disabled.</p>
-         * <br>
-         * <p>>  If DAS Enterprise Edition V1 was enabled, this parameter indicates the time when DAS Enterprise Edition expired.</p>
+         * <p>The time when DAS Enterprise Edition V1 expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("RequestStopTime")
         public Long requestStopTime;
 
         /**
-         * <p>The storage duration of the SQL Explorer and Audit data.</p>
+         * <p>The total storage duration of the SQL Explorer and Audit data. The value of this parameter is the sum of the values of **HotRetention** and **ColdRetention**. Unit: day.</p>
          */
         @NameInMap("Retention")
         public Integer retention;
 
         /**
-         * <p>Indicates whether DAS Enterprise Edition was enabled.</p>
+         * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("SqlLogEnable")
         public Boolean sqlLogEnable;
 
         /**
-         * <p>The status of data migration.</p>
+         * <p>The state of data migration. Valid values:</p>
+         * <br>
+         * <p>*   **FINISH**: The historical data is migrated.</p>
+         * <p>*   **RUNNING**: The historical data is being migrated.</p>
+         * <p>*   **FAILURE**: The historical data fails to be migrated.</p>
          */
         @NameInMap("SqlLogState")
         public String sqlLogState;
 
         /**
-         * <p>The time when SQL Explorer and Audit was enabled.</p>
+         * <p>The time when DAS Enterprise Edition was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("SqlLogVisibleTime")
         public Long sqlLogVisibleTime;
 
         /**
-         * <p>The supported versions of Database Autonomy Service (DAS) Enterprise Edition.</p>
+         * <p>The latest version of DAS Enterprise Edition that supports the database instance. Valid values:</p>
+         * <br>
+         * <p>*   **SQL_LOG_V0**: DAS Enterprise Edition V0.</p>
+         * <p>*   **SQL_LOG_V1**: DAS Enterprise version V1.</p>
+         * <p>*   **SQL_LOG_V2**: DAS Enterprise Edition V2.</p>
+         * <p>*   **SQL_LOG_V3**: DAS Enterprise Edition V3.</p>
+         * <p>*   **SQL_LOG_NOT_ENABLE**: DAS Enterprise Edition is not enabled.</p>
+         * <p>*   **SQL_LOG_NOT_SUPPORT**: DAS Enterprise Edition is not supported.</p>
          */
         @NameInMap("SupportVersion")
         public String supportVersion;
 
         /**
-         * <p>The version of SQL Explorer and Audit.</p>
+         * <p>The version of DAS Enterprise Edition that is enabled for the database instance. Valid values:</p>
+         * <br>
+         * <p>*   **SQL_LOG_V0**: DAS Enterprise Edition V0.</p>
+         * <p>*   **SQL_LOG_V1**: DAS Enterprise version V1.</p>
+         * <p>*   **SQL_LOG_V2**: DAS Enterprise Edition V2.</p>
+         * <p>*   **SQL_LOG_V3**: DAS Enterprise Edition V3.</p>
+         * <p>*   **SQL_LOG_NOT_ENABLE**: DAS Enterprise Edition is not enabled.</p>
+         * <p>*   **SQL_LOG_NOT_SUPPORT**: DAS Enterprise Edition is not supported.</p>
          */
         @NameInMap("Version")
         public String version;
