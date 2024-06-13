@@ -94,6 +94,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("SuitableType")
     public String suitableType;
 
+    @NameInMap("UiCustomUrl")
+    public String uiCustomUrl;
+
     @NameInMap("UserId")
     public String userId;
 
@@ -346,6 +349,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getSuitableType() {
         return this.suitableType;
+    }
+
+    public InitFaceVerifyRequest setUiCustomUrl(String uiCustomUrl) {
+        this.uiCustomUrl = uiCustomUrl;
+        return this;
+    }
+    public String getUiCustomUrl() {
+        return this.uiCustomUrl;
     }
 
     public InitFaceVerifyRequest setUserId(String userId) {

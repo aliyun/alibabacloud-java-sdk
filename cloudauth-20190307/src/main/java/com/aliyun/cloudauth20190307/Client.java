@@ -1310,6 +1310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SuitableType", request.suitableType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.uiCustomUrl)) {
+            query.put("UiCustomUrl", request.uiCustomUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             query.put("UserId", request.userId);
         }
