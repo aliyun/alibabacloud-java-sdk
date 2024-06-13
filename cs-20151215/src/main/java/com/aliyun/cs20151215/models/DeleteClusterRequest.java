@@ -4,14 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
+    /**
+     * <p>The type of cluster resource that you want to delete or retain.</p>
+     */
     @NameInMap("delete_options")
     public java.util.List<DeleteClusterRequestDeleteOptions> deleteOptions;
 
     /**
-     * <p>Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.</p>
+     * <p>Specifies whether to retain the Server Load Balancer (SLB) instances that are created by the cluster.</p>
      * <br>
-     * <p>*   `true`: retains the SLB resources that are created by the cluster.</p>
-     * <p>*   `false`: does not retain the SLB resources that are created by the cluster.</p>
+     * <p>*   `true`: retains the SLB instances that are created by the cluster.</p>
+     * <p>*   `false`: does not retain the SLB instances that are created by the cluster.</p>
      * <br>
      * <p>Default value: `false`.</p>
      */
@@ -74,9 +77,24 @@ public class DeleteClusterRequest extends TeaModel {
     }
 
     public static class DeleteClusterRequestDeleteOptions extends TeaModel {
+        /**
+         * <p>The deletion policy for the specified type of resource. Valid values:</p>
+         * <br>
+         * <p>*   delete: deletes the specified type of resource.</p>
+         * <p>*   retain: retains the specified type of resource.</p>
+         */
         @NameInMap("delete_mode")
         public String deleteMode;
 
+        /**
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SLB: SLB resources created for Services. By default, the SLB resources are automatically deleted.</p>
+         * <p>*   ALB: Application Load Balancer (ALB) resources created by the ALB Ingress controller. By default, the ALB resources are retained.</p>
+         * <p>*   SLS_Data: Simple Log Service projects used by the cluster logging feature. By default, the Simple Log Service projects are retained.</p>
+         * <p>*   SLS_ControlPlane: Simple Log Service projects used to store the logs of control planes in ACK managed clusters. By default, the Simple Log Service projects are retained.</p>
+         * <p>*   PrivateZone: PrivateZone resources created by ACK Serverless clusters. By default, the PrivateZone resources are retained.</p>
+         */
         @NameInMap("resource_type")
         public String resourceType;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     /**
-     * <p>The kubelet configuration.</p>
+     * <p>The parameter settings of the kubelet.</p>
      */
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
@@ -14,7 +14,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public ModifyNodePoolNodeConfigRequestOsConfig osConfig;
 
     /**
-     * <p>The rotation configuration.</p>
+     * <p>The rotation configurations.</p>
      */
     @NameInMap("rolling_policy")
     public ModifyNodePoolNodeConfigRequestRollingPolicy rollingPolicy;
@@ -69,7 +69,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
 
     public static class ModifyNodePoolNodeConfigRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The maximum number of nodes in the Unschedulable state.</p>
+         * <p>The maximum number of unavailable nodes.</p>
          */
         @NameInMap("max_parallelism")
         public Long maxParallelism;

@@ -10,6 +10,9 @@ public class RunClusterCheckRequest extends TeaModel {
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>检查目标。</p>
+     */
     @NameInMap("target")
     public String target;
 

@@ -22,10 +22,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * <p>The type of cluster. Valid values:</p>
      * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster</p>
-     * <p>*   `Ask`: ACK Serverless cluster</p>
-     * <p>*   `ExternalKubernetes`: registered cluster</p>
+     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
+     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
+     * <p>*   `ExternalKubernetes`: registered cluster.</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
@@ -174,7 +173,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String subnetCidr;
 
     /**
-     * <p>The resource labels of the cluster.</p>
+     * <p>The resource tags of the cluster.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
