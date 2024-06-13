@@ -1315,7 +1315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关实例
+     * @summary Creates an API Gateway instance.
      *
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1398,7 +1398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关实例
+     * @summary Creates an API Gateway instance.
      *
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -4461,6 +4461,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the APIs with which an application is associated.
+     *
      * @param request DescribeApisByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisByAppResponse
@@ -4522,6 +4524,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the APIs with which an application is associated.
+     *
      * @param request DescribeApisByAppRequest
      * @return DescribeApisByAppResponse
      */
@@ -6125,6 +6129,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the historical versions of an API.
+     *
      * @param request DescribeHistoryApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHistoryApisResponse
@@ -6178,6 +6184,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary Queries the historical versions of an API.
+     *
      * @param request DescribeHistoryApisRequest
      * @return DescribeHistoryApisResponse
      */
@@ -7207,7 +7215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据查询查询绑定的API列表
+     * @summary Queries the APIs to which a specified plug-in is bound.
      *
      * @param request DescribePluginApisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7274,7 +7282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据查询查询绑定的API列表
+     * @summary Queries the APIs to which a specified plug-in is bound.
      *
      * @param request DescribePluginApisRequest
      * @return DescribePluginApisResponse
@@ -12090,9 +12098,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * @summary Binds a signature key to APIs.
      *
-     * @description *   This API is intended for API providers.
-     * *   This operation allows you to bind a signature key to an API. You can bind signature keys for up to 100 APIs at a time.
-     *
      * @param request SetSignatureApisRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetSignatureApisResponse
@@ -12139,9 +12144,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * @summary Binds a signature key to APIs.
-     *
-     * @description *   This API is intended for API providers.
-     * *   This operation allows you to bind a signature key to an API. You can bind signature keys for up to 100 APIs at a time.
      *
      * @param request SetSignatureApisRequest
      * @return SetSignatureApisResponse

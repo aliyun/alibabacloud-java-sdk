@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAccessesRequest extends TeaModel {
+    /**
+     * <p>Whether to conduct precise queries</p>
+     */
     @NameInMap("AccurateQuery")
     public Boolean accurateQuery;
 
@@ -41,7 +44,7 @@ public class DescribeVpcAccessesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     * <p>The port number.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVpcAccessesRequestTag> tag;
@@ -145,13 +148,13 @@ public class DescribeVpcAccessesRequest extends TeaModel {
 
     public static class DescribeVpcAccessesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;

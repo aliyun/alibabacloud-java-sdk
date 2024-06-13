@@ -13,7 +13,7 @@ public class DisableInstanceAccessControlRequest extends TeaModel {
     public String aclId;
 
     /**
-     * <p>IP版本，可以设置为**ipv4**或者**ipv6**。</p>
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;

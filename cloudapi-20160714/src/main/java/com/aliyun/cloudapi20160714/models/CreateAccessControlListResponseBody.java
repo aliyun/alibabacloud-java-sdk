@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessControlListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the access control policy.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 

@@ -23,6 +23,9 @@ public class CreateApiStageVariableRequest extends TeaModel {
     @NameInMap("StageId")
     public String stageId;
 
+    /**
+     * <p>Environmental routing model.</p>
+     */
     @NameInMap("StageRouteModel")
     @Deprecated
     public String stageRouteModel;
