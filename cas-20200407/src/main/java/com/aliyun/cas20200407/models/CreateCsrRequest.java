@@ -4,30 +4,48 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class CreateCsrRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
     @NameInMap("CorpName")
     public String corpName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CountryCode")
     public String countryCode;
 
     @NameInMap("Department")
     public String department;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KeySize")
     public Integer keySize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Locality")
     public String locality;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Province")
     public String province;
 

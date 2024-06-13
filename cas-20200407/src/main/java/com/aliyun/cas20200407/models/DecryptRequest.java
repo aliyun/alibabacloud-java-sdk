@@ -4,12 +4,21 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class DecryptRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
 

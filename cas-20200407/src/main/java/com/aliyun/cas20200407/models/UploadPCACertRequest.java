@@ -8,6 +8,8 @@ public class UploadPCACertRequest extends TeaModel {
      * <p><UploadPCACertResponse></p>
      * <p>    <RequestId>15C66C7B-671A-4297-9187-2C4477247A74</RequestId></p>
      * <p></UploadPCACertResponse></p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Cert")
     public String cert;
@@ -28,6 +30,8 @@ public class UploadPCACertRequest extends TeaModel {
      * <p>{</p>
      * <p>    "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"</p>
      * <p>}</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("WarehouseId")
     public Long warehouseId;

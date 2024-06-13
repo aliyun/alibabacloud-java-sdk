@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteCsrRequest extends TeaModel {
     /**
      * <p>CSR ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CsrId")
     public Long csrId;

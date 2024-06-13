@@ -4,6 +4,9 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class CancelCertificateForPackageRequestRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 

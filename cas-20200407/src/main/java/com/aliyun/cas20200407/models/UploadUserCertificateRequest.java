@@ -29,7 +29,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (\_).</p>
+     * <p>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (_).</p>
      * <br>
      * <p>>  The name must be unique within an Alibaba Cloud account.</p>
      */

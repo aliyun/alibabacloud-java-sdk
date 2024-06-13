@@ -7,7 +7,7 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     /**
      * <p>The company name of the certificate application.</p>
      * <br>
-     * <p>> This parameter is available only when you apply for OV certificates. If you want to apply for an OV certificate, you must add a company profile to the **Information Management** module of the [Certificate Management Service console](https://yundun.console.aliyun.com/?p=cas#/). For more information, see [Manage company profiles](~~198289~~). If you want to apply for a DV certificate, you do not need to add a company profile.</p>
+     * <p>> This parameter is available only when you apply for OV certificates. If you want to apply for an OV certificate, you must add a company profile to the **Information Management** module of the [Certificate Management Service console](https://yundun.console.aliyun.com/?p=cas#/). For more information, see [Manage company profiles](https://help.aliyun.com/document_detail/198289.html). If you want to apply for a DV certificate, you do not need to add a company profile.</p>
      * <br>
      * <p>If you specify a company name, the information about the company that is configured in the **Information Management** module is used. If you do not specify this parameter, the information about the most recent company that is added to the **Information Management** module is used.</p>
      */
@@ -15,7 +15,7 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     public String companyName;
 
     /**
-     * <p>The content of the certificate signing request (CSR) file that is manually generated for the domain name by using OpenSSL or Keytool. The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [Create a CSR file](~~313297~~). If you do not specify this parameter, Certificate Management Service automatically creates a CSR file.</p>
+     * <p>The content of the certificate signing request (CSR) file that is manually generated for the domain name by using OpenSSL or Keytool. The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [Create a CSR file](https://help.aliyun.com/document_detail/313297.html). If you do not specify this parameter, Certificate Management Service automatically creates a CSR file.</p>
      * <br>
      * <p>A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.</p>
      * <br>
@@ -43,7 +43,7 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     /**
      * <p>The email address of the applicant. After the CA receives your certificate application, the CA sends a verification email to the email address that you specify. You must log on to the mailbox, open the mail, and complete the verification of the domain name ownership based on the steps that are described in the email.</p>
      * <br>
-     * <p>If you do not specify this parameter, the information about the most recent contact that is added to the **Information Management** module is used. For more information about how to add a contact to the **Information Management** module, see [Manage contacts](~~198262~~).</p>
+     * <p>If you do not specify this parameter, the information about the most recent contact that is added to the **Information Management** module is used. For more information about how to add a contact to the **Information Management** module, see [Manage contacts](https://help.aliyun.com/document_detail/198262.html).</p>
      */
     @NameInMap("Email")
     public String email;
@@ -51,7 +51,7 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     /**
      * <p>The phone number of the applicant. CA staff can call the phone number to confirm the information in your certificate application.</p>
      * <br>
-     * <p>If you do not specify this parameter, the information about the most recent contact that is added to the **Information Management** module is used. For more information about how to add a contact to the **Information Management** module, see [Manage contacts](~~198262~~).</p>
+     * <p>If you do not specify this parameter, the information about the most recent contact that is added to the **Information Management** module is used. For more information about how to add a contact to the **Information Management** module, see [Manage contacts](https://help.aliyun.com/document_detail/198262.html).</p>
      */
     @NameInMap("Phone")
     public String phone;
@@ -81,7 +81,7 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
     /**
      * <p>The name of the applicant.</p>
      * <br>
-     * <p>If you do not specify this parameter, the information about the most recent contact that is added to the **Information Management** module is used. For more information about how to add a contact to the **Information Management** module, see [Manage contacts](~~198262~~).</p>
+     * <p>If you do not specify this parameter, the information about the most recent contact that is added to the **Information Management** module is used. For more information about how to add a contact to the **Information Management** module, see [Manage contacts](https://help.aliyun.com/document_detail/198262.html).</p>
      */
     @NameInMap("Username")
     public String username;
@@ -92,7 +92,7 @@ public class CreateCertificateForPackageRequestRequest extends TeaModel {
      * <p>*   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</p>
      * <p>*   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</p>
      * <br>
-     * <p>For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).</p>
+     * <p>For more information about the verification methods, see [Verify the ownership of a domain name](https://help.aliyun.com/document_detail/48016.html).</p>
      */
     @NameInMap("ValidateType")
     public String validateType;
