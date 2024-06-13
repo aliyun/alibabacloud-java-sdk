@@ -4,6 +4,9 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class RefreshAdvisorResourceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Product")
     public String product;
 

@@ -7,6 +7,9 @@ public class ReportBizAlertInfoRequest extends TeaModel {
     @NameInMap("AlertDescription")
     public String alertDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlertDetail")
     public String alertDetail;
 
@@ -16,9 +19,15 @@ public class ReportBizAlertInfoRequest extends TeaModel {
     @NameInMap("AlertLabels")
     public String alertLabels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlertScene")
     public String alertScene;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlertToken")
     public String alertToken;
 

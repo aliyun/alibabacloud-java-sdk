@@ -4,6 +4,9 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCostCheckAdvicesShrinkRequest extends TeaModel {
+    @NameInMap("AssumeAliyunIdList")
+    public String assumeAliyunIdListShrink;
+
     @NameInMap("CheckId")
     public String checkId;
 
@@ -28,9 +31,23 @@ public class DescribeCostCheckAdvicesShrinkRequest extends TeaModel {
     @NameInMap("Severity")
     public String severity;
 
+    @NameInMap("TagKeys")
+    public String tagKeysShrink;
+
+    @NameInMap("TagValues")
+    public String tagValuesShrink;
+
     public static DescribeCostCheckAdvicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCostCheckAdvicesShrinkRequest self = new DescribeCostCheckAdvicesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCostCheckAdvicesShrinkRequest setAssumeAliyunIdListShrink(String assumeAliyunIdListShrink) {
+        this.assumeAliyunIdListShrink = assumeAliyunIdListShrink;
+        return this;
+    }
+    public String getAssumeAliyunIdListShrink() {
+        return this.assumeAliyunIdListShrink;
     }
 
     public DescribeCostCheckAdvicesShrinkRequest setCheckId(String checkId) {
@@ -95,6 +112,22 @@ public class DescribeCostCheckAdvicesShrinkRequest extends TeaModel {
     }
     public String getSeverity() {
         return this.severity;
+    }
+
+    public DescribeCostCheckAdvicesShrinkRequest setTagKeysShrink(String tagKeysShrink) {
+        this.tagKeysShrink = tagKeysShrink;
+        return this;
+    }
+    public String getTagKeysShrink() {
+        return this.tagKeysShrink;
+    }
+
+    public DescribeCostCheckAdvicesShrinkRequest setTagValuesShrink(String tagValuesShrink) {
+        this.tagValuesShrink = tagValuesShrink;
+        return this;
+    }
+    public String getTagValuesShrink() {
+        return this.tagValuesShrink;
     }
 
 }
