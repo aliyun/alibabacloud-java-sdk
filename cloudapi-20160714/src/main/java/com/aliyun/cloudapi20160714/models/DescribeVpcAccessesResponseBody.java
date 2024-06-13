@@ -81,13 +81,13 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -148,7 +148,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
+         * <p>The ID of an Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -166,13 +166,13 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags tags;
@@ -184,7 +184,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         public String vpcAccessId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

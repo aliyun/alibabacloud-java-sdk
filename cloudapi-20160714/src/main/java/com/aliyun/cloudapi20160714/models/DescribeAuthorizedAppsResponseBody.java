@@ -79,7 +79,59 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo self = new DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag extends TeaModel {
+        @NameInMap("TagInfo")
+        public java.util.List<DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo> tagInfo;
+
+        public static DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag self = new DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag setTagInfo(java.util.List<DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo> tagInfo) {
+            this.tagInfo = tagInfo;
+            return this;
+        }
+        public java.util.List<DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTagTagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+    }
+
     public static class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp extends TeaModel {
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("AppDescription")
         public String appDescription;
 
@@ -90,13 +142,13 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         public Long appId;
 
         /**
-         * <p>The name of the app.</p>
+         * <p>The application name</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The name of the app.</p>
+         * <p>The application name.</p>
          */
         @NameInMap("AuthVaildTime")
         public String authVaildTime;
@@ -125,23 +177,30 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         /**
          * <p>The authorizer. Valid values:</p>
          * <br>
-         * <p>*   **PROVIDER: API owner**</p>
-         * <p>*   **CONSUMER: API caller**</p>
+         * <p>*   **PROVIDER**: API owner</p>
+         * <p>*   **CONSUMER**: API caller</p>
          */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The environment alias.</p>
+         */
         @NameInMap("StageAlias")
         public String stageAlias;
 
         /**
-         * <p>The name of the runtime environment. Valid values:</p>
+         * <p>The environment to which the API is published. Valid values:</p>
          * <br>
-         * <p>*   **RELEASE**</p>
-         * <p>*   **TEST**</p>
+         * <p>*   **RELEASE**: the production environment</p>
+         * <p>*   **PRE**: the staging environment</p>
+         * <p>*   **TEST**: the test environment</p>
          */
         @NameInMap("StageName")
         public String stageName;
+
+        @NameInMap("Tag")
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag tag;
 
         public static DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp build(java.util.Map<String, ?> map) throws Exception {
             DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp self = new DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp();
@@ -226,6 +285,14 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
         public String getStageName() {
             return this.stageName;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setTag(DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag tag) {
+            this.tag = tag;
+            return this;
+        }
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedAppTag getTag() {
+            return this.tag;
         }
 
     }

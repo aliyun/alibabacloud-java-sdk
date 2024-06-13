@@ -52,10 +52,11 @@ public class DescribeAuthorizedAppsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
+     * <p>The environment. Valid values:</p>
      * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
+     * <p>*   **RELEASE**: the production environment</p>
+     * <p>*   **PRE**: the staging environment</p>
+     * <p>*   **TEST**: the test environment</p>
      */
     @NameInMap("StageName")
     public String stageName;

@@ -4,31 +4,58 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginApisRequest extends TeaModel {
+    /**
+     * <p>The ID of the API.</p>
+     */
     @NameInMap("ApiId")
     public String apiId;
 
+    /**
+     * <p>The name of the API.</p>
+     */
     @NameInMap("ApiName")
     public String apiName;
 
+    /**
+     * <p>The description of the API.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the API group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The request HTTP method of the API.</p>
+     */
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <p>Default value:10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request path of the API.</p>
+     */
     @NameInMap("Path")
     public String path;
 
     /**
+     * <p>The ID of the gateway plug-in.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PluginId")

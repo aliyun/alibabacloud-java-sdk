@@ -228,6 +228,9 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("SystemParameters")
     public DescribeApiResponseBodySystemParameters systemParameters;
 
+    /**
+     * <p>Tag List.</p>
+     */
     @NameInMap("TagList")
     public DescribeApiResponseBodyTagList tagList;
 
@@ -1156,7 +1159,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String docShow;
 
         /**
-         * <p>The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
+         * <p>The hash values that are supported when **ParameterType** is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
@@ -1174,25 +1177,25 @@ public class DescribeApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The maximum length of the parameter value if the **ParameterType** parameter is set to String.</p>
+         * <p>The maximum parameter length when ParameterType is set to String.</p>
          */
         @NameInMap("MaxLength")
         public Long maxLength;
 
         /**
-         * <p>The maximum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.</p>
+         * <p>The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
          */
         @NameInMap("MaxValue")
         public Long maxValue;
 
         /**
-         * <p>The minimum length of the parameter value if the **ParameterType** parameter is set to String.</p>
+         * <p>The minimum parameter length when ParameterType is set to String.</p>
          */
         @NameInMap("MinLength")
         public Long minLength;
 
         /**
-         * <p>The minimum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.</p>
+         * <p>The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.</p>
          */
         @NameInMap("MinValue")
         public Long minValue;
@@ -1204,7 +1207,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String parameterType;
 
         /**
-         * <p>The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.</p>
+         * <p>The regular expression that is used for parameter validation when ParameterType is set to String.</p>
          */
         @NameInMap("RegularExpression")
         public String regularExpression;
@@ -1623,7 +1626,7 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodyServiceConfigMockHeadersMockHeader extends TeaModel {
         /**
-         * <p>The name of the HTTP header.</p>
+         * <p>The HTTP header.</p>
          */
         @NameInMap("HeaderName")
         public String headerName;
@@ -2150,7 +2153,7 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodyServiceParametersMapServiceParameterMap extends TeaModel {
         /**
-         * <p>The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.</p>
+         * <p>The corresponding frontend parameter name. The value must be contained in RequestParametersObject and match RequestParam.ApiParameterName.</p>
          */
         @NameInMap("RequestParameterName")
         public String requestParameterName;
@@ -2223,7 +2226,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The name of the system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.</p>
+         * <p>The system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -2301,9 +2304,15 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyTagListTag extends TeaModel {
+        /**
+         * <p>Label key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>Label value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

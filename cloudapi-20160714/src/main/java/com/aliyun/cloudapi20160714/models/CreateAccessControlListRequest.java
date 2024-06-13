@@ -13,7 +13,10 @@ public class CreateAccessControlListRequest extends TeaModel {
     public String aclName;
 
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The IP version of the Classic Load Balancer (CLB) instance with which the ACL is associated. Valid values:</p>
+     * <br>
+     * <p>*   **ipv4**</p>
+     * <p>*   **ipv6**</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
