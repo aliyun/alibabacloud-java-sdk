@@ -184,11 +184,17 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @NameInMap("FlowLogName")
         public String flowLogName;
 
+        @NameInMap("FlowLogVersion")
+        public String flowLogVersion;
+
         /**
          * <p>The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.</p>
          */
         @NameInMap("Interval")
         public Long interval;
+
+        @NameInMap("LogFormatString")
+        public String logFormatString;
 
         /**
          * <p>The name of the Logstore where the flow log is stored.</p>
@@ -228,6 +234,9 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
          */
         @NameInMap("TransitRouterAttachmentId")
         public String transitRouterAttachmentId;
+
+        @NameInMap("TransitRouterId")
+        public String transitRouterId;
 
         public static DescribeFlowlogsResponseBodyFlowLogsFlowLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowlogsResponseBodyFlowLogsFlowLog self = new DescribeFlowlogsResponseBodyFlowLogsFlowLog();
@@ -274,12 +283,28 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.flowLogName;
         }
 
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setFlowLogVersion(String flowLogVersion) {
+            this.flowLogVersion = flowLogVersion;
+            return this;
+        }
+        public String getFlowLogVersion() {
+            return this.flowLogVersion;
+        }
+
         public DescribeFlowlogsResponseBodyFlowLogsFlowLog setInterval(Long interval) {
             this.interval = interval;
             return this;
         }
         public Long getInterval() {
             return this.interval;
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setLogFormatString(String logFormatString) {
+            this.logFormatString = logFormatString;
+            return this;
+        }
+        public String getLogFormatString() {
+            return this.logFormatString;
         }
 
         public DescribeFlowlogsResponseBodyFlowLogsFlowLog setLogStoreName(String logStoreName) {
@@ -328,6 +353,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
         public String getTransitRouterAttachmentId() {
             return this.transitRouterAttachmentId;
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setTransitRouterId(String transitRouterId) {
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+        public String getTransitRouterId() {
+            return this.transitRouterId;
         }
 
     }
