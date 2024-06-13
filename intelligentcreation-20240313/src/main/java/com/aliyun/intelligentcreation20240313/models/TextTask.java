@@ -4,6 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class TextTask extends TeaModel {
+    @NameInMap("agentId")
+    public String agentId;
+
+    @NameInMap("agentName")
+    public String agentName;
+
     @NameInMap("contentRequirement")
     public String contentRequirement;
 
@@ -55,6 +61,9 @@ public class TextTask extends TeaModel {
     @NameInMap("textTaskStatus")
     public String textTaskStatus;
 
+    @NameInMap("texts")
+    public Text texts;
+
     @NameInMap("theme")
     public String theme;
 
@@ -64,6 +73,22 @@ public class TextTask extends TeaModel {
     public static TextTask build(java.util.Map<String, ?> map) throws Exception {
         TextTask self = new TextTask();
         return TeaModel.build(map, self);
+    }
+
+    public TextTask setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    public TextTask setAgentName(String agentName) {
+        this.agentName = agentName;
+        return this;
+    }
+    public String getAgentName() {
+        return this.agentName;
     }
 
     public TextTask setContentRequirement(String contentRequirement) {
@@ -176,6 +201,14 @@ public class TextTask extends TeaModel {
     }
     public String getTextTaskStatus() {
         return this.textTaskStatus;
+    }
+
+    public TextTask setTexts(Text texts) {
+        this.texts = texts;
+        return this;
+    }
+    public Text getTexts() {
+        return this.texts;
     }
 
     public TextTask setTheme(String theme) {

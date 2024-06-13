@@ -4,6 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class Text extends TeaModel {
+    @NameInMap("agentId")
+    public String agentId;
+
+    @NameInMap("agentName")
+    public String agentName;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -73,6 +79,22 @@ public class Text extends TeaModel {
     public static Text build(java.util.Map<String, ?> map) throws Exception {
         Text self = new Text();
         return TeaModel.build(map, self);
+    }
+
+    public Text setAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    public Text setAgentName(String agentName) {
+        this.agentName = agentName;
+        return this;
+    }
+    public String getAgentName() {
+        return this.agentName;
     }
 
     public Text setDesc(String desc) {
