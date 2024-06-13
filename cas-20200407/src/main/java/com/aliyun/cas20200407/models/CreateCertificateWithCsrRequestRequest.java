@@ -5,23 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     /**
-     * <p>The content of the existing CSR file.\</p>
-     * <p>The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](~~42218~~) You can also create a CSR in the [Certificate Management Service console](https://yundunnext.console.aliyun.com/?\&p=cas). For more information, see [Create a CSR](~~313297~~).\</p>
+     * <p>The content of the existing CSR file.\\</p>
+     * <p>The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](https://help.aliyun.com/document_detail/42218.html) You can also create a CSR in the [Certificate Management Service console](https://yundunnext.console.aliyun.com/?\\&p=cas). For more information, see [Create a CSR](https://help.aliyun.com/document_detail/313297.html).\\</p>
      * <p>A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.</p>
      * <br>
      * <p>>  The **CN** field in the CSR file specifies the domain name that is bound to the certificate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Csr")
     public String csr;
 
     /**
      * <p>The contact email address of the applicant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The phone number of the applicant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Phone")
     public String phone;
@@ -42,6 +48,8 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
 
     /**
      * <p>The name of the applicant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;
@@ -52,7 +60,9 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
      * <p>*   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</p>
      * <p>*   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</p>
      * <br>
-     * <p>For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).</p>
+     * <p>For more information about the verification methods, see [Verify the ownership of a domain name](https://help.aliyun.com/document_detail/48016.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ValidateType")
     public String validateType;

@@ -4,15 +4,27 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class SignRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MessageType")
     public String messageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SigningAlgorithm")
     public String signingAlgorithm;
 

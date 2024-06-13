@@ -10,6 +10,9 @@ public class ListWorkerResourceRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 

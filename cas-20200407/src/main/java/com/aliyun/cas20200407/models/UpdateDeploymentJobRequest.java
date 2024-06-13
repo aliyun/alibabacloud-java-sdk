@@ -10,6 +10,9 @@ public class UpdateDeploymentJobRequest extends TeaModel {
     @NameInMap("ContactIds")
     public String contactIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 

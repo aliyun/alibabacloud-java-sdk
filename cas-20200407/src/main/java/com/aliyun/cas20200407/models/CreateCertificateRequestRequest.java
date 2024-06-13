@@ -8,18 +8,24 @@ public class CreateCertificateRequestRequest extends TeaModel {
      * <p>The domain name that you want to bind to the certificate. You can specify only one domain name.</p>
      * <br>
      * <p>> The domain name must match the certificate specifications that you specify for the **ProductCode** parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as `*.aliyundoc.com` for this parameter.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The email address of the applicant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The phone number of the applicant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Phone")
     public String phone;
@@ -40,6 +46,8 @@ public class CreateCertificateRequestRequest extends TeaModel {
 
     /**
      * <p>The name of the applicant.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Username")
     public String username;
@@ -50,7 +58,9 @@ public class CreateCertificateRequestRequest extends TeaModel {
      * <p>*   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</p>
      * <p>*   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</p>
      * <br>
-     * <p>For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).</p>
+     * <p>For more information about the verification methods, see [Verify the ownership of a domain name](https://help.aliyun.com/document_detail/48016.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ValidateType")
     public String validateType;

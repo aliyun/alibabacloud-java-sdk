@@ -4,18 +4,33 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CertIds")
     public String certIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactIds")
     public String contactIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIds;
 

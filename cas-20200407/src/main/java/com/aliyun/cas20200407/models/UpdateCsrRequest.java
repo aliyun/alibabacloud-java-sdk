@@ -6,10 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateCsrRequest extends TeaModel {
     /**
      * <p>CSR ID。</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CsrId")
     public Long csrId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Key")
     public String key;
 

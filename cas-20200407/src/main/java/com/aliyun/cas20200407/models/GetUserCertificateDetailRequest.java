@@ -12,6 +12,8 @@ public class GetUserCertificateDetailRequest extends TeaModel {
 
     /**
      * <p>The ID of the certificate.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertId")
     public Long certId;

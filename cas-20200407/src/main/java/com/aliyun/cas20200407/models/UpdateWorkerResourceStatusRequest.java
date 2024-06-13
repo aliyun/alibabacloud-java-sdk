@@ -4,12 +4,21 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkerResourceStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkerId")
     public Long workerId;
 

@@ -40,6 +40,9 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 

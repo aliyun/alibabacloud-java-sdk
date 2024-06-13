@@ -4,6 +4,9 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentJobResourceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 

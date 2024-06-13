@@ -4,15 +4,24 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class EncryptRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
     @NameInMap("MessageType")
     public String messageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Plaintext")
     public String plaintext;
 

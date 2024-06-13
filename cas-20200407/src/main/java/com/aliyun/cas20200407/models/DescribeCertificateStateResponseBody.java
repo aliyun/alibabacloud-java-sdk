@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCertificateStateResponseBody extends TeaModel {
     /**
-     * <p>The content of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see [What formats are used for mainstream digital certificates?](~~42214~~)</p>
+     * <p>The content of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see [What formats are used for mainstream digital certificates?](https://help.aliyun.com/document_detail/42214.html)</p>
      * <br>
      * <p>> This parameter is returned only when the value of the **Type** parameter is **certificate**. The value certificate indicates that the certificate is issued.</p>
      */
@@ -15,7 +15,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     /**
      * <p>The content that you need to write to the newly created file when you use the file verification method.</p>
      * <br>
-     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain\_verify** and the value of the **ValidateType** parameter is **FILE**. The value domain\_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</p>
+     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain_verify** and the value of the **ValidateType** parameter is **FILE**. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</p>
      */
     @NameInMap("Content")
     public String content;
@@ -23,13 +23,13 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     /**
      * <p>The domain name to be verified when you use the file verification method. You must connect to the DNS server of the domain name and create a file on the server. The file is specified by the **Uri** parameter.</p>
      * <br>
-     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain\_verify** and the value of the **ValidateType** parameter is **FILE**. The value domain\_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</p>
+     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain_verify** and the value of the **ValidateType** parameter is **FILE**. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The private key of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see [What formats are used for mainstream digital certificates?](~~42214~~)</p>
+     * <p>The private key of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see [What formats are used for mainstream digital certificates?](https://help.aliyun.com/document_detail/42214.html)</p>
      * <br>
      * <p>> This parameter is returned only when the value of the **Type** parameter is **certificate**. The value certificate indicates that the certificate is issued.</p>
      */
@@ -39,7 +39,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     /**
      * <p>The DNS record that you need to manage when you use the DNS verification method.</p>
      * <br>
-     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain\_verify** and the value of the **ValidateType** parameter is **DNS**. The value domain\_verify indicates that the verification of the domain name ownership is not complete, and the value DNS indicates that the DNS verification method is used.</p>
+     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain_verify** and the value of the **ValidateType** parameter is **DNS**. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value DNS indicates that the DNS verification method is used.</p>
      */
     @NameInMap("RecordDomain")
     public String recordDomain;
@@ -50,7 +50,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
      * <p>*   **TXT**</p>
      * <p>*   **CNAME**</p>
      * <br>
-     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain\_verify** and the value of the **ValidateType** parameter is **DNS**. The value domain\_verify indicates that the verification of the domain name ownership is not complete.</p>
+     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain_verify** and the value of the **ValidateType** parameter is **DNS**. The value domain_verify indicates that the verification of the domain name ownership is not complete.</p>
      */
     @NameInMap("RecordType")
     public String recordType;
@@ -58,7 +58,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     /**
      * <p>You need to add a TXT record to the DNS records only when you use the DNS verification method.</p>
      * <br>
-     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain\_verify** and the value of the **ValidateType** parameter is **DNS**. The value domain\_verify indicates that the verification of the domain name ownership is not complete, and the value DNS indicates that the DNS verification method is used.</p>
+     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain_verify** and the value of the **ValidateType** parameter is **DNS**. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value DNS indicates that the DNS verification method is used.</p>
      */
     @NameInMap("RecordValue")
     public String recordValue;
@@ -80,7 +80,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
      * <br>
      * <p>*   **verify_fail**: **review failed**, which indicates that the certificate application failed to be reviewed.</p>
      * <br>
-     * <p>    > If a certificate application fails to be reviewed, the information that you specified in the certificate application may be incorrect. We recommend that you call the [DeleteCertificateRequest](~~455294~~) operation to delete the certificate application order and resubmit a certificate application. After the order is deleted, the quota that is consumed for the order is released.</p>
+     * <p>    > If a certificate application fails to be reviewed, the information that you specified in the certificate application may be incorrect. We recommend that you call the [DeleteCertificateRequest](https://help.aliyun.com/document_detail/455294.html) operation to delete the certificate application order and resubmit a certificate application. After the order is deleted, the quota that is consumed for the order is released.</p>
      * <br>
      * <p>*   **certificate**: **issued**, which indicates that the certificate is issued.</p>
      * <p>*   **payed**: **pending application**, which indicates that you have not submitted a certificate application.</p>
@@ -92,7 +92,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     /**
      * <p>The file that you need to create on the DNS server when you use the file verification method. **The value of this parameter contains the file path and file name.**</p>
      * <br>
-     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain\_verify** and the value of the **ValidateType** parameter is **FILE**. The value domain\_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</p>
+     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain_verify** and the value of the **ValidateType** parameter is **FILE**. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</p>
      */
     @NameInMap("Uri")
     public String uri;
@@ -103,7 +103,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
      * <p>*   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name.</p>
      * <p>*   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server.</p>
      * <br>
-     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain\_verify**. The value domain\_verify indicates that the verification of the domain name ownership is not complete.</p>
+     * <p>> This parameter is returned only when the value of the **Type** parameter is **domain_verify**. The value domain_verify indicates that the verification of the domain name ownership is not complete.</p>
      */
     @NameInMap("ValidateType")
     public String validateType;

@@ -7,7 +7,7 @@ public class CreateCertificateWithCsrRequestResponseBody extends TeaModel {
     /**
      * <p>The ID of the certificate application order.</p>
      * <br>
-     * <p>>  You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](~~164111~~).</p>
+     * <p>>  You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](https://help.aliyun.com/document_detail/164111.html).</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
