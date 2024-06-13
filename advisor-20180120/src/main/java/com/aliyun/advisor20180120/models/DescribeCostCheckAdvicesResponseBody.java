@@ -95,11 +95,20 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
     }
 
     public static class DescribeCostCheckAdvicesResponseBodyDataAdviceList extends TeaModel {
+        @NameInMap("AccountFolderId")
+        public String accountFolderId;
+
+        @NameInMap("AccountFolderName")
+        public String accountFolderName;
+
         @NameInMap("AliyunId")
         public Long aliyunId;
 
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Email")
+        public String email;
 
         @NameInMap("EndTime")
         public Long endTime;
@@ -142,6 +151,22 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCostCheckAdvicesResponseBodyDataAdviceList setAccountFolderId(String accountFolderId) {
+            this.accountFolderId = accountFolderId;
+            return this;
+        }
+        public String getAccountFolderId() {
+            return this.accountFolderId;
+        }
+
+        public DescribeCostCheckAdvicesResponseBodyDataAdviceList setAccountFolderName(String accountFolderName) {
+            this.accountFolderName = accountFolderName;
+            return this;
+        }
+        public String getAccountFolderName() {
+            return this.accountFolderName;
+        }
+
         public DescribeCostCheckAdvicesResponseBodyDataAdviceList setAliyunId(Long aliyunId) {
             this.aliyunId = aliyunId;
             return this;
@@ -156,6 +181,14 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DescribeCostCheckAdvicesResponseBodyDataAdviceList setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public DescribeCostCheckAdvicesResponseBodyDataAdviceList setEndTime(Long endTime) {

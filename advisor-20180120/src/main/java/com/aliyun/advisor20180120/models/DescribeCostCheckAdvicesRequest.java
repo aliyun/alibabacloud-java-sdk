@@ -4,6 +4,9 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCostCheckAdvicesRequest extends TeaModel {
+    @NameInMap("AssumeAliyunIdList")
+    public java.util.List<Long> assumeAliyunIdList;
+
     @NameInMap("CheckId")
     public String checkId;
 
@@ -28,9 +31,23 @@ public class DescribeCostCheckAdvicesRequest extends TeaModel {
     @NameInMap("Severity")
     public String severity;
 
+    @NameInMap("TagKeys")
+    public java.util.List<String> tagKeys;
+
+    @NameInMap("TagValues")
+    public java.util.List<String> tagValues;
+
     public static DescribeCostCheckAdvicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCostCheckAdvicesRequest self = new DescribeCostCheckAdvicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCostCheckAdvicesRequest setAssumeAliyunIdList(java.util.List<Long> assumeAliyunIdList) {
+        this.assumeAliyunIdList = assumeAliyunIdList;
+        return this;
+    }
+    public java.util.List<Long> getAssumeAliyunIdList() {
+        return this.assumeAliyunIdList;
     }
 
     public DescribeCostCheckAdvicesRequest setCheckId(String checkId) {
@@ -95,6 +112,22 @@ public class DescribeCostCheckAdvicesRequest extends TeaModel {
     }
     public String getSeverity() {
         return this.severity;
+    }
+
+    public DescribeCostCheckAdvicesRequest setTagKeys(java.util.List<String> tagKeys) {
+        this.tagKeys = tagKeys;
+        return this;
+    }
+    public java.util.List<String> getTagKeys() {
+        return this.tagKeys;
+    }
+
+    public DescribeCostCheckAdvicesRequest setTagValues(java.util.List<String> tagValues) {
+        this.tagValues = tagValues;
+        return this;
+    }
+    public java.util.List<String> getTagValues() {
+        return this.tagValues;
     }
 
 }
