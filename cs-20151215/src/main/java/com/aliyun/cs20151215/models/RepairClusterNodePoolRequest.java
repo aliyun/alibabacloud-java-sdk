@@ -4,11 +4,14 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to allow node restart.</p>
+     */
     @NameInMap("auto_restart")
     public Boolean autoRestart;
 
     /**
-     * <p>The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.</p>
+     * <p>The nodes that you want to repair. If you do not specify nodes, all nodes in the node pool are repaired.</p>
      */
     @NameInMap("nodes")
     public java.util.List<String> nodes;

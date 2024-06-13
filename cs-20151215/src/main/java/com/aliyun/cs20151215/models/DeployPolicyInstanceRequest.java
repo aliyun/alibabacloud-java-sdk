@@ -14,13 +14,13 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     public String action;
 
     /**
-     * <p>The applicable scope of the policy instance. If you leave this parameter empty, the policy instance is applicable to all namespaces.</p>
+     * <p>The namespaces to which the policy applies. If you leave this parameter empty, the policy is applicable to all namespaces of the cluster.</p>
      */
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The parameters of the policy instance.</p>
+     * <p>The parameter settings of the policy. For more information about the parameters supported by each policy, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;

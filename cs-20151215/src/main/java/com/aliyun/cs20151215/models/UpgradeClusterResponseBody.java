@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterResponseBody extends TeaModel {
+    /**
+     * <p>集群ID。</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <p>任务ID。</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

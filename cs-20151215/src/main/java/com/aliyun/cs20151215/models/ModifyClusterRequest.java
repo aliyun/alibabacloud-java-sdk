@@ -14,16 +14,16 @@ public class ModifyClusterRequest extends TeaModel {
     public ModifyClusterRequestApiServerCustomCertSans apiServerCustomCertSans;
 
     /**
-     * <p>Specifies whether to associate an elastic IP address (EIP) with the cluster API server. This enables Internet access for the cluster. Valid values:</p>
+     * <p>Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used for accessing the API server over the Internet. Valid values:</p>
      * <br>
-     * <p>*   `true`: associates an EIP with the cluster API server.</p>
-     * <p>*   `false`: does not associate an EIP with the cluster API server.</p>
+     * <p>*   `true`: associates an EIP with the cluster.</p>
+     * <p>*   `false`: does not associate an EIP with the cluster.</p>
      */
     @NameInMap("api_server_eip")
     public Boolean apiServerEip;
 
     /**
-     * <p>The ID of the EIP that you want to associate with the cluster API server. The parameter takes effect only if `api_server_eip` is set to `true`.</p>
+     * <p>The ID of the EIP that you want to associate with the API server of the cluster. This parameter takes effect when `api_server_eip` is set to `true`.</p>
      */
     @NameInMap("api_server_eip_id")
     public String apiServerEipId;
@@ -31,27 +31,27 @@ public class ModifyClusterRequest extends TeaModel {
     /**
      * <p>The cluster name.</p>
      * <br>
-     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+     * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (_). The cluster name cannot start with a hyphen (-).</p>
      */
     @NameInMap("cluster_name")
     public String clusterName;
 
     /**
-     * <p>Specifies whether to enable deletion protection for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</p>
+     * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
      * <br>
-     * <p>*   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</p>
-     * <p>*   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</p>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      * <br>
-     * <p>Default value: `false`.</p>
+     * <p>Default value: `false`</p>
      */
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
     /**
-     * <p>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature. Valid values:</p>
+     * <p>Specifies whether to enable the RRSA feature. Valid values:</p>
      * <br>
-     * <p>*   `true`: enables the RRSA feature.</p>
-     * <p>*   `false`: disables the RRSA feature.</p>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      */
     @NameInMap("enable_rrsa")
     public Boolean enableRrsa;
@@ -59,33 +59,33 @@ public class ModifyClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to remap the test domain name of the cluster. Valid values:</p>
      * <br>
-     * <p>*   `true`: remaps the test domain name of the cluster.</p>
-     * <p>*   `false`: does not remap the test domain name of the cluster.</p>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      * <br>
-     * <p>Default value: `false`.</p>
+     * <p>Default value: `false`</p>
      */
     @NameInMap("ingress_domain_rebinding")
     public Boolean ingressDomainRebinding;
 
     /**
-     * <p>The ID of the Server Load Balancer (SLB) instance that is associated with the cluster.</p>
+     * <p>The ID of the Server Load Balancer (SLB) instance of the cluster to be modified.</p>
      */
     @NameInMap("ingress_loadbalancer_id")
     public String ingressLoadbalancerId;
 
     /**
-     * <p>Specifies whether to enable deletion protection for the instances in the cluster. If deletion protection is enabled, the instances in the cluster cannot be deleted in the console or by calling the API. Valid values:</p>
+     * <p>Specifies whether to enable instance deletion protection. If this option is enabled, the instance cannot be deleted in the console or by calling API operations. Valid values:</p>
      * <br>
-     * <p>*   `true`: enables deletion protection for the instances in the cluster. You cannot delete the instances in the cluster in the console or by calling the API.</p>
-     * <p>*   `false`: disables deletion protection for the instances in the cluster. You can delete the instances in the cluster in the console or by calling the API.</p>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      * <br>
-     * <p>Default value: `false`.</p>
+     * <p>Default value: `false`</p>
      */
     @NameInMap("instance_deletion_protection")
     public Boolean instanceDeletionProtection;
 
     /**
-     * <p>The maintenance window of the cluster. This parameter takes effect only in ACK Pro clusters.</p>
+     * <p>The cluster maintenance window. This feature takes effect only for managed Pro clusters.</p>
      */
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
@@ -94,13 +94,13 @@ public class ModifyClusterRequest extends TeaModel {
     public ModifyClusterRequestOperationPolicy operationPolicy;
 
     /**
-     * <p>The ID of the resource group to which the cluster belongs.</p>
+     * <p>The ID of the cluster resource group.</p>
      */
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
     /**
-     * <p>系统事件存储配置。</p>
+     * <p>The storage configurations of system events.</p>
      */
     @NameInMap("system_events_logging")
     public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
@@ -303,13 +303,13 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestSystemEventsLogging extends TeaModel {
         /**
-         * <p>是否开启系统事件存储。</p>
+         * <p>Specifies whether to enable system event storage.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>系统事件存储的LogProject名称。</p>
+         * <p>The name of the LogProject that stores system events.</p>
          */
         @NameInMap("logging_project")
         public String loggingProject;

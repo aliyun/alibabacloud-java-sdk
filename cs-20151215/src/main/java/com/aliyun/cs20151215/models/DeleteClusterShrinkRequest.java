@@ -4,14 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterShrinkRequest extends TeaModel {
+    /**
+     * <p>The type of cluster resource that you want to delete or retain.</p>
+     */
     @NameInMap("delete_options")
     public String deleteOptionsShrink;
 
     /**
-     * <p>Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.</p>
+     * <p>Specifies whether to retain the Server Load Balancer (SLB) instances that are created by the cluster.</p>
      * <br>
-     * <p>*   `true`: retains the SLB resources that are created by the cluster.</p>
-     * <p>*   `false`: does not retain the SLB resources that are created by the cluster.</p>
+     * <p>*   `true`: retains the SLB instances that are created by the cluster.</p>
+     * <p>*   `false`: does not retain the SLB instances that are created by the cluster.</p>
      * <br>
      * <p>Default value: `false`.</p>
      */

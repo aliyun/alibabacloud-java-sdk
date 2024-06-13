@@ -1190,6 +1190,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        @NameInMap("instance_patterns")
+        public java.util.List<InstancePatterns> instancePatterns;
+
         /**
          * <p>The instance types of nodes in the node pool. A node that is added to the node pool is assigned one of the specified instance types that is the most appropriate. You can specify 1 to 10 instance types.</p>
          * <br>
@@ -1562,6 +1565,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setInstancePatterns(java.util.List<InstancePatterns> instancePatterns) {
+            this.instancePatterns = instancePatterns;
+            return this;
+        }
+        public java.util.List<InstancePatterns> getInstancePatterns() {
+            return this.instancePatterns;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setInstanceTypes(java.util.List<String> instanceTypes) {

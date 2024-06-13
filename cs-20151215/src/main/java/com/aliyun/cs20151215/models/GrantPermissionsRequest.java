@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantPermissionsRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The request parameters.</p>
      */
     @NameInMap("body")
     public java.util.List<GrantPermissionsRequestBody> body;
@@ -25,9 +25,9 @@ public class GrantPermissionsRequest extends TeaModel {
 
     public static class GrantPermissionsRequestBody extends TeaModel {
         /**
-         * <p>The ID of the cluster that you want to manage.</p>
+         * <p>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</p>
          * <br>
-         * <p>*   When the `role_type` parameter is set to `all-clusters`, this parameter is set to an empty string.</p>
+         * <p>*   Set this parameter to an empty string if `role_type` is set to `all-clusters`.</p>
          * <br>
          * <p>This parameter is required.</p>
          */
@@ -35,31 +35,31 @@ public class GrantPermissionsRequest extends TeaModel {
         public String cluster;
 
         /**
-         * <p>Specifies whether to perform a custom authorization. To perform a custom authorization, set `role_name` to a custom cluster role.</p>
+         * <p>Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set `role_name` to the name of the custom role.</p>
          */
         @NameInMap("is_custom")
         public Boolean isCustom;
 
         /**
-         * <p>Specifies whether the permissions are granted to a RAM role.</p>
+         * <p>Specifies whether to use a RAM role to grant permissions.</p>
          */
         @NameInMap("is_ram_role")
         public Boolean isRamRole;
 
         /**
-         * <p>The namespace to which the permissions are scoped. This parameter is required only if you set role_type to namespace.</p>
+         * <p>The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.</p>
          */
         @NameInMap("namespace")
         public String namespace;
 
         /**
-         * <p>The predefined role name. Valid values:</p>
+         * <p>The predefined role. Valid values:</p>
          * <br>
          * <p>*   `admin`: administrator</p>
          * <p>*   `ops`: O\\&M engineer</p>
          * <p>*   `dev`: developer</p>
          * <p>*   `restricted`: restricted user</p>
-         * <p>*   The custom cluster role.</p>
+         * <p>*   Custom role</p>
          * <br>
          * <p>This parameter is required.</p>
          */
@@ -69,9 +69,9 @@ public class GrantPermissionsRequest extends TeaModel {
         /**
          * <p>The authorization type. Valid values:</p>
          * <br>
-         * <p>*   `cluster`: indicates that the permissions are scoped to a cluster.</p>
-         * <p>*   `namespace`: specifies that the permissions are scoped to a namespace of a cluster.</p>
-         * <p>*   `all-clusters`: specifies that the permissions are scoped to all clusters.</p>
+         * <p>*   `cluster`: authorizes the RAM user or RAM role to manage the specified clusters.</p>
+         * <p>*   `namespace`: authorizes the RAM user or RAM role to manage the specified namepsaces.</p>
+         * <p>*   `all-clusters`: authorizes the RAM user or RAM role to manage all clusters.</p>
          * <br>
          * <p>This parameter is required.</p>
          */

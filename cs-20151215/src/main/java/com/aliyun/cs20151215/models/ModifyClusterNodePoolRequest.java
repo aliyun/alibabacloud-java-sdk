@@ -906,6 +906,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        @NameInMap("instance_patterns")
+        public java.util.List<InstancePatterns> instancePatterns;
+
         /**
          * <p>A list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The instance type that is used to create the node varies based on the actual instance stock.</p>
          */
@@ -1201,6 +1204,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public ModifyClusterNodePoolRequestScalingGroup setInstancePatterns(java.util.List<InstancePatterns> instancePatterns) {
+            this.instancePatterns = instancePatterns;
+            return this;
+        }
+        public java.util.List<InstancePatterns> getInstancePatterns() {
+            return this.instancePatterns;
         }
 
         public ModifyClusterNodePoolRequestScalingGroup setInstanceTypes(java.util.List<String> instanceTypes) {

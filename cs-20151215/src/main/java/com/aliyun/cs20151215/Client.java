@@ -153,7 +153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the AttachInstancesToNodePool operation to add existing nodes to a node pool.
+     * @summary Adds existing nodes to a specific node pool. You can add existing ECS instances to a specific node pool in a Container Service for Kubernetes (ACK) cluster as worker nodes. You can also add removed worker nodes back to the node pool.
      *
      * @param request AttachInstancesToNodePoolRequest
      * @param headers map
@@ -198,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the AttachInstancesToNodePool operation to add existing nodes to a node pool.
+     * @summary Adds existing nodes to a specific node pool. You can add existing ECS instances to a specific node pool in a Container Service for Kubernetes (ACK) cluster as worker nodes. You can also add removed worker nodes back to the node pool.
      *
      * @param request AttachInstancesToNodePoolRequest
      * @return AttachInstancesToNodePoolResponse
@@ -288,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消自动运维执行计划
+     * @summary You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&M plan.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -313,7 +313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消自动运维执行计划
+     * @summary You can call the CancelOperationPlan operation to cancel a pending auto O\\\\\\&M plan.
      *
      * @return CancelOperationPlanResponse
      */
@@ -324,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CancelTask operation to cancel a task.
+     * @summary Cancels the execution of a cluster task.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -349,7 +349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CancelTask operation to cancel a task.
+     * @summary Cancels the execution of a cluster task.
      *
      * @return CancelTaskResponse
      */
@@ -360,6 +360,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CancelWorkflow is deprecated
+     *
      * @summary You can call the CancelWorkflow operation to cancel an ongoing workflow.
      *
      * @param request CancelWorkflowRequest
@@ -367,6 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelWorkflowResponse
      */
+    // Deprecated
     public CancelWorkflowResponse cancelWorkflowWithOptions(String workflowName, CancelWorkflowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -393,11 +396,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CancelWorkflow is deprecated
+     *
      * @summary You can call the CancelWorkflow operation to cancel an ongoing workflow.
      *
      * @param request CancelWorkflowRequest
      * @return CancelWorkflowResponse
      */
+    // Deprecated
     public CancelWorkflowResponse cancelWorkflow(String workflowName, CancelWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1460,7 +1466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DeleteCluster operation to delete a cluster by cluster ID and release all nodes in the cluster.
+     * @summary You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.
      *
      * @param tmpReq DeleteClusterRequest
      * @param headers map
@@ -1515,7 +1521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DeleteCluster operation to delete a cluster by cluster ID and release all nodes in the cluster.
+     * @summary You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.
      *
      * @param request DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -1757,7 +1763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DeleteTemplate operation to delete an orchestration template by template ID.
+     * @summary Deletes the orchestration templates that you no longer need.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1782,7 +1788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DeleteTemplate operation to delete an orchestration template by template ID.
+     * @summary Deletes the orchestration templates that you no longer need.
      *
      * @return DeleteTemplateResponse
      */
@@ -1829,7 +1835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DeployPolicyInstance operation to deploy a policy instance in a cluster.
+     * @summary Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.
      *
      * @param request DeployPolicyInstanceRequest
      * @param headers map
@@ -1870,7 +1876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DeployPolicyInstance operation to deploy a policy instance in a cluster.
+     * @summary Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.
      *
      * @param request DeployPolicyInstanceRequest
      * @return DeployPolicyInstanceResponse
@@ -1882,12 +1888,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DescirbeWorkflow is deprecated
+     *
      * @summary You can call the DescirbeWorkflow operation to query detailed information about a workflow.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescirbeWorkflowResponse
      */
+    // Deprecated
     public DescirbeWorkflowResponse descirbeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1907,10 +1916,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DescirbeWorkflow is deprecated
+     *
      * @summary You can call the DescirbeWorkflow operation to query detailed information about a workflow.
      *
      * @return DescirbeWorkflowResponse
      */
+    // Deprecated
     public DescirbeWorkflowResponse descirbeWorkflow(String workflowName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2820,7 +2832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeClusterVuls operation to query the vulnerability information of a cluster.
+     * @summary Queries the security vulnerability details of a cluster by cluster ID. The details include vulnerability name, vulnerability type, and vulnerability severity. We recommend that you scan your cluster on a regular basis to ensure cluster security.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2845,7 +2857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeClusterVuls operation to query the vulnerability information of a cluster.
+     * @summary Queries the security vulnerability details of a cluster by cluster ID. The details include vulnerability name, vulnerability type, and vulnerability severity. We recommend that you scan your cluster on a regular basis to ensure cluster security.
      *
      * @return DescribeClusterVulsResponse
      */
@@ -3381,7 +3393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribePolicies operation to query a list of policies.
+     * @summary Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3406,7 +3418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribePolicies operation to query a list of policies.
+     * @summary Queries the policies for a Container Service for Kubernetes (ACK) cluster. Container security policies for ACK clusters offer a variety of built-in policies, including cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.
      *
      * @return DescribePoliciesResponse
      */
@@ -3453,7 +3465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribePolicyGovernanceInCluster operation to query information about policies in a Container Service for Kubernetes (ACK) cluster.
+     * @summary Queries the details of policies for a Container Service for Kubernetes (ACK) cluster. For example, you can query the number of multi-level policies that are enabled for the cluster, audit logs of the policies, and denying and alerting information. Container security policies for ACK clusters offer a variety of built-in policies, such as cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3478,7 +3490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribePolicyGovernanceInCluster operation to query information about policies in a Container Service for Kubernetes (ACK) cluster.
+     * @summary Queries the details of policies for a Container Service for Kubernetes (ACK) cluster. For example, you can query the number of multi-level policies that are enabled for the cluster, audit logs of the policies, and denying and alerting information. Container security policies for ACK clusters offer a variety of built-in policies, such as cis-k8s, infra, k8s-general, and PodSecurityPolicy. You can use these policies to ensure the security of containers running in a production environment.
      *
      * @return DescribePolicyGovernanceInClusterResponse
      */
@@ -3574,7 +3586,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can use an Alibaba Cloud account to call the DescribeSubaccountK8sClusterUserConfig operation to obtain the cluster kubeconfig file of a RAM user or RAM role.
+     * @summary 修改资源删除保护配置
+     *
+     * @param request DescribeResourcesDeleteProtectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeResourcesDeleteProtectionResponse
+     */
+    public DescribeResourcesDeleteProtectionResponse describeResourcesDeleteProtectionWithOptions(String ClusterId, String ResourceType, DescribeResourcesDeleteProtectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resources)) {
+            query.put("resources", request.resources);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeResourcesDeleteProtection"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/resources/" + com.aliyun.openapiutil.Client.getEncodeParam(ResourceType) + "/protection"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "array")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourcesDeleteProtectionResponse());
+    }
+
+    /**
+     * @summary 修改资源删除保护配置
+     *
+     * @param request DescribeResourcesDeleteProtectionRequest
+     * @return DescribeResourcesDeleteProtectionResponse
+     */
+    public DescribeResourcesDeleteProtectionResponse describeResourcesDeleteProtection(String ClusterId, String ResourceType, DescribeResourcesDeleteProtectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeResourcesDeleteProtectionWithOptions(ClusterId, ResourceType, request, headers, runtime);
+    }
+
+    /**
+     * @summary Queries or issues the kubeconfig credentials of a Resource Access Management (RAM) user or RAM role of the account. If you are the permission manager of a Container Service for Kubernetes (ACK) cluster, you can issue the kubeconfig credentials to a specific RAM user or RAM role of the account by using the Alibaba Cloud account. The kubeconfig credentials, which are used to connect to the ACK cluster, contain the identity information about the RAM user or RAM role.
      *
      * @description **
      * ****Only Alibaba Cloud accounts can call this API operation.
@@ -3614,7 +3675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can use an Alibaba Cloud account to call the DescribeSubaccountK8sClusterUserConfig operation to obtain the cluster kubeconfig file of a RAM user or RAM role.
+     * @summary Queries or issues the kubeconfig credentials of a Resource Access Management (RAM) user or RAM role of the account. If you are the permission manager of a Container Service for Kubernetes (ACK) cluster, you can issue the kubeconfig credentials to a specific RAM user or RAM role of the account by using the Alibaba Cloud account. The kubeconfig credentials, which are used to connect to the ACK cluster, contain the identity information about the RAM user or RAM role.
      *
      * @description **
      * ****Only Alibaba Cloud accounts can call this API operation.
@@ -3928,12 +3989,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DescribeWorkflows is deprecated
+     *
      * @summary You can call the DescribeWorkflows operation to query all workflows.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWorkflowsResponse
      */
+    // Deprecated
     public DescribeWorkflowsResponse describeWorkflowsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3953,10 +4017,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DescribeWorkflows is deprecated
+     *
      * @summary You can call the DescribeWorkflows operation to query all workflows.
      *
      * @return DescribeWorkflowsResponse
      */
+    // Deprecated
     public DescribeWorkflowsResponse describeWorkflows() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4321,12 +4388,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the GrantPermissions operation to grant a Resource Access Management (RAM) user the permissions to manage Container Service for Kubernetes (ACK) clusters.
+     * @summary Updates the role-based access control (RBAC) permissions of a Resource Access Management (RAM) user or RAM role. By default, you do not have the RBAC permissions on a Container Service for Kubernetes (ACK) cluster if you are not the cluster owner or you are not using an Alibaba Cloud account. You can call this operation to specify the resources that can be accessed, permission scope, and predefined roles. This helps you better manage the access control on resources in ACK clusters.
      *
-     * @description ****
-     * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
-     * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
-     * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+     * @description **Precautions**:
+     * *   Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
+     * *   If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned when you call the operation. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
+     * *   If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.
      *
      * @param request GrantPermissionsRequest
      * @param headers map
@@ -4354,12 +4421,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the GrantPermissions operation to grant a Resource Access Management (RAM) user the permissions to manage Container Service for Kubernetes (ACK) clusters.
+     * @summary Updates the role-based access control (RBAC) permissions of a Resource Access Management (RAM) user or RAM role. By default, you do not have the RBAC permissions on a Container Service for Kubernetes (ACK) cluster if you are not the cluster owner or you are not using an Alibaba Cloud account. You can call this operation to specify the resources that can be accessed, permission scope, and predefined roles. This helps you better manage the access control on resources in ACK clusters.
      *
-     * @description ****
-     * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
-     * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
-     * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+     * @description **Precautions**:
+     * *   Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](https://help.aliyun.com/document_detail/86485.html).
+     * *   If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned when you call the operation. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](https://help.aliyun.com/document_detail/119035.html).
+     * *   If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.
      *
      * @param request GrantPermissionsRequest
      * @return GrantPermissionsResponse
@@ -5097,7 +5164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the ModifyPolicyInstance operation to update policy instances in a Container Service for Kubernetes (ACK) cluster.
+     * @summary Updates a policy in a specific Container Service for Kubernetes (ACK) cluster. You can modify the action of the policy such as alerting or denying and namespaces to which the policy applies.
      *
      * @param request ModifyPolicyInstanceRequest
      * @param headers map
@@ -5142,7 +5209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the ModifyPolicyInstance operation to update policy instances in a Container Service for Kubernetes (ACK) cluster.
+     * @summary Updates a policy in a specific Container Service for Kubernetes (ACK) cluster. You can modify the action of the policy such as alerting or denying and namespaces to which the policy applies.
      *
      * @param request ModifyPolicyInstanceRequest
      * @return ModifyPolicyInstanceResponse
@@ -5469,12 +5536,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI RemoveWorkflow is deprecated
+     *
      * @summary You can call the RemoveWorkflow operation to delete a workflow.
      *
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveWorkflowResponse
      */
+    // Deprecated
     public RemoveWorkflowResponse removeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -5494,10 +5564,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI RemoveWorkflow is deprecated
+     *
      * @summary You can call the RemoveWorkflow operation to delete a workflow.
      *
      * @return RemoveWorkflowResponse
      */
+    // Deprecated
     public RemoveWorkflowResponse removeWorkflow(String workflowName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -5672,7 +5745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the RunClusterCheck operation to initiate cluster checks, such as cluster update prechecks.
+     * @summary Initiates cluster checks such as cluster update checks.
      *
      * @param request RunClusterCheckRequest
      * @param headers map
@@ -5713,7 +5786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the RunClusterCheck operation to initiate cluster checks, such as cluster update prechecks.
+     * @summary Initiates cluster checks such as cluster update checks.
      *
      * @param request RunClusterCheckRequest
      * @return RunClusterCheckResponse
@@ -6105,6 +6178,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI StartWorkflow is deprecated
+     *
      * @summary You can call the StartWorkflow operation to create a workflow.
      *
      * @param request StartWorkflowRequest
@@ -6112,6 +6187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartWorkflowResponse
      */
+    // Deprecated
     public StartWorkflowResponse startWorkflowWithOptions(StartWorkflowRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6210,11 +6286,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI StartWorkflow is deprecated
+     *
      * @summary You can call the StartWorkflow operation to create a workflow.
      *
      * @param request StartWorkflowRequest
      * @return StartWorkflowResponse
      */
+    // Deprecated
     public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -6364,7 +6443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the UnInstallClusterAddons operation to uninstall the components in a cluster by component names.
+     * @summary Uninstalls components that you no longer need from a cluster. You must specify the name of the components and specify whether to release associated Alibaba Cloud resources from the cluster.
      *
      * @param request UnInstallClusterAddonsRequest
      * @param headers map
@@ -6392,7 +6471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the UnInstallClusterAddons operation to uninstall the components in a cluster by component names.
+     * @summary Uninstalls components that you no longer need from a cluster. You must specify the name of the components and specify whether to release associated Alibaba Cloud resources from the cluster.
      *
      * @param request UnInstallClusterAddonsRequest
      * @return UnInstallClusterAddonsResponse
@@ -6619,7 +6698,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the UpdateTemplate operation to update an orchestration template by template ID.
+     * @summary 修改资源删除保护配置
+     *
+     * @param request UpdateResourcesDeleteProtectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateResourcesDeleteProtectionResponse
+     */
+    public UpdateResourcesDeleteProtectionResponse updateResourcesDeleteProtectionWithOptions(String ClusterId, UpdateResourcesDeleteProtectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("resource_type", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resources)) {
+            body.put("resources", request.resources);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateResourcesDeleteProtection"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/resources/protection"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateResourcesDeleteProtectionResponse());
+    }
+
+    /**
+     * @summary 修改资源删除保护配置
+     *
+     * @param request UpdateResourcesDeleteProtectionRequest
+     * @return UpdateResourcesDeleteProtectionResponse
+     */
+    public UpdateResourcesDeleteProtectionResponse updateResourcesDeleteProtection(String ClusterId, UpdateResourcesDeleteProtectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateResourcesDeleteProtectionWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    /**
+     * @summary Updates the configurations of an orchestration template. An orchestration template defines and describes a group of Container Service for Kubernetes (ACK) resources. An orchestration template describes the configurations of an application or how an application runs in a declarative manner.
      *
      * @param request UpdateTemplateRequest
      * @param headers map
@@ -6668,7 +6804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the UpdateTemplate operation to update an orchestration template by template ID.
+     * @summary Updates the configurations of an orchestration template. An orchestration template defines and describes a group of Container Service for Kubernetes (ACK) resources. An orchestration template describes the configurations of an application or how an application runs in a declarative manner.
      *
      * @param request UpdateTemplateRequest
      * @return UpdateTemplateResponse
@@ -6680,7 +6816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新指定RAM用户/角色的RBAC权限
+     * @summary Updates the role-based access control (RBAC) permissions of a Resource Access Management (RAM) user or RAM role. By default, you do not have the RBAC permissions on a Container Service for Kubernetes (ACK) cluster if you are not the cluster owner or you are not using an Alibaba Cloud account. You can call this operation to specify the resources that can be accessed, permission scope, and predefined roles. This helps you better manage the access control on resources in ACK clusters.
+     *
+     * @description **Precautions**:
+     * *   You can update the permissions of a RAM user or RAM role on a cluster by using full update or incremental update. If you use full update, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation. If you use incremental update, you can grant permissions to or revoke permissions from the RAM user or RAM role on the cluster. In this case, only the permissions that you specify in the request parameters when you call the operation are granted or revoked, other permissions of the RAM user or RAM role on the cluster are not affected.
      *
      * @param request UpdateUserPermissionsRequest
      * @param headers map
@@ -6714,7 +6853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新指定RAM用户/角色的RBAC权限
+     * @summary Updates the role-based access control (RBAC) permissions of a Resource Access Management (RAM) user or RAM role. By default, you do not have the RBAC permissions on a Container Service for Kubernetes (ACK) cluster if you are not the cluster owner or you are not using an Alibaba Cloud account. You can call this operation to specify the resources that can be accessed, permission scope, and predefined roles. This helps you better manage the access control on resources in ACK clusters.
+     *
+     * @description **Precautions**:
+     * *   You can update the permissions of a RAM user or RAM role on a cluster by using full update or incremental update. If you use full update, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation. If you use incremental update, you can grant permissions to or revoke permissions from the RAM user or RAM role on the cluster. In this case, only the permissions that you specify in the request parameters when you call the operation are granted or revoked, other permissions of the RAM user or RAM role on the cluster are not affected.
      *
      * @param request UpdateUserPermissionsRequest
      * @return UpdateUserPermissionsResponse
