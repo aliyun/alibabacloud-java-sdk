@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogTasksRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The filter conditions.</p>
+     * <p>The filter parameters.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeSqlLogTasksRequestFilters> filters;
@@ -25,13 +25,13 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <br>
-     * <p>> This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the logs of a specific node. If this parameter is not specified, the logs of the primary node are returned by default.</p>
+     * <p>>  This parameter is available only for instances that are deployed in the cluster architecture. You can specify this parameter to query the tasks of a specific node. If this parameter is not specified, the tasks of the primary node are returned by default.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -43,7 +43,7 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -112,6 +112,8 @@ public class DescribeSqlLogTasksRequest extends TeaModel {
     public static class DescribeSqlLogTasksRequestFilters extends TeaModel {
         /**
          * <p>The name of the filter parameter.</p>
+         * <br>
+         * <p>>  For more information about the filter parameters, see the **Valid values of Key** section of this topic.</p>
          */
         @NameInMap("Key")
         public String key;

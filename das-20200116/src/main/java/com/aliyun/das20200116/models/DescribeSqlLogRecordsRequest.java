@@ -4,30 +4,59 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlLogRecordsRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<DescribeSqlLogRecordsRequestFilters> filters;
 
     /**
+     * <p>The ID of the database instance.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>*   For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is available only for Cluster Edition instances. By default, if this parameter is not specified, the information about the logs of the primary node is returned.</p>
+     * <p>*   Set this parameter to **polarx_cn** or **polarx_dn** if the node that you want to query belongs to a PolarDB-X 2.0 database instance. A value of polarx_cn indicates a compute node. A value of polarx_dn indicates a data node.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</p>
+     * <br>
+     * <p>*   \\*\\*polarx_cn\\*\\*: compute node</p>
+     * <p>*   \\*\\*polarx_dn\\*\\*: data node</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -102,11 +131,16 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
 
     public static class DescribeSqlLogRecordsRequestFilters extends TeaModel {
         /**
-         * <p>Parameter filtering</p>
+         * <p>The name of the filter parameter.</p>
+         * <br>
+         * <p>>  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the filter parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 

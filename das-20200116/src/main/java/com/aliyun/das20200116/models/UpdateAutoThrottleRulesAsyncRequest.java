@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
-     * <p>The duration threshold for triggering automatic SQL throttling. Set this parameter to a positive integer that is greater than or equal to 2. Unit: minutes.</p>
+     * <p>The duration threshold for triggering automatic SQL throttling. Set this parameter to an integer that is greater than or equal to 2. Unit: minutes.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -13,10 +13,10 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     public Double abnormalDuration;
 
     /**
-     * <p>The maximum number of active sessions.</p>
+     * <p>The threshold for the number of active sessions.</p>
      * <br>
-     * <p>*   Specify an integer that is greater than or equal to 16 when the CPU utilization threshold and the maximum number of active sessions are in the **OR** relationship.</p>
-     * <p>*   Specify an integer that is greater than or equal to 2 when the CPU utilization threshold and the maximum number of active sessions are in the **AND** relationship.</p>
+     * <p>*   If this parameter and CpuUsage are in the **OR** relationship, set this parameter to an integer that is greater than or equal to 16.</p>
+     * <p>*   If this parameter and CpuUsage are in the **AND** relationship, set this parameter to an integer that is greater than or equal to 2.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -42,7 +42,7 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:</p>
      * <br>
-     * <p>>  Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
+     * <p>>  Abnormal SQL statements use the same template as the SQL statements to be throttled.</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
@@ -70,7 +70,7 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     public String cpuSessionRelation;
 
     /**
-     * <p>The CPU utilization threshold, in percentages. Valid values: 70 to 100.</p>
+     * <p>The threshold for CPU utilization. Valid values: 70% to 100%.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

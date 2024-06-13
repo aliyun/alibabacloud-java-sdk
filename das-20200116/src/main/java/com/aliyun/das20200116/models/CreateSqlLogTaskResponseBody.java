@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateSqlLogTaskResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The response code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>SqlLogTask</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateSqlLogTaskResponseBodyData data;
@@ -19,7 +19,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <br>
-     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -86,37 +86,45 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
 
     public static class CreateSqlLogTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The end of the time range to query.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("End")
         public Long end;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the database instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Start")
         public Long start;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The state of the task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task is to be scheduled.</p>
+         * <p>*   **RUNNING**: The task is running.</p>
+         * <p>*   **FAILED**: The task failed.</p>
+         * <p>*   **CANCELED**: The task is canceled.</p>
+         * <p>*   **COMPLETED**: The task is complete.</p>
+         * <br>
+         * <p>>  You can view the result of a task that is in the **COMPLETED** state.</p>
          */
         @NameInMap("Status")
         public String status;

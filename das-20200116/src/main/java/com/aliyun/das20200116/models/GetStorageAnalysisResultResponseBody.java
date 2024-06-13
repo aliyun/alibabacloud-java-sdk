@@ -86,13 +86,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
     public static class GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultNeedOptimizeItemList extends TeaModel {
         /**
-         * <p>The data associated with items to be optimized.</p>
+         * <p>The data associated with the items to be optimized, which is in the JSON format.</p>
          */
         @NameInMap("AssociatedData")
         public String associatedData;
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("DbName")
         public String dbName;
@@ -100,8 +100,14 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The optimization suggestion. Valid values:</p>
          * <br>
-         * <p>*   **NEED_ANALYZE_TABLE**: You can execute the ANALYZE TABLE statement on the related table during off-peak hours.</p>
-         * <p>*   **NEED_OPTIMIZE_TABLE**: You can reclaim fragments during off-peak hours.</p>
+         * <p>*   **NEED_ANALYZE_TABLE**: Execute the `ANALYZE TABLE` statement on the table during off-peak hours.</p>
+         * <p>*   **NEED_OPTIMIZE_TABLE**: Reclaim space fragments during off-peak hours.</p>
+         * <p>*   **CHANGE_TABLE_ENGINE_IF_NECESSARY**: Change the storage engine type of a table after risk assessment.</p>
+         * <p>*   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: Pay attention to the usage of auto-increment IDs.</p>
+         * <p>*   **DUPLICATE_INDEX**: Optimize indexes of tables.</p>
+         * <p>*   **TABLE_SIZE**: Pay attention to the table size.</p>
+         * <p>*   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: Pay attention to the number of rows in a table and the average row length.</p>
+         * <p>*   **STORAGE_USED_PERCENT**: Pay attention to the space usage to prevent the instance from being locked if the instance is full.</p>
          */
         @NameInMap("OptimizeAdvice")
         public String optimizeAdvice;
@@ -109,14 +115,21 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The item to be optimized. Valid values:</p>
          * <br>
-         * <p>*   **NEED_ANALYZE_TABLE**: The statistical data in information_schema.tables differs greatly from the physical file size.</p>
-         * <p>*   **NEED_OPTIMIZE_TABLE**: The fragmentation degree of the table is high.</p>
+         * <p>*   **NEED_ANALYZE_TABLE**: tables whose storage statistics obtained from `information_schema.tables` are 50 GB larger or smaller than the physical file sizes.</p>
+         * <p>*   **NEED_OPTIMIZE_TABLE**: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formula: `Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)`. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: `Fragmentation rate = DataFree/PhyTotalSize`.</p>
+         * <p>*   **TABLE_ENGINE**: tables whose storage engines are not InnoDB or XEngine.</p>
+         * <p>*   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: tables whose usages of auto-increment IDs exceed 80%.</p>
+         * <p>*   **DUPLICATE_INDEX**: tables whose indexes are redundant or duplicate.</p>
+         * <p>*   **TABLE_SIZE**: single tables whose sizes are larger than 50 GB.</p>
+         * <p>*   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: single tables that contain more than 5 million rows and whose average row lengths exceed 10 KB.</p>
+         * <p>*   **TOTAL_DATA_FREE**: instances whose reclaimable spaces are larger than 60 GB and whose total fragmentation rate is larger than 5%.</p>
+         * <p>*   **STORAGE_USED_PERCENT**: instances whose space usage is larger than 90%.</p>
          */
         @NameInMap("OptimizeItemName")
         public String optimizeItemName;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -170,70 +183,67 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
     public static class GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultTableStats extends TeaModel {
         /**
-         * <p>The average row length.</p>
-         * <br>
-         * <p>>  Unit: bytes.</p>
+         * <p>The average length of rows. Unit: bytes.</p>
          */
         @NameInMap("AvgRowLength")
         public Long avgRowLength;
 
         /**
-         * <p>The size of storage occupied by fragments.</p>
-         * <br>
-         * <p>>  Unit: bytes.</p>
+         * <p>The size of space fragments. Unit: bytes.</p>
          */
         @NameInMap("DataFree")
         public Long dataFree;
 
         /**
-         * <p>The size of storage occupied by the table data.</p>
-         * <br>
-         * <p>>  Unit: bytes.</p>
+         * <p>The storage space occupied by data. Unit: bytes.</p>
          */
         @NameInMap("DataSize")
         public Long dataSize;
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
-         * <p>The type of the engine used by the table.</p>
+         * <p>The type of the storage engine used by the table.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>可回收空间大小（碎片空间大小），单位为Byte。</p>
+         * <br>
+         * <p>> 该参数仅适用于MongoDB实例。表碎片率计算方式为：`FragmentSize/PhyTotalSize`。</p>
+         */
         @NameInMap("FragmentSize")
         public Long fragmentSize;
 
         /**
-         * <p>The size of storage occupied by indexes.</p>
-         * <br>
-         * <p>>  Unit: bytes.</p>
+         * <p>The storage space occupied by indexes. Unit: bytes.</p>
          */
         @NameInMap("IndexSize")
         public Long indexSize;
 
         /**
-         * <p>The size of the table storage.</p>
+         * <p>The storage space of the table. Unit: bytes.</p>
          * <br>
-         * <p>>  Unit: byte. The value of the parameter is the sum of DataSize, IndexSize, and DataFree.</p>
+         * <p>>  The value of this parameter is the sum of the values of **DataSize**, **IndexSize**, and **DataFree**.</p>
          */
         @NameInMap("PhyTotalSize")
         public Long phyTotalSize;
 
         /**
-         * <p>The physical file size of the table.</p>
+         * <p>The physical file size of the table. Unit: bytes.</p>
          * <br>
-         * <p>>  Unit: byte. You may fail to obtain the physical file size because of the deployment mode of the database instance.</p>
+         * <p>>  You may fail to obtain the physical file size because of the deployment mode of the database instance.</p>
          */
         @NameInMap("PhysicalFileSize")
         public Long physicalFileSize;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -245,15 +255,15 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         public Long tableRows;
 
         /**
-         * <p>The table type.</p>
+         * <p>The type of the table.</p>
          */
         @NameInMap("TableType")
         public String tableType;
 
         /**
-         * <p>The size of storage occupied by table data and indexes.</p>
+         * <p>The storage space occupied by table data and indexes. Unit: bytes.</p>
          * <br>
-         * <p>>  Unit: byte. The value of the parameter is the sum of DataSize and IndexSize.</p>
+         * <p>>  The value of this parameter is the sum of the values of **DataSize** and **IndexSize**.</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;
@@ -386,21 +396,19 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         public Boolean analysisSuccess;
 
         /**
-         * <p>The estimated daily storage usage increment in the last seven days.</p>
-         * <br>
-         * <p>>  Unit: bytes.</p>
+         * <p>The estimated average daily growth of the used storage space in the previous seven days. Unit: bytes.</p>
          */
         @NameInMap("DailyIncrement")
         public Long dailyIncrement;
 
         /**
-         * <p>The estimated number of days before the remaining storage runs out.</p>
+         * <p>The estimated number of days for which the remaining storage space is available.</p>
          */
         @NameInMap("EstimateAvailableDays")
         public Long estimateAvailableDays;
 
         /**
-         * <p>The list of items to be optimized.</p>
+         * <p>The items to be optimized, which are generated based on DAS default rules. You can ignore these items based on your business requirements, and create custom rules to generate items to be optimized based on other basic data that is returned.</p>
          */
         @NameInMap("NeedOptimizeItemList")
         public java.util.List<GetStorageAnalysisResultResponseBodyDataStorageAnalysisResultNeedOptimizeItemList> needOptimizeItemList;

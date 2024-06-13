@@ -19,9 +19,12 @@ public class CreateStorageAnalysisTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The node ID.</p>
+     * <p>The node ID. For ApsaraDB for MongoDB instances, you can use this parameter to specify a node for storage analysis. You can call the [DescribeRoleZoneInfo](https://help.aliyun.com/document_detail/123802.html) operation to query the information about nodes of an ApsaraDB for MongoDB instance.</p>
      * <br>
-     * <p>>  This parameter is reserved.</p>
+     * <p>*   If you set this parameter to a value in the **InsName** format, such as `d-bp1872fa24d5****`, you can call this operation to analyze the hidden node that corresponds to the node ID.</p>
+     * <p>*   If you set this parameter to a value in the `InsName#RoleId` format, such as `d-bp1872fa24d5****#299****5`, you can call this operation to analyze the specified node.</p>
+     * <br>
+     * <p>>  If you run a storage analysis task on an ApsaraDB for MongoDB replica set instances and you do not specify this parameter, only the hidden node of the instance is analyzed by default. If you run a storage analysis task on an ApsaraDB for MongoDB sharded cluster instance, we recommend that you set this parameter to specify a node.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

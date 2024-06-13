@@ -362,6 +362,77 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel extends TeaModel {
+        @NameInMap("AnalysisTs")
+        public Long analysisTs;
+
+        @NameInMap("Level")
+        public Integer level;
+
+        @NameInMap("TotalBytes")
+        public Long totalBytes;
+
+        @NameInMap("TotalKeys")
+        public Long totalKeys;
+
+        public static DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel self = new DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel setAnalysisTs(Long analysisTs) {
+            this.analysisTs = analysisTs;
+            return this;
+        }
+        public Long getAnalysisTs() {
+            return this.analysisTs;
+        }
+
+        public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel setLevel(Integer level) {
+            this.level = level;
+            return this;
+        }
+        public Integer getLevel() {
+            return this.level;
+        }
+
+        public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel setTotalBytes(Long totalBytes) {
+            this.totalBytes = totalBytes;
+            return this;
+        }
+        public Long getTotalBytes() {
+            return this.totalBytes;
+        }
+
+        public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel setTotalKeys(Long totalKeys) {
+            this.totalKeys = totalKeys;
+            return this;
+        }
+        public Long getTotalKeys() {
+            return this.totalKeys;
+        }
+
+    }
+
+    public static class DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount extends TeaModel {
+        @NameInMap("ExpiryLevel")
+        public java.util.List<DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel> expiryLevel;
+
+        public static DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount self = new DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount setExpiryLevel(java.util.List<DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel> expiryLevel) {
+            this.expiryLevel = expiryLevel;
+            return this;
+        }
+        public java.util.List<DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel> getExpiryLevel() {
+            return this.expiryLevel;
+        }
+
+    }
+
     public static class DescribeCacheAnalysisJobResponseBodyDataKeyPrefixesPrefix extends TeaModel {
         /**
          * <p>The number of bytes that are occupied by the key.</p>
@@ -750,6 +821,9 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         @NameInMap("BigKeysOfNum")
         public DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNum bigKeysOfNum;
 
+        @NameInMap("ExpiryKeysLevelCount")
+        public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount expiryKeysLevelCount;
+
         /**
          * <p>The instance ID.</p>
          */
@@ -824,6 +898,14 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
         public DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNum getBigKeysOfNum() {
             return this.bigKeysOfNum;
+        }
+
+        public DescribeCacheAnalysisJobResponseBodyData setExpiryKeysLevelCount(DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount expiryKeysLevelCount) {
+            this.expiryKeysLevelCount = expiryKeysLevelCount;
+            return this;
+        }
+        public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount getExpiryKeysLevelCount() {
+            return this.expiryKeysLevelCount;
         }
 
         public DescribeCacheAnalysisJobResponseBodyData setInstanceId(String instanceId) {

@@ -4,15 +4,27 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlLogTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the database instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

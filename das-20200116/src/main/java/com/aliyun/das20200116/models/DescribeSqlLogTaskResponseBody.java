@@ -4,21 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlLogTaskResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>SqlLogTaskDetail</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public DescribeSqlLogTaskResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,9 +85,17 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlLogTaskResponseBodyDataFilters extends TeaModel {
+        /**
+         * <p>The name of the filter parameter.</p>
+         * <br>
+         * <p>>  For more information about the filter parameters, see the **Valid values of Key** section of this topic.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the filter parameter.</p>
+         */
         @NameInMap("Value")
         public Object value;
 
@@ -98,105 +123,205 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlLogTaskResponseBodyDataQueries extends TeaModel {
+        /**
+         * <p>The database account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The execution duration. Unit: millisecond.</p>
+         */
         @NameInMap("Consume")
         public Long consume;
 
+        /**
+         * <p>The CPU execution time. Unit: microsecond.</p>
+         */
         @NameInMap("CpuTime")
         public Long cpuTime;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>yyyy-MM-dd\\"T\\"HH:mm:ss.SSS\\"Z\\"</p>
+         * <p>The execution time. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        /**
+         * <p>The extended information. This parameter is a reserved parameter.</p>
+         */
         @NameInMap("Ext")
         public String ext;
 
+        /**
+         * <p>The number of rows pulled by the CNs of the PolarDB-X 2.0 instance.</p>
+         */
         @NameInMap("Frows")
         public Long frows;
 
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        /**
+         * <p>The lock wait time. Unit: millisecond.</p>
+         */
         @NameInMap("LockTime")
         public Long lockTime;
 
+        /**
+         * <p>The number of logical reads.</p>
+         */
         @NameInMap("LogicRead")
         public Long logicRead;
 
+        /**
+         * <p>The ID of the child node.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>ts unix</p>
+         * <p>The execution timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("OriginTime")
         public Long originTime;
 
+        /**
+         * <p>The wait time of parallel queries in the queue in the PolarDB for MySQL instance. Unit: millisecond.</p>
+         */
         @NameInMap("ParallelDegree")
         public String parallelDegree;
 
+        /**
+         * <p>The degree of parallelism (DOP) value of the PolarDB for MySQL instance.</p>
+         */
         @NameInMap("ParallelQueueTime")
         public String parallelQueueTime;
 
+        /**
+         * <p>The number of physical asynchronous reads.</p>
+         */
         @NameInMap("PhysicAsyncRead")
         public Long physicAsyncRead;
 
+        /**
+         * <p>The total number of physical reads.</p>
+         */
         @NameInMap("PhysicRead")
         public Long physicRead;
 
+        /**
+         * <p>The number of physical synchronous reads.</p>
+         */
         @NameInMap("PhysicSyncRead")
         public Long physicSyncRead;
 
+        /**
+         * <p>The number of rows returned.</p>
+         */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
+        /**
+         * <p>The total number of rows updated or returned by the CNs of the PolarDB-X 2.0 instance.</p>
+         */
         @NameInMap("Rows")
         public Long rows;
 
+        /**
+         * <p>The number of rows scanned.</p>
+         */
         @NameInMap("ScanRows")
         public Long scanRows;
 
+        /**
+         * <p>The number of requests from the compute nodes (CNs) to the data nodes (DNs) in the PolarDB-X 2.0 instance.</p>
+         */
         @NameInMap("Scnt")
         public Long scnt;
 
+        /**
+         * <p>The ID of the SQL statement.</p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The queried SQL statement.</p>
+         */
         @NameInMap("SqlText")
         public String sqlText;
 
+        /**
+         * <p>The type of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **SELECT**</p>
+         * <p>*   **UPDATE**</p>
+         * <p>*   **DELETE**</p>
+         */
         @NameInMap("SqlType")
         public String sqlType;
 
+        /**
+         * <p>The execution result of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The execution was successful.</p>
+         * <p>*   **1**: The execution failed.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The thread ID.</p>
+         */
         @NameInMap("ThreadId")
         public Long threadId;
 
+        /**
+         * <p>The trace ID of the PolarDB-X 2.0 instance, which is the execution ID of the SQL statement on the DN.</p>
+         */
         @NameInMap("TraceId")
         public String traceId;
 
+        /**
+         * <p>The transaction ID.</p>
+         */
         @NameInMap("TrxId")
-        public Long trxId;
+        public String trxId;
 
+        /**
+         * <p>The number of rows updated.</p>
+         */
         @NameInMap("UpdateRows")
         public Long updateRows;
 
+        /**
+         * <p>Indicates whether the PolarDB for MySQL instance uses In-Memory Column Indexes (IMCIs). Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("UseImciEngine")
         public String useImciEngine;
 
+        /**
+         * <p>The IP address to which the endpoint used for query is resolved.</p>
+         */
         @NameInMap("Vip")
         public String vip;
 
+        /**
+         * <p>The number of writes to the ApsaraDB RDS for SQL Server instance.</p>
+         */
         @NameInMap("Writes")
         public Long writes;
 
@@ -421,11 +546,11 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             return this.traceId;
         }
 
-        public DescribeSqlLogTaskResponseBodyDataQueries setTrxId(Long trxId) {
+        public DescribeSqlLogTaskResponseBodyDataQueries setTrxId(String trxId) {
             this.trxId = trxId;
             return this;
         }
-        public Long getTrxId() {
+        public String getTrxId() {
             return this.trxId;
         }
 
@@ -464,39 +589,89 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlLogTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <p>Indicates whether the task has expired. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Expire")
         public Boolean expire;
 
+        /**
+         * <p>The download URL of the export task.</p>
+         */
         @NameInMap("Export")
         public String export;
 
+        /**
+         * <p>The filter parameters.</p>
+         */
         @NameInMap("Filters")
         public java.util.List<DescribeSqlLogTaskResponseBodyDataFilters> filters;
 
+        /**
+         * <p>The task name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The results of the offline querying task.</p>
+         */
         @NameInMap("Queries")
         public java.util.List<DescribeSqlLogTaskResponseBodyDataQueries> queries;
 
+        /**
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Start")
         public Long start;
 
+        /**
+         * <p>The task state. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task is to be scheduled.</p>
+         * <p>*   **RUNNING**: The task is running.</p>
+         * <p>*   **FAILED**: The task failed.</p>
+         * <p>*   **CANCELED**: The task is canceled.</p>
+         * <p>*   **COMPLETED**: The task is complete.</p>
+         * <br>
+         * <p>>  If a task is in the **COMPLETED** state, you can view the results of the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The task type. Valid values:</p>
+         * <br>
+         * <p>*   **Export**</p>
+         * <p>*   **Query**</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The total number of tasks.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
