@@ -738,6 +738,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceEndpointUserName", request.sourceEndpointUserName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.srcCaCertificateOssUrl)) {
+            query.put("SrcCaCertificateOssUrl", request.srcCaCertificateOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcCaCertificatePassword)) {
+            query.put("SrcCaCertificatePassword", request.srcCaCertificatePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcClientCertOssUrl)) {
+            query.put("SrcClientCertOssUrl", request.srcClientCertOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcClientKeyOssUrl)) {
+            query.put("SrcClientKeyOssUrl", request.srcClientKeyOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcClientPassword)) {
+            query.put("SrcClientPassword", request.srcClientPassword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.subscriptionDataTypeDDL)) {
             query.put("SubscriptionDataTypeDDL", request.subscriptionDataTypeDDL);
         }

@@ -219,6 +219,21 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
 
+    @NameInMap("SrcCaCertificateOssUrl")
+    public String srcCaCertificateOssUrl;
+
+    @NameInMap("SrcCaCertificatePassword")
+    public String srcCaCertificatePassword;
+
+    @NameInMap("SrcClientCertOssUrl")
+    public String srcClientCertOssUrl;
+
+    @NameInMap("SrcClientKeyOssUrl")
+    public String srcClientKeyOssUrl;
+
+    @NameInMap("SrcClientPassword")
+    public String srcClientPassword;
+
     /**
      * <p>Specifies whether to track DDL statements. Default value: true. Valid values:</p>
      * <br>
@@ -500,6 +515,46 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     }
     public String getSourceEndpointUserName() {
         return this.sourceEndpointUserName;
+    }
+
+    public ConfigureSubscriptionRequest setSrcCaCertificateOssUrl(String srcCaCertificateOssUrl) {
+        this.srcCaCertificateOssUrl = srcCaCertificateOssUrl;
+        return this;
+    }
+    public String getSrcCaCertificateOssUrl() {
+        return this.srcCaCertificateOssUrl;
+    }
+
+    public ConfigureSubscriptionRequest setSrcCaCertificatePassword(String srcCaCertificatePassword) {
+        this.srcCaCertificatePassword = srcCaCertificatePassword;
+        return this;
+    }
+    public String getSrcCaCertificatePassword() {
+        return this.srcCaCertificatePassword;
+    }
+
+    public ConfigureSubscriptionRequest setSrcClientCertOssUrl(String srcClientCertOssUrl) {
+        this.srcClientCertOssUrl = srcClientCertOssUrl;
+        return this;
+    }
+    public String getSrcClientCertOssUrl() {
+        return this.srcClientCertOssUrl;
+    }
+
+    public ConfigureSubscriptionRequest setSrcClientKeyOssUrl(String srcClientKeyOssUrl) {
+        this.srcClientKeyOssUrl = srcClientKeyOssUrl;
+        return this;
+    }
+    public String getSrcClientKeyOssUrl() {
+        return this.srcClientKeyOssUrl;
+    }
+
+    public ConfigureSubscriptionRequest setSrcClientPassword(String srcClientPassword) {
+        this.srcClientPassword = srcClientPassword;
+        return this;
+    }
+    public String getSrcClientPassword() {
+        return this.srcClientPassword;
     }
 
     public ConfigureSubscriptionRequest setSubscriptionDataTypeDDL(Boolean subscriptionDataTypeDDL) {
