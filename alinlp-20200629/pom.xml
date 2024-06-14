@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alinlp20200629</artifactId>
-  <version>3.0.0</version>
+  <version>3.1.0</version>
   <packaging>jar</packaging>
   <name>alinlp20200629</name>
   <description>Alibaba Cloud alinlp (20200629) SDK for Java
