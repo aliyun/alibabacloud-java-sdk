@@ -9,6 +9,8 @@ public class UpdateSecretRotationPolicyRequest extends TeaModel {
      * <br>
      * <p>*   true: enables automatic rotation.</p>
      * <p>*   false: does not enable automatic rotation. This is the default value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnableAutomaticRotation")
     public Boolean enableAutomaticRotation;
@@ -27,6 +29,8 @@ public class UpdateSecretRotationPolicyRequest extends TeaModel {
 
     /**
      * <p>The name of the secret.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretName")
     public String secretName;

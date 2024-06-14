@@ -9,7 +9,7 @@ public class GetRandomPasswordRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>` Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \"#$%&\"()*+,-. /:;<=>? @[\] your_project_id} ~  `.</p>
+     * <p>` Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \\"#$%&\\"()*+,-. /:;<=>? @[\\] your_project_id} ~  `.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */

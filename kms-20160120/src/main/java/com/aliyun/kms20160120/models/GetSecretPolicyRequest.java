@@ -7,6 +7,9 @@ public class GetSecretPolicyRequest extends TeaModel {
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 

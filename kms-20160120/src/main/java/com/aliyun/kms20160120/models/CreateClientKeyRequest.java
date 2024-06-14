@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class CreateClientKeyRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform. Set the value to **CreateClientKey**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AapName")
     public String aapName;
@@ -33,6 +35,8 @@ public class CreateClientKeyRequest extends TeaModel {
 
     /**
      * <p>The name of the AAP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Password")
     public String password;

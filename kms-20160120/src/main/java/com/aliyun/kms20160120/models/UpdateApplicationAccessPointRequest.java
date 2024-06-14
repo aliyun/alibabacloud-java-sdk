@@ -12,6 +12,8 @@ public class UpdateApplicationAccessPointRequest extends TeaModel {
 
     /**
      * <p>The name of the AAP that you want to update.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;

@@ -13,12 +13,16 @@ public class UpdateKmsInstanceBindVpcRequest extends TeaModel {
      * <p>*   VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.</p>
      * <br>
      * <p>Format: `[{"VpcId":"${VpcId}","VSwitchId":"${VSwitchId}","RegionId":"${RegionId}","VpcOwnerId":${VpcOwnerId}},..]`.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("BindVpcs")
     public String bindVpcs;
 
     /**
      * <p>The ID of the KMS instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KmsInstanceId")
     public String kmsInstanceId;

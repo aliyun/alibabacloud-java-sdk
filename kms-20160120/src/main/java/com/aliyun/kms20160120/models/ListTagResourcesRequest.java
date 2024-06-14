@@ -15,7 +15,9 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~601478~~) to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -33,6 +35,8 @@ public class ListTagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   key</p>
      * <p>*   secret</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

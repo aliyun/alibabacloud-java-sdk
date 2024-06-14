@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UpdateCertificateStatusRequest extends TeaModel {
     /**
      * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;
@@ -20,6 +22,8 @@ public class UpdateCertificateStatusRequest extends TeaModel {
      * <p>*   REVOKED: The certificate is revoked.</p>
      * <br>
      * <p>> If the certificate is in the REVOKED state, you can use the certificate only to verify a signature, but not to generate a signature.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Status")
     public String status;

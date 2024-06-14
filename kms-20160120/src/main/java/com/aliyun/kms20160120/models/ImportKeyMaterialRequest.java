@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class ImportKeyMaterialRequest extends TeaModel {
     /**
      * <p>Use **GetParametersForImport** the Returned public key and the base64-encoded key material.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EncryptedKeyMaterial")
     public String encryptedKeyMaterial;
 
     /**
      * <p>By calling **GetParametersForImport** the import token.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImportToken")
     public String importToken;
 
     /**
      * <p>The ID of the CMK to be imported.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
@@ -28,6 +34,8 @@ public class ImportKeyMaterialRequest extends TeaModel {
      * <p>If this parameter is not specified or set this parameter to 0, the key material does not expire.</p>
      * <br>
      * <p>>  The value cannot be earlier than the time when the API is called (based on the server time).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyMaterialExpireUnix")
     public Long keyMaterialExpireUnix;

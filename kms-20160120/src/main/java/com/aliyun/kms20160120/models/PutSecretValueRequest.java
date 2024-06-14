@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class PutSecretValueRequest extends TeaModel {
     /**
      * <p>The secret value. The value is encrypted and then stored in the new version.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretData")
     public String secretData;
@@ -21,12 +23,16 @@ public class PutSecretValueRequest extends TeaModel {
 
     /**
      * <p>The name of the secret.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The new version of the secret value. Version numbers must be unique in each secret.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VersionId")
     public String versionId;

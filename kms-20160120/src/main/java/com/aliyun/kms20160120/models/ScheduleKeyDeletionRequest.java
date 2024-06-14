@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ScheduleKeyDeletionRequest extends TeaModel {
     /**
      * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
@@ -16,6 +18,8 @@ public class ScheduleKeyDeletionRequest extends TeaModel {
      * <p>Valid values: 7 to 366.</p>
      * <br>
      * <p>Unit: days.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PendingWindowInDays")
     public Integer pendingWindowInDays;

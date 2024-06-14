@@ -7,7 +7,7 @@ public class GenerateDataKeyShrinkRequest extends TeaModel {
     /**
      * <p>The JSON string that consists of key-value pairs.</p>
      * <br>
-     * <p>If you specify this parameter, an equivalent value is required when you call the [Decrypt](~~28950~~) operation. For more information, see [EncryptionContext](~~42975~~).</p>
+     * <p>If you specify this parameter, an equivalent value is required when you call the [Decrypt](https://help.aliyun.com/document_detail/28950.html) operation. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).</p>
      */
     @NameInMap("EncryptionContext")
     public String encryptionContextShrink;
@@ -15,7 +15,9 @@ public class GenerateDataKeyShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the CMK. The ID must be globally unique.</p>
      * <br>
-     * <p>You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).</p>
+     * <p>You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](https://help.aliyun.com/document_detail/68522.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
@@ -23,8 +25,8 @@ public class GenerateDataKeyShrinkRequest extends TeaModel {
     /**
      * <p>The type of the data key that you want to generate. Valid values:</p>
      * <br>
-     * <p>*   AES\_256: a 256-bit symmetric key</p>
-     * <p>*   AES\_128: a 128-bit symmetric key</p>
+     * <p>*   AES_256: a 256-bit symmetric key</p>
+     * <p>*   AES_128: a 128-bit symmetric key</p>
      * <br>
      * <p>>  We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If none of the parameters are specified, KMS generates a 256-bit data key. If both parameters are specified, KMS ignores the KeySpec parameter.</p>
      */
@@ -38,8 +40,8 @@ public class GenerateDataKeyShrinkRequest extends TeaModel {
      * <br>
      * <p>Default value:</p>
      * <br>
-     * <p>*   If the KeySpec parameter is set to AES\_256, set the value of the NumberOfBytes parameter to 32.</p>
-     * <p>*   If the KeySpec parameter is set to AES\_128, set the value of the NumberOfBytes parameter to 16.</p>
+     * <p>*   If the KeySpec parameter is set to AES_256, set the value of the NumberOfBytes parameter to 32.</p>
+     * <p>*   If the KeySpec parameter is set to AES_128, set the value of the NumberOfBytes parameter to 16.</p>
      */
     @NameInMap("NumberOfBytes")
     public Integer numberOfBytes;

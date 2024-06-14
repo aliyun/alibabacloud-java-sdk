@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class GenerateDataKeyWithoutPlaintextRequest extends TeaModel {
     /**
-     * <p>A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).</p>
+     * <p>A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).</p>
      */
     @NameInMap("EncryptionContext")
     public java.util.Map<String, ?> encryptionContext;
 
     /**
      * <p>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see Use aliases.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
@@ -19,8 +21,8 @@ public class GenerateDataKeyWithoutPlaintextRequest extends TeaModel {
     /**
      * <p>The length of the data key that you want to generate. Valid values:</p>
      * <br>
-     * <p>*   AES\_256: 256-bit symmetric key</p>
-     * <p>*   AES\_128: 128-bit symmetric key</p>
+     * <p>*   AES_256: 256-bit symmetric key</p>
+     * <p>*   AES_128: 128-bit symmetric key</p>
      * <br>
      * <p>>  We recommend that you use the KeySpec or NumberOfBytes parameter to specify the length of a data key. If both of them are not specified, KMS generates a 256-bit data key. If both of them are specified, KMS ignores the KeySpec parameter.</p>
      */

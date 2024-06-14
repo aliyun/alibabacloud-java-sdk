@@ -7,7 +7,7 @@ public class UpdatePolicyRequest extends TeaModel {
     /**
      * <p>The access control rule.</p>
      * <br>
-     * <p>> For more information about how to query created access control rules, see [ListNetworkRules](~~2539433~~).</p>
+     * <p>> For more information about how to query created access control rules, see [ListNetworkRules](https://help.aliyun.com/document_detail/2539433.html).</p>
      */
     @NameInMap("AccessControlRules")
     public String accessControlRules;
@@ -20,6 +20,8 @@ public class UpdatePolicyRequest extends TeaModel {
 
     /**
      * <p>The name of the permission policy that you want to update.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -38,8 +40,8 @@ public class UpdatePolicyRequest extends TeaModel {
     /**
      * <p>The key and secret that are allowed to access after the update.</p>
      * <br>
-     * <p>*   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\*.</p>
-     * <p>*   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\*.</p>
+     * <p>*   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\\*.</p>
+     * <p>*   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\\*.</p>
      */
     @NameInMap("Resources")
     public String resources;

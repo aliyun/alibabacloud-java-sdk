@@ -51,7 +51,7 @@ public class DescribeKeyResponseBody extends TeaModel {
          * <p>*   Disabled</p>
          * <p>*   Suspended</p>
          * <br>
-         * <p>For more information, see [Automatic key rotation](~~134270~~).</p>
+         * <p>For more information, see [Automatic key rotation](https://help.aliyun.com/document_detail/134270.html).</p>
          * <br>
          * <p>>  Only symmetric CMKs support automatic key rotation.</p>
          */
@@ -79,7 +79,7 @@ public class DescribeKeyResponseBody extends TeaModel {
         /**
          * <p>The time at which the CMK is scheduled for deletion. The time is displayed in UTC.</p>
          * <br>
-         * <p>For more information, see [ScheduleKeyDeletion](~~44196~~).</p>
+         * <p>For more information, see [ScheduleKeyDeletion](https://help.aliyun.com/document_detail/44196.html).</p>
          * <br>
          * <p>>  This parameter is returned only when the value of the KeyState parameter is PendingDeletion.</p>
          */
@@ -122,7 +122,7 @@ public class DescribeKeyResponseBody extends TeaModel {
         /**
          * <p>The status of the CMK.</p>
          * <br>
-         * <p>For more information, see [Impact of CMK status on API operations](~~44211~~).</p>
+         * <p>For more information, see [Impact of CMK status on API operations](https://help.aliyun.com/document_detail/44211.html).</p>
          */
         @NameInMap("KeyState")
         public String keyState;

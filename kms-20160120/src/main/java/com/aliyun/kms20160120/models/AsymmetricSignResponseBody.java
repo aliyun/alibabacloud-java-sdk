@@ -14,7 +14,7 @@ public class AsymmetricSignResponseBody extends TeaModel {
      * <p>The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the Algorithm parameter.</p>
      * <br>
      * <p>> * The value is encoded in Base64.</p>
-     * <p>> * For more information about how to calculate message digests, see the **Preprocess signature: compute a message digest** section of the [Generate and verify a signature by using an asymmetric CMK](~~148146~~) topic.</p>
+     * <p>> * For more information about how to calculate message digests, see the **Preprocess signature: compute a message digest** section of the [Generate and verify a signature by using an asymmetric CMK](https://help.aliyun.com/document_detail/148146.html) topic.</p>
      */
     @NameInMap("KeyVersionId")
     public String keyVersionId;

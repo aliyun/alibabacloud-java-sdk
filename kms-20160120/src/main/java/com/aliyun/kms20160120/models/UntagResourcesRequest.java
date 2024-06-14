@@ -18,7 +18,9 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~601478~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) operation to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -27,6 +29,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>The IDs of the resources from which you want to remove tags. You can enter up to 50 resource IDs.</p>
      * <br>
      * <p>Enter multiple resource IDs in the `["ResourceId.1","ResourceId.2",...]` format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -36,6 +40,8 @@ public class UntagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   key</p>
      * <p>*   secret</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

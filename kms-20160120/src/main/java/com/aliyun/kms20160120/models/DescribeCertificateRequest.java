@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeCertificateRequest extends TeaModel {
     /**
      * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;

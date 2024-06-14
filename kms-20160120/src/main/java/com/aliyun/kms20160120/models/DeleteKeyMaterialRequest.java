@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteKeyMaterialRequest extends TeaModel {
     /**
      * <p>The globally unique ID of the CMK.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyId")
     public String keyId;

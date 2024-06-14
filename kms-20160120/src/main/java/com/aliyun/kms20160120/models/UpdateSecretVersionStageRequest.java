@@ -24,12 +24,16 @@ public class UpdateSecretVersionStageRequest extends TeaModel {
 
     /**
      * <p>The operation that you want to perform. Set the value to **UpdateSecretVersionStage**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The name of the secret.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VersionStage")
     public String versionStage;

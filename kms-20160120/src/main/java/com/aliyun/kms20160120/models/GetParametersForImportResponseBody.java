@@ -7,7 +7,7 @@ public class GetParametersForImportResponseBody extends TeaModel {
     /**
      * <p>The token that is used to import key material.</p>
      * <br>
-     * <p>The token is valid for 24 hours. The value of this parameter is required when you call the [ImportKeyMaterial](~~68622~~) operation.</p>
+     * <p>The token is valid for 24 hours. The value of this parameter is required when you call the [ImportKeyMaterial](https://help.aliyun.com/document_detail/68622.html) operation.</p>
      */
     @NameInMap("ImportToken")
     public String importToken;
@@ -15,7 +15,7 @@ public class GetParametersForImportResponseBody extends TeaModel {
     /**
      * <p>The globally unique ID of the CMK.</p>
      * <br>
-     * <p>The value of this parameter is required when you call the [ImportKeyMaterial](~~68622~~) operation.</p>
+     * <p>The value of this parameter is required when you call the [ImportKeyMaterial](https://help.aliyun.com/document_detail/68622.html) operation.</p>
      */
     @NameInMap("KeyId")
     public String keyId;

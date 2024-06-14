@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class AsymmetricSignRequest extends TeaModel {
     /**
      * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
 
     /**
      * <p>The signature algorithm.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Digest")
     public String digest;
 
     /**
      * <p>The operation that you want to perform. Set the value to **AsymmetricSign**.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
@@ -25,7 +31,9 @@ public class AsymmetricSignRequest extends TeaModel {
     /**
      * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
      * <br>
-     * <p>>  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).</p>
+     * <p>>  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](https://help.aliyun.com/document_detail/68522.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyVersionId")
     public String keyVersionId;

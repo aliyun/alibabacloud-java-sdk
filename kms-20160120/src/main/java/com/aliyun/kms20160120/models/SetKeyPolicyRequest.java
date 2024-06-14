@@ -4,9 +4,15 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class SetKeyPolicyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Policy")
     public String policy;
 

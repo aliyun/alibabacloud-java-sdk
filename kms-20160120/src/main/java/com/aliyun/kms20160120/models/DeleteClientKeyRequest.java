@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteClientKeyRequest extends TeaModel {
     /**
      * <p>The ID of the client key.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ClientKeyId")
     public String clientKeyId;

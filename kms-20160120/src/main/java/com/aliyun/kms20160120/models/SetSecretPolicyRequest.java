@@ -4,12 +4,18 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class SetSecretPolicyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
     @NameInMap("PolicyName")
     public String policyName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SecretName")
     public String secretName;
 

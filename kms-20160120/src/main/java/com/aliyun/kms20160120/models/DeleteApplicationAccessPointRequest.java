@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteApplicationAccessPointRequest extends TeaModel {
     /**
      * <p>The name of the AAP that you want to delete.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
