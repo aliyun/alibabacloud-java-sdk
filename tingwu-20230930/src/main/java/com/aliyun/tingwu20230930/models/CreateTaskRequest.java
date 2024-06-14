@@ -255,15 +255,29 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersExtraParams extends TeaModel {
+        @NameInMap("DomainEducationEnabled")
+        public Boolean domainEducationEnabled;
+
         @NameInMap("MaxKeywords")
         public Integer maxKeywords;
 
         @NameInMap("NfixEnabled")
         public Boolean nfixEnabled;
 
+        @NameInMap("OcrAuxiliaryEnabled")
+        public Boolean ocrAuxiliaryEnabled;
+
         public static CreateTaskRequestParametersExtraParams build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersExtraParams self = new CreateTaskRequestParametersExtraParams();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersExtraParams setDomainEducationEnabled(Boolean domainEducationEnabled) {
+            this.domainEducationEnabled = domainEducationEnabled;
+            return this;
+        }
+        public Boolean getDomainEducationEnabled() {
+            return this.domainEducationEnabled;
         }
 
         public CreateTaskRequestParametersExtraParams setMaxKeywords(Integer maxKeywords) {
@@ -280,6 +294,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getNfixEnabled() {
             return this.nfixEnabled;
+        }
+
+        public CreateTaskRequestParametersExtraParams setOcrAuxiliaryEnabled(Boolean ocrAuxiliaryEnabled) {
+            this.ocrAuxiliaryEnabled = ocrAuxiliaryEnabled;
+            return this;
+        }
+        public Boolean getOcrAuxiliaryEnabled() {
+            return this.ocrAuxiliaryEnabled;
         }
 
     }
