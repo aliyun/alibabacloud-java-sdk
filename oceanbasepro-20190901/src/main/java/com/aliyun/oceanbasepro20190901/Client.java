@@ -1015,6 +1015,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to create a tag.
+     *
      * @param request CreateTagValueRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTagValueResponse
@@ -1052,6 +1054,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to create a tag.
+     *
      * @param request CreateTagValueRequest
      * @return CreateTagValueResponse
      */
@@ -2390,6 +2394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxConnectionLimit)) {
+            body.put("MaxConnectionLimit", request.maxConnectionLimit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -4687,6 +4695,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary 查询租户同步位点信息
+     *
+     * @param request DescribeTenantReadableScnRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTenantReadableScnResponse
+     */
+    public DescribeTenantReadableScnResponse describeTenantReadableScnWithOptions(DescribeTenantReadableScnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTenantReadableScn"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTenantReadableScnResponse());
+    }
+
+    /**
+     * @summary 查询租户同步位点信息
+     *
+     * @param request DescribeTenantReadableScnRequest
+     * @return DescribeTenantReadableScnResponse
+     */
+    public DescribeTenantReadableScnResponse describeTenantReadableScn(DescribeTenantReadableScnRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTenantReadableScnWithOptions(request, runtime);
+    }
+
+    /**
      * @summary You can call this operation to query security check items of an OceanBase Database tenant.
      *
      * @param request DescribeTenantSecurityConfigsRequest
@@ -4783,7 +4837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to view tenant tags.
+     * @summary You can call this operation to query the tags of tenants in a cluster.
      *
      * @param request DescribeTenantTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4822,7 +4876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to view tenant tags.
+     * @summary You can call this operation to query the tags of tenants in a cluster.
      *
      * @param request DescribeTenantTagsRequest
      * @return DescribeTenantTagsResponse
@@ -5919,6 +5973,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @summary You can call this operation to modify the Secure Sockets Layer (SSL) setting for an OceanBase cluster instance.
+     *
+     * @description There is currently no authorization information disclosed in the API.
+     *
+     * @param request ModifyInstanceSSLRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceSSLResponse
+     */
+    public ModifyInstanceSSLResponse modifyInstanceSSLWithOptions(ModifyInstanceSSLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSSL)) {
+            body.put("EnableSSL", request.enableSSL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceSSL"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceSSLResponse());
+    }
+
+    /**
+     * @summary You can call this operation to modify the Secure Sockets Layer (SSL) setting for an OceanBase cluster instance.
+     *
+     * @description There is currently no authorization information disclosed in the API.
+     *
+     * @param request ModifyInstanceSSLRequest
+     * @return ModifyInstanceSSLResponse
+     */
+    public ModifyInstanceSSLResponse modifyInstanceSSL(ModifyInstanceSSLRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceSSLWithOptions(request, runtime);
+    }
+
+    /**
      * @summary You can call this operation to modify the cluster specifications and storage space.
      *
      * @param request ModifyInstanceSpecRequest
@@ -5946,6 +6050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upgradeSpecNative)) {
+            body.put("UpgradeSpecNative", request.upgradeSpecNative);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5977,7 +6085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The returned response.
+     * @summary You can call this operation to modify the tags of a cluster.
      *
      * @param request ModifyInstanceTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6012,7 +6120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The returned response.
+     * @summary You can call this operation to modify the tags of a cluster.
      *
      * @param request ModifyInstanceTagsRequest
      * @return ModifyInstanceTagsResponse
@@ -6521,7 +6629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to modify tenant tags.
+     * @summary You can call this operation to modify the tags of a tenant.
      *
      * @param request ModifyTenantTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6560,7 +6668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to modify tenant tags.
+     * @summary You can call this operation to modify the tags of a tenant.
      *
      * @param request ModifyTenantTagsRequest
      * @return ModifyTenantTagsResponse

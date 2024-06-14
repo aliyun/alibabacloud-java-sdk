@@ -668,6 +668,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Series")
         public String series;
 
+        @NameInMap("SpecType")
+        public String specType;
+
         /**
          * <p>The status of the cluster. Valid values:   </p>
          * <p>- ONLINE: The cluster is running.  </p>
@@ -946,6 +949,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getSeries() {
             return this.series;
+        }
+
+        public DescribeInstancesResponseBodyInstances setSpecType(String specType) {
+            this.specType = specType;
+            return this;
+        }
+        public String getSpecType() {
+            return this.specType;
         }
 
         public DescribeInstancesResponseBodyInstances setState(String state) {

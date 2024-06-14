@@ -1014,6 +1014,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstance extends TeaModel {
+        @NameInMap("AllowModifyInternetAddressConnectionLimit")
+        public Boolean allowModifyInternetAddressConnectionLimit;
+
         /**
          * <p>The operation that you want to perform. <br>Set the value to **DescribeInstance**.</p>
          */
@@ -1179,6 +1182,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("SharedUnitNumLimit")
         public Integer sharedUnitNumLimit;
 
+        @NameInMap("SpecType")
+        public String specType;
+
         /**
          * <p>The information about cluster resources.</p>
          */
@@ -1203,6 +1209,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static DescribeInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyInstance self = new DescribeInstanceResponseBodyInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstance setAllowModifyInternetAddressConnectionLimit(Boolean allowModifyInternetAddressConnectionLimit) {
+            this.allowModifyInternetAddressConnectionLimit = allowModifyInternetAddressConnectionLimit;
+            return this;
+        }
+        public Boolean getAllowModifyInternetAddressConnectionLimit() {
+            return this.allowModifyInternetAddressConnectionLimit;
         }
 
         public DescribeInstanceResponseBodyInstance setAutoRenewal(Boolean autoRenewal) {
@@ -1515,6 +1529,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Integer getSharedUnitNumLimit() {
             return this.sharedUnitNumLimit;
+        }
+
+        public DescribeInstanceResponseBodyInstance setSpecType(String specType) {
+            this.specType = specType;
+            return this;
+        }
+        public String getSpecType() {
+            return this.specType;
         }
 
         public DescribeInstanceResponseBodyInstance setStatus(String status) {

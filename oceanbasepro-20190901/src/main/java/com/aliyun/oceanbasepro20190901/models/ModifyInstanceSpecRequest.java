@@ -46,6 +46,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("UpgradeSpecNative")
+    public Boolean upgradeSpecNative;
+
     public static ModifyInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSpecRequest self = new ModifyInstanceSpecRequest();
         return TeaModel.build(map, self);
@@ -89,6 +92,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyInstanceSpecRequest setUpgradeSpecNative(Boolean upgradeSpecNative) {
+        this.upgradeSpecNative = upgradeSpecNative;
+        return this;
+    }
+    public Boolean getUpgradeSpecNative() {
+        return this.upgradeSpecNative;
     }
 
 }

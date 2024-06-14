@@ -39,7 +39,7 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
 
     public static class DescribeTenantTagsResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;

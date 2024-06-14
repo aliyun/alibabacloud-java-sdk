@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTagsRequest extends TeaModel {
     /**
-     * <p>The tags.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      * <br>
      * <p>This parameter is required.</p>
      */
@@ -13,7 +13,7 @@ public class ModifyInstanceTagsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>You can call this operation to modify the value of the cluster tags.</p>
+     * <p>The tags.</p>
      * <br>
      * <p>This parameter is required.</p>
      */

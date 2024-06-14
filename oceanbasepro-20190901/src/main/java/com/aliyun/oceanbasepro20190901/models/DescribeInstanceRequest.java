@@ -12,6 +12,9 @@ public class DescribeInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaxConnectionLimit")
+    public String maxConnectionLimit;
+
     /**
      * <p>The information about the storage resources of the cluster.</p>
      */
@@ -29,6 +32,14 @@ public class DescribeInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstanceRequest setMaxConnectionLimit(String maxConnectionLimit) {
+        this.maxConnectionLimit = maxConnectionLimit;
+        return this;
+    }
+    public String getMaxConnectionLimit() {
+        return this.maxConnectionLimit;
     }
 
     public DescribeInstanceRequest setPageNumber(Integer pageNumber) {

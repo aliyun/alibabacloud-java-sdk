@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantTagsResponseBody extends TeaModel {
     /**
-     * <p>The update status of the tags.</p>
+     * <p>The tag modification result.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
