@@ -290,6 +290,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("AddressType")
         public String addressType;
 
+        @NameInMap("ConnectionLogicalZones")
+        public java.util.List<String> connectionLogicalZones;
+
         @NameInMap("ConnectionReplicaType")
         public String connectionReplicaType;
 
@@ -314,11 +317,20 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("InternetAddressStatus")
         public String internetAddressStatus;
 
+        @NameInMap("InternetMaxConnectionLimit")
+        public Long internetMaxConnectionLimit;
+
+        @NameInMap("InternetMaxConnectionNum")
+        public Long internetMaxConnectionNum;
+
         /**
          * <p>实例类型</p>
          */
         @NameInMap("InternetPort")
         public Integer internetPort;
+
+        @NameInMap("InternetRpcPort")
+        public Integer internetRpcPort;
 
         /**
          * <p>The deployment type of the cluster. Valid values:  </p>
@@ -353,11 +365,20 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         public Integer intranetPort;
 
+        @NameInMap("IntranetRpcPort")
+        public Integer intranetRpcPort;
+
+        @NameInMap("MaxConnectionLimit")
+        public Long maxConnectionLimit;
+
         @NameInMap("MaxConnectionNum")
         public Long maxConnectionNum;
 
         @NameInMap("ParallelQueryDegree")
         public Long parallelQueryDegree;
+
+        @NameInMap("ProxyClusterId")
+        public String proxyClusterId;
 
         @NameInMap("TenantEndpointId")
         public String tenantEndpointId;
@@ -394,6 +415,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getAddressType() {
             return this.addressType;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setConnectionLogicalZones(java.util.List<String> connectionLogicalZones) {
+            this.connectionLogicalZones = connectionLogicalZones;
+            return this;
+        }
+        public java.util.List<String> getConnectionLogicalZones() {
+            return this.connectionLogicalZones;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setConnectionReplicaType(String connectionReplicaType) {
@@ -436,12 +465,36 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.internetAddressStatus;
         }
 
+        public DescribeTenantResponseBodyTenantTenantConnections setInternetMaxConnectionLimit(Long internetMaxConnectionLimit) {
+            this.internetMaxConnectionLimit = internetMaxConnectionLimit;
+            return this;
+        }
+        public Long getInternetMaxConnectionLimit() {
+            return this.internetMaxConnectionLimit;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setInternetMaxConnectionNum(Long internetMaxConnectionNum) {
+            this.internetMaxConnectionNum = internetMaxConnectionNum;
+            return this;
+        }
+        public Long getInternetMaxConnectionNum() {
+            return this.internetMaxConnectionNum;
+        }
+
         public DescribeTenantResponseBodyTenantTenantConnections setInternetPort(Integer internetPort) {
             this.internetPort = internetPort;
             return this;
         }
         public Integer getInternetPort() {
             return this.internetPort;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setInternetRpcPort(Integer internetRpcPort) {
+            this.internetRpcPort = internetRpcPort;
+            return this;
+        }
+        public Integer getInternetRpcPort() {
+            return this.internetRpcPort;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setIntranetAddress(String intranetAddress) {
@@ -484,6 +537,22 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.intranetPort;
         }
 
+        public DescribeTenantResponseBodyTenantTenantConnections setIntranetRpcPort(Integer intranetRpcPort) {
+            this.intranetRpcPort = intranetRpcPort;
+            return this;
+        }
+        public Integer getIntranetRpcPort() {
+            return this.intranetRpcPort;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setMaxConnectionLimit(Long maxConnectionLimit) {
+            this.maxConnectionLimit = maxConnectionLimit;
+            return this;
+        }
+        public Long getMaxConnectionLimit() {
+            return this.maxConnectionLimit;
+        }
+
         public DescribeTenantResponseBodyTenantTenantConnections setMaxConnectionNum(Long maxConnectionNum) {
             this.maxConnectionNum = maxConnectionNum;
             return this;
@@ -498,6 +567,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Long getParallelQueryDegree() {
             return this.parallelQueryDegree;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setProxyClusterId(String proxyClusterId) {
+            this.proxyClusterId = proxyClusterId;
+            return this;
+        }
+        public String getProxyClusterId() {
+            return this.proxyClusterId;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setTenantEndpointId(String tenantEndpointId) {
@@ -1145,6 +1222,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("ReadOnlyResource")
         public DescribeTenantResponseBodyTenantReadOnlyResource readOnlyResource;
 
+        @NameInMap("RecycleBinStatus")
+        public String recycleBinStatus;
+
         /**
          * <p><DescribeTenantResponse></p>
          * <p>    <RequestId>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</RequestId></p>
@@ -1461,6 +1541,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public DescribeTenantResponseBodyTenantReadOnlyResource getReadOnlyResource() {
             return this.readOnlyResource;
+        }
+
+        public DescribeTenantResponseBodyTenant setRecycleBinStatus(String recycleBinStatus) {
+            this.recycleBinStatus = recycleBinStatus;
+            return this;
+        }
+        public String getRecycleBinStatus() {
+            return this.recycleBinStatus;
         }
 
         public DescribeTenantResponseBodyTenant setSeries(String series) {

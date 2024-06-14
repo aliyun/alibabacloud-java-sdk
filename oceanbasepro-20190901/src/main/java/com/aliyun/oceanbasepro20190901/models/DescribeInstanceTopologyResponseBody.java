@@ -37,6 +37,233 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu extends TeaModel {
+        @NameInMap("TotalCpu")
+        public Integer totalCpu;
+
+        @NameInMap("UsedCpu")
+        public Integer usedCpu;
+
+        public static DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu self = new DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu setTotalCpu(Integer totalCpu) {
+            this.totalCpu = totalCpu;
+            return this;
+        }
+        public Integer getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu setUsedCpu(Integer usedCpu) {
+            this.usedCpu = usedCpu;
+            return this;
+        }
+        public Integer getUsedCpu() {
+            return this.usedCpu;
+        }
+
+    }
+
+    public static class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize extends TeaModel {
+        @NameInMap("TotalDiskSize")
+        public Long totalDiskSize;
+
+        @NameInMap("UsedDiskSize")
+        public Float usedDiskSize;
+
+        public static DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize self = new DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize setTotalDiskSize(Long totalDiskSize) {
+            this.totalDiskSize = totalDiskSize;
+            return this;
+        }
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize setUsedDiskSize(Float usedDiskSize) {
+            this.usedDiskSize = usedDiskSize;
+            return this;
+        }
+        public Float getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+    }
+
+    public static class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory extends TeaModel {
+        @NameInMap("TotalMemory")
+        public Long totalMemory;
+
+        @NameInMap("UsedMemory")
+        public Long usedMemory;
+
+        public static DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory self = new DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory setTotalMemory(Long totalMemory) {
+            this.totalMemory = totalMemory;
+            return this;
+        }
+        public Long getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory setUsedMemory(Long usedMemory) {
+            this.usedMemory = usedMemory;
+            return this;
+        }
+        public Long getUsedMemory() {
+            return this.usedMemory;
+        }
+
+    }
+
+    public static class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource extends TeaModel {
+        @NameInMap("Cpu")
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu cpu;
+
+        @NameInMap("DiskSize")
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize diskSize;
+
+        @NameInMap("Memory")
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory memory;
+
+        public static DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource self = new DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource setCpu(DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceCpu getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource setDiskSize(DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceDiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource setMemory(DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory memory) {
+            this.memory = memory;
+            return this;
+        }
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResourceMemory getMemory() {
+            return this.memory;
+        }
+
+    }
+
+    public static class DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas extends TeaModel {
+        @NameInMap("LogicalZone")
+        public String logicalZone;
+
+        @NameInMap("NodeNum")
+        public Integer nodeNum;
+
+        @NameInMap("ReplicaResource")
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource replicaResource;
+
+        @NameInMap("ReplicaType")
+        public String replicaType;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("ZoneLogicalId")
+        public Integer zoneLogicalId;
+
+        @NameInMap("ZoneLogicalName")
+        public String zoneLogicalName;
+
+        @NameInMap("ZoneRegionName")
+        public String zoneRegionName;
+
+        public static DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas self = new DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setLogicalZone(String logicalZone) {
+            this.logicalZone = logicalZone;
+            return this;
+        }
+        public String getLogicalZone() {
+            return this.logicalZone;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setNodeNum(Integer nodeNum) {
+            this.nodeNum = nodeNum;
+            return this;
+        }
+        public Integer getNodeNum() {
+            return this.nodeNum;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setReplicaResource(DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource replicaResource) {
+            this.replicaResource = replicaResource;
+            return this;
+        }
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicasReplicaResource getReplicaResource() {
+            return this.replicaResource;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setReplicaType(String replicaType) {
+            this.replicaType = replicaType;
+            return this;
+        }
+        public String getReplicaType() {
+            return this.replicaType;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setZoneLogicalId(Integer zoneLogicalId) {
+            this.zoneLogicalId = zoneLogicalId;
+            return this;
+        }
+        public Integer getZoneLogicalId() {
+            return this.zoneLogicalId;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setZoneLogicalName(String zoneLogicalName) {
+            this.zoneLogicalName = zoneLogicalName;
+            return this;
+        }
+        public String getZoneLogicalName() {
+            return this.zoneLogicalName;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setZoneRegionName(String zoneRegionName) {
+            this.zoneRegionName = zoneRegionName;
+            return this;
+        }
+        public String getZoneRegionName() {
+            return this.zoneRegionName;
+        }
+
+    }
+
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits extends TeaModel {
         /**
          * <p>Indicates whether the migration can be canceled.   </p>
@@ -191,6 +418,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("IsPrimaryTenantZone")
         public Boolean isPrimaryTenantZone;
 
+        @NameInMap("LogicalZone")
+        public String logicalZone;
+
+        @NameInMap("ReplicaType")
+        public String replicaType;
+
         /**
          * <p>The server with the highest disk usage.</p>
          */
@@ -220,6 +453,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public Boolean getIsPrimaryTenantZone() {
             return this.isPrimaryTenantZone;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones setLogicalZone(String logicalZone) {
+            this.logicalZone = logicalZone;
+            return this;
+        }
+        public String getLogicalZone() {
+            return this.logicalZone;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones setReplicaType(String replicaType) {
+            this.replicaType = replicaType;
+            return this;
+        }
+        public String getReplicaType() {
+            return this.replicaType;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZones setTenantZoneId(String tenantZoneId) {
@@ -267,6 +516,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("TenantDeployType")
         public String tenantDeployType;
 
+        @NameInMap("TenantDiskSize")
+        public Float tenantDiskSize;
+
         /**
          * <p>The size of used memory of the node, in GB.</p>
          */
@@ -296,6 +548,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          */
         @NameInMap("TenantStatus")
         public String tenantStatus;
+
+        @NameInMap("TenantUnitCpu")
+        public Float tenantUnitCpu;
+
+        @NameInMap("TenantUnitMemory")
+        public Float tenantUnitMemory;
 
         /**
          * <p>The number of CPU cores of the tenant.</p>
@@ -338,6 +596,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.tenantDeployType;
         }
 
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenants setTenantDiskSize(Float tenantDiskSize) {
+            this.tenantDiskSize = tenantDiskSize;
+            return this;
+        }
+        public Float getTenantDiskSize() {
+            return this.tenantDiskSize;
+        }
+
         public DescribeInstanceTopologyResponseBodyInstanceTopologyTenants setTenantId(String tenantId) {
             this.tenantId = tenantId;
             return this;
@@ -376,6 +642,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public String getTenantStatus() {
             return this.tenantStatus;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenants setTenantUnitCpu(Float tenantUnitCpu) {
+            this.tenantUnitCpu = tenantUnitCpu;
+            return this;
+        }
+        public Float getTenantUnitCpu() {
+            return this.tenantUnitCpu;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenants setTenantUnitMemory(Float tenantUnitMemory) {
+            this.tenantUnitMemory = tenantUnitMemory;
+            return this;
+        }
+        public Float getTenantUnitMemory() {
+            return this.tenantUnitMemory;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopologyTenants setTenantUnitNum(Integer tenantUnitNum) {
@@ -569,6 +851,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("FullCopyId")
         public Long fullCopyId;
 
+        @NameInMap("LogicalZone")
+        public String logicalZone;
+
         /**
          * <p>The information of zones.</p>
          */
@@ -610,6 +895,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public Long getFullCopyId() {
             return this.fullCopyId;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setLogicalZone(String logicalZone) {
+            this.logicalZone = logicalZone;
+            return this;
+        }
+        public String getLogicalZone() {
+            return this.logicalZone;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setNodeCopyId(Long nodeCopyId) {
@@ -793,6 +1086,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopology extends TeaModel {
+        @NameInMap("Replicas")
+        public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas> replicas;
+
         /**
          * <p>The total number of CPU cores for the node.</p>
          */
@@ -808,6 +1104,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public static DescribeInstanceTopologyResponseBodyInstanceTopology build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTopologyResponseBodyInstanceTopology self = new DescribeInstanceTopologyResponseBodyInstanceTopology();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopology setReplicas(java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas> replicas) {
+            this.replicas = replicas;
+            return this;
+        }
+        public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas> getReplicas() {
+            return this.replicas;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopology setTenants(java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyTenants> tenants) {

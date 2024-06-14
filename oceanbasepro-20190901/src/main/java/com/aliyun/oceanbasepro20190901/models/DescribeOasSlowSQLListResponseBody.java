@@ -1209,13 +1209,13 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
          * <p>Number of occurrences of code 4012 during the execution period.</p>
          */
         @NameInMap("RetCode4012Count")
-        public Double retCode4012Count;
+        public Long retCode4012Count;
 
         /**
          * <p>Number of occurrences of code 4013 during the execution period.</p>
          */
         @NameInMap("RetCode4013Count")
-        public Double retCode4013Count;
+        public Long retCode4013Count;
 
         /**
          * <p>Number of occurrences of code 5001 during the execution period.</p>
@@ -1784,19 +1784,19 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             return this.remotePlans;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode4012Count(Double retCode4012Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode4012Count(Long retCode4012Count) {
             this.retCode4012Count = retCode4012Count;
             return this;
         }
-        public Double getRetCode4012Count() {
+        public Long getRetCode4012Count() {
             return this.retCode4012Count;
         }
 
-        public DescribeOasSlowSQLListResponseBodyData setRetCode4013Count(Double retCode4013Count) {
+        public DescribeOasSlowSQLListResponseBodyData setRetCode4013Count(Long retCode4013Count) {
             this.retCode4013Count = retCode4013Count;
             return this;
         }
-        public Double getRetCode4013Count() {
+        public Long getRetCode4013Count() {
             return this.retCode4013Count;
         }
 

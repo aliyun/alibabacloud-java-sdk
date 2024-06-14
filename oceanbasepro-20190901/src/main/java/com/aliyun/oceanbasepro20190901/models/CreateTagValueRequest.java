@@ -4,16 +4,23 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateTagValueRequest extends TeaModel {
+    /**
+     * <p>The identifier of the client.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The name of the tag group.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
+     * <p>The name of the tag.</p>
+     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Value")
