@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class CreateIndexRequest extends TeaModel {
+    @NameInMap("buildParallelNum")
+    public Integer buildParallelNum;
+
     /**
      * <p>The content of the index.</p>
      */
@@ -34,6 +37,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
 
+    @NameInMap("mergeParallelNum")
+    public Integer mergeParallelNum;
+
     /**
      * <p>The name of the index.</p>
      */
@@ -52,6 +58,14 @@ public class CreateIndexRequest extends TeaModel {
     public static CreateIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIndexRequest self = new CreateIndexRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateIndexRequest setBuildParallelNum(Integer buildParallelNum) {
+        this.buildParallelNum = buildParallelNum;
+        return this;
+    }
+    public Integer getBuildParallelNum() {
+        return this.buildParallelNum;
     }
 
     public CreateIndexRequest setContent(String content) {
@@ -92,6 +106,14 @@ public class CreateIndexRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getExtend() {
         return this.extend;
+    }
+
+    public CreateIndexRequest setMergeParallelNum(Integer mergeParallelNum) {
+        this.mergeParallelNum = mergeParallelNum;
+        return this;
+    }
+    public Integer getMergeParallelNum() {
+        return this.mergeParallelNum;
     }
 
     public CreateIndexRequest setName(String name) {
@@ -315,6 +337,9 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("processParallelNum")
+        public Integer processParallelNum;
+
         /**
          * <p>The number of resources used for data update.</p>
          */
@@ -373,6 +398,14 @@ public class CreateIndexRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateIndexRequestDataSourceInfo setProcessParallelNum(Integer processParallelNum) {
+            this.processParallelNum = processParallelNum;
+            return this;
+        }
+        public Integer getProcessParallelNum() {
+            return this.processParallelNum;
         }
 
         public CreateIndexRequestDataSourceInfo setProcessPartitionCount(Integer processPartitionCount) {

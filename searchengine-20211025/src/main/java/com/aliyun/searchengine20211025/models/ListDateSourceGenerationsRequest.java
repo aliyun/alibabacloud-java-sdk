@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListDateSourceGenerationsRequest extends TeaModel {
     /**
      * <p>The data center where the data source is deployed.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("domainName")
     public String domainName;

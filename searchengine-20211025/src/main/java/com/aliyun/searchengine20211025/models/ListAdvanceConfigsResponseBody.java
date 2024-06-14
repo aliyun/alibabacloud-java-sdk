@@ -102,11 +102,17 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAdvanceConfigsResponseBodyResult extends TeaModel {
+        @NameInMap("advanceConfigType")
+        public String advanceConfigType;
+
         @NameInMap("content")
         public String content;
 
         @NameInMap("contentType")
         public String contentType;
+
+        @NameInMap("creator")
+        public String creator;
 
         /**
          * <p>The description.</p>
@@ -143,6 +149,14 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListAdvanceConfigsResponseBodyResult setAdvanceConfigType(String advanceConfigType) {
+            this.advanceConfigType = advanceConfigType;
+            return this;
+        }
+        public String getAdvanceConfigType() {
+            return this.advanceConfigType;
+        }
+
         public ListAdvanceConfigsResponseBodyResult setContent(String content) {
             this.content = content;
             return this;
@@ -157,6 +171,14 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
         public String getContentType() {
             return this.contentType;
+        }
+
+        public ListAdvanceConfigsResponseBodyResult setCreator(String creator) {
+            this.creator = creator;
+            return this;
+        }
+        public String getCreator() {
+            return this.creator;
         }
 
         public ListAdvanceConfigsResponseBodyResult setDesc(String desc) {

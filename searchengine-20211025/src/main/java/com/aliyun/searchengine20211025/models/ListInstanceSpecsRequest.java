@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListInstanceSpecsRequest extends TeaModel {
     /**
      * <p>The node type. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;

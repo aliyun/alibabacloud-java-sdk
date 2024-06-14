@@ -23,13 +23,13 @@ public class BuildIndexRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The timestamp in seconds. It is of the INT type. This parameter is required for the API-pushed data source.</p>
+     * <p>The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.</p>
      */
     @NameInMap("dataTimeSec")
     public Integer dataTimeSec;
 
     /**
-     * <p>The data center where the data source is deployed.</p>
+     * <p>The data center in which the data source resides.</p>
      */
     @NameInMap("domain")
     public String domain;
@@ -41,7 +41,7 @@ public class BuildIndexRequest extends TeaModel {
     public Long generation;
 
     /**
-     * <p>This parameter is required for the odps data source.</p>
+     * <p>The data partition. This parameter is required if dataSourceType is set to odps.</p>
      */
     @NameInMap("partition")
     public String partition;

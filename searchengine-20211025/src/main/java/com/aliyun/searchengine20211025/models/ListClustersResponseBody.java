@@ -138,11 +138,17 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyResult extends TeaModel {
+        @NameInMap("config")
+        public java.util.Map<String, java.util.Map<String, ?>> config;
+
         /**
          * <p>The time when the configuration was updated.</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
+
+        @NameInMap("createTime")
+        public String createTime;
 
         /**
          * <p>The effective advanced version.</p>
@@ -227,12 +233,28 @@ public class ListClustersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListClustersResponseBodyResult setConfig(java.util.Map<String, java.util.Map<String, ?>> config) {
+            this.config = config;
+            return this;
+        }
+        public java.util.Map<String, java.util.Map<String, ?>> getConfig() {
+            return this.config;
+        }
+
         public ListClustersResponseBodyResult setConfigUpdateTime(String configUpdateTime) {
             this.configUpdateTime = configUpdateTime;
             return this;
         }
         public String getConfigUpdateTime() {
             return this.configUpdateTime;
+        }
+
+        public ListClustersResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListClustersResponseBodyResult setCurrentAdvanceConfigVersion(String currentAdvanceConfigVersion) {

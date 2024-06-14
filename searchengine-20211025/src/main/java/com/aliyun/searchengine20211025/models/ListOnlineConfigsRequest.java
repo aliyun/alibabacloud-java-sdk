@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class ListOnlineConfigsRequest extends TeaModel {
     /**
      * <p>The name of the domain</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("domain")
     public String domain;
