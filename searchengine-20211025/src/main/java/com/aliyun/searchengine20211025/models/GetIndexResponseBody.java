@@ -225,6 +225,9 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("processParallelNum")
+        public Integer processParallelNum;
+
         /**
          * <p>The number of resources used for data update.</p>
          */
@@ -278,6 +281,14 @@ public class GetIndexResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setProcessParallelNum(Integer processParallelNum) {
+            this.processParallelNum = processParallelNum;
+            return this;
+        }
+        public Integer getProcessParallelNum() {
+            return this.processParallelNum;
         }
 
         public GetIndexResponseBodyResultDataSourceInfo setProcessPartitionCount(Integer processPartitionCount) {
@@ -460,6 +471,15 @@ public class GetIndexResponseBody extends TeaModel {
     }
 
     public static class GetIndexResponseBodyResult extends TeaModel {
+        @NameInMap("cluster")
+        public java.util.Map<String, ResultClusterValue> cluster;
+
+        @NameInMap("config")
+        public java.util.Map<String, java.util.Map<String, ?>> config;
+
+        @NameInMap("configWhenBuild")
+        public java.util.Map<String, java.util.Map<String, ?>> configWhenBuild;
+
         /**
          * <p>The content of the index.</p>
          */
@@ -532,6 +552,30 @@ public class GetIndexResponseBody extends TeaModel {
         public static GetIndexResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetIndexResponseBodyResult self = new GetIndexResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetIndexResponseBodyResult setCluster(java.util.Map<String, ResultClusterValue> cluster) {
+            this.cluster = cluster;
+            return this;
+        }
+        public java.util.Map<String, ResultClusterValue> getCluster() {
+            return this.cluster;
+        }
+
+        public GetIndexResponseBodyResult setConfig(java.util.Map<String, java.util.Map<String, ?>> config) {
+            this.config = config;
+            return this;
+        }
+        public java.util.Map<String, java.util.Map<String, ?>> getConfig() {
+            return this.config;
+        }
+
+        public GetIndexResponseBodyResult setConfigWhenBuild(java.util.Map<String, java.util.Map<String, ?>> configWhenBuild) {
+            this.configWhenBuild = configWhenBuild;
+            return this;
+        }
+        public java.util.Map<String, java.util.Map<String, ?>> getConfigWhenBuild() {
+            return this.configWhenBuild;
         }
 
         public GetIndexResponseBodyResult setContent(String content) {

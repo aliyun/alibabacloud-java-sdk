@@ -86,6 +86,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("number")
         public Integer number;
 
+        @NameInMap("partition")
+        public String partition;
+
         public static CreateClusterRequestDataNode build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterRequestDataNode self = new CreateClusterRequestDataNode();
             return TeaModel.build(map, self);
@@ -97,6 +100,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public Integer getNumber() {
             return this.number;
+        }
+
+        public CreateClusterRequestDataNode setPartition(String partition) {
+            this.partition = partition;
+            return this;
+        }
+        public String getPartition() {
+            return this.partition;
         }
 
     }

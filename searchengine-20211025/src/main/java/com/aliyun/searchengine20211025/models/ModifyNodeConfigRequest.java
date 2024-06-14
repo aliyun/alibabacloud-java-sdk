@@ -4,21 +4,39 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodeConfigRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the index.</p>
+     */
     @NameInMap("active")
     public Boolean active;
 
+    /**
+     * <p>The number of data replicas.</p>
+     */
     @NameInMap("dataDuplicateNumber")
     public Integer dataDuplicateNumber;
 
+    /**
+     * <p>The number of data shards.</p>
+     */
     @NameInMap("dataFragmentNumber")
     public Integer dataFragmentNumber;
 
+    /**
+     * <p>The traffic percentage.</p>
+     */
     @NameInMap("flowRatio")
     public Integer flowRatio;
 
+    /**
+     * <p>The minimum service ratio.</p>
+     */
     @NameInMap("minServicePercent")
     public Integer minServicePercent;
 
+    /**
+     * <p>Specifies whether to mount the cluster.</p>
+     */
     @NameInMap("published")
     public Boolean published;
 
@@ -36,6 +54,8 @@ public class ModifyNodeConfigRequest extends TeaModel {
 
     /**
      * <p>The original name of the node.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("name")
     public String name;
@@ -48,6 +68,8 @@ public class ModifyNodeConfigRequest extends TeaModel {
      * <p>*   hot indicates the top search model.</p>
      * <p>*   hint indicates the hint model.</p>
      * <p>*   suggest indicates the drop-down suggestion model.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;

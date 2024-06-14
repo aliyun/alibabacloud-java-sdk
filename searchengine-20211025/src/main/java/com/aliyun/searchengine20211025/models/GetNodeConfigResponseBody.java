@@ -11,7 +11,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result set.</p>
+     * <p>The configurations of the node.</p>
      */
     @NameInMap("result")
     public GetNodeConfigResponseBodyResult result;
@@ -56,6 +56,9 @@ public class GetNodeConfigResponseBody extends TeaModel {
         @NameInMap("dataFragmentNumber")
         public Integer dataFragmentNumber;
 
+        /**
+         * <p>The traffic percentage.</p>
+         */
         @NameInMap("flowRatio")
         public Integer flowRatio;
 
