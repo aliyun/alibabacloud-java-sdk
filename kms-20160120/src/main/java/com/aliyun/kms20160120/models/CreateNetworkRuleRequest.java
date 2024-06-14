@@ -12,6 +12,8 @@ public class CreateNetworkRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the access control rule.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -26,6 +28,8 @@ public class CreateNetworkRuleRequest extends TeaModel {
      * <p>The network type.</p>
      * <br>
      * <p>Only private IP addresses are supported. Set the value to Private.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Type")
     public String type;

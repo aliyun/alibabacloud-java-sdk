@@ -35,6 +35,8 @@ public class TagResourceRequest extends TeaModel {
      * <br>
      * <p>*   TagKey: the tag key.</p>
      * <p>*   TagValue: the tag value.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tags")
     public String tags;

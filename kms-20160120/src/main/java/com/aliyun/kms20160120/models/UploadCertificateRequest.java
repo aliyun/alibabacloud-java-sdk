@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class UploadCertificateRequest extends TeaModel {
     /**
      * <p>The certificate issued by the CA, which is in the Privacy Enhanced Mail (PEM) format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Certificate")
     public String certificate;
@@ -18,6 +20,8 @@ public class UploadCertificateRequest extends TeaModel {
 
     /**
      * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;

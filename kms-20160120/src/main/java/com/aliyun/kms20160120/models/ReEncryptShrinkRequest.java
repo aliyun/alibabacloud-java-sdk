@@ -9,8 +9,10 @@ public class ReEncryptShrinkRequest extends TeaModel {
      * <br>
      * <p>You can set this parameter to the ciphertext that is returned after a symmetric or asymmetric encryption operation.</p>
      * <br>
-     * <p>*   Symmetric encryption: the ciphertext returned after you call the [Encrypt](~~28949~~), [GenerateDataKey](~~28948~~), [GenerateDataKeyWithoutPlaintext](~~134043~~), or [GenerateAndExportDataKey](~~176804~~) operation</p>
-     * <p>*   Asymmetric encryption: the public key-encrypted ciphertext returned after you call the [GenerateAndExportDataKey](~~176804~~) operation, or the ciphertext encrypted by using the public key of an asymmetric key pair outside KMS</p>
+     * <p>*   Symmetric encryption: the ciphertext returned after you call the [Encrypt](https://help.aliyun.com/document_detail/28949.html), [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html), [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html), or [GenerateAndExportDataKey](https://help.aliyun.com/document_detail/176804.html) operation</p>
+     * <p>*   Asymmetric encryption: the public key-encrypted ciphertext returned after you call the [GenerateAndExportDataKey](https://help.aliyun.com/document_detail/176804.html) operation, or the ciphertext encrypted by using the public key of an asymmetric key pair outside KMS</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
@@ -23,17 +25,19 @@ public class ReEncryptShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the symmetric CMK that is used to re-encrypt the ciphertext after the ciphertext is decrypted.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationKeyId")
     public String destinationKeyId;
 
     /**
-     * <p>The encryption algorithm based on which the public key is used to encrypt the ciphertext specified by CiphertextBlob. For more information about encryption algorithms, see [AsymmetricDecrypt](~~148130~~).</p>
+     * <p>The encryption algorithm based on which the public key is used to encrypt the ciphertext specified by CiphertextBlob. For more information about encryption algorithms, see [AsymmetricDecrypt](https://help.aliyun.com/document_detail/148130.html).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   RSAES_OAEP_SHA\_256</p>
-     * <p>*   RSAES_OAEP_SHA\_1</p>
+     * <p>*   RSAES_OAEP_SHA_256</p>
+     * <p>*   RSAES_OAEP_SHA_1</p>
      * <p>*   SM2PKE</p>
      * <br>
      * <p>>  If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.</p>
@@ -42,7 +46,7 @@ public class ReEncryptShrinkRequest extends TeaModel {
     public String sourceEncryptionAlgorithm;
 
     /**
-     * <p>A JSON string that consists of key-value pairs. If you specify EncryptionContext when you call the [Encrypt](~~28949~~), [GenerateDataKey](~~28948~~), [GenerateDataKeyWithoutPlaintext](~~134043~~), or [GenerateAndExportDataKey](~~176804~~) operation to encrypt the data or data key, an equivalent value is required here. For more information, see [EncryptionContext](~~42975~~).</p>
+     * <p>A JSON string that consists of key-value pairs. If you specify EncryptionContext when you call the [Encrypt](https://help.aliyun.com/document_detail/28949.html), [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html), [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html), or [GenerateAndExportDataKey](https://help.aliyun.com/document_detail/176804.html) operation to encrypt the data or data key, an equivalent value is required here. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).</p>
      * <br>
      * <p>>  If you set CiphertextBlob to the ciphertext that is returned after a symmetric encryption operation, specify this parameter.</p>
      */

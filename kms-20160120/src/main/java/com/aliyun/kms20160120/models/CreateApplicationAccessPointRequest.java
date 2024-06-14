@@ -18,6 +18,8 @@ public class CreateApplicationAccessPointRequest extends TeaModel {
 
     /**
      * <p>The name of the AAP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -26,6 +28,8 @@ public class CreateApplicationAccessPointRequest extends TeaModel {
      * <p>The permission policy.</p>
      * <br>
      * <p>> You can bind up to three permission policies to each AAP.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Policies")
     public String policies;

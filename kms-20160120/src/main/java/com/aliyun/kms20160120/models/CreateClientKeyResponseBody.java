@@ -29,7 +29,7 @@ public class CreateClientKeyResponseBody extends TeaModel {
     public String notBefore;
 
     /**
-     * <p>The algorithm that is used to encrypt the private key of the client key. Currently, only RSA\_2048 is supported.</p>
+     * <p>The algorithm that is used to encrypt the private key of the client key. Currently, only RSA_2048 is supported.</p>
      */
     @NameInMap("PrivateKeyData")
     public String privateKeyData;

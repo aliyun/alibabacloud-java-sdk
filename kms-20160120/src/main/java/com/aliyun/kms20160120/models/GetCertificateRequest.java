@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class GetCertificateRequest extends TeaModel {
     /**
      * <p>The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Certificates Manager.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;

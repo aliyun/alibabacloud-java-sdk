@@ -7,7 +7,9 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~601478~~) to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) to query the most recent region list.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -16,6 +18,8 @@ public class TagResourcesRequest extends TeaModel {
      * <p>The IDs of the resources to which you want to add tags. You can enter a maximum of 50 resource IDs.</p>
      * <br>
      * <p>Enter multiple resource IDs in the `["ResourceId. 1","ResourceId. 2",...]` format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -25,6 +29,8 @@ public class TagResourcesRequest extends TeaModel {
      * <br>
      * <p>*   key</p>
      * <p>*   secret</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -33,6 +39,8 @@ public class TagResourcesRequest extends TeaModel {
      * <p>A list of tags. You can enter up to 20 tags.</p>
      * <br>
      * <p>A tag consists of a key-value pair. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -80,7 +88,7 @@ public class TagResourcesRequest extends TeaModel {
          * <br>
          * <p>You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.</p>
          * <br>
-         * <p>Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (\_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
+         * <p>Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
          * <br>
          * <p>>  The key cannot start with aliyun or acs:.</p>
          */
@@ -92,7 +100,7 @@ public class TagResourcesRequest extends TeaModel {
          * <br>
          * <p>You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.</p>
          * <br>
-         * <p>Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (\_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
+         * <p>Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\\\), underscores (_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).</p>
          */
         @NameInMap("Value")
         public String value;

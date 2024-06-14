@@ -56,6 +56,8 @@ public class CreateSecretShrinkRequest extends TeaModel {
 
     /**
      * <p>The tags of the secret.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretData")
     public String secretData;
@@ -113,6 +115,8 @@ public class CreateSecretShrinkRequest extends TeaModel {
      * <br>
      * <p>    *   `{"UserName":"","Password": ""}`: In the format, `UserName` specifies the username that is used to log on to the ECS instance, and `Password` specifies the password that is used to log on to the ECS instance.</p>
      * <p>    *   `{"UserName":"","PublicKey": "", "PrivateKey": ""}`: In the format, `PublicKey` indicates the SSH public key that is used to log on to the ECS instance, and `PrivateKey` specifies the SSH private key that is used to log on to the ECS instance.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretName")
     public String secretName;
@@ -142,6 +146,8 @@ public class CreateSecretShrinkRequest extends TeaModel {
      * <p>*   binary</p>
      * <br>
      * <p>>  If you set the SecretType parameter to Rds, RAMCredentials, or ECS, the SecretDataType parameter must be set to text.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("VersionId")
     public String versionId;

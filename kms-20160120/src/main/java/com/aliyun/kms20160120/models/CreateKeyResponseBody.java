@@ -101,7 +101,7 @@ public class CreateKeyResponseBody extends TeaModel {
         /**
          * <p>The status of the key.</p>
          * <br>
-         * <p>For more information, see [Impacts of key status on API operations](~~44211~~).</p>
+         * <p>For more information, see [Impacts of key status on API operations](https://help.aliyun.com/document_detail/44211.html).</p>
          */
         @NameInMap("KeyState")
         public String keyState;

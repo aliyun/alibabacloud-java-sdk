@@ -16,9 +16,11 @@ public class CreateCertificateRequest extends TeaModel {
     /**
      * <p>The type of the key. Valid values:</p>
      * <br>
-     * <p>*   RSA\_2048</p>
+     * <p>*   RSA_2048</p>
      * <p>*   EC_P256</p>
      * <p>*   EC_SM2</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeySpec")
     public String keySpec;
@@ -38,6 +40,8 @@ public class CreateCertificateRequest extends TeaModel {
      * <p>*   OU: required. The name of the department.</p>
      * <p>*   ST: optional. The name of the province, municipality, autonomous region, or special administrative region.</p>
      * <p>*   L: optional. The name of the city.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Subject")
     public String subject;

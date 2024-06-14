@@ -17,6 +17,8 @@ public class SetDeletionProtectionRequest extends TeaModel {
      * <br>
      * <p>*   true: enables deletion protection.</p>
      * <p>*   false: disables deletion protection.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EnableDeletionProtection")
     public Boolean enableDeletionProtection;
@@ -24,7 +26,9 @@ public class SetDeletionProtectionRequest extends TeaModel {
     /**
      * <p>The ARN of the CMK for which you want to set deletion protection.</p>
      * <br>
-     * <p>You can call the [DescribeKey](~~28952~~) operation to query the CMK ARN.</p>
+     * <p>You can call the [DescribeKey](https://help.aliyun.com/document_detail/28952.html) operation to query the CMK ARN.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ProtectedResourceArn")
     public String protectedResourceArn;

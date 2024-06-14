@@ -31,6 +31,8 @@ public class ListSecretVersionIdsRequest extends TeaModel {
 
     /**
      * <p>The name of the secret.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("SecretName")
     public String secretName;

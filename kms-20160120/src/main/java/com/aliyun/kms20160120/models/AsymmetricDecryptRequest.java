@@ -6,6 +6,8 @@ import com.aliyun.tea.*;
 public class AsymmetricDecryptRequest extends TeaModel {
     /**
      * <p>The decryption algorithm.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
@@ -14,7 +16,9 @@ public class AsymmetricDecryptRequest extends TeaModel {
      * <p>The ciphertext that you want to decrypt.</p>
      * <br>
      * <p>> * The value is encoded in Base64.</p>
-     * <p>> * You can call the [AsymmetricEncrypt](~~148131~~) operation to generate the ciphertext.</p>
+     * <p>> * You can call the [AsymmetricEncrypt](https://help.aliyun.com/document_detail/148131.html) operation to generate the ciphertext.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CiphertextBlob")
     public String ciphertextBlob;
@@ -22,13 +26,17 @@ public class AsymmetricDecryptRequest extends TeaModel {
     /**
      * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
      * <br>
-     * <p>>  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).</p>
+     * <p>>  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](https://help.aliyun.com/document_detail/68522.html).</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyId")
     public String keyId;
 
     /**
      * <p>The version ID of the CMK. The ID must be globally unique.</p>
+     * <br>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("KeyVersionId")
     public String keyVersionId;

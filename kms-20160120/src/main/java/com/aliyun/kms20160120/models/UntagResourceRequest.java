@@ -16,6 +16,9 @@ public class UntagResourceRequest extends TeaModel {
     @NameInMap("SecretName")
     public String secretName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagKeys")
     public String tagKeys;
 
