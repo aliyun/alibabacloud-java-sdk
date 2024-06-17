@@ -4,6 +4,10 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetOssUploadTokenResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

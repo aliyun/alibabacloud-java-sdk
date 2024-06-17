@@ -16,6 +16,10 @@ public class IllustrationTask extends TeaModel {
     @NameInMap("illustrationTaskId")
     public Long illustrationTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("taskStatus")
     public String taskStatus;
 

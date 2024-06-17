@@ -10,6 +10,10 @@ public class TextQueryResult extends TeaModel {
     @NameInMap("texts")
     public java.util.List<Text> texts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("total")
     public Integer total;
 

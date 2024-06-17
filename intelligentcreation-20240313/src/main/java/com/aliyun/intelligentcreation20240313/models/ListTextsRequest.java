@@ -4,24 +4,52 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListTextsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>API</p>
+     */
     @NameInMap("generationSource")
     public String generationSource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Common</p>
+     */
     @NameInMap("industry")
     public String industry;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLISH</p>
+     */
     @NameInMap("publishStatus")
     public String publishStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WECHAT_MOMENT</p>
+     */
     @NameInMap("textStyleType")
     public String textStyleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("textTheme")
     public String textTheme;
 

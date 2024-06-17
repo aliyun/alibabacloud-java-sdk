@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetOssUploadTokenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8021678.png</p>
      */
     @NameInMap("fileName")
     public String fileName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ProductImage</p>
      */
     @NameInMap("fileType")
     public String fileType;
