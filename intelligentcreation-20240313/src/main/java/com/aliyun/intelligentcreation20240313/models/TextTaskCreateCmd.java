@@ -7,30 +7,53 @@ public class TextTaskCreateCmd extends TeaModel {
     @NameInMap("agentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>极氪007新车上市</p>
+     */
     @NameInMap("contentRequirement")
     public String contentRequirement;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28274623764834</p>
+     */
     @NameInMap("idempotentId")
     public String idempotentId;
 
     @NameInMap("industry")
     public String industry;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("introduction")
     public String introduction;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("number")
     public Integer number;
 
+    /**
+     * <strong>example:</strong>
+     * <p>超强续航</p>
+     */
     @NameInMap("point")
     public String point;
 
     @NameInMap("referenceTag")
     public ReferenceTag referenceTag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("relatedRagIds")
     public java.util.List<Long> relatedRagIds;
 
@@ -49,6 +72,10 @@ public class TextTaskCreateCmd extends TeaModel {
     @NameInMap("textModeType")
     public String textModeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>旅游路线</p>
+     */
     @NameInMap("theme")
     public String theme;
 

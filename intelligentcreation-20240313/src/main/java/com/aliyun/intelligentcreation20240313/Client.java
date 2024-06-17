@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建配图生成任务
-     *
+     * <b>summary</b> : 
+     * <p>创建配图生成任务</p>
+     * 
      * @param request CreateIllustrationTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -55,8 +56,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建配图生成任务
-     *
+     * <b>summary</b> : 
+     * <p>创建配图生成任务</p>
+     * 
      * @param request CreateIllustrationTaskRequest
      * @return CreateIllustrationTaskResponse
      */
@@ -67,8 +69,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建文案生成任务
-     *
+     * <b>summary</b> : 
+     * <p>创建文案生成任务</p>
+     * 
      * @param request CreateTextTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -95,8 +98,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建文案生成任务
-     *
+     * <b>summary</b> : 
+     * <p>创建文案生成任务</p>
+     * 
      * @param request CreateTextTaskRequest
      * @return CreateTextTaskResponse
      */
@@ -107,8 +111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询配图
-     *
+     * <b>summary</b> : 
+     * <p>查询配图</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIllustrationResponse
@@ -132,8 +137,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询配图
-     *
+     * <b>summary</b> : 
+     * <p>查询配图</p>
      * @return GetIllustrationResponse
      */
     public GetIllustrationResponse getIllustration(String textId, String illustrationId) throws Exception {
@@ -143,8 +148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询配图任务
-     *
+     * <b>summary</b> : 
+     * <p>查询配图任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIllustrationTaskResponse
@@ -168,8 +174,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询配图任务
-     *
+     * <b>summary</b> : 
+     * <p>查询配图任务</p>
      * @return GetIllustrationTaskResponse
      */
     public GetIllustrationTaskResponse getIllustrationTask(String textId, String illustrationTaskId) throws Exception {
@@ -179,8 +185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取图片上传oss token
-     *
+     * <b>summary</b> : 
+     * <p>获取图片上传oss token</p>
+     * 
      * @param request GetOssUploadTokenRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -216,8 +223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取图片上传oss token
-     *
+     * <b>summary</b> : 
+     * <p>获取图片上传oss token</p>
+     * 
      * @param request GetOssUploadTokenRequest
      * @return GetOssUploadTokenResponse
      */
@@ -228,8 +236,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询文案
-     *
+     * <b>summary</b> : 
+     * <p>查询文案</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTextResponse
@@ -253,8 +262,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询文案
-     *
+     * <b>summary</b> : 
+     * <p>查询文案</p>
      * @return GetTextResponse
      */
     public GetTextResponse getText(String textId) throws Exception {
@@ -264,8 +273,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询文案任务
-     *
+     * <b>summary</b> : 
+     * <p>查询文案任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTextTaskResponse
@@ -289,8 +299,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询文案任务
-     *
+     * <b>summary</b> : 
+     * <p>查询文案任务</p>
      * @return GetTextTaskResponse
      */
     public GetTextTaskResponse getTextTask(String textTaskId) throws Exception {
@@ -300,8 +310,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询文案主题列表
-     *
+     * <b>summary</b> : 
+     * <p>查询文案主题列表</p>
+     * 
      * @param request ListTextThemesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -333,8 +344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询文案主题列表
-     *
+     * <b>summary</b> : 
+     * <p>查询文案主题列表</p>
+     * 
      * @param request ListTextThemesRequest
      * @return ListTextThemesResponse
      */
@@ -345,8 +357,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举文案
-     *
+     * <b>summary</b> : 
+     * <p>列举文案</p>
+     * 
      * @param request ListTextsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -402,8 +415,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举文案
-     *
+     * <b>summary</b> : 
+     * <p>列举文案</p>
+     * 
      * @param request ListTextsRequest
      * @return ListTextsResponse
      */

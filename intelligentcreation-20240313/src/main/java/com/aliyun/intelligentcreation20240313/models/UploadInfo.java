@@ -6,34 +6,53 @@ import com.aliyun.tea.*;
 public class UploadInfo extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("accessId")
     public String accessId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yic-pre.oss-cn-hangzhou.aliyuncs.com</p>
      */
     @NameInMap("host")
     public String host;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234/temp-novels/xxxx-xxx-xx.txt</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxxx</p>
      */
     @NameInMap("policy")
     public String policy;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxx</p>
      */
     @NameInMap("policySignature")
     public String policySignature;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("url")
     public String url;
 

@@ -12,6 +12,9 @@ public class Text extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("desc")
     public String desc;
@@ -33,10 +36,17 @@ public class Text extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("textId")
     public Long textId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("textIllustrationTag")
     public Boolean textIllustrationTag;
 
@@ -45,6 +55,9 @@ public class Text extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Generating</p>
      */
     @NameInMap("textStatus")
     public String textStatus;
@@ -54,6 +67,9 @@ public class Text extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("textTaskId")
     public Long textTaskId;
@@ -61,17 +77,27 @@ public class Text extends TeaModel {
     @NameInMap("textThemes")
     public java.util.List<String> textThemes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("title")
     public String title;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("userNameCreate")
     public String userNameCreate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("userNameModified")
     public String userNameModified;

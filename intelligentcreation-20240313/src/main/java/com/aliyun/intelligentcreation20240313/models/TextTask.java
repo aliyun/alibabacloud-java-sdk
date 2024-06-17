@@ -10,6 +10,10 @@ public class TextTask extends TeaModel {
     @NameInMap("agentName")
     public String agentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>九寨沟三日游攻略</p>
+     */
     @NameInMap("contentRequirement")
     public String contentRequirement;
 
@@ -24,10 +28,17 @@ public class TextTask extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("nums")
     public Integer nums;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("point")
     public String point;
 
@@ -62,8 +73,12 @@ public class TextTask extends TeaModel {
     public String textTaskStatus;
 
     @NameInMap("texts")
-    public Text texts;
+    public java.util.List<Text> texts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>旅游路线</p>
+     */
     @NameInMap("theme")
     public String theme;
 
@@ -203,11 +218,11 @@ public class TextTask extends TeaModel {
         return this.textTaskStatus;
     }
 
-    public TextTask setTexts(Text texts) {
+    public TextTask setTexts(java.util.List<Text> texts) {
         this.texts = texts;
         return this;
     }
-    public Text getTexts() {
+    public java.util.List<Text> getTexts() {
         return this.texts;
     }
 

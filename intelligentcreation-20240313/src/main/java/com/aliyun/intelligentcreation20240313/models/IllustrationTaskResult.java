@@ -7,6 +7,10 @@ public class IllustrationTaskResult extends TeaModel {
     @NameInMap("illustrationTask")
     public IllustrationTask illustrationTask;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

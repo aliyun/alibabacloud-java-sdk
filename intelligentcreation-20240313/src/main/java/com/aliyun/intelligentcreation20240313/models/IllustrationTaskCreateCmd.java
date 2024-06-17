@@ -4,18 +4,38 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class IllustrationTaskCreateCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0-不换背景，1-换背景</p>
+     */
     @NameInMap("backgroundType")
     public Integer backgroundType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("dstHeight")
     public Integer dstHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("dstWidth")
     public Integer dstWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28274623764834</p>
+     */
     @NameInMap("idempotentId")
     public String idempotentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("nums")
     public Integer nums;
 
