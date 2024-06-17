@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTableResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Map</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListIndexesRequest extends TeaModel {
     /**
      * <p>是否为新版本控制台页面</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("newMode")
     public Boolean newMode;

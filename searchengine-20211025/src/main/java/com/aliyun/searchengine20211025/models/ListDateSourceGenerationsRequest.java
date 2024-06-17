@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class ListDateSourceGenerationsRequest extends TeaModel {
     /**
      * <p>The data center where the data source is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj_vpc_domain_1</p>
      */
     @NameInMap("domainName")
     public String domainName;
 
     /**
      * <p>The valid state of the data source. Valid values: true and false. The default value of this parameter is true.</p>
-     * <br>
-     * <p>1.  true indicates that the generations that have not expired and of which the tasks have been executed are returned.</p>
-     * <p>2.  false indicates that all generations are returned.</p>
+     * <ol>
+     * <li>true indicates that the generations that have not expired and of which the tasks have been executed are returned.</li>
+     * <li>false indicates that all generations are returned.</li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("validStatus")
     public Boolean validStatus;

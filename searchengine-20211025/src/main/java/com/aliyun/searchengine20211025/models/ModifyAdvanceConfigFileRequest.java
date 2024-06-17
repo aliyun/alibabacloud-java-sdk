@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAdvanceConfigFileRequest extends TeaModel {
     /**
      * <p>The content of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;ha3&quot;</p>
      */
     @NameInMap("content")
     public String content;
@@ -18,8 +21,10 @@ public class ModifyAdvanceConfigFileRequest extends TeaModel {
 
     /**
      * <p>The name of the file.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/qrs.json</p>
      */
     @NameInMap("fileName")
     public String fileName;

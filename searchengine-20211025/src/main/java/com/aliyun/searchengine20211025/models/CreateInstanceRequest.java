@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values: PREPAY and POSTPAY. PREPAY indicates the instance is a subscription instance. When you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify the paymentInfo parameter. POSTPAY indicates that the instance is a pay-as-you-go instance. This billing method is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("chargeType")
     public String chargeType;
@@ -54,12 +57,18 @@ public class CreateInstanceRequest extends TeaModel {
     public static class CreateInstanceRequestComponents extends TeaModel {
         /**
          * <p>The specification code, which must be consistent with values of the corresponding module parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <p>Values that you specify for the corresponding module components on the buy page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("value")
         public String value;
@@ -90,18 +99,27 @@ public class CreateInstanceRequest extends TeaModel {
     public static class CreateInstanceRequestOrder extends TeaModel {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("autoRenew")
         public Boolean autoRenew;
 
         /**
          * <p>The billing duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("duration")
         public Long duration;
 
         /**
          * <p>The unit of the billing duration. Valid values: Month and Year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("pricingCycle")
         public String pricingCycle;

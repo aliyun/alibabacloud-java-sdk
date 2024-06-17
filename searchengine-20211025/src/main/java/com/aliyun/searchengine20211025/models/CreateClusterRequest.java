@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The remarks of the query node</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("autoLoad")
     public Boolean autoLoad;
@@ -18,12 +21,18 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The description of the cluster</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;ha-tets&quot;</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The name of the node</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha-cn-zvp2qr1sk01_qrs</p>
      */
     @NameInMap("name")
     public String name;
@@ -82,6 +91,9 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestDataNode extends TeaModel {
         /**
          * <p>The number of data nodes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("number")
         public Integer number;
@@ -115,6 +127,9 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestQueryNode extends TeaModel {
         /**
          * <p>The number of nodes to query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("number")
         public Integer number;

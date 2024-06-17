@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyPasswordRequest extends TeaModel {
     /**
      * <p>The password</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("password")
     public String password;
 
     /**
      * <p>The username</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;username&quot;</p>
      */
     @NameInMap("username")
     public String username;

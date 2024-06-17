@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StopTaskResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The information about the index</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

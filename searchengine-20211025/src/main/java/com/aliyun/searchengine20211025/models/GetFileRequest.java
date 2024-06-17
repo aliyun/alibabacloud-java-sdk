@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetFileRequest extends TeaModel {
     /**
      * <p>The name of the file in full path</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/schemas/automobile_vector_schema.json</p>
      */
     @NameInMap("fileName")
     public String fileName;

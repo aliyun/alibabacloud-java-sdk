@@ -9,12 +9,18 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>The content of the index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;summarys\&quot;:{\&quot;summary_fields\&quot;:[\&quot;id\&quot;]},\&quot;indexs\&quot;:[{\&quot;index_name\&quot;:\&quot;index_id\&quot;,\&quot;index_type\&quot;:\&quot;PRIMARYKEY64\&quot;,\&quot;index_fields\&quot;:\&quot;id\&quot;,\&quot;has_primary_key_attribute\&quot;:true,\&quot;is_primary_key_sorted\&quot;:false}],\&quot;attributes\&quot;:[\&quot;id\&quot;],\&quot;fields\&quot;:[{\&quot;field_name\&quot;:\&quot;id\&quot;,\&quot;field_type\&quot;:\&quot;UINT16\&quot;}],\&quot;table_name\&quot;:\&quot;index_2\&quot;}</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
      * <p>Optional. The data source, which can be MaxCompute, Message Service (MNS), Realtime Compute for Apache Flink, or StreamCompute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("dataSource")
     public String dataSource;
@@ -27,12 +33,29 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>The data center in which the data source resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc_hz_domain_1</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
      * <p>The extended configurations of the field. Keys such as vector and embedding are included. Vector indicates the vector field. Embedding indicates the field that requires embedding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *         &quot;vector&quot;:
+     *         [
+     *             &quot;source_image_vector&quot;
+     *         ],
+     *         &quot;embeding&quot;:
+     *         [
+     *             &quot;source_image&quot;
+     *         ],
+     *         &quot;description&quot;:
+     *         []
+     *     }</p>
      */
     @NameInMap("extend")
     public java.util.Map<String, ?> extend;
@@ -42,16 +65,26 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>The name of the index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha-cn-zvp2qr1sk01_qrs</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The data partition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20211202</p>
      */
     @NameInMap("partition")
     public Integer partition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 
@@ -143,51 +176,84 @@ public class CreateIndexRequest extends TeaModel {
     public static class CreateIndexRequestDataSourceInfoConfig extends TeaModel {
         /**
          * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L***p</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
 
         /**
          * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5**9a6</p>
          */
         @NameInMap("accessSecret")
         public String accessSecret;
 
         /**
          * <p>oss bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
         /**
          * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-namespace</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/opensearch/oss.json</p>
+         */
         @NameInMap("ossPath")
         public String ossPath;
 
         /**
          * <p>The data partition. This parameter is required if type is set to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20230114</p>
          */
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-hdfs-path</p>
+         */
         @NameInMap("path")
         public String path;
 
         /**
          * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbt_algo_pai</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbt_rec_swing_u2i2i_score_be_v1</p>
          */
         @NameInMap("table")
         public String table;
@@ -312,6 +378,9 @@ public class CreateIndexRequest extends TeaModel {
     public static class CreateIndexRequestDataSourceInfo extends TeaModel {
         /**
          * <p>Specifies whether to enable the automatic full indexing feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
@@ -322,17 +391,27 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("config")
         public CreateIndexRequestDataSourceInfoConfig config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1709715164</p>
+         */
         @NameInMap("dataTimeSec")
         public Integer dataTimeSec;
 
         /**
          * <p>The data center where the data source is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
          * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-35t3n1yuj0d_index_1</p>
          */
         @NameInMap("name")
         public String name;
@@ -342,6 +421,9 @@ public class CreateIndexRequest extends TeaModel {
 
         /**
          * <p>The number of resources used for data update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("processPartitionCount")
         public Integer processPartitionCount;
@@ -351,6 +433,9 @@ public class CreateIndexRequest extends TeaModel {
 
         /**
          * <p>The type of the data source. Valid values: odps, swift, saro, and oss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         @NameInMap("type")
         public String type;

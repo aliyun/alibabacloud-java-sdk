@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListClusterTasksResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC5EC8FA-5C0D-56AF-BEF4-6FCCEABD0511</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListClusterTasksResponseBody extends TeaModel {
     public static class ListClusterTasksResponseBodyResultTags extends TeaModel {
         /**
          * <p>The content of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>succeed in handling request</p>
          */
         @NameInMap("msg")
         public String msg;
 
         /**
          * <p>The level of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("tagLevel")
         public String tagLevel;
@@ -76,24 +85,36 @@ public class ListClusterTasksResponseBody extends TeaModel {
     public static class ListClusterTasksResponseBodyResultTaskNodes extends TeaModel {
         /**
          * <p>The date when the task was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("finishDate")
         public String finishDate;
 
         /**
          * <p>The sequence number of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("index")
         public Long index;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("status")
         public String status;
@@ -140,36 +161,54 @@ public class ListClusterTasksResponseBody extends TeaModel {
     public static class ListClusterTasksResponseBodyResult extends TeaModel {
         /**
          * <p>The additional attributes of the card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("extraAttribute")
         public String extraAttribute;
 
         /**
          * <p>The field3 field that is passed through when you create a state machine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("field3")
         public String field3;
 
         /**
          * <p>fsmId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-zvp2ljiwe01_api2@bj_vpc_domain_1@null@MANUAL-ha-cn-zvp2ljiwe01_api2@1649729867698@028315</p>
          */
         @NameInMap("fsmId")
         public String fsmId;
 
         /**
          * <p>Indicates whether the change is a data source task change or a cluster task change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("groupType")
         public String groupType;
 
         /**
          * <p>The task name on the card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0js04_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The overall status of FSM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>onlyPublished</p>
          */
         @NameInMap("status")
         public String status;
@@ -188,18 +227,27 @@ public class ListClusterTasksResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp of the task on the card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657610520</p>
          */
         @NameInMap("time")
         public String time;
 
         /**
          * <p>The type of the task on the card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qrs</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The user who triggered the FSM process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("user")
         public String user;

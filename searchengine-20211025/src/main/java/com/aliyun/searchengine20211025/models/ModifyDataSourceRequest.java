@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyDataSourceRequest extends TeaModel {
     /**
      * <p>The request body.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 
     /**
      * <p>Specifies whether the data source is created by using the dryRun feature. This parameter only checks whether the data source is valid. Valid values: true and false. true indicates that the data source is created by using the dryRun feature, and false indicates that the data source is not created by using the dryRun feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

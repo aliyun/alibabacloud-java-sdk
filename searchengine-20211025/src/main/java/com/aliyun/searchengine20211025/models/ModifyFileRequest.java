@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyFileRequest extends TeaModel {
     /**
      * <p>The content of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("content")
     public String content;
 
     /**
      * <p>This parameter is required when index building for full data in a MaxCompute data source is triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds=20220713</p>
      */
     @NameInMap("partition")
     public Integer partition;
 
     /**
      * <p>The name of the file in the full path</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/schemas/generation_schema.json</p>
      */
     @NameInMap("fileName")
     public String fileName;

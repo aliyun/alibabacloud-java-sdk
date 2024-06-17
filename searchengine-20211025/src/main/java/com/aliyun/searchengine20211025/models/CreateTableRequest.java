@@ -7,6 +7,10 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("dataProcessConfig")
     public java.util.List<CreateTableRequestDataProcessConfig> dataProcessConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("dataProcessorCount")
     public Integer dataProcessorCount;
 
@@ -16,21 +20,41 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("fieldSchema")
     public java.util.Map<String, String> fieldSchema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>index_1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("partitionCount")
     public Integer partitionCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("primaryKey")
     public String primaryKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("rawSchema")
     public String rawSchema;
 
     @NameInMap("vectorIndex")
     public java.util.List<CreateTableRequestVectorIndex> vectorIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 
@@ -122,13 +146,24 @@ public class CreateTableRequest extends TeaModel {
     public static class CreateTableRequestDataProcessConfigParamsSrcFieldConfig extends TeaModel {
         /**
          * <p>OSSBucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ossBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
+         */
         @NameInMap("ossEndpoint")
         public String ossEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid</p>
+         */
         @NameInMap("uid")
         public String uid;
 
@@ -167,9 +202,17 @@ public class CreateTableRequest extends TeaModel {
         @NameInMap("srcFieldConfig")
         public CreateTableRequestDataProcessConfigParamsSrcFieldConfig srcFieldConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image</p>
+         */
         @NameInMap("vectorModal")
         public String vectorModal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>clip</p>
+         */
         @NameInMap("vectorModel")
         public String vectorModel;
 
@@ -205,15 +248,27 @@ public class CreateTableRequest extends TeaModel {
     }
 
     public static class CreateTableRequestDataProcessConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>source_image_vector</p>
+         */
         @NameInMap("dstField")
         public String dstField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vectorize</p>
+         */
         @NameInMap("operator")
         public String operator;
 
         @NameInMap("params")
         public CreateTableRequestDataProcessConfigParams params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_image</p>
+         */
         @NameInMap("srcField")
         public String srcField;
 
@@ -257,30 +312,61 @@ public class CreateTableRequest extends TeaModel {
     }
 
     public static class CreateTableRequestDataSourceConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ak</p>
+         */
         @NameInMap("accessKey")
         public String accessKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>as</p>
+         */
         @NameInMap("accessSecret")
         public String accessSecret;
 
         /**
          * <p>oss bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>antsys-flytest-ci</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://opensearch</p>
+         */
         @NameInMap("ossPath")
         public String ossPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20220713</p>
+         */
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project_20210220122847_3218</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test56</p>
+         */
         @NameInMap("table")
         public String table;
 
@@ -356,15 +442,27 @@ public class CreateTableRequest extends TeaModel {
     }
 
     public static class CreateTableRequestDataSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
 
         @NameInMap("config")
         public CreateTableRequestDataSourceConfig config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1715160176</p>
+         */
         @NameInMap("dataTimeSec")
         public Integer dataTimeSec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>odps</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -408,15 +506,31 @@ public class CreateTableRequest extends TeaModel {
     }
 
     public static class CreateTableRequestVectorIndexAdvanceParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("buildIndexParams")
         public String buildIndexParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("linearBuildThreshold")
         public String linearBuildThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("minScanDocCnt")
         public String minScanDocCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("searchIndexParams")
         public String searchIndexParams;
 
@@ -463,27 +577,59 @@ public class CreateTableRequest extends TeaModel {
         @NameInMap("advanceParams")
         public CreateTableRequestVectorIndexAdvanceParams advanceParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("dimension")
         public String dimension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SquaredEuclidean</p>
+         */
         @NameInMap("distanceType")
         public String distanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>case_index</p>
+         */
         @NameInMap("indexName")
         public String indexName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>namespace</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sparse_indices</p>
+         */
         @NameInMap("sparseIndexField")
         public String sparseIndexField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sparse_values</p>
+         */
         @NameInMap("sparseValueField")
         public String sparseValueField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_image_vector</p>
+         */
         @NameInMap("vectorField")
         public String vectorField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Qc</p>
+         */
         @NameInMap("vectorIndexType")
         public String vectorIndexType;
 

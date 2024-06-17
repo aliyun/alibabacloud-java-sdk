@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetIndexVersionResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetIndexVersionResponseBody extends TeaModel {
     public static class GetIndexVersionResponseBodyResultIndexVersions extends TeaModel {
         /**
          * <p>The ID of the index deployed in offline mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("buildDeployId")
         public String buildDeployId;
@@ -49,6 +55,9 @@ public class GetIndexVersionResponseBody extends TeaModel {
 
         /**
          * <p>The name of the index table</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table4</p>
          */
         @NameInMap("indexName")
         public String indexName;
@@ -101,6 +110,9 @@ public class GetIndexVersionResponseBody extends TeaModel {
     public static class GetIndexVersionResponseBodyResult extends TeaModel {
         /**
          * <p>The name of the cluster</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ayoss-cn-zhangjiakou-b</p>
          */
         @NameInMap("cluster")
         public String cluster;

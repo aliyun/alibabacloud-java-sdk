@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetAdvanceConfigFileRequest extends TeaModel {
     /**
      * <p>The name of the file</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/intervene_dict/chn_ecommerce_general.dict</p>
      */
     @NameInMap("fileName")
     public String fileName;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAdvanceConfigDirResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
     public static class ListAdvanceConfigDirResponseBodyResult extends TeaModel {
         /**
          * <p>The name of the absolute path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;/path/wpd/nae&quot;</p>
          */
         @NameInMap("fullPathName")
         public String fullPathName;
 
         /**
          * <p>Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isDir")
         public Boolean isDir;
 
         /**
-         * <p>Indicates whether it is a template. Valid values: **true** and **false**. true indicates that it is a template, and false indicates that it is not a template.</p>
+         * <p>Indicates whether it is a template. Valid values: <strong>true</strong> and <strong>false</strong>. true indicates that it is a template, and false indicates that it is not a template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_name_1</p>
          */
         @NameInMap("name")
         public String name;

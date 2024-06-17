@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAdvanceConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
     public static class GetAdvanceConfigResponseBodyResultFiles extends TeaModel {
         /**
          * <p>The name of the file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("fullPathName")
         public String fullPathName;
 
         /**
          * <p>Indicates whether it is a directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("isDir")
         public Boolean isDir;
 
         /**
          * <p>Indicates whether it is a template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ostoc01_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -116,6 +131,9 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>close alarm, chiji id 37080</p>
          */
         @NameInMap("desc")
         public String desc;
@@ -128,18 +146,27 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2s170b03_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0,1,3,6,8</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("updateTime")
         public Long updateTime;

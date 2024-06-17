@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ReindexResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Map</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

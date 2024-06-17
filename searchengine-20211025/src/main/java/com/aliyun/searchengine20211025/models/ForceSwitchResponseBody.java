@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ForceSwitchResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B1FF998-BB8D-5182-BFC0-E471AA77095A</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The information about the index</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

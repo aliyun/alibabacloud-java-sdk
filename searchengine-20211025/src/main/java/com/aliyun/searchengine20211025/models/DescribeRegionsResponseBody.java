@@ -4,6 +4,10 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>endpoint</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
+         */
         @NameInMap("localName")
         public String localName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 

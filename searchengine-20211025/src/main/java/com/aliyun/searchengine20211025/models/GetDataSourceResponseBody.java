@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDataSourceResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetDataSourceResponseBody extends TeaModel {
     public static class GetDataSourceResponseBodyResult extends TeaModel {
         /**
          * <p>The data center where the data source is deployed in offline mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         @NameInMap("domain")
         public String domain;
@@ -58,18 +64,27 @@ public class GetDataSourceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the data source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_index</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The state of the data source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The type of the data source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         @NameInMap("type")
         public String type;

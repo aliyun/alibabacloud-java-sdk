@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetNodeConfigRequest extends TeaModel {
     /**
      * <p>The name of the cluster</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc_sh_domain_2</p>
      */
     @NameInMap("clusterName")
     public String clusterName;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha-cn-30174dhoz53_qrs</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The type of the node. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>index</p>
      */
     @NameInMap("type")
     public String type;

@@ -4,12 +4,24 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ErrorResponse extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InternalServerError</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>internal server error</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90D6B8F5-FE97-4509-9AAB-367836C51818</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

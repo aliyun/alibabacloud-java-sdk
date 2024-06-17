@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteTableResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Map</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

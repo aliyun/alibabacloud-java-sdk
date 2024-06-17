@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetIndexResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FB0325E-8C37-5525-96AC-0333523170A3</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -320,18 +323,27 @@ public class GetIndexResponseBody extends TeaModel {
     public static class GetIndexResponseBodyResultVersionsFiles extends TeaModel {
         /**
          * <p>The full path of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("fullPathName")
         public String fullPathName;
 
         /**
          * <p>Indicates whether the file is a directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("isDir")
         public Boolean isDir;
 
         /**
          * <p>Indicates whether the file is a template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
@@ -381,6 +393,9 @@ public class GetIndexResponseBody extends TeaModel {
     public static class GetIndexResponseBodyResultVersions extends TeaModel {
         /**
          * <p>The description of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>close alarm, by 3.9.2 hotfix workflow</p>
          */
         @NameInMap("desc")
         public String desc;
@@ -393,24 +408,36 @@ public class GetIndexResponseBody extends TeaModel {
 
         /**
          * <p>The name of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7pp2ngv4s02_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The last time when the version was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("updateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("versionId")
         public Integer versionId;
@@ -486,6 +513,10 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ha-cn-tl32nd2nq01_00</p>
+         */
         @NameInMap("dataSource")
         public String dataSource;
 
@@ -534,6 +565,10 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("indexStatus")
         public String indexStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("name")
         public String name;
 

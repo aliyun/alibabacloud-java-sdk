@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetInstanceResponseBody extends TeaModel {
     public static class GetInstanceResponseBodyResultTags extends TeaModel {
         /**
          * <p>标签键</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>标签值</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("value")
         public String value;
@@ -76,65 +85,96 @@ public class GetInstanceResponseBody extends TeaModel {
     public static class GetInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSYPAY</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
          * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>commodityCode</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-17T02:01:26Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3_test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634609702</p>
          */
         @NameInMap("expiredTime")
         public String expiredTime;
 
         /**
          * <p>Indicates whether an overdue payment is involved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("inDebt")
         public Boolean inDebt;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7mz2qsgq301</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The lock status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzjvw24el5lma</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   INIT: being initialized</p>
-         * <p>*   WAIT_CONFIG: to be configured</p>
-         * <p>*   CONFIG_UPDATING: configuration taking effect</p>
-         * <p>*   READY: normal</p>
+         * <ul>
+         * <li>INIT: being initialized</li>
+         * <li>WAIT_CONFIG: to be configured</li>
+         * <li>CONFIG_UPDATING: configuration taking effect</li>
+         * <li>READY: normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         @NameInMap("status")
         public String status;
@@ -147,6 +187,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634609702</p>
          */
         @NameInMap("updateTime")
         public String updateTime;

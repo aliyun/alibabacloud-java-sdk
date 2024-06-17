@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTableGenerationResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -37,12 +40,18 @@ public class GetTableGenerationResponseBody extends TeaModel {
     public static class GetTableGenerationResponseBodyResult extends TeaModel {
         /**
          * <p>generationId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708674867</p>
          */
         @NameInMap("generationId")
         public Long generationId;
 
         /**
          * <p>starting, building, ready, stopped, failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         @NameInMap("status")
         public String status;

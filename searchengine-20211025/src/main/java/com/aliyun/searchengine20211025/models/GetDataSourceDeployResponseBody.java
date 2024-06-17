@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDataSourceDeployResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultExtendHdfs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dist-dmj-job/src/main/java</p>
+         */
         @NameInMap("path")
         public String path;
 
@@ -76,6 +83,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultExtendOss extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://opensearch</p>
+         */
         @NameInMap("path")
         public String path;
 
@@ -95,9 +106,17 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultExtendSaro extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dist-dmj-job/src/main/java</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6.0</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -177,9 +196,17 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResultProcessor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("args")
         public String args;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("resource")
         public String resource;
 
@@ -209,43 +236,79 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     public static class GetDataSourceDeployResponseBodyResultStorage extends TeaModel {
         /**
          * <p>AK</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
 
         /**
          * <p>AS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>as</p>
          */
         @NameInMap("accessSecret")
         public String accessSecret;
 
         /**
          * <p>oss bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>antsys-miniapp-chongwen-static</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
         /**
          * <p>odps endpoint</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lazada-campaign-flink</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://opensearch</p>
+         */
         @NameInMap("ossPath")
         public String ossPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20220926</p>
+         */
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/beiming_xobject/dwd_xobjectsandbox__list_create_action_by_new/</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wireless_1688_personal_rec</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <strong>example:</strong>
+         * <p>behavior</p>
+         */
         @NameInMap("table")
         public String table;
 
@@ -339,11 +402,17 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     public static class GetDataSourceDeployResponseBodyResultSwift extends TeaModel {
         /**
          * <p>topic</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic</p>
          */
         @NameInMap("topic")
         public String topic;
 
         /**
+         * <p>zk</p>
+         * 
+         * <strong>example:</strong>
          * <p>zk</p>
          */
         @NameInMap("zk")
@@ -373,6 +442,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     }
 
     public static class GetDataSourceDeployResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTablesResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -38,9 +41,17 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>IN_USE</p>
+         */
         @NameInMap("indexStatus")
         public String indexStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es_test_1b</p>
+         */
         @NameInMap("name")
         public String name;
 

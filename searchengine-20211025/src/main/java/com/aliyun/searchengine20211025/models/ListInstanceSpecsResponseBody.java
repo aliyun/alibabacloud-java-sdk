@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstanceSpecsResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
     public static class ListInstanceSpecsResponseBodyResult extends TeaModel {
         /**
          * <p>None</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("cpu")
         public Integer cpu;
@@ -52,6 +58,9 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
 
         /**
          * <p>Unit: GB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("mem")
         public Integer mem;
