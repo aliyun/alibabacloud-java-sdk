@@ -4,39 +4,83 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Authentication is failed for ****</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     @NameInMap("ChildInstanceList")
     public java.util.List<DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList> childInstanceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IllegalParamFormat.EcrId</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The param format of EcrId **** is illegal.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Zn0J0/sCjivzwX9oBcwFnWaaas/kSG+J/WzLOxJHS4****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05130E79-588D-5C40-A718-C4863A59****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -142,36 +186,76 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
     }
 
     public static class DescribeExpressConnectRouterChildInstanceResponseBodyChildInstanceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecr-assoc-9p2qxx5phpca2m****</p>
+         */
         @NameInMap("AssociationId")
         public String associationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vbr-gw8vjq2zjux3ifsc9****</p>
+         */
         @NameInMap("ChildInstanceId")
         public String childInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>112101171212****</p>
+         */
         @NameInMap("ChildInstanceOwnerId")
         public Long childInstanceOwnerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("ChildInstanceRegionId")
         public String childInstanceRegionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VBR</p>
+         */
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
         @NameInMap("EcrId")
         public String ecrId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-09T12:18:23Z</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-09T12:18:23Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>167509154715****</p>
+         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
         @NameInMap("Status")
         public String status;
 

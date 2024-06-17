@@ -6,33 +6,57 @@ import com.aliyun.tea.*;
 public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-j6cwxhgg0s5nuephp****</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>190550144868****</p>
+     */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VBR</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-00****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecr-a5xqrgbeidz1w8****</p>
      */
     @NameInMap("EcrId")
     public String ecrId;

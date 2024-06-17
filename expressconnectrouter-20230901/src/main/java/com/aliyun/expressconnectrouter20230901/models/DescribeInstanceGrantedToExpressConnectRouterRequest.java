@@ -4,36 +4,75 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-00****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecr-mezk2idmsd0vx2****</p>
      */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vbr-j6cwxhgg0s5nuephp****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>129845258050****</p>
+     */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VBR</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gAAAAABkyGzFbZR2NnxnyVk0EiL7F3qMBtBim8Es0mugRT3qb8yEHAMaHGanzuaHUmiEq9QRmok0RgxJAINBOJZa5KPjopEu_Q==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2tsvbnfe****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -134,9 +173,17 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaMod
     }
 
     public static class DescribeInstanceGrantedToExpressConnectRouterRequestTagModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

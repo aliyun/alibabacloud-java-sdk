@@ -7,21 +7,40 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Tea
     @NameInMap("AssociationId")
     public String associationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FF9nMec/RZ6H9oqFn1pvyir/SLRlxCCyHJonbGzqL01hiM6Jb3wJowdHvjCfog7ww1b9rSHMRFJnrUBfVba68TJg==</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecr-mezk2idmsd0vx2****</p>
      */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vbr-j6cwxhgg0s5nuephp****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 

@@ -4,39 +4,83 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Authentication is failed for ****</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IllegalParamFormat.Name</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The param format of Name **** is illegal.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     @NameInMap("EcrGrantedInstanceList")
     public java.util.List<DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList> ecrGrantedInstanceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFlMqGuJ10uN3l+FX/cBrGDNXUOUifNeOuAJlT4dc3vsWD6DsNSFAC2FtpeH5QOSG2WFdyRoun7gSLCm5o69YnAQ==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -142,33 +186,73 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     }
 
     public static class DescribeInstanceGrantedToExpressConnectRouterResponseBodyEcrGrantedInstanceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecr-mezk2idmsd0vx2****</p>
+         */
         @NameInMap("EcrId")
         public String ecrId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669023139000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669023139000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gr-8gdelo13mi99g1****</p>
+         */
         @NameInMap("GrantId")
         public String grantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vbr-j6cwxhgg0s5nuephp****</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("NodeOwnerBid")
         public String nodeOwnerBid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>129845258050****</p>
+         */
         @NameInMap("NodeOwnerUid")
         public Long nodeOwnerUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("NodeRegionId")
         public String nodeRegionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VBR</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 

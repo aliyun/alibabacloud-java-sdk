@@ -6,22 +6,45 @@ import com.aliyun.tea.*;
 public class CreateExpressConnectRouterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45104</p>
      */
     @NameInMap("AlibabaSideAsn")
     public Long alibabaSideAsn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-00****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmvvajg5q****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

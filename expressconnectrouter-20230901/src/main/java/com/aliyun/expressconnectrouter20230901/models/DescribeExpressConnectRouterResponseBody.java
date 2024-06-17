@@ -4,39 +4,83 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Authentication is failed for ****</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IllegalParamFormat.Name</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The param format of Name **** is illegal.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     @NameInMap("EcrList")
     public java.util.List<DescribeExpressConnectRouterResponseBodyEcrList> ecrList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2w6Olxc+cMPjUtUMpttDGZkffvHCfhBKKNEyCVaq+WUEzuUWpp9+QOApNf6g==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -142,30 +186,66 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     }
 
     public static class DescribeExpressConnectRouterResponseBodyEcrListTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>181614792955****</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Category")
         public Integer category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>000000100089****</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-aek2aq7f4va****</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECR</p>
+         */
         @NameInMap("ResuorceType")
         public String resuorceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Scope")
         public Integer scope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -249,33 +329,73 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     }
 
     public static class DescribeExpressConnectRouterResponseBodyEcrList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>45104</p>
+         */
         @NameInMap("AlibabaSideAsn")
         public Long alibabaSideAsn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("BizStatus")
         public String bizStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecr-mezk2idmsd0vx2****</p>
+         */
         @NameInMap("EcrId")
         public String ecrId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-16T01:44:50Z</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-16T01:44:50Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>170646818729****</p>
+         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-aekzuscospt****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
