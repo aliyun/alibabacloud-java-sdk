@@ -4,24 +4,52 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-00****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecr-fu8rszhgv7623c****</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e0a2dbeb69a8beeeb8194e92b702df3fd3e7bfe6ce7bfc16e0b5e8707e68181f</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2aq7f4va****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -98,9 +126,17 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     }
 
     public static class DescribeExpressConnectRouterRequestTagModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecr-tag</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testTagValueKZqhJi</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

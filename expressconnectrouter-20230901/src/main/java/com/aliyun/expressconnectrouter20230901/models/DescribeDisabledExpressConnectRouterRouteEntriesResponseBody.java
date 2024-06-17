@@ -4,39 +4,83 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Authentication is failed for ****</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DisabledRouteEntryList")
     public java.util.List<DescribeDisabledExpressConnectRouterRouteEntriesResponseBodyDisabledRouteEntryList> disabledRouteEntryList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IllegalParamFormat.EcrId</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The param format of EcrId **** is illegal.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gAAAAABkDTaRFnmxUoMLVOn8YTIgYFeL2ch8j0sJs8VCIU8SS5438m3D9X1VqspCcaUEHRN9I_AfVwMhZHAhcNivifK_OtQxJQ==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -142,18 +186,38 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
     }
 
     public static class DescribeDisabledExpressConnectRouterRouteEntriesResponseBodyDisabledRouteEntryList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.100.110/32</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecr-mezk2idmsd0vx2****</p>
+         */
         @NameInMap("EcrId")
         public String ecrId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1682317345</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>br-hp3u4u5f03tfuljis****</p>
+         */
         @NameInMap("NexthopInstanceId")
         public String nexthopInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("NexthopInstanceRegionId")
         public String nexthopInstanceRegionId;
 

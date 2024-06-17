@@ -4,21 +4,40 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeDisabledExpressConnectRouterRouteEntriesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FF9nMec/RZ6H9oqFn1pvyir/SLRlxCCyHJonbGzqL01hiM6Jb3wJowdHvjCfog7ww1b9rSHMRFJnrUBfVba68TJg==</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecr-mezk2idmsd0vx2****</p>
      */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFv4fzkNPW8Z+cZ+DBXXQ3Gmf3XlCgpBH43oaTYTAAcGc708Zb+pDyAGVJBo/MKsyrtZfPnX9Ztf02vgdIDyaNe8UuZdf/JJk069qxGKzqSKg=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

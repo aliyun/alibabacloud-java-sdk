@@ -4,30 +4,66 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class CreateExpressConnectRouterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Authentication is failed for ****</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IllegalParamFormat.Name</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The param format of Name **** is illegal.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecr-fu8rszhgv7623c****</p>
+     */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

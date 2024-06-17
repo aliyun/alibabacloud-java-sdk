@@ -4,11 +4,18 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class ListExpressConnectRouterSupportedRegionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-00****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VBR</p>
      */
     @NameInMap("NodeType")
     public String nodeType;

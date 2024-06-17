@@ -9,37 +9,75 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AssociationRegionId")
     public String associationRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cen-of3o1the3i4gwb****</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-00****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CreateAttachment")
     public Boolean createAttachment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecr-mezk2idmsd0vx2****</p>
      */
     @NameInMap("EcrId")
     public String ecrId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tr-2ze4i71c6be454e2l****</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>189159362009****</p>
+     */
     @NameInMap("TransitRouterOwnerId")
     public Long transitRouterOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp1h37fchc6jmfyln****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>132193271328****</p>
+     */
     @NameInMap("VpcOwnerId")
     public Long vpcOwnerId;
 

@@ -4,39 +4,83 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Authentication is failed for ****</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IllegalParamFormat.EcrId</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The param format of EcrId **** is illegal.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gAAAAABkWwFTUMNCdWC0VMYOIylA56Hx6JUfCZlk5hQ5g_fnKmetN6303tqq5UJ2ouJzyT2fDOdzb-NqyEB5jcY8Z2euX7qHDA==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RouteEntriesList")
     public java.util.List<DescribeExpressConnectRouterRouteEntriesResponseBodyRouteEntriesList> routeEntriesList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -142,21 +186,45 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     }
 
     public static class DescribeExpressConnectRouterRouteEntriesResponseBodyRouteEntriesList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[64993,64512]</p>
+         */
         @NameInMap("AsPath")
         public String asPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9001:9263</p>
+         */
         @NameInMap("Community")
         public String community;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <strong>example:</strong>
+         * <p>br-hp3u4u5f03tfuljis****</p>
+         */
         @NameInMap("NexthopInstanceId")
         public String nexthopInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("NexthopInstanceRegionId")
         public String nexthopInstanceRegionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
         @NameInMap("Status")
         public String status;
 
