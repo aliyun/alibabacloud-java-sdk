@@ -13,18 +13,34 @@ public class ModifyTableRequest extends TeaModel {
     @NameInMap("fieldSchema")
     public java.util.Map<String, String> fieldSchema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("partitionCount")
     public Integer partitionCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("primaryKey")
     public String primaryKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("rawSchema")
     public String rawSchema;
 
     @NameInMap("vectorIndex")
     public java.util.List<ModifyTableRequestVectorIndex> vectorIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 
@@ -98,12 +114,24 @@ public class ModifyTableRequest extends TeaModel {
     }
 
     public static class ModifyTableRequestDataProcessConfigParamsSrcFieldConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ossBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
+         */
         @NameInMap("ossEndpoint")
         public String ossEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid</p>
+         */
         @NameInMap("uid")
         public String uid;
 
@@ -142,9 +170,17 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("srcFieldConfig")
         public ModifyTableRequestDataProcessConfigParamsSrcFieldConfig srcFieldConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image</p>
+         */
         @NameInMap("vectorModal")
         public String vectorModal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>clip</p>
+         */
         @NameInMap("vectorModel")
         public String vectorModel;
 
@@ -180,15 +216,27 @@ public class ModifyTableRequest extends TeaModel {
     }
 
     public static class ModifyTableRequestDataProcessConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>source_image_vector</p>
+         */
         @NameInMap("dstField")
         public String dstField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vectorize</p>
+         */
         @NameInMap("operator")
         public String operator;
 
         @NameInMap("params")
         public ModifyTableRequestDataProcessConfigParams params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_image</p>
+         */
         @NameInMap("srcField")
         public String srcField;
 
@@ -234,11 +282,17 @@ public class ModifyTableRequest extends TeaModel {
     public static class ModifyTableRequestDataSourceConfig extends TeaModel {
         /**
          * <p>AK</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AK</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
 
         /**
+         * <p>AS</p>
+         * 
+         * <strong>example:</strong>
          * <p>AS</p>
          */
         @NameInMap("accessSecret")
@@ -246,22 +300,45 @@ public class ModifyTableRequest extends TeaModel {
 
         /**
          * <p>oss bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>antsys-shujiang-osstest</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://opensearch</p>
+         */
         @NameInMap("ossPath")
         public String ossPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20231220</p>
+         */
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yw_dw_rpt</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <strong>example:</strong>
+         * <p>behavior</p>
+         */
         @NameInMap("table")
         public String table;
 
@@ -337,12 +414,20 @@ public class ModifyTableRequest extends TeaModel {
     }
 
     public static class ModifyTableRequestDataSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
 
         @NameInMap("config")
         public ModifyTableRequestDataSourceConfig config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1715160176</p>
+         */
         @NameInMap("dataTimeSec")
         public Integer dataTimeSec;
 
@@ -378,15 +463,31 @@ public class ModifyTableRequest extends TeaModel {
     }
 
     public static class ModifyTableRequestVectorIndexAdvanceParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("buildIndexParams")
         public String buildIndexParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("linearBuildThreshold")
         public String linearBuildThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("minScanDocCnt")
         public String minScanDocCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("searchIndexParams")
         public String searchIndexParams;
 
@@ -433,27 +534,59 @@ public class ModifyTableRequest extends TeaModel {
         @NameInMap("advanceParams")
         public ModifyTableRequestVectorIndexAdvanceParams advanceParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("dimension")
         public String dimension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SquaredEuclidean</p>
+         */
         @NameInMap("distanceType")
         public String distanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_api</p>
+         */
         @NameInMap("indexName")
         public String indexName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>namespace</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sparse_indices</p>
+         */
         @NameInMap("sparseIndexField")
         public String sparseIndexField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sparse_values</p>
+         */
         @NameInMap("sparseValueField")
         public String sparseValueField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_image_vector</p>
+         */
         @NameInMap("vectorField")
         public String vectorField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Qc</p>
+         */
         @NameInMap("vectorIndexType")
         public String vectorIndexType;
 

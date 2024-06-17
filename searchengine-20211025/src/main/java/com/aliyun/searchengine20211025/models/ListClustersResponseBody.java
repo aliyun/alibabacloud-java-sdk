@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListClustersResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F43E8AB4-419C-5F4C-90D6-615590DFAA3C</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListClustersResponseBody extends TeaModel {
     public static class ListClustersResponseBodyResultDataNode extends TeaModel {
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-8ed2k7brm05_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("number")
         public Integer number;
 
         /**
          * <p>The partition ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=20220216</p>
          */
         @NameInMap("partition")
         public Integer partition;
@@ -90,18 +102,27 @@ public class ListClustersResponseBody extends TeaModel {
     public static class ListClustersResponseBodyResultQueryNode extends TeaModel {
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_0704</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("number")
         public Integer number;
 
         /**
          * <p>The number o replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=20211216</p>
          */
         @NameInMap("partition")
         public Integer partition;
@@ -143,6 +164,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the configuration was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
@@ -152,6 +176,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The effective advanced version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("currentAdvanceConfigVersion")
         public String currentAdvanceConfigVersion;
@@ -164,6 +191,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The effective online configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("currentOnlineConfigVersion")
         public String currentOnlineConfigVersion;
@@ -182,12 +212,18 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fzz_test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The latest advanced configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("latestAdvanceConfigVersion")
         public String latestAdvanceConfigVersion;
@@ -200,6 +236,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The latest online configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("latestOnlineConfigVersion")
         public String latestOnlineConfigVersion;
@@ -212,6 +251,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-7pp2pcna701_qrs</p>
          */
         @NameInMap("name")
         public String name;
@@ -224,6 +266,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The status of the cluster. Valid values: running, starting, stopping, and stopped. running indicates the cluster is running, starting indicates the cluster is starting, stopping indicates the cluster is stopping, and stopped indicates the cluster has stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;starting&quot;</p>
          */
         @NameInMap("status")
         public String status;

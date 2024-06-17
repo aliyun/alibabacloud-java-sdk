@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class VariablesValue extends TeaModel {
     /**
      * <p>Specifies whether the variable cannot be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disableModify")
     public Boolean disableModify;
 
     /**
      * <p>Specifies whether the variable is modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("isModify")
     public Boolean isModify;
 
     /**
      * <p>The value of the variable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("value")
     public String value;
 
     /**
      * <p>The description about the variable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The value of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("templateValue")
     public String templateValue;
 
     /**
      * <p>The type of the variable. Valid values:</p>
-     * <br>
-     * <p>*   NORMAL: a normal variable</p>
-     * <p>*   FUNCTION: a function variable</p>
+     * <ul>
+     * <li>NORMAL: a normal variable</li>
+     * <li>FUNCTION: a function variable</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("type")
     public String type;
@@ -113,12 +132,18 @@ public class VariablesValue extends TeaModel {
     public static class VariablesValueFuncValue extends TeaModel {
         /**
          * <p>The class name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("funcClassName")
         public String funcClassName;
 
         /**
          * <p>The template of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("template")
         public String template;

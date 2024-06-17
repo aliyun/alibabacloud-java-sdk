@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTableGenerationsResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6E3D968-529C-5C40-AFDD-133A8B8FD930</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ListTableGenerationsResponseBody extends TeaModel {
     public static class ListTableGenerationsResponseBodyResult extends TeaModel {
         /**
          * <p>generationId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708674867</p>
          */
         @NameInMap("generationId")
         public Long generationId;

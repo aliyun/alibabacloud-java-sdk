@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetClusterResponseBody extends TeaModel {
     public static class GetClusterResponseBodyResultDataNode extends TeaModel {
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The number of replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("number")
         public Integer number;
 
         /**
          * <p>The number of partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("partition")
         public Integer partition;
@@ -90,18 +102,27 @@ public class GetClusterResponseBody extends TeaModel {
     public static class GetClusterResponseBodyResultQueryNode extends TeaModel {
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("number")
         public Integer number;
 
         /**
          * <p>The number of replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("partition")
         public Integer partition;
@@ -143,6 +164,9 @@ public class GetClusterResponseBody extends TeaModel {
 
         /**
          * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-09 00:01:02</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
@@ -152,12 +176,18 @@ public class GetClusterResponseBody extends TeaModel {
 
         /**
          * <p>The effective advanced configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_yyds_data1</p>
          */
         @NameInMap("currentAdvanceConfigVersion")
         public String currentAdvanceConfigVersion;
 
         /**
          * <p>The effective online configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_yyds_data1</p>
          */
         @NameInMap("currentOnlineConfigVersion")
         public String currentOnlineConfigVersion;
@@ -170,24 +200,36 @@ public class GetClusterResponseBody extends TeaModel {
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fzz_test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The latest advanced configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_yyds_data1</p>
          */
         @NameInMap("latestAdvanceConfigVersion")
         public String latestAdvanceConfigVersion;
 
         /**
          * <p>The latest online configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_yyds_data1</p>
          */
         @NameInMap("latestOnlineConfigVersion")
         public String latestOnlineConfigVersion;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         @NameInMap("name")
         public String name;
@@ -200,6 +242,9 @@ public class GetClusterResponseBody extends TeaModel {
 
         /**
          * <p>The creation status of the cluster. Valid values: NEW and PUBLISH. NEW indicates that the cluster is being created. PUBLISH indicates that the cluster is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW</p>
          */
         @NameInMap("status")
         public String status;

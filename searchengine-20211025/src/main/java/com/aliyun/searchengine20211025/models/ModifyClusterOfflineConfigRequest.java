@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyClusterOfflineConfigRequest extends TeaModel {
     /**
      * <p>The mode of reindexing. Valid values: api and indexRecover. api indicates to push incremental data to a data source by calling the API operations. indexRecover indicates that the data source is restored from the index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>indexRecover</p>
      */
     @NameInMap("buildMode")
     public String buildMode;
@@ -18,36 +21,54 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
 
     /**
      * <p>The name of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
     /**
      * <p>The type of the data source. Valid values: odps, swift, saro, and unKnow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>maxComputer</p>
      */
     @NameInMap("dataSourceType")
     public String dataSourceType;
 
     /**
      * <p>This parameter is required when index building by using API data sources is triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640867288</p>
      */
     @NameInMap("dataTimeSec")
     public Integer dataTimeSec;
 
     /**
      * <p>The domain where the data source is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc_hz_domain_1</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
      * <p>The data restoration version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>160142641</p>
      */
     @NameInMap("generation")
     public Long generation;
 
     /**
      * <p>This parameter is required when index building for full data in a MaxCompute data source is triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20211202</p>
      */
     @NameInMap("partition")
     public String partition;

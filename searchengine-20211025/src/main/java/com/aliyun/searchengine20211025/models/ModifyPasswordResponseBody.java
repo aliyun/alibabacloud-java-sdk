@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyPasswordResponseBody extends TeaModel {
     /**
      * <p>The ID of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>407BFD91-DE7D-50BA-8F88-CDE52A3B5E46</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The result</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

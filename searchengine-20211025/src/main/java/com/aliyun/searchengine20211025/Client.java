@@ -27,13 +27,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Triggers reindexing.
-     *
-     * @description ## Method
-     *     POST
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/actions/build-index
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/actions/build-index
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers reindexing.</p>
+     * 
      * @param request BuildIndexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -89,13 +93,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Triggers reindexing.
-     *
-     * @description ## Method
-     *     POST
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/actions/build-index
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/actions/build-index
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers reindexing.</p>
+     * 
      * @param request BuildIndexRequest
      * @return BuildIndexResponse
      */
@@ -106,13 +114,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a cluster.
-     *
-     * @description ### Method
-     * `POST`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/clusters`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/clusters</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a cluster.</p>
+     * 
      * @param request CreateClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -160,13 +170,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a cluster.
-     *
-     * @description ### Method
-     * `POST`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/clusters`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/clusters</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a cluster.</p>
+     * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -177,8 +189,103 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates data sources.
-     *
+     * @param request CreateConfigDirRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConfigDirResponse
+     */
+    public CreateConfigDirResponse createConfigDirWithOptions(String instanceId, String configName, CreateConfigDirRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dirName)) {
+            body.put("dirName", request.dirName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentFullPath)) {
+            body.put("parentFullPath", request.parentFullPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateConfigDir"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/advanced-configs/" + com.aliyun.openapiutil.Client.getEncodeParam(configName) + "/dir"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConfigDirResponse());
+    }
+
+    /**
+     * @param request CreateConfigDirRequest
+     * @return CreateConfigDirResponse
+     */
+    public CreateConfigDirResponse createConfigDir(String instanceId, String configName, CreateConfigDirRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createConfigDirWithOptions(instanceId, configName, request, headers, runtime);
+    }
+
+    /**
+     * @param request CreateConfigFileRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConfigFileResponse
+     */
+    public CreateConfigFileResponse createConfigFileWithOptions(String instanceId, String configName, CreateConfigFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossPath)) {
+            body.put("ossPath", request.ossPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentFullPath)) {
+            body.put("parentFullPath", request.parentFullPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateConfigFile"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/advanced-configs/" + com.aliyun.openapiutil.Client.getEncodeParam(configName) + "/file"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConfigFileResponse());
+    }
+
+    /**
+     * @param request CreateConfigFileRequest
+     * @return CreateConfigFileResponse
+     */
+    public CreateConfigFileResponse createConfigFile(String instanceId, String configName, CreateConfigFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createConfigFileWithOptions(instanceId, configName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates data sources.</p>
+     * 
      * @param request CreateDataSourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -236,8 +343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates data sources.
-     *
+     * <b>summary</b> : 
+     * <p>Creates data sources.</p>
+     * 
      * @param request CreateDataSourceRequest
      * @return CreateDataSourceResponse
      */
@@ -248,17 +356,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an index.
-     *
-     * @description ### Method
-     * ```java
-     * POST
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/indexes
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an index.</p>
+     * 
      * @param request CreateIndexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -328,17 +436,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an index.
-     *
-     * @description ### Method
-     * ```java
-     * POST
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/indexes
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">POST
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/indexes
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an index.</p>
+     * 
      * @param request CreateIndexRequest
      * @return CreateIndexResponse
      */
@@ -349,13 +457,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Havenask instance.
-     *
-     * @description ### Method
-     * `POST`
-     * ### URI
-     * `/api/instances?dryRun=false`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3>URI</h3>
+     * <p><code>/api/instances?dryRun=false</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Havenask instance.</p>
+     * 
      * @param request CreateInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -395,13 +505,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Havenask instance.
-     *
-     * @description ### Method
-     * `POST`
-     * ### URI
-     * `/api/instances?dryRun=false`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3>URI</h3>
+     * <p><code>/api/instances?dryRun=false</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Havenask instance.</p>
+     * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -412,8 +524,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建索引V2
-     *
+     * <b>summary</b> : 
+     * <p>开通公网域名</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePublicUrlResponse
+     */
+    public CreatePublicUrlResponse createPublicUrlWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePublicUrl"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/public-url"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePublicUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开通公网域名</p>
+     * @return CreatePublicUrlResponse
+     */
+    public CreatePublicUrlResponse createPublicUrl(String instanceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPublicUrlWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建索引V2</p>
+     * 
      * @param request CreateTableRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -483,8 +633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建索引V2
-     *
+     * <b>summary</b> : 
+     * <p>创建索引V2</p>
+     * 
      * @param request CreateTableRequest
      * @return CreateTableResponse
      */
@@ -495,13 +646,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the details about advanced configurations.
-     *
-     * @description ## Method
-     *     DELETE
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the details about advanced configurations.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAdvanceConfigResponse
@@ -525,13 +680,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the details about advanced configurations.
-     *
-     * @description ## Method
-     *     DELETE
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the details about advanced configurations.</p>
      * @return DeleteAdvanceConfigResponse
      */
     public DeleteAdvanceConfigResponse deleteAdvanceConfig(String instanceId, String configName) throws Exception {
@@ -541,13 +699,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified data source.
-     *
-     * @description ## Method
-     * `DELETE`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-     *
+     * @param request DeleteConfigDirRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConfigDirResponse
+     */
+    public DeleteConfigDirResponse deleteConfigDirWithOptions(String instanceId, String configName, DeleteConfigDirRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dirName)) {
+            query.put("dirName", request.dirName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentFullPath)) {
+            query.put("parentFullPath", request.parentFullPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConfigDir"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/advanced-configs/" + com.aliyun.openapiutil.Client.getEncodeParam(configName) + "/dir"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConfigDirResponse());
+    }
+
+    /**
+     * @param request DeleteConfigDirRequest
+     * @return DeleteConfigDirResponse
+     */
+    public DeleteConfigDirResponse deleteConfigDir(String instanceId, String configName, DeleteConfigDirRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteConfigDirWithOptions(instanceId, configName, request, headers, runtime);
+    }
+
+    /**
+     * @param request DeleteConfigFileRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConfigFileResponse
+     */
+    public DeleteConfigFileResponse deleteConfigFileWithOptions(String instanceId, String configName, DeleteConfigFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentFullPath)) {
+            query.put("parentFullPath", request.parentFullPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConfigFile"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/advanced-configs/" + com.aliyun.openapiutil.Client.getEncodeParam(configName) + "/file"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConfigFileResponse());
+    }
+
+    /**
+     * @param request DeleteConfigFileRequest
+     * @return DeleteConfigFileResponse
+     */
+    public DeleteConfigFileResponse deleteConfigFile(String instanceId, String configName, DeleteConfigFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteConfigFileWithOptions(instanceId, configName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>DELETE</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified data source.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDataSourceResponse
@@ -571,13 +821,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified data source.
-     *
-     * @description ## Method
-     * `DELETE`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>DELETE</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified data source.</p>
      * @return DeleteDataSourceResponse
      */
     public DeleteDataSourceResponse deleteDataSource(String instanceId, String dataSourceName) throws Exception {
@@ -587,13 +838,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an index.
-     *
-     * @description ## Method
-     *     DELETE
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an index.</p>
+     * 
      * @param request DeleteIndexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -629,13 +884,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an index.
-     *
-     * @description ## Method
-     *     DELETE
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an index.</p>
+     * 
      * @param request DeleteIndexRequest
      * @return DeleteIndexResponse
      */
@@ -646,13 +905,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the version of an index.
-     *
-     * @description ## Method
-     *     DELETE
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the version of an index.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIndexVersionResponse
@@ -676,13 +939,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the version of an index.
-     *
-     * @description ## Method
-     *     DELETE
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>DELETE
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the version of an index.</p>
      * @return DeleteIndexVersionResponse
      */
     public DeleteIndexVersionResponse deleteIndexVersion(String instanceId, String indexName, String versionName) throws Exception {
@@ -692,13 +958,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified instance.
-     *
-     * @description ### Method
-     * `DELETE`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>DELETE</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified instance.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -722,13 +990,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified instance.
-     *
-     * @description ### Method
-     * `DELETE`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>DELETE</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified instance.</p>
      * @return DeleteInstanceResponse
      */
     public DeleteInstanceResponse deleteInstance(String instanceId) throws Exception {
@@ -738,8 +1007,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除索引表V2
-     *
+     * <b>summary</b> : 
+     * <p>删除公网域名</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePublicUrlResponse
+     */
+    public DeletePublicUrlResponse deletePublicUrlWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePublicUrl"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/public-url"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePublicUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除公网域名</p>
+     * @return DeletePublicUrlResponse
+     */
+    public DeletePublicUrlResponse deletePublicUrl(String instanceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deletePublicUrlWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除索引表V2</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTableResponse
@@ -763,8 +1070,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除索引表V2
-     *
+     * <b>summary</b> : 
+     * <p>删除索引表V2</p>
      * @return DeleteTableResponse
      */
     public DeleteTableResponse deleteTable(String instanceId, String tableName) throws Exception {
@@ -815,17 +1122,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a forced switchover.
-     *
-     * @description \\### Method
-     * ```java
-     * PUT
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
-     * ```
-     *
+     * <b>description</b> :
+     * <p>\### Method</p>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a forced switchover.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ForceSwitchResponse
@@ -849,17 +1156,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a forced switchover.
-     *
-     * @description \\### Method
-     * ```java
-     * PUT
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
-     * ```
-     *
+     * <b>description</b> :
+     * <p>\### Method</p>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a forced switchover.</p>
      * @return ForceSwitchResponse
      */
     public ForceSwitchResponse forceSwitch(String instanceId, String fsmId) throws Exception {
@@ -869,13 +1175,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a dictionary.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a dictionary.</p>
+     * 
      * @param request GetAdvanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -907,13 +1217,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a dictionary.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a dictionary.</p>
+     * 
      * @param request GetAdvanceConfigRequest
      * @return GetAdvanceConfigResponse
      */
@@ -924,13 +1238,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information in a specified advanced configuration file.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information in a specified advanced configuration file.</p>
+     * 
      * @param request GetAdvanceConfigFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -962,13 +1280,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information in a specified advanced configuration file.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information in a specified advanced configuration file.</p>
+     * 
      * @param request GetAdvanceConfigFileRequest
      * @return GetAdvanceConfigFileResponse
      */
@@ -979,13 +1301,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a cluster.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instance/{instanceId}/clusters/{clusterName}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a cluster.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterResponse
@@ -1009,13 +1333,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a cluster.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instance/{instanceId}/clusters/{clusterName}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instance/{instanceId}/clusters/{clusterName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a cluster.</p>
      * @return GetClusterResponse
      */
     public GetClusterResponse getCluster(String instanceId, String clusterName) throws Exception {
@@ -1025,13 +1350,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the runtime information about a specified cluster.
-     *
-     * @description ### Method
-     * GET
-     * ### URI
-     * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p>GET</p>
+     * <h3>URI</h3>
+     * <p>/openapi/ha3/instances/{instanceId}/cluster-run-time-info</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the runtime information about a specified cluster.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterRunTimeInfoResponse
@@ -1055,13 +1382,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the runtime information about a specified cluster.
-     *
-     * @description ### Method
-     * GET
-     * ### URI
-     * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p>GET</p>
+     * <h3>URI</h3>
+     * <p>/openapi/ha3/instances/{instanceId}/cluster-run-time-info</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the runtime information about a specified cluster.</p>
      * @return GetClusterRunTimeInfoResponse
      */
     public GetClusterRunTimeInfoResponse getClusterRunTimeInfo(String instanceId) throws Exception {
@@ -1071,13 +1399,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a data source.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a data source.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataSourceResponse
@@ -1101,13 +1431,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a data source.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a data source.</p>
      * @return GetDataSourceResponse
      */
     public GetDataSourceResponse getDataSource(String instanceId, String dataSourceName) throws Exception {
@@ -1117,8 +1448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据源部署信息
-     *
+     * <b>summary</b> : 
+     * <p>获取数据源部署信息</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataSourceDeployResponse
@@ -1142,8 +1474,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据源部署信息
-     *
+     * <b>summary</b> : 
+     * <p>获取数据源部署信息</p>
      * @return GetDataSourceDeployResponse
      */
     public GetDataSourceDeployResponse getDataSourceDeploy(String instanceId, String deployName, String dataSourceName) throws Exception {
@@ -1153,15 +1485,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays the overview of the deployment.
-     *
-     * @description ## Method
-     * GET
-     * ## URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/deploy-graph
-     * ```
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p>GET</p>
+     * <h2>URI</h2>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/deploy-graph
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Displays the overview of the deployment.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDeployGraphResponse
@@ -1185,15 +1518,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays the overview of the deployment.
-     *
-     * @description ## Method
-     * GET
-     * ## URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/deploy-graph
-     * ```
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p>GET</p>
+     * <h2>URI</h2>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/deploy-graph
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Displays the overview of the deployment.</p>
      * @return GetDeployGraphResponse
      */
     public GetDeployGraphResponse getDeployGraph(String instanceId) throws Exception {
@@ -1203,13 +1536,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details about the version information of an index table.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries details about the version information of an index table.</p>
+     * 
      * @param request GetFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1241,13 +1578,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details about the version information of an index table.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries details about the version information of an index table.</p>
+     * 
      * @param request GetFileRequest
      * @return GetFileResponse
      */
@@ -1258,8 +1599,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an index version.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about an index version.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIndexResponse
@@ -1283,8 +1625,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an index version.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about an index version.</p>
      * @return GetIndexResponse
      */
     public GetIndexResponse getIndex(String instanceId, String indexName) throws Exception {
@@ -1294,13 +1636,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about index versions that the current index version can be rolled back to.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-     *
+     * <b>summary</b> : 
+     * <p>获取索引在线生效策略</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIndexOnlineStrategyResponse
+     */
+    public GetIndexOnlineStrategyResponse getIndexOnlineStrategyWithOptions(String instanceId, String dataSourceName, String deployName, String indexName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIndexOnlineStrategy"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/data-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(dataSourceName) + "/deploys/" + com.aliyun.openapiutil.Client.getEncodeParam(deployName) + "/indexes/" + com.aliyun.openapiutil.Client.getEncodeParam(indexName) + "/online-strategy"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIndexOnlineStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取索引在线生效策略</p>
+     * @return GetIndexOnlineStrategyResponse
+     */
+    public GetIndexOnlineStrategyResponse getIndexOnlineStrategy(String instanceId, String dataSourceName, String deployName, String indexName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIndexOnlineStrategyWithOptions(instanceId, dataSourceName, deployName, indexName, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about index versions that the current index version can be rolled back to.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIndexVersionResponse
@@ -1324,13 +1707,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about index versions that the current index version can be rolled back to.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about index versions that the current index version can be rolled back to.</p>
      * @return GetIndexVersionResponse
      */
     public GetIndexVersionResponse getIndexVersion(String instanceId, String clusterName) throws Exception {
@@ -1340,13 +1726,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an instance based on a specified instance ID.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an instance based on a specified instance ID.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceResponse
@@ -1370,13 +1758,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an instance based on a specified instance ID.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an instance based on a specified instance ID.</p>
      * @return GetInstanceResponse
      */
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
@@ -1386,8 +1775,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Gets the configuration information of a node.
-     *
+     * <b>summary</b> : 
+     * <p>Gets the configuration information of a node.</p>
+     * 
      * @param request GetNodeConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1427,8 +1817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Gets the configuration information of a node.
-     *
+     * <b>summary</b> : 
+     * <p>Gets the configuration information of a node.</p>
+     * 
      * @param request GetNodeConfigRequest
      * @return GetNodeConfigResponse
      */
@@ -1439,8 +1830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取索引表信息V2
-     *
+     * <b>summary</b> : 
+     * <p>获取索引表信息V2</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTableResponse
@@ -1464,8 +1856,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取索引表信息V2
-     *
+     * <b>summary</b> : 
+     * <p>获取索引表信息V2</p>
      * @return GetTableResponse
      */
     public GetTableResponse getTable(String instanceId, String tableName) throws Exception {
@@ -1475,8 +1867,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据generationId获取某个索引版本状态V2
-     *
+     * <b>summary</b> : 
+     * <p>根据generationId获取某个索引版本状态V2</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTableGenerationResponse
@@ -1500,8 +1893,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据generationId获取某个索引版本状态V2
-     *
+     * <b>summary</b> : 
+     * <p>根据generationId获取某个索引版本状态V2</p>
      * @return GetTableGenerationResponse
      */
     public GetTableGenerationResponse getTableGeneration(String instanceId, String tableName, String generationId) throws Exception {
@@ -1511,13 +1904,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the file list in an advanced configuration directory.
-     *
-     * @description ## Method
-     * `GET`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the file list in an advanced configuration directory.</p>
+     * 
      * @param request ListAdvanceConfigDirRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1549,13 +1944,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the file list in an advanced configuration directory.
-     *
-     * @description ## Method
-     * `GET`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the file list in an advanced configuration directory.</p>
+     * 
      * @param request ListAdvanceConfigDirRequest
      * @return ListAdvanceConfigDirResponse
      */
@@ -1566,11 +1963,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of advanced configurations.
-     *
-     * @description ## Sample requests
-     * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
-     *
+     * <b>description</b> :
+     * <h2>Sample requests</h2>
+     * <p><code>GET /openapi/ha3/instances/ose-test1/advanced-configs</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of advanced configurations.</p>
+     * 
      * @param request ListAdvanceConfigsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1614,11 +2013,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of advanced configurations.
-     *
-     * @description ## Sample requests
-     * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
-     *
+     * <b>description</b> :
+     * <h2>Sample requests</h2>
+     * <p><code>GET /openapi/ha3/instances/ose-test1/advanced-configs</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains a list of advanced configurations.</p>
+     * 
      * @param request ListAdvanceConfigsRequest
      * @return ListAdvanceConfigsResponse
      */
@@ -1629,13 +2030,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries cluster names.
-     *
-     * @description ### Method
-     * GET
-     * ### URI
-     * /openapi/ha3/instances/{instanceId}/cluster-names
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p>GET</p>
+     * <h3>URI</h3>
+     * <p>/openapi/ha3/instances/{instanceId}/cluster-names</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries cluster names.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClusterNamesResponse
@@ -1659,13 +2062,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries cluster names.
-     *
-     * @description ### Method
-     * GET
-     * ### URI
-     * /openapi/ha3/instances/{instanceId}/cluster-names
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p>GET</p>
+     * <h3>URI</h3>
+     * <p>/openapi/ha3/instances/{instanceId}/cluster-names</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries cluster names.</p>
      * @return ListClusterNamesResponse
      */
     public ListClusterNamesResponse listClusterNames() throws Exception {
@@ -1675,17 +2079,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays cluster tasks .
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/cluster-tasks
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/cluster-tasks
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Displays cluster tasks .</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClusterTasksResponse
@@ -1709,17 +2113,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays cluster tasks .
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/cluster-tasks
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/cluster-tasks
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Displays cluster tasks .</p>
      * @return ListClusterTasksResponse
      */
     public ListClusterTasksResponse listClusterTasks(String instanceId) throws Exception {
@@ -1729,17 +2132,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of clusters.
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/clusters
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of clusters.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClustersResponse
@@ -1763,17 +2166,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of clusters.
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/clusters
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of clusters.</p>
      * @return ListClustersResponse
      */
     public ListClustersResponse listClusters(String instanceId) throws Exception {
@@ -1783,13 +2185,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the schema information of a specified data source.
-     *
-     * @description ## Method
-     * `GET`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the schema information of a specified data source.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataSourceSchemasResponse
@@ -1813,13 +2217,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the schema information of a specified data source.
-     *
-     * @description ## Method
-     * `GET`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the schema information of a specified data source.</p>
      * @return ListDataSourceSchemasResponse
      */
     public ListDataSourceSchemasResponse listDataSourceSchemas(String instanceId, String dataSourceName) throws Exception {
@@ -1829,17 +2234,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays data source tasks.
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/data-source-tasks
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-source-tasks
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Displays data source tasks.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataSourceTasksResponse
@@ -1863,17 +2268,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays data source tasks.
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/data-source-tasks
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/data-source-tasks
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Displays data source tasks.</p>
      * @return ListDataSourceTasksResponse
      */
     public ListDataSourceTasksResponse listDataSourceTasks(String instanceId) throws Exception {
@@ -1883,13 +2287,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the list of data sources.
-     *
-     * @description ## Method
-     * `GET`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the list of data sources.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataSourcesResponse
@@ -1913,13 +2319,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the list of data sources.
-     *
-     * @description ## Method
-     * `GET`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>GET</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the list of data sources.</p>
      * @return ListDataSourcesResponse
      */
     public ListDataSourcesResponse listDataSources(String instanceId) throws Exception {
@@ -1929,13 +2336,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the data restoration version of a data source.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the data restoration version of a data source.</p>
+     * 
      * @param request ListDateSourceGenerationsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1971,13 +2380,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the data restoration version of a data source.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the data restoration version of a data source.</p>
+     * 
      * @param request ListDateSourceGenerationsRequest
      * @return ListDateSourceGenerationsResponse
      */
@@ -1988,13 +2399,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the index list.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes
-     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIndexRecoverRecordsResponse
+     */
+    public ListIndexRecoverRecordsResponse listIndexRecoverRecordsWithOptions(String indexName, String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIndexRecoverRecords"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/indexes/" + com.aliyun.openapiutil.Client.getEncodeParam(indexName) + "/actions/list-recover-records"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIndexRecoverRecordsResponse());
+    }
+
+    /**
+     * @return ListIndexRecoverRecordsResponse
+     */
+    public ListIndexRecoverRecordsResponse listIndexRecoverRecords(String indexName, String instanceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIndexRecoverRecordsWithOptions(indexName, instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the index list.</p>
+     * 
      * @param request ListIndexesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2026,13 +2473,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the index list.
-     *
-     * @description ## Method
-     *     GET
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>GET
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the index list.</p>
+     * 
      * @param request ListIndexesRequest
      * @return ListIndexesResponse
      */
@@ -2043,13 +2494,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/specs?type=qrs`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/specs?type=qrs</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param request ListInstanceSpecsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2081,13 +2534,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/specs?type=qrs`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/specs?type=qrs</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param request ListInstanceSpecsRequest
      * @return ListInstanceSpecsResponse
      */
@@ -2098,13 +2553,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/[code]/instances`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/[code]/instances</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2166,13 +2623,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/[code]/instances`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/[code]/instances</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -2183,17 +2642,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the details of online configurations.
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the details of online configurations.</p>
+     * 
      * @param request ListOnlineConfigsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2225,17 +2684,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the details of online configurations.
-     *
-     * @description ### Method
-     * ```java
-     * GET
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">GET
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the details of online configurations.</p>
+     * 
      * @param request ListOnlineConfigsRequest
      * @return ListOnlineConfigsResponse
      */
@@ -2246,13 +2705,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the query result.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
-     *
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPausePolicysResponse
+     */
+    public ListPausePolicysResponse listPausePolicysWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPausePolicys"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/pause-policies"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPausePolicysResponse());
+    }
+
+    /**
+     * @return ListPausePolicysResponse
+     */
+    public ListPausePolicysResponse listPausePolicys(String instanceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPausePolicysWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * @param request ListPostQueryResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPostQueryResultResponse
+     */
+    public ListPostQueryResultResponse listPostQueryResultWithOptions(String instanceId, ListPostQueryResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("body", request.body);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPostQueryResult"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPostQueryResultResponse());
+    }
+
+    /**
+     * @param request ListPostQueryResultRequest
+     * @return ListPostQueryResultResponse
+     */
+    public ListPostQueryResultResponse listPostQueryResult(String instanceId, ListPostQueryResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPostQueryResultWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/query?query=xxxx</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the query result.</p>
+     * 
      * @param request ListQueryResultRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2288,13 +2832,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the query result.
-     *
-     * @description ### Method
-     * `GET`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>GET</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/query?query=xxxx</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the query result.</p>
+     * 
      * @param request ListQueryResultRequest
      * @return ListQueryResultResponse
      */
@@ -2305,8 +2851,135 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取索引generation列表V2
-     *
+     * @param request ListRestQueryResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRestQueryResultResponse
+     */
+    public ListRestQueryResultResponse listRestQueryResultWithOptions(String instanceId, ListRestQueryResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("address", request.address);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.indexName)) {
+            body.put("indexName", request.indexName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRestQueryResult"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/rest-query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRestQueryResultResponse());
+    }
+
+    /**
+     * @param request ListRestQueryResultRequest
+     * @return ListRestQueryResultResponse
+     */
+    public ListRestQueryResultResponse listRestQueryResult(String instanceId, ListRestQueryResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listRestQueryResultWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过数据源配置获取schema信息</p>
+     * 
+     * @param request ListSchemasRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSchemasResponse
+     */
+    public ListSchemasResponse listSchemasWithOptions(String instanceId, ListSchemasRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            query.put("accessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessSecret)) {
+            query.put("accessSecret", request.accessSecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpoint)) {
+            query.put("endpoint", request.endpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            query.put("partition", request.partition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.project)) {
+            query.put("project", request.project);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.table)) {
+            query.put("table", request.table);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSchemas"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/schemas"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSchemasResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过数据源配置获取schema信息</p>
+     * 
+     * @param request ListSchemasRequest
+     * @return ListSchemasResponse
+     */
+    public ListSchemasResponse listSchemas(String instanceId, ListSchemasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSchemasWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取索引generation列表V2</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTableGenerationsResponse
@@ -2330,8 +3003,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取索引generation列表V2
-     *
+     * <b>summary</b> : 
+     * <p>获取索引generation列表V2</p>
      * @return ListTableGenerationsResponse
      */
     public ListTableGenerationsResponse listTableGenerations(String instanceId, String tableName) throws Exception {
@@ -2341,8 +3014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取索引列表V2
-     *
+     * <b>summary</b> : 
+     * <p>获取索引列表V2</p>
+     * 
      * @param request ListTablesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2374,8 +3048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取索引列表V2
-     *
+     * <b>summary</b> : 
+     * <p>获取索引列表V2</p>
+     * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
      */
@@ -2386,13 +3061,188 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the advanced configurations.
-     *
-     * @description ## Method
-     *     put
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-     *
+     * <b>summary</b> : 
+     * <p>获取集群任务列表（数据源+集群）</p>
+     * 
+     * @param request ListTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTasksResponse
+     */
+    public ListTasksResponse listTasksWithOptions(String instanceId, ListTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.end)) {
+            query.put("end", request.end);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.start)) {
+            query.put("start", request.start);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTasks"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取集群任务列表（数据源+集群）</p>
+     * 
+     * @param request ListTasksRequest
+     * @return ListTasksResponse
+     */
+    public ListTasksResponse listTasks(String instanceId, ListTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTasksWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * @param request ListVectorQueryResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVectorQueryResultResponse
+     */
+    public ListVectorQueryResultResponse listVectorQueryResultWithOptions(String instanceId, ListVectorQueryResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("queryType", request.queryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vectorQueryType)) {
+            query.put("vectorQueryType", request.vectorQueryType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("body", request.body);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVectorQueryResult"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/vector-query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVectorQueryResultResponse());
+    }
+
+    /**
+     * @param request ListVectorQueryResultRequest
+     * @return ListVectorQueryResultResponse
+     */
+    public ListVectorQueryResultResponse listVectorQueryResult(String instanceId, ListVectorQueryResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listVectorQueryResultWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * @param request ModifyAdvanceConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyAdvanceConfigResponse
+     */
+    public ModifyAdvanceConfigResponse modifyAdvanceConfigWithOptions(String instanceId, String configName, ModifyAdvanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            body.put("contentType", request.contentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
+            body.put("desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.files)) {
+            body.put("files", request.files);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateTime)) {
+            body.put("updateTime", request.updateTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyAdvanceConfig"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/advanced-configs/" + com.aliyun.openapiutil.Client.getEncodeParam(configName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAdvanceConfigResponse());
+    }
+
+    /**
+     * @param request ModifyAdvanceConfigRequest
+     * @return ModifyAdvanceConfigResponse
+     */
+    public ModifyAdvanceConfigResponse modifyAdvanceConfig(String instanceId, String configName, ModifyAdvanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyAdvanceConfigWithOptions(instanceId, configName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>put
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the advanced configurations.</p>
+     * 
      * @param request ModifyAdvanceConfigFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2434,13 +3284,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the advanced configurations.
-     *
-     * @description ## Method
-     *     put
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>put
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the advanced configurations.</p>
+     * 
      * @param request ModifyAdvanceConfigFileRequest
      * @return ModifyAdvanceConfigFileResponse
      */
@@ -2451,13 +3305,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a specified cluster.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a specified cluster.</p>
+     * 
      * @param request ModifyClusterDescRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2489,13 +3345,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a specified cluster.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a specified cluster.</p>
+     * 
      * @param request ModifyClusterDescRequest
      * @return ModifyClusterDescResponse
      */
@@ -2506,11 +3364,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration information of a cluster.
-     *
-     * @description ## Request syntax
-     *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-     *
+     * <b>description</b> :
+     * <h2>Request syntax</h2>
+     * <pre><code>PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration information of a cluster.</p>
+     * 
      * @param request ModifyClusterOfflineConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2574,11 +3435,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration information of a cluster.
-     *
-     * @description ## Request syntax
-     *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-     *
+     * <b>description</b> :
+     * <h2>Request syntax</h2>
+     * <pre><code>PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration information of a cluster.</p>
+     * 
      * @param request ModifyClusterOfflineConfigRequest
      * @return ModifyClusterOfflineConfigResponse
      */
@@ -2589,13 +3453,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the online configurations of a cluster.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/cluster-online-config`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/cluster-online-config</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the online configurations of a cluster.</p>
+     * 
      * @param request ModifyClusterOnlineConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2631,13 +3497,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the online configurations of a cluster.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/cluster-online-config`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/cluster-online-config</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the online configurations of a cluster.</p>
+     * 
      * @param request ModifyClusterOnlineConfigRequest
      * @return ModifyClusterOnlineConfigResponse
      */
@@ -2648,13 +3516,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a data source.
-     *
-     * @description ## Method
-     * `PUT`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>PUT</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a data source.</p>
+     * 
      * @param request ModifyDataSourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2692,13 +3562,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a data source.
-     *
-     * @description ## Method
-     * `PUT`
-     * ## URI
-     * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <p><code>PUT</code></p>
+     * <h2>URI</h2>
+     * <p><code>/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a data source.</p>
+     * 
      * @param request ModifyDataSourceRequest
      * @return ModifyDataSourceResponse
      */
@@ -2709,13 +3581,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a file.
-     *
-     * @description ## Method
-     *     PUT
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-     *
+     * <b>summary</b> : 
+     * <p>修改数据源部署信息</p>
+     * 
+     * @param request ModifyDataSourceDeployRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDataSourceDeployResponse
+     */
+    public ModifyDataSourceDeployResponse modifyDataSourceDeployWithOptions(String instanceId, String deployName, String dataSourceName, ModifyDataSourceDeployRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.generationId)) {
+            query.put("generationId", request.generationId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoBuildIndex)) {
+            body.put("autoBuildIndex", request.autoBuildIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            body.put("extend", request.extend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processor)) {
+            body.put("processor", request.processor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storage)) {
+            body.put("storage", request.storage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.swift)) {
+            body.put("swift", request.swift);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDataSourceDeploy"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/data-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(dataSourceName) + "/deploys/" + com.aliyun.openapiutil.Client.getEncodeParam(deployName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDataSourceDeployResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改数据源部署信息</p>
+     * 
+     * @param request ModifyDataSourceDeployRequest
+     * @return ModifyDataSourceDeployResponse
+     */
+    public ModifyDataSourceDeployResponse modifyDataSourceDeploy(String instanceId, String deployName, String dataSourceName, ModifyDataSourceDeployRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyDataSourceDeployWithOptions(instanceId, deployName, dataSourceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>PUT
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a file.</p>
+     * 
      * @param request ModifyFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2757,13 +3706,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a file.
-     *
-     * @description ## Method
-     *     PUT
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>PUT
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a file.</p>
+     * 
      * @param request ModifyFileRequest
      * @return ModifyFileResponse
      */
@@ -2774,13 +3727,153 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about index partitions.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/index-partition`
-     *
+     * @param request ModifyIndexRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyIndexResponse
+     */
+    public ModifyIndexResponse modifyIndexWithOptions(String instanceId, String indexName, ModifyIndexRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.buildParallelNum)) {
+            body.put("buildParallelNum", request.buildParallelNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cluster)) {
+            body.put("cluster", request.cluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterConfigName)) {
+            body.put("clusterConfigName", request.clusterConfigName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSource)) {
+            body.put("dataSource", request.dataSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInfo)) {
+            body.put("dataSourceInfo", request.dataSourceInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            body.put("domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mergeParallelNum)) {
+            body.put("mergeParallelNum", request.mergeParallelNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partition)) {
+            body.put("partition", request.partition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pushMode)) {
+            body.put("pushMode", request.pushMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyIndex"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/indexes/" + com.aliyun.openapiutil.Client.getEncodeParam(indexName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyIndexResponse());
+    }
+
+    /**
+     * @param request ModifyIndexRequest
+     * @return ModifyIndexResponse
+     */
+    public ModifyIndexResponse modifyIndex(String instanceId, String indexName, ModifyIndexRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyIndexWithOptions(instanceId, indexName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改索引在线策略</p>
+     * 
+     * @param request ModifyIndexOnlineStrategyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyIndexOnlineStrategyResponse
+     */
+    public ModifyIndexOnlineStrategyResponse modifyIndexOnlineStrategyWithOptions(String instanceId, String dataSourceName, String deployName, String indexName, ModifyIndexOnlineStrategyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.changeRate)) {
+            body.put("changeRate", request.changeRate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyIndexOnlineStrategy"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/data-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(dataSourceName) + "/deploys/" + com.aliyun.openapiutil.Client.getEncodeParam(deployName) + "/indexes/" + com.aliyun.openapiutil.Client.getEncodeParam(indexName) + "/online-strategy"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyIndexOnlineStrategyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改索引在线策略</p>
+     * 
+     * @param request ModifyIndexOnlineStrategyRequest
+     * @return ModifyIndexOnlineStrategyResponse
+     */
+    public ModifyIndexOnlineStrategyResponse modifyIndexOnlineStrategy(String instanceId, String dataSourceName, String deployName, String indexName, ModifyIndexOnlineStrategyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyIndexOnlineStrategyWithOptions(instanceId, dataSourceName, deployName, indexName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/index-partition</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information about index partitions.</p>
+     * 
      * @param request ModifyIndexPartitionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2824,13 +3917,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about index partitions.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/index-partition`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/index-partition</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information about index partitions.</p>
+     * 
      * @param request ModifyIndexPartitionRequest
      * @return ModifyIndexPartitionResponse
      */
@@ -2841,13 +3936,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the index version of a cluster (an index version rollback).
-     *
-     * @description ## Method
-     *     PUT
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>PUT
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the index version of a cluster (an index version rollback).</p>
+     * 
      * @param request ModifyIndexVersionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2874,13 +3973,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the index version of a cluster (an index version rollback).
-     *
-     * @description ## Method
-     *     PUT
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>PUT
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the index version of a cluster (an index version rollback).</p>
+     * 
      * @param request ModifyIndexVersionRequest
      * @return ModifyIndexVersionResponse
      */
@@ -2891,17 +3994,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a node.
-     *
-     * @description ### Method
-     * ```java
-     * PUT
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config?type=qrs&amp;name=test
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a node.</p>
+     * 
      * @param request ModifyNodeConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2971,17 +4074,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a node.
-     *
-     * @description ### Method
-     * ```java
-     * PUT
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node-config?type=qrs&amp;name=test
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a node.</p>
+     * 
      * @param request ModifyNodeConfigRequest
      * @return ModifyNodeConfigResponse
      */
@@ -2992,17 +4095,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies online configurations.
-     *
-     * @description ### Method
-     * ```java
-     * put
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">put
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies online configurations.</p>
+     * 
      * @param request ModifyOnlineConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3034,17 +4137,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies online configurations.
-     *
-     * @description ### Method
-     * ```java
-     * put
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">put
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs/{indexName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies online configurations.</p>
+     * 
      * @param request ModifyOnlineConfigRequest
      * @return ModifyOnlineConfigResponse
      */
@@ -3055,13 +4158,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例的密码
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/password`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/password</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改实例的密码</p>
+     * 
      * @param request ModifyPasswordRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3097,13 +4202,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例的密码
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/password`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/password</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改实例的密码</p>
+     * 
      * @param request ModifyPasswordRequest
      * @return ModifyPasswordResponse
      */
@@ -3114,8 +4221,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改索引V2
-     *
+     * @param request ModifyPausePolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPausePolicyResponse
+     */
+    public ModifyPausePolicyResponse modifyPausePolicyWithOptions(String instanceId, ModifyPausePolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("body", request.body);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPausePolicy"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/pause-policies"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPausePolicyResponse());
+    }
+
+    /**
+     * @param request ModifyPausePolicyRequest
+     * @return ModifyPausePolicyResponse
+     */
+    public ModifyPausePolicyResponse modifyPausePolicy(String instanceId, ModifyPausePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyPausePolicyWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改公网域名访问白名单</p>
+     * 
+     * @param request ModifyPublicUrlIpListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPublicUrlIpListResponse
+     */
+    public ModifyPublicUrlIpListResponse modifyPublicUrlIpListWithOptions(String instanceId, ModifyPublicUrlIpListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("body", request.body);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPublicUrlIpList"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/public-url-ip-list"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPublicUrlIpListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改公网域名访问白名单</p>
+     * 
+     * @param request ModifyPublicUrlIpListRequest
+     * @return ModifyPublicUrlIpListResponse
+     */
+    public ModifyPublicUrlIpListResponse modifyPublicUrlIpList(String instanceId, ModifyPublicUrlIpListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyPublicUrlIpListWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改索引V2</p>
+     * 
      * @param request ModifyTableRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3177,8 +4373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改索引V2
-     *
+     * <b>summary</b> : 
+     * <p>修改索引V2</p>
+     * 
      * @param request ModifyTableRequest
      * @return ModifyTableResponse
      */
@@ -3189,17 +4386,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes a version of advanced configurations.
-     *
-     * @description ## Method
-     * ~~~
-     * POST
-     * ~~~
-     * ## URI
-     * ~~~
-     * /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
-     * ~~~
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes a version of advanced configurations.</p>
+     * 
      * @param request PublishAdvanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3235,17 +4432,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes a version of advanced configurations.
-     *
-     * @description ## Method
-     * ~~~
-     * POST
-     * ~~~
-     * ## URI
-     * ~~~
-     * /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
-     * ~~~
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/actions/publish
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes a version of advanced configurations.</p>
+     * 
      * @param request PublishAdvanceConfigRequest
      * @return PublishAdvanceConfigResponse
      */
@@ -3256,13 +4453,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes a specified index version.
-     *
-     * @description ## Method
-     *     POST
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes a specified index version.</p>
+     * 
      * @param request PublishIndexVersionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3294,13 +4495,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes a specified index version.
-     *
-     * @description ## Method
-     *     POST
-     * ## URI
-     *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
-     *
+     * <b>description</b> :
+     * <h2>Method</h2>
+     * <pre><code>POST
+     * </code></pre>
+     * <h2>URI</h2>
+     * <pre><code>/openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes a specified index version.</p>
+     * 
      * @param request PublishIndexVersionRequest
      * @return PublishIndexVersionResponse
      */
@@ -3311,13 +4516,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores data from an index.
-     *
-     * @description ### Method
-     * `POST`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/recover-index`
-     *
+     * @param request PushDocumentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PushDocumentsResponse
+     */
+    public PushDocumentsResponse pushDocumentsWithOptions(String instanceId, String dataSourceName, PushDocumentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pkField)) {
+            query.put("pkField", request.pkField);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PushDocuments"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/data-sources/" + com.aliyun.openapiutil.Client.getEncodeParam(dataSourceName) + "/actions/bulk"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushDocumentsResponse());
+    }
+
+    /**
+     * @param request PushDocumentsRequest
+     * @return PushDocumentsResponse
+     */
+    public PushDocumentsResponse pushDocuments(String instanceId, String dataSourceName, PushDocumentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pushDocumentsWithOptions(instanceId, dataSourceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/recover-index</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores data from an index.</p>
+     * 
      * @param request RecoverIndexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3361,13 +4610,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores data from an index.
-     *
-     * @description ### Method
-     * `POST`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}/recover-index`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>POST</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}/recover-index</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores data from an index.</p>
+     * 
      * @param request RecoverIndexRequest
      * @return RecoverIndexResponse
      */
@@ -3378,8 +4629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 索引重建V2
-     *
+     * <b>summary</b> : 
+     * <p>索引重建V2</p>
+     * 
      * @param request ReindexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3419,8 +4671,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 索引重建V2
-     *
+     * <b>summary</b> : 
+     * <p>索引重建V2</p>
+     * 
      * @param request ReindexRequest
      * @return ReindexResponse
      */
@@ -3431,17 +4684,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a cluster.
-     *
-     * @description ### Method
-     * ```java
-     * DELETE
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a cluster.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveClusterResponse
@@ -3465,17 +4718,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a cluster.
-     *
-     * @description ### Method
-     * ```java
-     * DELETE
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">DELETE
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a cluster.</p>
      * @return RemoveClusterResponse
      */
     public RemoveClusterResponse removeCluster(String instanceId, String clusterName) throws Exception {
@@ -3549,17 +4801,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an FSM task.
-     *
-     * @description ### Method
-     * ```java
-     * PUT
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an FSM task.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopTaskResponse
@@ -3583,17 +4835,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an FSM task.
-     *
-     * @description ### Method
-     * ```java
-     * PUT
-     * ```
-     * ### URI
-     * ```java
-     * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
-     * ```
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <pre><code class="language-java">PUT
+     * </code></pre>
+     * <h3>URI</h3>
+     * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an FSM task.</p>
      * @return StopTaskResponse
      */
     public StopTaskResponse stopTask(String instanceId, String fsmId) throws Exception {
@@ -3603,13 +4854,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration of a specified instance.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a specified instance.</p>
+     * 
      * @param request UpdateInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3649,13 +4902,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration of a specified instance.
-     *
-     * @description ### Method
-     * `PUT`
-     * ### URI
-     * `/openapi/ha3/instances/{instanceId}`
-     *
+     * <b>description</b> :
+     * <h3>Method</h3>
+     * <p><code>PUT</code></p>
+     * <h3>URI</h3>
+     * <p><code>/openapi/ha3/instances/{instanceId}</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a specified instance.</p>
+     * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
      */

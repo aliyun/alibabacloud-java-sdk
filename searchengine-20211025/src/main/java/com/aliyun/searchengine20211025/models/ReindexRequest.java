@@ -4,12 +4,24 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ReindexRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1640867288</p>
+     */
     @NameInMap("dataTimeSec")
     public Integer dataTimeSec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://opensearch</p>
+     */
     @NameInMap("ossDataPath")
     public String ossDataPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ds=20220713</p>
+     */
     @NameInMap("partition")
     public String partition;
 

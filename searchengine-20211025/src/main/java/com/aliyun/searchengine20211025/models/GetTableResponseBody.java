@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTableResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -37,13 +40,24 @@ public class GetTableResponseBody extends TeaModel {
     public static class GetTableResponseBodyResultDataProcessConfigParamsSrcFieldConfig extends TeaModel {
         /**
          * <p>OSS Bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ossBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
+         */
         @NameInMap("ossEndpoint")
         public String ossEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid</p>
+         */
         @NameInMap("uid")
         public String uid;
 
@@ -82,9 +96,17 @@ public class GetTableResponseBody extends TeaModel {
         @NameInMap("srcFieldConfig")
         public GetTableResponseBodyResultDataProcessConfigParamsSrcFieldConfig srcFieldConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image</p>
+         */
         @NameInMap("vectorModal")
         public String vectorModal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>clip</p>
+         */
         @NameInMap("vectorModel")
         public String vectorModel;
 
@@ -120,15 +142,27 @@ public class GetTableResponseBody extends TeaModel {
     }
 
     public static class GetTableResponseBodyResultDataProcessConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>source_image_vector</p>
+         */
         @NameInMap("dstField")
         public String dstField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vectorize</p>
+         */
         @NameInMap("operator")
         public String operator;
 
         @NameInMap("params")
         public GetTableResponseBodyResultDataProcessConfigParams params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_image</p>
+         */
         @NameInMap("srcField")
         public String srcField;
 
@@ -174,37 +208,75 @@ public class GetTableResponseBody extends TeaModel {
     public static class GetTableResponseBodyResultDataSourceConfig extends TeaModel {
         /**
          * <p>AK</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak</p>
          */
         @NameInMap("accessKey")
         public String accessKey;
 
         /**
          * <p>AS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>as</p>
          */
         @NameInMap("accessSecret")
         public String accessSecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>heytea-ops-oss</p>
+         */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>namespace</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/opensearch_index_data/sift_oss_test.data</p>
+         */
         @NameInMap("ossPath")
         public String ossPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds=20220808</p>
+         */
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vendor/sebastian/comparator/src/exceptions</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dp_pdm_marketing_prod</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_add</p>
+         */
         @NameInMap("table")
         public String table;
 
@@ -296,15 +368,27 @@ public class GetTableResponseBody extends TeaModel {
     }
 
     public static class GetTableResponseBodyResultDataSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
 
         @NameInMap("config")
         public GetTableResponseBodyResultDataSourceConfig config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1715160176</p>
+         */
         @NameInMap("dataTimeSec")
         public Integer dataTimeSec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>odps</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -348,15 +432,31 @@ public class GetTableResponseBody extends TeaModel {
     }
 
     public static class GetTableResponseBodyResultVectorIndexAdvanceParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("buildIndexParams")
         public String buildIndexParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("linearBuildThreshold")
         public String linearBuildThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("minScanDocCnt")
         public String minScanDocCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("searchIndexParams")
         public String searchIndexParams;
 
@@ -403,27 +503,59 @@ public class GetTableResponseBody extends TeaModel {
         @NameInMap("advanceParams")
         public GetTableResponseBodyResultVectorIndexAdvanceParams advanceParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("dimension")
         public String dimension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SquaredEuclidean</p>
+         */
         @NameInMap("distanceType")
         public String distanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_odps</p>
+         */
         @NameInMap("indexName")
         public String indexName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>namespace</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sparse_indices</p>
+         */
         @NameInMap("sparseIndexField")
         public String sparseIndexField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sparse_values</p>
+         */
         @NameInMap("sparseValueField")
         public String sparseValueField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_image_vector</p>
+         */
         @NameInMap("vectorField")
         public String vectorField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Qc</p>
+         */
         @NameInMap("vectorIndexType")
         public String vectorIndexType;
 
@@ -510,6 +642,10 @@ public class GetTableResponseBody extends TeaModel {
         @NameInMap("dataProcessConfig")
         public java.util.List<GetTableResponseBodyResultDataProcessConfig> dataProcessConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dataProcessorCount")
         public Integer dataProcessorCount;
 
@@ -519,15 +655,31 @@ public class GetTableResponseBody extends TeaModel {
         @NameInMap("fieldSchema")
         public java.util.Map<String, String> fieldSchema;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_oss</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("partitionCount")
         public Integer partitionCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("primaryKey")
         public String primaryKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("rawSchema")
         public String rawSchema;
 

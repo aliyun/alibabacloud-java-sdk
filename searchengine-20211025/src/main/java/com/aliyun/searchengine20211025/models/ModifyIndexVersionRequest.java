@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyIndexVersionRequest extends TeaModel {
     /**
      * <p>The keyword used to search for a version. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("body")
     public java.util.List<ModifyIndexVersionRequestBody> body;
@@ -26,18 +29,27 @@ public class ModifyIndexVersionRequest extends TeaModel {
     public static class ModifyIndexVersionRequestBody extends TeaModel {
         /**
          * <p>The ID of the index deployed in offline mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>277</p>
          */
         @NameInMap("buildDeployId")
         public String buildDeployId;
 
         /**
          * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main_index</p>
          */
         @NameInMap("indexName")
         public String indexName;
 
         /**
          * <p>The version of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("version")
         public String version;

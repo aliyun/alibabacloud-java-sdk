@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ModifyIndexPartitionRequest extends TeaModel {
     /**
      * <p>The name of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
     /**
      * <p>The name of the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pre_domain_1</p>
      */
     @NameInMap("domainName")
     public String domainName;
 
     /**
      * <p>The primary key of generation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1633293829</p>
      */
     @NameInMap("generation")
     public Long generation;
@@ -68,18 +77,27 @@ public class ModifyIndexPartitionRequest extends TeaModel {
     public static class ModifyIndexPartitionRequestIndexInfos extends TeaModel {
         /**
          * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atest2</p>
          */
         @NameInMap("indexName")
         public String indexName;
 
         /**
          * <p>The number of concurrency. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("parallelNum")
         public Integer parallelNum;
 
         /**
          * <p>The number of shards of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("partitionCount")
         public Integer partitionCount;

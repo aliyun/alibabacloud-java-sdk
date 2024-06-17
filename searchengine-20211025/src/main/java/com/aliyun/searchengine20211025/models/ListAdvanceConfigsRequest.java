@@ -15,6 +15,9 @@ public class ListAdvanceConfigsRequest extends TeaModel {
 
     /**
      * <p>The type of the advanced configurations. Valid values: online and offline. - online The default value is offline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("type")
     public String type;

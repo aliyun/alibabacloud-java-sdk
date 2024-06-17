@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetNodeConfigResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetNodeConfigResponseBody extends TeaModel {
     public static class GetNodeConfigResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the expression is the default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("active")
         public Boolean active;
 
         /**
          * <p>The number of data replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("dataDuplicateNumber")
         public Integer dataDuplicateNumber;
 
         /**
          * <p>The number of data shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("dataFragmentNumber")
         public Integer dataFragmentNumber;
 
         /**
          * <p>The traffic percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("flowRatio")
         public Integer flowRatio;
 
         /**
          * <p>The minimum service ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("minServicePercent")
         public Integer minServicePercent;
 
         /**
          * <p>Indicates whether the node is associated with the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("published")
         public Boolean published;

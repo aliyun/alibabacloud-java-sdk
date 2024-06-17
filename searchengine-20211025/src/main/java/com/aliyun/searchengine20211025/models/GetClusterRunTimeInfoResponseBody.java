@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList extends TeaModel {
         /**
          * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
         /**
          * <p>The overall progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("donePercent")
         public Integer donePercent;
 
         /**
          * <p>The number of nodes that are configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("doneSize")
         public Integer doneSize;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_0704</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("totalSize")
         public Integer totalSize;
@@ -118,12 +136,18 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo extends TeaModel {
         /**
          * <p>The name of the index configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index_meta_name</p>
          */
         @NameInMap("configMetaName")
         public String configMetaName;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("version")
         public Long version;
@@ -154,12 +178,18 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo extends TeaModel {
         /**
          * <p>The name of the index configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index_meta_name</p>
          */
         @NameInMap("configMetaName")
         public String configMetaName;
 
         /**
          * <p>The version of the index template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("version")
         public Long version;
@@ -202,48 +232,72 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
         /**
          * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("docSize")
         public Integer docSize;
 
         /**
          * <p>The overall progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("donePercent")
         public Integer donePercent;
 
         /**
          * <p>The number of nodes that are configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("doneSize")
         public Integer doneSize;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A3B1C48006A6C0905F6375F4821EB50</p>
          */
         @NameInMap("errorMsg")
         public String errorMsg;
 
         /**
          * <p>The time when the full data was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("fullUpdateTime")
         public String fullUpdateTime;
 
         /**
          * <p>The full version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123423</p>
          */
         @NameInMap("fullVersion")
         public Long fullVersion;
 
         /**
          * <p>The time when the incremental data was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("incUpdateTime")
         public String incUpdateTime;
 
         /**
          * <p>The incremental version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123423</p>
          */
         @NameInMap("incVersion")
         public Long incVersion;
@@ -256,6 +310,9 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
         /**
          * <p>The size of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("indexSize")
         public Long indexSize;
@@ -274,12 +331,18 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-c4d2rq7nt04_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("totalSize")
         public Integer totalSize;
@@ -422,24 +485,36 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus extends TeaModel {
         /**
          * <p>The overall progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("donePercent")
         public Integer donePercent;
 
         /**
          * <p>The number of nodes being processed in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("doneSize")
         public Integer doneSize;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2s170b03_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The total number of nodes in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("totalSize")
         public Integer totalSize;
@@ -536,30 +611,45 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static class GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList extends TeaModel {
         /**
          * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
         /**
          * <p>The progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("donePercent")
         public Integer donePercent;
 
         /**
          * <p>The number of nodes that are configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("doneSize")
         public Integer doneSize;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-zvp2qr1sk01_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("totalSize")
         public Integer totalSize;
@@ -614,24 +704,36 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static class GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus extends TeaModel {
         /**
          * <p>The progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("donePercent")
         public Integer donePercent;
 
         /**
          * <p>The number of nodes that are configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("doneSize")
         public Integer doneSize;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-c4d2rq7nt04_qrs</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("totalSize")
         public Integer totalSize;
@@ -714,6 +816,9 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public static class GetClusterRunTimeInfoResponseBodyResult extends TeaModel {
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         @NameInMap("clusterName")
         public String clusterName;

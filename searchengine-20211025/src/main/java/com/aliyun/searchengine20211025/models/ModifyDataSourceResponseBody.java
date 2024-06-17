@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyDataSourceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The result returned</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

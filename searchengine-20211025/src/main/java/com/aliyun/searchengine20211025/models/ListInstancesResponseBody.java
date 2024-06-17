@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstancesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89B968E6-1E41-58DF-BB25-5F98ECC759CE</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -54,18 +60,27 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyResultNetwork extends TeaModel {
         /**
          * <p>The access point of the gateway</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
          * <p>The ID of the virtual switch</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp11ldcf59q2nbwkqgj6z</p>
          */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the Virtual Private Cloud (VPC) network</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9axk41d9vffoc79x0oe</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
@@ -104,12 +119,18 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyResultTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oboms-disk</p>
          */
         @NameInMap("value")
         public String value;
@@ -140,48 +161,72 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyResult extends TeaModel {
         /**
          * <p>The billing method</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
          * <p>The product code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
          * <p>The time when the instance was created</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-04T02:03:21Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The description of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Emergency test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The expiration time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634885083</p>
          */
         @NameInMap("expiredTime")
         public String expiredTime;
 
         /**
          * <p>Indicates whether an overdue payment is involved</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("inDebt")
         public Boolean inDebt;
 
         /**
          * <p>The ID of the resource</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42n8oh001</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The lock status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
@@ -194,12 +239,18 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzgpiswzbksdi</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("status")
         public String status;
@@ -212,6 +263,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance was last updated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-06T11:17:49.0</p>
          */
         @NameInMap("updateTime")
         public String updateTime;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDateSourceGenerationsResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
     public static class ListDateSourceGenerationsResponseBodyResult extends TeaModel {
         /**
          * <p>buildDeployId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         @NameInMap("buildDeployId")
         public Integer buildDeployId;
 
         /**
          * <p>The time to start index building.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1626143673</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
          * <p>The directory where the index file created by using the dump table is saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("dataDumpRoot")
         public String dataDumpRoot;
 
         /**
          * <p>The primary key of the generation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1626143930</p>
          */
         @NameInMap("generation")
         public Long generation;
@@ -70,12 +85,18 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STOPPED</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The timestamp when the offline indexing was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1626143673</p>
          */
         @NameInMap("timestamp")
         public Long timestamp;

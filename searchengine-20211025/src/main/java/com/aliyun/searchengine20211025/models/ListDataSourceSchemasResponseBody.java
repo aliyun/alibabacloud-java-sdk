@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDataSourceSchemasResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -39,19 +42,28 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
 
     public static class ListDataSourceSchemasResponseBodyResultPrimaryKey extends TeaModel {
         /**
-         * <p>Indicates whether it has the primary key property. **true** indicates that it has the primary key property, and **false** indicates that it does not have the primary key property.</p>
+         * <p>Indicates whether it has the primary key property. <strong>true</strong> indicates that it has the primary key property, and <strong>false</strong> indicates that it does not have the primary key property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("hasPrimaryKeyAttribute")
         public Boolean hasPrimaryKeyAttribute;
 
         /**
-         * <p>Indicates whether it is the primary key. Valid values: true and false. **true** indicates that it is the primary key, and **false** indicates that it is not the primary key.</p>
+         * <p>Indicates whether it is the primary key. Valid values: true and false. <strong>true</strong> indicates that it is the primary key, and <strong>false</strong> indicates that it is not the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("isPrimaryKey")
         public Boolean isPrimaryKey;
 
         /**
-         * <p>Indicates whether data is sorted based on the primary key. Valid values: true and false. **true** indicates that data is sorted based on the primary key, and **false** indicates that data is not sorted based on the primary key.</p>
+         * <p>Indicates whether data is sorted based on the primary key. Valid values: true and false. <strong>true</strong> indicates that data is sorted based on the primary key, and <strong>false</strong> indicates that data is not sorted based on the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("isPrimaryKeySorted")
         public Boolean isPrimaryKeySorted;
@@ -89,25 +101,37 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
 
     public static class ListDataSourceSchemasResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the index properties are added. Valid values: true and false. **true** indicates that the index properties are added, and **false** indicates that the index properties are not added.</p>
+         * <p>Indicates whether the index properties are added. Valid values: true and false. <strong>true</strong> indicates that the index properties are added, and <strong>false</strong> indicates that the index properties are not added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("addIndex")
         public Boolean addIndex;
 
         /**
-         * <p>Indicates whether it is an attribute field. Valid values: true and false. **true** indicates that it is an attribute field, and **false** indicates that it is not an attribute field.</p>
+         * <p>Indicates whether it is an attribute field. Valid values: true and false. <strong>true</strong> indicates that it is an attribute field, and <strong>false</strong> indicates that it is not an attribute field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("attribute")
         public Boolean attribute;
 
         /**
-         * <p>Indicates whether it is a custom field. Valid values: true and false. **true** indicates that it is a custom field, and **false** indicates that it is not a custom field.</p>
+         * <p>Indicates whether it is a custom field. Valid values: true and false. <strong>true</strong> indicates that it is a custom field, and <strong>false</strong> indicates that it is not a custom field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("custom")
         public Boolean custom;
 
         /**
          * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
@@ -119,13 +143,19 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
         public ListDataSourceSchemasResponseBodyResultPrimaryKey primaryKey;
 
         /**
-         * <p>Indicates whether the information can be displayed. Valid values: true and false. **true** indicates that the information can be displayed, and **false** indicates that the information cannot be displayed.</p>
+         * <p>Indicates whether the information can be displayed. Valid values: true and false. <strong>true</strong> indicates that the information can be displayed, and <strong>false</strong> indicates that the information cannot be displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("summary")
         public Boolean summary;
 
         /**
          * <p>The type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         @NameInMap("type")
         public String type;

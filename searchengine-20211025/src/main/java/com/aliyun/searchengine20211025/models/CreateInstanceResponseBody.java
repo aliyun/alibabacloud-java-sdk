@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D39EE0F1-D7EF-5F46-B781-6BF4185308B0</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static class CreateInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-2r42ppr7901</p>
          */
         @NameInMap("instanceId")
         public String instanceId;

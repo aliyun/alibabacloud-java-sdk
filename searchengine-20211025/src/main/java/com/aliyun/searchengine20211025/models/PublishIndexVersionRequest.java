@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PublishIndexVersionRequest extends TeaModel {
     /**
      * <p>The query result</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("body")
     public java.util.Map<String, ?> body;

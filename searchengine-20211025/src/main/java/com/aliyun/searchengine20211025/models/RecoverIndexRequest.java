@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class RecoverIndexRequest extends TeaModel {
     /**
      * <p>The ID of the index deployed in offline mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>277</p>
      */
     @NameInMap("buildDeployId")
     public Integer buildDeployId;
 
     /**
      * <p>The name of the data source</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha-cn-pl32rf0js04_odps_first</p>
      */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
     /**
      * <p>The primary key of generation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1653018575</p>
      */
     @NameInMap("generation")
     public String generation;
 
     /**
      * <p>The name of the index</p>
+     * 
+     * <strong>example:</strong>
+     * <p>main_index</p>
      */
     @NameInMap("indexName")
     public String indexName;

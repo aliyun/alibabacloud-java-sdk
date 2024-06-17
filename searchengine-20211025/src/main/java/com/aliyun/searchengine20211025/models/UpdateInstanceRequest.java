@@ -12,12 +12,18 @@ public class UpdateInstanceRequest extends TeaModel {
 
     /**
      * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates to upgrade the instance specifications. DOWNGRADE indicates to downgrade the instance specifications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("orderType")
     public String orderType;
@@ -54,10 +60,17 @@ public class UpdateInstanceRequest extends TeaModel {
     public static class UpdateInstanceRequestComponents extends TeaModel {
         /**
          * <p>The specification code, which must be consistent with the values of the corresponding module parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("value")
         public String value;
 

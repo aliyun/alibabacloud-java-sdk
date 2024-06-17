@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAdvanceConfigsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FB0325E-8C37-5525-96AC-0333523170A3</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     public static class ListAdvanceConfigsResponseBodyResultFiles extends TeaModel {
         /**
          * <p>The name of the absolute path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path/wpd/nae</p>
          */
         @NameInMap("fullPathName")
         public String fullPathName;
 
         /**
          * <p>Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isDir")
         public Boolean isDir;
 
         /**
          * <p>Indicates whether it is a template. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
         /**
          * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_name_1</p>
          */
         @NameInMap("name")
         public String name;
@@ -116,6 +131,9 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("desc")
         public String desc;
@@ -128,18 +146,27 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the advanced configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_index</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The state of the advanced configuration. Valid values: drafting, used, unused, and trash. drafting indicates that the advanced configuration is a draft. used indicates that the advanced configuration is in use. unused indicates that the advanced configuration is unused. trash indicates that the advanced configuration is being deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drafting</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631070464000</p>
          */
         @NameInMap("updateTime")
         public Long updateTime;

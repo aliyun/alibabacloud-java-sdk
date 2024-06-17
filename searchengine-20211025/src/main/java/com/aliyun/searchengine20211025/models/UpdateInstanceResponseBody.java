@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90D6B8F5-FE97-4509-9AAB-367836C51818</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,66 +43,99 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public static class UpdateInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The billing method</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
          * <p>The product code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3-code</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
          * <p>The time when the instance was created</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-06T11:17:49.0</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The description of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test instance</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The time when the instance expires</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-06T16:00:00.0</p>
          */
         @NameInMap("expiredTime")
         public String expiredTime;
 
         /**
          * <p>Indicates whether an overdue payment is involved</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("inDebt")
         public Boolean inDebt;
 
         /**
          * <p>The ID of the resource</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-0ju2s170b03</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The lock status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("lockMode")
         public String lockMode;
 
         /**
          * <p>The ID of the resource group</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aeky6hthboewpuy</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The time when the instance was last updated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-06T11:17:49.0</p>
          */
         @NameInMap("updateTime")
         public String updateTime;

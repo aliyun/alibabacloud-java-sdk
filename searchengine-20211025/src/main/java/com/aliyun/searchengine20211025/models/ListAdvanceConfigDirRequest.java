@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListAdvanceConfigDirRequest extends TeaModel {
     /**
      * <p>The name of the directory</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/zones/general</p>
      */
     @NameInMap("dirName")
     public String dirName;

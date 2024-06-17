@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyFileResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89B968E6-1E41-58DF-BB25-5F98ECC759CE</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The information about the index</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

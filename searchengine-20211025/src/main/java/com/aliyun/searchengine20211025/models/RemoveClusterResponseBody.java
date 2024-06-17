@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RemoveClusterResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The result</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

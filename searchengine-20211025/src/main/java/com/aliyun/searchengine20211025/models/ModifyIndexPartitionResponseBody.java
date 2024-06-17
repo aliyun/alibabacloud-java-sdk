@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyIndexPartitionResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93A9E542-8CF8-5BA6-99AB-94C0FE520429</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Map</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

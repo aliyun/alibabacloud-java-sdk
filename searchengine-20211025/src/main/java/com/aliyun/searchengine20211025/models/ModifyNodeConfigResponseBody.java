@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyNodeConfigResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D39EE0F1-D7EF-5F46-B781-6BF4185308B0</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>The information about the index</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

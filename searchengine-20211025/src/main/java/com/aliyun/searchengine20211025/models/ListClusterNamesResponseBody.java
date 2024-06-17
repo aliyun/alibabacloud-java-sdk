@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListClusterNamesResponseBody extends TeaModel {
     /**
      * <p>id of request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6E3D968-529C-5C40-AFDD-133A8B8FD930</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListClusterNamesResponseBody extends TeaModel {
     public static class ListClusterNamesResponseBodyResult extends TeaModel {
         /**
          * <p>The description of the cluster</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3_test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The ID of the cluster</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25030</p>
          */
         @NameInMap("id")
         public Long id;
 
         /**
          * <p>The name of the cluster</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_index</p>
          */
         @NameInMap("name")
         public String name;

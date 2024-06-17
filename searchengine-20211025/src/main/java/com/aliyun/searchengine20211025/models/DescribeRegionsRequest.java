@@ -4,6 +4,10 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
+     */
     @NameInMap("acceptLanguage")
     public String acceptLanguage;
 
