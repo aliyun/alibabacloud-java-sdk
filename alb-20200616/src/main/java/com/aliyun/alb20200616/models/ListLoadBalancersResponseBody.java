@@ -12,27 +12,40 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,12 +98,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public static class ListLoadBalancersResponseBodyLoadBalancersAccessLogConfig extends TeaModel {
         /**
          * <p>The log project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls-setter</p>
          */
         @NameInMap("LogProject")
         public String logProject;
 
         /**
          * <p>The Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("LogStore")
         public String logStore;
@@ -121,15 +140,22 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public static class ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig extends TeaModel {
         /**
          * <p>Indicates whether deletion protection is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The time when deletion protection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-02T02:49:05Z</p>
          */
         @NameInMap("EnabledTime")
         public String enabledTime;
@@ -160,8 +186,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>Only **PostPay** may be returned, which indicates the pay-as-you-go billing method.</p>
+         * <p>Only <strong>PostPay</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPay</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -183,18 +211,22 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerOperationLocks extends TeaModel {
         /**
-         * <p>The reason why the ALB instance is locked. This parameter is available only when **LoadBalancerBussinessStatus** is set to **Abnormal**.</p>
+         * <p>The reason why the ALB instance is locked. This parameter is available only when <strong>LoadBalancerBussinessStatus</strong> is set to <strong>Abnormal</strong>.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
          * <p>The lock type. Valid values:</p>
-         * <br>
-         * <p>*   **SecurityLocked**: The ALB instance is locked due to security reasons.</p>
-         * <p>*   **RelatedResourceLocked**: The ALB instance is locked due to association issues.</p>
-         * <p>*   **FinancialLocked**: The ALB instance is locked due to overdue payments.</p>
-         * <p>*   **ResidualLocked**: The ALB instance is locked because the associated resources have overdue payments and the resources are released.</p>
+         * <ul>
+         * <li><strong>SecurityLocked</strong>: The ALB instance is locked due to security reasons.</li>
+         * <li><strong>RelatedResourceLocked</strong>: The ALB instance is locked due to association issues.</li>
+         * <li><strong>FinancialLocked</strong>: The ALB instance is locked due to overdue payments.</li>
+         * <li><strong>ResidualLocked</strong>: The ALB instance is locked because the associated resources have overdue payments and the resources are released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FinancialLocked</p>
          */
         @NameInMap("LockType")
         public String lockType;
@@ -225,21 +257,24 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public static class ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig extends TeaModel {
         /**
          * <p>The reason why deletion protection is enabled.</p>
-         * <br>
          * <p>It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
-         * <br>
-         * <p>This parameter takes effect only when **ModificationProtectionStatus** is set to **ConsoleProtection**.</p>
+         * <p>This parameter takes effect only when <strong>ModificationProtectionStatus</strong> is set to <strong>ConsoleProtection</strong>.</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>Indicates whether the configuration read-only mode is enabled for the ALB instance. Valid values:</p>
-         * <br>
-         * <p>*   **NonProtection**: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.</p>
-         * <p>*   **ConsoleProtection**: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.</p>
-         * <br>
-         * <p>> If you set this parameter to **ConsoleProtection**, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         * <ul>
+         * <li><strong>NonProtection</strong>: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.</li>
+         * <li><strong>ConsoleProtection</strong>: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsoleProtection</p>
          */
         @NameInMap("Status")
         public String status;
@@ -270,12 +305,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public static class ListLoadBalancersResponseBodyLoadBalancersTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alueTest</p>
          */
         @NameInMap("Value")
         public String value;
@@ -312,45 +353,66 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         /**
          * <p>The mode in which IP addresses are allocated. Valid values:</p>
-         * <br>
-         * <p>*   **Fixed**: allocates a static IP address to the ALB instance.</p>
-         * <p>*   **Dynamic**: dynamically allocates an IP address to each zone of the ALB instance.</p>
+         * <ul>
+         * <li><strong>Fixed</strong>: allocates a static IP address to the ALB instance.</li>
+         * <li><strong>Dynamic</strong>: dynamically allocates an IP address to each zone of the ALB instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Fixed</p>
          */
         @NameInMap("AddressAllocatedMode")
         public String addressAllocatedMode;
 
         /**
          * <p>The IP version. Valid values:</p>
-         * <br>
-         * <p>*   **IPv4**</p>
-         * <p>*   **DualStack**</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DualStack</p>
          */
         @NameInMap("AddressIpVersion")
         public String addressIpVersion;
 
         /**
          * <p>The type of IP address that the ALB instance uses to provide services. Valid values:</p>
-         * <br>
-         * <p>*   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
-         * <p>*   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.</p>
+         * <ul>
+         * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
+         * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         @NameInMap("AddressType")
         public String addressType;
 
         /**
          * <p>The ID of the EIP bandwidth plan that is associated with the NLB instance if the NLB instance uses a public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-bp1vevu8h3ieh****</p>
          */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-02T02:49:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The domain name of the ALB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-95qnr2itwu9orb****.cn-hangzhou.alb.aliyuncs.com</p>
          */
         @NameInMap("DNSName")
         public String DNSName;
@@ -363,9 +425,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         /**
          * <p>The type of IPv6 address that is used by the ALB instance. Valid values:</p>
-         * <br>
-         * <p>*   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
-         * <p>*   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</p>
+         * <ul>
+         * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
+         * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         @NameInMap("Ipv6AddressType")
         public String ipv6AddressType;
@@ -378,31 +444,45 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         /**
          * <p>The business status of the ALB instance. Valid values:</p>
-         * <br>
-         * <p>*   **Abnormal**</p>
-         * <p>*   **Normal**</p>
+         * <ul>
+         * <li><strong>Abnormal</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("LoadBalancerBussinessStatus")
         public String loadBalancerBussinessStatus;
 
         /**
          * <p>The edition of the ALB instance. Different editions have different limits and support different billing methods. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: basic</p>
-         * <p>*   **Standard**: standard</p>
-         * <p>*   **StandardWithWaf**: WAF-enabled</p>
+         * <ul>
+         * <li><strong>Basic</strong>: basic</li>
+         * <li><strong>Standard</strong>: standard</li>
+         * <li><strong>StandardWithWaf</strong>: WAF-enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("LoadBalancerEdition")
         public String loadBalancerEdition;
 
         /**
          * <p>The ID of the ALB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-o9ulmq5hgn68jk****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The name of the NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-instance-test</p>
          */
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;
@@ -415,12 +495,16 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         /**
          * <p>The status of the ALB instance. Valid values:</p>
-         * <br>
-         * <p>*   **Inactive**: The ALB instance is disabled. The listeners do not forward traffic.</p>
-         * <p>*   **Active**: The ALB instance is running.</p>
-         * <p>*   **Provisioning**: The ALB instance is being created.</p>
-         * <p>*   **Configuring**: The ALB instance is being modified.</p>
-         * <p>*   **CreateFailed**: The system failed to create the ALB instance.</p>
+         * <ul>
+         * <li><strong>Inactive</strong>: The ALB instance is disabled. The listeners do not forward traffic.</li>
+         * <li><strong>Active</strong>: The ALB instance is running.</li>
+         * <li><strong>Provisioning</strong>: The ALB instance is being created.</li>
+         * <li><strong>Configuring</strong>: The ALB instance is being modified.</li>
+         * <li><strong>CreateFailed</strong>: The system failed to create the ALB instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
@@ -433,6 +517,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -445,6 +532,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC to which the ALB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1b49rqrybk45nio****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

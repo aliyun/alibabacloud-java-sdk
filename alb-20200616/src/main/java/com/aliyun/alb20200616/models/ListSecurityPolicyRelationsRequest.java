@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class ListSecurityPolicyRelationsRequest extends TeaModel {
     /**
      * <p>The security policy IDs. You can specify up to five IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityPolicyIds")

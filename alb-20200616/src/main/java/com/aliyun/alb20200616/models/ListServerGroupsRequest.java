@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXG****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the resource group to which the server group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -37,17 +47,27 @@ public class ListServerGroupsRequest extends TeaModel {
     @NameInMap("ServerGroupNames")
     public java.util.List<String> serverGroupNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
     @NameInMap("ServerGroupType")
     public String serverGroupType;
 
     /**
      * <p>The tags that are added to the server group. You can specify up to 10 tags in each call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListServerGroupsRequestTag> tag;
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp15zckdt37pq72zv****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -124,16 +144,20 @@ public class ListServerGroupsRequest extends TeaModel {
     public static class ListServerGroupsRequestTag extends TeaModel {
         /**
          * <p>The tag key. You can specify up to 10 tag keys.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. You can specify up to 10 tag values.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Value")
         public String value;

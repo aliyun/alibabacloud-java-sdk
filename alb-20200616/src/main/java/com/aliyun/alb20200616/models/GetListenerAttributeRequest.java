@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetListenerAttributeRequest extends TeaModel {
     /**
      * <p>The listener ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListTagKeysResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,16 +98,20 @@ public class ListTagKeysResponseBody extends TeaModel {
     public static class ListTagKeysResponseBodyTagKeys extends TeaModel {
         /**
          * <p>The type of the tag.</p>
-         * <br>
-         * <p>Valid values: **Custom**, **System**, and **All**.</p>
-         * <br>
-         * <p>Default value: **All**.</p>
+         * <p>Valid values: <strong>Custom</strong>, <strong>System</strong>, and <strong>All</strong>.</p>
+         * <p>Default value: <strong>All</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The tag that matches all filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TagKey")
         public String tagKey;

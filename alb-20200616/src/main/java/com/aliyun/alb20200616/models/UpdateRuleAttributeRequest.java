@@ -6,27 +6,38 @@ import com.aliyun.tea.*;
 public class UpdateRuleAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <code>2xx HTTP</code> status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The priority of the forwarding rule. Valid values: **1 to 10000**. A lower value specifies a higher priority.</p>
-     * <br>
-     * <p>> The priorities of the forwarding rules created for the same listener must be unique.</p>
+     * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A lower value specifies a higher priority.</p>
+     * <blockquote>
+     * <p>The priorities of the forwarding rules created for the same listener must be unique.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -45,14 +56,19 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the forwarding rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule-4dp5i6ea****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The name of the forwarding rule. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule-instance-test</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -121,9 +137,13 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleActionsCorsConfig extends TeaModel {
         /**
          * <p>Specifies whether credentials can be carried in CORS requests. Valid values:</p>
-         * <br>
-         * <p>*   **on**: yes</p>
-         * <p>*   **off**: no</p>
+         * <ul>
+         * <li><strong>on</strong>: yes</li>
+         * <li><strong>off</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("AllowCredentials")
         public String allowCredentials;
@@ -154,8 +174,10 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
         /**
          * <p>The maximum cache time of preflight requests in the browser. Unit: seconds.</p>
-         * <br>
-         * <p>Valid values: **-1** to **172800**.</p>
+         * <p>Valid values: <strong>-1</strong> to <strong>172800</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxAge")
         public Long maxAge;
@@ -218,20 +240,28 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleActionsFixedResponseConfig extends TeaModel {
         /**
          * <p>The content of the custom response. The content can be up to 1 KB in size, and can contain only ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dssacav</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The format of the response.</p>
-         * <br>
-         * <p>Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.</p>
+         * <p>Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/plain</p>
          */
         @NameInMap("ContentType")
         public String contentType;
 
         /**
-         * <p>The HTTP status code in the response. Valid values: **HTTP_2xx**, **HTTP_4xx**, and **HTTP_5xx**. **x** must be a digit.</p>
+         * <p>The HTTP status code in the response. Valid values: <strong>HTTP_2xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong>. <strong>x</strong> must be a digit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_200</p>
          */
         @NameInMap("HttpCode")
         public String httpCode;
@@ -270,15 +300,22 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupStickySession extends TeaModel {
         /**
          * <p>Specifies whether to enable session persistence. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The timeout period of sessions. Unit: seconds. Valid values: 1 to 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
@@ -309,15 +346,22 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         /**
          * <p>The ID of the server group to which the request is forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg--atstuj3rtoptyui****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
         /**
-         * <p>The weight of the server group. A larger value specifies a higher weight. A server group with a higher weight receives more requests. Valid values: **0** to **100**.</p>
-         * <br>
-         * <p>*   If only one destination server group exists and you do not specify a weight, the default value **100** is used.</p>
-         * <p>*   If more than one destination server group exists, you must specify weights.</p>
+         * <p>The weight of the server group. A larger value specifies a higher weight. A server group with a higher weight receives more requests. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+         * <ul>
+         * <li>If only one destination server group exists and you do not specify a weight, the default value <strong>100</strong> is used.</li>
+         * <li>If more than one destination server group exists, you must specify weights.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -382,41 +426,59 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CoverEnabled")
         public Boolean coverEnabled;
 
         /**
-         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.</p>
-         * <br>
-         * <p>> You cannot specify the following header keys (case-insensitive): `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`.</p>
+         * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header key specified by <strong>InsertHeaderConfig</strong> must be unique.</p>
+         * <blockquote>
+         * <p>You cannot specify the following header keys (case-insensitive): <code>slb-id</code>, <code>slb-ip</code>, <code>x-forwarded-for</code>, <code>x-forwarded-proto</code>, <code>x-forwarded-eip</code>, <code>x-forwarded-port</code>, <code>x-forwarded-client-srcport</code>, <code>connection</code>, <code>upgrade</code>, <code>content-length</code>, <code>transfer-encoding</code>, <code>keep-alive</code>, <code>te</code>, <code>host</code>, <code>cookie</code>, <code>remoteip</code>, and <code>authority</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the header to be inserted.</p>
-         * <br>
-         * <p>*   If **ValueType** is set to **SystemDefined**, you can specify one of the following header values:</p>
-         * <br>
-         * <p>    *   **ClientSrcPort**: the client port.</p>
-         * <p>    *   **ClientSrcIp**: the client IP address.</p>
-         * <p>    *   **Protocol**: the request protocol (HTTP or HTTPS).</p>
-         * <p>    *   **SLBId**: the ID of the ALB instance.</p>
-         * <p>    *   **SLBPort**: the listening port.</p>
-         * <br>
-         * <p>*   If **ValueType** is set to **UserDefined**, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. You can use asterisks (\\*) and question marks (?) as wildcards. The value cannot start or end with a space character.</p>
-         * <br>
-         * <p>*   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-).</p>
+         * <ul>
+         * <li><p>If <strong>ValueType</strong> is set to <strong>SystemDefined</strong>, you can specify one of the following header values:</p>
+         * <ul>
+         * <li><strong>ClientSrcPort</strong>: the client port.</li>
+         * <li><strong>ClientSrcIp</strong>: the client IP address.</li>
+         * <li><strong>Protocol</strong>: the request protocol (HTTP or HTTPS).</li>
+         * <li><strong>SLBId</strong>: the ID of the ALB instance.</li>
+         * <li><strong>SLBPort</strong>: the listening port.</li>
+         * </ul>
+         * </li>
+         * <li><p>If <strong>ValueType</strong> is set to <strong>UserDefined</strong>, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <code>greater than or equal to 32 and lower than 127</code>. You can use asterisks (\*) and question marks (?) as wildcards. The value cannot start or end with a space character.</p>
+         * </li>
+         * <li><p>If <strong>ValueType</strong> is set to <strong>ReferenceHeader</strong>, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (_), and hyphens (-).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDefined</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
          * <p>The type of header. Valid values:</p>
-         * <br>
-         * <p>*   **UserDefined**: a custom header</p>
-         * <p>*   **ReferenceHeader**: a header that references one of the request headers</p>
-         * <p>*   **SystemDefined**: a header predefined by the system</p>
+         * <ul>
+         * <li><strong>UserDefined</strong>: a custom header</li>
+         * <li><strong>ReferenceHeader</strong>: a header that references one of the request headers</li>
+         * <li><strong>SystemDefined</strong>: a header predefined by the system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDefined</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -463,68 +525,98 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleActionsRedirectConfig extends TeaModel {
         /**
          * <p>The hostname to which requests are redirected. Valid values:</p>
-         * <br>
-         * <p>*   **${host}** (default): If you set the value to ${host}, you cannot append other characters.</p>
-         * <br>
-         * <p>*   Limits on the value:</p>
-         * <br>
-         * <p>    *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\\*) and question marks (?) can be used as wildcards.</p>
-         * <p>    *   The hostname must contain at least one period (.) but cannot start or end with a period (.).</p>
-         * <p>    *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).</p>
-         * <p>    *   The domain labels cannot start or end with a hyphen (-).</p>
-         * <p>    *   You can use asterisks (\\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
+         * <ul>
+         * <li><p><strong>${host}</strong> (default): If you set the value to ${host}, you cannot append other characters.</p>
+         * </li>
+         * <li><p>Limits on the value:</p>
+         * <ul>
+         * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcards.</li>
+         * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
+         * <li>The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).</li>
+         * <li>The domain labels cannot start or end with a hyphen (-).</li>
+         * <li>You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
-         * <p>The redirect type. Valid values: **301**, **302**, **303**, **307**, and **308**.</p>
+         * <p>The redirect type. Valid values: <strong>301</strong>, <strong>302</strong>, <strong>303</strong>, <strong>307</strong>, and <strong>308</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
          */
         @NameInMap("HttpCode")
         public String httpCode;
 
         /**
          * <p>The path to which requests are redirected. Valid values:</p>
-         * <br>
-         * <p>*   Default value: **${path}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
-         * <br>
-         * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
-         * <br>
-         * <p>    *   The value is 1 to 128 characters in length.</p>
-         * <p>    *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\\*) and question marks (?) as wildcards.</p>
+         * <ul>
+         * <li><p>Default value: <strong>${path}</strong>. \<em>\</em>${host}**, <strong>${protocol}</strong>, and **${port}\<em>\</em> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * </li>
+         * <li><p>A custom value. You must make sure that the custom value meets the following requirements:</p>
+         * <ul>
+         * <li>The value is 1 to 128 characters in length.</li>
+         * <li>It must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ .+ / &amp; ~ @ :</code>. It cannot contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>. You can use asterisks (\*) and question marks (?) as wildcards.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The port to which requests are redirected. Valid values:</p>
-         * <br>
-         * <p>*   **${port}** (default): If you set the value to ${port}, you cannot append other characters.</p>
-         * <p>*   You can also enter a port number. Valid values: **1 to 63335**.</p>
+         * <ul>
+         * <li><strong>${port}</strong> (default): If you set the value to ${port}, you cannot append other characters.</li>
+         * <li>You can also enter a port number. Valid values: <strong>1 to 63335</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The redirect protocol. Valid values:</p>
-         * <br>
-         * <p>*   **${protocol}** (default): If you set the value to ${protocol}, you cannot append other characters.</p>
-         * <p>*   **HTTP** or **HTTPS**.</p>
-         * <br>
-         * <p>> HTTPS listeners support only HTTPS to HTTPS redirects.</p>
+         * <ul>
+         * <li><strong>${protocol}</strong> (default): If you set the value to ${protocol}, you cannot append other characters.</li>
+         * <li><strong>HTTP</strong> or <strong>HTTPS</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p>HTTPS listeners support only HTTPS to HTTPS redirects.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The query string of the URL to which requests are redirected. Valid values:</p>
-         * <br>
-         * <p>*   Default value: **${query}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
-         * <br>
-         * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
-         * <br>
-         * <p>    *   The value must be 1 to 128 characters in length.</p>
-         * <p>    *   It can contain printable characters, except space characters, the special characters `# [ ] { } \\ | < > &`, and uppercase letters.</p>
+         * <ul>
+         * <li><p>Default value: <strong>${query}</strong>. \<em>\</em>${host}**, <strong>${protocol}</strong>, and **${port}\<em>\</em> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * </li>
+         * <li><p>A custom value. You must make sure that the custom value meets the following requirements:</p>
+         * <ul>
+         * <li>The value must be 1 to 128 characters in length.</li>
+         * <li>It can contain printable characters, except space characters, the special characters <code># [ ] { } \\ | &lt; &gt; &amp;</code>, and uppercase letters.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>quert</p>
          */
         @NameInMap("Query")
         public String query;
@@ -585,6 +677,10 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -606,41 +702,59 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleActionsRewriteConfig extends TeaModel {
         /**
          * <p>The hostname to which requests are redirected. Valid values:</p>
-         * <br>
-         * <p>*   **${host}** (default): If you set the value to ${host}, you cannot append other characters.</p>
-         * <br>
-         * <p>*   If you want to specify a custom value, make sure that the following requirements are met:</p>
-         * <br>
-         * <p>    *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\\*) and question marks (?) as wildcard characters.</p>
-         * <p>    *   The hostname must contain at least one period (.) but cannot start or end with a period (.).</p>
-         * <p>    *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).</p>
-         * <p>    *   The domain labels cannot start or end with a hyphen (-). You can use asterisks (\\*) and question marks (?) anywhere in a domain label as wildcard characters.</p>
+         * <ul>
+         * <li><p><strong>${host}</strong> (default): If you set the value to ${host}, you cannot append other characters.</p>
+         * </li>
+         * <li><p>If you want to specify a custom value, make sure that the following requirements are met:</p>
+         * <ul>
+         * <li>The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\*) and question marks (?) as wildcard characters.</li>
+         * <li>The hostname must contain at least one period (.) but cannot start or end with a period (.).</li>
+         * <li>The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).</li>
+         * <li>The domain labels cannot start or end with a hyphen (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The path to which requests are redirected. Valid values:</p>
-         * <br>
-         * <p>*   Default value: **${path}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
-         * <br>
-         * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
-         * <br>
-         * <p>    *   The value is 1 to 128 characters in length.</p>
-         * <p>    *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ] ^ , "`. You can use asterisks (\\*) and question marks (?) as wildcards.</p>
+         * <ul>
+         * <li><p>Default value: <strong>${path}</strong>. \<em>\</em>${host}**, <strong>${protocol}</strong>, and **${port}\<em>\</em> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * </li>
+         * <li><p>A custom value. You must make sure that the custom value meets the following requirements:</p>
+         * <ul>
+         * <li>The value is 1 to 128 characters in length.</li>
+         * <li>It must start with a forward slash (/) and can contain letters, digits, and the following special characters: <code>$ - _ .+ / &amp; ~ @ :</code>. It cannot contain the following special characters: <code>&quot; % # ; ! ( ) [ ] ^ , &quot;</code>. You can use asterisks (\*) and question marks (?) as wildcards.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>/tsdf</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The query string of the URL to which requests are distributed. Valid values:</p>
-         * <br>
-         * <p>*   Default value: **${query}**. \\*\\*${host}**, **${protocol}**, and **${port}\\*\\* are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
-         * <br>
-         * <p>*   A custom value. You must make sure that the custom value meets the following requirements:</p>
-         * <br>
-         * <p>    *   The value must be 1 to 128 characters in length.</p>
-         * <p>    *   It can contain printable characters, except space characters, the special characters `# [ ] { } \\ | < > &`, and uppercase letters.</p>
+         * <ul>
+         * <li><p>Default value: <strong>${query}</strong>. \<em>\</em>${host}**, <strong>${protocol}</strong>, and **${port}\<em>\</em> are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.</p>
+         * </li>
+         * <li><p>A custom value. You must make sure that the custom value meets the following requirements:</p>
+         * <ul>
+         * <li>The value must be 1 to 128 characters in length.</li>
+         * <li>It can contain printable characters, except space characters, the special characters <code># [ ] { } \\ | &lt; &gt; &amp;</code>, and uppercase letters.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>quedsa</p>
          */
         @NameInMap("Query")
         public String query;
@@ -678,15 +792,22 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleActionsTrafficLimitConfig extends TeaModel {
         /**
-         * <p>The QPS of each IP address. Valid values: **1 to 100000**.</p>
-         * <br>
-         * <p>> If both the **QPS** and **PerIpQps** properties are specified, make sure that the value of the **QPS** property is smaller than the value of the PerIpQps property.</p>
+         * <p>The QPS of each IP address. Valid values: <strong>1 to 100000</strong>.</p>
+         * <blockquote>
+         * <p>If both the <strong>QPS</strong> and <strong>PerIpQps</strong> properties are specified, make sure that the value of the <strong>QPS</strong> property is smaller than the value of the PerIpQps property.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("PerIpQps")
         public Integer perIpQps;
 
         /**
-         * <p>The queries per second (QPS). Valid values: **1 to 100000**.</p>
+         * <p>The queries per second (QPS). Valid values: <strong>1 to 100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("QPS")
         public Integer QPS;
@@ -717,6 +838,9 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleActionsTrafficMirrorConfigMirrorGroupConfigServerGroupTuples extends TeaModel {
         /**
          * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>srg-00mkgijak0w4qgz9****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -767,9 +891,13 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
         /**
          * <p>The type of destination to which network traffic is mirrored. Valid values:</p>
-         * <br>
-         * <p>*   **ForwardGroupMirror**: a server group</p>
-         * <p>*   **SlsMirror**: Log Service</p>
+         * <ul>
+         * <li><strong>ForwardGroupMirror</strong>: a server group</li>
+         * <li><strong>SlsMirror</strong>: Log Service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ForwardGroupMirror</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -823,7 +951,10 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig insertHeaderConfig;
 
         /**
-         * <p>The priority of the action. Valid values: **1 to 50000**. A lower value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter is required. The priority of each action within a forwarding rule must be unique. You can specify priorities for at most 20 actions.</p>
+         * <p>The priority of the action. Valid values: <strong>1 to 50000</strong>. A lower value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter is required. The priority of each action within a forwarding rule must be unique. You can specify priorities for at most 20 actions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Order")
         public Integer order;
@@ -857,21 +988,25 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
         /**
          * <p>The action type. You can specify at most 11 types of actions. Valid values:</p>
-         * <br>
-         * <p>*   **ForwardGroup**: forwards a request to multiple vServer groups.</p>
-         * <p>*   **Redirect**: redirects a request.</p>
-         * <p>*   **FixedResponse**: returns a custom response.</p>
-         * <p>*   **Rewrite**: rewrites a request.</p>
-         * <p>*   **InsertHeader**: inserts a header.</p>
-         * <p>*   **RemoveHeaderConfig**: deletes a header.</p>
-         * <p>*   **TrafficLimitConfig**: throttles network traffic.</p>
-         * <p>*   **TrafficMirrorConfig**: mirrors traffic.</p>
-         * <p>*   **CorsConfig**: forwards requests based on CORS.</p>
-         * <br>
+         * <ul>
+         * <li><strong>ForwardGroup</strong>: forwards a request to multiple vServer groups.</li>
+         * <li><strong>Redirect</strong>: redirects a request.</li>
+         * <li><strong>FixedResponse</strong>: returns a custom response.</li>
+         * <li><strong>Rewrite</strong>: rewrites a request.</li>
+         * <li><strong>InsertHeader</strong>: inserts a header.</li>
+         * <li><strong>RemoveHeaderConfig</strong>: deletes a header.</li>
+         * <li><strong>TrafficLimitConfig</strong>: throttles network traffic.</li>
+         * <li><strong>TrafficMirrorConfig</strong>: mirrors traffic.</li>
+         * <li><strong>CorsConfig</strong>: forwards requests based on CORS.</li>
+         * </ul>
          * <p>The following action types are supported:</p>
-         * <br>
-         * <p>*   **FinalType**: the last action to be performed in a forwarding rule. Each forwarding rule can contain only one FinalType action. You can specify a **ForwardGroup**, **Redirect**, or **FixedResponse** action as the FinalType action.</p>
-         * <p>*   **ExtType**: the action or the actions to be performed before the **FinalType** action. A forwarding rule can contain one or more **ExtType** actions. To specify this parameter, you must also specify **FinalType**. You can specify multiple **InsertHeader** actions or one **Rewrite** action.</p>
+         * <ul>
+         * <li><strong>FinalType</strong>: the last action to be performed in a forwarding rule. Each forwarding rule can contain only one FinalType action. You can specify a <strong>ForwardGroup</strong>, <strong>Redirect</strong>, or <strong>FixedResponse</strong> action as the FinalType action.</li>
+         * <li><strong>ExtType</strong>: the action or the actions to be performed before the <strong>FinalType</strong> action. A forwarding rule can contain one or more <strong>ExtType</strong> actions. To specify this parameter, you must also specify <strong>FinalType</strong>. You can specify multiple <strong>InsertHeader</strong> actions or one <strong>Rewrite</strong> action.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ForwardGroup</p>
          */
         @NameInMap("Type")
         public String type;
@@ -973,13 +1108,19 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues extends TeaModel {
         /**
-         * <p>The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
+         * <p>The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: <code># [ ] { } \\ | &lt; &gt; &amp;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the cookie. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
+         * <p>The value of the cookie. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: <code># [ ] { } \\ | &lt; &gt; &amp;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1032,6 +1173,9 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleConditionsHeaderConfig extends TeaModel {
         /**
          * <p>The key of the header. The key must be 1 to 40 characters in length and can contain letters, digits, hyphens (-), and underscores (_). You cannot specify Cookie or Host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Port</p>
          */
         @NameInMap("Key")
         public String key;
@@ -1133,13 +1277,19 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     public static class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues extends TeaModel {
         /**
-         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \\ | < > &`.</p>
+         * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: <code># [ ] { } \\ | &lt; &gt; &amp;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \\ | < > &`.</p>
+         * <p>The value of the query string. The value must be 1 to 128 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: <code># [ ] { } \\ | &lt; &gt; &amp;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1192,10 +1342,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     public static class UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig extends TeaModel {
         /**
          * <p>The key of the header.</p>
-         * <br>
-         * <p>*   The key must be 1 to 40 characters in length.</p>
-         * <p>*   It can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
-         * <p>*   Cookie and Host are not supported.</p>
+         * <ul>
+         * <li>The key must be 1 to 40 characters in length.</li>
+         * <li>It can contain lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>Cookie and Host are not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
@@ -1330,16 +1484,20 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
         /**
          * <p>The type of the forwarding rule. You can specify up to seven types. Valid values:</p>
-         * <br>
-         * <p>*   **Host**: Requests are forwarded based on hosts.</p>
-         * <p>*   **Path**: Requests are forwarded based on paths.</p>
-         * <p>*   **Header**: Requests are forwarded based on HTTP headers.</p>
-         * <p>*   **QueryString**: Requests are forwarded based on query strings.</p>
-         * <p>*   **Method**: Requests are forwarded based on request methods.</p>
-         * <p>*   **Cookie**: Requests are forwarded based on cookies.</p>
-         * <p>*   **SourceIp**: Requests are distributed based on source IP addresses.</p>
-         * <p>*   **ResponseHeader**: Requests are forwarded based on HTTP response headers.</p>
-         * <p>*   **ResponseStatusCode**: Requests are forwarded based on response status codes.</p>
+         * <ul>
+         * <li><strong>Host</strong>: Requests are forwarded based on hosts.</li>
+         * <li><strong>Path</strong>: Requests are forwarded based on paths.</li>
+         * <li><strong>Header</strong>: Requests are forwarded based on HTTP headers.</li>
+         * <li><strong>QueryString</strong>: Requests are forwarded based on query strings.</li>
+         * <li><strong>Method</strong>: Requests are forwarded based on request methods.</li>
+         * <li><strong>Cookie</strong>: Requests are forwarded based on cookies.</li>
+         * <li><strong>SourceIp</strong>: Requests are distributed based on source IP addresses.</li>
+         * <li><strong>ResponseHeader</strong>: Requests are forwarded based on HTTP response headers.</li>
+         * <li><strong>ResponseStatusCode</strong>: Requests are forwarded based on response status codes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Host</p>
          */
         @NameInMap("Type")
         public String type;

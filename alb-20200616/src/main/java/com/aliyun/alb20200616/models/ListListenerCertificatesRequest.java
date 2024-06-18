@@ -8,30 +8,42 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public java.util.List<String> certificateIds;
 
     /**
-     * <p>The type of the certificate. Valid values: **Ca** and **Server**.</p>
+     * <p>The type of the certificate. Valid values: <strong>Ca</strong> and <strong>Server</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Server</p>
      */
     @NameInMap("CertificateType")
     public String certificateType;
 
     /**
      * <p>The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: **1 to 100**. If you do not specify this parameter, the default value **20** is used.</p>
+     * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong>. If you do not specify this parameter, the default value <strong>20</strong> is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

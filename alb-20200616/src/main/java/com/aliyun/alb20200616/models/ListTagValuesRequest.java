@@ -5,41 +5,57 @@ import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The resource ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-resource-test</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **loadbalancer**: an Application Load Balancer (ALB) instance</p>
-     * <p>*   **acl**: an access control list (ACL)</p>
-     * <p>*   **securitypolicy**: a security policy</p>
-     * <p>*   **servergroup**: a server group</p>
+     * <ul>
+     * <li><strong>loadbalancer</strong>: an Application Load Balancer (ALB) instance</li>
+     * <li><strong>acl</strong>: an access control list (ACL)</li>
+     * <li><strong>securitypolicy</strong>: a security policy</li>
+     * <li><strong>servergroup</strong>: a server group</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>loadbalancer</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-     * <br>
+     * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TagKey")
     public String tagKey;

@@ -12,6 +12,9 @@ public class ListAclRelationsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,34 +43,50 @@ public class ListAclRelationsResponseBody extends TeaModel {
     public static class ListAclRelationsResponseBodyAclRelationsRelatedListeners extends TeaModel {
         /**
          * <p>The listener ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
          * <p>The listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
         /**
          * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08ex****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The association status between the ACL and the listener. Valid values:</p>
-         * <br>
-         * <p>*   **Associating**</p>
-         * <p>*   **Associated**</p>
-         * <p>*   **Dissociating**</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Associated</strong></li>
+         * <li><strong>Dissociating</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Associated</p>
          */
         @NameInMap("Status")
         public String status;
@@ -122,6 +141,9 @@ public class ListAclRelationsResponseBody extends TeaModel {
     public static class ListAclRelationsResponseBodyAclRelations extends TeaModel {
         /**
          * <p>ACL ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
          */
         @NameInMap("AclId")
         public String aclId;

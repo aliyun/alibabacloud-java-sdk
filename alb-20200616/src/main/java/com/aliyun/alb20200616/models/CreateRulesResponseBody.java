@@ -6,20 +6,27 @@ import com.aliyun.tea.*;
 public class CreateRulesResponseBody extends TeaModel {
     /**
      * <p>The ID of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The priority of the forwarding rule. Valid values: **1 to 10000**. A lower value specifies a higher priority.</p>
-     * <br>
-     * <p>> The priorities of the forwarding rules created for the same listener is unique.</p>
+     * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A lower value specifies a higher priority.</p>
+     * <blockquote>
+     * <p>The priorities of the forwarding rules created for the same listener is unique.</p>
+     * </blockquote>
      */
     @NameInMap("RuleIds")
     public java.util.List<CreateRulesResponseBodyRuleIds> ruleIds;
@@ -55,15 +62,22 @@ public class CreateRulesResponseBody extends TeaModel {
 
     public static class CreateRulesResponseBodyRuleIds extends TeaModel {
         /**
-         * <p>The priority of the forwarding rule. Valid values: **1 to 10000**. A smaller value indicates a higher priority.</p>
-         * <br>
-         * <p>> The priorities of the forwarding rules created for the same listener must be unique.</p>
+         * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>
+         * <blockquote>
+         * <p>The priorities of the forwarding rules created for the same listener must be unique.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The forwarding rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-a3x3pg1yohq3lq****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;

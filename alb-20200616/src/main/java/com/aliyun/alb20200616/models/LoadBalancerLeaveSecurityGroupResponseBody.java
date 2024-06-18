@@ -3,31 +3,27 @@ package com.aliyun.alb20200616.models;
 
 import com.aliyun.tea.*;
 
-public class AddServersToServerGroupResponseBody extends TeaModel {
+public class LoadBalancerLeaveSecurityGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous job.</p>
-     * 
      * <strong>example:</strong>
-     * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
+     * <p>51c5b627-3500-487c-b17d-5cc583f0****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
+     * <p>EC0C96E4-7CCB-599C-9329-3A5DB6FF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static AddServersToServerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AddServersToServerGroupResponseBody self = new AddServersToServerGroupResponseBody();
+    public static LoadBalancerLeaveSecurityGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        LoadBalancerLeaveSecurityGroupResponseBody self = new LoadBalancerLeaveSecurityGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddServersToServerGroupResponseBody setJobId(String jobId) {
+    public LoadBalancerLeaveSecurityGroupResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -35,7 +31,7 @@ public class AddServersToServerGroupResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public AddServersToServerGroupResponseBody setRequestId(String requestId) {
+    public LoadBalancerLeaveSecurityGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

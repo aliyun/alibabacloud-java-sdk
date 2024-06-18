@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DisableLoadBalancerIpv6InternetResponseBody extends TeaModel {
     /**
      * <p>The asynchronous task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d12871a6-ebb2-41f3-8d74-d9f452bb****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7D866E37-1123-5160-AFF1-BDAF5EB86A8A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
      * <p>The ID of the ALB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alb-o9ulmq5hgn68jk****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;

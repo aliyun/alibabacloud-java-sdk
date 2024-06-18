@@ -12,31 +12,44 @@ public class ListAScriptsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
-     * <br>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2CA81429-F160-593A-8AB5-A2A9617845B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
-     * <br>
-     * <p>> This parameter is optional. By default, this parameter is not returned.</p>
+     * <blockquote>
+     * <p>This parameter is optional. By default, this parameter is not returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -89,50 +102,73 @@ public class ListAScriptsResponseBody extends TeaModel {
     public static class ListAScriptsResponseBodyAScripts extends TeaModel {
         /**
          * <p>The AScript rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>as-aznwocxofkakf7****</p>
          */
         @NameInMap("AScriptId")
         public String AScriptId;
 
         /**
          * <p>The name of the AScript rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("AScriptName")
         public String AScriptName;
 
         /**
          * <p>The status of the AScript rule. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Configuring**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("AScriptStatus")
         public String AScriptStatus;
 
         /**
          * <p>Indicates whether the AScript rule is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The listener ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-t0w1m9r6suiwmc****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The Application Load Balancer (ALB) instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-vv9rg2ub31tyec****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The content of the AScript rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{test}</p>
          */
         @NameInMap("ScriptContent")
         public String scriptContent;

@@ -18,9 +18,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether mutual authentication is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
@@ -39,69 +43,99 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether GZIP compression is enabled to compress specific types of files. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("GzipEnabled")
     public Boolean gzipEnabled;
 
     /**
      * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>> This parameter is available only when you create an HTTPS listener.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only when you create an HTTPS listener.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Http2Enabled")
     public Boolean http2Enabled;
 
     /**
      * <p>The timeout period of an idle connection. Unit: seconds.</p>
-     * <br>
      * <p>If no requests are received within the specified timeout period, Application Load Balancer (ALB) closes the current connection. When a request is received, ALB establishes a new connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>The name of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The frontend port that is used by the ALB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The listener protocol. Valid values: **HTTP**, **HTTPS**, and **QUIC**.</p>
+     * <p>The listener protocol. Valid values: <strong>HTTP</strong>, <strong>HTTPS</strong>, and <strong>QUIC</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The status of the listener. Valid values:</p>
-     * <br>
-     * <p>*   **Provisioning**</p>
-     * <p>*   **Running**</p>
-     * <p>*   **Configuring**</p>
-     * <p>*   **Stopped**</p>
+     * <ul>
+     * <li><strong>Provisioning</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Configuring</strong></li>
+     * <li><strong>Stopped</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("ListenerStatus")
     public String listenerStatus;
 
     /**
      * <p>The ALB instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1o94dp5i6ea****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -120,22 +154,31 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The timeout period of a request. Unit: seconds.</p>
-     * <br>
-     * <p>If no responses are received from the backend server within the specified timeout period, ALB returns an `HTTP 504` error code to the client.</p>
+     * <p>If no responses are received from the backend server within the specified timeout period, ALB returns an <code>HTTP 504</code> error code to the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34</p>
      */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
     /**
      * <p>The security policy.</p>
-     * <br>
-     * <p>> This parameter is available only when you create an HTTPS listener.</p>
+     * <blockquote>
+     * <p>This parameter is available only when you create an HTTPS listener.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tls_cipher_policy_1_1</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
@@ -328,16 +371,23 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyAclConfigAclRelations extends TeaModel {
         /**
          * <p>The ID of the ACL that is associated with the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-doc****</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
          * <p>Indicates whether the ACL is associated with the listener. Valid values:</p>
-         * <br>
-         * <p>*   **Associating**</p>
-         * <p>*   **Associated**</p>
-         * <p>*   **Dissociating**</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Associated</strong></li>
+         * <li><strong>Dissociating</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Associating</p>
          */
         @NameInMap("Status")
         public String status;
@@ -374,14 +424,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The type of the ACL. Valid values:</p>
-         * <br>
-         * <p>*   **White**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists are applicable to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured for a listener, only requests from IP addresses that are on the whitelist are forwarded by the listener.</p>
-         * <br>
-         * <p>    If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.</p>
-         * <br>
-         * <p>*   **Black**: a blacklist. Requests from the IP addresses or CIDR blocks in the network ACL are denied. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses or CIDR blocks to an application.</p>
-         * <br>
-         * <p>    If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.</p>
+         * <ul>
+         * <li><p><strong>White</strong>: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists are applicable to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured for a listener, only requests from IP addresses that are on the whitelist are forwarded by the listener.</p>
+         * <p>If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.</p>
+         * </li>
+         * <li><p><strong>Black</strong>: a blacklist. Requests from the IP addresses or CIDR blocks in the network ACL are denied. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses or CIDR blocks to an application.</p>
+         * <p>If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>White</p>
          */
         @NameInMap("AclType")
         public String aclType;
@@ -412,21 +465,31 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyCaCertificates extends TeaModel {
         /**
          * <p>The ID of the default CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139a00604bd-cn-east-hangzho****</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;
 
         /**
          * <p>Indicates whether the certificate is a default certificate: Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The status of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Associated</p>
          */
         @NameInMap("Status")
         public String status;
@@ -465,6 +528,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyCertificates extends TeaModel {
         /**
          * <p>The ID of the certificate. Only server certificates are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12315790212_166f8204689_1714763408_70998****</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;
@@ -487,6 +553,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         /**
          * <p>The ID of the server group to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6j****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -530,15 +599,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static class GetListenerAttributeResponseBodyDefaultActions extends TeaModel {
         /**
-         * <p>The configuration of the ForwardGroup action. This parameter is returned and takes effect when Type is set to **ForwardGroup**.</p>
+         * <p>The configuration of the ForwardGroup action. This parameter is returned and takes effect when Type is set to <strong>ForwardGroup</strong>.</p>
          */
         @NameInMap("ForwardGroupConfig")
         public GetListenerAttributeResponseBodyDefaultActionsForwardGroupConfig forwardGroupConfig;
 
         /**
          * <p>The type of the action.</p>
-         * <br>
-         * <p>If **ForwardGroup** is returned, requests are forwarded to multiple vServer groups.</p>
+         * <p>If <strong>ForwardGroup</strong> is returned, requests are forwarded to multiple vServer groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForwardGroup</p>
          */
         @NameInMap("Type")
         public String type;
@@ -569,27 +640,40 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyLogConfigAccessLogTracingConfig extends TeaModel {
         /**
          * <p>Indicates whether Xtrace is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> You can set this parameter to **true** only if the AccessLogEnabled parameter is set to true.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>You can set this parameter to <strong>true</strong> only if the AccessLogEnabled parameter is set to true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TracingEnabled")
         public Boolean tracingEnabled;
 
         /**
          * <p>The sampling rate of Xtrace. Valid values: 1 to 10000.</p>
-         * <br>
-         * <p>> If **TracingEnabled** is set to **true**, this parameter is valid.</p>
+         * <blockquote>
+         * <p>If <strong>TracingEnabled</strong> is set to <strong>true</strong>, this parameter is valid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TracingSample")
         public Integer tracingSample;
 
         /**
-         * <p>The Xtrace type. Supported Xtrace type: **Zipkin**.</p>
-         * <br>
-         * <p>> If **TracingEnabled** is set to **true**, this parameter is valid.</p>
+         * <p>The Xtrace type. Supported Xtrace type: <strong>Zipkin</strong>.</p>
+         * <blockquote>
+         * <p>If <strong>TracingEnabled</strong> is set to <strong>true</strong>, this parameter is valid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Zipkin</p>
          */
         @NameInMap("TracingType")
         public String tracingType;
@@ -628,9 +712,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyLogConfig extends TeaModel {
         /**
          * <p>Indicates whether custom headers are recorded in the access log. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
         public Boolean accessLogRecordCustomizedHeadersEnabled;
@@ -666,20 +754,29 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static class GetListenerAttributeResponseBodyQuicConfig extends TeaModel {
         /**
-         * <p>The ID of the QUIC listener. This parameter is returned when **QuicUpgradeEnabled** is set to **true**. Only HTTPS listeners support this parameter.</p>
-         * <br>
-         * <p>> You must associate the HTTPS listener and the QUIC listener with the same ALB instance. In addition, make sure that the QUIC listener has never been associated with another listener.</p>
+         * <p>The ID of the QUIC listener. This parameter is returned when <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>. Only HTTPS listeners support this parameter.</p>
+         * <blockquote>
+         * <p>You must associate the HTTPS listener and the QUIC listener with the same ALB instance. In addition, make sure that the QUIC listener has never been associated with another listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-333</p>
          */
         @NameInMap("QuicListenerId")
         public String quicListenerId;
 
         /**
          * <p>Indicates whether QUIC upgrade is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> Only HTTPS listeners support this parameter.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>Only HTTPS listeners support this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("QuicUpgradeEnabled")
         public Boolean quicUpgradeEnabled;
@@ -709,13 +806,19 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static class GetListenerAttributeResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("Value")
         public String value;
@@ -745,159 +848,223 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static class GetListenerAttributeResponseBodyXForwardedForConfig extends TeaModel {
         /**
-         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.</p>
-         * <br>
+         * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertClientVerifyEnabled</strong> is set to <strong>true</strong>.</p>
          * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_client-verify-alias_123456</p>
          */
         @NameInMap("XForwardedForClientCertClientVerifyAlias")
         public String XForwardedForClientCertClientVerifyAlias;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Clientcert-clientverify` header is used to retrieve the verification result of the client certificate. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Clientcert-clientverify</code> header is used to retrieve the verification result of the client certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForClientCertClientVerifyEnabled")
         public Boolean XForwardedForClientCertClientVerifyEnabled;
 
         /**
-         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.</p>
-         * <br>
+         * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertFingerprintEnabled</strong> is set to <strong>true</strong>.</p>
          * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_finger-print-alias_123456</p>
          */
         @NameInMap("XForwardedForClientCertFingerprintAlias")
         public String XForwardedForClientCertFingerprintAlias;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Clientcert-fingerprint` header is used to retrieve the fingerprint of the client certificate. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Clientcert-fingerprint</code> header is used to retrieve the fingerprint of the client certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForClientCertFingerprintEnabled")
         public Boolean XForwardedForClientCertFingerprintEnabled;
 
         /**
-         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.</p>
-         * <br>
+         * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertIssuerDNEnabled</strong> is set to <strong>true</strong>.</p>
          * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_issue-dn-alias_123456</p>
          */
         @NameInMap("XForwardedForClientCertIssuerDNAlias")
         public String XForwardedForClientCertIssuerDNAlias;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Clientcert-issuerdn` header is used to retrieve information about the authority that issues the client certificate. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Clientcert-issuerdn</code> header is used to retrieve information about the authority that issues the client certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForClientCertIssuerDNEnabled")
         public Boolean XForwardedForClientCertIssuerDNEnabled;
 
         /**
-         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.</p>
-         * <br>
+         * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertSubjectDNEnabled</strong> is set to <strong>true</strong>.</p>
          * <p>The name is 1 to 40 characters in length, and can contain lowercase letters, hyphens (-), underscores (_), and digits.</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_subject-dn-alias_123456</p>
          */
         @NameInMap("XForwardedForClientCertSubjectDNAlias")
         public String XForwardedForClientCertSubjectDNAlias;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Clientcert-subjectdn` header is used to retrieve information about the owner of the client certificate. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Clientcert-subjectdn</code> header is used to retrieve information about the owner of the client certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForClientCertSubjectDNEnabled")
         public Boolean XForwardedForClientCertSubjectDNEnabled;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Client-Ip` header is used to retrieve the source port of the ALB instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Client-Ip</code> header is used to retrieve the source port of the ALB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForClientSourceIpsEnabled")
         public Boolean XForwardedForClientSourceIpsEnabled;
 
         /**
          * <p>The trusted proxy IP address.</p>
-         * <br>
-         * <p>ALB traverses `X-Forwarded-For` backward and selects the first IP address that is not on the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.</p>
+         * <p>ALB traverses <code>X-Forwarded-For</code> backward and selects the first IP address that is not on the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.1.0/24</p>
          */
         @NameInMap("XForwardedForClientSourceIpsTrusted")
         public String XForwardedForClientSourceIpsTrusted;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Client-Port` header is used to retrieve the client port. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTP or HTTPS listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Client-Port</code> header is used to retrieve the client port. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTP or HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForClientSrcPortEnabled")
         public Boolean XForwardedForClientSrcPortEnabled;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-For` header is used to retrieve the client IP address. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTP or HTTPS listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-For</code> header is used to retrieve the client IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTP or HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForEnabled")
         public Boolean XForwardedForEnabled;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listening protocol. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Proto</code> header is used to retrieve the listening protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
         /**
-         * <p>Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * <p>Indicates whether the <code>SLB-ID</code> header is used to retrieve the ID of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForSLBIdEnabled")
         public Boolean XForwardedForSLBIdEnabled;
 
         /**
-         * <p>Indicates whether the `X-Forwarded-Port` header is used to retrieve the listening port of the ALB instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * <p>Indicates whether the <code>X-Forwarded-Port</code> header is used to retrieve the listening port of the ALB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("XForwardedForSLBPortEnabled")
         public Boolean XForwardedForSLBPortEnabled;

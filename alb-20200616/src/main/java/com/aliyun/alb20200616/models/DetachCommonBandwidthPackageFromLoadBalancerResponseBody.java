@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DetachCommonBandwidthPackageFromLoadBalancerResponseBody extends TeaModel {
     /**
      * <p>The asynchronous task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2EF39708-974B-5E74-AFF5-3445263035A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

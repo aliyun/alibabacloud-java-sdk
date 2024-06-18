@@ -9,9 +9,13 @@ public class ListLoadBalancersRequest extends TeaModel {
 
     /**
      * <p>The network type. Valid values:</p>
-     * <br>
-     * <p>*   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
-     * <p>*   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.</p>
+     * <ul>
+     * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
+     * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC where the ALB instance is deployed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Intranet</p>
      */
     @NameInMap("AddressType")
     public String addressType;
@@ -24,9 +28,13 @@ public class ListLoadBalancersRequest extends TeaModel {
 
     /**
      * <p>The service status of the ALB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Abnormal**</p>
-     * <p>*   **Normal**</p>
+     * <ul>
+     * <li><strong>Abnormal</strong></li>
+     * <li><strong>Normal</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("LoadBalancerBussinessStatus")
     public String loadBalancerBussinessStatus;
@@ -45,41 +53,57 @@ public class ListLoadBalancersRequest extends TeaModel {
 
     /**
      * <p>The status of the ALB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Inactive**: The ALB instance is disabled. The listeners do not forward traffic.</p>
-     * <p>*   **Active**: The ALB instance is running.</p>
-     * <p>*   **Provisioning**: The ALB instance is being created.</p>
-     * <p>*   **Configuring**: The ALB instance is being modified.</p>
-     * <p>*   **CreateFailed**: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance. By default, the system deletes the ALB instances that are in the CreateFailed state within the last day.</p>
+     * <ul>
+     * <li><strong>Inactive</strong>: The ALB instance is disabled. The listeners do not forward traffic.</li>
+     * <li><strong>Active</strong>: The ALB instance is running.</li>
+     * <li><strong>Provisioning</strong>: The ALB instance is being created.</li>
+     * <li><strong>Configuring</strong>: The ALB instance is being modified.</li>
+     * <li><strong>CreateFailed</strong>: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance. By default, the system deletes the ALB instances that are in the CreateFailed state within the last day.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The billing method of the ALB instance. Set the value to</p>
-     * <br>
-     * <p>**PostPay**, which specifies the pay-as-you-go billing method. This is the default value.</p>
+     * <p><strong>PostPay</strong>, which specifies the pay-as-you-go billing method. This is the default value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPay</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -98,8 +122,10 @@ public class ListLoadBalancersRequest extends TeaModel {
 
     /**
      * <p>The ID of the zone where the ALB instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/189196.html) operation to query zones.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query zones.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-a</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -232,16 +258,20 @@ public class ListLoadBalancersRequest extends TeaModel {
     public static class ListLoadBalancersRequestTag extends TeaModel {
         /**
          * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alueTest</p>
          */
         @NameInMap("Value")
         public String value;

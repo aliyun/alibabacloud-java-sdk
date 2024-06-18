@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListServerGroupServersResponseBody extends TeaModel {
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If <strong>NextToken</strong> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f8****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class ListServerGroupServersResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,64 +98,94 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     public static class ListServerGroupServersResponseBodyServers extends TeaModel {
         /**
          * <p>The description of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The port used by the backend server. Valid values: **1** to **65535**.</p>
+         * <p>The port used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>Indicates whether the remote IP address feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RemoteIpEnabled")
         public Boolean remoteIpEnabled;
 
         /**
          * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-qy042e1jabmprh****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
         /**
          * <p>The ID of the backend server.</p>
-         * <br>
-         * <p>> If **ServerType** is set to **Fc**, **ServerId** is the ARN of a function.</p>
+         * <blockquote>
+         * <p>If <strong>ServerType</strong> is set to <strong>Fc</strong>, <strong>ServerId</strong> is the ARN of a function.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1f9kdprbgy9uiu****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The IP address in inclusive ENI mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
          * <p>The type of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
          */
         @NameInMap("ServerType")
         public String serverType;
 
         /**
          * <p>The status of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **Adding**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Configuring**</p>
-         * <p>*   **Removing**</p>
+         * <ul>
+         * <li><strong>Adding</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * <li><strong>Removing</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The weight of the backend server. An ECS instance with a higher weight receives more requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

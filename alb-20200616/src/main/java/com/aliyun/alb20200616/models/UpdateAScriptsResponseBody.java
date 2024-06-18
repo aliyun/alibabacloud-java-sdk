@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateAScriptsResponseBody extends TeaModel {
     /**
      * <p>The asynchronous task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2e82b5f4-1ba9-4d20-89c8-1082ebaa****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACA19FE1-C09E-53C7-8FDA-560F49D71891</p>
      */
     @NameInMap("RequestId")
     public String requestId;

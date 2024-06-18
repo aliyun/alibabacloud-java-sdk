@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetLoadBalancerAttributeRequest extends TeaModel {
     /**
      * <p>The ALB instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alb-o9ulmq5hgn68jk****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

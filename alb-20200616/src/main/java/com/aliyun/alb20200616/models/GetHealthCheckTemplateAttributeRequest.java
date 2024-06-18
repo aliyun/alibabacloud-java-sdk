@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetHealthCheckTemplateAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the health check template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hct-x4jazoyi6tvsq9****</p>
      */
     @NameInMap("HealthCheckTemplateId")
     public String healthCheckTemplateId;

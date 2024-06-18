@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class DescribeZonesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese</p>
-     * <p>*   **en-US**: English</p>
-     * <p>*   **ja**: Japanese</p>
+     * <ul>
+     * <li><strong>zh-CN</strong> (default): Chinese</li>
+     * <li><strong>en-US</strong>: English</li>
+     * <li><strong>ja</strong>: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     public static class ListSecurityPolicyRelationsResponseBodySecrityPolicyRelationsRelatedListeners extends TeaModel {
         /**
          * <p>The listener ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-0bfuc****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ListenerPort")
         public Long listenerPort;
 
         /**
          * <p>The listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
         /**
          * <p>The Server Load Balancer (SLB) instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1o94dp5i6ea****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
@@ -110,6 +125,9 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
 
         /**
          * <p>The security policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scp-bp1bpn0kn9****</p>
          */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
