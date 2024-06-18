@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListServerGroupsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If <strong>NextToken</strong> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f8****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -83,9 +96,25 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsConnectionDrainConfig extends TeaModel {
+        /**
+         * <p>Indicates whether connection draining is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ConnectionDrainEnabled")
         public Boolean connectionDrainEnabled;
 
+        /**
+         * <p>The timeout period of connection draining.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
 
@@ -114,105 +143,145 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsHealthCheckConfig extends TeaModel {
         /**
-         * <p>The HTTP status codes that indicate whether the backend server passes the health check.</p>
+         * <p>The HTTP status codes that indicate healthy backend servers.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
         /**
-         * <p>The port that you want to use for health checks on backend servers. Valid values: **0** to **65535**.</p>
-         * <br>
-         * <p>A value of **0** indicates that the port on a backend server is used for health checks.</p>
+         * <p>The backend port that is used for health checks. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>A value of <strong>0</strong> indicates that the port of a backend server is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
         /**
          * <p>Indicates whether the health check feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
         /**
          * <p>The domain name that is used for health checks. The domain name meets the following requirements:</p>
-         * <br>
-         * <p>*   The domain name is 1 to 80 characters in length.</p>
-         * <p>*   The domain name contains lowercase letters, digits, hyphens (-), and periods (.).</p>
-         * <p>*   The domain name contains at least one period (.) but does not start or end with a period (.).</p>
-         * <p>*   The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).</p>
-         * <p>*   The domain name does not start or end with a hyphen (-).</p>
-         * <br>
-         * <p>>  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.</p>
+         * <ul>
+         * <li>The domain name must be 1 to 80 characters in length.</li>
+         * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
+         * <li>The domain name can contain at least one period (.) but cannot start or end with a period (.).</li>
+         * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
+         * <li>The domain name cannot start or end with a hyphen (-).</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
 
         /**
-         * <p>The HTTP version that is used for health checks.</p>
-         * <br>
-         * <p>Valid values: **HTTP1.0** and **HTTP1.1**.</p>
-         * <br>
-         * <p>>  This parameter takes effect when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.</p>
+         * <p>The HTTP version for health checks.</p>
+         * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP1.1</p>
          */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
         /**
-         * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.</p>
+         * <p>The interval at which health checks are performed. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
         /**
-         * <p>The HTTP method that is used for health checks. Valid values:</p>
-         * <br>
-         * <p>*   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</p>
-         * <p>*   **POST**: gRPC health checks on listeners use the POST method by default.</p>
-         * <p>*   **HEAD**: HTTP and HTTPS health checks on listeners use the HEAD method by default.</p>
-         * <br>
-         * <p>>  This parameter takes effect when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.</p>
+         * <p>The HTTP method that is used for health checks. Valid value:</p>
+         * <ul>
+         * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
+         * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
+         * <li><strong>HEAD</strong>: HTTP and HTTPS health checks use the HEAD method by default.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HEAD</p>
          */
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
         /**
-         * <p>The path that is used for health checks.</p>
-         * <br>
-         * <p>>  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.</p>
+         * <p>The URL that is used for health checks.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/index.html</p>
          */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that you want to use for health checks. Valid values:</p>
-         * <br>
-         * <p>*   **HTTP**: ALB performs HTTP health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy.</p>
-         * <p>*   **HTTPS**: ALB performs HTTPS health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy. HTTPS supports data encryption and provides higher data security than HTTP.</p>
-         * <p>*   **TCP**: To perform TCP health checks, ALB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.</p>
-         * <p>*   **gRPC**: ALB performs gRPC health checks by sending POST or GET requests to a backend server to check whether the backend server is healthy.</p>
-         * <br>
-         * <p>>  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.</p>
+         * <p>The protocol that you want to use for health checks. Valid value:</p>
+         * <ul>
+         * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+         * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</li>
+         * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
+         * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+         * </ul>
+         * <blockquote>
+         * <p> HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
         /**
-         * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the backend server fails the health check. Unit: seconds.</p>
+         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
@@ -321,9 +390,25 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsSlowStartConfig extends TeaModel {
+        /**
+         * <p>The duration of a slow start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("SlowStartDuration")
         public Integer slowStartDuration;
 
+        /**
+         * <p>Indicates whether slow starts are enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SlowStartEnabled")
         public Boolean slowStartEnabled;
 
@@ -352,33 +437,48 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsStickySessionConfig extends TeaModel {
         /**
-         * <p>The cookie that is configured on the server.</p>
+         * <p>The cookie configured for the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
          */
         @NameInMap("Cookie")
         public String cookie;
 
         /**
-         * <p>The timeout period of a cookie. Unit: seconds. Valid values: **1** to **86400**.</p>
-         * <br>
-         * <p>>  This parameter takes effect only when **StickySessionEnabled** is set to **true** and **StickySessionType** is set to **Insert**.</p>
+         * <p>The timeout period of the cookie. Unit: seconds. Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Insert</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
         /**
-         * <p>Indicates whether session persistence is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>Indicates whether session persistence is enabled. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("StickySessionEnabled")
         public Boolean stickySessionEnabled;
 
         /**
-         * <p>The method that is used to handle a cookie. Valid values:</p>
-         * <br>
-         * <p>*   **Insert**: inserts a cookie. ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener distributes this request to the recorded backend server.</p>
-         * <p>*   **Server**: rewrites a cookie. When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.</p>
+         * <p>The method that is used to handle the cookie. Valid value:</p>
+         * <ul>
+         * <li><strong>insert</strong>: inserts the cookie. The first time a client accesses ALB, ALB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</li>
+         * <li><strong>Server</strong>: rewrites the cookie. ALB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Insert</p>
          */
         @NameInMap("StickySessionType")
         public String stickySessionType;
@@ -425,12 +525,18 @@ public class ListServerGroupsResponseBody extends TeaModel {
     public static class ListServerGroupsResponseBodyServerGroupsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -460,13 +566,19 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroupsUchConfig extends TeaModel {
         /**
-         * <p>The data type of the common parameter.</p>
+         * <p>The parameter type. Valid value: QueryString.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QueryString</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The parameter value for consistent hashing.</p>
+         * <p>The hash value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Value")
         public String value;
@@ -496,111 +608,178 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
         /**
-         * <p>Indicates whether configuration management is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>Indicates whether configuration management is enabled. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ConfigManagedEnabled")
         public Boolean configManagedEnabled;
 
+        /**
+         * <p>The configurations of connection draining.</p>
+         * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
+         * <blockquote>
+         * <ul>
+         * <li>By default, connection draining is disabled. To enable connection draining, contact your account manager.</li>
+         * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</li>
+         * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
+         * </ul>
+         * </blockquote>
+         */
         @NameInMap("ConnectionDrainConfig")
         public ListServerGroupsResponseBodyServerGroupsConnectionDrainConfig connectionDrainConfig;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-02T02:49:05Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The health check configuration.</p>
+         * <p>The health check configurations.</p>
          */
         @NameInMap("HealthCheckConfig")
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig;
 
         /**
-         * <p>Indicates whether IPv6 is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>Indicates whether IPv6 is supported. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ipv6Enabled")
         public Boolean ipv6Enabled;
 
         /**
-         * <p>The backend protocol. Valid values:</p>
-         * <br>
-         * <p>*   **HTTP**: allows you to associate HTTPS, HTTP, or QUIC listeners with backend servers.</p>
-         * <p>*   **HTTPS**: allows you to associate an HTTPS listener with the server group.</p>
-         * <p>*   **GRPC**: allows you to associate an HTTPS or QUIC listener with the server group.</p>
+         * <p>The backend protocol. Valid value:</p>
+         * <ul>
+         * <li><strong>HTTP</strong>: allows you to associate HTTPS, HTTP, or QUIC listeners with backend servers.</li>
+         * <li><strong>HTTPS</strong>: allows you to associate HTTPS listeners with backend servers.</li>
+         * <li><strong>GRPC</strong>: allows you to associate HTTPS and QUIC listeners with backend servers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The ID of the ALB instance associated with the server group.</p>
+         */
         @NameInMap("RelatedLoadBalancerIds")
         public java.util.List<String> relatedLoadBalancerIds;
 
         /**
-         * <p>The resource group ID to which the GA instance belongs.</p>
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The scheduling algorithm. Valid values:</p>
-         * <br>
-         * <p>*   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
-         * <p>*   **Wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.</p>
-         * <p>*   **Sch**: The consistent hashing algorithm is used. Requests from the same source IP address are distributed to the same backend server.</p>
+         * <p>The scheduling algorithm. Valid value:</p>
+         * <ul>
+         * <li><strong>Wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+         * <li><strong>Wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.</li>
+         * <li><strong>Sch</strong>: consistent hashing. Requests that have the same hash factors are distributed to the same backend server. If you do not specify the UchConfig parameter, the source IP address is used as the hash factor by default. Requests that are from the same IP address are distributed to the same backend server. If you specify the UchConfig parameter, the URL string is used as the hash factor. Requests that have the same URL string are distributed to the same backend server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Wrr</p>
          */
         @NameInMap("Scheduler")
         public String scheduler;
 
         /**
          * <p>The number of backend servers in the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ServerCount")
         public Integer serverCount;
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-cige6j****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
         /**
-         * <p>The name of the server group.</p>
+         * <p>The server group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group3</p>
          */
         @NameInMap("ServerGroupName")
         public String serverGroupName;
 
         /**
-         * <p>The status of the server group. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Configuring**</p>
+         * <p>The status of the server group. Valid value:</p>
+         * <ul>
+         * <li><strong>Creating</strong>.</li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("ServerGroupStatus")
         public String serverGroupStatus;
 
         /**
-         * <p>The type of server group. Valid values:</p>
-         * <br>
-         * <p>*   **Instance**</p>
-         * <p>*   **Ip**</p>
-         * <p>*   **Fc**</p>
+         * <p>The server group type. Valid value:</p>
+         * <ul>
+         * <li><strong>Instance</strong>: instances, including Elastic Compute Service (ECS) instances, elastic network interfaces (ENIs), and elastic container instances.</li>
+         * <li><strong>Ip</strong>: IP addresses.</li>
+         * <li><strong>Fc</strong>: Function Compute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         @NameInMap("ServerGroupType")
         public String serverGroupType;
 
         /**
-         * <p>The service name.</p>
+         * <p>The name of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The configurations of slow starts.</p>
+         * <p>After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</li>
+         * <li>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
+         * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
+         * </ul>
+         * </blockquote>
+         */
         @NameInMap("SlowStartConfig")
         public ListServerGroupsResponseBodyServerGroupsSlowStartConfig slowStartConfig;
 
@@ -623,16 +802,23 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public ListServerGroupsResponseBodyServerGroupsUchConfig uchConfig;
 
         /**
-         * <p>Indicates whether long-lived TCP connections are enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>Indicates whether persistent TCP connections are enabled. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("UpstreamKeepaliveEnabled")
         public Boolean upstreamKeepaliveEnabled;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC to which the ALB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAclsRequest extends TeaModel {
     /**
-     * <p>The ID of the network ACL. You can specify at most 20 network ACL IDs in each request.</p>
+     * <p>Filter access control lists (ACLs) by ACL ID.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
@@ -17,22 +17,32 @@ public class ListAclsRequest extends TeaModel {
     public java.util.List<String> aclNames;
 
     /**
-     * <p>The maximum number of entries to return. This parameter is optional. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The maximum number of entries to return. This parameter is optional. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+     * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the resource group. You can filter the query results based on the specified ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtopty****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -98,13 +108,19 @@ public class ListAclsRequest extends TeaModel {
 
     public static class ListAclsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("Value")
         public String value;

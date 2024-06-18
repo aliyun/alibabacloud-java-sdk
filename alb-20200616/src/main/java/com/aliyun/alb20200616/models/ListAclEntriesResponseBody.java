@@ -12,27 +12,40 @@ public class ListAclEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,22 +98,32 @@ public class ListAclEntriesResponseBody extends TeaModel {
     public static class ListAclEntriesResponseBodyAclEntries extends TeaModel {
         /**
          * <p>The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-entry</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The CIDR block of the ACL entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.1.1/24</p>
          */
         @NameInMap("Entry")
         public String entry;
 
         /**
          * <p>The status of the ACL entry. Valid values:</p>
-         * <br>
-         * <p>*   **Adding**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Removing**</p>
+         * <ul>
+         * <li><strong>Adding</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Removing</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

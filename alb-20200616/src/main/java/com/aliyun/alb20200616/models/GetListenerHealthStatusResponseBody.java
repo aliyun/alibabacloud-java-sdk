@@ -12,15 +12,22 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -70,34 +77,45 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServersReason extends TeaModel {
         /**
-         * <p>The HTTP status code returned from the server, for example, **302**.</p>
-         * <br>
-         * <p>> A value is returned only if `ReasonCode` is set to **RESPONSE_MISMATCH**.</p>
+         * <p>The HTTP status code returned from the server, for example, <strong>302</strong>.</p>
+         * <blockquote>
+         * <p>A value is returned only if <code>ReasonCode</code> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>302</p>
          */
         @NameInMap("ActualResponse")
         public String actualResponse;
 
         /**
          * <p>The HTTP status code returned after backend servers pass health checks.</p>
-         * <br>
-         * <p>Valid values: **HTTP_2xx**, **HTTP_3xx**, **HTTP_4xx**, and **HTTP_5xx**. Multiple status codes are separated by commas (,).</p>
-         * <br>
-         * <p>> This value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.</p>
+         * <p>Valid values: <strong>HTTP_2xx</strong>, <strong>HTTP_3xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong>. Multiple status codes are separated by commas (,).</p>
+         * <blockquote>
+         * <p>This value is returned only if <strong>ReasonCode</strong> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_2xx</p>
          */
         @NameInMap("ExpectedResponse")
         public String expectedResponse;
 
         /**
-         * <p>The reason why the value of **Status** is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
-         * <br>
-         * <p>*   **CONNECT_TIMEOUT**: ALB failed to connect to the backend server within the specified period of time.</p>
-         * <p>*   **CONNECT_FAILED**: ALB failed to connect to the backend server.</p>
-         * <p>*   **RECV_RESPONSE_FAILED**: ALB failed to receive a response from the backend server.</p>
-         * <p>*   **RECV_RESPONSE_TIMEOUT**: ALB failed to receive a response from the backend server within the specified period of time.</p>
-         * <p>*   **SEND_REQUEST_FAILED**: ALB failed to send a request to the backend server.</p>
-         * <p>*   **SEND_REQUEST_TIMEOUT**: ALB failed to send a request to the backend server within the specified period of time.</p>
-         * <p>*   **RESPONSE_FORMAT_ERROR**: The format of the response from the backend server is invalid.</p>
-         * <p>*   **RESPONSE_FORMAT_ERROR**: The HTTP status code returned from the backend server is not the expected one.</p>
+         * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
+         * <ul>
+         * <li><strong>CONNECT_TIMEOUT</strong>: ALB failed to connect to the backend server within the specified period of time.</li>
+         * <li><strong>CONNECT_FAILED</strong>: ALB failed to connect to the backend server.</li>
+         * <li><strong>RECV_RESPONSE_FAILED</strong>: ALB failed to receive a response from the backend server.</li>
+         * <li><strong>RECV_RESPONSE_TIMEOUT</strong>: ALB failed to receive a response from the backend server within the specified period of time.</li>
+         * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
+         * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
+         * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
+         * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RESPONSE_MISMATCH</p>
          */
         @NameInMap("ReasonCode")
         public String reasonCode;
@@ -136,6 +154,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServers extends TeaModel {
         /**
          * <p>The backend port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Port")
         public Integer port;
@@ -148,23 +169,33 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp1bfa08ex*****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The IP address of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.8.10</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
          * <p>The status of the health check. Valid values: Valid values:</p>
-         * <br>
-         * <p>*   **Initial**: indicates that health checks are configured for the NLB instance, but no data was found.</p>
-         * <p>*   **Unhealthy**: indicates that the backend server consecutively fails health checks.</p>
-         * <p>*   **Unused**: indicates that the weight of the backend server is 0.</p>
-         * <p>*   **Unavailable**: indicates that health checks are disabled.</p>
+         * <ul>
+         * <li><strong>Initial</strong>: indicates that health checks are configured for the NLB instance, but no data was found.</li>
+         * <li><strong>Unhealthy</strong>: indicates that the backend server consecutively fails health checks.</li>
+         * <li><strong>Unused</strong>: indicates that the weight of the backend server is 0.</li>
+         * <li><strong>Unavailable</strong>: indicates that health checks are disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial</p>
          */
         @NameInMap("Status")
         public String status;
@@ -219,12 +250,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos extends TeaModel {
         /**
          * <p>The action specified for the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrafficMirror</p>
          */
         @NameInMap("ActionType")
         public String actionType;
 
         /**
-         * <p>Indicates whether health checks are enabled. If **on** is returned, it indicates that health checks are enabled.</p>
+         * <p>Indicates whether health checks are enabled. If <strong>on</strong> is returned, it indicates that health checks are enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("HealthCheckEnabled")
         public String healthCheckEnabled;
@@ -237,6 +274,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the server group that is associated with the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsp-bp1qjwo61pqz3ahltv****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -283,18 +323,27 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatus extends TeaModel {
         /**
          * <p>The listener ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
          * <p>The listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
@@ -346,34 +395,45 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServersReason extends TeaModel {
         /**
-         * <p>The HTTP status code returned from the server, for example, **302**.</p>
-         * <br>
-         * <p>> A value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.</p>
+         * <p>The HTTP status code returned from the server, for example, <strong>302</strong>.</p>
+         * <blockquote>
+         * <p>A value is returned only if <strong>ReasonCode</strong> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>302</p>
          */
         @NameInMap("ActualResponse")
         public String actualResponse;
 
         /**
          * <p>The HTTP status code returned after backend servers pass health checks.</p>
-         * <br>
-         * <p>Valid values: **HTTP_2xx**, **HTTP_3xx**, **HTTP_4xx**, and **HTTP_5xx**. Multiple status codes are separated by commas (,).</p>
-         * <br>
-         * <p>> A value is returned only if **ReasonCode** is set to **RESPONSE_MISMATCH**.</p>
+         * <p>Valid values: <strong>HTTP_2xx</strong>, <strong>HTTP_3xx</strong>, <strong>HTTP_4xx</strong>, and <strong>HTTP_5xx</strong>. Multiple status codes are separated by commas (,).</p>
+         * <blockquote>
+         * <p>A value is returned only if <strong>ReasonCode</strong> is set to <strong>RESPONSE_MISMATCH</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP_2xx</p>
          */
         @NameInMap("ExpectedResponse")
         public String expectedResponse;
 
         /**
-         * <p>The reason why the value of **Status** is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
-         * <br>
-         * <p>*   **CONNECT_TIMEOUT**: ALB failed to connect to the backend server within the specified period of time.</p>
-         * <p>*   **CONNECT_FAILED**: ALB failed to connect to the backend server.</p>
-         * <p>*   **RECV_RESPONSE_FAILED**: ALB failed to receive a response from the backend server.</p>
-         * <p>*   **RECV_RESPONSE_TIMEOUT**: ALB failed to receive a response from the backend server within the specified period of time.</p>
-         * <p>*   **SEND_REQUEST_FAILED**: ALB failed to send a request to the backend server.</p>
-         * <p>*   **SEND_REQUEST_TIMEOUT**: ALB failed to send a request to the backend server within the specified period of time.</p>
-         * <p>*   **RESPONSE_FORMAT_ERROR**: The format of the response from the backend server is invalid.</p>
-         * <p>*   **RESPONSE_FORMAT_ERROR**: The HTTP status code returned from the backend server is not the expected one.</p>
+         * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
+         * <ul>
+         * <li><strong>CONNECT_TIMEOUT</strong>: ALB failed to connect to the backend server within the specified period of time.</li>
+         * <li><strong>CONNECT_FAILED</strong>: ALB failed to connect to the backend server.</li>
+         * <li><strong>RECV_RESPONSE_FAILED</strong>: ALB failed to receive a response from the backend server.</li>
+         * <li><strong>RECV_RESPONSE_TIMEOUT</strong>: ALB failed to receive a response from the backend server within the specified period of time.</li>
+         * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
+         * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
+         * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
+         * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RESPONSE_MISMATCH</p>
          */
         @NameInMap("ReasonCode")
         public String reasonCode;
@@ -412,6 +472,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServers extends TeaModel {
         /**
          * <p>The backend port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("Port")
         public Integer port;
@@ -424,23 +487,33 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp1bfa08ex****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The IP address of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.2.11</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
          * <p>The status of the health check. Valid values: Valid values:</p>
-         * <br>
-         * <p>*   **Initial**: indicates that health checks are configured for the NLB instance, but no data was found.</p>
-         * <p>*   **Unhealthy**: indicates that the backend server consecutively fails health checks.</p>
-         * <p>*   **Unused**: indicates that the weight of the backend server is 0.</p>
-         * <p>*   **Unavailable**: indicates that health checks are disabled.</p>
+         * <ul>
+         * <li><strong>Initial</strong>: indicates that health checks are configured for the NLB instance, but no data was found.</li>
+         * <li><strong>Unhealthy</strong>: indicates that the backend server consecutively fails health checks.</li>
+         * <li><strong>Unused</strong>: indicates that the weight of the backend server is 0.</li>
+         * <li><strong>Unavailable</strong>: indicates that health checks are disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial</p>
          */
         @NameInMap("Status")
         public String status;
@@ -495,12 +568,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfos extends TeaModel {
         /**
          * <p>The action specified for the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TrafficMirror</p>
          */
         @NameInMap("ActionType")
         public String actionType;
 
         /**
-         * <p>Indicates whether health checks are enabled. If **on** is returned, it indicates that health checks are enabled.</p>
+         * <p>Indicates whether health checks are enabled. If <strong>on</strong> is returned, it indicates that health checks are enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("HealthCheckEnabled")
         public String healthCheckEnabled;
@@ -513,6 +592,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the server group that is associated with the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsp-bp1qjwo61pqz3ahlt****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -559,6 +641,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyRuleHealthStatus extends TeaModel {
         /**
          * <p>The ID of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-hp34s2h0xx1ht4nwo****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;

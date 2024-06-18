@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The IDs of the resources from which you want to remove tags.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-123</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **acl**: an access control list (ACL)</p>
-     * <p>*   **loadbalancer**: an Application Load Balancer (ALB) instance</p>
-     * <p>*   **securitypolicy**: a security policy</p>
-     * <p>*   **servergroup**: a server group</p>
-     * <br>
+     * <ul>
+     * <li><strong>acl</strong>: an access control list (ACL)</li>
+     * <li><strong>loadbalancer</strong>: an Application Load Balancer (ALB) instance</li>
+     * <li><strong>securitypolicy</strong>: a security policy</li>
+     * <li><strong>servergroup</strong>: a server group</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>loadbalancer</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags that you want to remove.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Tag")
     public java.util.List<UnTagResourcesRequestTag> tag;
@@ -93,13 +105,19 @@ public class UnTagResourcesRequest extends TeaModel {
 
     public static class UnTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that you want to remove. The key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The key of the tag that you want to remove. The key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that you want to remove. The value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The value cannot contain `http://` or `https://`.</p>
+         * <p>The value of the tag that you want to remove. The value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("Value")
         public String value;

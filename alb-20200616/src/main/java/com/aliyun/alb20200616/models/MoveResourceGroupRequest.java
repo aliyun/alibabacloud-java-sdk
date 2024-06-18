@@ -6,31 +6,39 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which you want to move the resource.</p>
-     * <br>
-     * <p>> You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see [What is resource management?](https://help.aliyun.com/document_detail/94475.html)</p>
-     * <br>
+     * <blockquote>
+     * <p>You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-9gLOoK****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **loadbalancer**: Application Load Balancer (ALB) instance</p>
-     * <p>*   **acl**: access control list (ACL)</p>
-     * <p>*   **securitypolicy**: security policy</p>
-     * <p>*   **servergroup**: server group</p>
-     * <br>
+     * <ul>
+     * <li><strong>loadbalancer</strong>: Application Load Balancer (ALB) instance</li>
+     * <li><strong>acl</strong>: access control list (ACL)</li>
+     * <li><strong>securitypolicy</strong>: security policy</li>
+     * <li><strong>servergroup</strong>: server group</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACL</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
