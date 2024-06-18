@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPrivateAccessPolicyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pa-policy-63b2f1844b86****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

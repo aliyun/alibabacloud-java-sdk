@@ -4,15 +4,26 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListIdpDepartmentsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1440</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

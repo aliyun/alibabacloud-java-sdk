@@ -7,6 +7,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListIdpConfigsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FD724DBC-CD76-5235-BF76-59C51B73296D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,33 +39,69 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>277</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totp</p>
+         */
         @NameInMap("Mfa")
         public String mfa;
 
+        /**
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("MobileLoginType")
         public String mobileLoginType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("MobileMfaConfigType")
         public String mobileMfaConfigType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1482,1355</p>
+         */
         @NameInMap("MultiIdpInfo")
         public String multiIdpInfo;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("PcLoginType")
         public String pcLoginType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-09T02:22:41.430Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -164,6 +204,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         @NameInMap("DataList")
         public java.util.List<ListIdpConfigsResponseBodyDataDataList> dataList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalNum")
         public Long totalNum;
 

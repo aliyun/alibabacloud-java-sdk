@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteClientUserRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27058</p>
      */
     @NameInMap("Id")
     public String id;

@@ -7,9 +7,17 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
     @NameInMap("Applications")
     public java.util.List<ListPrivateAccessApplicationsResponseBodyApplications> applications;
 
+    /**
+     * <strong>example:</strong>
+     * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
@@ -43,9 +51,17 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListPrivateAccessApplicationsResponseBodyApplicationsPortRanges extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>81</p>
+         */
         @NameInMap("End")
         public Integer end;
 
@@ -76,18 +92,30 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pa-application-e12860ef6c48****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         @NameInMap("ConnectorIds")
         public java.util.List<String> connectorIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-16 15:03:42</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private_access_application_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -97,9 +125,17 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         @NameInMap("PortRanges")
         public java.util.List<ListPrivateAccessApplicationsResponseBodyApplicationsPortRanges> portRanges;
 
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

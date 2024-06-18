@@ -9,6 +9,9 @@ public class CreatePrivateAccessTagRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag_name</p>
      */
     @NameInMap("Name")
     public String name;

@@ -15,6 +15,9 @@ public class CreateUserGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_group_name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -49,17 +52,27 @@ public class CreateUserGroupRequest extends TeaModel {
     }
 
     public static class CreateUserGroupRequestAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equal</p>
          */
         @NameInMap("Relation")
         public String relation;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;

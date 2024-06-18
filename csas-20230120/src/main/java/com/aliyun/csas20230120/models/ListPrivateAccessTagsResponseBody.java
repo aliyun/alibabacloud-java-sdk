@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPrivateAccessTagsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54C1D236-CDB9-586C-B44D-AFDCEA195545</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of internal access tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalNum")
     public Integer totalNum;
@@ -60,6 +66,9 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the internal access tag was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-10 11:39:34</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -72,6 +81,9 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the internal access tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -84,15 +96,22 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the internal access tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
          */
         @NameInMap("TagId")
         public String tagId;
 
         /**
          * <p>The type of the internal access tag. Valid values:</p>
-         * <br>
-         * <p>*   **Default**</p>
-         * <p>*   **Custom**</p>
+         * <ul>
+         * <li><strong>Default</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("TagType")
         public String tagType;

@@ -7,6 +7,10 @@ public class GetDynamicRouteResponseBody extends TeaModel {
     @NameInMap("DynamicRoute")
     public GetDynamicRouteResponseBodyDynamicRoute dynamicRoute;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,33 +39,65 @@ public class GetDynamicRouteResponseBody extends TeaModel {
         @NameInMap("ApplicationIds")
         public java.util.List<String> applicationIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Application</p>
+         */
         @NameInMap("ApplicationType")
         public String applicationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-09 10:31:47</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dr-16ff07c8207d****</p>
+         */
         @NameInMap("DynamicRouteId")
         public String dynamicRouteId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>connector</p>
+         */
         @NameInMap("DynamicRouteType")
         public String dynamicRouteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dynamic_route_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>connector-8ccb13b6f52c****</p>
+         */
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
         @NameInMap("RegionIds")
         public java.util.List<String> regionIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrivateAccessPolicyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

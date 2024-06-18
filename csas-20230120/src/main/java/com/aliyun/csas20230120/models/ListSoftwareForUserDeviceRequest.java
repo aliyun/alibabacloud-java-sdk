@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSoftwareForUserDeviceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
      */
     @NameInMap("DeviceTag")
     public String deviceTag;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

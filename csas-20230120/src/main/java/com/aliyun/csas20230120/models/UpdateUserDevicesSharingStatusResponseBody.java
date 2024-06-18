@@ -7,6 +7,10 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
     @NameInMap("Devices")
     public java.util.List<UpdateUserDevicesSharingStatusResponseBodyDevices> devices;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,75 +36,167 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateUserDevicesSharingStatusResponseBodyDevices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("AppStatus")
         public String appStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.2.0</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Apple M1</p>
+         */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-16 17:18:46</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Department")
         public String department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Company</p>
+         */
         @NameInMap("DeviceBelong")
         public String deviceBelong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MacBookPro17,1</p>
+         */
         @NameInMap("DeviceModel")
         public String deviceModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("DeviceStatus")
         public String deviceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
+         */
         @NameInMap("DeviceTag")
         public String deviceTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3.5.1</p>
+         */
         @NameInMap("DeviceVersion")
         public String deviceVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>APPLE SSD AP0512Q Media</p>
+         */
         @NameInMap("Disk")
         public String disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("DlpStatus")
         public String dlpStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>win10-64bit</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("IaStatus")
         public String iaStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("InnerIP")
         public String innerIP;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:16:XX:XX:7c:46</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("NacStatus")
         public String nacStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("PaStatus")
         public String paStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
+         */
         @NameInMap("SaseUserId")
         public String saseUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SharingStatus")
         public Boolean sharingStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11.49.XX.XX</p>
+         */
         @NameInMap("SrcIP")
         public String srcIP;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-24 19:04:42</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

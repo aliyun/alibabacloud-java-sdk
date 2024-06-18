@@ -6,46 +6,64 @@ import com.aliyun.tea.*;
 public class ListPrivateAccessTagsRequest extends TeaModel {
     /**
      * <p>The ID of the internal access application. You can obtain the application ID by calling the following operations:</p>
-     * <br>
-     * <p>*   [ListPrivateAccessApplications](~~ListPrivateAccessApplications~~): queries all internal access applications.</p>
-     * <p>*   [CreatePrivateAccessApplication](~~CreatePrivateAccessApplication~~): creates an internal access application.</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: queries all internal access applications.</li>
+     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an internal access application.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pa-application-e12860ef6c48****</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>The page number. Valid values: 1 to 10000.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the internal access tag. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 1000.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the internal access policy. You can obtain the policy ID by calling the following operations:</p>
-     * <br>
-     * <p>*   [ListPrivateAccessPolices](~~ListPrivateAccessPolices~~): queries all internal access policies.</p>
-     * <p>*   [CreatePrivateAccessPolicy](~~CreatePrivateAccessPolicy~~): creates an internal access policy.</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: queries all internal access policies.</li>
+     * <li><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: creates an internal access policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pa-policy-54a7838a48bf****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>Specifies whether to enable the simple query mode. A value of true specifies that policy IDs are not queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SimpleMode")
     public Boolean simpleMode;

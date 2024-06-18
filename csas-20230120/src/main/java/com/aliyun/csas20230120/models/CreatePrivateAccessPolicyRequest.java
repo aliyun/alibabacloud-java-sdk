@@ -9,6 +9,9 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Application</p>
      */
     @NameInMap("ApplicationType")
     public String applicationType;
@@ -19,35 +22,50 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DeviceAttributeAction")
+    public String deviceAttributeAction;
+
     @NameInMap("DeviceAttributeId")
     public String deviceAttributeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>private_access_policy_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Allow</p>
      */
     @NameInMap("PolicyAction")
     public String policyAction;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>内网访问标签ID集合。最多可输入100个内网访问标签ID。当**ApplicationType**为**Tag时**，必填。和**ApplicationIds**互斥。</p>
+     * <p>内网访问标签ID集合。最多可输入100个内网访问标签ID。当<strong>ApplicationType</strong>为<strong>Tag时</strong>，必填。和<strong>ApplicationIds</strong>互斥。</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
@@ -57,10 +75,14 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
 
     /**
      * <p>内网访问策略的用户组类型。取值：</p>
-     * <p>- **Normal**：普通用户组。</p>
-     * <p>- **Custom**：自定义用户组。</p>
-     * <br>
+     * <ul>
+     * <li><strong>Normal</strong>：普通用户组。</li>
+     * <li><strong>Custom</strong>：自定义用户组。</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("UserGroupMode")
     public String userGroupMode;
@@ -100,6 +122,14 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreatePrivateAccessPolicyRequest setDeviceAttributeAction(String deviceAttributeAction) {
+        this.deviceAttributeAction = deviceAttributeAction;
+        return this;
+    }
+    public String getDeviceAttributeAction() {
+        return this.deviceAttributeAction;
     }
 
     public CreatePrivateAccessPolicyRequest setDeviceAttributeId(String deviceAttributeId) {
@@ -167,12 +197,24 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     }
 
     public static class CreatePrivateAccessPolicyRequestCustomUserAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Equal</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 

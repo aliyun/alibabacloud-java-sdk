@@ -4,9 +4,17 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateIdpDepartmentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>726</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

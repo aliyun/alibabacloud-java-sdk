@@ -9,25 +9,48 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pa-application-e12860ef6c48****</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cover</p>
+     */
     @NameInMap("ModifyType")
     public String modifyType;
 
     @NameInMap("PortRanges")
     public java.util.List<UpdatePrivateAccessApplicationRequestPortRanges> portRanges;
 
+    /**
+     * <strong>example:</strong>
+     * <p>All</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
@@ -101,9 +124,17 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     }
 
     public static class UpdatePrivateAccessApplicationRequestPortRanges extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>81</p>
+         */
         @NameInMap("End")
         public Integer end;
 

@@ -7,6 +7,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
     @NameInMap("DynamicRoutes")
     public java.util.List<ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutes> dynamicRoutes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
     }
 
     public static class ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutesApplicationsPortRanges extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>81</p>
+         */
         @NameInMap("End")
         public Integer end;
 
@@ -65,24 +77,44 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pa-application-7a9243dd02f4****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-13 13:33:24</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>application_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("PortRanges")
         public java.util.List<ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutesApplicationsPortRanges> portRanges;
 
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -161,6 +193,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         @NameInMap("Applications")
         public java.util.List<ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutesApplications> applications;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dr-ca9fddfac7c6****</p>
+         */
         @NameInMap("DynamicRouteId")
         public String dynamicRouteId;
 

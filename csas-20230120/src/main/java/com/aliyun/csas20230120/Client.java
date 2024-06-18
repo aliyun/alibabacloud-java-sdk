@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 挂载connector的应用
-     *
+     * <b>summary</b> : 
+     * <p>挂载connector的应用</p>
+     * 
      * @param tmpReq AttachApplication2ConnectorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachApplication2ConnectorResponse
@@ -68,8 +69,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 挂载connector的应用
-     *
+     * <b>summary</b> : 
+     * <p>挂载connector的应用</p>
+     * 
      * @param request AttachApplication2ConnectorRequest
      * @return AttachApplication2ConnectorResponse
      */
@@ -79,8 +81,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义身份源用户
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义身份源用户</p>
+     * 
      * @param request CreateClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateClientUserResponse
@@ -134,8 +137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义身份源用户
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义身份源用户</p>
+     * 
      * @param request CreateClientUserRequest
      * @return CreateClientUserResponse
      */
@@ -145,8 +149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建动态路由
-     *
+     * <b>summary</b> : 
+     * <p>创建动态路由</p>
+     * 
      * @param request CreateDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDynamicRouteResponse
@@ -217,8 +222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建动态路由
-     *
+     * <b>summary</b> : 
+     * <p>创建动态路由</p>
+     * 
      * @param request CreateDynamicRouteRequest
      * @return CreateDynamicRouteResponse
      */
@@ -228,8 +234,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义身份源部门</p>
+     * 
      * @param request CreateIdpDepartmentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateIdpDepartmentResponse
@@ -263,8 +270,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义身份源部门</p>
+     * 
      * @param request CreateIdpDepartmentRequest
      * @return CreateIdpDepartmentResponse
      */
@@ -274,8 +282,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>创建内网访问应用</p>
+     * 
      * @param request CreatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePrivateAccessApplicationResponse
@@ -334,8 +343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>创建内网访问应用</p>
+     * 
      * @param request CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
      */
@@ -345,8 +355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>创建内网访问策略</p>
+     * 
      * @param request CreatePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePrivateAccessPolicyResponse
@@ -369,6 +380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceAttributeAction)) {
+            body.put("DeviceAttributeAction", request.deviceAttributeAction);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceAttributeId)) {
@@ -425,8 +440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>创建内网访问策略</p>
+     * 
      * @param request CreatePrivateAccessPolicyRequest
      * @return CreatePrivateAccessPolicyResponse
      */
@@ -436,8 +452,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建内网访问标签
-     *
+     * <b>summary</b> : 
+     * <p>创建内网访问标签</p>
+     * 
      * @param request CreatePrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePrivateAccessTagResponse
@@ -471,8 +488,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建内网访问标签
-     *
+     * <b>summary</b> : 
+     * <p>创建内网访问标签</p>
+     * 
      * @param request CreatePrivateAccessTagRequest
      * @return CreatePrivateAccessTagResponse
      */
@@ -482,8 +500,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>创建设备注册策略</p>
+     * 
      * @param tmpReq CreateRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRegistrationPolicyResponse
@@ -568,8 +587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>创建设备注册策略</p>
+     * 
      * @param request CreateRegistrationPolicyRequest
      * @return CreateRegistrationPolicyResponse
      */
@@ -579,8 +599,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建用户组
-     *
+     * <b>summary</b> : 
+     * <p>创建用户组</p>
+     * 
      * @param request CreateUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUserGroupResponse
@@ -623,8 +644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建用户组
-     *
+     * <b>summary</b> : 
+     * <p>创建用户组</p>
+     * 
      * @param request CreateUserGroupRequest
      * @return CreateUserGroupResponse
      */
@@ -634,8 +656,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除自定义身份源指定用户
-     *
+     * <b>summary</b> : 
+     * <p>删除自定义身份源指定用户</p>
+     * 
      * @param request DeleteClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteClientUserResponse
@@ -665,8 +688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除自定义身份源指定用户
-     *
+     * <b>summary</b> : 
+     * <p>删除自定义身份源指定用户</p>
+     * 
      * @param request DeleteClientUserRequest
      * @return DeleteClientUserResponse
      */
@@ -676,8 +700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除动态路由
-     *
+     * <b>summary</b> : 
+     * <p>删除动态路由</p>
+     * 
      * @param request DeleteDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDynamicRouteResponse
@@ -707,8 +732,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除动态路由
-     *
+     * <b>summary</b> : 
+     * <p>删除动态路由</p>
+     * 
      * @param request DeleteDynamicRouteRequest
      * @return DeleteDynamicRouteResponse
      */
@@ -718,8 +744,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除指定自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>删除指定自定义身份源部门</p>
+     * 
      * @param request DeleteIdpDepartmentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIdpDepartmentResponse
@@ -753,8 +780,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除指定自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>删除指定自定义身份源部门</p>
+     * 
      * @param request DeleteIdpDepartmentRequest
      * @return DeleteIdpDepartmentResponse
      */
@@ -764,8 +792,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>删除内网访问应用</p>
+     * 
      * @param request DeletePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePrivateAccessApplicationResponse
@@ -795,8 +824,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>删除内网访问应用</p>
+     * 
      * @param request DeletePrivateAccessApplicationRequest
      * @return DeletePrivateAccessApplicationResponse
      */
@@ -806,8 +836,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>删除内网访问策略</p>
+     * 
      * @param request DeletePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePrivateAccessPolicyResponse
@@ -837,8 +868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>删除内网访问策略</p>
+     * 
      * @param request DeletePrivateAccessPolicyRequest
      * @return DeletePrivateAccessPolicyResponse
      */
@@ -848,8 +880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除内网访问标签
-     *
+     * <b>summary</b> : 
+     * <p>删除内网访问标签</p>
+     * 
      * @param request DeletePrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePrivateAccessTagResponse
@@ -879,8 +912,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除内网访问标签
-     *
+     * <b>summary</b> : 
+     * <p>删除内网访问标签</p>
+     * 
      * @param request DeletePrivateAccessTagRequest
      * @return DeletePrivateAccessTagResponse
      */
@@ -890,8 +924,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>删除设备注册策略</p>
+     * 
      * @param request DeleteRegistrationPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRegistrationPoliciesResponse
@@ -926,8 +961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>删除设备注册策略</p>
+     * 
      * @param request DeleteRegistrationPoliciesRequest
      * @return DeleteRegistrationPoliciesResponse
      */
@@ -937,8 +973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量删除用户非在线设备
-     *
+     * <b>summary</b> : 
+     * <p>批量删除用户非在线设备</p>
+     * 
      * @param request DeleteUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserDevicesResponse
@@ -973,8 +1010,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量删除用户非在线设备
-     *
+     * <b>summary</b> : 
+     * <p>批量删除用户非在线设备</p>
+     * 
      * @param request DeleteUserDevicesRequest
      * @return DeleteUserDevicesResponse
      */
@@ -984,8 +1022,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户组
-     *
+     * <b>summary</b> : 
+     * <p>删除用户组</p>
+     * 
      * @param request DeleteUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserGroupResponse
@@ -1015,8 +1054,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户组
-     *
+     * <b>summary</b> : 
+     * <p>删除用户组</p>
+     * 
      * @param request DeleteUserGroupRequest
      * @return DeleteUserGroupResponse
      */
@@ -1026,8 +1066,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 卸载connector的应用
-     *
+     * <b>summary</b> : 
+     * <p>卸载connector的应用</p>
+     * 
      * @param tmpReq DetachApplication2ConnectorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachApplication2ConnectorResponse
@@ -1067,8 +1108,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 卸载connector的应用
-     *
+     * <b>summary</b> : 
+     * <p>卸载connector的应用</p>
+     * 
      * @param request DetachApplication2ConnectorRequest
      * @return DetachApplication2ConnectorResponse
      */
@@ -1078,8 +1120,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户设备列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户设备列表</p>
+     * 
      * @param request ExportUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportUserDevicesResponse
@@ -1170,8 +1213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户设备列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户设备列表</p>
+     * 
      * @param request ExportUserDevicesRequest
      * @return ExportUserDevicesResponse
      */
@@ -1181,8 +1225,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询已启用的身份源配置
-     *
+     * <b>summary</b> : 
+     * <p>查询已启用的身份源配置</p>
+     * 
      * @param request GetActiveIdpConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetActiveIdpConfigResponse
@@ -1204,8 +1249,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询已启用的身份源配置
-     *
+     * <b>summary</b> : 
+     * <p>查询已启用的身份源配置</p>
      * @return GetActiveIdpConfigResponse
      */
     public GetActiveIdpConfigResponse getActiveIdpConfig() throws Exception {
@@ -1214,8 +1259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自定义身份源指定用户
-     *
+     * <b>summary</b> : 
+     * <p>查询自定义身份源指定用户</p>
+     * 
      * @param request GetClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClientUserResponse
@@ -1241,8 +1287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自定义身份源指定用户
-     *
+     * <b>summary</b> : 
+     * <p>查询自定义身份源指定用户</p>
+     * 
      * @param request GetClientUserRequest
      * @return GetClientUserResponse
      */
@@ -1252,8 +1299,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询动态路由详情
-     *
+     * <b>summary</b> : 
+     * <p>查询动态路由详情</p>
+     * 
      * @param request GetDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDynamicRouteResponse
@@ -1279,8 +1327,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询动态路由详情
-     *
+     * <b>summary</b> : 
+     * <p>查询动态路由详情</p>
+     * 
      * @param request GetDynamicRouteRequest
      * @return GetDynamicRouteResponse
      */
@@ -1290,8 +1339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询身份源配置详情
-     *
+     * <b>summary</b> : 
+     * <p>查询身份源配置详情</p>
+     * 
      * @param request GetIdpConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIdpConfigResponse
@@ -1317,8 +1367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询身份源配置详情
-     *
+     * <b>summary</b> : 
+     * <p>查询身份源配置详情</p>
+     * 
      * @param request GetIdpConfigRequest
      * @return GetIdpConfigResponse
      */
@@ -1328,8 +1379,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询内网访问应用详情
-     *
+     * <b>summary</b> : 
+     * <p>查询内网访问应用详情</p>
+     * 
      * @param request GetPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPrivateAccessApplicationResponse
@@ -1355,8 +1407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询内网访问应用详情
-     *
+     * <b>summary</b> : 
+     * <p>查询内网访问应用详情</p>
+     * 
      * @param request GetPrivateAccessApplicationRequest
      * @return GetPrivateAccessApplicationResponse
      */
@@ -1366,8 +1419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询内网访问策略详情
-     *
+     * <b>summary</b> : 
+     * <p>查询内网访问策略详情</p>
+     * 
      * @param request GetPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPrivateAccessPolicyResponse
@@ -1393,8 +1447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询内网访问策略详情
-     *
+     * <b>summary</b> : 
+     * <p>查询内网访问策略详情</p>
+     * 
      * @param request GetPrivateAccessPolicyRequest
      * @return GetPrivateAccessPolicyResponse
      */
@@ -1404,8 +1459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询设备注册策略详情
-     *
+     * <b>summary</b> : 
+     * <p>查询设备注册策略详情</p>
+     * 
      * @param request GetRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRegistrationPolicyResponse
@@ -1431,8 +1487,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询设备注册策略详情
-     *
+     * <b>summary</b> : 
+     * <p>查询设备注册策略详情</p>
+     * 
      * @param request GetRegistrationPolicyRequest
      * @return GetRegistrationPolicyResponse
      */
@@ -1442,8 +1499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户设备详情
-     *
+     * <b>summary</b> : 
+     * <p>查询用户设备详情</p>
+     * 
      * @param request GetUserDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserDeviceResponse
@@ -1469,8 +1527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户设备详情
-     *
+     * <b>summary</b> : 
+     * <p>查询用户设备详情</p>
+     * 
      * @param request GetUserDeviceRequest
      * @return GetUserDeviceResponse
      */
@@ -1480,8 +1539,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户组详情
-     *
+     * <b>summary</b> : 
+     * <p>查询用户组详情</p>
+     * 
      * @param request GetUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserGroupResponse
@@ -1507,8 +1567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户组详情
-     *
+     * <b>summary</b> : 
+     * <p>查询用户组详情</p>
+     * 
      * @param request GetUserGroupRequest
      * @return GetUserGroupResponse
      */
@@ -1518,8 +1579,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略的应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略的应用</p>
+     * 
      * @param request ListApplicationsForPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApplicationsForPrivateAccessPolicyResponse
@@ -1545,8 +1607,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略的应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略的应用</p>
+     * 
      * @param request ListApplicationsForPrivateAccessPolicyRequest
      * @return ListApplicationsForPrivateAccessPolicyResponse
      */
@@ -1556,8 +1619,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问标签的应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问标签的应用</p>
+     * 
      * @param request ListApplicationsForPrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApplicationsForPrivateAccessTagResponse
@@ -1583,8 +1647,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问标签的应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问标签的应用</p>
+     * 
      * @param request ListApplicationsForPrivateAccessTagRequest
      * @return ListApplicationsForPrivateAccessTagResponse
      */
@@ -1594,8 +1659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自定义身份源用户
-     *
+     * <b>summary</b> : 
+     * <p>查询自定义身份源用户</p>
+     * 
      * @param request ListClientUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClientUsersResponse
@@ -1621,8 +1687,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自定义身份源用户
-     *
+     * <b>summary</b> : 
+     * <p>查询自定义身份源用户</p>
+     * 
      * @param request ListClientUsersRequest
      * @return ListClientUsersResponse
      */
@@ -1632,8 +1699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询connector
-     *
+     * <b>summary</b> : 
+     * <p>批量查询connector</p>
+     * 
      * @param request ListConnectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConnectorsResponse
@@ -1659,8 +1727,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询connector
-     *
+     * <b>summary</b> : 
+     * <p>批量查询connector</p>
+     * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
      */
@@ -1670,8 +1739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由的地域
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由的地域</p>
+     * 
      * @param request ListDynamicRouteRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDynamicRouteRegionsResponse
@@ -1693,8 +1763,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由的地域
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由的地域</p>
      * @return ListDynamicRouteRegionsResponse
      */
     public ListDynamicRouteRegionsResponse listDynamicRouteRegions() throws Exception {
@@ -1703,8 +1773,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由</p>
+     * 
      * @param request ListDynamicRoutesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDynamicRoutesResponse
@@ -1730,8 +1801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由</p>
+     * 
      * @param request ListDynamicRoutesRequest
      * @return ListDynamicRoutesResponse
      */
@@ -1741,8 +1813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询超额注册申请列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询超额注册申请列表</p>
+     * 
      * @param request ListExcessiveDeviceRegistrationApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListExcessiveDeviceRegistrationApplicationsResponse
@@ -1768,8 +1841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询超额注册申请列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询超额注册申请列表</p>
+     * 
      * @param request ListExcessiveDeviceRegistrationApplicationsRequest
      * @return ListExcessiveDeviceRegistrationApplicationsResponse
      */
@@ -1779,8 +1853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询IDP配置
-     *
+     * <b>summary</b> : 
+     * <p>查询IDP配置</p>
+     * 
      * @param request ListIdpConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIdpConfigsResponse
@@ -1806,8 +1881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询IDP配置
-     *
+     * <b>summary</b> : 
+     * <p>查询IDP配置</p>
+     * 
      * @param request ListIdpConfigsRequest
      * @return ListIdpConfigsResponse
      */
@@ -1817,8 +1893,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>查询自定义身份源部门</p>
+     * 
      * @param request ListIdpDepartmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIdpDepartmentsResponse
@@ -1844,8 +1921,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>查询自定义身份源部门</p>
+     * 
      * @param request ListIdpDepartmentsRequest
      * @return ListIdpDepartmentsResponse
      */
@@ -1855,8 +1933,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问应用的策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问应用的策略</p>
+     * 
      * @param request ListPolicesForPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPolicesForPrivateAccessApplicationResponse
@@ -1882,8 +1961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问应用的策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问应用的策略</p>
+     * 
      * @param request ListPolicesForPrivateAccessApplicationRequest
      * @return ListPolicesForPrivateAccessApplicationResponse
      */
@@ -1893,8 +1973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问标签的策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问标签的策略</p>
+     * 
      * @param request ListPolicesForPrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPolicesForPrivateAccessTagResponse
@@ -1920,8 +2001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问标签的策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问标签的策略</p>
+     * 
      * @param request ListPolicesForPrivateAccessTagRequest
      * @return ListPolicesForPrivateAccessTagResponse
      */
@@ -1931,8 +2013,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户组的策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户组的策略</p>
+     * 
      * @param request ListPolicesForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPolicesForUserGroupResponse
@@ -1958,8 +2041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户组的策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户组的策略</p>
+     * 
      * @param request ListPolicesForUserGroupRequest
      * @return ListPolicesForUserGroupResponse
      */
@@ -1969,8 +2053,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary pop节点流量统计
-     *
+     * <b>summary</b> : 
+     * <p>pop节点流量统计</p>
+     * 
      * @param request ListPopTrafficStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPopTrafficStatisticsResponse
@@ -1996,8 +2081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary pop节点流量统计
-     *
+     * <b>summary</b> : 
+     * <p>pop节点流量统计</p>
+     * 
      * @param request ListPopTrafficStatisticsRequest
      * @return ListPopTrafficStatisticsResponse
      */
@@ -2007,8 +2093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问应用</p>
+     * 
      * @param request ListPrivateAccessApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPrivateAccessApplicationsResponse
@@ -2034,8 +2121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问应用</p>
+     * 
      * @param request ListPrivateAccessApplicationsRequest
      * @return ListPrivateAccessApplicationsResponse
      */
@@ -2045,8 +2133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由的内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由的内网访问应用</p>
+     * 
      * @param request ListPrivateAccessApplicationsForDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPrivateAccessApplicationsForDynamicRouteResponse
@@ -2072,8 +2161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由的内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由的内网访问应用</p>
+     * 
      * @param request ListPrivateAccessApplicationsForDynamicRouteRequest
      * @return ListPrivateAccessApplicationsForDynamicRouteResponse
      */
@@ -2083,8 +2173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略</p>
+     * 
      * @param request ListPrivateAccessPolicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPrivateAccessPolicesResponse
@@ -2110,8 +2201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略</p>
+     * 
      * @param request ListPrivateAccessPolicesRequest
      * @return ListPrivateAccessPolicesResponse
      */
@@ -2121,8 +2213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all internal access tags within the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all internal access tags within the current Alibaba Cloud account.</p>
+     * 
      * @param request ListPrivateAccessTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPrivateAccessTagsResponse
@@ -2148,8 +2241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all internal access tags within the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all internal access tags within the current Alibaba Cloud account.</p>
+     * 
      * @param request ListPrivateAccessTagsRequest
      * @return ListPrivateAccessTagsResponse
      */
@@ -2159,8 +2253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由的内网访问标签
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由的内网访问标签</p>
+     * 
      * @param request ListPrivateAccessTagsForDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPrivateAccessTagsForDynamicRouteResponse
@@ -2186,8 +2281,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询动态路由的内网访问标签
-     *
+     * <b>summary</b> : 
+     * <p>批量查询动态路由的内网访问标签</p>
+     * 
      * @param request ListPrivateAccessTagsForDynamicRouteRequest
      * @return ListPrivateAccessTagsForDynamicRouteResponse
      */
@@ -2197,8 +2293,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户设备注册策略列表
-     *
+     * <b>summary</b> : 
+     * <p>查询用户设备注册策略列表</p>
+     * 
      * @param request ListRegistrationPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRegistrationPoliciesResponse
@@ -2224,8 +2321,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户设备注册策略列表
-     *
+     * <b>summary</b> : 
+     * <p>查询用户设备注册策略列表</p>
+     * 
      * @param request ListRegistrationPoliciesRequest
      * @return ListRegistrationPoliciesResponse
      */
@@ -2235,8 +2333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户组相关的设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>查询用户组相关的设备注册策略</p>
+     * 
      * @param request ListRegistrationPoliciesForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRegistrationPoliciesForUserGroupResponse
@@ -2262,8 +2361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询用户组相关的设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>查询用户组相关的设备注册策略</p>
+     * 
      * @param request ListRegistrationPoliciesForUserGroupRequest
      * @return ListRegistrationPoliciesForUserGroupResponse
      */
@@ -2273,8 +2373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询终端安装软件列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询终端安装软件列表</p>
+     * 
      * @param request ListSoftwareForUserDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSoftwareForUserDeviceResponse
@@ -2300,8 +2401,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询终端安装软件列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询终端安装软件列表</p>
+     * 
      * @param request ListSoftwareForUserDeviceRequest
      * @return ListSoftwareForUserDeviceResponse
      */
@@ -2311,8 +2413,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问应用的标签
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问应用的标签</p>
+     * 
      * @param request ListTagsForPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagsForPrivateAccessApplicationResponse
@@ -2338,8 +2441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问应用的标签
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问应用的标签</p>
+     * 
      * @param request ListTagsForPrivateAccessApplicationRequest
      * @return ListTagsForPrivateAccessApplicationResponse
      */
@@ -2349,8 +2453,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略的标签
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略的标签</p>
+     * 
      * @param request ListTagsForPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagsForPrivateAccessPolicyResponse
@@ -2376,8 +2481,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略的标签
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略的标签</p>
+     * 
      * @param request ListTagsForPrivateAccessPolicyRequest
      * @return ListTagsForPrivateAccessPolicyResponse
      */
@@ -2387,8 +2493,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户设备列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户设备列表</p>
+     * 
      * @param request ListUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserDevicesResponse
@@ -2414,8 +2521,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户设备列表
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户设备列表</p>
+     * 
      * @param request ListUserDevicesRequest
      * @return ListUserDevicesResponse
      */
@@ -2425,8 +2533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户组
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户组</p>
+     * 
      * @param request ListUserGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserGroupsResponse
@@ -2452,8 +2561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询用户组
-     *
+     * <b>summary</b> : 
+     * <p>批量查询用户组</p>
+     * 
      * @param request ListUserGroupsRequest
      * @return ListUserGroupsResponse
      */
@@ -2463,8 +2573,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略的用户组
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略的用户组</p>
+     * 
      * @param request ListUserGroupsForPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserGroupsForPrivateAccessPolicyResponse
@@ -2490,8 +2601,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询内网访问策略的用户组
-     *
+     * <b>summary</b> : 
+     * <p>批量查询内网访问策略的用户组</p>
+     * 
      * @param request ListUserGroupsForPrivateAccessPolicyRequest
      * @return ListUserGroupsForPrivateAccessPolicyResponse
      */
@@ -2501,8 +2613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询设备注册策略相关用户组
-     *
+     * <b>summary</b> : 
+     * <p>查询设备注册策略相关用户组</p>
+     * 
      * @param request ListUserGroupsForRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserGroupsForRegistrationPolicyResponse
@@ -2528,8 +2641,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询设备注册策略相关用户组
-     *
+     * <b>summary</b> : 
+     * <p>查询设备注册策略相关用户组</p>
+     * 
      * @param request ListUserGroupsForRegistrationPolicyRequest
      * @return ListUserGroupsForRegistrationPolicyResponse
      */
@@ -2539,8 +2653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列表查询登陆用户
-     *
+     * <b>summary</b> : 
+     * <p>列表查询登陆用户</p>
+     * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUsersResponse
@@ -2566,8 +2681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列表查询登陆用户
-     *
+     * <b>summary</b> : 
+     * <p>列表查询登陆用户</p>
+     * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
      */
@@ -2577,8 +2693,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 吊销用户登录会话
-     *
+     * <b>summary</b> : 
+     * <p>吊销用户登录会话</p>
+     * 
      * @param request RevokeUserSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevokeUserSessionResponse
@@ -2612,8 +2729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 吊销用户登录会话
-     *
+     * <b>summary</b> : 
+     * <p>吊销用户登录会话</p>
+     * 
      * @param request RevokeUserSessionRequest
      * @return RevokeUserSessionResponse
      */
@@ -2623,8 +2741,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义身份源指定用户
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义身份源指定用户</p>
+     * 
      * @param request UpdateClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateClientUserResponse
@@ -2670,8 +2789,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义身份源指定用户
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义身份源指定用户</p>
+     * 
      * @param request UpdateClientUserRequest
      * @return UpdateClientUserResponse
      */
@@ -2681,8 +2801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义身份源指定用户密码
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义身份源指定用户密码</p>
+     * 
      * @param request UpdateClientUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateClientUserPasswordResponse
@@ -2720,8 +2841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义身份源指定用户密码
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义身份源指定用户密码</p>
+     * 
      * @param request UpdateClientUserPasswordRequest
      * @return UpdateClientUserPasswordResponse
      */
@@ -2731,8 +2853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义身份源指定用户启用状态
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义身份源指定用户启用状态</p>
+     * 
      * @param request UpdateClientUserStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateClientUserStatusResponse
@@ -2766,8 +2889,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义身份源指定用户启用状态
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义身份源指定用户启用状态</p>
+     * 
      * @param request UpdateClientUserStatusRequest
      * @return UpdateClientUserStatusResponse
      */
@@ -2777,8 +2901,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改动态路由
-     *
+     * <b>summary</b> : 
+     * <p>修改动态路由</p>
+     * 
      * @param request UpdateDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateDynamicRouteResponse
@@ -2857,8 +2982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改动态路由
-     *
+     * <b>summary</b> : 
+     * <p>修改动态路由</p>
+     * 
      * @param request UpdateDynamicRouteRequest
      * @return UpdateDynamicRouteResponse
      */
@@ -2868,8 +2994,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量更新超额注册申请状态
-     *
+     * <b>summary</b> : 
+     * <p>批量更新超额注册申请状态</p>
+     * 
      * @param request UpdateExcessiveDeviceRegistrationApplicationsStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateExcessiveDeviceRegistrationApplicationsStatusResponse
@@ -2908,8 +3035,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量更新超额注册申请状态
-     *
+     * <b>summary</b> : 
+     * <p>批量更新超额注册申请状态</p>
+     * 
      * @param request UpdateExcessiveDeviceRegistrationApplicationsStatusRequest
      * @return UpdateExcessiveDeviceRegistrationApplicationsStatusResponse
      */
@@ -2919,8 +3047,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改指定自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>修改指定自定义身份源部门</p>
+     * 
      * @param request UpdateIdpDepartmentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateIdpDepartmentResponse
@@ -2958,8 +3087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改指定自定义身份源部门
-     *
+     * <b>summary</b> : 
+     * <p>修改指定自定义身份源部门</p>
+     * 
      * @param request UpdateIdpDepartmentRequest
      * @return UpdateIdpDepartmentResponse
      */
@@ -2969,8 +3099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>修改内网访问应用</p>
+     * 
      * @param request UpdatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePrivateAccessApplicationResponse
@@ -3033,8 +3164,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改内网访问应用
-     *
+     * <b>summary</b> : 
+     * <p>修改内网访问应用</p>
+     * 
      * @param request UpdatePrivateAccessApplicationRequest
      * @return UpdatePrivateAccessApplicationResponse
      */
@@ -3044,8 +3176,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>修改内网访问策略</p>
+     * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePrivateAccessPolicyResponse
@@ -3068,6 +3201,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceAttributeAction)) {
+            body.put("DeviceAttributeAction", request.deviceAttributeAction);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deviceAttributeId)) {
@@ -3128,8 +3265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改内网访问策略
-     *
+     * <b>summary</b> : 
+     * <p>修改内网访问策略</p>
+     * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @return UpdatePrivateAccessPolicyResponse
      */
@@ -3139,8 +3277,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>修改设备注册策略</p>
+     * 
      * @param tmpReq UpdateRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRegistrationPolicyResponse
@@ -3229,8 +3368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改设备注册策略
-     *
+     * <b>summary</b> : 
+     * <p>修改设备注册策略</p>
+     * 
      * @param request UpdateRegistrationPolicyRequest
      * @return UpdateRegistrationPolicyResponse
      */
@@ -3240,8 +3380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量更新用户设备共享状态
-     *
+     * <b>summary</b> : 
+     * <p>批量更新用户设备共享状态</p>
+     * 
      * @param request UpdateUserDevicesSharingStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserDevicesSharingStatusResponse
@@ -3280,8 +3421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量更新用户设备共享状态
-     *
+     * <b>summary</b> : 
+     * <p>批量更新用户设备共享状态</p>
+     * 
      * @param request UpdateUserDevicesSharingStatusRequest
      * @return UpdateUserDevicesSharingStatusResponse
      */
@@ -3291,8 +3433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量更新用户设备状态
-     *
+     * <b>summary</b> : 
+     * <p>批量更新用户设备状态</p>
+     * 
      * @param request UpdateUserDevicesStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserDevicesStatusResponse
@@ -3331,8 +3474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量更新用户设备状态
-     *
+     * <b>summary</b> : 
+     * <p>批量更新用户设备状态</p>
+     * 
      * @param request UpdateUserDevicesStatusRequest
      * @return UpdateUserDevicesStatusResponse
      */
@@ -3342,8 +3486,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改用户组
-     *
+     * <b>summary</b> : 
+     * <p>修改用户组</p>
+     * 
      * @param request UpdateUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserGroupResponse
@@ -3390,8 +3535,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改用户组
-     *
+     * <b>summary</b> : 
+     * <p>修改用户组</p>
+     * 
      * @param request UpdateUserGroupRequest
      * @return UpdateUserGroupResponse
      */
@@ -3401,8 +3547,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量修改登陆用户状态
-     *
+     * <b>summary</b> : 
+     * <p>批量修改登陆用户状态</p>
+     * 
      * @param request UpdateUsersStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUsersStatusResponse
@@ -3436,8 +3583,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量修改登陆用户状态
-     *
+     * <b>summary</b> : 
+     * <p>批量修改登陆用户状态</p>
+     * 
      * @param request UpdateUsersStatusRequest
      * @return UpdateUsersStatusResponse
      */

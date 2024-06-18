@@ -7,6 +7,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
     @NameInMap("Policy")
     public CreateRegistrationPolicyResponseBodyPolicy policy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateRegistrationPolicyResponseBodyPolicyLimitDetailLimitCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("All")
         public Integer all;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Mobile")
         public Integer mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PC")
         public Integer PC;
 
@@ -73,12 +89,20 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateRegistrationPolicyResponseBodyPolicyLimitDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Company</p>
+         */
         @NameInMap("DeviceBelong")
         public String deviceBelong;
 
         @NameInMap("LimitCount")
         public CreateRegistrationPolicyResponseBodyPolicyLimitDetailLimitCount limitCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LimitDiff</p>
+         */
         @NameInMap("LimitType")
         public String limitType;
 
@@ -114,6 +138,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateRegistrationPolicyResponseBodyPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-16 17:18:46</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -123,18 +151,38 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
         @NameInMap("LimitDetail")
         public java.util.List<CreateRegistrationPolicyResponseBodyPolicyLimitDetail> limitDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
+         */
         @NameInMap("MatchMode")
         public String matchMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registration_policy_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reg-policy-dcbfd33cb004****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

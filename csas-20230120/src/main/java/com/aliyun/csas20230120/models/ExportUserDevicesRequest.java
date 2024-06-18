@@ -10,6 +10,10 @@ public class ExportUserDevicesRequest extends TeaModel {
     @NameInMap("Department")
     public String department;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Company</p>
+     */
     @NameInMap("DeviceBelong")
     public String deviceBelong;
 
@@ -25,12 +29,20 @@ public class ExportUserDevicesRequest extends TeaModel {
     @NameInMap("DlpStatuses")
     public java.util.List<String> dlpStatuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>win10-64bit</p>
+     */
     @NameInMap("Hostname")
     public String hostname;
 
     @NameInMap("IaStatuses")
     public java.util.List<String> iaStatuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00:16:XX:XX:7c:46</p>
+     */
     @NameInMap("Mac")
     public String mac;
 
@@ -40,9 +52,17 @@ public class ExportUserDevicesRequest extends TeaModel {
     @NameInMap("PaStatuses")
     public java.util.List<String> paStatuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
+     */
     @NameInMap("SaseUserId")
     public String saseUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SharingStatus")
     public Boolean sharingStatus;
 

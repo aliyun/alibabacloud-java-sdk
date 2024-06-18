@@ -7,6 +7,10 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetActiveIdpConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,20 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>idp-cfg001</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
+         */
         @NameInMap("Type")
         public String type;
 

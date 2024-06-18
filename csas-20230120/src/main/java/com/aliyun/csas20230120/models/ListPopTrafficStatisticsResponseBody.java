@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     }
 
     public static class ListPopTrafficStatisticsResponseBodyTrafficDataDatapoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>15325</p>
+         */
         @NameInMap("Average")
         public Double average;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-12-06 15:29:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
@@ -68,6 +79,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         @NameInMap("Datapoints")
         public java.util.List<ListPopTrafficStatisticsResponseBodyTrafficDataDatapoints> datapoints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InternetTx</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 

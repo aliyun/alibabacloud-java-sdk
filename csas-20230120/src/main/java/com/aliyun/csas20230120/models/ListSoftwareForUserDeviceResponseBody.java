@@ -4,12 +4,20 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Software")
     public java.util.List<ListSoftwareForUserDeviceResponseBodySoftware> software;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Long totalNum;
 
@@ -43,9 +51,17 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
     }
 
     public static class ListSoftwareForUserDeviceResponseBodySoftware extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Alibaba (China) Network Technology Co.,Ltd.</p>
+         */
         @NameInMap("Inc")
         public String inc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-18 02:43:02</p>
+         */
         @NameInMap("InstallTime")
         public String installTime;
 

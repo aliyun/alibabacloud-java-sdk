@@ -4,27 +4,54 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListClientUsersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10785</p>
+     */
     @NameInMap("DepartmentId")
     public String departmentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1071</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18980976559</p>
+     */
     @NameInMap("MobileNumber")
     public String mobileNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 

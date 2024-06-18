@@ -7,6 +7,10 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
     @NameInMap("Applications")
     public java.util.List<ListTagsForPrivateAccessApplicationResponseBodyApplications> applications;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7241F45B-E8D3-5BA3-8172-8A58AC2AB0FC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
     }
 
     public static class ListTagsForPrivateAccessApplicationResponseBodyApplicationsTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-01 16:05:26</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag-c0cb77857a99****</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
         @NameInMap("TagType")
         public String tagType;
 
@@ -95,6 +115,10 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
     }
 
     public static class ListTagsForPrivateAccessApplicationResponseBodyApplications extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pa-application-7a4445897856****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 

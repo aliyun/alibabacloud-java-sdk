@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePrivateAccessTagRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag-d3f64e8bdd4a****</p>
      */
     @NameInMap("TagId")
     public String tagId;

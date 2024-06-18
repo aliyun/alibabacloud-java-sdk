@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteIdpDepartmentRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10829</p>
      */
     @NameInMap("DepartmentId")
     public String departmentId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>507</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;

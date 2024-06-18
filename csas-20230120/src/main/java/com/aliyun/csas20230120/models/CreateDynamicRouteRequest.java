@@ -9,6 +9,9 @@ public class CreateDynamicRouteRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Application</p>
      */
     @NameInMap("ApplicationType")
     public String applicationType;
@@ -18,24 +21,36 @@ public class CreateDynamicRouteRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connector</p>
      */
     @NameInMap("DynamicRouteType")
     public String dynamicRouteType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dynamic_route_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connector-8ccb13b6f52c****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -48,6 +63,9 @@ public class CreateDynamicRouteRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("Status")
     public String status;

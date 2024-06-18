@@ -7,6 +7,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
     @NameInMap("Polices")
     public java.util.List<ListUserGroupsForPrivateAccessPolicyResponseBodyPolices> polices;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsForPrivateAccessPolicyResponseBodyPolicesUserGroupsAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Equal</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
@@ -89,6 +105,9 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
 
         /**
          * <p>用户组创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-27 18:10:25</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -96,9 +115,17 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_group_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
@@ -150,6 +177,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsForPrivateAccessPolicyResponseBodyPolices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pa-policy-1b0d0e8b4bcf****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 

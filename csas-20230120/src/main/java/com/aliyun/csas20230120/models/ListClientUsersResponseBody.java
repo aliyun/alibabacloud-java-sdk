@@ -7,6 +7,10 @@ public class ListClientUsersResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListClientUsersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class ListClientUsersResponseBody extends TeaModel {
     }
 
     public static class ListClientUsersResponseBodyDataDataListDepartment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>105</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -65,27 +73,55 @@ public class ListClientUsersResponseBody extends TeaModel {
         @NameInMap("Department")
         public ListClientUsersResponseBodyDataDataListDepartment department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10800</p>
+         */
         @NameInMap("DepartmentId")
         public String departmentId;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1970</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1026</p>
+         */
         @NameInMap("IdpConfigId")
         public String idpConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15800820468</p>
+         */
         @NameInMap("MobileNumber")
         public String mobileNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>su_dead7216****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -183,6 +219,10 @@ public class ListClientUsersResponseBody extends TeaModel {
         @NameInMap("DataList")
         public java.util.List<ListClientUsersResponseBodyDataDataList> dataList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalNum")
         public Long totalNum;
 

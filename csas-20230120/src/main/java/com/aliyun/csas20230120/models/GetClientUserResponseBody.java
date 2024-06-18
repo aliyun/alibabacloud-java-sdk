@@ -7,6 +7,10 @@ public class GetClientUserResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetClientUserResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class GetClientUserResponseBody extends TeaModel {
     }
 
     public static class GetClientUserResponseBodyDataDepartment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>107</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -65,27 +73,55 @@ public class GetClientUserResponseBody extends TeaModel {
         @NameInMap("Department")
         public GetClientUserResponseBodyDataDepartment department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10713</p>
+         */
         @NameInMap("DepartmentId")
         public String departmentId;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>83</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>598</p>
+         */
         @NameInMap("IdpConfigId")
         public String idpConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13641966835</p>
+         */
         @NameInMap("MobileNumber")
         public String mobileNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>su_abcd7215****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

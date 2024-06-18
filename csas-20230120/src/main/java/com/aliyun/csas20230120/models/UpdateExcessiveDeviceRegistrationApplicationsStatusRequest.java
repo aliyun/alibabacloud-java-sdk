@@ -12,6 +12,9 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Approved</p>
      */
     @NameInMap("Status")
     public String status;

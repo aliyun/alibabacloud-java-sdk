@@ -7,33 +7,63 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Application</p>
+     */
     @NameInMap("ApplicationType")
     public String applicationType;
 
     @NameInMap("CustomUserAttributes")
     public java.util.List<UpdatePrivateAccessPolicyRequestCustomUserAttributes> customUserAttributes;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("DeviceAttributeAction")
+    public String deviceAttributeAction;
 
     @NameInMap("DeviceAttributeId")
     public String deviceAttributeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cover</p>
+     */
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Allow</p>
+     */
     @NameInMap("PolicyAction")
     public String policyAction;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pa-policy-63b2f1844b86****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -48,8 +78,13 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
 
     /**
      * <p>内网访问策略的用户组类型。取值：</p>
-     * <p>- **Normal**：普通用户组。</p>
-     * <p>- **Custom**：自定义用户组。</p>
+     * <ul>
+     * <li><strong>Normal</strong>：普通用户组。</li>
+     * <li><strong>Custom</strong>：自定义用户组。</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("UserGroupMode")
     public String userGroupMode;
@@ -89,6 +124,14 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setDeviceAttributeAction(String deviceAttributeAction) {
+        this.deviceAttributeAction = deviceAttributeAction;
+        return this;
+    }
+    public String getDeviceAttributeAction() {
+        return this.deviceAttributeAction;
     }
 
     public UpdatePrivateAccessPolicyRequest setDeviceAttributeId(String deviceAttributeId) {
@@ -164,17 +207,27 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     }
 
     public static class UpdatePrivateAccessPolicyRequestCustomUserAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equal</p>
          */
         @NameInMap("Relation")
         public String relation;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;

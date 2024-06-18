@@ -7,6 +7,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
     @NameInMap("DynamicRoutes")
     public java.util.List<ListPrivateAccessTagsForDynamicRouteResponseBodyDynamicRoutes> dynamicRoutes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
     }
 
     public static class ListPrivateAccessTagsForDynamicRouteResponseBodyDynamicRoutesTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-23 14:02:56</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Custom</p>
+         */
         @NameInMap("TagType")
         public String tagType;
 
@@ -95,6 +115,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
     }
 
     public static class ListPrivateAccessTagsForDynamicRouteResponseBodyDynamicRoutes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dr-ca9fddfac7c6****</p>
+         */
         @NameInMap("DynamicRouteId")
         public String dynamicRouteId;
 

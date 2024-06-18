@@ -7,14 +7,25 @@ public class UpdateUserGroupRequest extends TeaModel {
     @NameInMap("Attributes")
     public java.util.List<UpdateUserGroupRequestAttributes> attributes;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cover</p>
+     */
     @NameInMap("ModifyType")
     public String modifyType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>usergroup-6f1ef2fc56b6****</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;
@@ -57,17 +68,27 @@ public class UpdateUserGroupRequest extends TeaModel {
     }
 
     public static class UpdateUserGroupRequestAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Equal</p>
          */
         @NameInMap("Relation")
         public String relation;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;

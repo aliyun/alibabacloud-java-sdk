@@ -4,12 +4,24 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListIdpConfigsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CSAS,DingTalk,LDAP</p>
+     */
     @NameInMap("Include")
     public String include;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

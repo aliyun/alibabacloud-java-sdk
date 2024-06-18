@@ -7,9 +7,17 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
     @NameInMap("Polices")
     public java.util.List<ListPrivateAccessPolicesResponseBodyPolices> polices;
 
+    /**
+     * <strong>example:</strong>
+     * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
@@ -43,12 +51,24 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
     }
 
     public static class ListPrivateAccessPolicesResponseBodyPolicesCustomUserAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Equal</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
@@ -98,9 +118,17 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("ApplicationIds")
         public java.util.List<String> applicationIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Application</p>
+         */
         @NameInMap("ApplicationType")
         public String applicationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-10 15:50:23</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -110,21 +138,44 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DeviceAttributeAction")
+        public String deviceAttributeAction;
+
         @NameInMap("DeviceAttributeId")
         public String deviceAttributeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private_access_policy_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Allow</p>
+         */
         @NameInMap("PolicyAction")
         public String policyAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pa-policy-63b2f1844b86****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -134,6 +185,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("UserGroupIds")
         public java.util.List<String> userGroupIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("UserGroupMode")
         public String userGroupMode;
 
@@ -180,6 +235,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setDeviceAttributeAction(String deviceAttributeAction) {
+            this.deviceAttributeAction = deviceAttributeAction;
+            return this;
+        }
+        public String getDeviceAttributeAction() {
+            return this.deviceAttributeAction;
         }
 
         public ListPrivateAccessPolicesResponseBodyPolices setDeviceAttributeId(String deviceAttributeId) {

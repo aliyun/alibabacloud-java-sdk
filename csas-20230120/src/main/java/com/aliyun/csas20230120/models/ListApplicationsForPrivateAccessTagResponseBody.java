@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsForPrivateAccessTagResponseBodyTagsApplicationsPortRanges extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>81</p>
+         */
         @NameInMap("End")
         public Integer end;
 
@@ -65,11 +77,18 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pa-application-7a9243dd02f4****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
          * <p>内网访问应用创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-27 18:10:25</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -77,15 +96,27 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private_access_application_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("PortRanges")
         public java.util.List<ListApplicationsForPrivateAccessTagResponseBodyTagsApplicationsPortRanges> portRanges;
 
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -164,6 +195,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         @NameInMap("Applications")
         public java.util.List<ListApplicationsForPrivateAccessTagResponseBodyTagsApplications> applications;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag-7ffc82853476****</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateIdpDepartmentRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10653</p>
      */
     @NameInMap("DepartmentId")
     public String departmentId;
@@ -18,6 +21,9 @@ public class UpdateIdpDepartmentRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>598</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;

@@ -4,21 +4,36 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateClientUserRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10701</p>
+     */
     @NameInMap("DepartmentId")
     public String departmentId;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20644</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13641966835</p>
+     */
     @NameInMap("MobileNumber")
     public String mobileNumber;
 
