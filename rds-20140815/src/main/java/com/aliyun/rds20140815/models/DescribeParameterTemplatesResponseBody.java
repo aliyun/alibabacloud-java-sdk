@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
     /**
      * <p>The database engine of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The number of parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ParameterCount")
     public String parameterCount;
@@ -30,6 +39,9 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0F9B7410-EC73-510C-B385-8339455C12C6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,42 +94,62 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
         /**
          * <p>The valid values of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0-1024]</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
          * <p>Indicates whether the parameter can be modified. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ForceModify")
         public String forceModify;
 
         /**
          * <p>Indicates whether you must restart the instance for the modifications to take effect. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Page numbers of multi blocks reading once in some ddl query.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>loose_multi_blocks_ddl_count</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

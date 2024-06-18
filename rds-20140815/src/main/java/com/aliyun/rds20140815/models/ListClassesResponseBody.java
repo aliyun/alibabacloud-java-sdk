@@ -12,12 +12,18 @@ public class ListClassesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF8D35BF-263D-4F7B-883A-1163B79A9EC6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,69 +59,104 @@ public class ListClassesResponseBody extends TeaModel {
 
     public static class ListClassesResponseBodyItems extends TeaModel {
         /**
-         * <p>The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html) and [Read-only ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/145759.html).</p>
+         * <p>The code of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n1.micro.1</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
         /**
-         * <p>The instance family. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/57184.html).</p>
+         * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;
 
         /**
          * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cpu")
         public String cpu;
 
         /**
          * <p>The size of the encrypted memory that is supported by the security-enhanced instance type. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("EncryptedMemory")
         public String encryptedMemory;
 
         /**
          * <p>The architecture of the instance type. Valid values:</p>
-         * <br>
-         * <p>*   If the architecture of the instance type is **x86**, an empty string is returned by default.</p>
-         * <p>*   If the architecture of the instance type is **ARM**, **arm** is returned.</p>
+         * <ul>
+         * <li>If the architecture of the instance type is <strong>x86</strong>, an empty string is returned by default.</li>
+         * <li>If the architecture of the instance type is <strong>ARM</strong>, <strong>arm</strong> is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>arm</p>
          */
         @NameInMap("InstructionSetArch")
         public String instructionSetArch;
 
         /**
          * <p>The maximum number of connections that are supported by the instance type. Unit: connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("MaxConnections")
         public String maxConnections;
 
         /**
          * <p>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024Mbps</p>
          */
         @NameInMap("MaxIOMBPS")
         public String maxIOMBPS;
 
         /**
          * <p>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("MaxIOPS")
         public String maxIOPS;
 
         /**
          * <p>The memory size that is supported by the instance type. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 GB (RDS Basic Edition)</p>
          */
         @NameInMap("MemoryClass")
         public String memoryClass;
 
         /**
          * <p>The fee that you must pay for the instance type.</p>
-         * <br>
-         * <p>*   Unit: cents (USD).</p>
-         * <br>
-         * <p>> *   If you set **CommodityCode** to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
-         * <p>> *   If you set **CommodityCode** to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
+         * <ul>
+         * <li>Unit: cents (USD).</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>CommodityCode</strong> to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</li>
+         * <li>If you set <strong>CommodityCode</strong> to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2500</p>
          */
         @NameInMap("ReferencePrice")
         public String referencePrice;

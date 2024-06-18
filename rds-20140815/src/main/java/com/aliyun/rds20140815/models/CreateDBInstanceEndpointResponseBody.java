@@ -12,6 +12,9 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C8E88DED-533F-4B3C-9207-731FBF394CCA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
     public static class CreateDBInstanceEndpointResponseBodyData extends TeaModel {
         /**
          * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The endpoint ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
          */
         @NameInMap("DBInstanceEndpointId")
         public String DBInstanceEndpointId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

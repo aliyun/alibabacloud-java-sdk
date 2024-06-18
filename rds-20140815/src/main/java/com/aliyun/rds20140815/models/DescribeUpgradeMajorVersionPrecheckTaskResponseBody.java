@@ -12,24 +12,36 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D1586777-41B5-5F9E-81E8-93DFDD379024</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries in the upgrade check report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,53 +94,73 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
     public static class DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems extends TeaModel {
         /**
          * <p>The time at which the upgrade check was performed.</p>
-         * <br>
          * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635143903000</p>
          */
         @NameInMap("CheckTime")
         public String checkTime;
 
         /**
          * <p>The content of the upgrade check report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[user_check_report]User check success\n[pg_upgrade_internal.log]Performing...</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
          * <p>The expiration time of the upgrade check report.</p>
-         * <br>
          * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635748703000</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The result of the upgrade check.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Success</p>
-         * <p>*   Fail</p>
-         * <br>
-         * <p>>  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/218391.html).</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Fail</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the check result is <strong>Fail</strong>, you must check the value of the <strong>Detail</strong> parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see <a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The original major engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.0</p>
          */
         @NameInMap("SourceMajorVersion")
         public String sourceMajorVersion;
 
         /**
          * <p>The new major engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0</p>
          */
         @NameInMap("TargetMajorVersion")
         public String targetMajorVersion;
 
         /**
          * <p>The ID of the upgrade check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>416980000</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

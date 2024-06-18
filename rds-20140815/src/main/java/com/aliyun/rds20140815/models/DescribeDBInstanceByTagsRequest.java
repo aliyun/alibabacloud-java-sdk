@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceByTagsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz*****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6w**********</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,22 +30,29 @@ public class DescribeDBInstanceByTagsRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **30 to 100**. Default value: **30**.</p>
+     * <p>The number of entries per page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,6 +65,9 @@ public class DescribeDBInstanceByTagsRequest extends TeaModel {
 
     /**
      * <p>A deprecated parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("proxyId")
     public String proxyId;

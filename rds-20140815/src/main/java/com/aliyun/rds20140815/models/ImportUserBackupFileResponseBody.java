@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ImportUserBackupFileResponseBody extends TeaModel {
     /**
      * <p>The ID of the full backup file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b-n8tpg24c6i0v********</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A140DD14-DCC9-4548-9C72-52A49A58A310</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, **true** is returned. Otherwise, an error message is returned.</p>
+     * <p>Indicates whether the full backup file is successfully imported into the instance. If the full backup file is successfully imported, <strong>true</strong> is returned. Otherwise, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Status")
     public Boolean status;

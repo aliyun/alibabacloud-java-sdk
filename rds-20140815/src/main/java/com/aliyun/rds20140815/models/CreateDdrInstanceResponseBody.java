@@ -6,34 +6,51 @@ import com.aliyun.tea.*;
 public class CreateDdrInstanceResponseBody extends TeaModel {
     /**
      * <p>The endpoint that is used to connect to the destination instance.</p>
-     * <br>
-     * <p>>  The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.</p>
+     * <blockquote>
+     * <p> The <strong>DBInstanceNetType</strong> parameter indicates whether the endpoint is internal or public.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-xxxxx.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The destination instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-xxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2038691xxxxx</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The port number that is used to connect to the destination instance.</p>
-     * <br>
-     * <p>> **DBInstanceNetType** indicates whether the port is internal or public.</p>
+     * <blockquote>
+     * <p><strong>DBInstanceNetType</strong> indicates whether the port is internal or public.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E52666CC-330E-418A-8E5B-A19E3FB42D13</p>
      */
     @NameInMap("RequestId")
     public String requestId;

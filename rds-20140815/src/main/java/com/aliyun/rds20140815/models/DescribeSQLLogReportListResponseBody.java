@@ -12,24 +12,36 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of SQL log reports on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,20 +94,30 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     public static class DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem extends TeaModel {
         /**
          * <p>The average time that is required to execute the SQL statement. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("AvgLatency")
         public Long avgLatency;
 
         /**
          * <p>The number of times that the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("SQLExecuteTimes")
         public Long SQLExecuteTimes;
 
         /**
          * <p>The SQL statement.</p>
-         * <br>
-         * <p>>  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.</p>
+         * <blockquote>
+         * <p> Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM table_name;</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
@@ -153,14 +175,21 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     public static class DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem extends TeaModel {
         /**
          * <p>The number of times that the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("SQLExecuteTimes")
         public Long SQLExecuteTimes;
 
         /**
          * <p>The SQL statement.</p>
-         * <br>
-         * <p>>  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.</p>
+         * <blockquote>
+         * <p> Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM table_name;</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
@@ -221,7 +250,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         public DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItems QPSTopNItems;
 
         /**
-         * <p>The time when the report was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the report was generated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-27T16:00:00Z</p>
          */
         @NameInMap("ReportTime")
         public String reportTime;

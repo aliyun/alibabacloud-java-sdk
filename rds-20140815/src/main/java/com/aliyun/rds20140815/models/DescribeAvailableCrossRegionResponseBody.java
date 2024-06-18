@@ -12,6 +12,9 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39265F46-EC77-4036-8AC4-F035F32F6BE2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

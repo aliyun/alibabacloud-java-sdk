@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class ModifyEventInfoRequest extends TeaModel {
     /**
      * <p>The action parameter. Set this value in the JSON string format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;recoverTime\&quot;:\&quot;2023-04-17T14:02:35Z\&quot;,\&quot;recoverMode\&quot;:\&quot;timePoint\&quot;}</p>
      */
     @NameInMap("ActionParams")
     public String actionParams;
 
     /**
      * <p>The event handling action. Set this value to archive or undo.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>archive</p>
      */
     @NameInMap("EventAction")
     public String eventAction;
 
     /**
      * <p>The event ID. Separate multiple event IDs with commas (,). You can configure up to 20 event IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5422964</p>
      */
     @NameInMap("EventId")
     public String eventId;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,17 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The high availability mode of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **RPO**: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</p>
-     * <p>*   **RTO**: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.</p>
-     * <br>
-     * <p>> This parameter is returned only for instances that run MySQL.</p>
+     * <ul>
+     * <li><strong>RPO</strong>: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</li>
+     * <li><strong>RTO</strong>: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is returned only for instances that run MySQL.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>RPO</p>
      */
     @NameInMap("HAMode")
     public String HAMode;
@@ -29,18 +37,26 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The data replication mode of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Sync**: the synchronous mode</p>
-     * <p>*   **Semi-sync**: the semi-synchronous replication mode</p>
-     * <p>*   **Async**: the asynchronous mode</p>
-     * <br>
-     * <p>> This parameter is returned only for instances that run MySQL.</p>
+     * <ul>
+     * <li><strong>Sync</strong>: the synchronous mode</li>
+     * <li><strong>Semi-sync</strong>: the semi-synchronous replication mode</li>
+     * <li><strong>Async</strong>: the asynchronous mode</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is returned only for instances that run MySQL.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Sync</p>
      */
     @NameInMap("SyncMode")
     public String syncMode;
@@ -92,51 +108,74 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo extends TeaModel {
         /**
-         * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-05T15:15:00Z</p>
          */
         @NameInMap("DataSyncTime")
         public String dataSyncTime;
 
         /**
-         * <p>The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-05T15:15:00Z</p>
          */
         @NameInMap("LogSyncTime")
         public String logSyncTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3397027</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **Master**: the primary node</p>
-         * <p>*   **Slave**: the secondary node</p>
+         * <ul>
+         * <li><strong>Master</strong>: the primary node</li>
+         * <li><strong>Slave</strong>: the secondary node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Master</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The synchronization status. Valid values:</p>
-         * <br>
-         * <p>*   **NotAvailable**: The synchronization fails. This means that faults occur.</p>
-         * <p>*   **Syncing**: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</p>
-         * <p>*   **Synchronized**: The synchronization is completed.</p>
-         * <p>*   **NotSupport**: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.</p>
+         * <ul>
+         * <li><strong>NotAvailable</strong>: The synchronization fails. This means that faults occur.</li>
+         * <li><strong>Syncing</strong>: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</li>
+         * <li><strong>Synchronized</strong>: The synchronization is completed.</li>
+         * <li><strong>NotSupport</strong>: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NotAvailable</p>
          */
         @NameInMap("SyncStatus")
         public String syncStatus;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The database engine of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database engine version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.6</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -30,24 +39,36 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C8E88DED-533F-4B3C-9207-731FBF394CCA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -124,33 +145,49 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public static class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog extends TeaModel {
         /**
          * <p>The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1584076066000</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The new value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NewParameterValue")
         public String newParameterValue;
 
         /**
          * <p>The original value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("OldParameterValue")
         public String oldParameterValue;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>innodb_stats_sample_pages</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The status of the new value specified for the parameter. Valid values:</p>
-         * <br>
-         * <p>*   **Applied:** The new value has taken effect.</p>
-         * <p>*   **Syncing:** The new value is being applied and has not taken effect.</p>
+         * <ul>
+         * <li><strong>Applied:</strong> The new value has taken effect.</li>
+         * <li><strong>Syncing:</strong> The new value is being applied and has not taken effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Syncing</p>
          */
         @NameInMap("Status")
         public String status;

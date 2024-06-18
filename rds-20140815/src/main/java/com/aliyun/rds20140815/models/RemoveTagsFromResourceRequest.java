@@ -9,14 +9,19 @@ public class RemoveTagsFromResourceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -29,14 +34,19 @@ public class RemoveTagsFromResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. You can call the ListResourceGroups operation to query the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -48,15 +58,22 @@ public class RemoveTagsFromResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A set of a TagKey and a TagValue that you use to unbind the tag. Format: {"key1":"value1"}.</p>
-     * <br>
-     * <p>>  You cannot specify an empty string for TagKey. You can specify an empty string for TagValue.</p>
+     * <p>A set of a TagKey and a TagValue that you use to unbind the tag. Format: {&quot;key1&quot;:&quot;value1&quot;}.</p>
+     * <blockquote>
+     * <p> You cannot specify an empty string for TagKey. You can specify an empty string for TagValue.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The ID of the proxy mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
      */
     @NameInMap("proxyId")
     public String proxyId;
@@ -157,12 +174,18 @@ public class RemoveTagsFromResourceRequest extends TeaModel {
     public static class RemoveTagsFromResourceRequestTag extends TeaModel {
         /**
          * <p>The TagKey of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The TagValue of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("value")
         public String value;

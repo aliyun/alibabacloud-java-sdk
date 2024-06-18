@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeQuickSaleConfigResponseBody extends TeaModel {
     /**
      * <p>The product code. Valid values:</p>
-     * <br>
-     * <p>*   rds: The instance is a subscription instance.</p>
-     * <p>*   bards: The instance is a pay-as-you-go instance.</p>
+     * <ul>
+     * <li>rds: The instance is a subscription instance.</li>
+     * <li>bards: The instance is a pay-as-you-go instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("Commodity")
     public String commodity;
@@ -21,6 +25,9 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5DFFE9EC-3369-5937-A4E2-507C0C86A4C6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

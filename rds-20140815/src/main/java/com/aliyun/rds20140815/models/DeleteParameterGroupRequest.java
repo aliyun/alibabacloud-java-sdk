@@ -9,22 +9,29 @@ public class DeleteParameterGroupRequest extends TeaModel {
 
     /**
      * <p>The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rpg-gfs****</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

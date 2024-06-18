@@ -6,11 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeInstanceKeywordsRequest extends TeaModel {
     /**
      * <p>The type of reserved keyword to query. Valid values:</p>
-     * <br>
-     * <p>*   **account**</p>
-     * <p>*   **database**</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
+     * <ul>
+     * <li><strong>account</strong></li>
+     * <li><strong>database</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>account</p>
      */
     @NameInMap("Key")
     public String key;

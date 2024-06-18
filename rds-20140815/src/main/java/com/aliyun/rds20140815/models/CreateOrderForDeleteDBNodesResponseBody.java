@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateOrderForDeleteDBNodesResponseBody extends TeaModel {
     /**
      * <p>The instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-7xv******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>221172852******</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49BC2500-8078-5AC4-A545-20AA5945B0E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

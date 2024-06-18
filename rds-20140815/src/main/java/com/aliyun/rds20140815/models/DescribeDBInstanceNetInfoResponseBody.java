@@ -12,24 +12,35 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Classic**: classic network</p>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <ul>
+     * <li><strong>Classic</strong>: classic network</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>777C4593-8053-427B-99E2-105593277CAB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The whitelist mode of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **normal**: standard whitelist mode</p>
-     * <p>*   **safety**: enhanced whitelist mode</p>
+     * <ul>
+     * <li><strong>normal</strong>: standard whitelist mode</li>
+     * <li><strong>safety</strong>: enhanced whitelist mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>safety</p>
      */
     @NameInMap("SecurityIPMode")
     public String securityIPMode;
@@ -74,36 +85,53 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight extends TeaModel {
         /**
          * <p>The availability of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Unavailable**</p>
-         * <p>*   **Available**</p>
+         * <ul>
+         * <li><strong>Unavailable</strong></li>
+         * <li><strong>Available</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unavailable</p>
          */
         @NameInMap("Availability")
         public String availability;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Master**: primary instance</p>
-         * <p>*   **Readonly**: read-only instance</p>
+         * <ul>
+         * <li><strong>Master</strong>: primary instance</li>
+         * <li><strong>Readonly</strong>: read-only instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Master</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
          * <p>A deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The weight of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -177,12 +205,18 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup extends TeaModel {
         /**
          * <p>The name of the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("SecurityIPGroupName")
         public String securityIPGroupName;
 
         /**
          * <p>The IP address in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
          */
         @NameInMap("SecurityIPs")
         public String securityIPs;
@@ -232,90 +266,130 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
         /**
          * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
-         * <br>
-         * <p>>  This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](https://help.aliyun.com/document_detail/428613.html).</p>
+         * <blockquote>
+         * <p> This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1433</p>
          */
         @NameInMap("BabelfishPort")
         public String babelfishPort;
 
         /**
          * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6w*****.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: a regular endpoint</p>
-         * <p>*   **ReadWriteSplitting**: a read/write splitting endpoint</p>
+         * <ul>
+         * <li><strong>Normal</strong>: a regular endpoint</li>
+         * <li><strong>ReadWriteSplitting</strong>: a read/write splitting endpoint</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("ConnectionStringType")
         public String connectionStringType;
 
         /**
          * <p>The information about the instance weight.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the read/write splitting feature is enabled for the instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the read/write splitting feature is enabled for the instance.</p>
+         * </blockquote>
          */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
 
         /**
          * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
-         * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
+         * <ul>
+         * <li><strong>Standard</strong>: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</li>
+         * <li><strong>Custom</strong>: You must manually allocate read weights to the instance and its read-only instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("DistributionType")
         public String distributionType;
 
         /**
          * <p>The remaining validity period of the instance in the classic network in hybrid access mode. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1209534</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The network type.</p>
-         * <br>
-         * <p>*   Valid values when the instance resides in the classic network:</p>
-         * <br>
-         * <p>    *   **Inner**</p>
-         * <p>    *   **Public**</p>
-         * <br>
-         * <p>*   Valid values when the instance resides in a virtual private cloud (VPC):</p>
-         * <br>
-         * <p>    *   **Private**</p>
-         * <p>    *   **Public**</p>
+         * <ul>
+         * <li><p>Valid values when the instance resides in the classic network:</p>
+         * <ul>
+         * <li><strong>Inner</strong></li>
+         * <li><strong>Public</strong></li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when the instance resides in a virtual private cloud (VPC):</p>
+         * <ul>
+         * <li><strong>Private</strong></li>
+         * <li><strong>Public</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("IPType")
         public String IPType;
 
         /**
          * <p>The latency threshold. This parameter is returned only for a read/write splitting endpoint. Unit: seconds.</p>
-         * <br>
-         * <p>>  If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</p>
+         * <blockquote>
+         * <p> If the latency on a read-only instance exceeds the specified threshold, ApsaraDB RDS no longer forwards read requests to the read-only instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
         /**
          * <p>The PgBouncer port.</p>
-         * <br>
-         * <p>>  This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>6432</p>
          */
         @NameInMap("PGBouncerPort")
         public String PGBouncerPort;
 
         /**
          * <p>The port that is used to connect to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
@@ -328,23 +402,34 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the IP version can be updated. Valid values:</p>
-         * <br>
-         * <p>*   **Enable**</p>
-         * <p>*   **Disabled**</p>
-         * <br>
-         * <p>>  The IP version can be updated from IPv4 to IPv6.</p>
+         * <ul>
+         * <li><strong>Enable</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> The IP version can be updated from IPv4 to IPv6.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
         /**
          * <p>The VPC ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6f7l4fg90*****</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2p*****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

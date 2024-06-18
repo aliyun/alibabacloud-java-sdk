@@ -5,174 +5,244 @@ import com.aliyun.tea.*;
 
 public class CloneDBInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <br>
-     * <p>1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.</p>
-     * <p>2.  **false**: does not automatically complete the payment. An unpaid order is generated.</p>
-     * <br>
-     * <p>> The default value is true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.</p>
+     * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
+     * <ol>
+     * <li><strong>true</strong>: enables the feature. You must make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+     * </ol>
+     * <blockquote>
+     * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The backup set ID.</p>
-     * <br>
      * <p>You can call the DescribeBackups operation to query the backup set ID.</p>
-     * <br>
-     * <p>>  You must specify at least one of the **BackupId** or **RestoreTime** parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>902****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The type of backup that is used to restore the data of the original instance. Valid values:</p>
-     * <br>
-     * <p>*   **FullBackup**</p>
-     * <p>*   **IncrementalBackup**</p>
+     * <ul>
+     * <li><strong>FullBackup</strong></li>
+     * <li><strong>IncrementalBackup</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FullBackup</p>
      */
     @NameInMap("BackupType")
     public String backupType;
 
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("BpeEnabled")
     public String bpeEnabled;
 
     /**
      * <p>An invalid parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
 
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: RDS Basic Edition.</p>
-     * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
-     * <p>*   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</p>
-     * <p>*   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.</p>
-     * <p>*   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</p>
-     * <br>
-     * <p>**Serverless instances**</p>
-     * <br>
-     * <p>*   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
-     * <p>*   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL</p>
-     * <p>*   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server</p>
-     * <br>
-     * <p>>  You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.</p>
+     * <ul>
+     * <li><strong>Basic</strong>: RDS Basic Edition.</li>
+     * <li><strong>HighAvailability</strong>: RDS High-availability Edition.</li>
+     * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</li>
+     * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL.</li>
+     * <li><strong>Finance</strong>: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</li>
+     * </ul>
+     * <p><strong>Serverless instances</strong></p>
+     * <ul>
+     * <li><strong>serverless_basic</strong>: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</li>
+     * <li><strong>serverless_standard</strong>: RDS High-availability Edition for ApsaraDB RDS for MySQL</li>
+     * <li><strong>serverless_ha</strong>: RDS High-availability Edition for ApsaraDB RDS for SQL Server</li>
+     * </ul>
+     * <blockquote>
+     * <p> You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>HighAvailability</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The instance type of the new instance. For information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
-     * <br>
-     * <p>> By default, the new instance uses the same instance type as the original primary instance.</p>
+     * <p>The instance type of the new instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+     * <blockquote>
+     * <p>By default, the new instance uses the same instance type as the original primary instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql.n1.micro.1</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
-     * <br>
-     * <p>> By default, the new instance has the same storage capacity as the original primary instance.</p>
+     * <p>The storage capacity of the new instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+     * <blockquote>
+     * <p>By default, the new instance has the same storage capacity as the original primary instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
     /**
      * <p>The storage type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **local_ssd**: local SSDs</p>
-     * <p>*   **cloud_ssd**: standard SSDs</p>
-     * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
-     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
-     * <p>*   **cloud_essd3**: ESSD of PL3</p>
-     * <br>
-     * <p>> Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.</p>
+     * <ul>
+     * <li><strong>local_ssd</strong>: local SSDs</li>
+     * <li><strong>cloud_ssd</strong>: standard SSDs</li>
+     * <li><strong>cloud_essd</strong>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</li>
+     * <li><strong>cloud_essd2</strong>: ESSDs of PL2</li>
+     * <li><strong>cloud_essd3</strong>: ESSD of PL3</li>
+     * </ul>
+     * <blockquote>
+     * <p>Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to <strong>cloud_essd</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
     /**
-     * <p>The name of the database. If you specify more than one database, the value is in the following format: `Original database name 1,Original database name 2`.</p>
+     * <p>The name of the database. If you specify more than one database, the value is in the following format: <code>Original database name 1,Original database name 2</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1,test2</p>
      */
     @NameInMap("DbNames")
     public String dbNames;
 
     /**
      * <p>The ID of the dedicated cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-7a9xxxxxxxx</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
      * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables the feature.</p>
-     * <p>*   **false** (default): disables the feature.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     /**
      * <p>The network type of the new instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **Classic**</p>
-     * <br>
-     * <p>> By default, the new instance has the same network type as the original primary instance.</p>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>Classic</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>By default, the new instance has the same network type as the original primary instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
     /**
      * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("IoAccelerationEnabled")
     public String ioAccelerationEnabled;
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Postpaid**: pay-as-you-go.</p>
-     * <p>*   **Prepaid**: subscription.</p>
-     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/411291.html), [Overview of serverless ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/604344.html), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/607742.html).</p>
-     * <br>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * <li><strong>Serverless</strong>: serverless. This value is not supported for instances that run MariaDB. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Postpaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The unit that is used to calculate the billing cycle of the new instance. Valid values:</p>
-     * <br>
-     * <p>*   **Year**</p>
-     * <p>*   **Month**</p>
-     * <br>
-     * <p>> If you set the PayType parameter to **Prepaid**, you must also specify this parameter.</p>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <p>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.XX.XXX.69</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -181,77 +251,111 @@ public class CloneDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to restore only the databases and tables that you specify. The value **1** specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you do not need to specify this parameter.</p>
+     * <p>Specifies whether to restore only the databases and tables that you specify. The value <strong>1</strong> specifies to restore only the specified databases and tables. If you do not want to restore only the specified databases or tables, you do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RestoreTable")
     public String restoreTable;
 
     /**
-     * <p>The point in time to which you want to restore data. The point in time must fall within the specified backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>> You must specify at least one of the **BackupId** and **RestoreTime** parameters.</p>
+     * <p>The point in time to which you want to restore data. The point in time must fall within the specified backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2011-06-11T16:00:00Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     /**
      * <p>The specifications for the serverless instance. You must specify this parameter only when you restore data to a new serverless instance.</p>
-     * <br>
-     * <p>>  This parameter is available only on the China site (aliyun.com).</p>
+     * <blockquote>
+     * <p> This parameter is available only on the China site (aliyun.com).</p>
+     * </blockquote>
      */
     @NameInMap("ServerlessConfig")
     public CloneDBInstanceRequestServerlessConfig serverlessConfig;
 
     /**
-     * <p>The information about the database and table that you want to restore. The value is in the following format: `[{"type":"db","name":"Name of Database 1","newname":"New name of Database 1","tables":[{"type":"table","name":"Name of Table 1 in Database 1","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 1","newname":"New name of Table 2"}]},{"type":"db","name":"Name of Database 2","newname":"New name of Database 2","tables":[{"type":"table","name":"Name of Table 1 in Database 2","newname":"New name of Table 1"},{"type":"table","name":"Name of Table 2 in Database 2","newname":"New name of Table 2"}]}]`</p>
+     * <p>The information about the database and table that you want to restore. The value is in the following format: <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of Database 1&quot;,&quot;newname&quot;:&quot;New name of Database 1&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 1 in Database 1&quot;,&quot;newname&quot;:&quot;New name of Table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 2 in Database 1&quot;,&quot;newname&quot;:&quot;New name of Table 2&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;Name of Database 2&quot;,&quot;newname&quot;:&quot;New name of Database 2&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 1 in Database 2&quot;,&quot;newname&quot;:&quot;New name of Table 1&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;Name of Table 2 in Database 2&quot;,&quot;newname&quot;:&quot;New name of Table 2&quot;}]}]</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;testdb1&quot;,&quot;newname&quot;:&quot;testdb1_new&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;testdb1table1&quot;,&quot;newname&quot;:&quot;testdb1table1_new&quot;}]}]</p>
      */
     @NameInMap("TableMeta")
     public String tableMeta;
 
     /**
      * <p>The subscription duration of the new instance. Valid values:</p>
-     * <br>
-     * <p>*   If you set the **Period** parameter to **Year**, the value of the UsedTime parameter ranges from **1 to 3**.</p>
-     * <p>*   If you set the **Period** parameter to **Month**, the value of the UsedTime parameter ranges from **1 to 9**.</p>
-     * <br>
-     * <p>> If you set the PayType parameter to **Prepaid**, you must also specify this parameter.</p>
+     * <ul>
+     * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1 to 3</strong>.</li>
+     * <li>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1 to 9</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
-     * <br>
-     * <p>>  Make sure that the VPC belongs to the required region.</p>
+     * <blockquote>
+     * <p> Make sure that the VPC belongs to the required region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6f7l4fg90xxxxxxxxxx</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.</p>
-     * <br>
-     * <p>*   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.</p>
-     * <p>*   If you specify the **ZoneSlaveId1** parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
+     * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
+     * <ul>
+     * <li>If you set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>, you must also specify this parameter.</li>
+     * <li>If you specify the <strong>ZoneSlaveId1</strong> parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6adz52c2pxxxxxxxxxx</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The zone ID of the primary instance. You can call the DescribeRegions operation to query the zone ID.</p>
-     * <br>
-     * <p>>  Set this value to the zone ID of the original instance.</p>
+     * <blockquote>
+     * <p> Set this value to the zone ID of the original instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
     /**
-     * <p>The zone ID of the secondary instance. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to different values, the multi-zone deployment method is used.</p>
+     * <p>The zone ID of the secondary instance. If you set the ZoneIdSlave1 parameter and the <strong>ZoneId</strong> parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the <strong>ZoneId</strong> parameter to different values, the multi-zone deployment method is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-c</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
     /**
-     * <p>The zone ID of the logger instance. If you set the ZoneIdSlave2 parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the **ZoneId** parameter, the multi-zone deployment method is used.</p>
+     * <p>The zone ID of the logger instance. If you set the ZoneIdSlave2 parameter to the same value as the <strong>ZoneId</strong> parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the <strong>ZoneId</strong> parameter, the multi-zone deployment method is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-d</p>
      */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;
@@ -504,59 +608,84 @@ public class CloneDBInstanceRequest extends TeaModel {
     public static class CloneDBInstanceRequestServerlessConfig extends TeaModel {
         /**
          * <p>Specifies whether to enable the automatic start and stop feature for the serverless ApsaraDB RDS for MySQL instance. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
-         * <br>
-         * <p>> *   This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</p>
-         * <p>> *   This parameter is available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</li>
+         * <li>This parameter is available only on the China site (aliyun.com).</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoPause")
         public Boolean autoPause;
 
         /**
          * <p>The maximum number of RDS Capacity Units (RCUs). Valid values:</p>
-         * <br>
-         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **1 to 8**</p>
-         * <p>*   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**</p>
-         * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 12**</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.</p>
-         * <br>
-         * <p>*   This parameter is available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>Serverless ApsaraDB RDS for MySQL instances: <strong>1 to 8</strong></li>
+         * <li>Serverless ApsaraDB RDS for SQL Server instances: <strong>2 to 8</strong></li>
+         * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>1 to 12</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value of this parameter must be greater than or equal to the value of <strong>MinCapacity</strong> and can be specified only to an <strong>integer</strong>.</p>
+         * </li>
+         * <li><p>This parameter is available only on the China site (aliyun.com).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("MaxCapacity")
         public Double maxCapacity;
 
         /**
          * <p>The minimum number of RCUs. Valid values:</p>
-         * <br>
-         * <p>*   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 8**.</p>
-         * <p>*   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.</p>
-         * <p>*   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 12**.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The value of this parameter must be less than or equal to the value of **MaxCapacity**.</p>
-         * <br>
-         * <p>*   This parameter is available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li>Serverless ApsaraDB RDS for MySQL instances: <strong>0.5 to 8</strong>.</li>
+         * <li>Serverless ApsaraDB RDS for SQL Server instances: <strong>2 to 8</strong>. Only integers are supported.</li>
+         * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 12</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value of this parameter must be less than or equal to the value of <strong>MaxCapacity</strong>.</p>
+         * </li>
+         * <li><p>This parameter is available only on the China site (aliyun.com).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("MinCapacity")
         public Double minCapacity;
 
         /**
          * <p>Specifies whether to enable the forced scaling feature for the serverless ApsaraDB RDS for MySQL instance. In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</p>
-         * <br>
-         * <p>*   This parameter is available only on the China site (aliyun.com).</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.</p>
+         * </li>
+         * <li><p>This parameter is available only on the China site (aliyun.com).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SwitchForce")
         public Boolean switchForce;

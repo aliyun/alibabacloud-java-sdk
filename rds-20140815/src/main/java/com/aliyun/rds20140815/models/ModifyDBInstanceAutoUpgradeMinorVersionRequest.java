@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends TeaModel {
     /**
      * <p>The method that is used to update the minor engine version of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Auto:** automatic update.</p>
-     * <p>*   **Manual**: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.</p>
-     * <br>
+     * <ul>
+     * <li><strong>Auto:</strong> automatic update.</li>
+     * <li><strong>Manual</strong>: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Auto</p>
      */
     @NameInMap("AutoUpgradeMinorVersion")
     public String autoUpgradeMinorVersion;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

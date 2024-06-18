@@ -6,23 +6,26 @@ import com.aliyun.tea.*;
 public class DeleteDBNodesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
-     * <br>
      * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The node IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBNodeId")
@@ -36,6 +39,9 @@ public class DeleteDBNodesRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

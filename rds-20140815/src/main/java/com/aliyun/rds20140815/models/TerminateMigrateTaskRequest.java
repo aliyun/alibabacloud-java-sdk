@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class TerminateMigrateTaskRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp159vfbu******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56254****</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;

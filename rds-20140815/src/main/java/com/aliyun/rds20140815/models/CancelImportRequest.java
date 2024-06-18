@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class CancelImportRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The migration task ID.</p>
-     * <br>
-     * <p>>  This parameter is returned when the migration task is started. For more information, see ImportDatabaseBetweenInstances.</p>
-     * <br>
+     * <blockquote>
+     * <p> This parameter is returned when the migration task is started. For more information, see ImportDatabaseBetweenInstances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8562584</p>
      */
     @NameInMap("ImportId")
     public Integer importId;
@@ -30,6 +35,9 @@ public class CancelImportRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

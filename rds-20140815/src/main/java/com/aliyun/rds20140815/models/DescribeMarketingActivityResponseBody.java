@@ -6,13 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeMarketingActivityResponseBody extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1979008652307170</p>
      */
     @NameInMap("AliUid")
     public Long aliUid;
 
     /**
-     * <p>*   China site: 26842</p>
-     * <p>*   International site: 26888</p>
+     * <ul>
+     * <li>China site: 26842</li>
+     * <li>International site: 26888</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>26842</p>
      */
     @NameInMap("Bid")
     public String bid;
@@ -25,14 +33,19 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7D8F09DB-1124-5D78-A520-FF88FAF4351B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -85,182 +98,267 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
     public static class DescribeMarketingActivityResponseBodyItems extends TeaModel {
         /**
          * <p>The RDS edition of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: RDS Basic Edition</p>
-         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-         * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
-         * <p>*   **Finance**: RDS Enterprise Edition</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+         * <li><strong>AlwaysOn</strong>: RDS Cluster Edition</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The payment type. Valid values:</p>
-         * <br>
-         * <p>*   POSTPAY: pay-as-you-go</p>
-         * <p>*   PREPAY: subscription</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * <li>PREPAY: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The instance type. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html) and [Read-only ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/145759.html).</p>
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s3.large</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
         /**
-         * <p>The instance family. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/57184.html).</p>
+         * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;
 
         /**
          * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpu")
         public String cpu;
 
         /**
          * <p>The disk capacity per node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
         /**
          * <p>The database engine of the instance. Valid values:</p>
-         * <br>
-         * <p>*   MySQL</p>
-         * <p>*   SQLServer</p>
-         * <p>*   PostgreSQL</p>
-         * <p>*   PPAS</p>
-         * <p>*   MariaDB</p>
+         * <ul>
+         * <li>MySQL</li>
+         * <li>SQLServer</li>
+         * <li>PostgreSQL</li>
+         * <li>PPAS</li>
+         * <li>MariaDB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf62br2491p5l****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf62br2491p5l****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The maximum number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>The maximum I/O throughput. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("MaxIombps")
         public Integer maxIombps;
 
         /**
          * <p>The maximum IOPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("MaxIops")
         public Integer maxIops;
 
         /**
          * <p>The memory size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Memory")
         public Long memory;
 
         /**
          * <p>The storage type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **local_ssd**: local SSD</p>
-         * <p>*   **cloud_ssd**: standard SSD</p>
-         * <p>*   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)</p>
-         * <p>*   **cloud_essd2**: PL2 ESSD</p>
-         * <p>*   **cloud_essd3**: PL3 ESSD</p>
+         * <ul>
+         * <li><strong>local_ssd</strong>: local SSD</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD</li>
+         * <li><strong>cloud_essd</strong>: performance level 1 (PL1) enhanced SSD (ESSD)</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
          * <p>The RDS edition after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         @NameInMap("UpgradeCategory")
         public String upgradeCategory;
 
         /**
          * <p>The instance type after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s3.large</p>
          */
         @NameInMap("UpgradeClassCode")
         public String upgradeClassCode;
 
         /**
          * <p>The instance family after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d</p>
          */
         @NameInMap("UpgradeClassGroup")
         public String upgradeClassGroup;
 
         /**
          * <p>The number of CPU cores after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("UpgradeCpu")
         public String upgradeCpu;
 
         /**
          * <p>The description of the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("UpgradeDescContent")
         public String upgradeDescContent;
 
         /**
          * <p>The disk capacity after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("UpgradeDiskSize")
         public Integer upgradeDiskSize;
 
         /**
          * <p>The maximum number of concurrent connections after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("UpgradeMaxConnections")
         public Integer upgradeMaxConnections;
 
         /**
          * <p>The maximum I/O throughput after the upgrade. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("UpgradeMaxIombps")
         public Integer upgradeMaxIombps;
 
         /**
          * <p>The maximum IOPS after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("UpgradeMaxIops")
         public Integer upgradeMaxIops;
 
         /**
          * <p>The memory size after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("UpgradeMemory")
         public Long upgradeMemory;
 
         /**
          * <p>The reference price of the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23333.1</p>
          */
         @NameInMap("UpgradeReferencePrice")
         public String upgradeReferencePrice;
 
         /**
          * <p>The storage type after the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         @NameInMap("UpgradeStorageType")
         public String upgradeStorageType;

@@ -11,25 +11,37 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public java.util.List<DescribeHistoryTasksResponseBodyItems> items;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **10 to 100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>10 to 100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5CD61041-35F7-10F7-BE94-33A48B22****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,151 +94,211 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public static class DescribeHistoryTasksResponseBodyItems extends TeaModel {
         /**
          * <p>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</p>
-         * <br>
-         * <p>      "steps": [</p>
-         * <p>        {</p>
-         * <p>          "step_name": "exec_task", // The name of the step, which matches CurrentStepName.</p>
-         * <p>          "action_info": {    // The actions supported for this step.</p>
-         * <p>            "Waiting": [      // The status, which matches Status.</p>
-         * <p>              "modifySwitchTime" // The action. Multiple actions are supported.</p>
-         * <p>            ]</p>
-         * <p>          }</p>
-         * <p>        },</p>
-         * <p>        {</p>
-         * <p>          "step_name": "init_task", // The name of the step.</p>
-         * <p>          "action_info": {    // The actions supported for this step.</p>
-         * <p>            "Running": [      // The status.</p>
-         * <p>              "cancel",       // The action.</p>
-         * <p>              "pause"</p>
-         * <p>            ]</p>
-         * <p>          }</p>
-         * <p>        }</p>
-         * <p>      ]</p>
-         * <p>    }</p>
-         * <br>
+         * <pre><code>  &quot;steps&quot;: [
+         *     {
+         *       &quot;step_name&quot;: &quot;exec_task&quot;, // The name of the step, which matches CurrentStepName.
+         *       &quot;action_info&quot;: {    // The actions supported for this step.
+         *         &quot;Waiting&quot;: [      // The status, which matches Status.
+         *           &quot;modifySwitchTime&quot; // The action. Multiple actions are supported.
+         *         ]
+         *       }
+         *     },
+         *     {
+         *       &quot;step_name&quot;: &quot;init_task&quot;, // The name of the step.
+         *       &quot;action_info&quot;: {    // The actions supported for this step.
+         *         &quot;Running&quot;: [      // The status.
+         *           &quot;cancel&quot;,       // The action.
+         *           &quot;pause&quot;
+         *         ]
+         *       }
+         *     }
+         *   ]
+         * }
+         * </code></pre>
          * <p>The system may support the following actions: retry cancel modifySwitchTime: changes the switching or restoration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;steps\&quot;:[{\&quot;action_info\&quot;:{\&quot;Waiting\&quot;:[\&quot;modifySwitchTime\&quot;]},\&quot;step_name\&quot;:\&quot;exec_task\&quot;}]}</p>
          */
         @NameInMap("ActionInfo")
         public String actionInfo;
 
         /**
          * <p>The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141345906006****</p>
          */
         @NameInMap("CallerSource")
         public String callerSource;
 
         /**
          * <p>The request source. Valid values: System User</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("CallerUid")
         public String callerUid;
 
         /**
          * <p>The name of the current step. If this parameter is left empty, the task is not started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec_task</p>
          */
         @NameInMap("CurrentStepName")
         public String currentStepName;
 
         /**
          * <p>The database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The end time of the task. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-03T12:06:17Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The instance ID. Example: rm-xxx.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf62br2491p5l****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name, which is a user-defined alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The type of the instance. Example: user instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The product. Example: rds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The task progress. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79.0</p>
          */
         @NameInMap("Progress")
         public Float progress;
 
         /**
          * <p>The reason why the current task was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The estimated amount of time remaining to complete the task. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
          * <p>The start time of the task. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-03T11:31:03Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the task.</p>
-         * <br>
-         * <p>*   Scheduled</p>
-         * <p>*   Running</p>
-         * <p>*   Succeed</p>
-         * <p>*   Failed</p>
-         * <p>*   Cancelling</p>
-         * <p>*   Canceled</p>
-         * <p>*   Waiting</p>
+         * <ul>
+         * <li>Scheduled</li>
+         * <li>Running</li>
+         * <li>Succeed</li>
+         * <li>Failed</li>
+         * <li>Cancelling</li>
+         * <li>Canceled</li>
+         * <li>Waiting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The task details provided in the form of a JSON string. The JSON string can be customized and extended to include additional information about the task. The details vary based on the task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;callerUid\&quot;:\&quot;test\&quot;}</p>
          */
         @NameInMap("TaskDetail")
         public String taskDetail;
 
         /**
-         * <p>The task ID in the t-\\*\\*\\* format.</p>
+         * <p>The task ID in the t-\<em>\</em>\* format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-83br18hloy3faf****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The task type or name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest_dispatch_cases</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The ID of the user to which the resources belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141345906006****</p>
          */
         @NameInMap("Uid")
         public String uid;

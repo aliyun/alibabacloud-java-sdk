@@ -12,30 +12,45 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of log files on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8EC669C-FC85-43D7-AF06-C3641626B37E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total size of log files. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2300</p>
      */
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
     /**
      * <p>The total number of log files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -96,36 +111,54 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     public static class DescribeLogBackupFilesResponseBodyItemsBinLogFile extends TeaModel {
         /**
          * <p>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
          */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
         /**
          * <p>The size of the log file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>788480</p>
          */
         @NameInMap("FileSize")
         public Long fileSize;
 
         /**
          * <p>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
          */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
         /**
-         * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-01T15:04:13Z</p>
          */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
         /**
-         * <p>The start time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-31T08:40Z</p>
          */
         @NameInMap("LogBeginTime")
         public String logBeginTime;
 
         /**
-         * <p>The end time of the log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-31T08:40Z</p>
          */
         @NameInMap("LogEndTime")
         public String logEndTime;

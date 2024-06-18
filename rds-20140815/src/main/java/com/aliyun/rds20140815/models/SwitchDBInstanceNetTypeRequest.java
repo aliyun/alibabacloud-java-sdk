@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class SwitchDBInstanceNetTypeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The prefix of the custom endpoint. The prefix must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter. A valid endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new**********</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
      * <p>The type of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**</p>
-     * <p>*   **ReadWriteSplitting**</p>
-     * <br>
+     * <ul>
+     * <li><strong>Normal</strong></li>
+     * <li><strong>ReadWriteSplitting</strong></li>
+     * </ul>
      * <p>By default, the system returns both types of endpoints.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("ConnectionStringType")
     public String connectionStringType;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1**************</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -44,7 +54,10 @@ public class SwitchDBInstanceNetTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the port that is used to connect to the instance. Valid values: **3001 to 3999**.</p>
+     * <p>The number of the port that is used to connect to the instance. Valid values: <strong>3001 to 3999</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public String port;

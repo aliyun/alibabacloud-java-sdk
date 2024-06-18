@@ -6,38 +6,48 @@ import com.aliyun.tea.*;
 public class SwitchDBInstanceHARequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The time when the switching takes effect. Valid values:</p>
-     * <br>
-     * <p>*   **Immediate**: The switching immediately takes effect.</p>
-     * <p>*   **MaintainTime**: The switching takes effect during the maintenance time.</p>
-     * <br>
-     * <p>Default value: **Immediate**.</p>
+     * <ul>
+     * <li><strong>Immediate</strong>: The switching immediately takes effect.</li>
+     * <li><strong>MaintainTime</strong>: The switching takes effect during the maintenance time.</li>
+     * </ul>
+     * <p>Default value: <strong>Immediate</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>Specifies whether to enable forcible switching. Valid values:</p>
-     * <br>
-     * <p>*   **Yes**</p>
-     * <p>*   **No**</p>
-     * <br>
-     * <p>Default value: **No**.</p>
+     * <ul>
+     * <li><strong>Yes</strong></li>
+     * <li><strong>No</strong></li>
+     * </ul>
+     * <p>Default value: <strong>No</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>No</p>
      */
     @NameInMap("Force")
     public String force;
 
     /**
      * <p>The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>349054</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

@@ -12,6 +12,9 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5414A4E5-4C36-4461-95FC-************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
     public static class DescribeRegionInfosResponseBodyRegionsRDSRegion extends TeaModel {
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

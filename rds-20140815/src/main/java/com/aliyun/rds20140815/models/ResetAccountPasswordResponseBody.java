@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ResetAccountPasswordResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;

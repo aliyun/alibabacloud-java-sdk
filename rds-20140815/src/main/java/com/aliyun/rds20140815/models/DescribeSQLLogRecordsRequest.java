@@ -6,39 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeSQLLogRecordsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the instance ID.</p>
-     * <br>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database. You can enter only one database name. If you specify this parameter, this operation returns the logs that are generated only for the specified database. If you do not specify this parameter, this operation returns the logs that are generated for all databases on the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Database</p>
      */
     @NameInMap("Database")
     public String database;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 15 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
+     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time must be less than 15 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2011-06-11T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>Specifies whether to generate an SQL audit log file or return SQL audit log entries. Valid values:</p>
-     * <br>
-     * <p>*   **File**: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the [DescribeSQLLogFiles](https://help.aliyun.com/document_detail/26295.html) operation to obtain the download URL of the SQL audit log file.</p>
-     * <p>*   **Stream** (default): If you set this parameter to Stream, this operation returns SQL audit log entries.</p>
-     * <br>
-     * <p>> If you set this parameter to **File**, only ApsaraDB RDS for MySQL instances that use local disks and ApsaraDB RDS for SQL Server instances are supported, and a maximum of 1 million log entries are returned.</p>
+     * <ul>
+     * <li><strong>File</strong>: If you set this parameter to File, this operation generates an SQL audit log file and returns only common response parameters. After you call this operation, you must call the DescribeSQLLogFiles operation to obtain the download URL of the SQL audit log file.</li>
+     * <li><strong>Stream</strong> (default): If you set this parameter to Stream, this operation returns SQL audit log entries.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set this parameter to <strong>File</strong>, only ApsaraDB RDS for MySQL instances that use local disks and ApsaraDB RDS for SQL Server instances are supported, and a maximum of one million log entries are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Stream</p>
      */
     @NameInMap("Form")
     public String form;
@@ -50,27 +65,37 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The page number. Pages start from 1.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The keyword that is used for the query.</p>
-     * <br>
-     * <p>*   When you call this operation and set the **Form** parameter to **File** to generate an audit file, you cannot filter log entries by keyword.</p>
-     * <p>*   You can specify up to 10 keywords. The keywords are evaluated by using the **AND** operator. Separate multiple keywords with spaces.</p>
-     * <p>*   If a field name in the specified SQL statement is enclosed in backquotes (\\`) and you want to use the field name as a keyword, you must enter the backquotes (\\`) as part of the field name. For example, if the field name is \\`id\\`, enter \\`id\\` instead of id.</p>
-     * <br>
-     * <p>>  After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters are evaluated by using the **OR** operator.</p>
+     * <ul>
+     * <li>When you call this operation and set the <strong>Form</strong> parameter to <strong>File</strong> to generate an audit file, you cannot filter log entries by keyword.</li>
+     * <li>You can specify up to 10 keywords. The keywords are evaluated by using the <strong>AND</strong> operator. Separate multiple keywords with spaces.</li>
+     * <li>If a field name in the specified SQL statement is enclosed in backquotes (\<code>) and you want to use the field name as a keyword, you must enter the backquotes (\\</code>) as part of the field name. For example, if the field name is \<code>id\\</code>, enter \<code>id\\</code> instead of id.</li>
+     * </ul>
+     * <blockquote>
+     * <p> After you enter a keyword, the system matches the keyword based on the <strong>Database</strong>, <strong>User</strong>, and <strong>QueryKeywords</strong> parameters. The parameters are evaluated by using the <strong>OR</strong> operator.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>table_name</p>
      */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
@@ -83,20 +108,28 @@ public class DescribeSQLLogRecordsRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the SQL statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25623548</p>
      */
     @NameInMap("SQLId")
     public Long SQLId;
 
     /**
-     * <p>The beginning of the time range to query. You can query data in the last 15 days before the current date. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
+     * <p>The beginning of the time range to query. You can query data in the last 15 days before the current date. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2011-06-01T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The username of the account. You can enter only one username. If you specify this parameter, this operation returns the logs that are generated only for the specified account. If you do not specify this parameter, this operation returns the logs that are generated for all accounts on the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("User")
     public String user;

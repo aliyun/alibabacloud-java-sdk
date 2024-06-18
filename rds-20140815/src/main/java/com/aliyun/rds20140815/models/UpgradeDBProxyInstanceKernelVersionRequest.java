@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
@@ -28,22 +33,33 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  If you set **UpgradeTime** to **SpecifyTime**, you must specify SwitchTime.</p>
+     * <p>The specific point in time when you want to perform the upgrade. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> If you set <strong>UpgradeTime</strong> to <strong>SpecifyTime</strong>, you must specify SwitchTime.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-10T13:15:12Z</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;
 
     /**
      * <p>The time when you want to upgrade the database proxy version of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **MaintainTime** (default): performs the upgrade during the maintenance window that you specified. For more information, see [Modify the maintenance window](https://help.aliyun.com/document_detail/610402.html).</p>
-     * <p>*   **Immediate**: performs the upgrade immediately.</p>
-     * <p>*   **SpecifyTime**: performs the upgrade at a specified point in time.</p>
-     * <br>
-     * <p>> *   **If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or SpecifyTime**.</p>
-     * <p>> *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.</p>
+     * <ul>
+     * <li><strong>MaintainTime</strong> (default): performs the upgrade during the maintenance window that you specified. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">Modify the maintenance window</a>.</li>
+     * <li><strong>Immediate</strong>: performs the upgrade immediately.</li>
+     * <li><strong>SpecifyTime</strong>: performs the upgrade at a specified point in time.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li><strong>If the instance runs MySQL, you can set this parameter to <strong>MaintainTime</strong>, <strong>Immediate</strong>, or SpecifyTime</strong>.</li>
+     * <li>If the instance runs PostgreSQL, you can set this parameter to <strong>MaintainTime</strong> or <strong>Immediate</strong>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>MaintainTime</p>
      */
     @NameInMap("UpgradeTime")
     public String upgradeTime;

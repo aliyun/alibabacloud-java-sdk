@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     /**
      * <p>The user who created the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1443*****9604</p>
      */
     @NameInMap("Creator")
     public String creator;
 
     /**
      * <p>The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-05-08T08:14:16Z</p>
      */
     @NameInMap("DeleteDate")
     public String deleteDate;
 
     /**
      * <p>The description of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description of the key</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5306d1b6-7fd3-42d9-9511-xxxxxxx</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
@@ -36,33 +48,49 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
 
     /**
      * <p>The status of the key. Valid values:</p>
-     * <br>
-     * <p>*   **Enabled**</p>
-     * <p>*   **Disabled**</p>
+     * <ul>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("EncryptionKeyStatus")
     public String encryptionKeyStatus;
 
     /**
      * <p>The purpose of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENCRYPT/DECRYPT</p>
      */
     @NameInMap("KeyUsage")
     public String keyUsage;
 
     /**
      * <p>The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-18T08:14:16Z</p>
      */
     @NameInMap("MaterialExpireTime")
     public String materialExpireTime;
 
     /**
      * <p>The source of the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun_KMS</p>
      */
     @NameInMap("Origin")
     public String origin;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3BC2768E-DEDA-40FC-BBE9-6B884F3626AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -155,75 +183,111 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public static class DescribeDBInstanceEncryptionKeyResponseBodyEncryptionKeyList extends TeaModel {
         /**
          * <p>The alias of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias/xxx</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The user who created the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1443*****9604</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
          * <p>The scheduled time at which the key is deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-08T08:14:16Z</p>
          */
         @NameInMap("DeleteDate")
         public String deleteDate;
 
         /**
          * <p>The description of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description of the key</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5306d1b6-7fd3-42d9-9511-xxxxxxx</p>
          */
         @NameInMap("EncryptionKey")
         public String encryptionKey;
 
         /**
          * <p>The status of the key. Valid values:</p>
-         * <br>
-         * <p>*   **Enabled**</p>
-         * <p>*   **Disabled**</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("EncryptionKeyStatus")
         public String encryptionKeyStatus;
 
         /**
          * <p>The type of the key. Valid values:</p>
-         * <br>
-         * <p>*   **CMK**</p>
-         * <p>*   **ServiceKey**</p>
+         * <ul>
+         * <li><strong>CMK</strong></li>
+         * <li><strong>ServiceKey</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceKey</p>
          */
         @NameInMap("KeyType")
         public String keyType;
 
         /**
          * <p>The purpose of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENCRYPT/DECRYPT</p>
          */
         @NameInMap("KeyUsage")
         public String keyUsage;
 
         /**
          * <p>The time at which the key expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-18T08:14:16Z</p>
          */
         @NameInMap("MaterialExpireTime")
         public String materialExpireTime;
 
         /**
          * <p>The source of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun_KMS</p>
          */
         @NameInMap("Origin")
         public String origin;
 
         /**
          * <p>The role of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Master**: primary instance</p>
-         * <p>*   **slave**: read-only instance</p>
+         * <ul>
+         * <li><strong>Master</strong>: primary instance</li>
+         * <li><strong>slave</strong>: read-only instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Master</p>
          */
         @NameInMap("UsedBy")
         public String usedBy;

@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class ModifyDBInstancePayTypeRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1842vmucoa5w874</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The billing method of the instance. The value is fixed as **Prepaid**, which indicates the subscription billing method.</p>
-     * <br>
+     * <p>The billing method of the instance. The value is fixed as <strong>Prepaid</strong>, which indicates the subscription billing method.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The renewal cycle of the instance.</p>
-     * <br>
-     * <p>*   **Year**</p>
-     * <p>*   **Month**</p>
-     * <br>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("Period")
     public String period;
@@ -36,9 +43,13 @@ public class ModifyDBInstancePayTypeRequest extends TeaModel {
 
     /**
      * <p>The subscription duration of the instance. Valid values:</p>
-     * <br>
-     * <p>*   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from 1 to 5.</p>
-     * <p>*   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from 1 to 11.</p>
+     * <ul>
+     * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 5.</li>
+     * <li>If you set the <strong>Period</strong> parameter to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 11.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;

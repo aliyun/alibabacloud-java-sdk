@@ -6,23 +6,26 @@ import com.aliyun.tea.*;
 public class CreateDBNodesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze450g4ctg6t****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The details of the node.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBNode")
@@ -36,6 +39,9 @@ public class CreateDBNodesRequest extends TeaModel {
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -118,22 +124,29 @@ public class CreateDBNodesRequest extends TeaModel {
     public static class CreateDBNodesRequestDBNode extends TeaModel {
         /**
          * <p>The specification information of the node.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n2.medium.xc</p>
          */
         @NameInMap("classCode")
         public String classCode;
 
         /**
          * <p>The vSwitch ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1sxxsodv28ey5dl****</p>
          */
         @NameInMap("vswitchId")
         public String vswitchId;
 
         /**
          * <p>The ID of the zone in which the node is deployed.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-a</p>
          */
         @NameInMap("zoneId")
         public String zoneId;

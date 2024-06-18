@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeQuickSaleConfigRequest extends TeaModel {
     /**
      * <p>The product code. Valid values:</p>
-     * <br>
-     * <p>*   rds: The instance is a subscription instance.</p>
-     * <p>*   bards: The instance is a pay-as-you-go instance.</p>
+     * <ul>
+     * <li>rds: The instance is a subscription instance.</li>
+     * <li>bards: The instance is a pay-as-you-go instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("Commodity")
     public String commodity;
 
     /**
      * <p>The database engine of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **SQLServer**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **MariaDB**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>MariaDB</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

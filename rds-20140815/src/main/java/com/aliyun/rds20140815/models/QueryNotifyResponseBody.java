@@ -12,6 +12,9 @@ public class QueryNotifyResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94CB8D93-017A-5AE7-A118-6E0F89D93C0A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,101 +43,144 @@ public class QueryNotifyResponseBody extends TeaModel {
     public static class QueryNotifyResponseBodyDataNotifyItemList extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22973492**********</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
-         * <p>Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notification as confirmed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>Indicates whether the notification has been confirmed. You can call the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notification as confirmed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConfirmFlag")
         public Boolean confirmFlag;
 
         /**
-         * <p>The UID of the contact who called the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.</p>
-         * <br>
-         * <p>The value **0** indicates that the notification is automatically confirmed by the system.</p>
+         * <p>The UID of the contact who called the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.</p>
+         * <p>The value <strong>0</strong> indicates that the notification is automatically confirmed by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Confirmor")
         public Long confirmor;
 
         /**
          * <p>The time when the notification was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-21T02:04:04Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
          * <p>The time when the notification was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-21T02:10:47Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103499</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The number of times that repeatedly sent notifications are blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IdempotentCount")
         public String idempotentCount;
 
         /**
          * <p>This parameter ensures the idempotence of the notification and prevents the notification from being repeatedly sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         @NameInMap("IdempotentId")
         public String idempotentId;
 
         /**
          * <p>The level of the notification. Valid values:</p>
-         * <br>
-         * <p>*   **help**</p>
-         * <p>*   **success**</p>
-         * <p>*   **warning**</p>
-         * <p>*   **error**</p>
-         * <p>*   **loading**</p>
-         * <p>*   **notice**</p>
+         * <ul>
+         * <li><strong>help</strong></li>
+         * <li><strong>success</strong></li>
+         * <li><strong>warning</strong></li>
+         * <li><strong>error</strong></li>
+         * <li><strong>loading</strong></li>
+         * <li><strong>notice</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The element in the notification template. This parameter is a JSON string. Fields in the JSON string vary based on the value of the **TemplateName** parameter.</p>
-         * <br>
-         * <p>*   If the **TemplateName** parameter is **RenewalRecommend**, the JSON string contains the following fields:</p>
-         * <br>
-         * <p>    *   **instanceName**: the ID of the instance that is about to expire</p>
-         * <p>    *   **reservedTime**: the remaining validity period of the instance in days</p>
-         * <br>
-         * <p>*   If the **TemplateName** parameter is **InstanceCreateFailed**, the JSON string contains the following fields:</p>
-         * <br>
-         * <p>    *   **orderId**: the ID of the order to purchase the instance</p>
-         * <p>    *   **reason**: the cause of the instance creation failure</p>
+         * <p>The element in the notification template. This parameter is a JSON string. Fields in the JSON string vary based on the value of the <strong>TemplateName</strong> parameter.</p>
+         * <ul>
+         * <li><p>If the <strong>TemplateName</strong> parameter is <strong>RenewalRecommend</strong>, the JSON string contains the following fields:</p>
+         * <ul>
+         * <li><strong>instanceName</strong>: the ID of the instance that is about to expire</li>
+         * <li><strong>reservedTime</strong>: the remaining validity period of the instance in days</li>
+         * </ul>
+         * </li>
+         * <li><p>If the <strong>TemplateName</strong> parameter is <strong>InstanceCreateFailed</strong>, the JSON string contains the following fields:</p>
+         * <ul>
+         * <li><strong>orderId</strong>: the ID of the order to purchase the instance</li>
+         * <li><strong>reason</strong>: the cause of the instance creation failure</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;orderId\&quot;:21466**********}</p>
          */
         @NameInMap("NotifyElement")
         public String notifyElement;
 
         /**
          * <p>The template of the notification. Valid values:</p>
-         * <br>
-         * <p>*   **RenewalRecommend**: The template that is used to notify of renewal suggestions.</p>
-         * <p>*   **InstanceCreateFailed**: The template that is used to notify that an instance fails to be created and is refunded.</p>
+         * <ul>
+         * <li><strong>RenewalRecommend</strong>: The template that is used to notify of renewal suggestions.</li>
+         * <li><strong>InstanceCreateFailed</strong>: The template that is used to notify that an instance fails to be created and is refunded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceCreateFailed</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The type of the notification. Valid values:</p>
-         * <br>
-         * <p>*   **Sell**: sales notification</p>
-         * <p>*   **Operation**: O\\&M notification</p>
-         * <p>*   **Promotion**: promotion notification</p>
+         * <ul>
+         * <li><strong>Sell</strong>: sales notification</li>
+         * <li><strong>Operation</strong>: O\&amp;M notification</li>
+         * <li><strong>Promotion</strong>: promotion notification</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Sell</p>
          */
         @NameInMap("Type")
         public String type;
@@ -251,18 +297,27 @@ public class QueryNotifyResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalRecordCount")
         public Integer totalRecordCount;

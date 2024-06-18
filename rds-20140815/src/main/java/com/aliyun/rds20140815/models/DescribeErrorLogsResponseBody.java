@@ -12,24 +12,36 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of error logs on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98504E07-BB0E-40FC-B152-E4882615812C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -81,13 +93,19 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
 
     public static class DescribeErrorLogsResponseBodyItemsErrorLog extends TeaModel {
         /**
-         * <p>The time when the error log entry was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the error log entry was generated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-05-30T12:11:04Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The error log information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spid52 DBCC TRACEON 3499, server process ID (SPID) 52. This is an informational message only; no user action is required</p>
          */
         @NameInMap("ErrorInfo")
         public String errorInfo;

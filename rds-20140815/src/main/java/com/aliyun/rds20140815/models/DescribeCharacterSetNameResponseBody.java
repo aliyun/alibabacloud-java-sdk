@@ -12,12 +12,18 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
 
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

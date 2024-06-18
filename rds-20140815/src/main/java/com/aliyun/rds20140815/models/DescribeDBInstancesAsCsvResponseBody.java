@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the fields in **DBInstanceAttribute**.</p>
+     * <p>An array that consists of the fields in <strong>DBInstanceAttribute</strong>.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancesAsCsvResponseBodyItems items;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A444291****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,269 +62,398 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
     public static class DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute extends TeaModel {
         /**
          * <p>The maximum number of accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("AccountMaxQuantity")
         public Integer accountMaxQuantity;
 
         /**
          * <p>The type of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>super</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>The service availability of the instance in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AvailabilityValue")
         public String availabilityValue;
 
         /**
          * <p>The category of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The connection mode of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Performance**: standard mode.</p>
-         * <p>*   **Safety**: safe mode.</p>
+         * <ul>
+         * <li><strong>Performance</strong>: standard mode.</li>
+         * <li><strong>Safety</strong>: enhanced mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Performance</p>
          */
         @NameInMap("ConnectionMode")
         public String connectionMode;
 
         /**
-         * <p>The internal endpoint of the instance.</p>
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-05-30T12:11:04Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DBInstanceCPU")
         public String DBInstanceCPU;
 
         /**
          * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mys2.small</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
         /**
          * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s</p>
          */
         @NameInMap("DBInstanceClassType")
         public String DBInstanceClassType;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The memory capacity of the instance. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         @NameInMap("DBInstanceMemory")
         public Long DBInstanceMemory;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Internet**: Internet</p>
-         * <p>*   **Intranet**: internal network</p>
+         * <ul>
+         * <li><strong>Internet</strong></li>
+         * <li><strong>Intranet</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
         /**
          * <p>The storage capacity of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
         /**
-         * <p>The type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Primary**: primary instance</p>
-         * <p>*   **Readonly**: read-only instance</p>
-         * <p>*   **Guard**: disaster recovery instance</p>
-         * <p>*   **Temp**: temporary instance</p>
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><strong>Primary</strong>: primary instance</li>
+         * <li><strong>ReadOnly</strong>: read-only instance</li>
+         * <li><strong>Guard</strong>: disaster recovery instance</li>
+         * <li><strong>Temp</strong>: temporary instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
          * <p>The maximum number of databases that can be created on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("DBMaxQuantity")
         public Integer DBMaxQuantity;
 
         /**
          * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The engine version of the instance.</p>
+         * <p>The engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-27T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
-         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         @NameInMap("ExportKey")
         public String exportKey;
 
         /**
-         * <p>The ID of the disaster recovery instance that is attached to the instance.</p>
+         * <p>The ID of the disaster recovery instance that is attached to the primary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf64zsuxxxxxxxxxx</p>
          */
         @NameInMap("GuardDBInstanceId")
         public String guardDBInstanceId;
 
         /**
-         * <p>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
+         * <p>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         @NameInMap("IncrementSourceDBInstanceId")
         public String incrementSourceDBInstanceId;
 
         /**
          * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
         /**
          * <p>The lock mode of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
         /**
          * <p>The reason why the instance was locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_expired</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
-         * <p>The maintenance window of the instance. The time is displayed in UTC. Take note that the maintenance window that is displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.</p>
+         * <p>The maintenance window of the instance. The time follows the ISO 8601 standard and is displayed in UTC. In the ApsaraDB RDS console, the maintenance window is displayed in UTC+8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00Z-02:00Z</p>
          */
         @NameInMap("MaintainTime")
         public String maintainTime;
 
         /**
-         * <p>The ID of the primary instance.</p>
+         * <p>The primary instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxxxxx</p>
          */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
         /**
          * <p>The maximum number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>The maximum number of I/O requests per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
         /**
          * <p>The billing method of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The port that is used to connect to the instance over an internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The latency of data replication from the primary instance to the read-only instance. This parameter is valid for read-only instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReadDelayTime")
         public String readDelayTime;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP addresses in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.xx.xx.xx</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
         /**
-         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         * <p>A deprecated parameter. You do not need to specify this parameter.</p>
          */
         @NameInMap("SlaveZones")
         public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones slaveZones;
 
         /**
          * <p>N/A.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No</p>
          */
         @NameInMap("SupportUpgradeAccountType")
         public String supportUpgradeAccountType;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The ID of the temporary instance that is attached to the instance.</p>
+         * <p>The ID of the temporary instance that is attached to the primary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf64zsuxxxxxxxxxx</p>
          */
         @NameInMap("TempDBInstanceId")
         public String tempDBInstanceId;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6adz52c2pxxxxxxxxxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6f7l4fg90xxxxxxxxxx</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

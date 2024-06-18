@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5*******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -24,24 +30,36 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of SQL log reports on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4DBB1BB0-E5D8-4D41-B1C9-142364DB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -110,132 +128,198 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public static class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord extends TeaModel {
         /**
          * <p>The name of the application that is connected to the instance.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The hostname of the client.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("ClientHostName")
         public String clientHostName;
 
         /**
          * <p>The duration during which the SQL statement is processed by the CPU. Unit: milliseconds.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0.002</p>
          */
         @NameInMap("CpuTime")
         public Long cpuTime;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The time when the execution of the SQL statement started. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the execution of the SQL statement started. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-18T01:40:44Z</p>
          */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
         /**
          * <p>The name and IP address of the client that is connected to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx[xxx] @  [1xx.xxx.xxx.xx]</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The number of rows that are affected by the last SQL statement.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("LastRowsAffectedCount")
         public Long lastRowsAffectedCount;
 
         /**
          * <p>The lock duration of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LockTimes")
         public Long lockTimes;
 
         /**
          * <p>The number of logical reads.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>383</p>
          */
         @NameInMap("LogicalIORead")
         public Long logicalIORead;
 
         /**
          * <p>The number of parsed rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParseRowCounts")
         public Long parseRowCounts;
 
         /**
          * <p>The number of physical reads.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("PhysicalIORead")
         public Long physicalIORead;
 
         /**
          * <p>The execution duration of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001</p>
          */
         @NameInMap("QueryTimeMS")
         public Long queryTimeMS;
 
         /**
          * <p>The execution duration of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("QueryTimes")
         public Long queryTimes;
 
         /**
          * <p>The number of rows returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
         /**
          * <p>The number of affected rows.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("RowsAffectedCount")
         public Long rowsAffectedCount;
 
         /**
          * <p>The unique ID of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U2FsdGVk****</p>
          */
         @NameInMap("SQLHash")
         public String SQLHash;
 
         /**
          * <p>The details of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select sleep(2)</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The name of the user.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The number of I/O writes.</p>
-         * <br>
-         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("WriteIOCount")
         public Long writeIOCount;

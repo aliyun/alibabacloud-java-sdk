@@ -6,60 +6,89 @@ import com.aliyun.tea.*;
 public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Disable**</p>
-     * <p>*   **Enable**</p>
+     * <ul>
+     * <li><strong>Disable</strong></li>
+     * <li><strong>Enable</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
 
     /**
      * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
 
     /**
-     * <p>The policy that is used to save the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that all cross-region backup files are saved.</p>
+     * <p>The policy that is used to save the cross-region backup files of the instance. Default value: <strong>1</strong>. The value 1 indicates that all cross-region backup files are saved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CrossBackupType")
     public String crossBackupType;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Disable**</p>
-     * <p>*   **Enable**</p>
+     * <ul>
+     * <li><strong>Disable</strong></li>
+     * <li><strong>Enable</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
 
     /**
-     * <p>The region ID of the source instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
+     * <p>The region ID of the source instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50A6059D-6DBB-46C6-A851-1EE93C9013CF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The policy that is used to retain the cross-region backup files of the instance. Default value: **1**. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+     * <p>The policy that is used to retain the cross-region backup files of the instance. Default value: <strong>1</strong>. The value 1 indicates that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RetentType")
     public Integer retentType;
 
     /**
-     * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.</p>
+     * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: <strong>7 to 1825</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("Retention")
     public Integer retention;

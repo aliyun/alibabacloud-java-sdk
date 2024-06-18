@@ -6,34 +6,51 @@ import com.aliyun.tea.*;
 public class ModifyDatabaseConfigRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4nnu1my39qr8****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The database name.</p>
-     * <br>
-     * <p>>  You can specify only one database name.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can specify only one database name.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDB</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The name of the database property that you want to modify.</p>
-     * <br>
+     * <p>The database property that you want to modify.</p>
+     * <ul>
+     * <li><strong>If you want to modify a property of the database</strong>, set this parameter to the name of the database property.</li>
+     * <li><strong>If you want to archive data from the database to an OSS bucket</strong>, specify the database status. If you set this parameter to <code>covert_online_db_to_cold_storage</code>, the system converts an online database to a cold storage database. If you set this parameter to <code>convert_cold_storage_db_to_online</code>, the system converts a cold storage database to an online database.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>compatibility_level</p>
      */
     @NameInMap("DatabasePropertyName")
     public String databasePropertyName;
 
     /**
      * <p>The value of the database property that you want to modify.</p>
-     * <br>
+     * <ul>
+     * <li><strong>If you want to modify a property of the database</strong>, set this parameter to the property value.</li>
+     * <li><strong>If you want to archive data from the database to an OSS bucket</strong>, set this parameter to <strong>1</strong>. The system converts a database to a cold storage database or an online database.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150</p>
      */
     @NameInMap("DatabasePropertyValue")
     public String databasePropertyValue;

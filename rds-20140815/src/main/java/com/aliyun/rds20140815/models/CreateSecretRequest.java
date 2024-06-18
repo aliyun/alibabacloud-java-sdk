@@ -6,36 +6,50 @@ import com.aliyun.tea.*;
 public class CreateSecretRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz*****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-sdfljk123***</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>users</p>
      */
     @NameInMap("DbNames")
     public String dbNames;
 
     /**
      * <p>The description of the credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The engine of the database.</p>
-     * <br>
-     * <p>> Only MySQL is supported.</p>
-     * <br>
+     * <blockquote>
+     * <p>Only MySQL is supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -45,24 +59,30 @@ public class CreateSecretRequest extends TeaModel {
 
     /**
      * <p>The password that is used to access the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxypivk***</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -75,14 +95,19 @@ public class CreateSecretRequest extends TeaModel {
 
     /**
      * <p>The name of the credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Foo</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>The username that is used to access the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_jack</p>
      */
     @NameInMap("Username")
     public String username;

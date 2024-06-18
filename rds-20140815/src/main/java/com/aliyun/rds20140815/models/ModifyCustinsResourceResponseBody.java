@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyCustinsResourceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6B5A6839-31A7-58D4-9F96-772BFAFD1CB5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>507******</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

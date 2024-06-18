@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateYouhuiForOrderResponseBody extends TeaModel {
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0688F1D2-CDA8-5617-A43C-ADAC61D80D43</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The coupon ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>221201******</p>
      */
     @NameInMap("YouhuiId")
     public String youhuiId;

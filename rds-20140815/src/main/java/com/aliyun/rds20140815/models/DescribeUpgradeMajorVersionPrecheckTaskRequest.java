@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp1c808s731l****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,20 +22,25 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Valid values: any non-zero positive integer. Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   30 (default)</p>
-     * <p>*   50</p>
-     * <p>*   100</p>
+     * <ul>
+     * <li>30 (default)</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -46,12 +53,18 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
 
     /**
      * <p>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12.0</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
     /**
-     * <p>The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.</p>
+     * <p>The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the <strong>TaskId</strong> parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>416980000</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class ReleaseInstanceConnectionRequest extends TeaModel {
     /**
      * <p>The public endpoint of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxx.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **0**: virtual private cloud (VPC)</p>
-     * <p>*   **1**: classic network</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>1</strong>: classic network</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;

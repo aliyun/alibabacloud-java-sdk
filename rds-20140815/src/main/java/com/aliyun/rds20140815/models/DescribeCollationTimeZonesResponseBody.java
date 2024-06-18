@@ -12,6 +12,9 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EAED246-DB18-4C8D-9EB5-C319626F2A77</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
     public static class DescribeCollationTimeZonesResponseBodyCollationTimeZonesCollationTimeZone extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Kabul</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The offset of the UTC time. The offset is in the following format: (UTC+*HH:mm*).</p>
+         * <p>The offset of the UTC time. The offset is in the following format: (UTC+<em>HH:mm</em>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(UTC+04:30)</p>
          */
         @NameInMap("StandardTimeOffset")
         public String standardTimeOffset;
 
         /**
          * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Afghanistan Standard Time</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;

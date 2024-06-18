@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class ReceiveDBInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the ID of the primary instance.</p>
-     * <br>
+     * <p>The ID of the primary instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID of the primary instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the disaster recovery instance. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the ID of the disaster recovery instance.</p>
-     * <br>
+     * <p>The ID of the disaster recovery instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID of the disaster recovery instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-tr2whku*****</p>
      */
     @NameInMap("GuardDBInstanceId")
     public String guardDBInstanceId;

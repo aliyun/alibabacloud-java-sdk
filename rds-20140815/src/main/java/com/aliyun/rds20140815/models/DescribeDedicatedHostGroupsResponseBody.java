@@ -12,6 +12,9 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB44DC0A-7E77-442A-97A9-C6418694CB22</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,169 +62,251 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
     public static class DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups extends TeaModel {
         /**
          * <p>The policy based on which the system allocates resources in the dedicated cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Evenly**: The system evenly allocates the resources to all the hosts in the dedicated cluster.</p>
-         * <p>*   **Intensively**: The system preferentially allocates the resources to the heavily loaded hosts in the dedicated cluster.</p>
+         * <ul>
+         * <li><strong>Evenly</strong>: The system evenly allocates the resources to all the hosts in the dedicated cluster.</li>
+         * <li><strong>Intensively</strong>: The system preferentially allocates the resources to the heavily loaded hosts in the dedicated cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Evenly</p>
          */
         @NameInMap("AllocationPolicy")
         public String allocationPolicy;
 
         /**
          * <p>The ID of the bastion host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bastionhost-cn-m7xxxxxxxx</p>
          */
         @NameInMap("BastionInstanceId")
         public String bastionInstanceId;
 
         /**
          * <p>The percentage of allocated cores in the dedicated cluster. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("CpuAllocateRation")
         public Float cpuAllocateRation;
 
         /**
          * <p>The number of allocated cores in the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("CpuAllocatedAmount")
         public Float cpuAllocatedAmount;
 
         /**
-         * <p>The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
+         * <p>The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see <a href="https://help.aliyun.com/document_detail/182328.html">Manage a dedicated cluster</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("CpuAllocationRatio")
         public Integer cpuAllocationRatio;
 
         /**
          * <p>The timestamp when the dedicated cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571125370000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The type of storage media that is used for the hosts in the dedicated cluster. Valid values:</p>
-         * <br>
-         * <p>*   **dhg_cloud_ssd**: cloud disks</p>
-         * <p>*   **dhg_local_ssd**: local disks</p>
+         * <ul>
+         * <li><strong>dhg_cloud_ssd</strong>: cloud disks</li>
+         * <li><strong>dhg_local_ssd</strong>: local disks</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg_cloud_ssd</p>
          */
         @NameInMap("DedicatedHostCountGroupByHostType")
         public java.util.Map<String, ?> dedicatedHostCountGroupByHostType;
 
         /**
          * <p>The name of the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testHostGroup</p>
          */
         @NameInMap("DedicatedHostGroupDesc")
         public String dedicatedHostGroupDesc;
 
         /**
          * <p>The ID of the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-7a9xxxxxxxx</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
         /**
          * <p>The percentage of allocated disk space in the dedicated cluster. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.49</p>
          */
         @NameInMap("DiskAllocateRation")
         public Float diskAllocateRation;
 
         /**
          * <p>The amount of allocated disk space in the dedicated cluster. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("DiskAllocatedAmount")
         public Float diskAllocatedAmount;
 
         /**
-         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
+         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see <a href="https://help.aliyun.com/document_detail/182328.html">Manage a dedicated cluster</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("DiskAllocationRatio")
         public Integer diskAllocationRatio;
 
         /**
          * <p>The amount of used disk space in the dedicated cluster. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("DiskUsedAmount")
         public Float diskUsedAmount;
 
         /**
          * <p>The disk usage of the dedicated cluster. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DiskUtility")
         public Float diskUtility;
 
         /**
          * <p>The database engine of the instances in the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The total number of hosts in the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("HostNumber")
         public Integer hostNumber;
 
         /**
          * <p>The policy that is used to handle host failures. Valid values:</p>
-         * <br>
-         * <p>*   **Auto**: The system automatically replaces faulty hosts.</p>
-         * <p>*   **Manual**: You must manually replace faulty hosts.</p>
+         * <ul>
+         * <li><strong>Auto</strong>: The system automatically replaces faulty hosts.</li>
+         * <li><strong>Manual</strong>: You must manually replace faulty hosts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         @NameInMap("HostReplacePolicy")
         public String hostReplacePolicy;
 
         /**
          * <p>The total number of instances in the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("InstanceNumber")
         public Integer instanceNumber;
 
         /**
          * <p>The percentage of allocated memory space in the dedicated cluster. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33.7</p>
          */
         @NameInMap("MemAllocateRation")
         public Float memAllocateRation;
 
         /**
          * <p>The amount of allocated memory space in the dedicated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16384</p>
          */
         @NameInMap("MemAllocatedAmount")
         public Float memAllocatedAmount;
 
         /**
-         * <p>The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](https://help.aliyun.com/document_detail/182328.html).</p>
+         * <p>The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see <a href="https://help.aliyun.com/document_detail/182328.html">Manage a dedicated cluster</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("MemAllocationRatio")
         public Integer memAllocationRatio;
 
         /**
          * <p>The amount of used memory space in the dedicated cluster. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MemUsedAmount")
         public Float memUsedAmount;
 
         /**
          * <p>The memory usage of the dedicated cluster. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MemUtility")
         public Float memUtility;
 
         /**
          * <p>Indicates whether the feature that allows you to have the OS permissions on the host is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **0** or **null**: The permissions cannot be granted.</p>
-         * <p>*   **1**: The permissions can be granted.</p>
-         * <p>*   **3**: The permissions have been granted.</p>
+         * <ul>
+         * <li><strong>0</strong> or <strong>null</strong>: The permissions cannot be granted.</li>
+         * <li><strong>1</strong>: The permissions can be granted.</li>
+         * <li><strong>3</strong>: The permissions have been granted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("OpenPermission")
         public String openPermission;
 
         /**
-         * <p>The name and ID of the dedicated cluster. The value consists of **DedicatedHostGroupDesc** and **DedicatedHostGroupId**. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.</p>
+         * <p>The name and ID of the dedicated cluster. The value consists of <strong>DedicatedHostGroupDesc</strong> and <strong>DedicatedHostGroupId</strong>. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testHostGroup/dhg-7a9xxxxxxxx</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the dedicated cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1oxxxxxx</p>
          */
         @NameInMap("VPCId")
         public String VPCId;

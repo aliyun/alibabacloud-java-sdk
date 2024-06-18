@@ -6,37 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable fuzzy search. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("FuzzySearch")
     public Boolean fuzzySearch;
 
     /**
      * <p>The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxRecordsPerPage")
     public Integer maxRecordsPerPage;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyhigxskzysy</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -49,6 +63,9 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
 
     /**
      * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>template</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

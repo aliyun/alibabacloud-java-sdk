@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RevokeOperatorPermissionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>842B73C8-5776-4BD9-9872-69C8C46DD7D3</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceSSLResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>777C4593-8053-427B-99E2-105593277CAB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

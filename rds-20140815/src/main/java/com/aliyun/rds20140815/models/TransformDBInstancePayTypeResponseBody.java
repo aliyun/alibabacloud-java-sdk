@@ -6,35 +6,52 @@ import com.aliyun.tea.*;
 public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     /**
      * <p>The payment type.</p>
-     * <br>
-     * <p>*   Valid value if the new billing method is pay-as-you-go: POSTPAY</p>
-     * <p>*   Valid value if the new billing method is subscription: PREPAY</p>
+     * <ul>
+     * <li>Valid value if the new billing method is pay-as-you-go: POSTPAY</li>
+     * <li>Valid value if the new billing method is subscription: PREPAY</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The expiration time.</p>
-     * <br>
-     * <p>> If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.</p>
+     * <blockquote>
+     * <p>If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-04-20T10:00:00Z</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>205157600280623</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E6E09DE-5B12-4BFF-A55E-1C86EDE06D9A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

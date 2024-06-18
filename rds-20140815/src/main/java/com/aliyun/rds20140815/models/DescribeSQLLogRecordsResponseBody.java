@@ -12,24 +12,36 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of SQL audit log entries on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
@@ -82,48 +94,72 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
     public static class DescribeSQLLogRecordsResponseBodyItemsSQLRecord extends TeaModel {
         /**
          * <p>The username of the account that is recorded in the SQL audit log entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accounttest</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-06-11T15:00:23Z</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The IP address of the client that is connected to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.121</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The number of SQL audit log entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update test.zxb set id=0 limit 1</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1025865428</p>
          */
         @NameInMap("ThreadID")
         public String threadID;
 
         /**
          * <p>The execution duration of the SQL statement. Unit: microseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;

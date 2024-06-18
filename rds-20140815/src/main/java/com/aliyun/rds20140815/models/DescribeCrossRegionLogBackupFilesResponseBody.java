@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-15T12:10:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -24,38 +30,55 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of cross-region backup files on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAC241E8-28E6-49DA-BFB0-B2DD090885C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-30T12:10:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -140,60 +163,90 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     public static class DescribeCrossRegionLogBackupFilesResponseBodyItemsItem extends TeaModel {
         /**
          * <p>The ID of the destination region within which the cross-region backup file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("CrossBackupRegion")
         public String crossBackupRegion;
 
         /**
          * <p>The external URL from which you can download the cross-region log backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx</a></p>
          */
         @NameInMap("CrossDownloadLink")
         public String crossDownloadLink;
 
         /**
          * <p>The internal URL from which you can download the cross-region log backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx</a></p>
          */
         @NameInMap("CrossIntranetDownloadLink")
         public String crossIntranetDownloadLink;
 
         /**
          * <p>The ID of the cross-region log backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14567</p>
          */
         @NameInMap("CrossLogBackupId")
         public Integer crossLogBackupId;
 
         /**
          * <p>The size of the cross-region log backup file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5312836</p>
          */
         @NameInMap("CrossLogBackupSize")
         public Long crossLogBackupSize;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8161055</p>
          */
         @NameInMap("InstanceId")
         public Integer instanceId;
 
         /**
-         * <p>The time when the URL expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the URL expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-30T15:00:00Z</p>
          */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
         /**
-         * <p>The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-30T12:10:00Z</p>
          */
         @NameInMap("LogBeginTime")
         public String logBeginTime;
 
         /**
-         * <p>The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-30T20:10:00Z</p>
          */
         @NameInMap("LogEndTime")
         public String logEndTime;
 
         /**
          * <p>The name of the cross-region log backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou_rm-bpxxxxx_7198739_mysql-bin.000230</p>
          */
         @NameInMap("LogFileName")
         public String logFileName;

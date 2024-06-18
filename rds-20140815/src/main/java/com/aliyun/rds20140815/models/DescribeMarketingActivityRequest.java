@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeMarketingActivityRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20725049</p>
      */
     @NameInMap("AliUid")
     public Long aliUid;
 
     /**
-     * <p>*   China site: 26842</p>
-     * <p>*   International site: 26888</p>
+     * <ul>
+     * <li>China site: 26842</li>
+     * <li>International site: 26888</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>26842</p>
      */
     @NameInMap("Bid")
     public String bid;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,15 +39,20 @@ public class DescribeMarketingActivityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -50,8 +65,10 @@ public class DescribeMarketingActivityRequest extends TeaModel {
 
     /**
      * <p>The service name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>series</p>
      */
     @NameInMap("UpgradeCode")
     public String upgradeCode;

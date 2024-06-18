@@ -12,6 +12,9 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90496720-2319-42A8-87CD-FCE4DF95EBED</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ModifyDBInstanceEndpointAddressResponseBody extends TeaModel {
     public static class ModifyDBInstanceEndpointAddressResponseBodyData extends TeaModel {
         /**
          * <p>The endpoint ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
          */
         @NameInMap("DBInstanceEndpointId")
         public String DBInstanceEndpointId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

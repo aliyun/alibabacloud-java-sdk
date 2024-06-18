@@ -12,37 +12,55 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2E94301-D07F-4457-9B49-6AA2BB388C85</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-     * <br>
-     * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+     * <p>The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <blockquote>
+     * <p> This parameter is returned only for instances that run SQL Server.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-06T11:00:00Z</p>
      */
     @NameInMap("SystemAdminAccountFirstActivationTime")
     public String systemAdminAccountFirstActivationTime;
 
     /**
      * <p>Indicates whether the system admin account was enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The system admin account was enabled.</p>
-     * <p>*   **false**: The system admin account was disabled.</p>
-     * <br>
-     * <p>>  The [system admin account](https://help.aliyun.com/document_detail/170736.html) is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
+     * <ul>
+     * <li><strong>true</strong>: The system admin account was enabled.</li>
+     * <li><strong>false</strong>: The system admin account was disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The <a href="https://help.aliyun.com/document_detail/170736.html">system admin account</a> is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("SystemAdminAccountStatus")
     public String systemAdminAccountStatus;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -103,24 +121,34 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
         /**
          * <p>The type of the permissions. Valid values:</p>
-         * <br>
-         * <p>*   **ReadWrite**: read and write permissions.</p>
-         * <p>*   **ReadOnly**: read-only permissions.</p>
-         * <p>*   **DDLOnly**: DDL-only permissions.</p>
-         * <p>*   **DMLOnly**: DML-only permissions.</p>
-         * <p>*   **Custom**: custom permissions. You can modify the permissions of the account by using SQL commands.</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: read and write permissions.</li>
+         * <li><strong>ReadOnly</strong>: read-only permissions.</li>
+         * <li><strong>DDLOnly</strong>: DDL-only permissions.</li>
+         * <li><strong>DMLOnly</strong>: DML-only permissions.</li>
+         * <li><strong>Custom</strong>: custom permissions. You can modify the permissions of the account by using SQL commands.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
         /**
-         * <p>The permissions that are granted to the account. For more information, see [Account permissions](https://help.aliyun.com/document_detail/146395.html).</p>
+         * <p>The permissions that are granted to the account. For more information, see <a href="https://help.aliyun.com/document_detail/146395.html">Account permissions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT,INSERT</p>
          */
         @NameInMap("AccountPrivilegeDetail")
         public String accountPrivilegeDetail;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("DBName")
         public String DBName;
@@ -178,70 +206,102 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccount extends TeaModel {
         /**
          * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test account</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
         /**
          * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The status of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Unavailable**</p>
-         * <p>*   **Available**</p>
+         * <ul>
+         * <li><strong>Unavailable</strong></li>
+         * <li><strong>Available</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
          * <p>The type of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: standard account</p>
-         * <p>*   **Super**: privileged account</p>
-         * <p>*   **Sysadmin**: system admin account, which is supported only for instances running SQL Server</p>
+         * <ul>
+         * <li><strong>Normal</strong>: standard account</li>
+         * <li><strong>Super</strong>: privileged account</li>
+         * <li><strong>Sysadmin</strong>: system admin account, which is supported only for instances running SQL Server</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>Indicates whether the account has the row-level security (RLS) permissions. Valid values:</p>
-         * <br>
-         * <p>*   **t**: The account has the RLS permissions.</p>
-         * <p>*   **f**: The account does not have the RLS permissions.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <ul>
+         * <li><strong>t</strong>: The account has the RLS permissions.</li>
+         * <li><strong>f</strong>: The account does not have the RLS permissions.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>f</p>
          */
         @NameInMap("BypassRLS")
         public String bypassRLS;
 
         /**
          * <p>Indicates whether the account has the permissions to create databases. Valid values:</p>
-         * <br>
-         * <p>*   **t**: The account has the permissions to create databases.</p>
-         * <p>*   **f**: The account does not have the permissions to create databases.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <ul>
+         * <li><strong>t</strong>: The account has the permissions to create databases.</li>
+         * <li><strong>f</strong>: The account does not have the permissions to create databases.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>t</p>
          */
         @NameInMap("CreateDB")
         public String createDB;
 
         /**
          * <p>Indicates whether the account has the permissions to create roles. Valid values:</p>
-         * <br>
-         * <p>*   **t**: The account has the permissions to create roles.</p>
-         * <p>*   **f**: The account does not have the permissions to create roles.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <ul>
+         * <li><strong>t</strong>: The account has the permissions to create roles.</li>
+         * <li><strong>f</strong>: The account does not have the permissions to create roles.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>t</p>
          */
         @NameInMap("CreateRole")
         public String createRole;
 
         /**
          * <p>The ID of the instance to which the account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5*****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -254,32 +314,46 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The number of databases that are managed by the account exceeds the upper limit.</p>
-         * <p>*   **0**: The number of databases that are managed by the account does not exceed the upper limit.</p>
+         * <ul>
+         * <li><strong>1</strong>: The number of databases that are managed by the account exceeds the upper limit.</li>
+         * <li><strong>0</strong>: The number of databases that are managed by the account does not exceed the upper limit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PrivExceeded")
         public String privExceeded;
 
         /**
          * <p>Indicates whether the account has the replication permissions. Valid values:</p>
-         * <br>
-         * <p>*   **t**: The account has the replication permissions.</p>
-         * <p>*   **f**: The account does not have the replication permissions.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <ul>
+         * <li><strong>t</strong>: The account has the replication permissions.</li>
+         * <li><strong>f</strong>: The account does not have the replication permissions.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>t</p>
          */
         @NameInMap("Replication")
         public String replication;
 
         /**
          * <p>The expiration time of the password. Valid values:</p>
-         * <br>
-         * <p>*   **infinity**: The password never expires.</p>
-         * <p>*   **Empty**: The expiration time is not specified.</p>
-         * <p>*   **Actual expiration time**: in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <ul>
+         * <li><strong>infinity</strong>: The password never expires.</li>
+         * <li><strong>Empty</strong>: The expiration time is not specified.</li>
+         * <li><strong>Actual expiration time</strong>: in the format of <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z in UTC. Example: 2022-10-01T00:00:00Z.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-01T00:00:00Z</p>
          */
         @NameInMap("ValidUntil")
         public String validUntil;

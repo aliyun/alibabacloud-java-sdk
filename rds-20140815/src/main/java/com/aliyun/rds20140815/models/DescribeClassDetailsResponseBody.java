@@ -6,88 +6,128 @@ import com.aliyun.tea.*;
 public class DescribeClassDetailsResponseBody extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: RDS Basic Edition</p>
-     * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
-     * <p>*   **Finance**: RDS Enterprise Edition</p>
+     * <ul>
+     * <li><strong>Basic</strong>: RDS Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+     * <li><strong>AlwaysOn</strong>: RDS Cluster Edition</li>
+     * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The code of the instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql.n2.medium.1</p>
      */
     @NameInMap("ClassCode")
     public String classCode;
 
     /**
      * <p>The instance family of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x</p>
      */
     @NameInMap("ClassGroup")
     public String classGroup;
 
     /**
      * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("Cpu")
     public String cpu;
 
     /**
      * <p>The storage type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **local_ssd**: local SSDs</p>
-     * <p>*   **cloud_ssd**: standard SSDs</p>
-     * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
-     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
-     * <p>*   **cloud_essd3**: ESSD of PL3</p>
+     * <ul>
+     * <li><strong>local_ssd</strong>: local SSDs</li>
+     * <li><strong>cloud_ssd</strong>: standard SSDs</li>
+     * <li><strong>cloud_essd</strong>: enhanced SSDs (ESSDs) of performance level 1 (PL1)</li>
+     * <li><strong>cloud_essd2</strong>: ESSDs of PL2</li>
+     * <li><strong>cloud_essd3</strong>: ESSD of PL3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>local_ssd</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
     /**
      * <p>The architecture of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x86</p>
      */
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
 
     /**
      * <p>The maximum number of connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4000</p>
      */
     @NameInMap("MaxConnections")
     public String maxConnections;
 
     /**
      * <p>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("MaxIOMBPS")
     public String maxIOMBPS;
 
     /**
      * <p>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>N/A</p>
      */
     @NameInMap("MaxIOPS")
     public String maxIOPS;
 
     /**
      * <p>The memory size. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2GB</p>
      */
     @NameInMap("MemoryClass")
     public String memoryClass;
 
     /**
      * <p>The price.</p>
-     * <br>
      * <p>Unit: cents (US dollars).</p>
-     * <br>
-     * <p>> *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
-     * <p>> *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</li>
+     * <li>If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>13400</p>
      */
     @NameInMap("ReferencePrice")
     public String referencePrice;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9DD55F4-1A5F-48CA-BA57-DFB3CA8C4C34</p>
      */
     @NameInMap("RequestId")
     public String requestId;

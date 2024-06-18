@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeTagsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOC****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
-     * <p>>  If you specify this parameter, all tags that are added to this instance are queried, and other filter conditions becomes invalid.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, all tags that are added to this instance are queried, and other filter conditions becomes invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -26,8 +33,10 @@ public class DescribeTagsRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -40,18 +49,27 @@ public class DescribeTagsRequest extends TeaModel {
 
     /**
      * <p>The type of resource. Set the value to INSTANCE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tag that you want to query. The value of the parameter consists of TagKey and TagValue. Format: `{"TagKey":"TagValue"}`.</p>
+     * <p>The tag that you want to query. The value of the parameter consists of TagKey and TagValue. Format: <code>{&quot;TagKey&quot;:&quot;TagValue&quot;}</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“key1”:”value1”}</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The ID of the proxy mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
      */
     @NameInMap("proxyId")
     public String proxyId;

@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class CreateSecretResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</p>
      */
     @NameInMap("SecretArn")
     public String secretArn;
 
     /**
      * <p>The name of the credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Foo</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

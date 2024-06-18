@@ -6,33 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     /**
      * <p>The TDE status at the database level.</p>
-     * <br>
-     * <p>>  If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.</p>
+     * <blockquote>
+     * <p> If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.</p>
+     * </blockquote>
      */
     @NameInMap("Databases")
     public DescribeDBInstanceTDEResponseBodyDatabases databases;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The method that is used to generate the key for TDE at the instance level. Valid values:</p>
-     * <br>
-     * <p>*   **Aliyun_Generate_Key**</p>
-     * <p>*   **Customer_Provided_Key**</p>
-     * <p>*   **Unknown**</p>
+     * <ul>
+     * <li><strong>Aliyun_Generate_Key</strong></li>
+     * <li><strong>Customer_Provided_Key</strong></li>
+     * <li><strong>Unknown</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun_Generate_Key</p>
      */
     @NameInMap("TDEMode")
     public String TDEMode;
 
     /**
      * <p>The TDE status of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Enabled**</p>
-     * <p>*   **Disabled**</p>
+     * <ul>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("TDEStatus")
     public String TDEStatus;
@@ -77,15 +89,22 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public static class DescribeDBInstanceTDEResponseBodyDatabasesDatabase extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test02</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The TDE status at the database level. Valid values:</p>
-         * <br>
-         * <p>*   **Enabled**</p>
-         * <p>*   **Disabled**</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("TDEStatus")
         public String TDEStatus;

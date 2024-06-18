@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The internal endpoint that is used to connect to the read-only instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rr-****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The ID of the read-only instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rr-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10078937****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The internal port number that is used to connect to the read-only instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

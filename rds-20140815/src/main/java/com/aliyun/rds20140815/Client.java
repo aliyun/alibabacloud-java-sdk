@@ -74,14 +74,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches workloads over from the source PostgreSQL instance to the destination ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cloud migration feature](https://help.aliyun.com/document_detail/365562.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">Use the cloud migration feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches workloads over from the source PostgreSQL instance to the destination ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ActivateMigrationTargetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ActivateMigrationTargetInstanceResponse
@@ -127,14 +133,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches workloads over from the source PostgreSQL instance to the destination ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cloud migration feature](https://help.aliyun.com/document_detail/365562.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">Use the cloud migration feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches workloads over from the source PostgreSQL instance to the destination ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ActivateMigrationTargetInstanceRequest
      * @return ActivateMigrationTargetInstanceResponse
      */
@@ -144,20 +156,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds tags to an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * *   Each tag consists of a tag key and a tag value. The tag key is required, and the tag value is optional.
-     * *   The tag key and tag value cannot start with aliyun.
-     * *   The tag key and tag value are not case-sensitive.
-     * *   The maximum length of a tag key is 64 characters, and the maximum length of a tag value is 128 characters.
-     * *   A maximum of 10 tags can be added to each instance. Each tag that is added to the same instance must have a unique tag key. If you add a new tag to the instance and the key of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Each tag consists of a tag key and a tag value. The tag key is required, and the tag value is optional.</li>
+     * <li>The tag key and tag value cannot start with aliyun.</li>
+     * <li>The tag key and tag value are not case-sensitive.</li>
+     * <li>The maximum length of a tag key is 64 characters, and the maximum length of a tag value is 128 characters.</li>
+     * <li>A maximum of 10 tags can be added to each instance. Each tag that is added to the same instance must have a unique tag key. If you add a new tag to the instance and the key of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds tags to an instance.</p>
+     * 
      * @param request AddTagsToResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddTagsToResourceResponse
@@ -227,20 +245,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds tags to an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * *   Each tag consists of a tag key and a tag value. The tag key is required, and the tag value is optional.
-     * *   The tag key and tag value cannot start with aliyun.
-     * *   The tag key and tag value are not case-sensitive.
-     * *   The maximum length of a tag key is 64 characters, and the maximum length of a tag value is 128 characters.
-     * *   A maximum of 10 tags can be added to each instance. Each tag that is added to the same instance must have a unique tag key. If you add a new tag to the instance and the key of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Each tag consists of a tag key and a tag value. The tag key is required, and the tag value is optional.</li>
+     * <li>The tag key and tag value cannot start with aliyun.</li>
+     * <li>The tag key and tag value are not case-sensitive.</li>
+     * <li>The maximum length of a tag key is 64 characters, and the maximum length of a tag value is 128 characters.</li>
+     * <li>A maximum of 10 tags can be added to each instance. Each tag that is added to the same instance must have a unique tag key. If you add a new tag to the instance and the key of the new tag is the same as that of an existing tag, the new tag overwrites the existing tag.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds tags to an instance.</p>
+     * 
      * @param request AddTagsToResourceRequest
      * @return AddTagsToResourceResponse
      */
@@ -250,20 +274,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Apply for a public endpoint for an ApsaraDB RDS instance
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/26128.html)
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/97738.html)
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/97736.html)
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97740.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/26128.html">Apply for a public endpoint for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97738.html">Apply for a public endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97736.html">Apply for a public endpoint for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97740.html">Apply for a public endpoint for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Apply for a public endpoint for an ApsaraDB RDS instance</p>
+     * 
      * @param request AllocateInstancePublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AllocateInstancePublicConnectionResponse
@@ -329,20 +361,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Apply for a public endpoint for an ApsaraDB RDS instance
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/26128.html)
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/97738.html)
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/97736.html)
-     * *   [Apply for a public endpoint for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97740.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/26128.html">Apply for a public endpoint for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97738.html">Apply for a public endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97736.html">Apply for a public endpoint for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97740.html">Apply for a public endpoint for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Apply for a public endpoint for an ApsaraDB RDS instance</p>
+     * 
      * @param request AllocateInstancePublicConnectionRequest
      * @return AllocateInstancePublicConnectionResponse
      */
@@ -352,24 +392,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Applies for a read-only routing endpoint for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Feature description
-     * If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The instance is in the Running state.
-     * *   Read-only instances are attached to the primary instance.
-     * *   The instance does not have an ongoing Data Transmission Service (DTS) migration task.
-     * *   The instance runs one of the following database versions and RDS editions:
-     *     *   SQL Server on RDS Cluster Edition
-     *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
-     *     *   MySQL 5.6
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The instance is in the Running state.</li>
+     * <li>Read-only instances are attached to the primary instance.</li>
+     * <li>The instance does not have an ongoing Data Transmission Service (DTS) migration task.</li>
+     * <li>The instance runs one of the following database versions and RDS editions:<ul>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * <li>MySQL 5.7 on RDS High-availability Edition (with local disks)</li>
+     * <li>MySQL 5.6</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Applies for a read-only routing endpoint for an instance.</p>
+     * 
      * @param request AllocateReadWriteSplittingConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AllocateReadWriteSplittingConnectionResponse
@@ -439,24 +487,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Applies for a read-only routing endpoint for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Feature description
-     * If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The instance is in the Running state.
-     * *   Read-only instances are attached to the primary instance.
-     * *   The instance does not have an ongoing Data Transmission Service (DTS) migration task.
-     * *   The instance runs one of the following database versions and RDS editions:
-     *     *   SQL Server on RDS Cluster Edition
-     *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
-     *     *   MySQL 5.6
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>If read-only instances are attached to a primary ApsaraDB RDS for SQL Server instance, you can call this operation to apply for a unified read-only routing endpoint for the primary instance. After you apply for a read-only routing endpoint for a primary instance, the existing endpoints of the primary instance and its read-only instances remain valid. In addition, you can still apply for internal and public endpoints.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The instance is in the Running state.</li>
+     * <li>Read-only instances are attached to the primary instance.</li>
+     * <li>The instance does not have an ongoing Data Transmission Service (DTS) migration task.</li>
+     * <li>The instance runs one of the following database versions and RDS editions:<ul>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * <li>MySQL 5.7 on RDS High-availability Edition (with local disks)</li>
+     * <li>MySQL 5.6</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Applies for a read-only routing endpoint for an instance.</p>
+     * 
      * @param request AllocateReadWriteSplittingConnectionRequest
      * @return AllocateReadWriteSplittingConnectionResponse
      */
@@ -466,13 +522,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a whitelist template with an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a whitelist template with an instance.</p>
+     * 
      * @param request AttachWhitelistTemplateToInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachWhitelistTemplateToInstanceResponse
@@ -522,13 +582,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a whitelist template with an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a whitelist template with an instance.</p>
+     * 
      * @param request AttachWhitelistTemplateToInstanceRequest
      * @return AttachWhitelistTemplateToInstanceResponse
      */
@@ -538,21 +602,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries system-assigned read weights.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Feature description
-     * When the [read/write splitting](https://help.aliyun.com/document_detail/51073.html) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](https://help.aliyun.com/document_detail/610423.html).
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   If the instance runs MySQL, the instance uses a shared proxy.
-     * *   The instance runs one of the following MySQL versions and RDS editions:
-     *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
-     *     *   MySQL 5.6
-     *     *   SQL Server on RDS Cluster Edition
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>When the <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>If the instance runs MySQL, the instance uses a shared proxy.</li>
+     * <li>The instance runs one of the following MySQL versions and RDS editions:<ul>
+     * <li>MySQL 5.7 on RDS High-availability Edition (with local disks)</li>
+     * <li>MySQL 5.6</li>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries system-assigned read weights.</p>
+     * 
      * @param request CalculateDBInstanceWeightRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CalculateDBInstanceWeightResponse
@@ -586,21 +658,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries system-assigned read weights.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Feature description
-     * When the [read/write splitting](https://help.aliyun.com/document_detail/51073.html) feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see [DescribeDBInstanceNetInfo](https://help.aliyun.com/document_detail/610423.html).
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   If the instance runs MySQL, the instance uses a shared proxy.
-     * *   The instance runs one of the following MySQL versions and RDS editions:
-     *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
-     *     *   MySQL 5.6
-     *     *   SQL Server on RDS Cluster Edition
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>When the <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> feature is enabled, this operation is used to calculate system-assigned read weights. For more information about custom read weights, see <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>If the instance runs MySQL, the instance uses a shared proxy.</li>
+     * <li>The instance runs one of the following MySQL versions and RDS editions:<ul>
+     * <li>MySQL 5.7 on RDS High-availability Edition (with local disks)</li>
+     * <li>MySQL 5.6</li>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries system-assigned read weights.</p>
+     * 
      * @param request CalculateDBInstanceWeightRequest
      * @return CalculateDBInstanceWeightResponse
      */
@@ -610,16 +690,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels the migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description This operation is phased out.
-     * ### [](#)Supported database engines
-     * *   RDS SQL Server
-     * ### [](#)Description
-     * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](https://help.aliyun.com/document_detail/610592.html).
-     * ### [](#)Usage notes
-     * This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see <a href="https://help.aliyun.com/document_detail/610592.html">ImportDatabaseBetweenInstances</a>.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels the migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request CancelImportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelImportResponse
@@ -673,16 +757,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels the migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description This operation is phased out.
-     * ### [](#)Supported database engines
-     * *   RDS SQL Server
-     * ### [](#)Description
-     * This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see [ImportDatabaseBetweenInstances](https://help.aliyun.com/document_detail/610592.html).
-     * ### [](#)Usage notes
-     * This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>This operation is supported for instances that run SQL Server and belong to the dedicated or dedicated host instance family. For more information about how to start a migration task, see <a href="https://help.aliyun.com/document_detail/610592.html">ImportDatabaseBetweenInstances</a>.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels the migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request CancelImportRequest
      * @return CancelImportResponse
      */
@@ -692,14 +780,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the username of the account that you want to create on an instance is available.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the username of the account that you want to create on an instance is available.</p>
+     * 
      * @param request CheckAccountNameAvailableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckAccountNameAvailableResponse
@@ -749,14 +841,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the username of the account that you want to create on an instance is available.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the username of the account that you want to create on an instance is available.</p>
+     * 
      * @param request CheckAccountNameAvailableRequest
      * @return CheckAccountNameAvailableResponse
      */
@@ -766,14 +862,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks permissions that are granted on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks permissions that are granted on an instance.</p>
+     * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckCloudResourceAuthorizedResponse
@@ -835,14 +935,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks permissions that are granted on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks permissions that are granted on an instance.</p>
+     * 
      * @param request CheckCloudResourceAuthorizedRequest
      * @return CheckCloudResourceAuthorizedResponse
      */
@@ -852,19 +956,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether an instance can be restored by using a cross-region backup set.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * >  If your ApsaraDB RDS for PostgreSQL instance uses the new architecture and is created after October 10, 2022, this feature is not supported for the RDS instance. For more information, see [[Notice\\] SLR authorization is required to create an ApsaraDB RDS for PostgreSQL instance from October 10, 2022](~~452313~~).
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120875.html)
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html) and [Restore the data of an ApsaraDB RDS for PostgreSQL across regions](https://help.aliyun.com/document_detail/206662.html)
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html) and [Restore the data of an ApsaraDB RDS for SQL Server across regions](https://help.aliyun.com/document_detail/187924.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server<blockquote>
+     * <p> If your ApsaraDB RDS for PostgreSQL instance uses the new architecture and is created after October 10, 2022, this feature is not supported for the RDS instance. For more information, see <a href="~~452313~~">[Notice] SLR authorization is required to create an ApsaraDB RDS for PostgreSQL instance from October 10, 2022</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a> and <a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature of an ApsaraDB RDS for PostgreSQL instance</a> and <a href="https://help.aliyun.com/document_detail/206662.html">Restore the data of an ApsaraDB RDS for PostgreSQL across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature of an ApsaraDB RDS for SQL Server instance</a> and <a href="https://help.aliyun.com/document_detail/187924.html">Restore the data of an ApsaraDB RDS for SQL Server across regions</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether an instance can be restored by using a cross-region backup set.</p>
+     * 
      * @param request CheckCreateDdrDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckCreateDdrDBInstanceResponse
@@ -946,19 +1060,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether an instance can be restored by using a cross-region backup set.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * >  If your ApsaraDB RDS for PostgreSQL instance uses the new architecture and is created after October 10, 2022, this feature is not supported for the RDS instance. For more information, see [[Notice\\] SLR authorization is required to create an ApsaraDB RDS for PostgreSQL instance from October 10, 2022](~~452313~~).
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120875.html)
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html) and [Restore the data of an ApsaraDB RDS for PostgreSQL across regions](https://help.aliyun.com/document_detail/206662.html)
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html) and [Restore the data of an ApsaraDB RDS for SQL Server across regions](https://help.aliyun.com/document_detail/187924.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server<blockquote>
+     * <p> If your ApsaraDB RDS for PostgreSQL instance uses the new architecture and is created after October 10, 2022, this feature is not supported for the RDS instance. For more information, see <a href="~~452313~~">[Notice] SLR authorization is required to create an ApsaraDB RDS for PostgreSQL instance from October 10, 2022</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a> and <a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature of an ApsaraDB RDS for PostgreSQL instance</a> and <a href="https://help.aliyun.com/document_detail/206662.html">Restore the data of an ApsaraDB RDS for PostgreSQL across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature of an ApsaraDB RDS for SQL Server instance</a> and <a href="https://help.aliyun.com/document_detail/187924.html">Restore the data of an ApsaraDB RDS for SQL Server across regions</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether an instance can be restored by using a cross-region backup set.</p>
+     * 
      * @param request CheckCreateDdrDBInstanceRequest
      * @return CheckCreateDdrDBInstanceResponse
      */
@@ -968,14 +1092,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a database name is unique and conforms to the naming conventions on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether a database name is unique and conforms to the naming conventions on an instance.</p>
+     * 
      * @param request CheckDBNameAvailableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckDBNameAvailableResponse
@@ -1029,14 +1157,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a database name is unique and conforms to the naming conventions on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether a database name is unique and conforms to the naming conventions on an instance.</p>
+     * 
      * @param request CheckDBNameAvailableRequest
      * @return CheckDBNameAvailableResponse
      */
@@ -1046,8 +1178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CheckInstanceExist operation to query whether an ApsaraDB RDS instance exists.
-     *
+     * <b>summary</b> : 
+     * <p>You can call the CheckInstanceExist operation to query whether an ApsaraDB RDS instance exists.</p>
+     * 
      * @param request CheckInstanceExistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckInstanceExistResponse
@@ -1089,8 +1222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CheckInstanceExist operation to query whether an ApsaraDB RDS instance exists.
-     *
+     * <b>summary</b> : 
+     * <p>You can call the CheckInstanceExist operation to query whether an ApsaraDB RDS instance exists.</p>
+     * 
      * @param request CheckInstanceExistRequest
      * @return CheckInstanceExistResponse
      */
@@ -1100,11 +1234,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a service-linked role (SLR) is created.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether a service-linked role (SLR) is created.</p>
+     * 
      * @param request CheckServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckServiceLinkedRoleResponse
@@ -1154,11 +1292,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a service-linked role (SLR) is created.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether a service-linked role (SLR) is created.</p>
+     * 
      * @param request CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
      */
@@ -1168,20 +1310,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores the data of an original instance to a new instance. The new instance is called a cloned instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Restore data of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96147.html)
-     * *   [Restore data of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96776.html)
-     * *   [Restore data of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95722.html)
-     * *   [Restore data of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97151.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores the data of an original instance to a new instance. The new instance is called a cloned instance.</p>
+     * 
      * @param tmpReq CloneDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloneDBInstanceResponse
@@ -1333,20 +1483,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores the data of an original instance to a new instance. The new instance is called a cloned instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Restore data of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96147.html)
-     * *   [Restore data of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96776.html)
-     * *   [Restore data of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95722.html)
-     * *   [Restore data of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97151.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores the data of an original instance to a new instance. The new instance is called a cloned instance.</p>
+     * 
      * @param request CloneDBInstanceRequest
      * @return CloneDBInstanceResponse
      */
@@ -1356,16 +1514,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates a parameter template to the current region or another region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Replicates a parameter template to the current region or another region.</p>
+     * 
      * @param request CloneParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloneParameterGroupResponse
@@ -1427,16 +1593,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates a parameter template to the current region or another region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Replicates a parameter template to the current region or another region.</p>
+     * 
      * @param request CloneParameterGroupRequest
      * @return CloneParameterGroupResponse
      */
@@ -1446,16 +1620,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Marks the notifications of an instance within your Alibaba Cloud account as confirmed.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Feature description
-     * After you call the [QueryNotify](https://help.aliyun.com/document_detail/610443.html) operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>After you call the <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Marks the notifications of an instance within your Alibaba Cloud account as confirmed.</p>
+     * 
      * @param tmpReq ConfirmNotifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfirmNotifyResponse
@@ -1495,16 +1673,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Marks the notifications of an instance within your Alibaba Cloud account as confirmed.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Feature description
-     * After you call the [QueryNotify](https://help.aliyun.com/document_detail/610443.html) operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>After you call the <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> operation to query notifications for an instance, you can call this operation to mark the notifications as confirmed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Marks the notifications of an instance within your Alibaba Cloud account as confirmed.</p>
+     * 
      * @param request ConfirmNotifyRequest
      * @return ConfirmNotifyResponse
      */
@@ -1514,10 +1696,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates the databases of an instance that runs SQL Server 2008 R2 to another instance. This operation is phased out.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Replicates the databases of an instance that runs SQL Server 2008 R2 to another instance. This operation is phased out.</p>
+     * 
      * @param request CopyDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CopyDatabaseResponse
@@ -1559,10 +1743,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates the databases of an instance that runs SQL Server 2008 R2 to another instance. This operation is phased out.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Replicates the databases of an instance that runs SQL Server 2008 R2 to another instance. This operation is phased out.</p>
+     * 
      * @param request CopyDatabaseRequest
      * @return CopyDatabaseResponse
      */
@@ -1572,14 +1758,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates databases between RDS SQL Server instances.
-     *
-     * @description ### Supported database engines
-     * RDS SQL Server
-     * ### References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Replicate databases between ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/95702.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/95702.html">Replicate databases between ApsaraDB RDS for SQL Server instances</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Replicates databases between RDS SQL Server instances.</p>
+     * 
      * @param request CopyDatabaseBetweenInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CopyDatabaseBetweenInstancesResponse
@@ -1633,14 +1823,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Replicates databases between RDS SQL Server instances.
-     *
-     * @description ### Supported database engines
-     * RDS SQL Server
-     * ### References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Replicate databases between ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/95702.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/95702.html">Replicate databases between ApsaraDB RDS for SQL Server instances</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Replicates databases between RDS SQL Server instances.</p>
+     * 
      * @param request CopyDatabaseBetweenInstancesRequest
      * @return CopyDatabaseBetweenInstancesResponse
      */
@@ -1650,20 +1844,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database account.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Create an account on an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96089.html)
-     * *   [Create an account on an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96753.html)
-     * *   [Create an account on an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95810.html)
-     * *   [Create an account on an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97132.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96089.html">Create an account on an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96753.html">Create an account on an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95810.html">Create an account on an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97132.html">Create an account on an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database account.</p>
+     * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccountResponse
@@ -1725,20 +1927,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database account.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Create an account on an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96089.html)
-     * *   [Create an account on an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96753.html)
-     * *   [Create an account on an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95810.html)
-     * *   [Create an account on an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97132.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96089.html">Create an account on an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96753.html">Create an account on an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95810.html">Create an account on an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97132.html">Create an account on an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database account.</p>
+     * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -1748,26 +1958,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a backup file for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see [List of operations by function of DBS](https://help.aliyun.com/document_detail/437245.html).
-     * ### [](#)Precautions
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The instance is in the Running state.
-     * *   The instance does not have ongoing backup tasks.
-     * *   The number of backup files that are created per day for an instance cannot exceed 20.
-     * ### [](#)References
-     * *   [Use the data backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/378074.html)
-     * *   [Use the data backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96772.html)
-     * *   [Use the data backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95717.html)
-     * *   [Use the data backup feature for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97147.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/437245.html">List of operations by function of DBS</a>.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>The instance does not have ongoing backup tasks.</li>
+     * <li>The number of backup files that are created per day for an instance cannot exceed 20.</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Use the data backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Use the data backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Use the data backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Use the data backup feature for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup file for an instance.</p>
+     * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBackupResponse
@@ -1821,26 +2039,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a backup file for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see [List of operations by function of DBS](https://help.aliyun.com/document_detail/437245.html).
-     * ### [](#)Precautions
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The instance is in the Running state.
-     * *   The instance does not have ongoing backup tasks.
-     * *   The number of backup files that are created per day for an instance cannot exceed 20.
-     * ### [](#)References
-     * *   [Use the data backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/378074.html)
-     * *   [Use the data backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96772.html)
-     * *   [Use the data backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95717.html)
-     * *   [Use the data backup feature for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97147.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This operation uses the backup feature of ApsaraDB RDS to create a backup set. You can also use an operation of Database Backup (DBS) to create a backup set. For more information, see <a href="https://help.aliyun.com/document_detail/437245.html">List of operations by function of DBS</a>.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>The instance does not have ongoing backup tasks.</li>
+     * <li>The number of backup files that are created per day for an instance cannot exceed 20.</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Use the data backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Use the data backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Use the data backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Use the data backup feature for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a backup file for an instance.</p>
+     * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
      */
@@ -1850,14 +2076,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an assessment task for cloud migration to an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cloud migration feature](https://help.aliyun.com/document_detail/365562.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">Use the cloud migration feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an assessment task for cloud migration to an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request CreateCloudMigrationPrecheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCloudMigrationPrecheckTaskResponse
@@ -1915,14 +2147,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an assessment task for cloud migration to an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cloud migration feature](https://help.aliyun.com/document_detail/365562.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">Use the cloud migration feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an assessment task for cloud migration to an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request CreateCloudMigrationPrecheckTaskRequest
      * @return CreateCloudMigrationPrecheckTaskResponse
      */
@@ -1932,14 +2170,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a cloud migration task for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cloud migration feature](https://help.aliyun.com/document_detail/365562.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">Use the cloud migration feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a cloud migration task for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request CreateCloudMigrationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCloudMigrationTaskResponse
@@ -1997,14 +2241,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a cloud migration task for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cloud migration feature](https://help.aliyun.com/document_detail/365562.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">Use the cloud migration feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a cloud migration task for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request CreateCloudMigrationTaskRequest
      * @return CreateCloudMigrationTaskResponse
      */
@@ -2014,24 +2264,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:
-     * *   [Create an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/148036.html)
-     * *   [Create a serverless ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/412231.html)
-     * *   [Create an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/148038.html)
-     * *   [Create a serverless ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/607753.html)
-     * *   [Enable Babelfish for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/428615.html)
-     * *   [Create an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/148037.html)
-     * *   [Create a serverless ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/603465.html)
-     * *   [Create an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/148040.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/412231.html">Create a serverless ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148038.html">Create an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/607753.html">Create a serverless ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/428615.html">Enable Babelfish for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148037.html">Create an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/603465.html">Create a serverless ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148040.html">Create an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an instance.</p>
+     * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBInstanceResponse
@@ -2287,24 +2545,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:
-     * *   [Create an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/148036.html)
-     * *   [Create a serverless ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/412231.html)
-     * *   [Create an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/148038.html)
-     * *   [Create a serverless ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/607753.html)
-     * *   [Enable Babelfish for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/428615.html)
-     * *   [Create an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/148037.html)
-     * *   [Create a serverless ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/603465.html)
-     * *   [Create an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/148040.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/412231.html">Create a serverless ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148038.html">Create an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/607753.html">Create a serverless ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/428615.html">Enable Babelfish for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148037.html">Create an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/603465.html">Create a serverless ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/148040.html">Create an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an instance.</p>
+     * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */
@@ -2314,14 +2580,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an endpoint for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * [Add a read-only endpoint for a cluster](https://help.aliyun.com/document_detail/464132.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/464132.html">Create a read-only endpoint for a cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param tmpReq CreateDBInstanceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBInstanceEndpointResponse
@@ -2401,14 +2671,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an endpoint for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * [Add a read-only endpoint for a cluster](https://help.aliyun.com/document_detail/464132.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/464132.html">Create a read-only endpoint for a cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request CreateDBInstanceEndpointRequest
      * @return CreateDBInstanceEndpointResponse
      */
@@ -2418,14 +2692,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a public endpoint for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### Precautions
-     * *   You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.
-     * *   The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Only one public endpoint and one internal endpoint can be created for each endpoint type.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.</li>
+     * <li>The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Each type of endpoint can contain an internal endpoint and a public endpoint.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a public endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request CreateDBInstanceEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBInstanceEndpointAddressResponse
@@ -2483,14 +2761,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a public endpoint for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### Precautions
-     * *   You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.
-     * *   The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Only one public endpoint and one internal endpoint can be created for each endpoint type.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>You can create a public endpoint of an endpoint type only when no public endpoint is created for this endpoint type.</li>
+     * <li>The node weights and other configurations are the same as those of the internal endpoint of this endpoint type. Each type of endpoint can contain an internal endpoint and a public endpoint.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a public endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request CreateDBInstanceEndpointAddressRequest
      * @return CreateDBInstanceEndpointAddressResponse
      */
@@ -2500,20 +2782,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rebuilds an instance from the recycle bin.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:
-     * *   [Manage ApsaraDB RDS for MySQL instances in the recycle bin](https://help.aliyun.com/document_detail/96065.html)
-     * *   [Manage ApsaraDB RDS for PostgreSQL instances in the recycle bin](https://help.aliyun.com/document_detail/96752.html)
-     * *   [Manage ApsaraDB RDS for SQL Server instances in the recycle bin](https://help.aliyun.com/document_detail/95669.html)
-     * *   [Manage ApsaraDB RDS for MariaDB instances in the recycle bin](https://help.aliyun.com/document_detail/97131.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Manage ApsaraDB RDS for MySQL instances in the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Manage ApsaraDB RDS for PostgreSQL instances in the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Manage ApsaraDB RDS for SQL Server instances in the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Manage ApsaraDB RDS for MariaDB instances in the recycle bin</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Rebuilds an instance from the recycle bin.</p>
+     * 
      * @param request CreateDBInstanceForRebuildRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBInstanceForRebuildResponse
@@ -2623,20 +2913,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rebuilds an instance from the recycle bin.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:
-     * *   [Manage ApsaraDB RDS for MySQL instances in the recycle bin](https://help.aliyun.com/document_detail/96065.html)
-     * *   [Manage ApsaraDB RDS for PostgreSQL instances in the recycle bin](https://help.aliyun.com/document_detail/96752.html)
-     * *   [Manage ApsaraDB RDS for SQL Server instances in the recycle bin](https://help.aliyun.com/document_detail/95669.html)
-     * *   [Manage ApsaraDB RDS for MariaDB instances in the recycle bin](https://help.aliyun.com/document_detail/97131.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Manage ApsaraDB RDS for MySQL instances in the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Manage ApsaraDB RDS for PostgreSQL instances in the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Manage ApsaraDB RDS for SQL Server instances in the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Manage ApsaraDB RDS for MariaDB instances in the recycle bin</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Rebuilds an instance from the recycle bin.</p>
+     * 
      * @param request CreateDBInstanceForRebuildRequest
      * @return CreateDBInstanceForRebuildResponse
      */
@@ -2646,14 +2944,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a node to an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition. An RDS instance that runs RDS Cluster Edition is referred to as an RDS cluster.
-     *
-     * @description ### Supported database engines
-     * MySQL
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Add a node to an ApsaraDB RDS for MySQL cluster](https://help.aliyun.com/document_detail/464129.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/464129.html">Add a node to an ApsaraDB RDS for MySQL cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a node to an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition. An RDS instance that runs RDS Cluster Edition is referred to as an RDS cluster.</p>
+     * 
      * @param tmpReq CreateDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBNodesResponse
@@ -2717,14 +3019,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a node to an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition. An RDS instance that runs RDS Cluster Edition is referred to as an RDS cluster.
-     *
-     * @description ### Supported database engines
-     * MySQL
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Add a node to an ApsaraDB RDS for MySQL cluster](https://help.aliyun.com/document_detail/464129.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/464129.html">Add a node to an ApsaraDB RDS for MySQL cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a node to an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition. An RDS instance that runs RDS Cluster Edition is referred to as an RDS cluster.</p>
+     * 
      * @param request CreateDBNodesRequest
      * @return CreateDBNodesResponse
      */
@@ -2734,16 +3040,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates the endpoint that is used to connect to the dedicated proxy of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/184921.html)
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418274.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates the endpoint that is used to connect to the dedicated proxy of an instance.</p>
+     * 
      * @param request CreateDBProxyEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBProxyEndpointAddressResponse
@@ -2813,16 +3127,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates the endpoint that is used to connect to the dedicated proxy of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/184921.html)
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418274.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates the endpoint that is used to connect to the dedicated proxy of an instance.</p>
+     * 
      * @param request CreateDBProxyEndpointAddressRequest
      * @return CreateDBProxyEndpointAddressResponse
      */
@@ -2832,20 +3154,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database in an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Create a database in an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96105.html)
-     * *   [Create a database in an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96758.html)
-     * *   [Create a database in an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95698.html)
-     * *   [Create a database in an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97136.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96105.html">Create a database in an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96758.html">Create a database in an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95698.html">Create a database in an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97136.html">Create a database in an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database in an ApsaraDB RDS instance.</p>
+     * 
      * @param request CreateDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDatabaseResponse
@@ -2907,20 +3237,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database in an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Create a database in an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96105.html)
-     * *   [Create a database in an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96758.html)
-     * *   [Create a database in an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95698.html)
-     * *   [Create a database in an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97136.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96105.html">Create a database in an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96758.html">Create a database in an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95698.html">Create a database in an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97136.html">Create a database in an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database in an ApsaraDB RDS instance.</p>
+     * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
      */
@@ -2930,19 +3268,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores data to a new instance across regions.
-     *
-     * @description >  Before restoration, you can call the [CheckCreateDdrDBInstance](https://help.aliyun.com/document_detail/121721.html) operation to check whether a cross-region backup set can be used for cross-region restoration.
-     * ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before restoration, you can call the CheckCreateDdrDBInstance operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores data to a new instance across regions.</p>
+     * 
      * @param request CreateDdrInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDdrInstanceResponse
@@ -3088,19 +3436,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores data to a new instance across regions.
-     *
-     * @description >  Before restoration, you can call the [CheckCreateDdrDBInstance](https://help.aliyun.com/document_detail/121721.html) operation to check whether a cross-region backup set can be used for cross-region restoration.
-     * ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before restoration, you can call the CheckCreateDdrDBInstance operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores data to a new instance across regions.</p>
+     * 
      * @param request CreateDdrInstanceRequest
      * @return CreateDdrInstanceResponse
      */
@@ -3110,11 +3468,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a diagnostic report.
-     *
-     * @description >  This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
-     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a diagnostic report.</p>
+     * 
      * @param request CreateDiagnosticReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDiagnosticReportResponse
@@ -3152,11 +3514,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a diagnostic report.
-     *
-     * @description >  This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
-     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a diagnostic report.</p>
+     * 
      * @param request CreateDiagnosticReportRequest
      * @return CreateDiagnosticReportResponse
      */
@@ -3166,14 +3532,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an ApsaraDB RDS global active database cluster.
-     *
-     * @description ### [](#)Supported database engine
-     * *   MySQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Create and release an ApsaraDB RDS global active database cluster](https://help.aliyun.com/document_detail/328592.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release an ApsaraDB RDS global active database cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraDB RDS global active database cluster.</p>
+     * 
      * @param request CreateGADInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGADInstanceResponse
@@ -3235,14 +3607,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an ApsaraDB RDS global active database cluster.
-     *
-     * @description ### [](#)Supported database engine
-     * *   MySQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Create and release an ApsaraDB RDS global active database cluster](https://help.aliyun.com/document_detail/328592.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release an ApsaraDB RDS global active database cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraDB RDS global active database cluster.</p>
+     * 
      * @param request CreateGADInstanceRequest
      * @return CreateGADInstanceResponse
      */
@@ -3252,14 +3630,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds nodes to an ApsaraDB RDS global active database cluster.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Add or remove unit nodes](https://help.aliyun.com/document_detail/331851.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/331851.html">Add or remove unit nodes</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds nodes to an ApsaraDB RDS global active database cluster.</p>
+     * 
      * @param request CreateGadInstanceMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGadInstanceMemberResponse
@@ -3313,14 +3697,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds nodes to an ApsaraDB RDS global active database cluster.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Add or remove unit nodes](https://help.aliyun.com/document_detail/331851.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/331851.html">Add or remove unit nodes</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds nodes to an ApsaraDB RDS global active database cluster.</p>
+     * 
      * @param request CreateGadInstanceMemberRequest
      * @return CreateGadInstanceMemberResponse
      */
@@ -3330,8 +3720,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>创建全密态规则</p>
+     * 
      * @param tmpReq CreateMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMaskingRulesResponse
@@ -3395,8 +3786,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>创建全密态规则</p>
+     * 
      * @param request CreateMaskingRulesRequest
      * @return CreateMaskingRulesResponse
      */
@@ -3406,17 +3798,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a migration task to restore backup files from an Object Storage Service (OSS) bucket to an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * SQL Server
-     * ### [](#)Limits
-     * Data migration across Alibaba Cloud accounts is not supported. For example, backup files in an Object Storage Service (OSS) bucket within Alibaba Cloud Account A cannot be migrated to an ApsaraDB RDS for SQL Server instance within Alibaba Cloud Account B.
-     * >  You can migrate backup files from an OSS bucket within Alibaba Cloud Account A to an OSS bucket within Alibaba Cloud Account B. Make sure that the data in the OSS bucket and the RDS instance belong to the same Alibaba Cloud account. Then, you can call this operation to create a migration task. For more information, see [Use Data Online Migration to migrate data between accounts](https://help.aliyun.com/document_detail/342762.html).
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following topic. Make sure that you fully understand the prerequisites, preparations, and impacts for calling this operation.
-     * [Migrate data from a self-managed SQL Server instance to an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/100019.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>Limits</h3>
+     * <p>Data migration across Alibaba Cloud accounts is not supported. For example, backup files in an Object Storage Service (OSS) bucket within Alibaba Cloud Account A cannot be migrated to an ApsaraDB RDS for SQL Server instance within Alibaba Cloud Account B.</p>
+     * <blockquote>
+     * <p> You can migrate backup files from an OSS bucket within Alibaba Cloud Account A to an OSS bucket within Alibaba Cloud Account B. Make sure that the data in the OSS bucket and the RDS instance belong to the same Alibaba Cloud account. Then, you can call this operation to create a migration task. For more information, see <a href="https://help.aliyun.com/document_detail/342762.html">Use Data Online Migration to migrate data between accounts</a>.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following topic. Make sure that you fully understand the prerequisites, preparations, and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/100019.html">Migrate data from a self-managed SQL Server instance to an ApsaraDB RDS for SQL Server instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a migration task to restore backup files from an Object Storage Service (OSS) bucket to an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request CreateMigrateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMigrateTaskResponse
@@ -3486,17 +3884,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a migration task to restore backup files from an Object Storage Service (OSS) bucket to an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * SQL Server
-     * ### [](#)Limits
-     * Data migration across Alibaba Cloud accounts is not supported. For example, backup files in an Object Storage Service (OSS) bucket within Alibaba Cloud Account A cannot be migrated to an ApsaraDB RDS for SQL Server instance within Alibaba Cloud Account B.
-     * >  You can migrate backup files from an OSS bucket within Alibaba Cloud Account A to an OSS bucket within Alibaba Cloud Account B. Make sure that the data in the OSS bucket and the RDS instance belong to the same Alibaba Cloud account. Then, you can call this operation to create a migration task. For more information, see [Use Data Online Migration to migrate data between accounts](https://help.aliyun.com/document_detail/342762.html).
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following topic. Make sure that you fully understand the prerequisites, preparations, and impacts for calling this operation.
-     * [Migrate data from a self-managed SQL Server instance to an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/100019.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>Limits</h3>
+     * <p>Data migration across Alibaba Cloud accounts is not supported. For example, backup files in an Object Storage Service (OSS) bucket within Alibaba Cloud Account A cannot be migrated to an ApsaraDB RDS for SQL Server instance within Alibaba Cloud Account B.</p>
+     * <blockquote>
+     * <p> You can migrate backup files from an OSS bucket within Alibaba Cloud Account A to an OSS bucket within Alibaba Cloud Account B. Make sure that the data in the OSS bucket and the RDS instance belong to the same Alibaba Cloud account. Then, you can call this operation to create a migration task. For more information, see <a href="https://help.aliyun.com/document_detail/342762.html">Use Data Online Migration to migrate data between accounts</a>.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following topic. Make sure that you fully understand the prerequisites, preparations, and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/100019.html">Migrate data from a self-managed SQL Server instance to an ApsaraDB RDS for SQL Server instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a migration task to restore backup files from an Object Storage Service (OSS) bucket to an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request CreateMigrateTaskRequest
      * @return CreateMigrateTaskResponse
      */
@@ -3506,17 +3910,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Opens the database that is involved in a backup data migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in the following topics:
-     * *   [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2](https://help.aliyun.com/document_detail/95737.html)
-     * *   [Migrate full backup data of SQL Server 2012, 2014, 2016, 2017, or 2019 databases](https://help.aliyun.com/document_detail/95738.html)
-     * *   [Migrate incremental backup data to ApsaraDB RDS for SQL Server 2012, 2014, 2016, 2017, or 2019](https://help.aliyun.com/document_detail/95736.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/95737.html">Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95738.html">Migrate full backup data of SQL Server 2012, 2014, 2016, 2017, or 2019 databases</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95736.html">Migrate incremental backup data to ApsaraDB RDS for SQL Server 2012, 2014, 2016, 2017, or 2019</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Opens the database that is involved in a backup data migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request CreateOnlineDatabaseTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOnlineDatabaseTaskResponse
@@ -3578,17 +3990,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Opens the database that is involved in a backup data migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in the following topics:
-     * *   [Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2](https://help.aliyun.com/document_detail/95737.html)
-     * *   [Migrate full backup data of SQL Server 2012, 2014, 2016, 2017, or 2019 databases](https://help.aliyun.com/document_detail/95738.html)
-     * *   [Migrate incremental backup data to ApsaraDB RDS for SQL Server 2012, 2014, 2016, 2017, or 2019](https://help.aliyun.com/document_detail/95736.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * This operation is used to migrate backup data to the cloud. Before you call this operation, make sure that you understand the descriptions in the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/95737.html">Migrate the full backup data of a self-managed SQL Server database to an ApsaraDB RDS instance that runs SQL Server 2008 R2</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95738.html">Migrate full backup data of SQL Server 2012, 2014, 2016, 2017, or 2019 databases</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95736.html">Migrate incremental backup data to ApsaraDB RDS for SQL Server 2012, 2014, 2016, 2017, or 2019</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Opens the database that is involved in a backup data migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request CreateOnlineDatabaseTaskRequest
      * @return CreateOnlineDatabaseTaskResponse
      */
@@ -3598,14 +4018,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     * ### [](#)References
-     * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](https://help.aliyun.com/document_detail/464130.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.</p>
+     * 
      * @param tmpReq CreateOrderForDeleteDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOrderForDeleteDBNodesResponse
@@ -3701,14 +4125,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     * ### [](#)References
-     * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](https://help.aliyun.com/document_detail/464130.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request CreateOrderForDeleteDBNodesRequest
      * @return CreateOrderForDeleteDBNodesResponse
      */
@@ -3718,16 +4146,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a parameter template for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a parameter template for an instance.</p>
+     * 
      * @param request CreateParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateParameterGroupResponse
@@ -3793,16 +4229,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a parameter template for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a parameter template for an instance.</p>
+     * 
      * @param request CreateParameterGroupRequest
      * @return CreateParameterGroupResponse
      */
@@ -3812,18 +4256,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an extension for a database.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     * ### [](#)Precautions
-     * Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.
-     * *   For more information, see [Extensions supported by ApsaraDB RDS for PostgreSQL](https://help.aliyun.com/document_detail/142340.html).
-     * *   You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/610394.html) operation to query the major engine version of an instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <ul>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Extensions supported by ApsaraDB RDS for PostgreSQL</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of an instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an extension for a database.</p>
+     * 
      * @param request CreatePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePostgresExtensionsResponse
@@ -3897,18 +4347,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an extension for a database.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     * ### [](#)Precautions
-     * Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.
-     * *   For more information, see [Extensions supported by ApsaraDB RDS for PostgreSQL](https://help.aliyun.com/document_detail/142340.html).
-     * *   You can call the [DescribeDBInstanceAttribute](https://help.aliyun.com/document_detail/610394.html) operation to query the major engine version of an instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>Install only the plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <ul>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/142340.html">Extensions supported by ApsaraDB RDS for PostgreSQL</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of an instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an extension for a database.</p>
+     * 
      * @param request CreatePostgresExtensionsRequest
      * @return CreatePostgresExtensionsResponse
      */
@@ -3918,18 +4374,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a read-only instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Create a read-only ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/56991.html)
-     * *   [Create a read-only ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/108959.html)
-     * *   [Create a read-only ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/99005.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/56991.html">Create a read-only ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/108959.html">Create a read-only ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/99005.html">Create a read-only ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a read-only instance.</p>
+     * 
      * @param request CreateReadOnlyDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateReadOnlyDBInstanceResponse
@@ -4095,18 +4559,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a read-only instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Create a read-only ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/56991.html)
-     * *   [Create a read-only ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/108959.html)
-     * *   [Create a read-only ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/99005.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/56991.html">Create a read-only ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/108959.html">Create a read-only ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/99005.html">Create a read-only ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a read-only instance.</p>
+     * 
      * @param request CreateReadOnlyDBInstanceRequest
      * @return CreateReadOnlyDBInstanceResponse
      */
@@ -4116,11 +4588,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a credential for a user who uses the Data API feature.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a credential for a user who uses the Data API feature.</p>
+     * 
      * @param request CreateSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSecretResponse
@@ -4198,11 +4674,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a credential for a user who uses the Data API feature.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a credential for a user who uses the Data API feature.</p>
+     * 
      * @param request CreateSecretRequest
      * @return CreateSecretResponse
      */
@@ -4212,14 +4692,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service-linked role.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Service-linked roles](https://help.aliyun.com/document_detail/342840.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service-linked role.</p>
+     * 
      * @param request CreateServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateServiceLinkedRoleResponse
@@ -4265,14 +4749,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service-linked role.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Service-linked roles](https://help.aliyun.com/document_detail/342840.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service-linked role.</p>
+     * 
      * @param request CreateServiceLinkedRoleRequest
      * @return CreateServiceLinkedRoleResponse
      */
@@ -4282,14 +4770,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a temporary instance for an RDS instance that runs SQL Server 2008 R2 and uses local disks.
-     *
-     * @description ### [](#)Supported database engines
-     * Your RDS instance runs SQL Server 2008 R2 with local disks.
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance](https://help.aliyun.com/document_detail/95724.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>Your RDS instance runs SQL Server 2008 R2 with local disks.</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/95724.html">Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a temporary instance for an RDS instance that runs SQL Server 2008 R2 and uses local disks.</p>
+     * 
      * @param request CreateTempDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTempDBInstanceResponse
@@ -4347,14 +4839,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a temporary instance for an RDS instance that runs SQL Server 2008 R2 and uses local disks.
-     *
-     * @description ### [](#)Supported database engines
-     * Your RDS instance runs SQL Server 2008 R2 with local disks.
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance](https://help.aliyun.com/document_detail/95724.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>Your RDS instance runs SQL Server 2008 R2 with local disks.</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/95724.html">Restore the data of an ApsaraDB RDS for SQL Server instance by using a temporary RDS instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a temporary instance for an RDS instance that runs SQL Server 2008 R2 and uses local disks.</p>
+     * 
      * @param request CreateTempDBInstanceRequest
      * @return CreateTempDBInstanceResponse
      */
@@ -4364,8 +4860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 下单领券接口
-     *
+     * <b>summary</b> : 
+     * <p>下单领券接口</p>
+     * 
      * @param request CreateYouhuiForOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateYouhuiForOrderResponse
@@ -4415,8 +4912,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 下单领券接口
-     *
+     * <b>summary</b> : 
+     * <p>下单领券接口</p>
+     * 
      * @param request CreateYouhuiForOrderRequest
      * @return CreateYouhuiForOrderResponse
      */
@@ -4426,11 +4924,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an ApsaraDB RDS for SQL Server instance from an Active Directory (AD) domain.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an ApsaraDB RDS for SQL Server instance from an Active Directory (AD) domain.</p>
+     * 
      * @param request DeleteADSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteADSettingResponse
@@ -4480,11 +4982,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an ApsaraDB RDS for SQL Server instance from an Active Directory (AD) domain.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an ApsaraDB RDS for SQL Server instance from an Active Directory (AD) domain.</p>
+     * 
      * @param request DeleteADSettingRequest
      * @return DeleteADSettingResponse
      */
@@ -4494,20 +5000,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an account from an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Delete a database account from an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96104.html)
-     * *   [Delete a database account from an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/147649.html)
-     * *   [Delete a database account from an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95694.html)
-     * *   [Delete a database account from an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97135.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96104.html">Delete a database account from an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/147649.html">Delete a database account from an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95694.html">Delete a database account from an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97135.html">Delete a database account from an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an account from an instance.</p>
+     * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAccountResponse
@@ -4557,20 +5071,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an account from an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Delete a database account from an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96104.html)
-     * *   [Delete a database account from an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/147649.html)
-     * *   [Delete a database account from an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95694.html)
-     * *   [Delete a database account from an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97135.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96104.html">Delete a database account from an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/147649.html">Delete a database account from an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95694.html">Delete a database account from an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97135.html">Delete a database account from an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an account from an instance.</p>
+     * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
      */
@@ -4580,20 +5102,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the data backup files of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * > Only instances that run RDS High-availability Edition are supported.
-     * ### Description
-     * You can call this operation to delete backup sets of the instance itself. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
-     * ### Precautions
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The instance is in the Running state.
-     * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.
-     * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p>Only instances that run RDS High-availability Edition are supported.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3>Description</h3>
+     * <p>You can call this operation to delete backup sets of the instance itself. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.</p>
+     * <h3>Precautions</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.</li>
+     * <li>If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the data backup files of an ApsaraDB RDS instance.</p>
+     * 
      * @param request DeleteBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBackupResponse
@@ -4643,20 +5173,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the data backup files of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * > Only instances that run RDS High-availability Edition are supported.
-     * ### Description
-     * You can call this operation to delete backup sets of the instance itself. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.
-     * ### Precautions
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The instance is in the Running state.
-     * *   If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.
-     * *   If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p>Only instances that run RDS High-availability Edition are supported.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3>Description</h3>
+     * <p>You can call this operation to delete backup sets of the instance itself. Backup sets of the associated instances such as read-only, disaster recovery, and cloned instances are not deleted.</p>
+     * <h3>Precautions</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>If the log backup feature is disabled, instances cannot be restored by point in time. You can delete data backup sets that are retained for more than seven days.</li>
+     * <li>If the log backup feature is enabled and the log backup retention period is shorter than the data backup retention period, you can delete the data backup files that are retained for a period longer than the log backup retention period.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the data backup files of an ApsaraDB RDS instance.</p>
+     * 
      * @param request DeleteBackupRequest
      * @return DeleteBackupResponse
      */
@@ -4666,12 +5204,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the backup files of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS SQL Server
-     * >  This operation is available only for users that are added to the whitelist.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <blockquote>
+     * <p> This operation is available only for users that are added to the whitelist.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the backup files of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DeleteBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBackupFileResponse
@@ -4729,12 +5271,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the backup files of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS SQL Server
-     * >  This operation is available only for users that are added to the whitelist.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <blockquote>
+     * <p> This operation is available only for users that are added to the whitelist.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the backup files of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DeleteBackupFileRequest
      * @return DeleteBackupFileResponse
      */
@@ -4744,20 +5290,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Release an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96057.html)
-     * *   [Release an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96749.html)
-     * *   [Release an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95662.html)
-     * *   [Release an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97128.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96057.html">Release an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96749.html">Release an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95662.html">Release an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97128.html">Release an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases an instance.</p>
+     * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBInstanceResponse
@@ -4807,20 +5361,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Release an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96057.html)
-     * *   [Release an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96749.html)
-     * *   [Release an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95662.html)
-     * *   [Release an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97128.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96057.html">Release an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96749.html">Release an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95662.html">Release an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97128.html">Release an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases an instance.</p>
+     * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
      */
@@ -4830,14 +5392,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an endpoint for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Delete the read-only endpoint of an ApsaraDB RDS for MySQL cluster](https://help.aliyun.com/document_detail/464133.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only endpoint of an ApsaraDB RDS for MySQL cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request DeleteDBInstanceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBInstanceEndpointResponse
@@ -4879,14 +5445,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an endpoint for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Delete the read-only endpoint of an ApsaraDB RDS for MySQL cluster](https://help.aliyun.com/document_detail/464133.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only endpoint of an ApsaraDB RDS for MySQL cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request DeleteDBInstanceEndpointRequest
      * @return DeleteDBInstanceEndpointResponse
      */
@@ -4896,13 +5466,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoint of an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL cluster instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### Precautions
-     * You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can delete the type of endpoint.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can directly delete the type of endpoint.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request DeleteDBInstanceEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBInstanceEndpointAddressResponse
@@ -4950,13 +5522,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoint of an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL cluster instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### Precautions
-     * You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can delete the type of endpoint.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>You can delete only the public endpoint of each endpoint type from the instance. If you want to delete an internal endpoint of any endpoint type, you can directly delete the type of endpoint.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request DeleteDBInstanceEndpointAddressRequest
      * @return DeleteDBInstanceEndpointAddressResponse
      */
@@ -4966,14 +5540,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](https://help.aliyun.com/document_detail/464130.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete a node from an ApsaraDB RDS for MySQL cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a node from an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param tmpReq DeleteDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBNodesResponse
@@ -5037,14 +5618,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](https://help.aliyun.com/document_detail/464130.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete a node from an ApsaraDB RDS for MySQL cluster</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a node from an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request DeleteDBNodesRequest
      * @return DeleteDBNodesResponse
      */
@@ -5054,16 +5642,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the endpoint that is used to connect to the dedicated proxy of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/184921.html)
-     * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418274.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the endpoint that is used to connect to the dedicated proxy of an instance.</p>
+     * 
      * @param request DeleteDBProxyEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBProxyEndpointAddressResponse
@@ -5113,16 +5709,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the endpoint that is used to connect to the dedicated proxy of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/184921.html)
-     * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418274.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the endpoint that is used to connect to the dedicated proxy of an instance.</p>
+     * 
      * @param request DeleteDBProxyEndpointAddressRequest
      * @return DeleteDBProxyEndpointAddressResponse
      */
@@ -5132,20 +5736,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database from an RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Delete a database from an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96106.html)
-     * *   [Delete a database from an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96759.html)
-     * *   [Delete a database from an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95699.html)
-     * *   [Delete a database from an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97137.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96106.html">Delete a database from an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96759.html">Delete a database from an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95699.html">Delete a database from an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97137.html">Delete a database from an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a database from an RDS instance.</p>
+     * 
      * @param request DeleteDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDatabaseResponse
@@ -5183,20 +5795,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database from an RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Delete a database from an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96106.html)
-     * *   [Delete a database from an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96759.html)
-     * *   [Delete a database from an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95699.html)
-     * *   [Delete a database from an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97137.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96106.html">Delete a database from an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96759.html">Delete a database from an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95699.html">Delete a database from an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97137.html">Delete a database from an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a database from an RDS instance.</p>
+     * 
      * @param request DeleteDatabaseRequest
      * @return DeleteDatabaseResponse
      */
@@ -5206,14 +5826,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a global active database cluster.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [Usage notes](#)
-     * *   A global active database cluster cannot be restored after it is deleted. Proceed with caution.
-     * *   If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the [DeleteDBInstance](https://help.aliyun.com/document_detail/26229.html) to release the instances one after another.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <ul>
+     * <li>A global active database cluster cannot be restored after it is deleted. Proceed with caution.</li>
+     * <li>If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the <a href="https://help.aliyun.com/document_detail/26229.html">DeleteDBInstance</a> to release the instances one after another.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a global active database cluster.</p>
+     * 
      * @param request DeleteGadInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGadInstanceResponse
@@ -5251,14 +5877,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a global active database cluster.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [Usage notes](#)
-     * *   A global active database cluster cannot be restored after it is deleted. Proceed with caution.
-     * *   If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the [DeleteDBInstance](https://help.aliyun.com/document_detail/26229.html) to release the instances one after another.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <ul>
+     * <li>A global active database cluster cannot be restored after it is deleted. Proceed with caution.</li>
+     * <li>If you delete a global active database cluster, the system removes all nodes and Data Transmission Service (DTS) synchronization tasks from the cluster. However, the system does not release the ApsaraDB RDS for MySQL instances that run as nodes in the cluster. If you no longer need the ApsaraDB RDS for MySQL instances, you can call the <a href="https://help.aliyun.com/document_detail/26229.html">DeleteDBInstance</a> to release the instances one after another.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a global active database cluster.</p>
+     * 
      * @param request DeleteGadInstanceRequest
      * @return DeleteGadInstanceResponse
      */
@@ -5268,8 +5900,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>删除全密态规则</p>
+     * 
      * @param request DeleteMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMaskingRulesResponse
@@ -5315,8 +5948,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>删除全密态规则</p>
+     * 
      * @param request DeleteMaskingRulesRequest
      * @return DeleteMaskingRulesResponse
      */
@@ -5326,16 +5960,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a parameter template from an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a parameter template from an instance.</p>
+     * 
      * @param request DeleteParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteParameterGroupResponse
@@ -5385,16 +6027,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a parameter template from an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a parameter template from an instance.</p>
+     * 
      * @param request DeleteParameterGroupRequest
      * @return DeleteParameterGroupResponse
      */
@@ -5404,14 +6054,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an extension from a database.
-     *
-     * @description ### Supported database engines
-     * RDS PostgreSQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an extension from a database.</p>
+     * 
      * @param request DeletePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePostgresExtensionsResponse
@@ -5473,14 +6127,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an extension from a database.
-     *
-     * @description ### Supported database engines
-     * RDS PostgreSQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an extension from a database.</p>
+     * 
      * @param request DeletePostgresExtensionsRequest
      * @return DeletePostgresExtensionsResponse
      */
@@ -5490,8 +6148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the credential of a user who uses the Data API feature.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the credential of a user who uses the Data API feature.</p>
+     * 
      * @param request DeleteSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSecretResponse
@@ -5557,8 +6216,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the credential of a user who uses the Data API feature.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the credential of a user who uses the Data API feature.</p>
+     * 
      * @param request DeleteSecretRequest
      * @return DeleteSecretResponse
      */
@@ -5568,13 +6228,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a replication slot of an instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   PostgreSQL
-     * ### [](#)Precautions
-     * You can delete a replication slot only when the status of the slot is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>You can delete a replication slot only when the status of the slot is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the status of a replication slot.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a replication slot of an instance.</p>
+     * 
      * @param request DeleteSlotRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSlotResponse
@@ -5636,13 +6300,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a replication slot of an instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   PostgreSQL
-     * ### [](#)Precautions
-     * You can delete a replication slot only when the status of the slot is **INACTIVE**. You can call the DescribeSlots operation to query the status of a replication slot.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>You can delete a replication slot only when the status of the slot is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the status of a replication slot.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a replication slot of an instance.</p>
+     * 
      * @param request DeleteSlotRequest
      * @return DeleteSlotResponse
      */
@@ -5652,14 +6320,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the backup files of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   MySQL
-     * ### [](#)Usage notes
-     * *   A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the ImportUserBackupFile operation to reimport the full backup file.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.</li>
+     * <li>This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the ImportUserBackupFile operation to reimport the full backup file.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the backup files of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request DeleteUserBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserBackupFileResponse
@@ -5709,14 +6383,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the backup files of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   MySQL
-     * ### [](#)Usage notes
-     * *   A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the ImportUserBackupFile operation to reimport the full backup file.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.</li>
+     * <li>This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the ImportUserBackupFile operation to reimport the full backup file.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the backup files of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request DeleteUserBackupFileRequest
      * @return DeleteUserBackupFileResponse
      */
@@ -5726,11 +6406,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the migration tasks of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the migration tasks of an instance.</p>
+     * 
      * @param request DescibeImportsFromDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescibeImportsFromDatabaseResponse
@@ -5808,11 +6492,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the migration tasks of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the migration tasks of an instance.</p>
+     * 
      * @param request DescibeImportsFromDatabaseRequest
      * @return DescibeImportsFromDatabaseResponse
      */
@@ -5822,11 +6510,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the AD domain of an instance. The information includes whether the instance is added to the AD domain, the name of the AD domain, and the account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the AD domain of an instance. The information includes whether the instance is added to the AD domain, the name of the AD domain, and the account.</p>
+     * 
      * @param request DescribeADInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeADInfoResponse
@@ -5876,11 +6568,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the AD domain of an instance. The information includes whether the instance is added to the AD domain, the name of the AD domain, and the account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the AD domain of an instance. The information includes whether the instance is added to the AD domain, the name of the AD domain, and the account.</p>
+     * 
      * @param request DescribeADInfoRequest
      * @return DescribeADInfoResponse
      */
@@ -5890,8 +6586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询全密态用户权限
-     *
+     * <b>summary</b> : 
+     * <p>查询全密态用户权限</p>
+     * 
      * @param request DescribeAccountMaskingPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccountMaskingPrivilegeResponse
@@ -5937,8 +6634,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询全密态用户权限
-     *
+     * <b>summary</b> : 
+     * <p>查询全密态用户权限</p>
+     * 
      * @param request DescribeAccountMaskingPrivilegeRequest
      * @return DescribeAccountMaskingPrivilegeResponse
      */
@@ -5948,14 +6646,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the accounts that are created on an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the accounts that are created on an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccountsResponse
@@ -6005,14 +6707,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the accounts that are created on an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the accounts that are created on an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
      */
@@ -6022,14 +6728,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the historical events feature is enabled.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether the historical events feature is enabled.</p>
+     * 
      * @param request DescribeActionEventPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeActionEventPolicyResponse
@@ -6075,14 +6785,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the historical events feature is enabled.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether the historical events feature is enabled.</p>
+     * 
      * @param request DescribeActionEventPolicyRequest
      * @return DescribeActionEventPolicyResponse
      */
@@ -6092,14 +6806,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about scheduled O\\\\\\&M tasks for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about scheduled O\\\&amp;M tasks for an instance.</p>
+     * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeActiveOperationTasksResponse
@@ -6189,14 +6907,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about scheduled O\\\\\\&M tasks for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about scheduled O\\\&amp;M tasks for an instance.</p>
+     * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
      */
@@ -6206,13 +6928,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whitelist templates at a time by using fuzzy search.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whitelist templates at a time by using fuzzy search.</p>
+     * 
      * @param request DescribeAllWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAllWhitelistTemplateResponse
@@ -6270,13 +6996,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whitelist templates at a time by using fuzzy search.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whitelist templates at a time by using fuzzy search.</p>
+     * 
      * @param request DescribeAllWhitelistTemplateRequest
      * @return DescribeAllWhitelistTemplateResponse
      */
@@ -6286,13 +7016,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of analytic instances that are associated with an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * ### [](#)References
-     * [Create and view an analytic instance](https://help.aliyun.com/document_detail/155180.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/155180.html">Create and view an analytic instance</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of analytic instances that are associated with an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request DescribeAnalyticdbByPrimaryDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAnalyticdbByPrimaryDBInstanceResponse
@@ -6338,13 +7070,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of analytic instances that are associated with an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * ### [](#)References
-     * [Create and view an analytic instance](https://help.aliyun.com/document_detail/155180.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/155180.html">Create and view an analytic instance</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of analytic instances that are associated with an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request DescribeAnalyticdbByPrimaryDBInstanceRequest
      * @return DescribeAnalyticdbByPrimaryDBInstanceResponse
      */
@@ -6354,14 +7088,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the specifications that are supported for an instance. The specifications include the instance type and the storage capacity.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the specifications that are supported for an instance. The specifications include the instance type and the storage capacity.</p>
+     * 
      * @param request DescribeAvailableClassesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableClassesResponse
@@ -6431,14 +7169,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the specifications that are supported for an instance. The specifications include the instance type and the storage capacity.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the specifications that are supported for an instance. The specifications include the instance type and the storage capacity.</p>
+     * 
      * @param request DescribeAvailableClassesRequest
      * @return DescribeAvailableClassesResponse
      */
@@ -6448,18 +7190,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the available destination regions to which the cross-region backup files from a specific source region can be replicated.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available destination regions to which the cross-region backup files from a specific source region can be replicated.</p>
+     * 
      * @param request DescribeAvailableCrossRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableCrossRegionResponse
@@ -6501,18 +7251,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the available destination regions to which the cross-region backup files from a specific source region can be replicated.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available destination regions to which the cross-region backup files from a specific source region can be replicated.</p>
+     * 
      * @param request DescribeAvailableCrossRegionRequest
      * @return DescribeAvailableCrossRegionResponse
      */
@@ -6522,14 +7280,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Enhanced Monitoring metrics that are supported by an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [View the Enhanced Monitoring metrics](https://help.aliyun.com/document_detail/299200.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">View the Enhanced Monitoring metrics</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Enhanced Monitoring metrics that are supported by an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeAvailableMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableMetricsResponse
@@ -6567,14 +7331,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Enhanced Monitoring metrics that are supported by an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [View the Enhanced Monitoring metrics](https://help.aliyun.com/document_detail/299200.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">View the Enhanced Monitoring metrics</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Enhanced Monitoring metrics that are supported by an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeAvailableMetricsRequest
      * @return DescribeAvailableMetricsResponse
      */
@@ -6584,15 +7354,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the time range within which data can be restored from a cross-region backup file.
-     *
-     * @description >  To view the time range within which you can restore data from a standard backup set, see DescribeBackups.
-     * ### [](#)Supported database engines
-     * ApsaraDB RDS for MySQL instances with local disks
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cross-region backup feature](https://help.aliyun.com/document_detail/120824.html)
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> To view the time range within which you can restore data from a standard backup set, see DescribeBackups.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>ApsaraDB RDS for MySQL instances with local disks</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the time range within which data can be restored from a cross-region backup file.</p>
+     * 
      * @param request DescribeAvailableRecoveryTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableRecoveryTimeResponse
@@ -6646,15 +7422,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the time range within which data can be restored from a cross-region backup file.
-     *
-     * @description >  To view the time range within which you can restore data from a standard backup set, see DescribeBackups.
-     * ### [](#)Supported database engines
-     * ApsaraDB RDS for MySQL instances with local disks
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the cross-region backup feature](https://help.aliyun.com/document_detail/120824.html)
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> To view the time range within which you can restore data from a standard backup set, see DescribeBackups.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>ApsaraDB RDS for MySQL instances with local disks</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the time range within which data can be restored from a cross-region backup file.</p>
+     * 
      * @param request DescribeAvailableRecoveryTimeRequest
      * @return DescribeAvailableRecoveryTimeResponse
      */
@@ -6664,15 +7446,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the available zones for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB<blockquote>
+     * <p>You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">buy page</a> prevails.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available zones for an instance.</p>
+     * 
      * @param request DescribeAvailableZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAvailableZonesResponse
@@ -6734,15 +7522,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the available zones for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB<blockquote>
+     * <p>You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">buy page</a> prevails.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the available zones for an instance.</p>
+     * 
      * @param request DescribeAvailableZonesRequest
      * @return DescribeAvailableZonesResponse
      */
@@ -6752,10 +7546,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases that are involved in a backup file.
-     *
-     * @description > This operation is phased out.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is phased out.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the databases that are involved in a backup file.</p>
+     * 
      * @param request DescribeBackupDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupDatabaseResponse
@@ -6801,10 +7599,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases that are involved in a backup file.
-     *
-     * @description > This operation is phased out.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is phased out.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the databases that are involved in a backup file.</p>
+     * 
      * @param request DescribeBackupDatabaseRequest
      * @return DescribeBackupDatabaseResponse
      */
@@ -6814,14 +7616,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup settings of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup settings of an instance.</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupPolicyResponse
@@ -6879,14 +7685,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup settings of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup settings of an instance.</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
      */
@@ -6896,14 +7706,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup tasks of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup tasks of an instance.</p>
+     * 
      * @param request DescribeBackupTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupTasksResponse
@@ -6969,14 +7783,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup tasks of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup tasks of an instance.</p>
+     * 
      * @param request DescribeBackupTasksRequest
      * @return DescribeBackupTasksResponse
      */
@@ -6986,14 +7804,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data backup files of an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the data backup files of an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupsResponse
@@ -7063,14 +7885,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data backup files of an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the data backup files of an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
      */
@@ -7080,18 +7906,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the binary log files of an instance that runs MySQL or MariaDB or the write-ahead logging (WAL) files of an instance that runs PostgreSQL.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   MariaDB
-     * ### Usage notes
-     * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a download URL.
-     * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download backup files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the backup files before the expiration time.
-     * *   If you use a RAM user to download backup files, you must grant permissions to the RAM user. For more information, see [Grant backup file download permissions to a RAM user with read-only permissions](https://help.aliyun.com/document_detail/100043.html).
-     * *   Each log file that is returned by this operation contains the log entries that are generated over the time range that is specified by the StartTime and EndTime parameters.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>If the return value of the <strong>DownloadLink</strong> parameter is NULL, ApsaraDB RDS does not provide a download URL.</li>
+     * <li>If the return value of the <strong>DownloadLink</strong> parameter is not NULL, ApsaraDB RDS provides a URL for you to download backup files. The expiration time of the URL is specified by the <strong>LinkExpiredTime</strong> parameter. You must download the backup files before the expiration time.</li>
+     * <li>If you use a RAM user to download backup files, you must grant permissions to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/100043.html">Grant backup file download permissions to a RAM user with read-only permissions</a>.</li>
+     * <li>Each log file that is returned by this operation contains the log entries that are generated over the time range that is specified by the StartTime and EndTime parameters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the binary log files of an instance that runs MySQL or MariaDB or the write-ahead logging (WAL) files of an instance that runs PostgreSQL.</p>
+     * 
      * @param request DescribeBinlogFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBinlogFilesResponse
@@ -7153,18 +7985,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the binary log files of an instance that runs MySQL or MariaDB or the write-ahead logging (WAL) files of an instance that runs PostgreSQL.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   MariaDB
-     * ### Usage notes
-     * *   If the return value of the **DownloadLink** parameter is NULL, ApsaraDB RDS does not provide a download URL.
-     * *   If the return value of the **DownloadLink** parameter is not NULL, ApsaraDB RDS provides a URL for you to download backup files. The expiration time of the URL is specified by the **LinkExpiredTime** parameter. You must download the backup files before the expiration time.
-     * *   If you use a RAM user to download backup files, you must grant permissions to the RAM user. For more information, see [Grant backup file download permissions to a RAM user with read-only permissions](https://help.aliyun.com/document_detail/100043.html).
-     * *   Each log file that is returned by this operation contains the log entries that are generated over the time range that is specified by the StartTime and EndTime parameters.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>If the return value of the <strong>DownloadLink</strong> parameter is NULL, ApsaraDB RDS does not provide a download URL.</li>
+     * <li>If the return value of the <strong>DownloadLink</strong> parameter is not NULL, ApsaraDB RDS provides a URL for you to download backup files. The expiration time of the URL is specified by the <strong>LinkExpiredTime</strong> parameter. You must download the backup files before the expiration time.</li>
+     * <li>If you use a RAM user to download backup files, you must grant permissions to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/100043.html">Grant backup file download permissions to a RAM user with read-only permissions</a>.</li>
+     * <li>Each log file that is returned by this operation contains the log entries that are generated over the time range that is specified by the StartTime and EndTime parameters.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the binary log files of an instance that runs MySQL or MariaDB or the write-ahead logging (WAL) files of an instance that runs PostgreSQL.</p>
+     * 
      * @param request DescribeBinlogFilesRequest
      * @return DescribeBinlogFilesResponse
      */
@@ -7174,14 +8012,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the character sets that are supported by an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the character sets that are supported by an instance.</p>
+     * 
      * @param request DescribeCharacterSetNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCharacterSetNameResponse
@@ -7235,14 +8077,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the character sets that are supported by an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the character sets that are supported by an instance.</p>
+     * 
      * @param request DescribeCharacterSetNameRequest
      * @return DescribeCharacterSetNameResponse
      */
@@ -7252,14 +8098,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the instance types of an instance by using the code of the instance types.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the instance types of an instance by using the code of the instance types.</p>
+     * 
      * @param request DescribeClassDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeClassDetailsResponse
@@ -7325,14 +8175,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the instance types of an instance by using the code of the instance types.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the instance types of an instance by using the code of the instance types.</p>
+     * 
      * @param request DescribeClassDetailsRequest
      * @return DescribeClassDetailsResponse
      */
@@ -7342,11 +8196,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Query the details about the assessment report for cloud migration to an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the details about the assessment report for cloud migration to an instance.</p>
+     * 
      * @param request DescribeCloudMigrationPrecheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudMigrationPrecheckResultResponse
@@ -7404,11 +8262,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Query the details about the assessment report for cloud migration to an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Query the details about the assessment report for cloud migration to an instance.</p>
+     * 
      * @param request DescribeCloudMigrationPrecheckResultRequest
      * @return DescribeCloudMigrationPrecheckResultResponse
      */
@@ -7418,11 +8280,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the cloud migration task of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the cloud migration task of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeCloudMigrationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudMigrationResultResponse
@@ -7480,11 +8346,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the cloud migration task of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the cloud migration task of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeCloudMigrationResultRequest
      * @return DescribeCloudMigrationResultResponse
      */
@@ -7494,11 +8364,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the character set collations and time zones that are available for use in ApsaraDB RDS for SQL Server.
-     *
-     * @description ### Supported database engine
-     * SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the character set collations and time zones that are available for use in ApsaraDB RDS for SQL Server.</p>
+     * 
      * @param request DescribeCollationTimeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCollationTimeZonesResponse
@@ -7536,11 +8408,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the character set collations and time zones that are available for use in ApsaraDB RDS for SQL Server.
-     *
-     * @description ### Supported database engine
-     * SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the character set collations and time zones that are available for use in ApsaraDB RDS for SQL Server.</p>
+     * 
      * @param request DescribeCollationTimeZonesRequest
      * @return DescribeCollationTimeZonesResponse
      */
@@ -7550,14 +8424,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases and tables whose data is included in a cross-region backup file of an instance.
-     *
-     * @description ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120824.html) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120875.html).
-     * Before you call this operation, make sure that the instance runs one of the following database engines:
-     * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120824.html).
-     * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](https://help.aliyun.com/document_detail/187923.html).
-     * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html).
-     *
+     * <b>description</b> :
+     * <p>ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see <a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a> and <a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a>.
+     * Before you call this operation, make sure that the instance runs one of the following database engines:</p>
+     * <ul>
+     * <li>MySQL. For more information, see <a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a>.</li>
+     * <li>SQL Server. For more information, see <a href="https://help.aliyun.com/document_detail/187923.html">Back up an ApsaraDB RDS for SQL Server instance across regions</a>.</li>
+     * <li>PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/206671.html">Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the databases and tables whose data is included in a cross-region backup file of an instance.</p>
+     * 
      * @param request DescribeCrossBackupMetaListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCrossBackupMetaListResponse
@@ -7623,14 +8501,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases and tables whose data is included in a cross-region backup file of an instance.
-     *
-     * @description ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120824.html) and [Restore the data of an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120875.html).
-     * Before you call this operation, make sure that the instance runs one of the following database engines:
-     * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120824.html).
-     * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](https://help.aliyun.com/document_detail/187923.html).
-     * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html).
-     *
+     * <b>description</b> :
+     * <p>ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see <a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a> and <a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a>.
+     * Before you call this operation, make sure that the instance runs one of the following database engines:</p>
+     * <ul>
+     * <li>MySQL. For more information, see <a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a>.</li>
+     * <li>SQL Server. For more information, see <a href="https://help.aliyun.com/document_detail/187923.html">Back up an ApsaraDB RDS for SQL Server instance across regions</a>.</li>
+     * <li>PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/206671.html">Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the databases and tables whose data is included in a cross-region backup file of an instance.</p>
+     * 
      * @param request DescribeCrossBackupMetaListRequest
      * @return DescribeCrossBackupMetaListResponse
      */
@@ -7640,18 +8522,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the instances for which the cross-region backup feature is enabled in a region and the cross-region backup settings of these instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the instances for which the cross-region backup feature is enabled in a region and the cross-region backup settings of these instances.</p>
+     * 
      * @param request DescribeCrossRegionBackupDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCrossRegionBackupDBInstanceResponse
@@ -7705,18 +8595,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the instances for which the cross-region backup feature is enabled in a region and the cross-region backup settings of these instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the instances for which the cross-region backup feature is enabled in a region and the cross-region backup settings of these instances.</p>
+     * 
      * @param request DescribeCrossRegionBackupDBInstanceRequest
      * @return DescribeCrossRegionBackupDBInstanceResponse
      */
@@ -7726,19 +8624,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cross-region data backup files of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   ApsaraDB RDS for MySQL instances with local disks
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * >  For more information about how to query cross-region log backup files, see DescribeCrossRegionLogBackupFiles.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>ApsaraDB RDS for MySQL instances with local disks</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a><blockquote>
+     * <p> For more information about how to query cross-region log backup files, see DescribeCrossRegionLogBackupFiles.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-region data backup files of an instance.</p>
+     * 
      * @param request DescribeCrossRegionBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCrossRegionBackupsResponse
@@ -7816,19 +8724,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cross-region data backup files of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   ApsaraDB RDS for MySQL instances with local disks
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * >  For more information about how to query cross-region log backup files, see DescribeCrossRegionLogBackupFiles.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>ApsaraDB RDS for MySQL instances with local disks</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a><blockquote>
+     * <p> For more information about how to query cross-region log backup files, see DescribeCrossRegionLogBackupFiles.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-region data backup files of an instance.</p>
+     * 
      * @param request DescribeCrossRegionBackupsRequest
      * @return DescribeCrossRegionBackupsResponse
      */
@@ -7838,19 +8756,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cross-region log backup files of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * >  For more information about how to query cross-region data backup files, see [DescribeCrossRegionBackups](https://help.aliyun.com/document_detail/121733.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a><blockquote>
+     * <p> For more information about how to query cross-region data backup files, see <a href="https://help.aliyun.com/document_detail/121733.html">DescribeCrossRegionBackups</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-region log backup files of an instance.</p>
+     * 
      * @param request DescribeCrossRegionLogBackupFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCrossRegionLogBackupFilesResponse
@@ -7916,19 +8844,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cross-region log backup files of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * >  For more information about how to query cross-region data backup files, see [DescribeCrossRegionBackups](https://help.aliyun.com/document_detail/121733.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a><blockquote>
+     * <p> For more information about how to query cross-region data backup files, see <a href="https://help.aliyun.com/document_detail/121733.html">DescribeCrossRegionBackups</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-region log backup files of an instance.</p>
+     * 
      * @param request DescribeCrossRegionLogBackupFilesRequest
      * @return DescribeCrossRegionLogBackupFilesResponse
      */
@@ -7938,8 +8876,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实例最新变配订单
-     *
+     * <b>summary</b> : 
+     * <p>查询实例最新变配订单</p>
+     * 
      * @param request DescribeCurrentModifyOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCurrentModifyOrderResponse
@@ -7993,8 +8932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实例最新变配订单
-     *
+     * <b>summary</b> : 
+     * <p>查询实例最新变配订单</p>
+     * 
      * @param request DescribeCurrentModifyOrderRequest
      * @return DescribeCurrentModifyOrderResponse
      */
@@ -8058,14 +8998,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an instance.</p>
+     * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceAttributeResponse
@@ -8103,14 +9047,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an instance.</p>
+     * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
      */
@@ -8120,14 +9068,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the tags that are added to an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the tags that are added to an instance.</p>
+     * 
      * @param request DescribeDBInstanceByTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceByTagsResponse
@@ -8193,14 +9145,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the tags that are added to an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the tags that are added to an instance.</p>
+     * 
      * @param request DescribeDBInstanceByTagsRequest
      * @return DescribeDBInstanceByTagsResponse
      */
@@ -8210,8 +9166,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例链路诊断信息
-     *
+     * <b>summary</b> : 
+     * <p>获取实例链路诊断信息</p>
+     * 
      * @param request DescribeDBInstanceConnectivityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceConnectivityResponse
@@ -8237,8 +9194,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例链路诊断信息
-     *
+     * <b>summary</b> : 
+     * <p>获取实例链路诊断信息</p>
+     * 
      * @param request DescribeDBInstanceConnectivityRequest
      * @return DescribeDBInstanceConnectivityResponse
      */
@@ -8248,10 +9206,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeDBInstanceDetail operation to query the details of an instance.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DescribeDBInstanceDetail operation to query the details of an instance.</p>
+     * 
      * @param request DescribeDBInstanceDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceDetailResponse
@@ -8305,10 +9265,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeDBInstanceDetail operation to query the details of an instance.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DescribeDBInstanceDetail operation to query the details of an instance.</p>
+     * 
      * @param request DescribeDBInstanceDetailRequest
      * @return DescribeDBInstanceDetailResponse
      */
@@ -8318,8 +9280,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeDBInstanceEncryptionKey operation to check whether disk encryption is enabled for an instance. You can also query details about the keys that are used for disk encryption. This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.
-     *
+     * <b>summary</b> : 
+     * <p>You can call the DescribeDBInstanceEncryptionKey operation to check whether disk encryption is enabled for an instance. You can also query details about the keys that are used for disk encryption. This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.</p>
+     * 
      * @param request DescribeDBInstanceEncryptionKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceEncryptionKeyResponse
@@ -8381,8 +9344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeDBInstanceEncryptionKey operation to check whether disk encryption is enabled for an instance. You can also query details about the keys that are used for disk encryption. This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.
-     *
+     * <b>summary</b> : 
+     * <p>You can call the DescribeDBInstanceEncryptionKey operation to check whether disk encryption is enabled for an instance. You can also query details about the keys that are used for disk encryption. This operation is supported for instances that run MySQL, SQL Server, or PostgreSQL.</p>
+     * 
      * @param request DescribeDBInstanceEncryptionKeyRequest
      * @return DescribeDBInstanceEncryptionKeyResponse
      */
@@ -8392,11 +9356,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the endpoints of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the endpoints of an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request DescribeDBInstanceEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceEndpointsResponse
@@ -8438,11 +9404,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the endpoints of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the endpoints of an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request DescribeDBInstanceEndpointsRequest
      * @return DescribeDBInstanceEndpointsResponse
      */
@@ -8452,18 +9420,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the high availability mode and data replication mode of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Query the data replication mode of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96055.html)
-     * *   [Query the data replication mode of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/151265.html)
-     * *   [Query the data replication mode of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/415433.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96055.html">Query the data replication mode of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/151265.html">Query the data replication mode of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/415433.html">Query the data replication mode of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the high availability mode and data replication mode of an instance.</p>
+     * 
      * @param request DescribeDBInstanceHAConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceHAConfigResponse
@@ -8509,18 +9485,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the high availability mode and data replication mode of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Query the data replication mode of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96055.html)
-     * *   [Query the data replication mode of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/151265.html)
-     * *   [Query the data replication mode of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/415433.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96055.html">Query the data replication mode of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/151265.html">Query the data replication mode of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/415433.html">Query the data replication mode of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the high availability mode and data replication mode of an instance.</p>
+     * 
      * @param request DescribeDBInstanceHAConfigRequest
      * @return DescribeDBInstanceHAConfigResponse
      */
@@ -8530,14 +9514,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP address whitelist of an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the IP address whitelist of an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeDBInstanceIPArrayListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceIPArrayListResponse
@@ -8579,14 +9567,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP address whitelist of an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the IP address whitelist of an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeDBInstanceIPArrayListRequest
      * @return DescribeDBInstanceIPArrayListResponse
      */
@@ -8596,18 +9588,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS SQL Server
-     * ### [](#)Prerequisites
-     * *   The RDS instance runs RDS Basic Edition, RDS High-availability Edition, or RDS Cluster Edition. If your RDS instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.
-     * *   The RDS instance belongs to a general-purpose or dedicated instance family. The shared instance family is not supported.
-     * *   If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Configure a distributed transaction whitelist](https://help.aliyun.com/document_detail/124321.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <ul>
+     * <li>The RDS instance runs RDS Basic Edition, RDS High-availability Edition, or RDS Cluster Edition. If your RDS instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.</li>
+     * <li>The RDS instance belongs to a general-purpose or dedicated instance family. The shared instance family is not supported.</li>
+     * <li>If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.</p>
+     * 
      * @param request DescribeDBInstanceIpHostnameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceIpHostnameResponse
@@ -8661,18 +9659,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS SQL Server
-     * ### [](#)Prerequisites
-     * *   The RDS instance runs RDS Basic Edition, RDS High-availability Edition, or RDS Cluster Edition. If your RDS instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.
-     * *   The RDS instance belongs to a general-purpose or dedicated instance family. The shared instance family is not supported.
-     * *   If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Configure a distributed transaction whitelist](https://help.aliyun.com/document_detail/124321.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <ul>
+     * <li>The RDS instance runs RDS Basic Edition, RDS High-availability Edition, or RDS Cluster Edition. If your RDS instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.</li>
+     * <li>The RDS instance belongs to a general-purpose or dedicated instance family. The shared instance family is not supported.</li>
+     * <li>If the RDS instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the Creation Time</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the hostname of the Elastic Compute Service (ECS) instance on which the ApsaraDB RDS for SQL Server instance runs.</p>
+     * 
      * @param request DescribeDBInstanceIpHostnameRequest
      * @return DescribeDBInstanceIpHostnameResponse
      */
@@ -8682,14 +9686,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [View the Enhanced Monitoring metrics](https://help.aliyun.com/document_detail/299200.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">View the Enhanced Monitoring metrics</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeDBInstanceMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceMetricsResponse
@@ -8727,14 +9737,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [View the Enhanced Monitoring metrics](https://help.aliyun.com/document_detail/299200.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">View the Enhanced Monitoring metrics</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeDBInstanceMetricsRequest
      * @return DescribeDBInstanceMetricsResponse
      */
@@ -8744,13 +9760,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring frequency of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring frequency of an instance.</p>
+     * 
      * @param request DescribeDBInstanceMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceMonitorResponse
@@ -8800,13 +9820,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring frequency of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring frequency of an instance.</p>
+     * 
      * @param request DescribeDBInstanceMonitorRequest
      * @return DescribeDBInstanceMonitorResponse
      */
@@ -8816,14 +9840,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all endpoints of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all endpoints of an instance.</p>
+     * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceNetInfoResponse
@@ -8885,14 +9913,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all endpoints of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all endpoints of an instance.</p>
+     * 
      * @param request DescribeDBInstanceNetInfoRequest
      * @return DescribeDBInstanceNetInfoResponse
      */
@@ -8902,14 +9934,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all endpoints of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all endpoints of an instance.</p>
+     * 
      * @param request DescribeDBInstanceNetInfoForChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceNetInfoForChannelResponse
@@ -8967,14 +10003,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all endpoints of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all endpoints of an instance.</p>
+     * 
      * @param request DescribeDBInstanceNetInfoForChannelRequest
      * @return DescribeDBInstanceNetInfoForChannelResponse
      */
@@ -8984,14 +10024,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance metrics of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance metrics of an instance.</p>
+     * 
      * @param request DescribeDBInstancePerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancePerformanceResponse
@@ -9041,14 +10085,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance metrics of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance metrics of an instance.</p>
+     * 
      * @param request DescribeDBInstancePerformanceRequest
      * @return DescribeDBInstancePerformanceResponse
      */
@@ -9058,14 +10106,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The operation is phased out.</p>
+     * 
      * @deprecated OpenAPI DescribeDBInstancePromoteActivity is deprecated
-     *
-     * @summary The operation is phased out.
-     *
+     * 
      * @param request DescribeDBInstancePromoteActivityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancePromoteActivityResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeDBInstancePromoteActivityResponse describeDBInstancePromoteActivityWithOptions(DescribeDBInstancePromoteActivityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -9112,13 +10162,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>The operation is phased out.</p>
+     * 
      * @deprecated OpenAPI DescribeDBInstancePromoteActivity is deprecated
-     *
-     * @summary The operation is phased out.
-     *
+     * 
      * @param request DescribeDBInstancePromoteActivityRequest
      * @return DescribeDBInstancePromoteActivityResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeDBInstancePromoteActivityResponse describeDBInstancePromoteActivity(DescribeDBInstancePromoteActivityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -9126,18 +10178,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the settings of shared proxies that are enabled on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Feature description
-     * This operation is used to query the shared proxy settings of an instance that runs MySQL or the read/write splitting settings of an instance that runs SQL Server. For more information about how to query the dedicated proxy settings of an ApsaraDB RDS for MySQL instance, see [DescribeDBProxy](https://help.aliyun.com/document_detail/610506.html).
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature must be enabled for the primary instance.
-     * *   The read/write splitting feature must be enabled for the primary instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>This operation is used to query the shared proxy settings of an instance that runs MySQL or the read/write splitting settings of an instance that runs SQL Server. For more information about how to query the dedicated proxy settings of an ApsaraDB RDS for MySQL instance, see <a href="https://help.aliyun.com/document_detail/610506.html">DescribeDBProxy</a>.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature must be enabled for the primary instance.</li>
+     * <li>The read/write splitting feature must be enabled for the primary instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the settings of shared proxies that are enabled on an instance.</p>
+     * 
      * @param request DescribeDBInstanceProxyConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceProxyConfigurationResponse
@@ -9179,18 +10237,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the settings of shared proxies that are enabled on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Feature description
-     * This operation is used to query the shared proxy settings of an instance that runs MySQL or the read/write splitting settings of an instance that runs SQL Server. For more information about how to query the dedicated proxy settings of an ApsaraDB RDS for MySQL instance, see [DescribeDBProxy](https://help.aliyun.com/document_detail/610506.html).
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature must be enabled for the primary instance.
-     * *   The read/write splitting feature must be enabled for the primary instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <p>This operation is used to query the shared proxy settings of an instance that runs MySQL or the read/write splitting settings of an instance that runs SQL Server. For more information about how to query the dedicated proxy settings of an ApsaraDB RDS for MySQL instance, see <a href="https://help.aliyun.com/document_detail/610506.html">DescribeDBProxy</a>.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature must be enabled for the primary instance.</li>
+     * <li>The read/write splitting feature must be enabled for the primary instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the settings of shared proxies that are enabled on an instance.</p>
+     * 
      * @param request DescribeDBInstanceProxyConfigurationRequest
      * @return DescribeDBInstanceProxyConfigurationResponse
      */
@@ -9200,13 +10264,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SSL configurations of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the SSL configurations of an instance.</p>
+     * 
      * @param request DescribeDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceSSLResponse
@@ -9252,13 +10320,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SSL configurations of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the SSL configurations of an instance.</p>
+     * 
      * @param request DescribeDBInstanceSSLRequest
      * @return DescribeDBInstanceSSLResponse
      */
@@ -9268,13 +10340,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of the Transparent Data Encryption (TDE) feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of the Transparent Data Encryption (TDE) feature for an instance.</p>
+     * 
      * @param request DescribeDBInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstanceTDEResponse
@@ -9320,13 +10396,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of the Transparent Data Encryption (TDE) feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of the Transparent Data Encryption (TDE) feature for an instance.</p>
+     * 
      * @param request DescribeDBInstanceTDERequest
      * @return DescribeDBInstanceTDEResponse
      */
@@ -9336,14 +10416,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancesResponse
@@ -9501,14 +10585,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
      */
@@ -9518,16 +10606,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the instances.</p>
+     * 
      * @deprecated OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-     *
-     * @summary Queries the instances.
-     *
-     * @description >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
-     *
+     * 
      * @param request DescribeDBInstancesAsCsvRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancesAsCsvResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeDBInstancesAsCsvResponse describeDBInstancesAsCsvWithOptions(DescribeDBInstancesAsCsvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -9582,15 +10675,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the instances.</p>
+     * 
      * @deprecated OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-     *
-     * @summary Queries the instances.
-     *
-     * @description >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
-     *
+     * 
      * @param request DescribeDBInstancesAsCsvRequest
      * @return DescribeDBInstancesAsCsvResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeDBInstancesAsCsvResponse describeDBInstancesAsCsv(DescribeDBInstancesAsCsvRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -9598,14 +10696,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an ApsaraDB RDS instance based on the remaining subscription duration of an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about an ApsaraDB RDS instance based on the remaining subscription duration of an instance.</p>
+     * 
      * @param request DescribeDBInstancesByExpireTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancesByExpireTimeResponse
@@ -9679,14 +10781,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an ApsaraDB RDS instance based on the remaining subscription duration of an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about an ApsaraDB RDS instance based on the remaining subscription duration of an instance.</p>
+     * 
      * @param request DescribeDBInstancesByExpireTimeRequest
      * @return DescribeDBInstancesByExpireTimeResponse
      */
@@ -9696,10 +10802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeDBInstancePerformance operation to query the performance of instances.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DescribeDBInstancePerformance operation to query the performance of instances.</p>
+     * 
      * @param request DescribeDBInstancesByPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancesByPerformanceResponse
@@ -9785,10 +10893,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeDBInstancePerformance operation to query the performance of instances.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DescribeDBInstancePerformance operation to query the performance of instances.</p>
+     * 
      * @param request DescribeDBInstancesByPerformanceRequest
      * @return DescribeDBInstancesByPerformanceResponse
      */
@@ -9798,10 +10908,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of instances.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of instances.</p>
+     * 
      * @param request DescribeDBInstancesForCloneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInstancesForCloneResponse
@@ -9931,10 +11043,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of instances.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of instances.</p>
+     * 
      * @param request DescribeDBInstancesForCloneRequest
      * @return DescribeDBInstancesForCloneResponse
      */
@@ -9944,14 +11058,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries minor engine versions that are available for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)Usage notes
-     * Before you purchase or upgrade an instance that runs MySQL or PostgreSQL, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Before you purchase or upgrade an instance that runs MySQL or PostgreSQL, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries minor engine versions that are available for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeDBMiniEngineVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBMiniEngineVersionsResponse
@@ -10013,14 +11131,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries minor engine versions that are available for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)Usage notes
-     * Before you purchase or upgrade an instance that runs MySQL or PostgreSQL, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Before you purchase or upgrade an instance that runs MySQL or PostgreSQL, you can call the DescribeDBMiniEngineVersions operation to query the minor engine versions that are available for the instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries minor engine versions that are available for an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeDBMiniEngineVersionsRequest
      * @return DescribeDBMiniEngineVersionsResponse
      */
@@ -10030,12 +11152,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the settings of the dedicated proxy for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the settings of the dedicated proxy for an instance.</p>
+     * 
      * @param request DescribeDBProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBProxyResponse
@@ -10093,12 +11219,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the settings of the dedicated proxy for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the settings of the dedicated proxy for an instance.</p>
+     * 
      * @param request DescribeDBProxyRequest
      * @return DescribeDBProxyResponse
      */
@@ -10108,12 +11238,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the database proxy endpoints of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the database proxy endpoints of an instance.</p>
+     * 
      * @param request DescribeDBProxyEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBProxyEndpointResponse
@@ -10175,12 +11309,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the database proxy endpoints of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the database proxy endpoints of an instance.</p>
+     * 
      * @param request DescribeDBProxyEndpointRequest
      * @return DescribeDBProxyEndpointResponse
      */
@@ -10190,17 +11328,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of the database proxy for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * >  Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see [[Special offers/Price changes\\] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition](~~2555466~~).
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [View the monitoring data of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/194241.html)
-     * *   [View the monitoring data of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418275.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p> Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View the monitoring data of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View the monitoring data of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of the database proxy for an instance.</p>
+     * 
      * @param request DescribeDBProxyPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBProxyPerformanceResponse
@@ -10270,17 +11418,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of the database proxy for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * >  Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see [[Special offers/Price changes\\] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition](~~2555466~~).
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [View the monitoring data of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/194241.html)
-     * *   [View the monitoring data of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418275.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p> Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View the monitoring data of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View the monitoring data of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of the database proxy for an instance.</p>
+     * 
      * @param request DescribeDBProxyPerformanceRequest
      * @return DescribeDBProxyPerformanceResponse
      */
@@ -10290,14 +11448,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the distributed transaction whitelists of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/124321.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/124321.html">Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the distributed transaction whitelists of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDTCSecurityIpHostsForSQLServerResponse
@@ -10355,14 +11517,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the distributed transaction whitelists of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/124321.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/124321.html">Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the distributed transaction whitelists of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
      * @return DescribeDTCSecurityIpHostsForSQLServerResponse
      */
@@ -10372,14 +11538,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the databases on an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the databases on an instance.</p>
+     * 
      * @param request DescribeDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDatabasesResponse
@@ -10445,14 +11615,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the databases on an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the databases on an instance.</p>
+     * 
      * @param request DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
      */
@@ -10462,10 +11636,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about an ApsaraDB MyBase dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances in a cluster at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances in a cluster at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about an ApsaraDB MyBase dedicated cluster.</p>
+     * 
      * @param request DescribeDedicatedHostGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDedicatedHostGroupsResponse
@@ -10515,10 +11691,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about an ApsaraDB MyBase dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances in a cluster at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances in a cluster at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about an ApsaraDB MyBase dedicated cluster.</p>
+     * 
      * @param request DescribeDedicatedHostGroupsRequest
      * @return DescribeDedicatedHostGroupsResponse
      */
@@ -10528,10 +11706,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the hosts in a dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the hosts in a dedicated cluster.</p>
+     * 
      * @param request DescribeDedicatedHostsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDedicatedHostsResponse
@@ -10601,10 +11781,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the hosts in a dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the hosts in a dedicated cluster.</p>
+     * 
      * @param request DescribeDedicatedHostsRequest
      * @return DescribeDedicatedHostsResponse
      */
@@ -10614,15 +11796,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data backup files of an ApsaraDB RDS instance that is released.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * > This operation is available only for instances that use local disks.
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * For more information about how to retain the data backup files of an instance after the instance is released, see [Configure automatic backup](https://help.aliyun.com/document_detail/98818.html).
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <blockquote>
+     * <p>This operation is available only for instances that use local disks.</p>
+     * </blockquote>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * For more information about how to retain the data backup files of an instance after the instance is released, see <a href="https://help.aliyun.com/document_detail/98818.html">Configure automatic backup</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the data backup files of an ApsaraDB RDS instance that is released.</p>
+     * 
      * @param request DescribeDetachedBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDetachedBackupsResponse
@@ -10692,15 +11880,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data backup files of an ApsaraDB RDS instance that is released.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * > This operation is available only for instances that use local disks.
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * For more information about how to retain the data backup files of an instance after the instance is released, see [Configure automatic backup](https://help.aliyun.com/document_detail/98818.html).
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <blockquote>
+     * <p>This operation is available only for instances that use local disks.</p>
+     * </blockquote>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * For more information about how to retain the data backup files of an instance after the instance is released, see <a href="https://help.aliyun.com/document_detail/98818.html">Configure automatic backup</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the data backup files of an ApsaraDB RDS instance that is released.</p>
+     * 
      * @param request DescribeDetachedBackupsRequest
      * @return DescribeDetachedBackupsResponse
      */
@@ -10710,16 +11904,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is phased out.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about diagnostics reports.</p>
+     * 
      * @deprecated OpenAPI DescribeDiagnosticReportList is deprecated
-     *
-     * @summary Queries the information about diagnostics reports.
-     *
-     * @description >  This operation is phased out.
-     *
+     * 
      * @param request DescribeDiagnosticReportListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDiagnosticReportListResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeDiagnosticReportListResponse describeDiagnosticReportListWithOptions(DescribeDiagnosticReportListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -10750,15 +11949,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is phased out.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about diagnostics reports.</p>
+     * 
      * @deprecated OpenAPI DescribeDiagnosticReportList is deprecated
-     *
-     * @summary Queries the information about diagnostics reports.
-     *
-     * @description >  This operation is phased out.
-     *
+     * 
      * @param request DescribeDiagnosticReportListRequest
      * @return DescribeDiagnosticReportListResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeDiagnosticReportListResponse describeDiagnosticReportList(DescribeDiagnosticReportListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -10766,14 +11970,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the error logs of an instance over a specific time range.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the error logs of an instance over a specific time range.</p>
+     * 
      * @param request DescribeErrorLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeErrorLogsResponse
@@ -10835,14 +12043,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the error logs of an instance over a specific time range.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the error logs of an instance over a specific time range.</p>
+     * 
      * @param request DescribeErrorLogsRequest
      * @return DescribeErrorLogsResponse
      */
@@ -10852,20 +12064,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries historical events of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Historical events of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/129759.html)
-     * *   [Historical events of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/131008.html)
-     * *   [Historical events of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/131013.html)
-     * *   [Historical events of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/131010.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/129759.html">Historical events of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131008.html">Historical events of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131013.html">Historical events of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131010.html">Historical events of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries historical events of an instance.</p>
+     * 
      * @param request DescribeEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEventsResponse
@@ -10923,20 +12143,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries historical events of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Historical events of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/129759.html)
-     * *   [Historical events of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/131008.html)
-     * *   [Historical events of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/131013.html)
-     * *   [Historical events of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/131010.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/129759.html">Historical events of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131008.html">Historical events of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131013.html">Historical events of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131010.html">Historical events of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries historical events of an instance.</p>
+     * 
      * @param request DescribeEventsRequest
      * @return DescribeEventsResponse
      */
@@ -10946,11 +12174,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a global active database cluster or information about all global active database clusters in a region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a global active database cluster or information about all global active database clusters in a region.</p>
+     * 
      * @param request DescribeGadInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGadInstancesResponse
@@ -10988,11 +12220,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a global active database cluster or information about all global active database clusters in a region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a global active database cluster or information about all global active database clusters in a region.</p>
+     * 
      * @param request DescribeGadInstancesRequest
      * @return DescribeGadInstancesResponse
      */
@@ -11002,16 +12238,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the availability check method of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * [What is availability detection?](https://help.aliyun.com/document_detail/207467.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is availability detection?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the availability check method of an instance.</p>
+     * 
      * @param request DescribeHADiagnoseConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHADiagnoseConfigResponse
@@ -11057,16 +12297,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the availability check method of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * [What is availability detection?](https://help.aliyun.com/document_detail/207467.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is availability detection?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the availability check method of an instance.</p>
+     * 
      * @param request DescribeHADiagnoseConfigRequest
      * @return DescribeHADiagnoseConfigResponse
      */
@@ -11076,14 +12320,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the settings of the automatic primary/secondary switchover feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the settings of the automatic primary/secondary switchover feature for an instance.</p>
+     * 
      * @param request DescribeHASwitchConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHASwitchConfigResponse
@@ -11129,14 +12377,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the settings of the automatic primary/secondary switchover feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the settings of the automatic primary/secondary switchover feature for an instance.</p>
+     * 
      * @param request DescribeHASwitchConfigRequest
      * @return DescribeHASwitchConfigResponse
      */
@@ -11146,8 +12398,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 事件中心事件列表
-     *
+     * <b>summary</b> : 
+     * <p>事件中心事件列表</p>
+     * 
      * @param request DescribeHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHistoryEventsResponse
@@ -11237,8 +12490,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 事件中心事件列表
-     *
+     * <b>summary</b> : 
+     * <p>事件中心事件列表</p>
+     * 
      * @param request DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
      */
@@ -11248,8 +12502,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 事件中心事件统计
-     *
+     * <b>summary</b> : 
+     * <p>事件中心事件统计</p>
+     * 
      * @param request DescribeHistoryEventsStatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHistoryEventsStatResponse
@@ -11295,8 +12550,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 事件中心事件统计
-     *
+     * <b>summary</b> : 
+     * <p>事件中心事件统计</p>
+     * 
      * @param request DescribeHistoryEventsStatRequest
      * @return DescribeHistoryEventsStatResponse
      */
@@ -11306,18 +12562,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical tasks that are created within 30 days.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Tasks of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/474275.html)
-     * *   [Tasks of an ApsaraDB RDS for PostrgreSQL instance](https://help.aliyun.com/document_detail/474537.html)
-     * *   [Tasks of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/614826.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/474275.html">Tasks of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474537.html">Tasks of an ApsaraDB RDS for PostrgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/614826.html">Tasks of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical tasks that are created within 30 days.</p>
+     * 
      * @param request DescribeHistoryTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHistoryTasksResponse
@@ -11411,18 +12675,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical tasks that are created within 30 days.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Tasks of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/474275.html)
-     * *   [Tasks of an ApsaraDB RDS for PostrgreSQL instance](https://help.aliyun.com/document_detail/474537.html)
-     * *   [Tasks of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/614826.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/474275.html">Tasks of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474537.html">Tasks of an ApsaraDB RDS for PostrgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/614826.html">Tasks of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical tasks that are created within 30 days.</p>
+     * 
      * @param request DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
      */
@@ -11432,8 +12704,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 任务中心任务统计
-     *
+     * <b>summary</b> : 
+     * <p>任务中心任务统计</p>
+     * 
      * @param request DescribeHistoryTasksStatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHistoryTasksStatResponse
@@ -11515,8 +12788,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 任务中心任务统计
-     *
+     * <b>summary</b> : 
+     * <p>任务中心任务统计</p>
+     * 
      * @param request DescribeHistoryTasksStatRequest
      * @return DescribeHistoryTasksStatResponse
      */
@@ -11576,22 +12850,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the webshell URL that is used to connect to the host of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     * ### [](#)Prerequisite
-     * *   The instance meets the following requirements:
-     *     *   The instance resides in a region other than the China (Zhangjiakou) region.
-     *     *   The instance runs RDS Basic Edition, RDS Cluster Edition, or RDS High-availability Edition. If your instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.
-     *     *   The instance belongs to the general-purpose or dedicated instance family. The shared instance family is not supported.
-     *     *   The instance resides in a virtual private cloud (VPC). For more information about how to change the network type of an RDS instance, see [Change the network type](https://help.aliyun.com/document_detail/95707.html).
-     *     *   If the instance runs RDS High-availability Edition or RDS Cluster Edition, the instance is created on or after January 1, 2021. If the instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the **Creation Time** parameter of an instance in the **Status** section of the **Basic Information** page in the ApsaraDB RDS console.
-     * *   Your **Alibaba Cloud account** is used for logons.
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Create a host account and use the host account for logons](https://help.aliyun.com/document_detail/354862.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisite</h3>
+     * <ul>
+     * <li>The instance meets the following requirements:<ul>
+     * <li>The instance resides in a region other than the China (Zhangjiakou) region.</li>
+     * <li>The instance runs RDS Basic Edition, RDS Cluster Edition, or RDS High-availability Edition. If your instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.</li>
+     * <li>The instance belongs to the general-purpose or dedicated instance family. The shared instance family is not supported.</li>
+     * <li>The instance resides in a virtual private cloud (VPC). For more information about how to change the network type of an RDS instance, see <a href="https://help.aliyun.com/document_detail/95707.html">Change the network type</a>.</li>
+     * <li>If the instance runs RDS High-availability Edition or RDS Cluster Edition, the instance is created on or after January 1, 2021. If the instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the <strong>Creation Time</strong> parameter of an instance in the <strong>Status</strong> section of the <strong>Basic Information</strong> page in the ApsaraDB RDS console.</li>
+     * </ul>
+     * </li>
+     * <li>Your <strong>Alibaba Cloud account</strong> is used for logons.</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/354862.html">Create a host account and use the host account for logons</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the webshell URL that is used to connect to the host of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeHostWebShellRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHostWebShellResponse
@@ -11649,22 +12933,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the webshell URL that is used to connect to the host of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     * ### [](#)Prerequisite
-     * *   The instance meets the following requirements:
-     *     *   The instance resides in a region other than the China (Zhangjiakou) region.
-     *     *   The instance runs RDS Basic Edition, RDS Cluster Edition, or RDS High-availability Edition. If your instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.
-     *     *   The instance belongs to the general-purpose or dedicated instance family. The shared instance family is not supported.
-     *     *   The instance resides in a virtual private cloud (VPC). For more information about how to change the network type of an RDS instance, see [Change the network type](https://help.aliyun.com/document_detail/95707.html).
-     *     *   If the instance runs RDS High-availability Edition or RDS Cluster Edition, the instance is created on or after January 1, 2021. If the instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the **Creation Time** parameter of an instance in the **Status** section of the **Basic Information** page in the ApsaraDB RDS console.
-     * *   Your **Alibaba Cloud account** is used for logons.
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Create a host account and use the host account for logons](https://help.aliyun.com/document_detail/354862.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisite</h3>
+     * <ul>
+     * <li>The instance meets the following requirements:<ul>
+     * <li>The instance resides in a region other than the China (Zhangjiakou) region.</li>
+     * <li>The instance runs RDS Basic Edition, RDS Cluster Edition, or RDS High-availability Edition. If your instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.</li>
+     * <li>The instance belongs to the general-purpose or dedicated instance family. The shared instance family is not supported.</li>
+     * <li>The instance resides in a virtual private cloud (VPC). For more information about how to change the network type of an RDS instance, see <a href="https://help.aliyun.com/document_detail/95707.html">Change the network type</a>.</li>
+     * <li>If the instance runs RDS High-availability Edition or RDS Cluster Edition, the instance is created on or after January 1, 2021. If the instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the <strong>Creation Time</strong> parameter of an instance in the <strong>Status</strong> section of the <strong>Basic Information</strong> page in the ApsaraDB RDS console.</li>
+     * </ul>
+     * </li>
+     * <li>Your <strong>Alibaba Cloud account</strong> is used for logons.</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/354862.html">Create a host account and use the host account for logons</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the webshell URL that is used to connect to the host of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeHostWebShellRequest
      * @return DescribeHostWebShellResponse
      */
@@ -11674,14 +12968,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the automatic renewal status of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the automatic renewal status of an instance.</p>
+     * 
      * @param request DescribeInstanceAutoRenewalAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceAutoRenewalAttributeResponse
@@ -11747,14 +13045,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the automatic renewal status of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the automatic renewal status of an instance.</p>
+     * 
      * @param request DescribeInstanceAutoRenewalAttributeRequest
      * @return DescribeInstanceAutoRenewalAttributeResponse
      */
@@ -11764,18 +13066,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cross-region backup settings of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-region backup settings of an instance.</p>
+     * 
      * @param request DescribeInstanceCrossBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceCrossBackupPolicyResponse
@@ -11821,18 +13131,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cross-region backup settings of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-region backup settings of an instance.</p>
+     * 
      * @param request DescribeInstanceCrossBackupPolicyRequest
      * @return DescribeInstanceCrossBackupPolicyResponse
      */
@@ -11842,14 +13160,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the reserved keywords of an instance. The reserved keywords cannot be used for the usernames of accounts or the names of databases.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the reserved keywords of an instance. The reserved keywords cannot be used for the usernames of accounts or the names of databases.</p>
+     * 
      * @param request DescribeInstanceKeywordsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceKeywordsResponse
@@ -11895,14 +13217,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the reserved keywords of an instance. The reserved keywords cannot be used for the usernames of accounts or the names of databases.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the reserved keywords of an instance. The reserved keywords cannot be used for the usernames of accounts or the names of databases.</p>
+     * 
      * @param request DescribeInstanceKeywordsRequest
      * @return DescribeInstanceKeywordsResponse
      */
@@ -11912,13 +13238,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries associated whitelists by instance name.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries associated whitelists by instance name.</p>
+     * 
      * @param request DescribeInstanceLinkedWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceLinkedWhitelistTemplateResponse
@@ -11964,13 +13294,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries associated whitelists by instance name.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries associated whitelists by instance name.</p>
+     * 
      * @param request DescribeInstanceLinkedWhitelistTemplateRequest
      * @return DescribeInstanceLinkedWhitelistTemplateResponse
      */
@@ -11980,13 +13314,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the specified resource of Key Management Service (KMS) is associated with an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the specified resource of Key Management Service (KMS) is associated with an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeKmsAssociateResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeKmsAssociateResourcesResponse
@@ -12056,13 +13394,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the specified resource of Key Management Service (KMS) is associated with an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the specified resource of Key Management Service (KMS) is associated with an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeKmsAssociateResourcesRequest
      * @return DescribeKmsAssociateResourcesResponse
      */
@@ -12072,13 +13414,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the time range to which an RDS instance can be restored.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the time range to which an RDS instance can be restored.</p>
+     * 
      * @param request DescribeLocalAvailableRecoveryTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLocalAvailableRecoveryTimeResponse
@@ -12128,13 +13474,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the time range to which an RDS instance can be restored.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the time range to which an RDS instance can be restored.</p>
+     * 
      * @param request DescribeLocalAvailableRecoveryTimeRequest
      * @return DescribeLocalAvailableRecoveryTimeResponse
      */
@@ -12144,12 +13494,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the log backup files of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * SQL Server
-     * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>SQL Server</p>
+     * <blockquote>
+     * <p> You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the log backup files of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeLogBackupFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLogBackupFilesResponse
@@ -12211,12 +13565,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the log backup files of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * SQL Server
-     * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>SQL Server</p>
+     * <blockquote>
+     * <p> You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the log backup files of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeLogBackupFilesRequest
      * @return DescribeLogBackupFilesResponse
      */
@@ -12226,8 +13584,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取RDS营销项目中待升级实例信息
-     *
+     * <b>summary</b> : 
+     * <p>获取RDS营销项目中待升级实例信息</p>
+     * 
      * @param request DescribeMarketingActivityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMarketingActivityResponse
@@ -12289,8 +13648,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取RDS营销项目中待升级实例信息
-     *
+     * <b>summary</b> : 
+     * <p>获取RDS营销项目中待升级实例信息</p>
+     * 
      * @param request DescribeMarketingActivityRequest
      * @return DescribeMarketingActivityResponse
      */
@@ -12300,8 +13660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>查询全密态规则</p>
+     * 
      * @param request DescribeMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMaskingRulesResponse
@@ -12347,8 +13708,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>查询全密态规则</p>
+     * 
      * @param request DescribeMaskingRulesRequest
      * @return DescribeMaskingRulesResponse
      */
@@ -12358,14 +13720,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the databases and tables that can be restored from a specified backup set.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * > This operation is available for RDS instances that run MySQL 8.0, MySQL 5.7, and MySQL 5.6 on RDS High-availability Edition with local disks.
-     * ### [](#)Description
-     * Before you call the [RestoreTable](https://help.aliyun.com/document_detail/131510.html) operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/103175.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <blockquote>
+     * <p>This operation is available for RDS instances that run MySQL 8.0, MySQL 5.7, and MySQL 5.6 on RDS High-availability Edition with local disks.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the databases and tables that can be restored from a specified backup set.</p>
+     * 
      * @param request DescribeMetaListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMetaListResponse
@@ -12443,14 +13809,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the databases and tables that can be restored from a specified backup set.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * > This operation is available for RDS instances that run MySQL 8.0, MySQL 5.7, and MySQL 5.6 on RDS High-availability Edition with local disks.
-     * ### [](#)Description
-     * Before you call the [RestoreTable](https://help.aliyun.com/document_detail/131510.html) operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see [Restore individual databases and tables of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/103175.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <blockquote>
+     * <p>This operation is available for RDS instances that run MySQL 8.0, MySQL 5.7, and MySQL 5.6 on RDS High-availability Edition with local disks.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to restore individual databases or tables of an ApsaraDB RDS for MySQL instance, you can call this operation to query the information about the databases and tables that can be restored. For more information, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables of an ApsaraDB RDS for MySQL instance</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the databases and tables that can be restored from a specified backup set.</p>
+     * 
      * @param request DescribeMetaListRequest
      * @return DescribeMetaListResponse
      */
@@ -12460,11 +13830,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a task that is used to import the backup data of an ApsaraDB RDS for SQL Server instance to an Object Storage Service (OSS) bucket.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a task that is used to import the backup data of an ApsaraDB RDS for SQL Server instance to an Object Storage Service (OSS) bucket.</p>
+     * 
      * @param request DescribeMigrateTaskByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMigrateTaskByIdResponse
@@ -12514,11 +13888,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a task that is used to import the backup data of an ApsaraDB RDS for SQL Server instance to an Object Storage Service (OSS) bucket.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a task that is used to import the backup data of an ApsaraDB RDS for SQL Server instance to an Object Storage Service (OSS) bucket.</p>
+     * 
      * @param request DescribeMigrateTaskByIdRequest
      * @return DescribeMigrateTaskByIdResponse
      */
@@ -12528,16 +13906,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tasks that are created to migrate the backup data of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     * ### [](#)Usage notes
-     * This operation allows you to query the migration tasks that are created for the instance over the last week.
-     * ### [](#)Precautions
-     * *   This operation is supported only for migration tasks that are created to migrate full backup files.
-     * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This operation allows you to query the migration tasks that are created for the instance over the last week.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>This operation is supported only for migration tasks that are created to migrate full backup files.</li>
+     * <li>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tasks that are created to migrate the backup data of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeMigrateTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMigrateTasksResponse
@@ -12599,16 +13983,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tasks that are created to migrate the backup data of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     * ### [](#)Usage notes
-     * This operation allows you to query the migration tasks that are created for the instance over the last week.
-     * ### [](#)Precautions
-     * *   This operation is supported only for migration tasks that are created to migrate full backup files.
-     * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This operation allows you to query the migration tasks that are created for the instance over the last week.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>This operation is supported only for migration tasks that are created to migrate full backup files.</li>
+     * <li>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tasks that are created to migrate the backup data of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeMigrateTasksRequest
      * @return DescribeMigrateTasksResponse
      */
@@ -12618,11 +14008,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the modifications to the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the modifications to the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeModifyPGHbaConfigLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeModifyPGHbaConfigLogResponse
@@ -12684,11 +14076,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the modifications to the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the modifications to the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeModifyPGHbaConfigLogRequest
      * @return DescribeModifyPGHbaConfigLogResponse
      */
@@ -12698,14 +14092,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameter modification logs of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameter modification logs of an instance.</p>
+     * 
      * @param request DescribeModifyParameterLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeModifyParameterLogResponse
@@ -12767,14 +14165,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameter modification logs of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameter modification logs of an instance.</p>
+     * 
      * @param request DescribeModifyParameterLogRequest
      * @return DescribeModifyParameterLogResponse
      */
@@ -12784,13 +14186,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup files that are included in a backup data migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     * ### [Usage notes](#)
-     * This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <p>This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup files that are included in a backup data migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeOssDownloadsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOssDownloadsResponse
@@ -12840,13 +14246,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup files that are included in a backup data migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     * ### [Usage notes](#)
-     * This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <p>This operation is not supported for instances that run SQL Server 2017 EE or SQL Server 2019 EE.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the backup files that are included in a backup data migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request DescribeOssDownloadsRequest
      * @return DescribeOssDownloadsResponse
      */
@@ -12856,11 +14266,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration of the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration of the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribePGHbaConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePGHbaConfigResponse
@@ -12914,11 +14326,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration of the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration of the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribePGHbaConfigRequest
      * @return DescribePGHbaConfigResponse
      */
@@ -12928,16 +14342,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a parameter template.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a parameter template.</p>
+     * 
      * @param request DescribeParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParameterGroupResponse
@@ -12983,16 +14405,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a parameter template.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a parameter template.</p>
+     * 
      * @param request DescribeParameterGroupRequest
      * @return DescribeParameterGroupResponse
      */
@@ -13002,16 +14432,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameter templates that are available in a region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameter templates that are available in a region.</p>
+     * 
      * @param request DescribeParameterGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParameterGroupsResponse
@@ -13061,16 +14499,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameter templates that are available in a region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameter templates that are available in a region.</p>
+     * 
      * @param request DescribeParameterGroupsRequest
      * @return DescribeParameterGroupsResponse
      */
@@ -13080,14 +14526,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries parameter templates.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries parameter templates.</p>
+     * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParameterTemplatesResponse
@@ -13153,14 +14603,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries parameter templates.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries parameter templates.</p>
+     * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
      */
@@ -13170,14 +14624,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameter settings of an instance.
-     *
-     * @description ### Applicable engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Applicable engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameter settings of an instance.</p>
+     * 
      * @param request DescribeParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParametersResponse
@@ -13227,14 +14685,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameter settings of an instance.
-     *
-     * @description ### Applicable engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Applicable engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameter settings of an instance.</p>
+     * 
      * @param request DescribeParametersRequest
      * @return DescribeParametersResponse
      */
@@ -13244,14 +14706,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries extensions that are installed on a database.
-     *
-     * @description ### Supported database engines
-     * RDS PostgreSQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries extensions that are installed on a database.</p>
+     * 
      * @param request DescribePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePostgresExtensionsResponse
@@ -13309,14 +14775,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries extensions that are installed on a database.
-     *
-     * @description ### Supported database engines
-     * RDS PostgreSQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries extensions that are installed on a database.</p>
+     * 
      * @param request DescribePostgresExtensionsRequest
      * @return DescribePostgresExtensionsResponse
      */
@@ -13326,14 +14796,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the price of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the price of an instance.</p>
+     * 
      * @param tmpReq DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePriceResponse
@@ -13457,14 +14931,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the price of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the price of an instance.</p>
+     * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
      */
@@ -13474,8 +14952,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询RDS快捷售卖配置
-     *
+     * <b>summary</b> : 
+     * <p>查询RDS快捷售卖配置</p>
+     * 
      * @param request DescribeQuickSaleConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQuickSaleConfigResponse
@@ -13513,8 +14992,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询RDS快捷售卖配置
-     *
+     * <b>summary</b> : 
+     * <p>查询RDS快捷售卖配置</p>
+     * 
      * @param request DescribeQuickSaleConfigRequest
      * @return DescribeQuickSaleConfigResponse
      */
@@ -13524,14 +15004,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>This operation is deprecated.</p>
+     * 
      * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated
-     *
-     * @summary This operation is deprecated.
-     *
+     * 
      * @param request DescribeRdsResourceSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRdsResourceSettingsResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeRdsResourceSettingsResponse describeRdsResourceSettingsWithOptions(DescribeRdsResourceSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -13570,13 +15052,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>This operation is deprecated.</p>
+     * 
      * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated
-     *
-     * @summary This operation is deprecated.
-     *
+     * 
      * @param request DescribeRdsResourceSettingsRequest
      * @return DescribeRdsResourceSettingsResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeRdsResourceSettingsResponse describeRdsResourceSettings(DescribeRdsResourceSettingsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -13584,12 +15068,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the latency of data replication between a primary instance and its read-only instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the latency of data replication between a primary instance and its read-only instance.</p>
+     * 
      * @param request DescribeReadDBInstanceDelayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeReadDBInstanceDelayResponse
@@ -13647,12 +15135,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the latency of data replication between a primary instance and its read-only instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the latency of data replication between a primary instance and its read-only instance.</p>
+     * 
      * @param request DescribeReadDBInstanceDelayRequest
      * @return DescribeReadDBInstanceDelayResponse
      */
@@ -13662,14 +15154,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the regions.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the regions.</p>
+     * 
      * @param request DescribeRegionInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionInfosResponse
@@ -13715,14 +15211,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the regions.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the regions.</p>
+     * 
      * @param request DescribeRegionInfosRequest
      * @return DescribeRegionInfosResponse
      */
@@ -13732,14 +15232,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the regions that are available for ApsaraDB RDS.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the regions that are available for ApsaraDB RDS.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -13773,14 +15277,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the regions that are available for ApsaraDB RDS.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the regions that are available for ApsaraDB RDS.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -13790,14 +15298,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the renewal fees for a subscription instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the renewal fees for a subscription instance.</p>
+     * 
      * @param request DescribeRenewalPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRenewalPriceResponse
@@ -13883,14 +15395,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the renewal fees for a subscription instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the renewal fees for a subscription instance.</p>
+     * 
      * @param request DescribeRenewalPriceRequest
      * @return DescribeRenewalPriceResponse
      */
@@ -13900,8 +15416,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 概览页资源详情
-     *
+     * <b>summary</b> : 
+     * <p>概览页资源详情</p>
+     * 
      * @param request DescribeResourceDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceDetailsResponse
@@ -13955,8 +15472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 概览页资源详情
-     *
+     * <b>summary</b> : 
+     * <p>概览页资源详情</p>
+     * 
      * @param request DescribeResourceDetailsRequest
      * @return DescribeResourceDetailsResponse
      */
@@ -13966,14 +15484,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the storage usage of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the storage usage of an instance.</p>
+     * 
      * @param request DescribeResourceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceUsageResponse
@@ -14023,14 +15545,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the storage usage of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the storage usage of an instance.</p>
+     * 
      * @param request DescribeResourceUsageRequest
      * @return DescribeResourceUsageResponse
      */
@@ -14040,13 +15566,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of the SQL Explorer (SQL Audit) feature for an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of the SQL Explorer (SQL Audit) feature for an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeSQLCollectorPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSQLCollectorPolicyResponse
@@ -14100,13 +15630,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of the SQL Explorer (SQL Audit) feature for an ApsaraDB RDS instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of the SQL Explorer (SQL Audit) feature for an ApsaraDB RDS instance.</p>
+     * 
      * @param request DescribeSQLCollectorPolicyRequest
      * @return DescribeSQLCollectorPolicyResponse
      */
@@ -14116,13 +15650,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the retention period of the log files that are generated by the SQL Explorer feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the retention period of the log files that are generated by the SQL Explorer feature for an instance.</p>
+     * 
      * @param request DescribeSQLCollectorRetentionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSQLCollectorRetentionResponse
@@ -14176,13 +15714,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the retention period of the log files that are generated by the SQL Explorer feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the retention period of the log files that are generated by the SQL Explorer feature for an instance.</p>
+     * 
      * @param request DescribeSQLCollectorRetentionRequest
      * @return DescribeSQLCollectorRetentionResponse
      */
@@ -14192,19 +15734,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the log files that are generated by the SQL Explorer (SQL Audit) feature for an instance. The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the DescribeSQLLogRecords operation with the request parameter Form set to File.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *     **
-     *     **Note** If your instance runs SQL Server, only SQL Server 2008 R2 is supported.
-     * ### [](#)Precautions
-     * *   The DescribeSQLLogFiles operation does not return the log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
-     * *   The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the [DescribeSQLLogRecords](https://help.aliyun.com/document_detail/610533.html) operation with the request parameter **Form** set to **File**.
-     * *   The exported files are retained for only two days.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server
+     * **
+     * <strong>Note</strong> If your instance runs SQL Server, only SQL Server 2008 R2 is supported.</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.</li>
+     * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the request parameter <strong>Form</strong> set to <strong>File</strong>.</li>
+     * <li>The exported files are retained for only two days.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the log files that are generated by the SQL Explorer (SQL Audit) feature for an instance. The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the DescribeSQLLogRecords operation with the request parameter Form set to File.</p>
+     * 
      * @param request DescribeSQLLogFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSQLLogFilesResponse
@@ -14262,19 +15810,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the log files that are generated by the SQL Explorer (SQL Audit) feature for an instance. The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the DescribeSQLLogRecords operation with the request parameter Form set to File.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     *     **
-     *     **Note** If your instance runs SQL Server, only SQL Server 2008 R2 is supported.
-     * ### [](#)Precautions
-     * *   The DescribeSQLLogFiles operation does not return the log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
-     * *   The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the [DescribeSQLLogRecords](https://help.aliyun.com/document_detail/610533.html) operation with the request parameter **Form** set to **File**.
-     * *   The exported files are retained for only two days.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server
+     * **
+     * <strong>Note</strong> If your instance runs SQL Server, only SQL Server 2008 R2 is supported.</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.</li>
+     * <li>The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the request parameter <strong>Form</strong> set to <strong>File</strong>.</li>
+     * <li>The exported files are retained for only two days.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the log files that are generated by the SQL Explorer (SQL Audit) feature for an instance. The DescribeSQLLogFiles operation does not return the log files that are generated by the SQL Explorer feature and manually exported from the ApsaraDB RDS console. The DescribeSQLLogFiles operation returns the SQL Explorer log files that are generated by calling the DescribeSQLLogRecords operation with the request parameter Form set to File.</p>
+     * 
      * @param request DescribeSQLLogFilesRequest
      * @return DescribeSQLLogFilesResponse
      */
@@ -14284,17 +15838,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the logs that are generated by the SQL Explorer (SQL Audit) feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [Usage notes](#)
-     * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
-     * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
-     * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <ul>
+     * <li>You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.</li>
+     * <li>This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.</li>
+     * <li>When you call this operation and set the <strong>Form</strong> parameter to <strong>File</strong> to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs that are generated by the SQL Explorer (SQL Audit) feature for an instance.</p>
+     * 
      * @param request DescribeSQLLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSQLLogRecordsResponse
@@ -14380,17 +15940,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the logs that are generated by the SQL Explorer (SQL Audit) feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [Usage notes](#)
-     * *   You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.
-     * *   This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.
-     * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <ul>
+     * <li>You can call this operation up to 1,000 times per minute per account. The calls initiated by using both your Alibaba Cloud account and RAM users within your Alibaba Cloud account are counted.</li>
+     * <li>This operation cannot be used to query the logs that are generated by SQL Explorer Trial Edition for an ApsaraDB RDS for MySQL instance.</li>
+     * <li>When you call this operation and set the <strong>Form</strong> parameter to <strong>File</strong> to generate an audit file, a maximum of 1 million log entries can be recorded in the audit file, and you cannot filter log entries by keyword.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs that are generated by the SQL Explorer (SQL Audit) feature for an instance.</p>
+     * 
      * @param request DescribeSQLLogRecordsRequest
      * @return DescribeSQLLogRecordsResponse
      */
@@ -14400,14 +15966,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries SQL log reports.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries SQL log reports.</p>
+     * 
      * @param request DescribeSQLLogReportListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSQLLogReportListResponse
@@ -14469,14 +16039,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries SQL log reports.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries SQL log reports.</p>
+     * 
      * @param request DescribeSQLLogReportListRequest
      * @return DescribeSQLLogReportListResponse
      */
@@ -14486,11 +16060,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the credential of a user who uses the Data API feature.
-     *
-     * @description ### [](#)Supported database engine
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the credential of a user who uses the Data API feature.</p>
+     * 
      * @param request DescribeSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSecretsResponse
@@ -14564,11 +16142,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the credential of a user who uses the Data API feature.
-     *
-     * @description ### [](#)Supported database engine
-     * *   MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the credential of a user who uses the Data API feature.</p>
+     * 
      * @param request DescribeSecretsRequest
      * @return DescribeSecretsResponse
      */
@@ -14578,18 +16160,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries ECS security groups to which an instance is added.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/201042.html)
-     * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206310.html)
-     * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/2392322.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/201042.html">Configure a security group for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206310.html">Configure a security group for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2392322.html">Configure a security group for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries ECS security groups to which an instance is added.</p>
+     * 
      * @param request DescribeSecurityGroupConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSecurityGroupConfigurationResponse
@@ -14631,18 +16221,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries ECS security groups to which an instance is added.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/201042.html)
-     * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206310.html)
-     * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/2392322.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/201042.html">Configure a security group for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206310.html">Configure a security group for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2392322.html">Configure a security group for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries ECS security groups to which an instance is added.</p>
+     * 
      * @param request DescribeSecurityGroupConfigurationRequest
      * @return DescribeSecurityGroupConfigurationResponse
      */
@@ -14652,11 +16250,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all replication slots of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all replication slots of an instance.</p>
+     * 
      * @param request DescribeSlotsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlotsResponse
@@ -14710,11 +16312,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all replication slots of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all replication slots of an instance.</p>
+     * 
      * @param request DescribeSlotsRequest
      * @return DescribeSlotsResponse
      */
@@ -14724,16 +16330,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the slow log details of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### Precautions
-     * The response parameters returned by this operation are updated every minute.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <p>The response parameters returned by this operation are updated every minute.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the slow log details of an instance.</p>
+     * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlowLogRecordsResponse
@@ -14807,16 +16417,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the slow log details of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### Precautions
-     * The response parameters returned by this operation are updated every minute.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <p>The response parameters returned by this operation are updated every minute.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the slow log details of an instance.</p>
+     * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
      */
@@ -14826,20 +16440,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on slow query logs.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *     **
-     *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-     * *   SQL Server
-     *     **
-     *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-     * *   MariaDB
-     * ### [](#)Precautions
-     * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
-     * *   If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL
+     * **
+     * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
+     * <li>SQL Server
+     * **
+     * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.</li>
+     * <li>If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on slow query logs.</p>
+     * 
      * @param request DescribeSlowLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlowLogsResponse
@@ -14909,20 +16529,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics on slow query logs.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     *     **
-     *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-     * *   SQL Server
-     *     **
-     *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-     * *   MariaDB
-     * ### [](#)Precautions
-     * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
-     * *   If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL
+     * **
+     * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
+     * <li>SQL Server
+     * **
+     * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.</li>
+     * <li>If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics on slow query logs.</p>
+     * 
      * @param request DescribeSlowLogsRequest
      * @return DescribeSlowLogsResponse
      */
@@ -14932,11 +16558,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the disk of an ApsaraDB RDS for SQL Server instance can be resized online.
-     *
-     * @description ### Supported database engine
-     * SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the disk of an ApsaraDB RDS for SQL Server instance can be resized online.</p>
+     * 
      * @param request DescribeSupportOnlineResizeDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSupportOnlineResizeDiskResponse
@@ -14970,11 +16598,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the disk of an ApsaraDB RDS for SQL Server instance can be resized online.
-     *
-     * @description ### Supported database engine
-     * SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the disk of an ApsaraDB RDS for SQL Server instance can be resized online.</p>
+     * 
      * @param request DescribeSupportOnlineResizeDiskRequest
      * @return DescribeSupportOnlineResizeDiskResponse
      */
@@ -14984,17 +16614,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [Usage notes](#)
-     * *   If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.
-     * *   If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <ul>
+     * <li>If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.</li>
+     * <li>If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags of an instance.</p>
+     * 
      * @param request DescribeTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTagsResponse
@@ -15060,17 +16696,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [Usage notes](#)
-     * *   If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.
-     * *   If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <ul>
+     * <li>If an instance ID is specified, all tags that are added to this instance are queried, and other filter conditions are invalid.</li>
+     * <li>If you specify only TagKey, the results that match the specified TagKey are returned. If you specify both TagKey and TagValue, the results that match both the specified TagKey and TagValue are returned.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags of an instance.</p>
+     * 
      * @param request DescribeTagsRequest
      * @return DescribeTagsResponse
      */
@@ -15080,10 +16722,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeTasks operation to query the tasks that are running on an instance.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DescribeTasks operation to query the tasks that are running on an instance.</p>
+     * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTasksResponse
@@ -15153,10 +16797,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DescribeTasks operation to query the tasks that are running on an instance.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DescribeTasks operation to query the tasks that are running on an instance.</p>
+     * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
      */
@@ -15166,15 +16812,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
-     * *   [Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/218391.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
@@ -15236,15 +16888,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
-     * *   [Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/218391.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
      * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
      */
@@ -15254,11 +16912,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical tasks for major engine version upgrades of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PostgreSQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical tasks for major engine version upgrades of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeUpgradeMajorVersionTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUpgradeMajorVersionTasksResponse
@@ -15320,11 +16980,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical tasks for major engine version upgrades of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * PostgreSQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PostgreSQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical tasks for major engine version upgrades of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request DescribeUpgradeMajorVersionTasksRequest
      * @return DescribeUpgradeMajorVersionTasksResponse
      */
@@ -15334,14 +16996,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of vSwitches that are available in a virtual private cloud (VPC).
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of VSwitch that are available in a virtual private cloud (VPC).</p>
+     * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVSwitchesResponse
@@ -15415,14 +17081,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of vSwitches that are available in a virtual private cloud (VPC).
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of VSwitch that are available in a virtual private cloud (VPC).</p>
+     * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
      */
@@ -15432,13 +17102,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the specified IP whitelist.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the specified IP whitelist.</p>
+     * 
      * @param request DescribeWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWhitelistTemplateResponse
@@ -15484,13 +17158,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the specified IP whitelist.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the specified IP whitelist.</p>
+     * 
      * @param request DescribeWhitelistTemplateRequest
      * @return DescribeWhitelistTemplateResponse
      */
@@ -15500,13 +17178,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries associated instances by whitelist template.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries associated instances by whitelist template.</p>
+     * 
      * @param request DescribeWhitelistTemplateLinkedInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWhitelistTemplateLinkedInstanceResponse
@@ -15554,13 +17236,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries associated instances by whitelist template.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries associated instances by whitelist template.</p>
+     * 
      * @param request DescribeWhitelistTemplateLinkedInstanceRequest
      * @return DescribeWhitelistTemplateLinkedInstanceResponse
      */
@@ -15570,10 +17256,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DestroyDBInstance operation to destroy an instance. The instance is in the Locked state.
-     *
-     * @description The DestroyDBInstance operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>The DestroyDBInstance operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DestroyDBInstance operation to destroy an instance. The instance is in the Locked state.</p>
+     * 
      * @param request DestroyDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DestroyDBInstanceResponse
@@ -15623,10 +17311,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the DestroyDBInstance operation to destroy an instance. The instance is in the Locked state.
-     *
-     * @description The DestroyDBInstance operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>The DestroyDBInstance operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the DestroyDBInstance operation to destroy an instance. The instance is in the Locked state.</p>
+     * 
      * @param request DestroyDBInstanceRequest
      * @return DestroyDBInstanceResponse
      */
@@ -15636,13 +17326,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a unit node from a global active database cluster.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [Usage notes](#)
-     * This operation can be used to remove only unit nodes.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <p>This operation can be used to remove only unit nodes.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a unit node from a global active database cluster.</p>
+     * 
      * @param request DetachGadInstanceMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachGadInstanceMemberResponse
@@ -15684,13 +17378,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a unit node from a global active database cluster.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [Usage notes](#)
-     * This operation can be used to remove only unit nodes.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#">Usage notes</a></h3>
+     * <p>This operation can be used to remove only unit nodes.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a unit node from a global active database cluster.</p>
+     * 
      * @param request DetachGadInstanceMemberRequest
      * @return DetachGadInstanceMemberResponse
      */
@@ -15700,13 +17398,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disassociates a whitelist template from an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a whitelist template from an instance.</p>
+     * 
      * @param request DetachWhitelistTemplateToInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachWhitelistTemplateToInstanceResponse
@@ -15756,13 +17458,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disassociates a whitelist template from an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a whitelist template from an instance.</p>
+     * 
      * @param request DetachWhitelistTemplateToInstanceRequest
      * @return DetachWhitelistTemplateToInstanceResponse
      */
@@ -15772,8 +17478,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 评估紧急本地扩容磁盘解锁可使用的磁盘空间
-     *
+     * <b>summary</b> : 
+     * <p>评估紧急本地扩容磁盘解锁可使用的磁盘空间</p>
+     * 
      * @param request EvaluateLocalExtendDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EvaluateLocalExtendDiskResponse
@@ -15827,8 +17534,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 评估紧急本地扩容磁盘解锁可使用的磁盘空间
-     *
+     * <b>summary</b> : 
+     * <p>评估紧急本地扩容磁盘解锁可使用的磁盘空间</p>
+     * 
      * @param request EvaluateLocalExtendDiskRequest
      * @return EvaluateLocalExtendDiskResponse
      */
@@ -15838,14 +17546,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topology of an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the topology of an instance.</p>
+     * 
      * @param request GetDBInstanceTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDBInstanceTopologyResponse
@@ -15883,14 +17595,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topology of an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the topology of an instance.</p>
+     * 
      * @param request GetDBInstanceTopologyRequest
      * @return GetDBInstanceTopologyResponse
      */
@@ -15900,11 +17616,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SSL encryption settings for a dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the SSL encryption settings for a dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request GetDbProxyInstanceSslRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDbProxyInstanceSslResponse
@@ -15946,11 +17664,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SSL encryption settings for a dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the SSL encryption settings for a dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request GetDbProxyInstanceSslRequest
      * @return GetDbProxyInstanceSslResponse
      */
@@ -15960,11 +17680,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants an account the permissions on a database of an instance.
-     *
-     * @description Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
-     * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.
-     *
+     * <b>description</b> :
+     * <p>Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.</p>
+     * <blockquote>
+     * <p>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants an account the permissions on a database of an instance.</p>
+     * 
      * @param request GrantAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantAccountPrivilegeResponse
@@ -16010,11 +17734,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants an account the permissions on a database of an instance.
-     *
-     * @description Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.
-     * > This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.
-     *
+     * <b>description</b> :
+     * <p>Each account can be granted permissions on one or more databases. Before you call this operation, make sure that the instance is in the Running state.</p>
+     * <blockquote>
+     * <p>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition or run PostgreSQL with local disks.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants an account the permissions on a database of an instance.</p>
+     * 
      * @param request GrantAccountPrivilegeRequest
      * @return GrantAccountPrivilegeResponse
      */
@@ -16024,16 +17752,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grant permissions to a service account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96102.html)
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95693.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to the service account of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Grant permissions to a service account.</p>
+     * 
      * @param request GrantOperatorPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantOperatorPermissionResponse
@@ -16087,16 +17823,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grant permissions to a service account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96102.html)
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95693.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to the service account of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Grant permissions to a service account.</p>
+     * 
      * @param request GrantOperatorPermissionRequest
      * @return GrantOperatorPermissionResponse
      */
@@ -16106,18 +17850,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports the backup data of a self-managed instance that runs MySQL 5.7 to an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)Description
-     * A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance.
-     * ### [](#)Usage notes
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The self-managed MySQL instance runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with `_qp.xb`. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * *   The full backup file of the self-managed MySQL instance is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * >  This operation is supported only for MySQL 5.7.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The self-managed MySQL instance runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.</li>
+     * <li>The full backup file of the self-managed MySQL instance is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.<blockquote>
+     * <p> This operation is supported only for MySQL 5.7.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports the backup data of a self-managed instance that runs MySQL 5.7 to an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request ImportUserBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportUserBackupFileResponse
@@ -16191,18 +17943,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports the backup data of a self-managed instance that runs MySQL 5.7 to an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)Description
-     * A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance.
-     * ### [](#)Usage notes
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The self-managed MySQL instance runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with `_qp.xb`. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * *   The full backup file of the self-managed MySQL instance is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * >  This operation is supported only for MySQL 5.7.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance.</p>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The self-managed MySQL instance runs MySQL 5.7 and is backed up by using XtraBackup. The name of the backup file ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.</li>
+     * <li>The full backup file of the self-managed MySQL instance is uploaded to an Object Storage Service (OSS) bucket in the region of the ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.<blockquote>
+     * <p> This operation is supported only for MySQL 5.7.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports the backup data of a self-managed instance that runs MySQL 5.7 to an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request ImportUserBackupFileRequest
      * @return ImportUserBackupFileResponse
      */
@@ -16212,14 +17972,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the specification details of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the specification details of an instance.</p>
+     * 
      * @param request ListClassesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClassesResponse
@@ -16277,14 +18041,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the specification details of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the specification details of an instance.</p>
+     * 
      * @param request ListClassesRequest
      * @return ListClassesResponse
      */
@@ -16294,14 +18062,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are added to one or more instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to one or more instances.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -16359,14 +18131,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are added to one or more instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to one or more instances.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -16376,15 +18152,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the full backup files that are imported into an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)Feature description
-     * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * *   Before you call the [CreateDBInstance](https://help.aliyun.com/document_detail/26228.html) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
-     * *   You can call the [ImportUserBackupFile](https://help.aliyun.com/document_detail/260266.html) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <ul>
+     * <li>A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.</li>
+     * <li>Before you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import a full backup file into an ApsaraDB RDS for MySQL instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the full backup files that are imported into an instance.</p>
+     * 
      * @param request ListUserBackupFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserBackupFilesResponse
@@ -16450,15 +18232,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about the full backup files that are imported into an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)Feature description
-     * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](https://help.aliyun.com/document_detail/251779.html).
-     * *   Before you call the [CreateDBInstance](https://help.aliyun.com/document_detail/26228.html) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
-     * *   You can call the [ImportUserBackupFile](https://help.aliyun.com/document_detail/260266.html) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>Feature description</h3>
+     * <ul>
+     * <li>A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 instance to the cloud</a>.</li>
+     * <li>Before you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import a full backup file into an ApsaraDB RDS for MySQL instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about the full backup files that are imported into an instance.</p>
+     * 
      * @param request ListUserBackupFilesRequest
      * @return ListUserBackupFilesResponse
      */
@@ -16468,14 +18256,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Locks an account of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/147649.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/147649.html">Lock an account of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Locks an account of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request LockAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return LockAccountResponse
@@ -16521,14 +18313,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Locks an account of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/147649.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/147649.html">Lock an account of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Locks an account of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request LockAccountRequest
      * @return LockAccountResponse
      */
@@ -16538,18 +18334,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an instance to a different zone.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Migrate an ApsaraDB RDS for MySQL instance across zones in the same region](https://help.aliyun.com/document_detail/96746.html)
-     * *   [Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region](https://help.aliyun.com/document_detail/96746.html)
-     * *   [Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region](https://help.aliyun.com/document_detail/95658.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for MySQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95658.html">Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an instance to a different zone.</p>
+     * 
      * @param request MigrateConnectionToOtherZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MigrateConnectionToOtherZoneResponse
@@ -16595,18 +18399,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an instance to a different zone.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Migrate an ApsaraDB RDS for MySQL instance across zones in the same region](https://help.aliyun.com/document_detail/96746.html)
-     * *   [Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region](https://help.aliyun.com/document_detail/96746.html)
-     * *   [Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region](https://help.aliyun.com/document_detail/95658.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for MySQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95658.html">Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an instance to a different zone.</p>
+     * 
      * @param request MigrateConnectionToOtherZoneRequest
      * @return MigrateConnectionToOtherZoneResponse
      */
@@ -16616,10 +18428,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an instance across hosts in a dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an instance across hosts in a dedicated cluster.</p>
+     * 
      * @param request MigrateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MigrateDBInstanceResponse
@@ -16693,10 +18507,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an instance across hosts in a dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an instance across hosts in a dedicated cluster.</p>
+     * 
      * @param request MigrateDBInstanceRequest
      * @return MigrateDBInstanceResponse
      */
@@ -16706,16 +18522,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the whitelist mode of an instance from the standard whitelist mode to the enhanced whitelist mode.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode](https://help.aliyun.com/document_detail/96117.html)
-     * *   [Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode](https://help.aliyun.com/document_detail/96767.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96117.html">Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96767.html">Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the whitelist mode of an instance from the standard whitelist mode to the enhanced whitelist mode.</p>
+     * 
      * @param request MigrateSecurityIPModeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MigrateSecurityIPModeResponse
@@ -16757,16 +18581,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the whitelist mode of an instance from the standard whitelist mode to the enhanced whitelist mode.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode](https://help.aliyun.com/document_detail/96117.html)
-     * *   [Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode](https://help.aliyun.com/document_detail/96767.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96117.html">Change the whitelist mode of an ApsaraDB RDS for MySQL instance to the enhanced whitelist mode</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96767.html">Change the whitelist mode of an ApsaraDB RDS for PostgreSQL instance to the enhanced whitelist mode</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the whitelist mode of an instance from the standard whitelist mode to the enhanced whitelist mode.</p>
+     * 
      * @param request MigrateSecurityIPModeRequest
      * @return MigrateSecurityIPModeResponse
      */
@@ -16776,18 +18608,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an instance across zones in the same region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Migrate an ApsaraDB RDS for MySQL instance across zones in the same region](https://help.aliyun.com/document_detail/96053.html)
-     * *   [Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region](https://help.aliyun.com/document_detail/96746.html)
-     * *   [Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region](https://help.aliyun.com/document_detail/95658.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96053.html">Migrate an ApsaraDB RDS for MySQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95658.html">Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an instance across zones in the same region.</p>
+     * 
      * @param request MigrateToOtherZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MigrateToOtherZoneResponse
@@ -16881,18 +18721,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates an instance across zones in the same region.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Migrate an ApsaraDB RDS for MySQL instance across zones in the same region](https://help.aliyun.com/document_detail/96053.html)
-     * *   [Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region](https://help.aliyun.com/document_detail/96746.html)
-     * *   [Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region](https://help.aliyun.com/document_detail/95658.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96053.html">Migrate an ApsaraDB RDS for MySQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for PostgreSQL instance across zones in the same region</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95658.html">Migrate an ApsaraDB RDS for SQL Server instance across zones in the same region</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Migrates an instance across zones in the same region.</p>
+     * 
      * @param request MigrateToOtherZoneRequest
      * @return MigrateToOtherZoneResponse
      */
@@ -16902,14 +18750,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the AD domain information about an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Connect an RDS instance to a self-managed domain](https://help.aliyun.com/document_detail/170734.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/170734.html">Connect an RDS instance to a self-managed domain</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the AD domain information about an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request ModifyADInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyADInfoResponse
@@ -16975,14 +18831,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the AD domain information about an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Connect an RDS instance to a self-managed domain](https://help.aliyun.com/document_detail/170734.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/170734.html">Connect an RDS instance to a self-managed domain</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the AD domain information about an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request ModifyADInfoRequest
      * @return ModifyADInfoResponse
      */
@@ -16992,14 +18856,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a database account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a database account.</p>
+     * 
      * @param request ModifyAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccountDescriptionResponse
@@ -17053,14 +18921,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a database account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a database account.</p>
+     * 
      * @param request ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
      */
@@ -17070,8 +18942,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改全密态用户权限
-     *
+     * <b>summary</b> : 
+     * <p>修改全密态用户权限</p>
+     * 
      * @param request ModifyAccountMaskingPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccountMaskingPrivilegeResponse
@@ -17125,8 +18998,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改全密态用户权限
-     *
+     * <b>summary</b> : 
+     * <p>修改全密态用户权限</p>
+     * 
      * @param request ModifyAccountMaskingPrivilegeRequest
      * @return ModifyAccountMaskingPrivilegeResponse
      */
@@ -17136,20 +19010,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the event history feature of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [View the event history of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/129759.html)
-     * *   [View the event history of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/131008.html)
-     * *   [View the event history of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/131013.html)
-     * *   [View the event history of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/131010.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131008.html">View the event history of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131013.html">View the event history of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131010.html">View the event history of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the event history feature of an instance.</p>
+     * 
      * @param request ModifyActionEventPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyActionEventPolicyResponse
@@ -17195,20 +19077,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the event history feature of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [View the event history of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/129759.html)
-     * *   [View the event history of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/131008.html)
-     * *   [View the event history of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/131013.html)
-     * *   [View the event history of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/131010.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131008.html">View the event history of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131013.html">View the event history of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/131010.html">View the event history of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the event history feature of an instance.</p>
+     * 
      * @param request ModifyActionEventPolicyRequest
      * @return ModifyActionEventPolicyResponse
      */
@@ -17218,20 +19108,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the switching time of scheduled O\\\\\\&M tasks for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Scheduled events for ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/104183.html)
-     * *   [Scheduled events for ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/104452.html)
-     * *   [Scheduled events for ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/104451.html)
-     * *   [Scheduled events for ApsaraDB RDS for MariaDB instances](https://help.aliyun.com/document_detail/104454.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the switching time of scheduled O\\\&amp;M tasks for an instance.</p>
+     * 
      * @param request ModifyActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyActiveOperationTasksResponse
@@ -17289,20 +19187,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the switching time of scheduled O\\\\\\&M tasks for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Scheduled events for ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/104183.html)
-     * *   [Scheduled events for ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/104452.html)
-     * *   [Scheduled events for ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/104451.html)
-     * *   [Scheduled events for ApsaraDB RDS for MariaDB instances](https://help.aliyun.com/document_detail/104454.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the switching time of scheduled O\\\&amp;M tasks for an instance.</p>
+     * 
      * @param request ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
      */
@@ -17312,20 +19218,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the backup policy settings of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98818.html)
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96772.html)
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95717.html)
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97147.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the backup policy settings of an instance.</p>
+     * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyBackupPolicyResponse
@@ -17459,20 +19373,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the backup policy settings of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/98818.html)
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96772.html)
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95717.html)
-     * *   [Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97147.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the backup policy settings of an instance.</p>
+     * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
      */
@@ -17482,14 +19404,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the character set collation and time zone of system databases on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS SQL Server
-     * ### [](#)References
-     * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Change the character set collation and the time zone of system databases](https://help.aliyun.com/document_detail/95700.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/95700.html">Change the character set collation and the time zone of system databases</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the character set collation and time zone of system databases on an instance.</p>
+     * 
      * @param request ModifyCollationTimeZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyCollationTimeZoneResponse
@@ -17539,14 +19465,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the character set collation and time zone of system databases on an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS SQL Server
-     * ### [](#)References
-     * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Change the character set collation and the time zone of system databases](https://help.aliyun.com/document_detail/95700.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/95700.html">Change the character set collation and the time zone of system databases</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the character set collation and time zone of system databases on an instance.</p>
+     * 
      * @param request ModifyCollationTimeZoneRequest
      * @return ModifyCollationTimeZoneResponse
      */
@@ -17556,8 +19486,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例资源
-     *
+     * <b>summary</b> : 
+     * <p>修改实例资源</p>
+     * 
      * @param request ModifyCustinsResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyCustinsResourceResponse
@@ -17611,8 +19542,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例资源
-     *
+     * <b>summary</b> : 
+     * <p>修改实例资源</p>
+     * 
      * @param request ModifyCustinsResourceRequest
      * @return ModifyCustinsResourceResponse
      */
@@ -17622,14 +19554,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of an instance.</p>
+     * 
      * @param request ModifyDBDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBDescriptionResponse
@@ -17683,14 +19619,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of an instance.</p>
+     * 
      * @param request ModifyDBDescriptionRequest
      * @return ModifyDBDescriptionResponse
      */
@@ -17700,16 +19640,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the method that is used to update the minor engine version of an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Modify automatic update settings for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96059.html)
-     * *   [Modify automatic update settings for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146895.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify automatic update settings for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify automatic update settings for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the method that is used to update the minor engine version of an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
@@ -17759,16 +19707,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the method that is used to update the minor engine version of an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Modify automatic update settings for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96059.html)
-     * *   [Modify automatic update settings for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146895.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify automatic update settings for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify automatic update settings for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the method that is used to update the minor engine version of an ApsaraDB RDS for MySQL instance or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
      * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
      */
@@ -17778,13 +19734,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration item of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * *   SQL Server
-     * >  The configuration items that are supported are pgbouncer and clear_errorlog. For more information, see [PgBouncer of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/2398301.html) and [Error log cleanup of ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/95645.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server<blockquote>
+     * <p> The configuration items that are supported are pgbouncer and clear_errorlog. For more information, see <a href="https://help.aliyun.com/document_detail/2398301.html">PgBouncer of ApsaraDB RDS for PostgreSQL instances</a> and <a href="https://help.aliyun.com/document_detail/95645.html">Error log cleanup of ApsaraDB RDS for SQL Server instances</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration item of an instance.</p>
+     * 
      * @param request ModifyDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceConfigResponse
@@ -17846,13 +19808,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration item of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * *   SQL Server
-     * >  The configuration items that are supported are pgbouncer and clear_errorlog. For more information, see [PgBouncer of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/2398301.html) and [Error log cleanup of ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/95645.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server<blockquote>
+     * <p> The configuration items that are supported are pgbouncer and clear_errorlog. For more information, see <a href="https://help.aliyun.com/document_detail/2398301.html">PgBouncer of ApsaraDB RDS for PostgreSQL instances</a> and <a href="https://help.aliyun.com/document_detail/95645.html">Error log cleanup of ApsaraDB RDS for SQL Server instances</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration item of an instance.</p>
+     * 
      * @param request ModifyDBInstanceConfigRequest
      * @return ModifyDBInstanceConfigResponse
      */
@@ -17862,10 +19830,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例访问模式
-     *
-     * @description > The API has been taken offline
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The API has been taken offline</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>修改实例访问模式</p>
+     * 
      * @param request ModifyDBInstanceConnectionModeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceConnectionModeResponse
@@ -17915,10 +19887,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例访问模式
-     *
-     * @description > The API has been taken offline
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The API has been taken offline</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>修改实例访问模式</p>
+     * 
      * @param request ModifyDBInstanceConnectionModeRequest
      * @return ModifyDBInstanceConnectionModeResponse
      */
@@ -17928,20 +19904,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the endpoint and port of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96163.html)
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96788.html)
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95740.html)
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97157.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96163.html">Change the endpoint and port number of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96788.html">Change the endpoint and port number of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95740.html">Change the endpoint and port number of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97157.html">Change the endpoint and port number of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the endpoint and port of an instance.</p>
+     * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceConnectionStringResponse
@@ -18011,20 +19995,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the endpoint and port of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96163.html)
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96788.html)
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95740.html)
-     * *   [Change the endpoint and port number of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97157.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96163.html">Change the endpoint and port number of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96788.html">Change the endpoint and port number of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95740.html">Change the endpoint and port number of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97157.html">Change the endpoint and port number of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the endpoint and port of an instance.</p>
+     * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
      */
@@ -18034,14 +20026,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the replication latency for a read-only ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure a data replication latency for a read-only ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96056.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96056.html">Configure a data replication latency for a read-only ApsaraDB RDS for MySQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures the replication latency for a read-only ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request ModifyDBInstanceDelayedReplicationTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceDelayedReplicationTimeResponse
@@ -18087,14 +20087,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the replication latency for a read-only ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure a data replication latency for a read-only ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96056.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96056.html">Configure a data replication latency for a read-only ApsaraDB RDS for MySQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures the replication latency for a read-only ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request ModifyDBInstanceDelayedReplicationTimeRequest
      * @return ModifyDBInstanceDelayedReplicationTimeResponse
      */
@@ -18104,20 +20112,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enable or disable the release protection feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Enable and disable instance release protection for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/414512.html)
-     * *   [Enable and disable instance release protection for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/471512.html)
-     * *   [Enable and disable instance release protection for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/416209.html)
-     * *   [Enable and disable release protection for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/414512.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable instance release protection for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable instance release protection for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enable or disable the release protection feature for an instance.</p>
+     * 
      * @param request ModifyDBInstanceDeletionProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceDeletionProtectionResponse
@@ -18171,20 +20187,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enable or disable the release protection feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Enable and disable instance release protection for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/414512.html)
-     * *   [Enable and disable instance release protection for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/471512.html)
-     * *   [Enable and disable instance release protection for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/416209.html)
-     * *   [Enable and disable release protection for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/414512.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable instance release protection for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable instance release protection for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enable or disable the release protection feature for an instance.</p>
+     * 
      * @param request ModifyDBInstanceDeletionProtectionRequest
      * @return ModifyDBInstanceDeletionProtectionResponse
      */
@@ -18194,8 +20218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the ModifyDBInstanceDescription operation to modify the name of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>You can call the ModifyDBInstanceDescription operation to modify the name of an instance.</p>
+     * 
      * @param request ModifyDBInstanceDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceDescriptionResponse
@@ -18245,8 +20270,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the ModifyDBInstanceDescription operation to modify the name of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>You can call the ModifyDBInstanceDescription operation to modify the name of an instance.</p>
+     * 
      * @param request ModifyDBInstanceDescriptionRequest
      * @return ModifyDBInstanceDescriptionResponse
      */
@@ -18256,11 +20282,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the weight of an endpoint for an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the weight of an endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param tmpReq ModifyDBInstanceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceEndpointResponse
@@ -18316,11 +20344,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the weight of an endpoint for an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the weight of an endpoint for an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request ModifyDBInstanceEndpointRequest
      * @return ModifyDBInstanceEndpointResponse
      */
@@ -18330,14 +20360,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about the endpoint of an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * ### [](#)Precautions
-     * *   You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.
-     * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port, you do not need to specify the VPC, vSwitch, and IP address of the internal endpoint.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.</li>
+     * <li>The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port, you do not need to specify the VPC, vSwitch, and IP address of the internal endpoint.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information about the endpoint of an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request ModifyDBInstanceEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceEndpointAddressResponse
@@ -18403,14 +20437,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about the endpoint of an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * ### [](#)Precautions
-     * *   You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.
-     * *   The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port, you do not need to specify the VPC, vSwitch, and IP address of the internal endpoint.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>You can modify the following information about the endpoint of an instance: the public and internal endpoints, the public and internal ports, and the virtual private cloud (VPC), vSwitch, and IP address of the internal endpoint.</li>
+     * <li>The VPC and vSwitch must be modified at the same time. If you specify the VPC, vSwitch, and IP address of the internal endpoint, you do not need to specify the endpoint and port. If you specify the endpoint and port, you do not need to specify the VPC, vSwitch, and IP address of the internal endpoint.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information about the endpoint of an instance that runs RDS Cluster Edition.</p>
+     * 
      * @param request ModifyDBInstanceEndpointAddressRequest
      * @return ModifyDBInstanceEndpointAddressResponse
      */
@@ -18420,8 +20458,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the high availability (HA) and data replication mode of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the high availability (HA) and data replication mode of an instance.</p>
+     * 
      * @param request ModifyDBInstanceHAConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceHAConfigResponse
@@ -18475,8 +20514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the high availability (HA) and data replication mode of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the high availability (HA) and data replication mode of an instance.</p>
+     * 
      * @param request ModifyDBInstanceHAConfigRequest
      * @return ModifyDBInstanceHAConfigResponse
      */
@@ -18486,20 +20526,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the maintenance window of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Set a maintenance window for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96052.html)
-     * *   [Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96799.html)
-     * *   [Set a maintenance window for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95657.html)
-     * *   [Set a maintenance window for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97473.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96052.html">Set a maintenance window for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96799.html">Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95657.html">Set a maintenance window for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97473.html">Set a maintenance window for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the maintenance window of an instance.</p>
+     * 
      * @param request ModifyDBInstanceMaintainTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceMaintainTimeResponse
@@ -18553,20 +20601,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the maintenance window of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Set a maintenance window for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96052.html)
-     * *   [Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96799.html)
-     * *   [Set a maintenance window for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95657.html)
-     * *   [Set a maintenance window for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97473.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96052.html">Set a maintenance window for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96799.html">Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95657.html">Set a maintenance window for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97473.html">Set a maintenance window for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the maintenance window of an instance.</p>
+     * 
      * @param request ModifyDBInstanceMaintainTimeRequest
      * @return ModifyDBInstanceMaintainTimeResponse
      */
@@ -18576,14 +20632,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [View the Enhanced Monitoring metrics](https://help.aliyun.com/document_detail/299200.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">View the Enhanced Monitoring metrics</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ModifyDBInstanceMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceMetricsResponse
@@ -18625,14 +20687,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [View the Enhanced Monitoring metrics](https://help.aliyun.com/document_detail/299200.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">View the Enhanced Monitoring metrics</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the Enhanced Monitoring metrics that are displayed for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ModifyDBInstanceMetricsRequest
      * @return ModifyDBInstanceMetricsResponse
      */
@@ -18642,18 +20710,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a monitoring frequency.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Usage notes
-     * If you use the Every 5 Seconds monitoring frequency, you are charged additional fees. Before you call this operation, make sure that you understand the [billing methods and pricing](https://help.aliyun.com/document_detail/45020.html) of ApsaraDB RDS.
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure the monitoring frequency for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96112.html)
-     * *   [Configure the monitoring frequency for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95710.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>If you use the Every 5 Seconds monitoring frequency, you are charged additional fees. Before you call this operation, make sure that you understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS.</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Configure the monitoring frequency for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Configure the monitoring frequency for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a monitoring frequency.</p>
+     * 
      * @param request ModifyDBInstanceMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceMonitorResponse
@@ -18707,18 +20783,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a monitoring frequency.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Usage notes
-     * If you use the Every 5 Seconds monitoring frequency, you are charged additional fees. Before you call this operation, make sure that you understand the [billing methods and pricing](https://help.aliyun.com/document_detail/45020.html) of ApsaraDB RDS.
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure the monitoring frequency for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96112.html)
-     * *   [Configure the monitoring frequency for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95710.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>If you use the Every 5 Seconds monitoring frequency, you are charged additional fees. Before you call this operation, make sure that you understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS.</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Configure the monitoring frequency for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Configure the monitoring frequency for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a monitoring frequency.</p>
+     * 
      * @param request ModifyDBInstanceMonitorRequest
      * @return ModifyDBInstanceMonitorResponse
      */
@@ -18728,15 +20812,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the expiration time of the classic network endpoint of an instance in hybrid access mode.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)References
-     * *   [Configure the hybrid access solution for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96110.html)
-     * *   [Configure the hybrid access solution for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95708.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96110.html">Configure the hybrid access solution for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95708.html">Configure the hybrid access solution for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the expiration time of the classic network endpoint of an instance in hybrid access mode.</p>
+     * 
      * @param request ModifyDBInstanceNetworkExpireTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceNetworkExpireTimeResponse
@@ -18790,15 +20880,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the expiration time of the classic network endpoint of an instance in hybrid access mode.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)References
-     * *   [Configure the hybrid access solution for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96110.html)
-     * *   [Configure the hybrid access solution for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95708.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96110.html">Configure the hybrid access solution for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95708.html">Configure the hybrid access solution for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the expiration time of the classic network endpoint of an instance in hybrid access mode.</p>
+     * 
      * @param request ModifyDBInstanceNetworkExpireTimeRequest
      * @return ModifyDBInstanceNetworkExpireTimeResponse
      */
@@ -18808,18 +20904,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the network type of an ApsaraDB RDS instance from classic network to VPC
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Change the network type of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96109.html)
-     * *   [Change the network type of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96761.html)
-     * *   [Change the network type of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95707.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96109.html">Change the network type of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96761.html">Change the network type of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95707.html">Change the network type of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the network type of an ApsaraDB RDS instance from classic network to VPC</p>
+     * 
      * @param request ModifyDBInstanceNetworkTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceNetworkTypeResponse
@@ -18897,18 +21001,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the network type of an ApsaraDB RDS instance from classic network to VPC
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Change the network type of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96109.html)
-     * *   [Change the network type of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96761.html)
-     * *   [Change the network type of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95707.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96109.html">Change the network type of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96761.html">Change the network type of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95707.html">Change the network type of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the network type of an ApsaraDB RDS instance from classic network to VPC</p>
+     * 
      * @param request ModifyDBInstanceNetworkTypeRequest
      * @return ModifyDBInstanceNetworkTypeResponse
      */
@@ -18918,20 +21030,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of an instance from pay-as-you-go to subscription.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96048.html)
-     * *   [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96743.html)
-     * *   [Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/95631.html)
-     * *   [Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/97120.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96048.html">Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96743.html">Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95631.html">Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97120.html">Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of an instance from pay-as-you-go to subscription.</p>
+     * 
      * @param request ModifyDBInstancePayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstancePayTypeResponse
@@ -18977,20 +21097,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of an instance from pay-as-you-go to subscription.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96048.html)
-     * *   [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96743.html)
-     * *   [Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/95631.html)
-     * *   [Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/97120.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96048.html">Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96743.html">Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95631.html">Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97120.html">Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of an instance from pay-as-you-go to subscription.</p>
+     * 
      * @param request ModifyDBInstancePayTypeRequest
      * @return ModifyDBInstancePayTypeResponse
      */
@@ -19000,10 +21128,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the ModifyDBInstanceProxyConfiguration operation to configure the database proxy for an instance.
-     *
-     * @description > This operation is phased out.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is phased out.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the ModifyDBInstanceProxyConfiguration operation to configure the database proxy for an instance.</p>
+     * 
      * @param request ModifyDBInstanceProxyConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceProxyConfigurationResponse
@@ -19053,10 +21185,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the ModifyDBInstanceProxyConfiguration operation to configure the database proxy for an instance.
-     *
-     * @description > This operation is phased out.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is phased out.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the ModifyDBInstanceProxyConfiguration operation to configure the database proxy for an instance.</p>
+     * 
      * @param request ModifyDBInstanceProxyConfigurationRequest
      * @return ModifyDBInstanceProxyConfigurationResponse
      */
@@ -19066,18 +21202,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the SSL encryption settings of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the SSL encryption feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96120.html)
-     * *   [Use the SSL encryption feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/229517.html)
-     * *   [Use the SSL encryption feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95715.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Use the SSL encryption feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Use the SSL encryption feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Use the SSL encryption feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the SSL encryption settings of an instance.</p>
+     * 
      * @param request ModifyDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceSSLResponse
@@ -19183,18 +21327,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the SSL encryption settings of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the SSL encryption feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96120.html)
-     * *   [Use the SSL encryption feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/229517.html)
-     * *   [Use the SSL encryption feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95715.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Use the SSL encryption feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Use the SSL encryption feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Use the SSL encryption feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the SSL encryption settings of an instance.</p>
+     * 
      * @param request ModifyDBInstanceSSLRequest
      * @return ModifyDBInstanceSSLResponse
      */
@@ -19204,20 +21356,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the instance type and storage capacity of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:
-     * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96061.html)
-     * *   [Change the specifications of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96750.html)
-     * *   [Change the specifications of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95665.html)
-     * *   [Change the specifications of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97129.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96750.html">Change the specifications of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95665.html">Change the specifications of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97129.html">Change the specifications of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the instance type and storage capacity of an ApsaraDB RDS instance.</p>
+     * 
      * @param tmpReq ModifyDBInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceSpecResponse
@@ -19349,20 +21509,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the instance type and storage capacity of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:
-     * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96061.html)
-     * *   [Change the specifications of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96750.html)
-     * *   [Change the specifications of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95665.html)
-     * *   [Change the specifications of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97129.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Fees are generated if the call is successful. Before you call this operation, carefully read the following documentation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96750.html">Change the specifications of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95665.html">Change the specifications of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97129.html">Change the specifications of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the instance type and storage capacity of an ApsaraDB RDS instance.</p>
+     * 
      * @param request ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
      */
@@ -19372,18 +21540,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the Transparent Data Encryption (TDE) feature for an ApsaraDB RDS instance and modifies the TDE status for the instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure TDE for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96121.html)
-     * *   [Configure TDE for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/465652.html)
-     * *   [Configure TDE for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95716.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Configure TDE for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Configure TDE for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Configure TDE for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the Transparent Data Encryption (TDE) feature for an ApsaraDB RDS instance and modifies the TDE status for the instance.</p>
+     * 
      * @param request ModifyDBInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBInstanceTDEResponse
@@ -19461,18 +21637,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the Transparent Data Encryption (TDE) feature for an ApsaraDB RDS instance and modifies the TDE status for the instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure TDE for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96121.html)
-     * *   [Configure TDE for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/465652.html)
-     * *   [Configure TDE for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95716.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Configure TDE for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Configure TDE for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Configure TDE for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the Transparent Data Encryption (TDE) feature for an ApsaraDB RDS instance and modifies the TDE status for the instance.</p>
+     * 
      * @param request ModifyDBInstanceTDERequest
      * @return ModifyDBInstanceTDEResponse
      */
@@ -19482,14 +21666,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the specifications and storage capacity of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)References
-     * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96061.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the specifications and storage capacity of an instance.</p>
+     * 
      * @param tmpReq ModifyDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBNodeResponse
@@ -19573,14 +21765,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the specifications and storage capacity of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * ### [](#)References
-     * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96061.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the specifications and storage capacity of an instance.</p>
+     * 
      * @param request ModifyDBNodeRequest
      * @return ModifyDBNodeResponse
      */
@@ -19590,17 +21790,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the dedicated proxy feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * >  Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see [[Special offers/Price changes\\] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition](~~2555466~~).
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/197456.html)
-     * *   [Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418272.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p> Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the dedicated proxy feature for an instance.</p>
+     * 
      * @param request ModifyDBProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBProxyResponse
@@ -19686,17 +21896,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the dedicated proxy feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * >  Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see [[Special offers/Price changes\\] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition](~~2555466~~).
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/197456.html)
-     * *   [Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418272.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p> Starting October 17, 2023, ApsaraDB RDS provides a dedicated proxy free of charge for each ApsaraDB RDS for MySQL instance on RDS Cluster Edition. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the dedicated proxy feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the dedicated proxy feature for an instance.</p>
+     * 
      * @param request ModifyDBProxyRequest
      * @return ModifyDBProxyResponse
      */
@@ -19706,16 +21926,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the connection settings for a database proxy endpoint.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * ### [](#)References
-     * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/2621331.html)
-     * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418273.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418273.html">Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the connection settings for a database proxy endpoint.</p>
+     * 
      * @param request ModifyDBProxyEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBProxyEndpointResponse
@@ -19805,16 +22033,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the connection settings for a database proxy endpoint.
-     *
-     * @description ### [](#)Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * ### [](#)References
-     * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/2621331.html)
-     * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418273.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418273.html">Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the connection settings for a database proxy endpoint.</p>
+     * 
      * @param request ModifyDBProxyEndpointRequest
      * @return ModifyDBProxyEndpointResponse
      */
@@ -19824,16 +22060,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes an endpoint that is used to connect to the dedicated proxy of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/184921.html)
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418274.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes an endpoint that is used to connect to the dedicated proxy of an ApsaraDB RDS instance.</p>
+     * 
      * @param request ModifyDBProxyEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBProxyEndpointAddressResponse
@@ -19899,16 +22143,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes an endpoint that is used to connect to the dedicated proxy of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/184921.html)
-     * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418274.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the dedicated proxy endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes an endpoint that is used to connect to the dedicated proxy of an ApsaraDB RDS instance.</p>
+     * 
      * @param request ModifyDBProxyEndpointAddressRequest
      * @return ModifyDBProxyEndpointAddressResponse
      */
@@ -19918,13 +22170,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the configuration of a database proxy for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * >  Starting October 17, 2023, ApsaraDB RDS for MySQL instances that run RDS Cluster Edition offer one free-of-charge dedicated database proxy for each unit in phases. For more information, see [[Special offers/Price changes\\] One dedicated proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition](~~2555466~~).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p> Starting October 17, 2023, ApsaraDB RDS for MySQL instances that run RDS Cluster Edition offer one free-of-charge dedicated database proxy for each unit in phases. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One dedicated proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the configuration of a database proxy for an instance.</p>
+     * 
      * @param request ModifyDBProxyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBProxyInstanceResponse
@@ -19998,13 +22256,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the configuration of a database proxy for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * >  Starting October 17, 2023, ApsaraDB RDS for MySQL instances that run RDS Cluster Edition offer one free-of-charge dedicated database proxy for each unit in phases. For more information, see [[Special offers/Price changes\\] One dedicated proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition](~~2555466~~).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL<blockquote>
+     * <p> Starting October 17, 2023, ApsaraDB RDS for MySQL instances that run RDS Cluster Edition offer one free-of-charge dedicated database proxy for each unit in phases. For more information, see <a href="~~2555466~~">[Special offers/Price changes] One dedicated proxy is provided free of charge for ApsaraDB RDS for MySQL instances on RDS Cluster Edition</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the configuration of a database proxy for an instance.</p>
+     * 
      * @param request ModifyDBProxyInstanceRequest
      * @return ModifyDBProxyInstanceResponse
      */
@@ -20014,14 +22278,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Configure a distributed transaction whitelist](https://help.aliyun.com/document_detail/124321.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request ModifyDTCSecurityIpHostsForSQLServerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDTCSecurityIpHostsForSQLServerResponse
@@ -20083,14 +22351,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Configure a distributed transaction whitelist](https://help.aliyun.com/document_detail/124321.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures a distributed transaction whitelist for an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request ModifyDTCSecurityIpHostsForSQLServerRequest
      * @return ModifyDTCSecurityIpHostsForSQLServerResponse
      */
@@ -20100,16 +22372,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures automatic storage expansion for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure automatic storage expansion for ApsaraDB RDS for MySQL](https://help.aliyun.com/document_detail/173826.html)
-     * *   [Configure automatic storage expansion for ApsaraDB RDS for PostgreSQL](https://help.aliyun.com/document_detail/432496.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/173826.html">Configure automatic storage expansion for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/432496.html">Configure automatic storage expansion for ApsaraDB RDS for PostgreSQL</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures automatic storage expansion for an instance.</p>
+     * 
      * @param request ModifyDasInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDasInstanceConfigResponse
@@ -20167,16 +22447,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures automatic storage expansion for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure automatic storage expansion for ApsaraDB RDS for MySQL](https://help.aliyun.com/document_detail/173826.html)
-     * *   [Configure automatic storage expansion for ApsaraDB RDS for PostgreSQL](https://help.aliyun.com/document_detail/432496.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/173826.html">Configure automatic storage expansion for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/432496.html">Configure automatic storage expansion for ApsaraDB RDS for PostgreSQL</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures automatic storage expansion for an instance.</p>
+     * 
      * @param request ModifyDasInstanceConfigRequest
      * @return ModifyDasInstanceConfigResponse
      */
@@ -20186,11 +22474,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the property settings of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <p>You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.</p>
+     * <blockquote>
+     * <p>: Before you call this operation, read the preceding topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the property settings of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request ModifyDatabaseConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDatabaseConfigResponse
@@ -20248,11 +22545,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the property settings of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engine
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <p>You can call this operation to modify the database properties of an ApsaraDB RDS for SQL Server instance and archive data from an instance that uses general Enterprise SSDs (ESSDs) to an Object Storage Service (OSS) bucket. Before you call this operation to archive data to an OSS bucket, you must enable the data archiving feature in the ApsaraDB RDS console. For more information, see <a href="https://help.aliyun.com/document_detail/2401398.html">Modify database properties</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to an OSS bucket</a>.</p>
+     * <blockquote>
+     * <p>: Before you call this operation, read the preceding topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the property settings of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request ModifyDatabaseConfigRequest
      * @return ModifyDatabaseConfigResponse
      */
@@ -20262,14 +22568,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures SSL encryption for an dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     * ### [](#)References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * [Configure SSL encryption for a proxy endpoint](https://help.aliyun.com/document_detail/188164.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
+     * <a href="https://help.aliyun.com/document_detail/188164.html">Configure SSL encryption for a proxy endpoint</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures SSL encryption for an dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request ModifyDbProxyInstanceSslRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDbProxyInstanceSslResponse
@@ -20323,14 +22633,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures SSL encryption for an dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS MySQL
-     * ### [](#)References
-     * > : Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * [Configure SSL encryption for a proxy endpoint](https://help.aliyun.com/document_detail/188164.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
+     * <a href="https://help.aliyun.com/document_detail/188164.html">Configure SSL encryption for a proxy endpoint</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures SSL encryption for an dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request ModifyDbProxyInstanceSslRequest
      * @return ModifyDbProxyInstanceSslResponse
      */
@@ -20340,8 +22654,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 事件中心修改事件信息
-     *
+     * <b>summary</b> : 
+     * <p>事件中心修改事件信息</p>
+     * 
      * @param request ModifyEventInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyEventInfoResponse
@@ -20387,8 +22702,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 事件中心修改事件信息
-     *
+     * <b>summary</b> : 
+     * <p>事件中心修改事件信息</p>
+     * 
      * @param request ModifyEventInfoRequest
      * @return ModifyEventInfoResponse
      */
@@ -20398,17 +22714,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Change the availability check method of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [What is availability check?](https://help.aliyun.com/document_detail/207467.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/207467.html">What is availability check?</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Change the availability check method of an instance.</p>
+     * 
      * @param request ModifyHADiagnoseConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyHADiagnoseConfigResponse
@@ -20458,17 +22780,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Change the availability check method of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [What is availability check?](https://help.aliyun.com/document_detail/207467.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/207467.html">What is availability check?</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Change the availability check method of an instance.</p>
+     * 
      * @param request ModifyHADiagnoseConfigRequest
      * @return ModifyHADiagnoseConfigResponse
      */
@@ -20478,20 +22806,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the automatic primary/secondary switchover feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96054.html)
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96747.html)
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95659.html)
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97127.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96054.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96747.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95659.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97127.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the automatic primary/secondary switchover feature for an instance.</p>
+     * 
      * @param request ModifyHASwitchConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyHASwitchConfigResponse
@@ -20545,20 +22881,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the automatic primary/secondary switchover feature for an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96054.html)
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96747.html)
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95659.html)
-     * *   [Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97127.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96054.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96747.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95659.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97127.html">Use the automatic primary/secondary switchover feature for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the automatic primary/secondary switchover feature for an instance.</p>
+     * 
      * @param request ModifyHASwitchConfigRequest
      * @return ModifyHASwitchConfigResponse
      */
@@ -20568,20 +22912,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the auto-renewal settings of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * >Notice: Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96049.html)
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96740.html)
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95635.html)
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97121.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Notice: Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Use the auto-renewal feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Use the auto-renewal feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Use the auto-renewal feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Use the auto-renewal feature for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the auto-renewal settings of an instance.</p>
+     * 
      * @param request ModifyInstanceAutoRenewalAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceAutoRenewalAttributeResponse
@@ -20643,20 +22995,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the auto-renewal settings of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * >Notice: Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96049.html)
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96740.html)
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95635.html)
-     * *   [Use the auto-renewal feature for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97121.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Notice: Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Use the auto-renewal feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Use the auto-renewal feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Use the auto-renewal feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Use the auto-renewal feature for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the auto-renewal settings of an instance.</p>
+     * 
      * @param request ModifyInstanceAutoRenewalAttributeRequest
      * @return ModifyInstanceAutoRenewalAttributeResponse
      */
@@ -20666,18 +23026,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the cross-region backup settings of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the cross-region backup settings of an instance.</p>
+     * 
      * @param request ModifyInstanceCrossBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceCrossBackupPolicyResponse
@@ -20747,18 +23115,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the cross-region backup settings of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206671.html)
-     * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/187923.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the cross-region backup settings of an instance.</p>
+     * 
      * @param request ModifyInstanceCrossBackupPolicyRequest
      * @return ModifyInstanceCrossBackupPolicyResponse
      */
@@ -20768,8 +23144,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>修改全密态规则</p>
+     * 
      * @param tmpReq ModifyMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMaskingRulesResponse
@@ -20837,8 +23214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改全密态规则
-     *
+     * <b>summary</b> : 
+     * <p>修改全密态规则</p>
+     * 
      * @param request ModifyMaskingRulesRequest
      * @return ModifyMaskingRulesResponse
      */
@@ -20848,15 +23226,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](https://help.aliyun.com/document_detail/349288.html)
-     * *   [The pg_hba.conf File](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/349288.html">Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain</a></li>
+     * <li><a href="https://www.postgresql.org/docs/11/auth-pg-hba-conf.html">The pg_hba.conf File</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ModifyPGHbaConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPGHbaConfigResponse
@@ -20914,15 +23298,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### [](#)Supported database engines
-     * RDS PostgreSQL
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain](https://help.aliyun.com/document_detail/349288.html)
-     * *   [The pg_hba.conf File](https://www.postgresql.org/docs/11/auth-pg-hba-conf.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/349288.html">Connect an ApsaraDB RDS for PostgreSQL instance to a self-managed AD domain</a></li>
+     * <li><a href="https://www.postgresql.org/docs/11/auth-pg-hba-conf.html">The pg_hba.conf File</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the pg_hba.conf file of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request ModifyPGHbaConfigRequest
      * @return ModifyPGHbaConfigResponse
      */
@@ -20932,20 +23322,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameter values of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Modify the parameters of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96063.html)
-     * *   [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96751.html)
-     * *   [Modify the parameters of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95667.html)
-     * *   [Modify the parameters of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97130.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95667.html">Modify the parameters of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97130.html">Modify the parameters of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameter values of an instance.</p>
+     * 
      * @param request ModifyParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyParameterResponse
@@ -21015,20 +23413,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameter values of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Modify the parameters of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96063.html)
-     * *   [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96751.html)
-     * *   [Modify the parameters of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95667.html)
-     * *   [Modify the parameters of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97130.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95667.html">Modify the parameters of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97130.html">Modify the parameters of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameter values of an instance.</p>
+     * 
      * @param request ModifyParameterRequest
      * @return ModifyParameterResponse
      */
@@ -21038,16 +23444,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameter template of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameter template of an instance.</p>
+     * 
      * @param request ModifyParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyParameterGroupResponse
@@ -21113,16 +23527,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameter template of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/130565.html)
-     * *   [Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/457176.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/130565.html">Use a parameter template to configure the parameters of ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/457176.html">Use a parameter template to configure the parameters of ApsaraDB RDS for PostgreSQL instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameter template of an instance.</p>
+     * 
      * @param request ModifyParameterGroupRequest
      * @return ModifyParameterGroupResponse
      */
@@ -21132,20 +23554,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the latency threshold of the read/write splitting link and the read weights of a primary instance and its read-only instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The instance must run one of the following database engine versions and RDS editions:
-     *     *   MySQL 5.7 on RDS High-availability Edition with local disks
-     *     *   MySQL 5.6
-     *     *   SQL Server on RDS Cluster Edition
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The instance must run one of the following database engine versions and RDS editions:<ul>
+     * <li>MySQL 5.7 on RDS High-availability Edition with local disks</li>
+     * <li>MySQL 5.6</li>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the latency threshold of the read/write splitting link and the read weights of a primary instance and its read-only instances.</p>
+     * 
      * @param request ModifyReadWriteSplittingConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyReadWriteSplittingConnectionResponse
@@ -21211,20 +23641,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the latency threshold of the read/write splitting link and the read weights of a primary instance and its read-only instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### [](#)Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The instance must run one of the following database engine versions and RDS editions:
-     *     *   MySQL 5.7 on RDS High-availability Edition with local disks
-     *     *   MySQL 5.6
-     *     *   SQL Server on RDS Cluster Edition
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The read/write splitting feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The instance must run one of the following database engine versions and RDS editions:<ul>
+     * <li>MySQL 5.7 on RDS High-availability Edition with local disks</li>
+     * <li>MySQL 5.6</li>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the latency threshold of the read/write splitting link and the read weights of a primary instance and its read-only instances.</p>
+     * 
      * @param request ModifyReadWriteSplittingConnectionRequest
      * @return ModifyReadWriteSplittingConnectionResponse
      */
@@ -21234,14 +23672,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the latency at which a read-only ApsaraDB RDS for MySQL instance replicates data from its primary instance.
-     *
-     * @description ### Supported database engines
-     * RDS MySQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Set the data replication latency of a read-only ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96056.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/96056.html">Set the data replication latency of a read-only ApsaraDB RDS for MySQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the latency at which a read-only ApsaraDB RDS for MySQL instance replicates data from its primary instance.</p>
+     * 
      * @param request ModifyReadonlyInstanceDelayReplicationTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyReadonlyInstanceDelayReplicationTimeResponse
@@ -21291,14 +23733,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the latency at which a read-only ApsaraDB RDS for MySQL instance replicates data from its primary instance.
-     *
-     * @description ### Supported database engines
-     * RDS MySQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Set the data replication latency of a read-only ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96056.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/96056.html">Set the data replication latency of a read-only ApsaraDB RDS for MySQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the latency at which a read-only ApsaraDB RDS for MySQL instance replicates data from its primary instance.</p>
+     * 
      * @param request ModifyReadonlyInstanceDelayReplicationTimeRequest
      * @return ModifyReadonlyInstanceDelayReplicationTimeResponse
      */
@@ -21308,17 +23754,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Moves an ApsaraDB RDS instance to a specified resource group.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Transfer resources across resource groups](https://help.aliyun.com/document_detail/94487.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Moves an ApsaraDB RDS instance to a specified resource group.</p>
+     * 
      * @param request ModifyResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyResourceGroupResponse
@@ -21372,17 +23824,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Moves an ApsaraDB RDS instance to a specified resource group.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Transfer resources across resource groups](https://help.aliyun.com/document_detail/94487.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Moves an ApsaraDB RDS instance to a specified resource group.</p>
+     * 
      * @param request ModifyResourceGroupRequest
      * @return ModifyResourceGroupResponse
      */
@@ -21392,18 +23850,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the SQL Explorer (SQL Audit) feature for an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/476574.html)
-     * *   [Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96766.html)
-     * *   [Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95712.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server<blockquote>
+     * <p> If DAS Enterprise Edition is supported in the region in which the instance resides, the most recent version of DAS Enterprise Edition is enabled when you call the operation to enable the SQL Audit feature for the instance. For more information about the database engines and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Supported databases and regions</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96766.html">Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95712.html">Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the SQL Explorer (SQL Audit) feature for an instance.</p>
+     * 
      * @param request ModifySQLCollectorPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySQLCollectorPolicyResponse
@@ -21457,18 +23926,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the SQL Explorer (SQL Audit) feature for an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/476574.html)
-     * *   [Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96766.html)
-     * *   [Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95712.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server<blockquote>
+     * <p> If DAS Enterprise Edition is supported in the region in which the instance resides, the most recent version of DAS Enterprise Edition is enabled when you call the operation to enable the SQL Audit feature for the instance. For more information about the database engines and regions supported by each version of DAS Enterprise Edition, see <a href="https://help.aliyun.com/document_detail/156204.html">Supported databases and regions</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96766.html">Use the SQL Audit feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95712.html">Use the SQL Audit feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the SQL Explorer (SQL Audit) feature for an instance.</p>
+     * 
      * @param request ModifySQLCollectorPolicyRequest
      * @return ModifySQLCollectorPolicyResponse
      */
@@ -21478,16 +23958,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the retention period of the log files that are generated by the SQL Explorer feature for an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * RDS MySQL
-     * ### Precautions
-     * After you shorten the log backup retention period, log backup files that are stored longer than the specified log backup retention period are immediately deleted.
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the SQL Explorer and Audit feature](https://help.aliyun.com/document_detail/476574.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>Precautions</h3>
+     * <p>After you shorten the log backup retention period, log backup files that are stored longer than the specified log backup retention period are immediately deleted.</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the retention period of the log files that are generated by the SQL Explorer feature for an ApsaraDB RDS instance.</p>
+     * 
      * @param request ModifySQLCollectorRetentionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySQLCollectorRetentionResponse
@@ -21545,16 +24029,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the retention period of the log files that are generated by the SQL Explorer feature for an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * RDS MySQL
-     * ### Precautions
-     * After you shorten the log backup retention period, log backup files that are stored longer than the specified log backup retention period are immediately deleted.
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Use the SQL Explorer and Audit feature](https://help.aliyun.com/document_detail/476574.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>Precautions</h3>
+     * <p>After you shorten the log backup retention period, log backup files that are stored longer than the specified log backup retention period are immediately deleted.</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/476574.html">Use the SQL Explorer and Audit feature</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the retention period of the log files that are generated by the SQL Explorer feature for an ApsaraDB RDS instance.</p>
+     * 
      * @param request ModifySQLCollectorRetentionRequest
      * @return ModifySQLCollectorRetentionResponse
      */
@@ -21564,18 +24052,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the ECS security groups to which an instance is added.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/201042.html)
-     * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206310.html)
-     * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/2392322.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/201042.html">Configure a security group for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206310.html">Configure a security group for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2392322.html">Configure a security group for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the ECS security groups to which an instance is added.</p>
+     * 
      * @param request ModifySecurityGroupConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySecurityGroupConfigurationResponse
@@ -21621,18 +24117,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the ECS security groups to which an instance is added.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Configure a security group for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/201042.html)
-     * *   [Configure a security group for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/206310.html)
-     * *   [Configure a security group for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/2392322.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/201042.html">Configure a security group for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206310.html">Configure a security group for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2392322.html">Configure a security group for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the ECS security groups to which an instance is added.</p>
+     * 
      * @param request ModifySecurityGroupConfigurationRequest
      * @return ModifySecurityGroupConfigurationResponse
      */
@@ -21642,20 +24146,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the IP address whitelist of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96118.html)
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/43187.html)
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/43186.html)
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/90336.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the IP address whitelist of an ApsaraDB RDS instance.</p>
+     * 
      * @param request ModifySecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifySecurityIpsResponse
@@ -21717,20 +24229,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the IP address whitelist of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96118.html)
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/43187.html)
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/43186.html)
-     * *   [Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/90336.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the IP address whitelist of an ApsaraDB RDS instance.</p>
+     * 
      * @param request ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
      */
@@ -21740,8 +24260,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 任务中心修改任务信息
-     *
+     * <b>summary</b> : 
+     * <p>任务中心修改任务信息</p>
+     * 
      * @param request ModifyTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTaskInfoResponse
@@ -21799,8 +24320,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 任务中心修改任务信息
-     *
+     * <b>summary</b> : 
+     * <p>任务中心修改任务信息</p>
+     * 
      * @param request ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
      */
@@ -21810,13 +24332,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Edits a whitelist. You can call this operation to create, modify, or delete a whitelist.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Edits a whitelist. You can call this operation to create, modify, or delete a whitelist.</p>
+     * 
      * @param request ModifyWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyWhitelistTemplateResponse
@@ -21870,13 +24396,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Edits a whitelist. You can call this operation to create, modify, or delete a whitelist.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Edits a whitelist. You can call this operation to create, modify, or delete a whitelist.</p>
+     * 
      * @param request ModifyWhitelistTemplateRequest
      * @return ModifyWhitelistTemplateResponse
      */
@@ -21986,18 +24516,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clears the on-premises logs of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### Description
-     * The system automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can call this operation to upload the log backup files of the instance to OSS buckets. After the upload is complete, the system deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded.
-     * ### Precautions
-     * *   When you upload log backup files, the data restoration feature is not affected.
-     * *   This operation is called to release storage. The backup storage usage is not reduced.
-     * *   The OSS buckets to which log backup files are uploaded are provided by the system. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>Description</h3>
+     * <p>The system automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can call this operation to upload the log backup files of the instance to OSS buckets. After the upload is complete, the system deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>When you upload log backup files, the data restoration feature is not affected.</li>
+     * <li>This operation is called to release storage. The backup storage usage is not reduced.</li>
+     * <li>The OSS buckets to which log backup files are uploaded are provided by the system. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Clears the on-premises logs of an ApsaraDB RDS instance.</p>
+     * 
      * @param request PurgeDBInstanceLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PurgeDBInstanceLogResponse
@@ -22047,18 +24583,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clears the on-premises logs of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### Description
-     * The system automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can call this operation to upload the log backup files of the instance to OSS buckets. After the upload is complete, the system deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded.
-     * ### Precautions
-     * *   When you upload log backup files, the data restoration feature is not affected.
-     * *   This operation is called to release storage. The backup storage usage is not reduced.
-     * *   The OSS buckets to which log backup files are uploaded are provided by the system. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>Description</h3>
+     * <p>The system automatically uploads log backup files to Object Storage Service (OSS) buckets. If the remaining storage of an instance is insufficient, you can call this operation to upload the log backup files of the instance to OSS buckets. After the upload is complete, the system deletes these files from the instance to release storage. This operation is called to upload log backup files from an instance to OSS buckets and then delete these files from the instance. If the instance runs SQL Server, transaction log backup files are compressed before they are uploaded.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>When you upload log backup files, the data restoration feature is not affected.</li>
+     * <li>This operation is called to release storage. The backup storage usage is not reduced.</li>
+     * <li>The OSS buckets to which log backup files are uploaded are provided by the system. You do not need to purchase these OSS buckets. In addition, you cannot access these OSS buckets.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Clears the on-premises logs of an ApsaraDB RDS instance.</p>
+     * 
      * @param request PurgeDBInstanceLogRequest
      * @return PurgeDBInstanceLogResponse
      */
@@ -22068,17 +24610,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the notifications of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### Feature description
-     * The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
-     * After you call this operation to query notifications, you can call the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notifications as confirmed, which means that you understand the content of the notifications.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>Feature description</h3>
+     * <p>The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
+     * After you call this operation to query notifications, you can call the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notifications as confirmed, which means that you understand the content of the notifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the notifications of an ApsaraDB RDS instance.</p>
+     * 
      * @param request QueryNotifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryNotifyResponse
@@ -22124,17 +24670,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the notifications of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### Feature description
-     * The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
-     * After you call this operation to query notifications, you can call the [ConfirmNotify](https://help.aliyun.com/document_detail/610444.html) operation to mark the notifications as confirmed, which means that you understand the content of the notifications.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>Feature description</h3>
+     * <p>The notifications are highlighted at the top of the ApsaraDB RDS console. The notifications include renewal reminders and reminders of instance creation failures.
+     * After you call this operation to query notifications, you can call the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notifications as confirmed, which means that you understand the content of the notifications.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the notifications of an ApsaraDB RDS instance.</p>
+     * 
      * @param request QueryNotifyRequest
      * @return QueryNotifyResponse
      */
@@ -22144,8 +24694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary rds机器人热点问题
-     *
+     * <b>summary</b> : 
+     * <p>rds机器人热点问题</p>
+     * 
      * @param request QueryRecommendByCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryRecommendByCodeResponse
@@ -22191,8 +24742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary rds机器人热点问题
-     *
+     * <b>summary</b> : 
+     * <p>rds机器人热点问题</p>
+     * 
      * @param request QueryRecommendByCodeRequest
      * @return QueryRecommendByCodeResponse
      */
@@ -22202,10 +24754,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rebuilds the secondary instance of a primary instance in a dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Rebuilds the secondary instance of a primary instance in a dedicated cluster.</p>
+     * 
      * @param request RebuildDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RebuildDBInstanceResponse
@@ -22263,10 +24817,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rebuilds the secondary instance of a primary instance in a dedicated cluster.
-     *
-     * @description Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](https://help.aliyun.com/document_detail/141455.html)
-     *
+     * <b>description</b> :
+     * <p>Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Rebuilds the secondary instance of a primary instance in a dedicated cluster.</p>
+     * 
      * @param request RebuildDBInstanceRequest
      * @return RebuildDBInstanceResponse
      */
@@ -22276,10 +24832,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches a primary instance to a disaster recovery instance or a disaster recovery instance to a primary instance.
-     *
-     * @description The operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>The operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches a primary instance to a disaster recovery instance or a disaster recovery instance to a primary instance.</p>
+     * 
      * @param request ReceiveDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReceiveDBInstanceResponse
@@ -22329,10 +24887,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches a primary instance to a disaster recovery instance or a disaster recovery instance to a primary instance.
-     *
-     * @description The operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>The operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches a primary instance to a disaster recovery instance or a disaster recovery instance to a primary instance.</p>
+     * 
      * @param request ReceiveDBInstanceRequest
      * @return ReceiveDBInstanceResponse
      */
@@ -22342,14 +24902,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * SQL Server 2012 or later
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Restore the data of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95722.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>SQL Server 2012 or later</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/95722.html">Restore the data of an ApsaraDB RDS for SQL Server instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request RecoveryDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecoveryDBInstanceResponse
@@ -22439,14 +25003,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * SQL Server 2012 or later
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Restore the data of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95722.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>SQL Server 2012 or later</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/95722.html">Restore the data of an ApsaraDB RDS for SQL Server instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request RecoveryDBInstanceRequest
      * @return RecoveryDBInstanceResponse
      */
@@ -22456,19 +25024,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoint of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * *   [Release the public endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/26128.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/97738.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/97736.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97740.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/26128.html">Release the public endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97738.html">Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97736.html">Release the public endpoint of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97740.html">Release the public endpoint of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance.</p>
+     * 
      * @param request ReleaseInstanceConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseInstanceConnectionResponse
@@ -22522,19 +25096,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoint of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * *   [Release the public endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/26128.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/97738.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/97736.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97740.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/26128.html">Release the public endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97738.html">Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97736.html">Release the public endpoint of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97740.html">Release the public endpoint of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance.</p>
+     * 
      * @param request ReleaseInstanceConnectionRequest
      * @return ReleaseInstanceConnectionResponse
      */
@@ -22544,20 +25124,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoint of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Release the public endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/26128.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/97738.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/97736.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97740.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/26128.html">Release the public endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97738.html">Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97736.html">Release the public endpoint of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97740.html">Release the public endpoint of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance.</p>
+     * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseInstancePublicConnectionResponse
@@ -22607,20 +25195,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoint of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Release the public endpoint of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/26128.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/97738.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/97736.html)
-     * *   [Release the public endpoint of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97740.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/26128.html">Release the public endpoint of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97738.html">Release the public endpoint of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97736.html">Release the public endpoint of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97740.html">Release the public endpoint of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an instance.</p>
+     * 
      * @param request ReleaseInstancePublicConnectionRequest
      * @return ReleaseInstancePublicConnectionResponse
      */
@@ -22630,20 +25226,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the read/write splitting endpoint of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The read/write splitting feature is enabled for the instance.
-     * *   The instance must run one of the following database engine versions and RDS editions:
-     *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
-     *     *   MySQL 5.6
-     *     *   SQL Server on RDS Cluster Edition
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The read/write splitting feature is enabled for the instance.</li>
+     * <li>The instance must run one of the following database engine versions and RDS editions:<ul>
+     * <li>MySQL 5.7 on RDS High-availability Edition (with local disks)</li>
+     * <li>MySQL 5.6</li>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the read/write splitting endpoint of an instance.</p>
+     * 
      * @param request ReleaseReadWriteSplittingConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseReadWriteSplittingConnectionResponse
@@ -22689,20 +25293,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the read/write splitting endpoint of an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### Prerequisites
-     * Before you call this operation, make sure that the following requirements are met:
-     * *   The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.
-     * *   The read/write splitting feature is enabled for the instance.
-     * *   The instance must run one of the following database engine versions and RDS editions:
-     *     *   MySQL 5.7 on RDS High-availability Edition (with local disks)
-     *     *   MySQL 5.6
-     *     *   SQL Server on RDS Cluster Edition
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The shared proxy feature is enabled for your ApsaraDB RDS for MySQL instance.</li>
+     * <li>The read/write splitting feature is enabled for the instance.</li>
+     * <li>The instance must run one of the following database engine versions and RDS editions:<ul>
+     * <li>MySQL 5.7 on RDS High-availability Edition (with local disks)</li>
+     * <li>MySQL 5.6</li>
+     * <li>SQL Server on RDS Cluster Edition</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the read/write splitting endpoint of an instance.</p>
+     * 
      * @param request ReleaseReadWriteSplittingConnectionRequest
      * @return ReleaseReadWriteSplittingConnectionResponse
      */
@@ -22712,19 +25324,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * *   A maximum of 10 tags can be removed in a single request.
-     * *   If a tag is removed from all instances to which the tag is added, the tag is automatically deleted.
-     * *   If you specify only TagKey, all tags that match the TagKey condition are removed.
-     * *   You must specify at least TagKey or a pair of TagKey and TagValue.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>A maximum of 10 tags can be removed in a single request.</li>
+     * <li>If a tag is removed from all instances to which the tag is added, the tag is automatically deleted.</li>
+     * <li>If you specify only TagKey, all tags that match the TagKey condition are removed.</li>
+     * <li>You must specify at least TagKey or a pair of TagKey and TagValue.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from an instance.</p>
+     * 
      * @param request RemoveTagsFromResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveTagsFromResourceResponse
@@ -22794,19 +25412,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * *   A maximum of 10 tags can be removed in a single request.
-     * *   If a tag is removed from all instances to which the tag is added, the tag is automatically deleted.
-     * *   If you specify only TagKey, all tags that match the TagKey condition are removed.
-     * *   You must specify at least TagKey or a pair of TagKey and TagValue.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>A maximum of 10 tags can be removed in a single request.</li>
+     * <li>If a tag is removed from all instances to which the tag is added, the tag is automatically deleted.</li>
+     * <li>If you specify only TagKey, all tags that match the TagKey condition are removed.</li>
+     * <li>You must specify at least TagKey or a pair of TagKey and TagValue.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from an instance.</p>
+     * 
      * @param request RemoveTagsFromResourceRequest
      * @return RemoveTagsFromResourceResponse
      */
@@ -22816,20 +25440,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Manually renews an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Manually renew an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96050.html)
-     * *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96741.html)
-     * *   [Manually renew an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95637.html)
-     * *   [Manually renew an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97122.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96050.html">Manually renew an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96741.html">Manually renew an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95637.html">Manually renew an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97122.html">Manually renew an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually renews an instance.</p>
+     * 
      * @param request RenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RenewInstanceResponse
@@ -22887,20 +25519,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Manually renews an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
-     * *   [Manually renew an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96050.html)
-     * *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96741.html)
-     * *   [Manually renew an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95637.html)
-     * *   [Manually renew an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97122.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96050.html">Manually renew an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96741.html">Manually renew an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95637.html">Manually renew an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97122.html">Manually renew an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Manually renews an instance.</p>
+     * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
      */
@@ -22910,16 +25550,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the permissions of the privileged account.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Reset of the permissions of privileged accounts](https://help.aliyun.com/document_detail/140724.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/140724.html">Reset of the permissions of privileged accounts</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the permissions of the privileged account.</p>
+     * 
      * @param request ResetAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetAccountResponse
@@ -22973,16 +25619,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the permissions of the privileged account.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Reset of the permissions of privileged accounts](https://help.aliyun.com/document_detail/140724.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/140724.html">Reset of the permissions of privileged accounts</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the permissions of the privileged account.</p>
+     * 
      * @param request ResetAccountRequest
      * @return ResetAccountResponse
      */
@@ -22992,20 +25644,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the password of a database account.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Reset the password of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96100.html)
-     * *   [Reset the password of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96814.html)
-     * *   [Reset the password of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95691.html)
-     * *   [Reset the password of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97133.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96100.html">Reset the password of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96814.html">Reset the password of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95691.html">Reset the password of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97133.html">Reset the password of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of a database account.</p>
+     * 
      * @param request ResetAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetAccountPasswordResponse
@@ -23059,20 +25719,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the password of a database account.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Reset the password of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96100.html)
-     * *   [Reset the password of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96814.html)
-     * *   [Reset the password of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95691.html)
-     * *   [Reset the password of an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97133.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96100.html">Reset the password of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96814.html">Reset the password of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95691.html">Reset the password of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97133.html">Reset the password of an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of a database account.</p>
+     * 
      * @param request ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      */
@@ -23082,20 +25750,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Restart an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96051.html)
-     * *   [Restart an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96798.html)
-     * *   [Restart an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95656.html)
-     * *   [Restart an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97472.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96051.html">Restart an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96798.html">Restart an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95656.html">Restart an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97472.html">Restart an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts an instance.</p>
+     * 
      * @param request RestartDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartDBInstanceResponse
@@ -23149,20 +25825,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an instance.
-     *
-     * @description ### Supported database engines
-     * *   RDS MySQL
-     * *   RDS PostgreSQL
-     * *   RDS SQL Server
-     * *   RDS MariaDB
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Restart an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96051.html)
-     * *   [Restart an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96798.html)
-     * *   [Restart an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95656.html)
-     * *   [Restart an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97472.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96051.html">Restart an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96798.html">Restart an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95656.html">Restart an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97472.html">Restart an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts an instance.</p>
+     * 
      * @param request RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
      */
@@ -23172,16 +25856,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores data to an existing instance across regions.
-     *
-     * @description >  Before restoration, you can call the [CheckCreateDdrDBInstance](https://help.aliyun.com/document_detail/121721.html) operation to check whether a cross-region backup set can be used for cross-region restoration.
-     * ### [](#)Supported database engine
-     * MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Back up an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Restore the data of an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120875.html)
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before restoration, you can call the <a href="https://help.aliyun.com/document_detail/121721.html">CheckCreateDdrDBInstance</a> operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores data to an existing instance across regions.</p>
+     * 
      * @param request RestoreDdrTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestoreDdrTableResponse
@@ -23259,16 +25951,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores data to an existing instance across regions.
-     *
-     * @description >  Before restoration, you can call the [CheckCreateDdrDBInstance](https://help.aliyun.com/document_detail/121721.html) operation to check whether a cross-region backup set can be used for cross-region restoration.
-     * ### [](#)Supported database engine
-     * MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Back up an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120824.html)
-     * *   [Restore the data of an ApsaraDB RDS for MySQL instance across regions](https://help.aliyun.com/document_detail/120875.html)
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before restoration, you can call the <a href="https://help.aliyun.com/document_detail/121721.html">CheckCreateDdrDBInstance</a> operation to check whether a cross-region backup set can be used for cross-region restoration.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores data to an existing instance across regions.</p>
+     * 
      * @param request RestoreDdrTableRequest
      * @return RestoreDdrTableResponse
      */
@@ -23278,14 +25978,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores individual databases or tables of an instance to the original instance.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Restore individual databases and tables](https://help.aliyun.com/document_detail/103175.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores individual databases or tables of an instance to the original instance.</p>
+     * 
      * @param request RestoreTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestoreTableResponse
@@ -23351,14 +26055,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores individual databases or tables of an instance to the original instance.
-     *
-     * @description ### [](#)Supported database engines
-     * MySQL
-     * ### [](#)References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Restore individual databases and tables](https://help.aliyun.com/document_detail/103175.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>MySQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Restores individual databases or tables of an instance to the original instance.</p>
+     * 
      * @param request RestoreTableRequest
      * @return RestoreTableResponse
      */
@@ -23368,19 +26076,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes the permissions on a database of an ApsaraDB RDS instance from an account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Prerequisites
-     * *   The instance is in the Running state.
-     * *   The database is in the Running state.
-     * ### [](#)Precautions
-     * *   The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
-     * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition and run PostgreSQL.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>The database is in the Running state.</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.</li>
+     * <li>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition and run PostgreSQL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes the permissions on a database of an ApsaraDB RDS instance from an account.</p>
+     * 
      * @param request RevokeAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevokeAccountPrivilegeResponse
@@ -23434,19 +26150,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes the permissions on a database of an ApsaraDB RDS instance from an account.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Prerequisites
-     * *   The instance is in the Running state.
-     * *   The database is in the Running state.
-     * ### [](#)Precautions
-     * *   The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
-     * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition and run PostgreSQL.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <ul>
+     * <li>The instance is in the Running state.</li>
+     * <li>The database is in the Running state.</li>
+     * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>The permissions that can be revoked include SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.</li>
+     * <li>This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition and run PostgreSQL.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes the permissions on a database of an ApsaraDB RDS instance from an account.</p>
+     * 
      * @param request RevokeAccountPrivilegeRequest
      * @return RevokeAccountPrivilegeResponse
      */
@@ -23456,18 +26180,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes permissions from the service account of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96102.html)
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146887.html)
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95693.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to the service account of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146887.html">Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes permissions from the service account of an ApsaraDB RDS instance.</p>
+     * 
      * @param request RevokeOperatorPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevokeOperatorPermissionResponse
@@ -23513,18 +26245,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes permissions from the service account of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96102.html)
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146887.html)
-     * *   [Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95693.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to the service account of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146887.html">Grant permissions to the service account of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to the service account of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes permissions from the service account of an ApsaraDB RDS instance.</p>
+     * 
      * @param request RevokeOperatorPermissionRequest
      * @return RevokeOperatorPermissionResponse
      */
@@ -23534,18 +26274,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resumes an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * *   [Resume an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/427093.html)
-     * *   [Resume an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/452314.html)
-     * *   [Resume an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/462504.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Resume an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Resume an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Resume an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resumes an instance.</p>
+     * 
      * @param request StartDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartDBInstanceResponse
@@ -23639,18 +26387,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resumes an instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:
-     * *   [Resume an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/427093.html)
-     * *   [Resume an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/452314.html)
-     * *   [Resume an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/462504.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation:</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Resume an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Resume an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Resume an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resumes an instance.</p>
+     * 
      * @param request StartDBInstanceRequest
      * @return StartDBInstanceResponse
      */
@@ -23660,18 +26416,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Suspends an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Suspend an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/427093.html)
-     * *   [Suspend an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/452314.html)
-     * *   [Suspend an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/462504.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Suspend an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Suspend an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Suspends an ApsaraDB RDS instance.</p>
+     * 
      * @param request StopDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopDBInstanceResponse
@@ -23717,18 +26481,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Suspends an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Suspend an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/427093.html)
-     * *   [Suspend an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/452314.html)
-     * *   [Suspend an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/462504.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/427093.html">Suspend an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/452314.html">Suspend an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/462504.html">Suspend an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Suspends an ApsaraDB RDS instance.</p>
+     * 
      * @param request StopDBInstanceRequest
      * @return StopDBInstanceResponse
      */
@@ -23738,20 +26510,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches workloads between primary and secondary ApsaraDB RDS instances.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/96054.html)
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/96747.html)
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/95659.html)
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for MariaDB instances](https://help.aliyun.com/document_detail/97127.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96054.html">Switch workloads between primary and secondary ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96747.html">Switch workloads between primary and secondary ApsaraDB RDS for PostgreSQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95659.html">Switch workloads between primary and secondary ApsaraDB RDS for SQL Server instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97127.html">Switch workloads between primary and secondary ApsaraDB RDS for MariaDB instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches workloads between primary and secondary ApsaraDB RDS instances.</p>
+     * 
      * @param request SwitchDBInstanceHARequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchDBInstanceHAResponse
@@ -23809,20 +26589,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches workloads between primary and secondary ApsaraDB RDS instances.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/96054.html)
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/96747.html)
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for SQL Server instances](https://help.aliyun.com/document_detail/95659.html)
-     * *   [Switch workloads between primary and secondary ApsaraDB RDS for MariaDB instances](https://help.aliyun.com/document_detail/97127.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96054.html">Switch workloads between primary and secondary ApsaraDB RDS for MySQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96747.html">Switch workloads between primary and secondary ApsaraDB RDS for PostgreSQL instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95659.html">Switch workloads between primary and secondary ApsaraDB RDS for SQL Server instances</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97127.html">Switch workloads between primary and secondary ApsaraDB RDS for MariaDB instances</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches workloads between primary and secondary ApsaraDB RDS instances.</p>
+     * 
      * @param request SwitchDBInstanceHARequest
      * @return SwitchDBInstanceHAResponse
      */
@@ -23832,19 +26620,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches between internal and public endpoints of an instance in the classic network.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### Prerequisites
-     * *   The instance is connected by using its internal or public endpoint.
-     * *   The instance is in the Running state.
-     * *   The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.
-     * *   The instance resides in the classic network.
-     * ### Usage notes
-     * After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>Prerequisites</h3>
+     * <ul>
+     * <li>The instance is connected by using its internal or public endpoint.</li>
+     * <li>The instance is in the Running state.</li>
+     * <li>The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.</li>
+     * <li>The instance resides in the classic network.</li>
+     * </ul>
+     * <h3>Usage notes</h3>
+     * <p>After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches between internal and public endpoints of an instance in the classic network.</p>
+     * 
      * @param request SwitchDBInstanceNetTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchDBInstanceNetTypeResponse
@@ -23906,19 +26700,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches between internal and public endpoints of an instance in the classic network.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   SQL Server
-     * ### Prerequisites
-     * *   The instance is connected by using its internal or public endpoint.
-     * *   The instance is in the Running state.
-     * *   The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.
-     * *   The instance resides in the classic network.
-     * ### Usage notes
-     * After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>Prerequisites</h3>
+     * <ul>
+     * <li>The instance is connected by using its internal or public endpoint.</li>
+     * <li>The instance is in the Running state.</li>
+     * <li>The number of times that you have switched the instance between its internal and public endpoints within the last 24 hours does not reach 20.</li>
+     * <li>The instance resides in the classic network.</li>
+     * </ul>
+     * <h3>Usage notes</h3>
+     * <p>After the endpoint that is used to connect to the instance is changed, you must update the endpoint information in the code of your application and restart the application.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches between internal and public endpoints of an instance in the classic network.</p>
+     * 
      * @param request SwitchDBInstanceNetTypeRequest
      * @return SwitchDBInstanceNetTypeResponse
      */
@@ -23928,18 +26728,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the virtual private cloud (VPC) and vSwitch for an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Change the VPC and vSwitch for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/137567.html)
-     * *   [Change the vSwitch for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146885.html)
-     * *   [Change the VPC and vSwitch for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/347675.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Change the VPC and vSwitch for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Change the vSwitch for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Change the VPC and vSwitch for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the virtual private cloud (VPC) and vSwitch for an ApsaraDB RDS instance.</p>
+     * 
      * @param request SwitchDBInstanceVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchDBInstanceVpcResponse
@@ -23985,18 +26793,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the virtual private cloud (VPC) and vSwitch for an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Change the VPC and vSwitch for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/137567.html)
-     * *   [Change the vSwitch for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146885.html)
-     * *   [Change the VPC and vSwitch for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/347675.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Change the VPC and vSwitch for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Change the vSwitch for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Change the VPC and vSwitch for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the virtual private cloud (VPC) and vSwitch for an ApsaraDB RDS instance.</p>
+     * 
      * @param request SwitchDBInstanceVpcRequest
      * @return SwitchDBInstanceVpcResponse
      */
@@ -24006,10 +26822,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches a disaster recovery instance to a primary instance.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches a disaster recovery instance to a primary instance.</p>
+     * 
      * @param request SwitchGuardToMasterInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchGuardToMasterInstanceResponse
@@ -24059,10 +26877,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches a disaster recovery instance to a primary instance.
-     *
-     * @description This operation is phased out.
-     *
+     * <b>description</b> :
+     * <p>This operation is phased out.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches a disaster recovery instance to a primary instance.</p>
+     * 
      * @param request SwitchGuardToMasterInstanceRequest
      * @return SwitchGuardToMasterInstanceResponse
      */
@@ -24072,20 +26892,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates and adds tags to one or more instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Create tags for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96149.html)
-     * *   [Create tags for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96777.html)
-     * *   [Create tags for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95726.html)
-     * *   [Create tags for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97152.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96149.html">Create tags for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96777.html">Create tags for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95726.html">Create tags for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97152.html">Create tags for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and adds tags to one or more instances.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -24139,20 +26967,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates and adds tags to one or more instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Create tags for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96149.html)
-     * *   [Create tags for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96777.html)
-     * *   [Create tags for an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/95726.html)
-     * *   [Create tags for an ApsaraDB RDS for MariaDB instance](https://help.aliyun.com/document_detail/97152.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96149.html">Create tags for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96777.html">Create tags for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95726.html">Create tags for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97152.html">Create tags for an ApsaraDB RDS for MariaDB instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and adds tags to one or more instances.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -24162,11 +26998,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates an ongoing migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Terminates an ongoing migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request TerminateMigrateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TerminateMigrateTaskResponse
@@ -24212,11 +27052,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Terminates an ongoing migration task of an ApsaraDB RDS for SQL Server instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   SQL Server
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>SQL Server</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Terminates an ongoing migration task of an ApsaraDB RDS for SQL Server instance.</p>
+     * 
      * @param request TerminateMigrateTaskRequest
      * @return TerminateMigrateTaskResponse
      */
@@ -24226,20 +27070,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Fees are generated if the call is successful. Before you call this operation, you must read the following documentation.
-     * *   [Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96048.html) or [Change the billing method of an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/161875.html)
-     * *   [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96743.html) or [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/162756.html)
-     * *   [Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/95631.html) or [Change the billing method of an ApsaraDB RDS for SQL Server instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/162755.html)
-     * *   [Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/97120.html) or [Change the billing method of an ApsaraDB RDS for MariaDB instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/169252.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Fees are generated if the call is successful. Before you call this operation, you must read the following documentation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96048.html">Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/161875.html">Change the billing method of an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96743.html">Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/162756.html">Change the billing method of an ApsaraDB RDS for PostgreSQL instance from subscription to pay-as-you-go</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95631.html">Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/162755.html">Change the billing method of an ApsaraDB RDS for SQL Server instance from subscription to pay-as-you-go</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97120.html">Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/169252.html">Change the billing method of an ApsaraDB RDS for MariaDB instance from subscription to pay-as-you-go</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of an ApsaraDB RDS instance.</p>
+     * 
      * @param request TransformDBInstancePayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransformDBInstancePayTypeResponse
@@ -24309,20 +27161,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### References
-     * > Fees are generated if the call is successful. Before you call this operation, you must read the following documentation.
-     * *   [Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96048.html) or [Change the billing method of an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/161875.html)
-     * *   [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/96743.html) or [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/162756.html)
-     * *   [Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/95631.html) or [Change the billing method of an ApsaraDB RDS for SQL Server instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/162755.html)
-     * *   [Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/97120.html) or [Change the billing method of an ApsaraDB RDS for MariaDB instance from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/169252.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Fees are generated if the call is successful. Before you call this operation, you must read the following documentation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96048.html">Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/161875.html">Change the billing method of an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96743.html">Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/162756.html">Change the billing method of an ApsaraDB RDS for PostgreSQL instance from subscription to pay-as-you-go</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95631.html">Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/162755.html">Change the billing method of an ApsaraDB RDS for SQL Server instance from subscription to pay-as-you-go</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97120.html">Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription</a> or <a href="https://help.aliyun.com/document_detail/169252.html">Change the billing method of an ApsaraDB RDS for MariaDB instance from subscription to pay-as-you-go</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of an ApsaraDB RDS instance.</p>
+     * 
      * @param request TransformDBInstancePayTypeRequest
      * @return TransformDBInstancePayTypeResponse
      */
@@ -24332,14 +27192,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unlocks a database account of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/147649.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/147649.html">Lock an account of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Unlocks a database account of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request UnlockAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnlockAccountResponse
@@ -24385,14 +27249,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unlocks a database account of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Lock an account of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/147649.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/147649.html">Lock an account of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Unlocks a database account of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request UnlockAccountRequest
      * @return UnlockAccountResponse
      */
@@ -24402,17 +27270,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from one or more instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * *   You can remove up to 20 tags at a time.
-     * *   If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>You can remove up to 20 tags at a time.</li>
+     * <li>If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from one or more instances.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -24470,17 +27344,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from one or more instances.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * *   MariaDB
-     * ### [](#)Usage notes
-     * *   You can remove up to 20 tags at a time.
-     * *   If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * <li>MariaDB</li>
+     * </ul>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>You can remove up to 20 tags at a time.</li>
+     * <li>If a tag is removed from an instance and is not added to other instances, the tag is automatically deleted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from one or more instances.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -24490,14 +27370,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version of an extension on a database.
-     *
-     * @description ### Supported database engines
-     * RDS PostgreSQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the version of an extension on a database.</p>
+     * 
      * @param request UpdatePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePostgresExtensionsResponse
@@ -24559,14 +27443,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version of an extension on a database.
-     *
-     * @description ### Supported database engines
-     * RDS PostgreSQL
-     * ### References
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Manage extensions](https://help.aliyun.com/document_detail/2402409.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the version of an extension on a database.</p>
+     * 
      * @param request UpdatePostgresExtensionsRequest
      * @return UpdatePostgresExtensionsResponse
      */
@@ -24576,14 +27464,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description and retention period of a full backup file.
-     *
-     * @description ### Supported database engines
-     * RDS MySQL
-     * ### References
-     * A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 or MySQL 8.0 instance to an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/251779.html).
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>References</h3>
+     * <p>A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 or MySQL 8.0 instance to an ApsaraDB RDS for MySQL instance</a>.</p>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description and retention period of a full backup file.</p>
+     * 
      * @param request UpdateUserBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserBackupFileResponse
@@ -24641,14 +27533,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description and retention period of a full backup file.
-     *
-     * @description ### Supported database engines
-     * RDS MySQL
-     * ### References
-     * A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 or MySQL 8.0 instance to an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/251779.html).
-     * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>References</h3>
+     * <p>A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the data of a self-managed MySQL 5.7 or MySQL 8.0 instance to an ApsaraDB RDS for MySQL instance</a>.</p>
+     * <blockquote>
+     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description and retention period of a full backup file.</p>
+     * 
      * @param request UpdateUserBackupFileRequest
      * @return UpdateUserBackupFileResponse
      */
@@ -24658,14 +27554,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the major engine version of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Upgrade the major engine version of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96058.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/96058.html">Upgrade the major engine version of an ApsaraDB RDS for MySQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the major engine version of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request UpgradeDBInstanceEngineVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeDBInstanceEngineVersionResponse
@@ -24723,14 +27623,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the major engine version of an ApsaraDB RDS for MySQL instance.
-     *
-     * @description ### Supported database engine
-     * MySQL
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * [Upgrade the major engine version of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96058.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>MySQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/96058.html">Upgrade the major engine version of an ApsaraDB RDS for MySQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the major engine version of an ApsaraDB RDS for MySQL instance.</p>
+     * 
      * @param request UpgradeDBInstanceEngineVersionRequest
      * @return UpgradeDBInstanceEngineVersionResponse
      */
@@ -24740,18 +27644,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the minor engine version of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Update the minor engine version of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96059.html)
-     * *   [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146895.html)
-     * *   [Update the minor engine version of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/213582.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Update the minor engine version of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/213582.html">Update the minor engine version of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the minor engine version of an ApsaraDB RDS instance.</p>
+     * 
      * @param request UpgradeDBInstanceKernelVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeDBInstanceKernelVersionResponse
@@ -24805,18 +27717,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the minor engine version of an ApsaraDB RDS instance.
-     *
-     * @description ### Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * *   SQL Server
-     * ### References
-     * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * *   [Update the minor engine version of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96059.html)
-     * *   [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/146895.html)
-     * *   [Update the minor engine version of an ApsaraDB RDS for SQL Server instance](https://help.aliyun.com/document_detail/213582.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * <li>SQL Server</li>
+     * </ul>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Update the minor engine version of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/213582.html">Update the minor engine version of an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the minor engine version of an ApsaraDB RDS instance.</p>
+     * 
      * @param request UpgradeDBInstanceKernelVersionRequest
      * @return UpgradeDBInstanceKernelVersionResponse
      */
@@ -24826,14 +27746,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * Fees are generated if the call is successful. Before you call this operation, read the following documentation and make sure that you fully understand the billing rules, prerequisites, and impacts of this operation.
-     * [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <p>Fees are generated if the call is successful. Before you call this operation, read the following documentation and make sure that you fully understand the billing rules, prerequisites, and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request UpgradeDBInstanceMajorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeDBInstanceMajorVersionResponse
@@ -24939,14 +27861,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * Fees are generated if the call is successful. Before you call this operation, read the following documentation and make sure that you fully understand the billing rules, prerequisites, and impacts of this operation.
-     * [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <p>Fees are generated if the call is successful. Before you call this operation, read the following documentation and make sure that you fully understand the billing rules, prerequisites, and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task to upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request UpgradeDBInstanceMajorVersionRequest
      * @return UpgradeDBInstanceMajorVersionResponse
      */
@@ -24956,14 +27880,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a precheck before the upgrade of the major engine version of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a precheck before the upgrade of the major engine version of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request UpgradeDBInstanceMajorVersionPrecheckRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeDBInstanceMajorVersionPrecheckResponse
@@ -25001,14 +27929,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a precheck before the upgrade of the major engine version of an ApsaraDB RDS for PostgreSQL instance.
-     *
-     * @description ### Supported database engine
-     * PostgreSQL
-     * ### References
-     * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/203309.html)
-     *
+     * <b>description</b> :
+     * <h3>Supported database engine</h3>
+     * <p>PostgreSQL</p>
+     * <h3>References</h3>
+     * <blockquote>
+     * <p>Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+     * <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a precheck before the upgrade of the major engine version of an ApsaraDB RDS for PostgreSQL instance.</p>
+     * 
      * @param request UpgradeDBInstanceMajorVersionPrecheckRequest
      * @return UpgradeDBInstanceMajorVersionPrecheckResponse
      */
@@ -25018,16 +27950,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the database proxy version of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Upgrade the database proxy version of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/197465.html)
-     * *   [Upgrade the database proxy version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418469.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/197465.html">Upgrade the database proxy version of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418469.html">Upgrade the database proxy version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the database proxy version of an instance.</p>
+     * 
      * @param request UpgradeDBProxyInstanceKernelVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeDBProxyInstanceKernelVersionResponse
@@ -25081,16 +28021,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the database proxy version of an instance.
-     *
-     * @description ### [](#)Supported database engines
-     * *   MySQL
-     * *   PostgreSQL
-     * ### [](#)References
-     * >  Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * *   [Upgrade the database proxy version of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/197465.html)
-     * *   [Upgrade the database proxy version of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418469.html)
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>MySQL</li>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.</p>
+     * </blockquote>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/197465.html">Upgrade the database proxy version of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418469.html">Upgrade the database proxy version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the database proxy version of an instance.</p>
+     * 
      * @param request UpgradeDBProxyInstanceKernelVersionRequest
      * @return UpgradeDBProxyInstanceKernelVersionResponse
      */

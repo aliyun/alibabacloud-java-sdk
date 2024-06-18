@@ -18,82 +18,115 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
     /**
      * <p>An internal parameter. You can ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
      * <p>The version of the proxy instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.13.11</p>
      */
     @NameInMap("DBProxyInstanceCurrentMinorVersion")
     public String DBProxyInstanceCurrentMinorVersion;
 
     /**
      * <p>The latest version that is available for the proxy instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.13.12</p>
      */
     @NameInMap("DBProxyInstanceLatestMinorVersion")
     public String DBProxyInstanceLatestMinorVersion;
 
     /**
      * <p>The name of the proxy instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gos787jog2wk0ye1****</p>
      */
     @NameInMap("DBProxyInstanceName")
     public String DBProxyInstanceName;
 
     /**
      * <p>The number of proxies that are enabled on the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DBProxyInstanceNum")
     public Integer DBProxyInstanceNum;
 
     /**
      * <p>This parameter is available only for ApsaraDB RDS for PostgreSQL instances. The specifications of the proxy instance that is enabled.</p>
-     * <br>
-     * <p>Format: `Number of cores/Memory capacity`.</p>
-     * <br>
+     * <p>Format: <code>Number of cores/Memory capacity</code>.</p>
      * <p>For example, a value of 4/8 indicates that the proxy instance has 4 cores and 8 GB of memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4/8</p>
      */
     @NameInMap("DBProxyInstanceSize")
     public String DBProxyInstanceSize;
 
     /**
      * <p>The status of the proxy instance.</p>
-     * <br>
-     * <p>*   DBInstanceClassChanging: The specifications of the proxy instance are being changed.</p>
-     * <p>*   Creating: The proxy instance is being created.</p>
-     * <p>*   Running: The proxy instance is running.</p>
-     * <p>*   Deleting: The proxy instance is being deleted.</p>
+     * <ul>
+     * <li>DBInstanceClassChanging: The specifications of the proxy instance are being changed.</li>
+     * <li>Creating: The proxy instance is being created.</li>
+     * <li>Running: The proxy instance is running.</li>
+     * <li>Deleting: The proxy instance is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("DBProxyInstanceStatus")
     public String DBProxyInstanceStatus;
 
     /**
      * <p>The type of the database proxy that is enabled on the instance.</p>
-     * <br>
-     * <p>*   1: shared proxy</p>
-     * <p>*   2: dedicated proxy</p>
-     * <br>
-     * <p>>  ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
+     * <ul>
+     * <li>1: shared proxy</li>
+     * <li>2: dedicated proxy</li>
+     * </ul>
+     * <blockquote>
+     * <p> ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
     /**
      * <p>Connection Persistence State. </p>
-     * <br>
      * <p>Valid values:</p>
-     * <p>- Enabled: Enabled</p>
-     * <p>- Disabled: Disabled</p>
-     * <p>- Unsupported: The instance does not support connection persistence</p>
+     * <ul>
+     * <li>Enabled: Enabled</li>
+     * <li>Disabled: Disabled</li>
+     * <li>Unsupported: The instance does not support connection persistence</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("DBProxyPersistentConnectionStatus")
     public String DBProxyPersistentConnectionStatus;
 
     /**
      * <p>The status of the database proxy.</p>
-     * <br>
-     * <p>*   Shutdown: disabled</p>
-     * <p>*   Startup: enabled</p>
+     * <ul>
+     * <li>Shutdown: disabled</li>
+     * <li>Startup: enabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Startup</p>
      */
     @NameInMap("DBProxyServiceStatus")
     public String DBProxyServiceStatus;
@@ -106,12 +139,18 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>909A69EE-71C8-4417-A0B9-FF085407E1E3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -263,61 +302,90 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public static class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {
         /**
          * <p>The database proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gos787jog2wk0ye1****-rw4rm.rwlb.rds.aliyuncs.com</p>
          */
         @NameInMap("DBProxyConnectString")
         public String DBProxyConnectString;
 
         /**
          * <p>The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:</p>
-         * <br>
-         * <p>*   OuterString: Internet</p>
-         * <p>*   InnerString: internal network</p>
+         * <ul>
+         * <li>OuterString: Internet</li>
+         * <li>InnerString: internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InnerString</p>
          */
         @NameInMap("DBProxyConnectStringNetType")
         public String DBProxyConnectStringNetType;
 
         /**
          * <p>The network type of the database proxy. Valid values:</p>
-         * <br>
-         * <p>*   0: Internet</p>
-         * <p>*   1: classic network</p>
-         * <p>*   2: virtual private cloud (VPC)</p>
+         * <ul>
+         * <li>0: Internet</li>
+         * <li>1: classic network</li>
+         * <li>2: virtual private cloud (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DBProxyConnectStringNetWorkType")
         public String DBProxyConnectStringNetWorkType;
 
         /**
          * <p>The port that is associated with the database proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("DBProxyConnectStringPort")
         public String DBProxyConnectStringPort;
 
         /**
          * <p>The ID of the backend database proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20****</p>
          */
         @NameInMap("DBProxyEndpointId")
         public String DBProxyEndpointId;
 
         /**
          * <p>The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gos787jog2wk0ye1****</p>
          */
         @NameInMap("DBProxyEndpointName")
         public String DBProxyEndpointName;
 
         /**
          * <p>The VPC of the database proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6oobt****</p>
          */
         @NameInMap("DBProxyVpcId")
         public String DBProxyVpcId;
 
         /**
          * <p>The ID of the database proxy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp145737x5<strong><strong>131161274792</strong></strong></p>
          */
         @NameInMap("DBProxyVpcInstanceId")
         public String DBProxyVpcInstanceId;
 
         /**
          * <p>The vSwitch of the database proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6l0pic17****</p>
          */
         @NameInMap("DBProxyVswitchId")
         public String DBProxyVswitchId;
@@ -423,30 +491,44 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public static class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems extends TeaModel {
         /**
          * <p>The description of the database proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-test</p>
          */
         @NameInMap("DbProxyEndpointAliases")
         public String dbProxyEndpointAliases;
 
         /**
          * <p>The ID of the database proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gos787jog2wk0ye1****</p>
          */
         @NameInMap("DbProxyEndpointName")
         public String dbProxyEndpointName;
 
         /**
          * <p>The type of the database proxy endpoint. Valid values:</p>
-         * <br>
-         * <p>*   Custom: custom database proxy endpoint</p>
-         * <p>*   RWSplit: default database proxy endpoint</p>
+         * <ul>
+         * <li>Custom: custom database proxy endpoint</li>
+         * <li>RWSplit: default database proxy endpoint</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RWSplit</p>
          */
         @NameInMap("DbProxyEndpointType")
         public String dbProxyEndpointType;
 
         /**
          * <p>The read and write attributes of the database proxy endpoint.</p>
-         * <br>
-         * <p>*   ReadOnly</p>
-         * <p>*   ReadWrite</p>
+         * <ul>
+         * <li>ReadOnly</li>
+         * <li>ReadWrite</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         @NameInMap("DbProxyReadWriteMode")
         public String dbProxyReadWriteMode;

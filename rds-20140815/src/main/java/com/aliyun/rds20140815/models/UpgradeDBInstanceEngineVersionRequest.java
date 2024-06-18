@@ -6,35 +6,47 @@ import com.aliyun.tea.*;
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The effective time. Valid values:</p>
-     * <br>
-     * <p>*   **Immediate**: This is the default value.</p>
-     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</p>
+     * <ul>
+     * <li><strong>Immediate</strong>: This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The major engine version that the new instance runs. Valid values:</p>
-     * <br>
-     * <p>*   **8.0**</p>
-     * <p>*   **5.7**</p>
-     * <p>*   **5.6**</p>
-     * <br>
+     * <ul>
+     * <li><strong>8.0</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>5.6</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.7</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

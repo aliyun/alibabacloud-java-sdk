@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-15T12:10:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -18,38 +21,55 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of cross-region data backup files on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60912B41-7579-4B5D-B289-8856030F0A6A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-30T12:10:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -145,128 +165,188 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
     public static class DescribeCrossRegionBackupsResponseBodyItemsItem extends TeaModel {
         /**
          * <p>The time when the cross-region data backup file was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-15T12:10:00Z</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         /**
          * <p>The method that is used to generate the cross-region data backup file. Valid values:</p>
-         * <br>
-         * <p>*   **L**: logical backup</p>
-         * <p>*   **P**: physical backup</p>
+         * <ul>
+         * <li><strong>L</strong>: logical backup</li>
+         * <li><strong>P</strong>: physical backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>P</p>
          */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
         /**
          * <p>The level at which the cross-region data backup file is generated.</p>
-         * <br>
-         * <p>*   **0**: instance-level backup</p>
-         * <p>*   **1**: database-level backup</p>
+         * <ul>
+         * <li><strong>0</strong>: instance-level backup</li>
+         * <li><strong>1</strong>: database-level backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BackupSetScale")
         public Integer backupSetScale;
 
         /**
          * <p>The status of the cross-region data backup. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The cross-region data backup is successful.</p>
-         * <p>*   **1**: The cross-region data backup failed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The cross-region data backup is successful.</li>
+         * <li><strong>1</strong>: The cross-region data backup failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BackupSetStatus")
         public Integer backupSetStatus;
 
         /**
          * <p>The time when the cross-region data backup started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-30T12:10:00Z</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
          * <p>The type of the cross-region data backup. Valid values:</p>
-         * <br>
-         * <p>*   **F**: full data backup</p>
-         * <p>*   **I**: incremental data backup</p>
+         * <ul>
+         * <li><strong>F</strong>: full data backup</li>
+         * <li><strong>I</strong>: incremental data backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>F</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
          * <p>The RDS edition of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: RDS Basic Edition.</p>
-         * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
-         * <p>*   **Finance**: RDS Enterprise Edition. This edition is available only for the China site (aliyun.com).</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition.</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition.</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition. This edition is available only for the China site (aliyun.com).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The point in time that is indicated by the data in the cross-region data backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-12T05:44:46Z</p>
          */
         @NameInMap("ConsistentTime")
         public String consistentTime;
 
         /**
          * <p>The external URL from which you can download the cross-region data backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsddrbak-shanghai.oss-cn-shanghai.aliyuncs.com/xxxxx">http://rdsddrbak-shanghai.oss-cn-shanghai.aliyuncs.com/xxxxx</a></p>
          */
         @NameInMap("CrossBackupDownloadLink")
         public String crossBackupDownloadLink;
 
         /**
          * <p>The ID of the cross-region data backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14377</p>
          */
         @NameInMap("CrossBackupId")
         public Integer crossBackupId;
 
         /**
          * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("CrossBackupRegion")
         public String crossBackupRegion;
 
         /**
          * <p>The name of the compressed package that contains the cross-region data backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou_rm-xxxxx_hins81xxx_data_20190612134426_qp.xb</p>
          */
         @NameInMap("CrossBackupSetFile")
         public String crossBackupSetFile;
 
         /**
          * <p>The location where the cross-region data backup file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("CrossBackupSetLocation")
         public String crossBackupSetLocation;
 
         /**
          * <p>The size of the cross-region data backup file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5312836</p>
          */
         @NameInMap("CrossBackupSetSize")
         public Long crossBackupSetSize;
 
         /**
          * <p>The storage type. Valid values:</p>
-         * <br>
-         * <p>*   **local_ssd**: local SSDs. This is the recommended storage type.</p>
-         * <p>*   **cloud_ssd**: standard SSD.</p>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD).</p>
+         * <ul>
+         * <li><strong>local_ssd</strong>: local SSDs. This is the recommended storage type.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ssd</p>
          */
         @NameInMap("DBInstanceStorageType")
         public String DBInstanceStorageType;
 
         /**
          * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The instance ID. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8161055</p>
          */
         @NameInMap("InstanceId")
         public Integer instanceId;

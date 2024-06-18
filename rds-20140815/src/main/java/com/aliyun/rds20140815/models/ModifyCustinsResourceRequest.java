@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyCustinsResourceRequest extends TeaModel {
     /**
      * <p>The deadline for the modification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-12-31 23:59:06</p>
      */
     @NameInMap("AdjustDeadline")
     public String adjustDeadline;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.</p>
-     * <br>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-j5ekvfeengm******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The increase rate in percentage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("IncreaseRatio")
     public String increaseRatio;
@@ -29,18 +37,27 @@ public class ModifyCustinsResourceRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Memory</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The original value. This parameter must be specified when the **ResourceType** parameter is set to **instance**.</p>
+     * <p>The original value. This parameter must be specified when the <strong>ResourceType</strong> parameter is set to <strong>instance</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("RestoreOriginalSpecification")
     public String restoreOriginalSpecification;
 
     /**
      * <p>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
      */
     @NameInMap("TargetValue")
     public Integer targetValue;

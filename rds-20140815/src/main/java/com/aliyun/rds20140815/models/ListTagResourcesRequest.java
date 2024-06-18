@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707ec21345</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -15,16 +18,22 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The instance ID. You can specify a maximum of **50** instance IDs.****</p>
-     * <br>
-     * <p>>  You must specify at least one of the **ResourceId** and **Key** parameters.</p>
+     * <p>The instance ID. You can specify a maximum of <strong>50</strong> instance IDs.****</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <strong>ResourceId</strong> and <strong>Key</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -36,9 +45,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **INSTANCE**.</p>
-     * <br>
+     * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -120,15 +131,22 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value cannot be an empty string.</p>
-         * <br>
-         * <p>>  You must specify at least one of the **ResourceId** and **Key** parameters.</p>
+         * <p>The tag key. You can query N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value cannot be an empty string.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>ResourceId</strong> and <strong>Key</strong> parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. The value can be an empty string.</p>
+         * <p>The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value can be an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
     /**
      * <p>The ID of the database proxy of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bu9***</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44537EC8-DFA2-4745-B579-E733FF2C5B9A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33436****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

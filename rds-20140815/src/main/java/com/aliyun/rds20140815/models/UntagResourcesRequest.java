@@ -6,13 +6,17 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all tags of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>Default value: **false**.</p>
-     * <br>
-     * <p>> This parameter is valid if parameters that contain **TagKey.N** are not specified.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * <blockquote>
+     * <p>This parameter is valid if parameters that contain <strong>TagKey.N</strong> are not specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -22,16 +26,20 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The instance ID. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.</p>
-     * <br>
+     * <p>The instance ID. You can remove tags from N instances at a time. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -43,15 +51,20 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **INSTANCE**.</p>
-     * <br>
+     * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The list of tag keys. You can delete N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.</p>
+     * <p>The list of tag keys. You can delete N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value of this parameter cannot be an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testkey1</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

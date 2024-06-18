@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp102g323jd4****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
-     * <br>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **30** to **100**. Default value: 30.</p>
-     * <br>
+     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>. Default value: 30.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -33,27 +39,40 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
 
     /**
      * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
-     * <br>
-     * <p>*   If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see [View IP addresses](https://help.aliyun.com/document_detail/273914.html).</p>
-     * <p>*   If the self-managed PostgreSQL instance resides in an on-premises data center, enter the private IP address of the on-premises data center.</p>
+     * <ul>
+     * <li>If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
+     * <li>If the self-managed PostgreSQL instance resides in an on-premises data center, enter the private IP address of the on-premises data center.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>172.2.XX.XX</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
 
     /**
      * <p>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the netstat -a | grep PGSQL command to obtain the port number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5432</p>
      */
     @NameInMap("SourcePort")
     public Long sourcePort;
 
     /**
      * <p>The task ID. You can obtain the task ID from the response that is returned after you call the CreateCloudMigrationPrecheckTask operation to create the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>439946016</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
      * <p>The task name. You can obtain the task name from the response that is returned after you call the CreateCloudMigrationPrecheckTask operation to create the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>slf7w7wj3g</p>
      */
     @NameInMap("TaskName")
     public String taskName;

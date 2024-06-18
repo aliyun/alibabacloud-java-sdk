@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CancelImportResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</p>
      */
     @NameInMap("RequestId")
     public String requestId;

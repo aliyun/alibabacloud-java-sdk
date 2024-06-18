@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTempDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>248DE93F-8647-4B9D-8287-4A4A0FE56AD5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The temporary instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sub138****_rm-******</p>
      */
     @NameInMap("TempDBInstanceId")
     public String tempDBInstanceId;

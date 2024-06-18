@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class ModifyADInfoRequest extends TeaModel {
     /**
      * <p>The account of the AD domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_account</p>
      */
     @NameInMap("ADAccountName")
     public String ADAccountName;
 
     /**
      * <p>The DNS information about the AD domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("ADDNS")
     public String ADDNS;
 
     /**
      * <p>The password for the account of the AD domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_password</p>
      */
     @NameInMap("ADPassword")
     public String ADPassword;
 
     /**
      * <p>The IP address of the AD domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX</p>
      */
     @NameInMap("ADServerIpAddress")
     public String ADServerIpAddress;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -47,8 +64,10 @@ public class ModifyADInfoRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

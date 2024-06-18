@@ -6,66 +6,93 @@ import com.aliyun.tea.*;
 public class ModifyDBNodeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <br>
-     * <p>1.  **true**: automatically completes the payment. Make sure that your account balance is sufficient.</p>
-     * <p>2.  **false**: does not automatically complete the payment. An unpaid order is generated.</p>
-     * <br>
-     * <p>>  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.</p>
+     * <ol>
+     * <li><strong>true</strong>: automatically completes the payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
+     * </ol>
+     * <blockquote>
+     * <p> The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1k8s41l2o52****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. Unit: GB For more information, see [Instance types](https://help.aliyun.com/document_detail/26312.html).</p>
+     * <p>The new storage capacity of the instance. Unit: GB For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("DBInstanceStorage")
     public String DBInstanceStorage;
 
     /**
      * <p>The storage type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)</p>
-     * <p>*   **cloud_essd2**: PL2 ESSD</p>
-     * <p>*   **cloud_essd3**: PL3 ESSD</p>
+     * <ul>
+     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) enhanced SSD (ESSD)</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
     /**
      * <p>The information about the node.</p>
-     * <br>
-     * <p>>  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
+     * <blockquote>
+     * <p> This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
+     * </blockquote>
      */
     @NameInMap("DBNode")
     public java.util.List<ModifyDBNodeRequestDBNode> DBNode;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values: Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run and does not perform the actual request. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Effective time, value:</p>
-     * <p>- Immediate (default value): takes effect immediately.</p>
-     * <p>- MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.</p>
+     * <ul>
+     * <li>Immediate (default value): takes effect immediately.</li>
+     * <li>MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediate</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
@@ -78,11 +105,16 @@ public class ModifyDBNodeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to asynchronously perform the operation. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default): sends only the order. The operation is asynchronously performed.</p>
-     * <p>*   **false**: sends the request. After the request passes the check, the operation is directly performed.</p>
-     * <br>
-     * <p>>  The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.</p>
+     * <ul>
+     * <li><strong>true</strong> (default): sends only the order. The operation is asynchronously performed.</li>
+     * <li><strong>false</strong>: sends the request. After the request passes the check, the operation is directly performed.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The default value is true, which indicates that the change operation is asynchronously performed. If you set this parameter to false, the change operation is simultaneously performed. This prolongs the response time of the operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ProduceAsync")
     public Boolean produceAsync;
@@ -205,12 +237,18 @@ public class ModifyDBNodeRequest extends TeaModel {
     public static class ModifyDBNodeRequestDBNode extends TeaModel {
         /**
          * <p>The instance type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n2.medium.xc</p>
          */
         @NameInMap("classCode")
         public String classCode;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rn-6256r4a87xvv7he5p</p>
          */
         @NameInMap("nodeId")
         public String nodeId;

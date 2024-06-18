@@ -6,21 +6,35 @@ import com.aliyun.tea.*;
 public class QueryRecommendByCodeResponseBody extends TeaModel {
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;SupportOnlineResizeDisk&quot;: true,
+     *       &quot;DBInstanceName&quot;: &quot;rm-bp****&quot;,
+     *       &quot;maxSupportDiskSizeGB&quot;: 6144
+     * }</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90496720-2319-42A8-87CD-FCE4DF95EBED</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

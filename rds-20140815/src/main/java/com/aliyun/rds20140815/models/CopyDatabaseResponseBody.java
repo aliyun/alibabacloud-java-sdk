@@ -6,28 +6,41 @@ import com.aliyun.tea.*;
 public class CopyDatabaseResponseBody extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test02</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
      * <p>The status of the database. Valid values:</p>
-     * <br>
-     * <p>*   **Creating**</p>
-     * <p>*   **Running**</p>
-     * <p>*   **Deleting**</p>
+     * <ul>
+     * <li><strong>Creating</strong></li>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Deleting</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Creating</p>
      */
     @NameInMap("DBStatus")
     public String DBStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2562****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -6,25 +6,35 @@ import com.aliyun.tea.*;
 public class ModifyWhitelistTemplateRequest extends TeaModel {
     /**
      * <p>The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:</p>
-     * <br>
-     * <p>*   IP addresses, such as 10.23.XX.XX.</p>
-     * <p>*   CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24-bit in length. You can replace 24 with a value that ranges from 1 to 32.</p>
-     * <br>
-     * <p>> : A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
-     * <br>
+     * <ul>
+     * <li>IP addresses, such as 10.23.XX.XX.</li>
+     * <li>CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24-bit in length. You can replace 24 with a value that ranges from 1 to 32.</li>
+     * </ul>
+     * <blockquote>
+     * <p>: A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139.196.X.X,101.132.X.X</p>
      */
     @NameInMap("IpWhitelist")
     public String ipWhitelist;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent zone list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -37,12 +47,18 @@ public class ModifyWhitelistTemplateRequest extends TeaModel {
 
     /**
      * <p>The ID of the whitelist template. This parameter is required when you modify or delete a whitelist. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>539</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;
 
     /**
      * <p>The name of the IP whitelist. This parameter is required when you create a whitelist. The value of this parameter cannot be modified after the whitelist is created. The value must be unique to an Alibaba Cloud account and start with a letter. You can call the DescribeWhitelistTemplate operation to obtain the name of the whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>template_123</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

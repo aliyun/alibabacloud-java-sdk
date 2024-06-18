@@ -6,30 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the IDs of data backup files.</p>
-     * <br>
-     * <p>>  This parameter is required when you set the **RestoreType** parameter to **BackupSetID**.</p>
+     * <blockquote>
+     * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupSetID</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>14358</p>
      */
     @NameInMap("BackupSetID")
     public Long backupSetID;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database to query. The system implements exact match based on the value of this parameter and returns the name of the matched database and the names of all tables contained in the database.</p>
-     * <br>
-     * <p>> If you leave this parameter empty, the system returns all databases that are created on the instance.</p>
+     * <blockquote>
+     * <p>If you leave this parameter empty, the system returns all databases that are created on the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb1</p>
      */
     @NameInMap("GetDbName")
     public String getDbName;
@@ -38,31 +51,46 @@ public class DescribeMetaListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.**** Default value: **1**.</p>
-     * <br>
-     * <p>> This parameter only takes effect when you specify the **PageSize** parameter.</p>
+     * <p>The number of the page to return. Valid values: any non-zero positive integer.**** Default value: <strong>1</strong>.</p>
+     * <blockquote>
+     * <p>This parameter only takes effect when you specify the <strong>PageSize</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **1**.</p>
-     * <br>
-     * <p>> This parameter only takes effect when you specify the **PageIndex** parameter.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>1</strong>.</p>
+     * <blockquote>
+     * <p>This parameter only takes effect when you specify the <strong>PageIndex</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the database to query. The system implements fuzzy match based on the value of this parameter and returns only the name of the matched database.</p>
-     * <br>
-     * <p>> For example, if you set the value to `test`, the system returns `testdb1` and `testdb2`. Then, you can specify the **GetDbName** parameter to query tables in the required database.</p>
+     * <blockquote>
+     * <p>For example, if you set the value to <code>test</code>, the system returns <code>testdb1</code> and <code>testdb2</code>. Then, you can specify the <strong>GetDbName</strong> parameter to query tables in the required database.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Pattern")
     public String pattern;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -74,20 +102,27 @@ public class DescribeMetaListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. You can call the DescribeBackups operation to query the restorable time range.</p>
-     * <br>
-     * <p>>  This parameter must be specified when the **RestoreType** parameter is set to **RestoreTime**.</p>
+     * <p>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. You can call the DescribeBackups operation to query the restorable time range.</p>
+     * <blockquote>
+     * <p> This parameter must be specified when the <strong>RestoreType</strong> parameter is set to <strong>RestoreTime</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-30T03:29:10Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     /**
      * <p>The restoration method that you want to use. Valid values:</p>
-     * <br>
-     * <p>*   **BackupSetID**: Data is restored from the backup set. If you use this value, you must also specify the **BackupSetID** parameter.</p>
-     * <p>*   **RestoreTime**: Data is restored to a specific point in time. If you use this value, you must also specify the **RestoreTime** parameter.</p>
-     * <br>
-     * <p>Default value: **BackupSetID**.</p>
+     * <ul>
+     * <li><strong>BackupSetID</strong>: Data is restored from the backup set. If you use this value, you must also specify the <strong>BackupSetID</strong> parameter.</li>
+     * <li><strong>RestoreTime</strong>: Data is restored to a specific point in time. If you use this value, you must also specify the <strong>RestoreTime</strong> parameter.</li>
+     * </ul>
+     * <p>Default value: <strong>BackupSetID</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BackupSetID</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;

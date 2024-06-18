@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel {
     /**
      * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp1c808s731l****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99C1FEEE-FB44-5342-8EBA-DC1E1A1557A4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The new major engine version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12.0</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41698****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

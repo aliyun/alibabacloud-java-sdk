@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDBInstanceTopologyResponseBody extends TeaModel {
     /**
      * <p>An internal parameter. You can ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     /**
      * <p>An internal parameter. You can ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7430AB1A-6D49-5B6D-B9E5-920250076074</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,27 +77,40 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     public static class GetDBInstanceTopologyResponseBodyDataConnections extends TeaModel {
         /**
          * <p>The endpoint that is used to connect to the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-m5ezban**********.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-m5ezban**********</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
          * <p>The network type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **vpc**</p>
-         * <p>*   **public**</p>
+         * <ul>
+         * <li><strong>vpc</strong></li>
+         * <li><strong>public</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao-c</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -135,45 +157,67 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     public static class GetDBInstanceTopologyResponseBodyDataNodes extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-m5ezban**********</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
          * <p>The ID of the dedicated cluster.</p>
-         * <br>
-         * <p>> : If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * <blockquote>
+         * <p>: If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dhg-4n*****</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
         /**
          * <p>The host ID of the instance in the dedicated cluster.</p>
-         * <br>
-         * <p>> : If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * <blockquote>
+         * <p>: If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bpxxxxxxx</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
          * <p>The ID of the instance.</p>
-         * <br>
-         * <p>> : The value \\*\\*-1\\*\\* is returned for an instance that does not reside in a dedicated cluster.</p>
+         * <blockquote>
+         * <p>: The value \<em>\</em>-1\<em>\</em> is returned for an instance that does not reside in a dedicated cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>349054</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The type of the node. The following result is returned:</p>
-         * <br>
-         * <p>*   **Master**: a primary node</p>
-         * <p>*   **Slave**: a secondary node</p>
+         * <ul>
+         * <li><strong>Master</strong>: a primary node</li>
+         * <li><strong>Slave</strong>: a secondary node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao-c</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -242,6 +286,9 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-m5ezban**********</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

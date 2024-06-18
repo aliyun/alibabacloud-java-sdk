@@ -6,32 +6,38 @@ import com.aliyun.tea.*;
 public class MigrateSecurityIPModeResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF1E53AB-5625-49C7-ADF1-FBD0B6640D19</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The whitelist mode after the change, which is the enhanced whitelist mode.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   safety</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    enhanced whitelist mode</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>safety</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>enhanced whitelist mode</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>safety</p>
      */
     @NameInMap("SecurityIPMode")
     public String securityIPMode;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeWhitelistTemplateLinkedInstanceRequest extends TeaModel {
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. You can leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -24,8 +30,10 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>412</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeInstanceKeywordsResponseBody extends TeaModel {
     /**
      * <p>The type of reserved keyword returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

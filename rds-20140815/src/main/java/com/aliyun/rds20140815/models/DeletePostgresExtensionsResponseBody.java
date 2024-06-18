@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePostgresExtensionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E4448A6-9FE6-4474-A0C1-AA7CFC772CAC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

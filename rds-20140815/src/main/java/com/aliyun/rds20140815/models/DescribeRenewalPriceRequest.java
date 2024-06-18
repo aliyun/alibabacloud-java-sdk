@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
      * <p>The additional business information about the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121436975448952</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance type of the instance. For more information, see [Primary instance types](https://help.aliyun.com/document_detail/26312.html). By default, the current instance type applies.</p>
+     * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. By default, the current instance type applies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql.n2.medium.2c</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The type of order. Set the value to **BUY**.</p>
+     * <p>The type of order. Set the value to <strong>BUY</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BUY</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -44,27 +58,40 @@ public class DescribeRenewalPriceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Postpaid**: pay-as-you-go</p>
-     * <p>*   **Prepaid**: subscription</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Postpaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The number of the instances. Default value: **1**.</p>
+     * <p>The number of the instances. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Quantity")
     public Integer quantity;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmx****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -77,22 +104,28 @@ public class DescribeRenewalPriceRequest extends TeaModel {
 
     /**
      * <p>The renewal cycle of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Year**</p>
-     * <p>*   **Month**</p>
-     * <br>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("TimeType")
     public String timeType;
 
     /**
      * <p>The subscription duration of the instance. Valid values:</p>
-     * <br>
-     * <p>*   If you set the **TimeType** parameter to **Year**, the value of the UsedTime parameter is within the range of **1 to 3**.</p>
-     * <p>*   If you set the **TimeType** parameter to **Month**, the value of the UsedTime parameter is within the range of **1 to 9**.</p>
-     * <br>
+     * <ul>
+     * <li>If you set the <strong>TimeType</strong> parameter to <strong>Year</strong>, the value of the UsedTime parameter is within the range of <strong>1 to 3</strong>.</li>
+     * <li>If you set the <strong>TimeType</strong> parameter to <strong>Month</strong>, the value of the UsedTime parameter is within the range of <strong>1 to 9</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;

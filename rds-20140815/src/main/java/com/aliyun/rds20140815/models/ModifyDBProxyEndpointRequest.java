@@ -5,77 +5,109 @@ import com.aliyun.tea.*;
 
 public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
-     * <p>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: `Feature 1:Status;Feature 2:Status;...`. Do not add a semicolon (;) at the end of the value.</p>
-     * <br>
+     * <p>The features that you want to enable for the proxy endpoint. If you specify more than one feature, separate the features with semicolons (;). Format: <code>Feature 1:Status;Feature 2:Status;...</code>. Do not add a semicolon (;) at the end of the value.</p>
      * <p>Valid feature values:</p>
-     * <br>
-     * <p>*   **ReadWriteSpliting**: read/write splitting</p>
-     * <p>*   **ConnectionPersist**: connection pooling</p>
-     * <p>*   **TransactionReadSqlRouteOptimizeStatus**: transaction splitting</p>
-     * <br>
+     * <ul>
+     * <li><strong>ReadWriteSpliting</strong>: read/write splitting</li>
+     * <li><strong>ConnectionPersist</strong>: connection pooling</li>
+     * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: transaction splitting</li>
+     * </ul>
      * <p>Valid status values:</p>
-     * <br>
-     * <p>*   **1**: enabled</p>
-     * <p>*   **0**: disabled</p>
-     * <br>
-     * <p>>  If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by **ReadWriteSpliting**.</p>
+     * <ul>
+     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>0</strong>: disabled</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the instance runs PostgreSQL, you can enable only the read/write splitting feature, which is specified by <strong>ReadWriteSpliting</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ReadWriteSpliting:1;ConnectionPersist:0</p>
      */
     @NameInMap("ConfigDBProxyFeatures")
     public String configDBProxyFeatures;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp145737x5bi6****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
-     * <br>
-     * <p>> *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.</p>
-     * <p>> *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If the instance runs MySQL and you set <strong>DbEndpointOperator</strong> to <strong>Delete</strong> or <strong>Modify</strong>, you must specify DBProxyEndpointId.</li>
+     * <li>If the instance runs PostgreSQL and you set <strong>DbEndpointOperator</strong> to <strong>Delete</strong>, <strong>Modify</strong>, or <strong>Create</strong>, you must specify DBProxyEndpointId.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gos787jog2wk0y****</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
     /**
      * <p>A deprecated parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
      * <p>The description of the proxy terminal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-proxy</p>
      */
     @NameInMap("DbEndpointAliases")
     public String dbEndpointAliases;
 
     /**
      * <p>The type of operation that you want to perform. Valid values:</p>
-     * <br>
-     * <p>*   **Modify**: Modify a proxy terminal. This is the default value.</p>
-     * <p>*   **Create**: Create a proxy terminal.</p>
-     * <p>*   **Delete**: Delete a proxy terminal.</p>
+     * <ul>
+     * <li><strong>Modify</strong>: Modify a proxy terminal. This is the default value.</li>
+     * <li><strong>Create</strong>: Create a proxy terminal.</li>
+     * <li><strong>Delete</strong>: Delete a proxy terminal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Modify</p>
      */
     @NameInMap("DbEndpointOperator")
     public String dbEndpointOperator;
 
     /**
      * <p>The read and write attributes of the proxy terminal. Valid values:</p>
-     * <br>
-     * <p>*   **ReadWrite**: The proxy terminal connects to the primary instance and can receive both read and write requests.</p>
-     * <p>*   **ReadOnly**: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.</p>
-     * <br>
-     * <p>> *   If you set **DbEndpointOperator** to **Create**, you must also specify DbEndpointReadWriteMode.</p>
-     * <p>> *   If the instance runs MySQL and you change the value of this parameter from **ReadWrite** to **ReadOnly**, the transaction splitting feature is disabled.</p>
+     * <ul>
+     * <li><strong>ReadWrite</strong>: The proxy terminal connects to the primary instance and can receive both read and write requests.</li>
+     * <li><strong>ReadOnly</strong>: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If you set <strong>DbEndpointOperator</strong> to <strong>Create</strong>, you must also specify DbEndpointReadWriteMode.</li>
+     * <li>If the instance runs MySQL and you change the value of this parameter from <strong>ReadWrite</strong> to <strong>ReadOnly</strong>, the transaction splitting feature is disabled.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ReadWrite</p>
      */
     @NameInMap("DbEndpointReadWriteMode")
     public String dbEndpointReadWriteMode;
 
     /**
      * <p>The type of the proxy terminal. This is a reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RWSplit</p>
      */
     @NameInMap("DbEndpointType")
     public String dbEndpointType;
@@ -85,41 +117,57 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
 
     /**
      * <p>The policy that is used to allocate read weights. Valid values:</p>
-     * <br>
-     * <p>*   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
-     * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
-     * <br>
-     * <p>> You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see [Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances](https://help.aliyun.com/document_detail/96076.html) and [Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/418272.html).</p>
+     * <ul>
+     * <li><strong>Standard</strong>: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</li>
+     * <li><strong>Custom</strong>: You must manually allocate read weights to the instance and its read-only instances.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You must specify this parameter only when the read/write splitting feature is enabled. For more information about the permission allocation policy, see <a href="https://help.aliyun.com/document_detail/96076.html">Modify the latency threshold and read weights of ApsaraDB RDS for MySQL instances</a> and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy feature for an ApsaraDB RDS for PostgreSQL instance</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("ReadOnlyInstanceDistributionType")
     public String readOnlyInstanceDistributionType;
 
     /**
-     * <p>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: **0** to **3600**. Default value: **30**.</p>
-     * <br>
-     * <p>> You must specify this parameter only when the read/write splitting feature is enabled.</p>
+     * <p>The latency threshold that is allowed for read/write splitting. If the latency on a read-only instance exceeds the threshold that you specified, the system no longer forwards read requests to the read-only instance. Unit: seconds If you do not specify this parameter, the original value of this parameter is retained. Valid values: <strong>0</strong> to <strong>3600</strong>. Default value: <strong>30</strong>.</p>
+     * <blockquote>
+     * <p>You must specify this parameter only when the read/write splitting feature is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ReadOnlyInstanceMaxDelayTime")
     public String readOnlyInstanceMaxDelayTime;
 
     /**
      * <p>The read weights of the instance and its read-only instances. A read weight must be a multiple of 100 and cannot exceed 10000. Formats:</p>
-     * <br>
-     * <p>*   Standard instance: `{"ID of the primary instance":"Weight","ID of the read-only instance":"Weight"...}`</p>
-     * <br>
-     * <p>    Example: `{"rm-uf6wjk5****":"500","rr-tfhfgk5xxx":"200"...}`</p>
-     * <br>
-     * <p>*   Instance on RDS Cluster Edition: `{"ID of the read-only instance":"Weight","DBClusterNode":{"ID of the primary node":"Weight","ID of the secondary node":"Weight","ID of the secondary node":"Weight"...}}`</p>
-     * <br>
-     * <p>    Example: `{"rr-tfhfgk5****":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`</p>
-     * <br>
-     * <p>    > **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..</p>
+     * <ul>
+     * <li><p>Standard instance: <code>{&quot;ID of the primary instance&quot;:&quot;Weight&quot;,&quot;ID of the read-only instance&quot;:&quot;Weight&quot;...}</code></p>
+     * <p>Example: <code>{&quot;rm-uf6wjk5****&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</code></p>
+     * </li>
+     * <li><p>Instance on RDS Cluster Edition: <code>{&quot;ID of the read-only instance&quot;:&quot;Weight&quot;,&quot;DBClusterNode&quot;:{&quot;ID of the primary node&quot;:&quot;Weight&quot;,&quot;ID of the secondary node&quot;:&quot;Weight&quot;,&quot;ID of the secondary node&quot;:&quot;Weight&quot;...}}</code></p>
+     * <p>Example: <code>{&quot;rr-tfhfgk5****&quot;:&quot;200&quot;,&quot;DBClusterNode&quot;:{&quot;rn-2z****&quot;:&quot;0&quot;,&quot;rn-2z****&quot;:&quot;400&quot;,&quot;rn-2z****&quot;:&quot;400&quot;...}}</code></p>
+     * <blockquote>
+     * <p><strong>DBClusterNode</strong> is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about <strong>IDs</strong> and <strong>weights</strong> of the primary and secondary nodes..</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;rm-uf6wjk5xxxx&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</p>
      */
     @NameInMap("ReadOnlyInstanceWeight")
     public String readOnlyInstanceWeight;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

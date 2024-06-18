@@ -6,50 +6,66 @@ import com.aliyun.tea.*;
 public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4n3axxxxx</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
      * <p>The dedicated proxy endpoint of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test123456.rwlb.rds.aliyuncs.com</p>
      */
     @NameInMap("DbProxyConnectString")
     public String dbProxyConnectString;
 
     /**
      * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ta9um4xxxxx</p>
      */
     @NameInMap("DbProxyEndpointId")
     public String dbProxyEndpointId;
 
     /**
      * <p>The SSL configuration setting that you want to apply on the instance. Valid values:</p>
-     * <br>
-     * <p>*   0: disables SSL encryption.</p>
-     * <p>*   1: enables SSL encryption or modifies the endpoint that requires SSL encryption.</p>
-     * <p>*   2: updates the validity period of the SSL certificate.</p>
-     * <br>
-     * <p>> This setting causes your instance to restart. Proceed with caution.</p>
-     * <br>
+     * <ul>
+     * <li>0: disables SSL encryption.</li>
+     * <li>1: enables SSL encryption or modifies the endpoint that requires SSL encryption.</li>
+     * <li>2: updates the validity period of the SSL certificate.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This setting causes your instance to restart. Proceed with caution.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DbProxySslEnabled")
     public String dbProxySslEnabled;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

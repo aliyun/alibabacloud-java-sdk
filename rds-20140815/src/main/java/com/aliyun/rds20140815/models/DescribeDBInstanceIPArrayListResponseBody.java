@@ -12,6 +12,9 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E2B6AF71-DC32-4055-B477-43B348798D10</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,26 +43,39 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     public static class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray extends TeaModel {
         /**
          * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
-         * <br>
-         * <p>>  A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
+         * <blockquote>
+         * <p> A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;
 
         /**
          * <p>The name of the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_default</p>
          */
         @NameInMap("DBInstanceIPArrayName")
         public String DBInstanceIPArrayName;
 
         /**
          * <p>The IP addresses in the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
         /**
          * <p>The type of the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         @NameInMap("SecurityIPType")
         public String securityIPType;

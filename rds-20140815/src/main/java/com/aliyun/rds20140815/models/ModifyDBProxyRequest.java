@@ -6,47 +6,66 @@ import com.aliyun.tea.*;
 public class ModifyDBProxyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable the database proxy feature. Valid values:</p>
-     * <br>
-     * <p>*   **Startup**: enables the database proxy feature.</p>
-     * <p>*   **Shutdown**: disables the database proxy feature.</p>
-     * <br>
+     * <ul>
+     * <li><strong>Startup</strong>: enables the database proxy feature.</li>
+     * <li><strong>Shutdown</strong>: disables the database proxy feature.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Startup</p>
      */
     @NameInMap("ConfigDBProxyService")
     public String configDBProxyService;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
-     * <p>The number of proxy instances that are enabled. Valid values: **1** to **16**. Default value: **1**.</p>
-     * <br>
-     * <p>>  The capability of the database proxy to process requests increases with the number of proxy instances that are enabled. You can monitor the load on the instance and specify an appropriate number of proxy instances based on the load monitoring data.</p>
+     * <p>The number of proxy instances that are enabled. Valid values: <strong>1</strong> to <strong>16</strong>. Default value: <strong>1</strong>.</p>
+     * <blockquote>
+     * <p> The capability of the database proxy to process requests increases with the number of proxy instances that are enabled. You can monitor the load on the instance and specify an appropriate number of proxy instances based on the load monitoring data.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DBProxyInstanceNum")
     public String DBProxyInstanceNum;
 
     /**
      * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>common</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
     /**
-     * <p>The network type of the instance. Set the value to **VPC**.</p>
-     * <br>
-     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>The network type of the instance. Set the value to <strong>VPC</strong>.</p>
+     * <blockquote>
+     * <p>This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -56,24 +75,37 @@ public class ModifyDBProxyRequest extends TeaModel {
 
     /**
      * <p>Whether to enable connection keep. Valid values:</p>
-     * <br>
-     * <p>- Enabled: enables connection keeping</p>
-     * <p>- Disabled: disables connection hold</p>
-     * <br>
-     * <p>> - This parameter is supported only for an ApsaraDB RDS for MySQL.</p>
-     * <p>> - When you modify the connection persistence state, the value of **ConfigDBProxyService** is modify.</p>
+     * <ul>
+     * <li>Enabled: enables connection keeping</li>
+     * <li>Disabled: disables connection hold</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is supported only for an ApsaraDB RDS for MySQL.</li>
+     * <li>When you modify the connection persistence state, the value of <strong>ConfigDBProxyService</strong> is modify.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("PersistentConnectionStatus")
     public String persistentConnectionStatus;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -86,16 +118,24 @@ public class ModifyDBProxyRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
-     * <br>
-     * <p>>  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <blockquote>
+     * <p> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxxxxxxxxxxx</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
      * <p>The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
-     * <br>
-     * <p>>  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <blockquote>
+     * <p> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-xxxxxxxxxxxx</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

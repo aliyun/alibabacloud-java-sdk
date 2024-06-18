@@ -12,24 +12,36 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23907437-79B9-411A-9EE6-75A8F0F1C619</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,36 +94,54 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     public static class DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance extends TeaModel {
         /**
          * <p>The CPU utilization of the instance in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.70</p>
          */
         @NameInMap("CPUUsage")
         public String CPUUsage;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DatabaseTest</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxx</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The disk usage of the instance in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14.56</p>
          */
         @NameInMap("DiskUsage")
         public String diskUsage;
 
         /**
          * <p>The IOPS usage of the instance in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.15</p>
          */
         @NameInMap("IOPSUsage")
         public String IOPSUsage;
 
         /**
          * <p>The number of sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.10</p>
          */
         @NameInMap("SessionUsage")
         public String sessionUsage;

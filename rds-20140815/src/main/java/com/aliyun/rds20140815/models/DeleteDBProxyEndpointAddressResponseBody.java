@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDBProxyEndpointAddressResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>343356C6-64B2-4245-ADEB-C9BD165EDD11</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class CreatePostgresExtensionsRequest extends TeaModel {
     /**
      * <p>The account of the user who owns the extension. Only privileged accounts are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_user</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-gc7f1****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The database name. You can call the DescribeDatabases operation to query the database name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("DBNames")
     public String DBNames;
 
     /**
-     * <p>The extension that you want to install. If you want to install multiple extensions, separate them with commas (,). If you do not specify the **SourceDatabase** parameter, you must specify this parameter.</p>
+     * <p>The extension that you want to install. If you want to install multiple extensions, separate them with commas (,). If you do not specify the <strong>SourceDatabase</strong> parameter, you must specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>citext,pg_profile</p>
      */
     @NameInMap("Extensions")
     public String extensions;
@@ -48,6 +60,9 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -60,17 +75,25 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
 
     /**
      * <p>The risk description that you need to confirm. If your instance runs an outdated minor engine version, installing specific extensions on the instance poses security risks. Proceed with the installation only after you acknowledge these risks. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
-     * <p>>  For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](https://help.aliyun.com/document_detail/2587815.html).</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <blockquote>
+     * <p> For more information about the risks, see <a href="https://help.aliyun.com/document_detail/2587815.html">Limits on extension creation for ApsaraDB RDS for PostgreSQL instances</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RiskConfirmed")
     public Boolean riskConfirmed;
 
     /**
-     * <p>The source database from which you want to synchronize the extension to the destination database. If you do not specify the **Extensions** parameter, you must specify this parameter.</p>
+     * <p>The source database from which you want to synchronize the extension to the destination database. If you do not specify the <strong>Extensions</strong> parameter, you must specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>source_db</p>
      */
     @NameInMap("SourceDatabase")
     public String sourceDatabase;

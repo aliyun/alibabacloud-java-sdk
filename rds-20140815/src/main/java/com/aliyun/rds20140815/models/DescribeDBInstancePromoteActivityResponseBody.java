@@ -6,47 +6,71 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22973492**********</p>
      */
     @NameInMap("AliUid")
     public String aliUid;
 
     /**
-     * <p>*   China site: 26842</p>
-     * <p>*   International site: 26888</p>
+     * <ul>
+     * <li>China site: 26842</li>
+     * <li>International site: 26888</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>268**</p>
      */
     @NameInMap("Bid")
     public String bid;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The type of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **Oracle**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
-     * <p>The activity information about the instance. For more information, see [Instance activities](https://help.aliyun.com/document_detail/2391834.html).</p>
+     * <p>The activity information about the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance activities</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsActivity")
     public String isActivity;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94CB8D93-017A-5AE7-A118-6E0F89D93C0A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
