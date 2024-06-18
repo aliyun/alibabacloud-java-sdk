@@ -4,39 +4,83 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class CreateArtifactResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>artifact-eea08d1e2d3a43aexxxx</p>
+     */
     @NameInMap("ArtifactId")
     public String artifactId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;CommodityCode\&quot;:\&quot;cmjj0005xxxx\&quot;,\&quot;CommodityVersion\&quot;:\&quot;V2022xxxx\&quot;}</p>
+     */
     @NameInMap("ArtifactProperty")
     public String artifactProperty;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EcsImage</p>
+     */
     @NameInMap("ArtifactType")
     public String artifactType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ArtifactVersion")
     public String artifactVersion;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-11-11T12:00:00Z</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxVersion")
     public Long maxVersion;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Created</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[
+     *             &quot;cn-beijing&quot;,
+     *             &quot;cn-hangzhou&quot;,
+     *             &quot;cn-shanghai&quot;
+     *         ]</p>
+     */
     @NameInMap("SupportRegionIds")
     public String supportRegionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 

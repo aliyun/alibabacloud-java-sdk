@@ -7,18 +7,30 @@ public class UpdateServiceInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableUserPrometheus")
     public Boolean enableUserPrometheus;
 
     @NameInMap("OperationName")
     public String operationName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;EcsInstanceParameter\&quot;:\&quot;4vCPU 8GiB\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-heyuan-a\&quot;,\&quot;SystemDiskSize\&quot;:50,\&quot;DataDiskSize\&quot;:150,\&quot;InternetMaxBandwidthOut\&quot;:2,\&quot;RegionId\&quot;:\&quot;cn-heyuan\&quot;}</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
     @NameInMap("PredefinedParametersName")
     public String predefinedParametersName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-0e6fca6a51a54420****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 

@@ -4,18 +4,34 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListServiceUsagesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18AD0960-A9FE-1AC8-ADF8-22131Fxxxxxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ServiceUsages")
     public java.util.List<ListServiceUsagesResponseBodyServiceUsages> serviceUsages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,24 +84,44 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-25T02:02:02Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service-c9f36ec6d19b4exxxxxx</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Submitted</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SupplierName")
         public String supplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-25T02:02:02Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127383705958xxxx</p>
+         */
         @NameInMap("UserAliUid")
         public Long userAliUid;
 

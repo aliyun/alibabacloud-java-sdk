@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateArtifactRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>artifact-eea08d1e2d3a43aexxxx</p>
      */
     @NameInMap("ArtifactId")
     public String artifactId;
@@ -24,6 +27,9 @@ public class UpdateArtifactRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("VersionName")
     public String versionName;
@@ -74,24 +80,52 @@ public class UpdateArtifactRequest extends TeaModel {
     }
 
     public static class UpdateArtifactRequestArtifactProperty extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cmjj00xxxx</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>V1.0</p>
+         */
         @NameInMap("CommodityVersion")
         public String commodityVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;WorkDir\&quot;:\&quot;/root\&quot;,\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;echo hello\&quot;}</p>
+         */
         @NameInMap("FileScriptMetadata")
         public String fileScriptMetadata;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m-0xij191j9cuev6ucxxxx</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;ScriptMetadata&quot;:&quot;{\&quot;CommandType\&quot;:\&quot;RunShellScript\&quot;,\&quot;Platform\&quot;:\&quot;Linux\&quot;,\&quot;Script\&quot;:\&quot;ls\&quot;}&quot;}</p>
+         */
         @NameInMap("ScriptMetadata")
         public String scriptMetadata;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

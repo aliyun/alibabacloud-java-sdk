@@ -4,18 +4,34 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListServiceInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E50287CB-AABF-4877-92C0-289B339A1546</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ServiceInstances")
     public java.util.List<ListServiceInstancesResponseBodyServiceInstances> serviceInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     }
 
     public static class ListServiceInstancesResponseBodyServiceInstancesServiceServiceInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png">https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("Locale")
         public String locale;
 
@@ -120,36 +144,68 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("DeployMetadata")
         public String deployMetadata;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ros</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnablePrivateVpcConnection")
         public Boolean enablePrivateVpcConnection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-21T00:00:00Z</p>
+         */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service-0e6fca6a51a54420****</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
         @NameInMap("ServiceInfos")
         public java.util.List<ListServiceInstancesResponseBodyServiceInstancesServiceServiceInfos> serviceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
         @NameInMap("SourceSupplierName")
         public String sourceSupplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SupplierName")
         public String supplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
+         */
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -268,9 +324,17 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     }
 
     public static class ListServiceInstancesResponseBodyServiceInstancesTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -301,36 +365,80 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("BizStatus")
         public String bizStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableInstanceOps")
         public Boolean enableInstanceOps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-01T12:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsOperated")
         public Boolean isOperated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
+         */
         @NameInMap("OperatedServiceInstanceId")
         public String operatedServiceInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-29T06:48:56Z</p>
+         */
         @NameInMap("OperationEndTime")
         public String operationEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-29T06:48:56Z</p>
+         */
         @NameInMap("OperationStartTime")
         public String operationStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;param&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("Parameters")
         public String parameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Subscription</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("Progress")
         public Long progress;
 
@@ -340,18 +448,38 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Service")
         public ListServiceInstancesResponseBodyServiceInstancesService service;
 
+        /**
+         * <strong>example:</strong>
+         * <p>si-d6ab3a63ccbb4b17****</p>
+         */
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Supplier</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Deployed</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deploy successfully</p>
+         */
         @NameInMap("StatusDetail")
         public String statusDetail;
 
@@ -361,9 +489,17 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 

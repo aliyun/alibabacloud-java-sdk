@@ -7,6 +7,10 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("AlarmMetadata")
     public String alarmMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Manual</p>
+     */
     @NameInMap("ApprovalType")
     public String approvalType;
 
@@ -19,30 +23,54 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Commodity")
     public GetServiceResponseBodyCommodity commodity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cmjj00xxxx</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-20T00:00:00Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
     @NameInMap("CrossRegionConnectionStatus")
     public String crossRegionConnectionStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DefaultLicenseDays")
     public Long defaultLicenseDays;
 
     @NameInMap("DeployMetadata")
     public String deployMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ros</p>
+     */
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>259200</p>
+     */
     @NameInMap("Duration")
     public Long duration;
 
     @NameInMap("EntitySource")
     public java.util.Map<String, String> entitySource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsSupportOperated")
     public Boolean isSupportOperated;
 
@@ -52,36 +80,76 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("LogMetadata")
     public String logMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;New_Vpc_Ack_And_Jumpserver\&quot;:{}}}</p>
+     */
     @NameInMap("OperationMetadata")
     public String operationMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("PayFromType")
     public String payFromType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Permanent</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Deployable</p>
+     */
     @NameInMap("Permission")
     public String permission;
 
+    /**
+     * <strong>example:</strong>
+     * <p>policyName1, policyName2</p>
+     */
     @NameInMap("PolicyNames")
     public String policyNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("Progress")
     public Long progress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-21T00:00:00Z</p>
+     */
     @NameInMap("PublishTime")
     public String publishTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sr-04056c2ab4b94bxxxxxx</p>
+     */
     @NameInMap("RegistrationId")
     public String registrationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Resellable")
     public Boolean resellable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aekzuqyxxxxxx</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -91,21 +159,41 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ServiceDiscoverable")
     public String serviceDiscoverable;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example1.com">http://example1.com</a></p>
+     */
     @NameInMap("ServiceDocUrl")
     public String serviceDocUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>service-70a3b15bb62643xxxxxx</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
     @NameInMap("ServiceInfos")
     public java.util.List<GetServiceResponseBodyServiceInfos> serviceInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example2.com">http://example2.com</a></p>
+     */
     @NameInMap("ServiceProductUrl")
     public String serviceProductUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 
@@ -124,42 +212,86 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Statistic")
     public GetServiceResponseBodyStatistic statistic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Online</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>deploy successfully</p>
+     */
     @NameInMap("StatusDetail")
     public String statusDetail;
 
     @NameInMap("SupplierName")
     public String supplierName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com">http://example.com</a></p>
+     */
     @NameInMap("SupplierUrl")
     public String supplierUrl;
 
     @NameInMap("Tags")
     public java.util.List<GetServiceResponseBodyTags> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SingleTenant</p>
+     */
     @NameInMap("TenantType")
     public String tenantType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SERVICE_TEST_SUCCEED</p>
+     */
     @NameInMap("TestStatus")
     public String testStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("TrialDuration")
     public Long trialDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Trial</p>
+     */
     @NameInMap("TrialType")
     public String trialType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-22T00:00:00Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;Description\&quot;:\&quot;xxx\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</p>
+     */
     @NameInMap("UpgradeMetadata")
     public String upgradeMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("Version")
     public String version;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
@@ -1176,9 +1308,17 @@ public class GetServiceResponseBody extends TeaModel {
         @NameInMap("Agreements")
         public java.util.List<GetServiceResponseBodyServiceInfosAgreements> agreements;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png">https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("Locale")
         public String locale;
 
@@ -1354,9 +1494,17 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodyTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetServiceInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
      */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;

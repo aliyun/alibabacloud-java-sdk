@@ -7,9 +7,17 @@ public class ListServiceUsagesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<ListServiceUsagesRequestFilter> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -54,6 +62,10 @@ public class ListServiceUsagesRequest extends TeaModel {
     }
 
     public static class ListServiceUsagesRequestFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ServiceId</p>
+         */
         @NameInMap("Name")
         public String name;
 

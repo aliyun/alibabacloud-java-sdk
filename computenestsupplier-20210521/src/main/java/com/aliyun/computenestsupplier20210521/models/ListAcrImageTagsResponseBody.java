@@ -7,15 +7,31 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
     @NameInMap("Images")
     public java.util.List<ListAcrImageTagsResponseBodyImages> images;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ey14..</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEF343B9-1A15-5789-BE88-7B36190F5BF6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +81,31 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
     }
 
     public static class ListAcrImageTagsResponseBodyImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>188394616</p>
+         */
         @NameInMap("ImageSize")
         public String imageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.7.2</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

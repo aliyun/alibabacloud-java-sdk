@@ -4,6 +4,10 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -16,27 +20,49 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestName</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aekzuqyxxxxxx</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-0e6fca6a51a54420****</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
@@ -49,6 +75,10 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1563457855xxxxxx</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -162,9 +192,17 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
 
     public static class CreateServiceInstanceShrinkRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

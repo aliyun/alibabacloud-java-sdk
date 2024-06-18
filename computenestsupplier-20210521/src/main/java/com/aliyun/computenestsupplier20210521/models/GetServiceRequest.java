@@ -7,15 +7,26 @@ public class GetServiceRequest extends TeaModel {
     @NameInMap("FilterAliUid")
     public Boolean filterAliUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-4ee86df83fd948******</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 

@@ -4,17 +4,27 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class AddServiceSharedAccountsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-63b8a060e9d54cxxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
@@ -25,6 +35,10 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
     @NameInMap("SharedAccounts")
     public java.util.List<AddServiceSharedAccountsRequestSharedAccounts> sharedAccounts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SharedAccount</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -76,12 +90,18 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
     public static class AddServiceSharedAccountsRequestSharedAccounts extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Accessible</p>
          */
         @NameInMap("Permission")
         public String permission;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("UserAliUid")
         public String userAliUid;

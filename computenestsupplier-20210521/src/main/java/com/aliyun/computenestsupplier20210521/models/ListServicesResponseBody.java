@@ -4,18 +4,34 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>51945B04-6AA6-410D-93BA-236E0248B104</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Services")
     public java.util.List<ListServicesResponseBodyServices> services;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -106,9 +122,17 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServicesServiceInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("Locale")
         public String locale;
 
@@ -158,9 +182,17 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServicesTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -188,12 +220,24 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AutoPass</p>
+         */
         @NameInMap("ApprovalType")
         public String approvalType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>artifact-21ca53ac16a643xxxxxx</p>
+         */
         @NameInMap("ArtifactId")
         public String artifactId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>draft</p>
+         */
         @NameInMap("ArtifactVersion")
         public String artifactVersion;
 
@@ -206,15 +250,31 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("Commodity")
         public ListServicesResponseBodyServicesCommodity commodity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmjj00xxxx</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DefaultVersion")
         public Boolean defaultVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ros</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
@@ -227,9 +287,17 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("LatestResellSourceServiceVersion")
         public String latestResellSourceServiceVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-21T00:00:00Z</p>
+         */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ServiceDeployment</p>
+         */
         @NameInMap("RelationType")
         public String relationType;
 
@@ -245,18 +313,34 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("ServiceDiscoverable")
         public String serviceDiscoverable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service-70a3b15bb62643xxxxxx</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
         @NameInMap("ServiceInfos")
         public java.util.List<ListServicesResponseBodyServicesServiceInfos> serviceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>centos_7</p>
+         */
         @NameInMap("SourceImage")
         public String sourceImage;
 
@@ -269,30 +353,58 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("SourceSupplierName")
         public String sourceSupplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SupplierName")
         public String supplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
+         */
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
         @NameInMap("Tags")
         public java.util.List<ListServicesResponseBodyServicesTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SingleTenant</p>
+         */
         @NameInMap("TenantType")
         public String tenantType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Trial</p>
+         */
         @NameInMap("TrialType")
         public String trialType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-21T00:00:00Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v2.0.0</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 

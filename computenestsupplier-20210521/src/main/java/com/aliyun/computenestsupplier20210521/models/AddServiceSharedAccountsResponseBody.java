@@ -4,6 +4,10 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class AddServiceSharedAccountsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E2815213-EA4F-5759-8EA1-56DD051BB3FD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

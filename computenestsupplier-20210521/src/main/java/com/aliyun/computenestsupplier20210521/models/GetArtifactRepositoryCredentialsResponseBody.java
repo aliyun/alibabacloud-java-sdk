@@ -10,9 +10,17 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     @NameInMap("Credentials")
     public GetArtifactRepositoryCredentialsResponseBodyCredentials credentials;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1526549792000</p>
+     */
     @NameInMap("ExpireDate")
     public String expireDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94E89857-B994-44B6-9C4F-DBD200E9XXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +62,24 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     }
 
     public static class GetArtifactRepositoryCredentialsResponseBodyAvailableResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;/xxx/&quot;</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>computenest-artifacts-draft-cn-hangzhou</p>
+         */
         @NameInMap("RepositoryName")
         public String repositoryName;
 
@@ -95,18 +115,38 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     }
 
     public static class GetArtifactRepositoryCredentialsResponseBodyCredentials extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>STS.xxx</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eyJ0aW1lIjoiMTUyNjU0OTc5:0705733****</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Username")
         public String username;
 

@@ -4,21 +4,41 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetUploadCredentialsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetUploadCredentialsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FCC3321E-D518-1BC4-861E-588E9D4DAFB7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +96,52 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
     }
 
     public static class GetUploadCredentialsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>STS.NUCe19W1FKaHAYAhe********</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8LQGp59mY23pcXeTdcvSA1cUQZBeD92sFrXi********</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service-info-private</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-18T12:27:59Z</p>
+         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>221514575922756034/cn-hangzhou/d57c62fbd508xxxxxxxx.json</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CAISzQN1q6Ft5B2yfSjIr5b2LouNuu5n/KOjQ3/wjGUHYdlagYGdmzz2IH1Le3NrBO8esfgymGFU6v8dlo1dYLQeHhadQI5cs80HtFqLSNaE65LswPlZ2M2ISETPJzfV9pCK</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 

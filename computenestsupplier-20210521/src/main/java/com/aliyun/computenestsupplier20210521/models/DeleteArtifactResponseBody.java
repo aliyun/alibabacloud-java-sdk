@@ -4,6 +4,10 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class DeleteArtifactResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

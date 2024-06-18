@@ -4,20 +4,35 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AllVersions")
     public Boolean allVersions;
 
     @NameInMap("Filter")
     public java.util.List<ListServicesRequestFilter> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -90,6 +105,10 @@ public class ListServicesRequest extends TeaModel {
     }
 
     public static class ListServicesRequestFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Status</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -120,9 +139,17 @@ public class ListServicesRequest extends TeaModel {
     }
 
     public static class ListServicesRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

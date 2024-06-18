@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetArtifactRepositoryCredentialsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>File</p>
      */
     @NameInMap("ArtifactType")
     public String artifactType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("DeployRegionId")
     public String deployRegionId;
 

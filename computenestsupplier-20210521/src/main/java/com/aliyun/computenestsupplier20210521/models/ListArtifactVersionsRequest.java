@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListArtifactVersionsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>artifact-eea08d1e2d3a43aexxxx</p>
      */
     @NameInMap("ArtifactId")
     public String artifactId;
@@ -13,6 +16,10 @@ public class ListArtifactVersionsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

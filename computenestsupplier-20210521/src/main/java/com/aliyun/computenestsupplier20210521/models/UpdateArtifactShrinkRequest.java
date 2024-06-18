@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateArtifactShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>artifact-eea08d1e2d3a43aexxxx</p>
      */
     @NameInMap("ArtifactId")
     public String artifactId;
@@ -24,6 +27,9 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("VersionName")
     public String versionName;

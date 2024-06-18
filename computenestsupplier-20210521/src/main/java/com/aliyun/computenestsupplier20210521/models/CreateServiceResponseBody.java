@@ -4,15 +4,31 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>service-0e6fca6a51a544xxxxxx</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Created</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>draft</p>
+     */
     @NameInMap("Version")
     public String version;
 
