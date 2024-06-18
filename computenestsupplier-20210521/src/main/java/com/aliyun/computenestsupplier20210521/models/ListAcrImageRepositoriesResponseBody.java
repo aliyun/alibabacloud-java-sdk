@@ -4,18 +4,34 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListAcrImageRepositoriesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Repositories")
     public java.util.List<ListAcrImageRepositoriesResponseBodyRepositories> repositories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C4A145D8-6F6C-532A-9001-9730CDA27578</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +81,31 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     }
 
     public static class ListAcrImageRepositoriesResponseBodyRepositories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-20T00:00:00Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>crr-3gqhkza0wbxxxxxx</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wordpress</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 

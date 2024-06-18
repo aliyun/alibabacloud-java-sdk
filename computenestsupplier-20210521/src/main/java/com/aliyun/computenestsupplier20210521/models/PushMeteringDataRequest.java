@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class PushMeteringDataRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;StartTime\&quot;:1681264800,\&quot;EndTime\&quot;:1681268400,\&quot;Entities\&quot;:[{\&quot;Key\&quot;:\&quot;Unit\&quot;,\&quot;Value\&quot;:\&quot;0\&quot;}]}]</p>
      */
     @NameInMap("Metering")
     public String metering;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>si-0e6fca6a51a54420****</p>
      */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;

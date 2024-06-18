@@ -4,33 +4,60 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceEstimateCostShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>mRdxWuW2ts</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("Commodity")
     public String commodityShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;PayType\&quot;:\&quot;PostPaid\&quot;,\&quot;InstancePassword\&quot;:\&quot;xxxxxxxxxx\&quot;,\&quot;EcsInstanceType\&quot;:\&quot;ecs.g6.large\&quot;,\&quot;VSwitchId\&quot;:\&quot;vsw-0jlueyydpuekoxxxxxxxx\&quot;,\&quot;VpcId\&quot;:\&quot;vpc-0jlps6mjbgvpqxxxxxxxx\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-wulanchabu-a\&quot;,\&quot;Enable\&quot;:false,\&quot;RegionId\&quot;:\&quot;cn-wulanchabu\&quot;}</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-16fbd358d75e49xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>draft</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
     @NameInMap("SpecificationName")
     public String specificationName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Custom_Image_Ecs</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

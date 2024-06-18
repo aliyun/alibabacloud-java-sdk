@@ -4,21 +4,45 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;CmsTemplateId\&quot;:1162921,\&quot;TemplateUrl\&quot;:\&quot;<a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json%5C%5C%22%7D">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json\\&quot;}</a></p>
+     */
     @NameInMap("AlarmMetadata")
     public String alarmMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>788E7CP0EN9D51P</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;EstimateTime\&quot;:null,\&quot;SupplierDeployMetadata\&quot;:{\&quot;DeployTimeout\&quot;:7200},\&quot;EnableVnc\&quot;:false}</p>
+     */
     @NameInMap("DeployMetadata")
     public String deployMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ros</p>
+     */
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>259200</p>
+     */
     @NameInMap("Duration")
     public Long duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsSupportOperated")
     public Boolean isSupportOperated;
 
@@ -28,14 +52,25 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("LogMetadata")
     public String logMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;Custom_Image_Ecs\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</p>
+     */
     @NameInMap("OperationMetadata")
     public String operationMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>policyName1, policyName2</p>
+     */
     @NameInMap("PolicyNames")
     public String policyNames;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,6 +80,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-1dda29c3eca648xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
@@ -52,24 +90,48 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("ServiceInfo")
     public java.util.List<UpdateServiceShrinkRequestServiceInfo> serviceInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SingleTenant</p>
+     */
     @NameInMap("TenantType")
     public String tenantType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("TrialDuration")
     public Integer trialDuration;
 
     @NameInMap("UpdateOption")
     public String updateOptionShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;Description\&quot;:\&quot;xxx\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</p>
+     */
     @NameInMap("UpgradeMetadata")
     public String upgradeMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Draft</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
@@ -280,9 +342,17 @@ public class UpdateServiceShrinkRequest extends TeaModel {
         @NameInMap("Agreements")
         public java.util.List<UpdateServiceShrinkRequestServiceInfoAgreements> agreements;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("Locale")
         public String locale;
 

@@ -7,87 +7,185 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("BizStatus")
     public String bizStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-20T00:00:00Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableInstanceOps")
     public Boolean enableInstanceOps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableUserPrometheus")
     public Boolean enableUserPrometheus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-01-01T12:00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("GrafanaDashBoardUrl")
     public String grafanaDashBoardUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsOperated")
     public Boolean isOperated;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;renewType&quot;:&quot;MONTHLY&quot;}</p>
+     */
     @NameInMap("LicenseMetadata")
     public String licenseMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TestName</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("NetworkConfig")
     public GetServiceInstanceResponseBodyNetworkConfig networkConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
+     */
     @NameInMap("OperatedServiceInstanceId")
     public String operatedServiceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-01-28T06:48:56Z</p>
+     */
     @NameInMap("OperationEndTime")
     public String operationEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-29T06:48:56Z</p>
+     */
     @NameInMap("OperationStartTime")
     public String operationStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;InstanceIds&quot;: [
+     *             &quot;i-hp38ofxl0dsyfi7z****&quot;
+     *       ]
+     * }</p>
+     */
     @NameInMap("Outputs")
     public String outputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;param&quot;: &quot;value&quot;
+     * }</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
     @NameInMap("PredefinedParameterName")
     public String predefinedParameterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("Progress")
     public Long progress;
 
     @NameInMap("RdAccountLoginUrl")
     public String rdAccountLoginUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[
+     *       {
+     *             &quot;StackId&quot;: &quot;stack-xxx&quot;
+     *       }
+     * ]</p>
+     */
     @NameInMap("Resources")
     public String resources;
 
     @NameInMap("Service")
     public GetServiceInstanceResponseBodyService service;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>User</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Deployed</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>deploy successfully</p>
+     */
     @NameInMap("StatusDetail")
     public String statusDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1964460391538545</p>
+     */
     @NameInMap("SupplierUid")
     public Long supplierUid;
 
@@ -97,9 +195,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-20T00:00:00Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 
@@ -382,9 +488,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("EndpointIps")
         public java.util.List<String> endpointIps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Ready</p>
+         */
         @NameInMap("IngressEndpointStatus")
         public String ingressEndpointStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Ready</p>
+         */
         @NameInMap("NetworkServiceStatus")
         public String networkServiceStatus;
 
@@ -394,6 +508,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("VSwitches")
         public java.util.List<String> vSwitches;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1vwnn14rqpyiczj****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -472,12 +590,24 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("ConnectionConfigs")
         public java.util.List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs> connectionConfigs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ep-m5ei37240541816b****</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>epsrv-5ei07324541816bxxxx</p>
+         */
         @NameInMap("EndpointServiceId")
         public String endpointServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.computenest.aliyuncs.com</p>
+         */
         @NameInMap("PrivateZoneName")
         public String privateZoneName;
 
@@ -521,9 +651,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyNetworkConfigReversePrivateVpcConnections extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ep-m5ei42370541816b****</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>epsrv-5ei07324541816bxxxx</p>
+         */
         @NameInMap("EndpointServiceId")
         public String endpointServiceId;
 
@@ -551,9 +689,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyNetworkConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ep-m5ei37240541816b****</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>epsrv-5ei07324541816bxxxx</p>
+         */
         @NameInMap("EndpointServiceId")
         public String endpointServiceId;
 
@@ -603,9 +749,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyServiceServiceInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png">https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("Locale")
         public String locale;
 
@@ -658,39 +812,75 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("DeployMetadata")
         public String deployMetadata;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ros</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-21T00:00:00Z</p>
+         */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
+         */
         @NameInMap("ServiceDocUrl")
         public String serviceDocUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service-9c8a3522528b4fe8****</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
         @NameInMap("ServiceInfos")
         public java.util.List<GetServiceInstanceResponseBodyServiceServiceInfos> serviceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com">https://service-info-private.oss-cn-hangzhou.aliyuncs.com</a></p>
+         */
         @NameInMap("ServiceProductUrl")
         public String serviceProductUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SupplierName")
         public String supplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
+         */
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
         @NameInMap("UpgradableServiceVersions")
         public java.util.List<String> upgradableServiceVersions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -817,9 +1007,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class GetServiceInstanceResponseBodyTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -3,10 +3,10 @@ package com.aliyun.computenestsupplier20210521.models;
 
 import com.aliyun.tea.*;
 
-public class DeployServiceInstanceRequest extends TeaModel {
+public class RestartServiceInstanceRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     * <p>10CM943JP0EN9****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,17 +24,17 @@ public class DeployServiceInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>si-0e6fca6a51a54420****</p>
+     * <p>si-d6ab3a63ccbb4b17****</p>
      */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
-    public static DeployServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeployServiceInstanceRequest self = new DeployServiceInstanceRequest();
+    public static RestartServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        RestartServiceInstanceRequest self = new RestartServiceInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeployServiceInstanceRequest setClientToken(String clientToken) {
+    public RestartServiceInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -42,7 +42,7 @@ public class DeployServiceInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DeployServiceInstanceRequest setRegionId(String regionId) {
+    public RestartServiceInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -50,7 +50,7 @@ public class DeployServiceInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeployServiceInstanceRequest setServiceInstanceId(String serviceInstanceId) {
+    public RestartServiceInstanceRequest setServiceInstanceId(String serviceInstanceId) {
         this.serviceInstanceId = serviceInstanceId;
         return this;
     }

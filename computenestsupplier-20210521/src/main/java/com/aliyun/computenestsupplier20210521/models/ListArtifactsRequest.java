@@ -7,9 +7,17 @@ public class ListArtifactsRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<ListArtifactsRequestFilter> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -65,6 +73,10 @@ public class ListArtifactsRequest extends TeaModel {
     }
 
     public static class ListArtifactsRequestFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ArtifactType</p>
+         */
         @NameInMap("Name")
         public String name;
 

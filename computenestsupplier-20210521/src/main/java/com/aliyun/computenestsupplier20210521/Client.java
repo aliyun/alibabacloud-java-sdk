@@ -135,8 +135,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建部署物
-     *
+     * <b>summary</b> : 
+     * <p>创建部署物</p>
+     * 
      * @param tmpReq CreateArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateArtifactResponse
@@ -204,8 +205,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建部署物
-     *
+     * <b>summary</b> : 
+     * <p>创建部署物</p>
+     * 
      * @param request CreateArtifactRequest
      * @return CreateArtifactResponse
      */
@@ -215,8 +217,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建新服务版本
-     *
+     * <b>summary</b> : 
+     * <p>创建新服务版本</p>
+     * 
      * @param request CreateServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateServiceResponse
@@ -346,8 +349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建新服务版本
-     *
+     * <b>summary</b> : 
+     * <p>创建新服务版本</p>
+     * 
      * @param request CreateServiceRequest
      * @return CreateServiceResponse
      */
@@ -357,8 +361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 商家侧创建服务实例
-     *
+     * <b>summary</b> : 
+     * <p>商家侧创建服务实例</p>
+     * 
      * @param tmpReq CreateServiceInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateServiceInstanceResponse
@@ -442,8 +447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 商家侧创建服务实例
-     *
+     * <b>summary</b> : 
+     * <p>商家侧创建服务实例</p>
+     * 
      * @param request CreateServiceInstanceRequest
      * @return CreateServiceInstanceResponse
      */
@@ -453,8 +459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除部署物
-     *
+     * <b>summary</b> : 
+     * <p>删除部署物</p>
+     * 
      * @param request DeleteArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteArtifactResponse
@@ -488,8 +495,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除部署物
-     *
+     * <b>summary</b> : 
+     * <p>删除部署物</p>
+     * 
      * @param request DeleteArtifactRequest
      * @return DeleteArtifactResponse
      */
@@ -641,8 +649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取部署物信息
-     *
+     * <b>summary</b> : 
+     * <p>获取部署物信息</p>
+     * 
      * @param request GetArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetArtifactResponse
@@ -680,8 +689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取部署物信息
-     *
+     * <b>summary</b> : 
+     * <p>获取部署物信息</p>
+     * 
      * @param request GetArtifactRequest
      * @return GetArtifactResponse
      */
@@ -691,8 +701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取部署物仓库访问凭证
-     *
+     * <b>summary</b> : 
+     * <p>获取部署物仓库访问凭证</p>
+     * 
      * @param request GetArtifactRepositoryCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetArtifactRepositoryCredentialsResponse
@@ -726,8 +737,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取部署物仓库访问凭证
-     *
+     * <b>summary</b> : 
+     * <p>获取部署物仓库访问凭证</p>
+     * 
      * @param request GetArtifactRepositoryCredentialsRequest
      * @return GetArtifactRepositoryCredentialsResponse
      */
@@ -737,8 +749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询服务详情
-     *
+     * <b>summary</b> : 
+     * <p>查询服务详情</p>
+     * 
      * @param request GetServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceResponse
@@ -788,8 +801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询服务详情
-     *
+     * <b>summary</b> : 
+     * <p>查询服务详情</p>
+     * 
      * @param request GetServiceRequest
      * @return GetServiceResponse
      */
@@ -799,8 +813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 计算巢服务部署询价
-     *
+     * <b>summary</b> : 
+     * <p>计算巢服务部署询价</p>
+     * 
      * @param tmpReq GetServiceEstimateCostRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceEstimateCostResponse
@@ -872,8 +887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 计算巢服务部署询价
-     *
+     * <b>summary</b> : 
+     * <p>计算巢服务部署询价</p>
+     * 
      * @param request GetServiceEstimateCostRequest
      * @return GetServiceEstimateCostResponse
      */
@@ -925,8 +941,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取ROS模板参数限制
-     *
+     * <b>summary</b> : 
+     * <p>获取ROS模板参数限制</p>
+     * 
      * @param request GetServiceTemplateParameterConstraintsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceTemplateParameterConstraintsResponse
@@ -988,8 +1005,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取ROS模板参数限制
-     *
+     * <b>summary</b> : 
+     * <p>获取ROS模板参数限制</p>
+     * 
      * @param request GetServiceTemplateParameterConstraintsRequest
      * @return GetServiceTemplateParameterConstraintsResponse
      */
@@ -1037,8 +1055,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物</p>
+     * 
      * @param request ListAcrImageRepositoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAcrImageRepositoriesResponse
@@ -1080,8 +1099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物</p>
+     * 
      * @param request ListAcrImageRepositoriesRequest
      * @return ListAcrImageRepositoriesResponse
      */
@@ -1091,8 +1111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物</p>
+     * 
      * @param request ListAcrImageTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAcrImageTagsResponse
@@ -1134,8 +1155,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物</p>
+     * 
      * @param request ListAcrImageTagsRequest
      * @return ListAcrImageTagsResponse
      */
@@ -1145,8 +1167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物版本
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物版本</p>
+     * 
      * @param request ListArtifactVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListArtifactVersionsResponse
@@ -1184,8 +1207,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物版本
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物版本</p>
+     * 
      * @param request ListArtifactVersionsRequest
      * @return ListArtifactVersionsResponse
      */
@@ -1195,8 +1219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物</p>
+     * 
      * @param request ListArtifactsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListArtifactsResponse
@@ -1242,8 +1267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 展示部署物
-     *
+     * <b>summary</b> : 
+     * <p>展示部署物</p>
+     * 
      * @param request ListArtifactsRequest
      * @return ListArtifactsResponse
      */
@@ -1315,8 +1341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 商家获取服务使用申请接口
-     *
+     * <b>summary</b> : 
+     * <p>商家获取服务使用申请接口</p>
+     * 
      * @param request ListServiceUsagesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListServiceUsagesResponse
@@ -1358,8 +1385,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 商家获取服务使用申请接口
-     *
+     * <b>summary</b> : 
+     * <p>商家获取服务使用申请接口</p>
+     * 
      * @param request ListServiceUsagesRequest
      * @return ListServiceUsagesResponse
      */
@@ -1369,8 +1397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询服务
-     *
+     * <b>summary</b> : 
+     * <p>查询服务</p>
+     * 
      * @param request ListServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListServicesResponse
@@ -1424,8 +1453,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询服务
-     *
+     * <b>summary</b> : 
+     * <p>查询服务</p>
+     * 
      * @param request ListServicesRequest
      * @return ListServicesResponse
      */
@@ -1435,8 +1465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改服务实例资源
-     *
+     * <b>summary</b> : 
+     * <p>修改服务实例资源</p>
+     * 
      * @param request ModifyServiceInstanceResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyServiceInstanceResourcesResponse
@@ -1474,8 +1505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改服务实例资源
-     *
+     * <b>summary</b> : 
+     * <p>修改服务实例资源</p>
+     * 
      * @param request ModifyServiceInstanceResourcesRequest
      * @return ModifyServiceInstanceResourcesResponse
      */
@@ -1573,8 +1605,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发布部署物
-     *
+     * <b>summary</b> : 
+     * <p>发布部署物</p>
+     * 
      * @param request ReleaseArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseArtifactResponse
@@ -1604,8 +1637,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发布部署物
-     *
+     * <b>summary</b> : 
+     * <p>发布部署物</p>
+     * 
      * @param request ReleaseArtifactRequest
      * @return ReleaseArtifactResponse
      */
@@ -1615,8 +1649,165 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新部署物
-     *
+     * <b>summary</b> : 
+     * <p>重启服务实例</p>
+     * 
+     * @param request RestartServiceInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartServiceInstanceResponse
+     */
+    public RestartServiceInstanceResponse restartServiceInstanceWithOptions(RestartServiceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartServiceInstance"),
+            new TeaPair("version", "2021-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartServiceInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重启服务实例</p>
+     * 
+     * @param request RestartServiceInstanceRequest
+     * @return RestartServiceInstanceResponse
+     */
+    public RestartServiceInstanceResponse restartServiceInstance(RestartServiceInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartServiceInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动服务实例</p>
+     * 
+     * @param request StartServiceInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartServiceInstanceResponse
+     */
+    public StartServiceInstanceResponse startServiceInstanceWithOptions(StartServiceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartServiceInstance"),
+            new TeaPair("version", "2021-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartServiceInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动服务实例</p>
+     * 
+     * @param request StartServiceInstanceRequest
+     * @return StartServiceInstanceResponse
+     */
+    public StartServiceInstanceResponse startServiceInstance(StartServiceInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startServiceInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止服务实例</p>
+     * 
+     * @param request StopServiceInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopServiceInstanceResponse
+     */
+    public StopServiceInstanceResponse stopServiceInstanceWithOptions(StopServiceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopServiceInstance"),
+            new TeaPair("version", "2021-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopServiceInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止服务实例</p>
+     * 
+     * @param request StopServiceInstanceRequest
+     * @return StopServiceInstanceResponse
+     */
+    public StopServiceInstanceResponse stopServiceInstance(StopServiceInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopServiceInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新部署物</p>
+     * 
      * @param tmpReq UpdateArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateArtifactResponse
@@ -1668,8 +1859,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新部署物
-     *
+     * <b>summary</b> : 
+     * <p>更新部署物</p>
+     * 
      * @param request UpdateArtifactRequest
      * @return UpdateArtifactResponse
      */
@@ -1803,8 +1995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新服务实例属性
-     *
+     * <b>summary</b> : 
+     * <p>更新服务实例属性</p>
+     * 
      * @param request UpdateServiceInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateServiceInstanceAttributeResponse
@@ -1842,8 +2035,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新服务实例属性
-     *
+     * <b>summary</b> : 
+     * <p>更新服务实例属性</p>
+     * 
      * @param request UpdateServiceInstanceAttributeRequest
      * @return UpdateServiceInstanceAttributeResponse
      */
@@ -1853,8 +2047,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 变配服务实例
-     *
+     * <b>summary</b> : 
+     * <p>变配服务实例</p>
+     * 
      * @param tmpReq UpdateServiceInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateServiceInstanceSpecResponse
@@ -1910,8 +2105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 变配服务实例
-     *
+     * <b>summary</b> : 
+     * <p>变配服务实例</p>
+     * 
      * @param request UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse
      */

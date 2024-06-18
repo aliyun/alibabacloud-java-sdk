@@ -4,12 +4,24 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpgradeServiceInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F224E002-AB0E-5FD9-A87E-54AEE56F6CAE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-5cbae874da0e47xxxxxx</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Created</p>
+     */
     @NameInMap("Status")
     public String status;
 

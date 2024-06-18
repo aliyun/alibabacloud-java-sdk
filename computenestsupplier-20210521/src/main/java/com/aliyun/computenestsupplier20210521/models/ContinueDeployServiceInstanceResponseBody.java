@@ -7,9 +7,17 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
     @NameInMap("DryRunResult")
     public ContinueDeployServiceInstanceResponseBodyDryRunResult dryRunResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>82DF27ED-E538-5AC0-A11C-39334A873189</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 

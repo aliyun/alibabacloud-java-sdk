@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ReleaseArtifactRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>artifact-9feded91880e4c78xxxx</p>
      */
     @NameInMap("ArtifactId")
     public String artifactId;

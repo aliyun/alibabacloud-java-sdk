@@ -7,12 +7,20 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("AlarmMetadata")
     public String alarmMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Manual</p>
+     */
     @NameInMap("ApprovalType")
     public String approvalType;
 
     @NameInMap("BuildParameters")
     public String buildParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -21,13 +29,24 @@ public class CreateServiceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ros</p>
      */
     @NameInMap("DeployType")
     public String deployType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Duration")
     public Long duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsSupportOperated")
     public Boolean isSupportOperated;
 
@@ -37,14 +56,25 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("LogMetadata")
     public String logMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;New_Vpc_Ack_And_Jumpserver\&quot;:{}}}</p>
+     */
     @NameInMap("OperationMetadata")
     public String operationMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>policyName1, policyName2</p>
+     */
     @NameInMap("PolicyNames")
     public String policyNames;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,15 +85,27 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>service-0e6fca6a51a544xxxxxx</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
     @NameInMap("ServiceInfo")
     public java.util.List<CreateServiceRequestServiceInfo> serviceInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 
@@ -76,15 +118,31 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateServiceRequestTag> tag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SingleTenant</p>
+     */
     @NameInMap("TenantType")
     public String tenantType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("TrialDuration")
     public Long trialDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;Description\&quot;:\&quot;xxx\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</p>
+     */
     @NameInMap("UpgradeMetadata")
     public String upgradeMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Draft</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
@@ -335,11 +393,18 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("Agreements")
         public java.util.List<CreateServiceRequestServiceInfoAgreements> agreements;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         @NameInMap("Locale")
         public String locale;
@@ -349,6 +414,9 @@ public class CreateServiceRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TiDB Database</p>
          */
         @NameInMap("Name")
         public String name;
@@ -412,9 +480,17 @@ public class CreateServiceRequest extends TeaModel {
     }
 
     public static class CreateServiceRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Usage</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Web</p>
+         */
         @NameInMap("Value")
         public String value;
 

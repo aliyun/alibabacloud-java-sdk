@@ -7,15 +7,31 @@ public class ListArtifactsResponseBody extends TeaModel {
     @NameInMap("Artifacts")
     public java.util.List<ListArtifactsResponseBodyArtifacts> artifacts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46577928-3162-15A6-9084-69820EB9xxxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -95,18 +111,34 @@ public class ListArtifactsResponseBody extends TeaModel {
     }
 
     public static class ListArtifactsResponseBodyArtifacts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>artifact-eea08d1e2d3a43aexxxx</p>
+         */
         @NameInMap("ArtifactId")
         public String artifactId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EcsImage</p>
+         */
         @NameInMap("ArtifactType")
         public String artifactType;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-20T02:19:55Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaxVersion")
         public String maxVersion;
 
@@ -116,6 +148,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Created</p>
+         */
         @NameInMap("Status")
         public String status;
 

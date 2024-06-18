@@ -4,12 +4,24 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Created</p>
+     */
     @NameInMap("Status")
     public String status;
 

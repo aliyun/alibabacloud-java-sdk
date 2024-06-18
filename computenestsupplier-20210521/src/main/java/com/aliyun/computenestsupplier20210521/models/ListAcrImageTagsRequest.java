@@ -4,15 +4,31 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListAcrImageTagsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AcrImage</p>
+     */
     @NameInMap("ArtifactType")
     public String artifactType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAW8kZY+u1sYOaYf5JmgmDQQ=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crr-3gqhkza0wbxxxxxx</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 

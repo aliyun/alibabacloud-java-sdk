@@ -4,21 +4,41 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpgradeServiceInstanceShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
     @NameInMap("Parameters")
     public String parametersShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-5cbae874da0e47xxxxxx</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 

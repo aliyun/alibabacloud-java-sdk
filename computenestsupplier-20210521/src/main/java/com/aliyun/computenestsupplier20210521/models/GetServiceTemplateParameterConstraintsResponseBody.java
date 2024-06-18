@@ -10,6 +10,10 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     @NameInMap("ParameterConstraints")
     public java.util.List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraints> parameterConstraints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C81C0732-DEBC-559C-B563-7EB2BEB21088</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,12 +50,24 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lnch_Source</p>
+         */
         @NameInMap("PropertyName")
         public String propertyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-8vb0smn1lf6g77md****</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>serviceinstance</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -101,18 +117,34 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         @NameInMap("AssociationParameterNames")
         public java.util.List<String> associationParameterNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NoLimit</p>
+         */
         @NameInMap("Behavior")
         public String behavior;
 
+        /**
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
         @NameInMap("OriginalConstraints")
         public java.util.List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> originalConstraints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PayType</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>String</p>
+         */
         @NameInMap("Type")
         public String type;
 

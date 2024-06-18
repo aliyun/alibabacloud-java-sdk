@@ -4,15 +4,26 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("DeployRegionId")
     public String deployRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnablePrivateVpcConnection")
     public Boolean enablePrivateVpcConnection;
 
@@ -21,19 +32,33 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-1c11f365190c44xxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>draft</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
@@ -121,9 +146,17 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     }
 
     public static class GetServiceTemplateParameterConstraintsRequestParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PayType</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

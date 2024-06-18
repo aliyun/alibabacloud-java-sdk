@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-12-25T02:28:40Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>si-3df88e962cdexxxxxxxx</p>
      */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;

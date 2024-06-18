@@ -4,23 +4,36 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-0e6fca6a51a54420****</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
