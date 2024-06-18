@@ -12,6 +12,9 @@ public class UpdateUsersStatusRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;

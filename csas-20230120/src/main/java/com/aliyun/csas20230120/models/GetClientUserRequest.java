@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetClientUserRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>598</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;

@@ -12,6 +12,9 @@ public class CreateIdpDepartmentRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1222</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;

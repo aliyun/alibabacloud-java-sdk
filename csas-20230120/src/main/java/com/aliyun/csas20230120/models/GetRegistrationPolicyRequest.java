@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetRegistrationPolicyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reg-policy-dcbfd33cb004****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

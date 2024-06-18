@@ -7,33 +7,60 @@ public class UpdateRegistrationPolicyRequest extends TeaModel {
     @NameInMap("CompanyLimitCount")
     public UpdateRegistrationPolicyRequestCompanyLimitCount companyLimitCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LimitAll</p>
+     */
     @NameInMap("CompanyLimitType")
     public String companyLimitType;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UserGroupNormal</p>
+     */
     @NameInMap("MatchMode")
     public String matchMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registration_policy_name</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("PersonalLimitCount")
     public UpdateRegistrationPolicyRequestPersonalLimitCount personalLimitCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LimitDiff</p>
+     */
     @NameInMap("PersonalLimitType")
     public String personalLimitType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reg-policy-63b2f1844b86****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Priority")
     public Long priority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -145,12 +172,24 @@ public class UpdateRegistrationPolicyRequest extends TeaModel {
     }
 
     public static class UpdateRegistrationPolicyRequestCompanyLimitCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("All")
         public Integer all;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mobile")
         public Integer mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PC")
         public Integer PC;
 
@@ -186,12 +225,24 @@ public class UpdateRegistrationPolicyRequest extends TeaModel {
     }
 
     public static class UpdateRegistrationPolicyRequestPersonalLimitCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("All")
         public Integer all;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Mobile")
         public Integer mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PC")
         public Integer PC;
 

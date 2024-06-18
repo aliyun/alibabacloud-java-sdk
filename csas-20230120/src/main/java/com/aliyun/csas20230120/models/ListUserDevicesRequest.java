@@ -9,6 +9,9 @@ public class ListUserDevicesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
@@ -16,6 +19,10 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("Department")
     public String department;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Company</p>
+     */
     @NameInMap("DeviceBelong")
     public String deviceBelong;
 
@@ -31,6 +38,10 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("DlpStatuses")
     public java.util.List<String> dlpStatuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>win10-64bit</p>
+     */
     @NameInMap("Hostname")
     public String hostname;
 
@@ -40,6 +51,10 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("InnerIp")
     public String innerIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00:16:XX:XX:7c:46</p>
+     */
     @NameInMap("Mac")
     public String mac;
 
@@ -51,13 +66,24 @@ public class ListUserDevicesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
+     */
     @NameInMap("SaseUserId")
     public String saseUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SharingStatus")
     public Boolean sharingStatus;
 

@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessApplicationsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.0.0/16</p>
+     */
     @NameInMap("Address")
     public String address;
 
@@ -15,25 +19,47 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>private_access_application_name</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pa-policy-54a7838a48bf****</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tag-d3f64e8bdd4a****</p>
+     */
     @NameInMap("TagId")
     public String tagId;
 

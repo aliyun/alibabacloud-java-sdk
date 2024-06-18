@@ -12,6 +12,9 @@ public class UpdateUserDevicesSharingStatusRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SharingStatus")
     public Boolean sharingStatus;

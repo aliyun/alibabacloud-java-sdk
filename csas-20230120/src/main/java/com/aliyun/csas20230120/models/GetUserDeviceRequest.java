@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserDeviceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
      */
     @NameInMap("DeviceTag")
     public String deviceTag;

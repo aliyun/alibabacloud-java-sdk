@@ -7,9 +7,17 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
     @NameInMap("Policies")
     public java.util.List<ListRegistrationPoliciesResponseBodyPolicies> policies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7A8FE38A-E29C-5678-B84A-FEDBCB83552F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public String totalNum;
 
@@ -43,12 +51,24 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListRegistrationPoliciesResponseBodyPoliciesLimitDetailLimitCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("All")
         public Integer all;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mobile")
         public Integer mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PC")
         public Integer PC;
 
@@ -84,12 +104,20 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListRegistrationPoliciesResponseBodyPoliciesLimitDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Company</p>
+         */
         @NameInMap("DeviceBelong")
         public String deviceBelong;
 
         @NameInMap("LimitCount")
         public ListRegistrationPoliciesResponseBodyPoliciesLimitDetailLimitCount limitCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LimitAll</p>
+         */
         @NameInMap("LimitType")
         public String limitType;
 
@@ -125,6 +153,10 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListRegistrationPoliciesResponseBodyPolicies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-16 17:18:46</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -134,18 +166,38 @@ public class ListRegistrationPoliciesResponseBody extends TeaModel {
         @NameInMap("LimitDetail")
         public java.util.List<ListRegistrationPoliciesResponseBodyPoliciesLimitDetail> limitDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
+         */
         @NameInMap("MatchMode")
         public String matchMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registration_policy_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reg-policy-dcbfd33cb004****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

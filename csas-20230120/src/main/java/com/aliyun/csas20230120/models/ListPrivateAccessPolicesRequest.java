@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessPolicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pa-application-e12860ef6c48****</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
@@ -12,28 +16,50 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>private_access_policy_name</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Allow</p>
+     */
     @NameInMap("PolicyAction")
     public String policyAction;
 
     @NameInMap("PolicyIds")
     public java.util.List<String> policyIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tag-c0cb77857a99****</p>
+     */
     @NameInMap("TagId")
     public String tagId;
 
@@ -42,8 +68,13 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
 
     /**
      * <p>用户组ID。取值来源：</p>
-     * <p>- [ListUserGroups](~~ListUserGroups~~)：批量查询用户组。</p>
-     * <p>- [CreateUserGroup](~~CreateUserGroup~~)：创建用户组。</p>
+     * <ul>
+     * <li><a href="~~ListUserGroups~~">ListUserGroups</a>：批量查询用户组。</li>
+     * <li><a href="~~CreateUserGroup~~">CreateUserGroup</a>：创建用户组。</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>usergroup-6f1ef2fc56b6****</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;

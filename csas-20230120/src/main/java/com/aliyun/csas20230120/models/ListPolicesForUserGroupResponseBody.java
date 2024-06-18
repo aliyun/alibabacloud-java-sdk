@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPolicesForUserGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5F04DFBD-3F48-5F70-AE72-474026670128</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListPolicesForUserGroupResponseBodyUserGroupsPolices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>private_access_policy_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pa-policy-ce2bf7236fab****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivateAccess</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
@@ -76,6 +92,10 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         @NameInMap("Polices")
         public java.util.List<ListPolicesForUserGroupResponseBodyUserGroupsPolices> polices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 

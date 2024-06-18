@@ -4,11 +4,18 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListDynamicRoutesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pa-application-e12860ef6c48****</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -16,14 +23,25 @@ public class ListDynamicRoutesRequest extends TeaModel {
     @NameInMap("DynamicRouteIds")
     public java.util.List<String> dynamicRouteIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dynamic_route_name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>connector-8ccb13b6f52c****</p>
+     */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -31,9 +49,17 @@ public class ListDynamicRoutesRequest extends TeaModel {
     @NameInMap("RegionIds")
     public java.util.List<String> regionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tag-d3f64e8bdd4a****</p>
+     */
     @NameInMap("TagId")
     public String tagId;
 

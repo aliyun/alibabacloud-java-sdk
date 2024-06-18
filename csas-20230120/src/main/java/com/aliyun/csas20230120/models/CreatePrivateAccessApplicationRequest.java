@@ -15,6 +15,9 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>private_access_application_name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -27,12 +30,18 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;
@@ -104,12 +113,18 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public static class CreatePrivateAccessApplicationRequestPortRanges extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Begin")
         public Integer begin;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         @NameInMap("End")
         public Integer end;

@@ -4,9 +4,17 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4AB972E2-D702-5464-B132-B1911498B8BF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
@@ -43,12 +51,24 @@ public class ListUserGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsResponseBodyUserGroupsAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Equal</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
@@ -98,15 +118,27 @@ public class ListUserGroupsResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<ListUserGroupsResponseBodyUserGroupsAttributes> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-10 11:39:22</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_group_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 

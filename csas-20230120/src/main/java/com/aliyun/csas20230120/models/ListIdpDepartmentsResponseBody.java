@@ -7,6 +7,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListIdpDepartmentsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
     }
 
     public static class ListIdpDepartmentsResponseBodyDataDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30520</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1440</p>
+         */
         @NameInMap("IdpConfigId")
         public String idpConfigId;
 
@@ -76,6 +88,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         @NameInMap("DataList")
         public java.util.List<ListIdpDepartmentsResponseBodyDataDataList> dataList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalNum")
         public Long totalNum;
 

@@ -7,6 +7,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetIdpConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,12 +38,18 @@ public class GetIdpConfigResponseBody extends TeaModel {
     public static class GetIdpConfigResponseBodyData extends TeaModel {
         /**
          * <p>AccessKey ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5tJVztnh6Nn***</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
 
         /**
          * <p>AccessKey Secret</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E75ktr5jENiR3ssjC***</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
@@ -47,48 +57,104 @@ public class GetIdpConfigResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://172.10.10.2:4321/getGroup?name=%s&pass=%s">https://172.10.10.2:4321/getGroup?name=%s&amp;pass=%s</a></p>
+         */
         @NameInMap("GetGroupUrl")
         public String getGroupUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1465</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <?xml version="1.0" encoding="utf-8"?><hr>
+         */
         @NameInMap("IdpMetadata")
         public String idpMetadata;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totp</p>
+         */
         @NameInMap("MfaConfigType")
         public String mfaConfigType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("MobileLoginType")
         public String mobileLoginType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totp</p>
+         */
         @NameInMap("MobileMfaConfigType")
         public String mobileMfaConfigType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1482,1355</p>
+         */
         @NameInMap("MultiIdpInfo")
         public String multiIdpInfo;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("PcLoginType")
         public String pcLoginType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CSAS</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-26T02:02:42Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>QVhaU0RDR0JIWVV***</p>
+         */
         @NameInMap("VerifyAesKey")
         public String verifyAesKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7JAr3fYtnl***</p>
+         */
         @NameInMap("VerifyToken")
         public String verifyToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://172.10.10.1:1234/otp_verify">http://172.10.10.1:1234/otp_verify</a></p>
+         */
         @NameInMap("VerifyUrl")
         public String verifyUrl;
 

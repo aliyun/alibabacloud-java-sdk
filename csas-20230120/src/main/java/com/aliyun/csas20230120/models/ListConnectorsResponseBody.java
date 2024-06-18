@@ -7,9 +7,17 @@ public class ListConnectorsResponseBody extends TeaModel {
     @NameInMap("Connectors")
     public java.util.List<ListConnectorsResponseBodyConnectors> connectors;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
@@ -43,9 +51,17 @@ public class ListConnectorsResponseBody extends TeaModel {
     }
 
     public static class ListConnectorsResponseBodyConnectorsApplications extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pa-application-e12860ef6c48****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>application_name</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
@@ -125,9 +141,17 @@ public class ListConnectorsResponseBody extends TeaModel {
     }
 
     public static class ListConnectorsResponseBodyConnectorsUpgradeTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>23:00</p>
+         */
         @NameInMap("End")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20:00</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -163,22 +187,45 @@ public class ListConnectorsResponseBody extends TeaModel {
 
         /**
          * <p>ConnectorID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-94db94e06b98****</p>
          */
         @NameInMap("ConnectorId")
         public String connectorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-27 18:10:25</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>connector_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Online</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("SwitchStatus")
         public String switchStatus;
 

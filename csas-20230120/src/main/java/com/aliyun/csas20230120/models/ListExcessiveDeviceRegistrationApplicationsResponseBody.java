@@ -7,9 +7,17 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
     @NameInMap("Applications")
     public java.util.List<ListExcessiveDeviceRegistrationApplicationsResponseBodyApplications> applications;
 
+    /**
+     * <strong>example:</strong>
+     * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Long totalNum;
 
@@ -43,9 +51,17 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
     }
 
     public static class ListExcessiveDeviceRegistrationApplicationsResponseBodyApplications extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>reg-application-0f4a127b7e78****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-17 18:46:55</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -55,24 +71,52 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
+         */
         @NameInMap("DeviceTag")
         public String deviceTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>win10-64bit</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsUsed")
         public Boolean isUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:16:XX:XX:7c:46</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
+         */
         @NameInMap("SaseUserId")
         public String saseUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Approved</p>
+         */
         @NameInMap("Status")
         public String status;
 

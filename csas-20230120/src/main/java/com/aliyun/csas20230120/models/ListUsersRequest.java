@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListUsersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Long currentPage;
@@ -18,6 +21,9 @@ public class ListUsersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -28,6 +34,10 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("SaseUserIds")
     public java.util.List<String> saseUserIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enabled</p>
+     */
     @NameInMap("Status")
     public String status;
 

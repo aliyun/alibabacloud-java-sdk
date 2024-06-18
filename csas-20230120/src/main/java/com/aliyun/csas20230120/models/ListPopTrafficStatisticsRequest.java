@@ -4,12 +4,24 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPopTrafficStatisticsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1681293719</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1681035708</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

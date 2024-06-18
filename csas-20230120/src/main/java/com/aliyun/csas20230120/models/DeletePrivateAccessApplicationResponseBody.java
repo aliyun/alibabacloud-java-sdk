@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DeletePrivateAccessApplicationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -12,8 +12,10 @@ public class AttachApplication2ConnectorShrinkRequest extends TeaModel {
 
     /**
      * <p>ConnectorID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connector-94db94e06b98****</p>
      */
     @NameInMap("ConnectorId")
     public String connectorId;

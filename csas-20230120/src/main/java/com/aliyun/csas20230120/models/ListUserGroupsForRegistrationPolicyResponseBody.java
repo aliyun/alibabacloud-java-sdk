@@ -7,6 +7,10 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     @NameInMap("Policies")
     public java.util.List<ListUserGroupsForRegistrationPolicyResponseBodyPolicies> policies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D89009C7-54C6-51B6-BAE7-3F373920C6BF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsForRegistrationPolicyResponseBodyPoliciesUserGroupsAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Equal</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
@@ -87,15 +103,27 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<ListUserGroupsForRegistrationPolicyResponseBodyPoliciesUserGroupsAttributes> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-27 18:10:25</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_group_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
@@ -147,6 +175,10 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsForRegistrationPolicyResponseBodyPolicies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>reg-policy-f25c9e5872e5****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 

@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateUsersStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>47363C2B-1AAA-5954-8847-0E50FCC54117</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

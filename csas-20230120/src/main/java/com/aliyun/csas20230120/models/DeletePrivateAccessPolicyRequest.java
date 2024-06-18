@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePrivateAccessPolicyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pa-policy-867ef4007c8a****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

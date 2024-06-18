@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateClientUserRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10797</p>
+     */
     @NameInMap("DepartmentId")
     public String departmentId;
 
@@ -12,19 +16,33 @@ public class CreateClientUserRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>727</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13641966835</p>
+     */
     @NameInMap("MobileNumber")
     public String mobileNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kehudiyi</p>
+     */
     @NameInMap("Password")
     public String password;
 

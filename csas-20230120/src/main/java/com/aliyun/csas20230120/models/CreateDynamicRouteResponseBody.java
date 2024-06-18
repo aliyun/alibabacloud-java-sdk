@@ -4,9 +4,17 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateDynamicRouteResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dr-ca9fddfac7c6****</p>
+     */
     @NameInMap("DynamicRouteId")
     public String dynamicRouteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

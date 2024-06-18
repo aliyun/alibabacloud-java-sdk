@@ -4,26 +4,43 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("AttributeValue")
     public String attributeValue;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>用户组名称。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_group_name</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pa-policy-54a7838a48bf****</p>
+     */
     @NameInMap("PAPolicyId")
     public String PAPolicyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

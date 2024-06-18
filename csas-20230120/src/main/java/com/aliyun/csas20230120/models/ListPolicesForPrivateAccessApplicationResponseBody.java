@@ -7,6 +7,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
     @NameInMap("Applications")
     public java.util.List<ListPolicesForPrivateAccessApplicationResponseBodyApplications> applications;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4AB972E2-D702-5464-B132-B1911498B8BF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
     }
 
     public static class ListPolicesForPrivateAccessApplicationResponseBodyApplicationsPoliciesCustomUserAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Equal</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
@@ -84,9 +100,17 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
     }
 
     public static class ListPolicesForPrivateAccessApplicationResponseBodyApplicationsPolicies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Application</p>
+         */
         @NameInMap("ApplicationType")
         public String applicationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-27 18:10:25</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -96,21 +120,45 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private_access_policy_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Allow</p>
+         */
         @NameInMap("PolicyAction")
         public String policyAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pa-policy-867ef4007c8a****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
@@ -202,6 +250,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
     }
 
     public static class ListPolicesForPrivateAccessApplicationResponseBodyApplications extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pa-application-b927baf3e592****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 

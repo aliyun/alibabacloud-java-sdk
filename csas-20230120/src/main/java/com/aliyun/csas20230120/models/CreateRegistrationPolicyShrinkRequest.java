@@ -9,6 +9,9 @@ public class CreateRegistrationPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LimitAll</p>
      */
     @NameInMap("CompanyLimitType")
     public String companyLimitType;
@@ -18,12 +21,18 @@ public class CreateRegistrationPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UserGroupAll</p>
      */
     @NameInMap("MatchMode")
     public String matchMode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registration_policy_name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,15 +42,25 @@ public class CreateRegistrationPolicyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LimitDiff</p>
      */
     @NameInMap("PersonalLimitType")
     public String personalLimitType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>99</p>
+     */
     @NameInMap("Priority")
     public Long priority;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;

@@ -4,9 +4,17 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateClientUserPasswordRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1128</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kehudiyidj</p>
+     */
     @NameInMap("Password")
     public String password;
 

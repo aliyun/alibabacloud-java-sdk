@@ -4,9 +4,17 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public String totalNum;
 
@@ -46,18 +54,34 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Department")
         public String department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a***@example.net</p>
+         */
         @NameInMap("Email")
         public String email;
 
         @NameInMap("IdpName")
         public String idpName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1381111****</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
+         */
         @NameInMap("SaseUserId")
         public String saseUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

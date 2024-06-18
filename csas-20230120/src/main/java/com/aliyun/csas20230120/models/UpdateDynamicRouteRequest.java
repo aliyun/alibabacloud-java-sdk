@@ -7,6 +7,10 @@ public class UpdateDynamicRouteRequest extends TeaModel {
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Application</p>
+     */
     @NameInMap("ApplicationType")
     public String applicationType;
 
@@ -15,28 +19,55 @@ public class UpdateDynamicRouteRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dr-ca9fddfac7c6****</p>
      */
     @NameInMap("DynamicRouteId")
     public String dynamicRouteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>connector</p>
+     */
     @NameInMap("DynamicRouteType")
     public String dynamicRouteType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cover</p>
+     */
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dynamic_route_name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>connector-8ccb13b6f52c****</p>
+     */
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>99</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
     @NameInMap("RegionIds")
     public java.util.List<String> regionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Disabled</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPrivateAccessApplicationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pa-application-e12860ef6c48****</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDynamicRouteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dr-ca9fddfac7c6****</p>
      */
     @NameInMap("DynamicRouteId")
     public String dynamicRouteId;

@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DeleteIdpDepartmentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

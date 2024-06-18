@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RevokeUserSessionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
      */
     @NameInMap("ExternalIds")
     public String externalIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idp-cfg9vcrqylo39c39uxnw</p>
      */
     @NameInMap("IdpId")
     public String idpId;

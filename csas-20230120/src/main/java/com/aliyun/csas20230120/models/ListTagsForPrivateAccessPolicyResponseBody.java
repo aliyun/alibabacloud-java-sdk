@@ -7,6 +7,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     @NameInMap("Polices")
     public java.util.List<ListTagsForPrivateAccessPolicyResponseBodyPolices> polices;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9EE61139-A6A8-5E13-80AF-83435C21B26B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,6 +38,9 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     public static class ListTagsForPrivateAccessPolicyResponseBodyPolicesTags extends TeaModel {
         /**
          * <p>内网访问标签创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-21 14:10:16</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -41,12 +48,24 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
         @NameInMap("TagType")
         public String tagType;
 
@@ -98,6 +117,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     }
 
     public static class ListTagsForPrivateAccessPolicyResponseBodyPolices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pa-policy-1b0d0e8b4bcf****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 

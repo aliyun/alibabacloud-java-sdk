@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetUserGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1310DBC7-7E1F-55D3-B4B4-E4BE912517FB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetUserGroupResponseBody extends TeaModel {
     }
 
     public static class GetUserGroupResponseBodyUserGroupAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("IdpId")
         public Integer idpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Equal</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
@@ -87,12 +103,20 @@ public class GetUserGroupResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<GetUserGroupResponseBodyUserGroupAttributes> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-10 11:39:22</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_group_name</p>
+         */
         @NameInMap("Name")
         public String name;
 

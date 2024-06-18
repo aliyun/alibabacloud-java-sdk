@@ -7,6 +7,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
     @NameInMap("Application")
     public GetPrivateAccessApplicationResponseBodyApplication application;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3ACC5EDC-2B7D-5032-8C58-D7615D66C1D4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
     }
 
     public static class GetPrivateAccessApplicationResponseBodyApplicationPortRanges extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>81</p>
+         */
         @NameInMap("End")
         public Integer end;
 
@@ -65,18 +77,30 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pa-application-e12860ef6c48****</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         @NameInMap("ConnectorIds")
         public java.util.List<String> connectorIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-30 16:50:32</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>private_access_application_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -86,9 +110,17 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         @NameInMap("PortRanges")
         public java.util.List<GetPrivateAccessApplicationResponseBodyApplicationPortRanges> portRanges;
 
+        /**
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

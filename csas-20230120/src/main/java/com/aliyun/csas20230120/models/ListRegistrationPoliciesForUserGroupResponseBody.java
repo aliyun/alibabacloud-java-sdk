@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetailLimitCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("All")
         public String all;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PC")
         public String PC;
 
@@ -73,12 +89,20 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Company</p>
+         */
         @NameInMap("DeviceBelong")
         public String deviceBelong;
 
         @NameInMap("LimitCount")
         public ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetailLimitCount limitCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LimitAll</p>
+         */
         @NameInMap("LimitType")
         public String limitType;
 
@@ -114,6 +138,10 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPolicies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-16 17:18:46</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -123,18 +151,38 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         @NameInMap("LimitDetail")
         public java.util.List<ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetail> limitDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
+         */
         @NameInMap("MatchMode")
         public String matchMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registration_policy_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reg-policy-dcbfd33cb004****</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -224,6 +272,10 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         @NameInMap("Policies")
         public java.util.List<ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPolicies> policies;
 
+        /**
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
+         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 

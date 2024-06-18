@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDynamicRouteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dr-16ff07c8207d****</p>
      */
     @NameInMap("DynamicRouteId")
     public String dynamicRouteId;

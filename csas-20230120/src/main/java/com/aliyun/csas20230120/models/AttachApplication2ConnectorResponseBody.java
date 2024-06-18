@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class AttachApplication2ConnectorResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

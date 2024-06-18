@@ -4,6 +4,10 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DeleteDynamicRouteResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

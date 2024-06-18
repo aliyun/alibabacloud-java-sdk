@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateClientUserStatusRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1495</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;
