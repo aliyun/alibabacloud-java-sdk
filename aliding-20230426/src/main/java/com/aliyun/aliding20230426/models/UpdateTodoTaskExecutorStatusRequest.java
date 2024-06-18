@@ -10,11 +10,18 @@ public class UpdateTodoTaskExecutorStatusRequest extends TeaModel {
     @NameInMap("executorStatusList")
     public java.util.List<UpdateTodoTaskExecutorStatusRequestExecutorStatusList> executorStatusList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("operatorId")
     public String operatorId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15002141</p>
      */
     @NameInMap("taskId")
     public String taskId;
@@ -57,6 +64,10 @@ public class UpdateTodoTaskExecutorStatusRequest extends TeaModel {
     }
 
     public static class UpdateTodoTaskExecutorStatusRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 
@@ -76,9 +87,17 @@ public class UpdateTodoTaskExecutorStatusRequest extends TeaModel {
     }
 
     public static class UpdateTodoTaskExecutorStatusRequestExecutorStatusList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>userId</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isDone")
         public Boolean isDone;
 

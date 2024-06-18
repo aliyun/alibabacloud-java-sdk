@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class ListDriveSpacesShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fekaf</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org</p>
      */
     @NameInMap("SpaceType")
     public String spaceType;

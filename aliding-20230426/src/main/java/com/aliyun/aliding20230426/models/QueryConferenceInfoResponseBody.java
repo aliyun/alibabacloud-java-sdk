@@ -9,6 +9,9 @@ public class QueryConferenceInfoResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4248DCC9-785F-5A14-8BE0-830FD52E1261</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,39 +38,83 @@ public class QueryConferenceInfoResponseBody extends TeaModel {
     }
 
     public static class QueryConferenceInfoResponseBodyConfInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ActiveNum")
         public Integer activeNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AttendNum")
         public Integer attendNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("ConfDuration")
         public Long confDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>607452e01401526ee39609e1</p>
+         */
         @NameInMap("ConferenceId")
         public String conferenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>208579</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
         @NameInMap("CreatorNick")
         public String creatorNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1663294270000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://meeting.dingtalk.com/app?roomCode=42726xxx&token=1_7ac9xxx">https://meeting.dingtalk.com/app?roomCode=42726xxx&amp;token=1_7ac9xxx</a></p>
+         */
         @NameInMap("ExternalLinkUrl")
         public String externalLinkUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("InvitedNum")
         public Integer invitedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4272xxxxx</p>
+         */
         @NameInMap("RoomCode")
         public String roomCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1663293270000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

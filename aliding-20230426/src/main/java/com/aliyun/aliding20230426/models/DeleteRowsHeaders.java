@@ -32,6 +32,10 @@ public class DeleteRowsHeaders extends TeaModel {
     }
 
     public static class DeleteRowsHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

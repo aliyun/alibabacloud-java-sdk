@@ -32,6 +32,10 @@ public class QueryMeetingRoomGroupListRequest extends TeaModel {
     }
 
     public static class QueryMeetingRoomGroupListRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

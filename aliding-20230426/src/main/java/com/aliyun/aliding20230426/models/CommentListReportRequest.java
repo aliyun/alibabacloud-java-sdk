@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CommentListReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Offset")
     public Long offset;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>173xxxx</p>
      */
     @NameInMap("ReportId")
     public String reportId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Size")
     public Long size;
@@ -63,6 +72,10 @@ public class CommentListReportRequest extends TeaModel {
     }
 
     public static class CommentListReportRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

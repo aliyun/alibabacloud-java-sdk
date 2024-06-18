@@ -4,6 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryOrgHonorsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -12,6 +16,9 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -49,15 +56,27 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
         @NameInMap("honorDesc")
         public String honorDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21658579</p>
+         */
         @NameInMap("honorId")
         public Long honorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxx.ali-cdn.com/jfejfi.jpg">https://xxxx.ali-cdn.com/jfejfi.jpg</a></p>
+         */
         @NameInMap("honorImgUrl")
         public String honorImgUrl;
 
         @NameInMap("honorName")
         public String honorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxxx.ali-cdn.com/jfejfi.jpg">https://xxxx.ali-cdn.com/jfejfi.jpg</a></p>
+         */
         @NameInMap("honorPendantImgUrl")
         public String honorPendantImgUrl;
 

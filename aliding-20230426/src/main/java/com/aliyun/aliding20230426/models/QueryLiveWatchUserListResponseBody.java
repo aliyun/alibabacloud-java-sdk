@@ -12,6 +12,9 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -52,15 +55,31 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19999</p>
+         */
         @NameInMap("WatchLiveTime")
         public Long watchLiveTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>131312312</p>
+         */
         @NameInMap("WatchPlaybackTime")
         public Long watchPlaybackTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1323132</p>
+         */
         @NameInMap("WatchProgressMs")
         public Long watchProgressMs;
 
@@ -123,12 +142,24 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12312312</p>
+         */
         @NameInMap("WatchLiveTime")
         public Long watchLiveTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21313131</p>
+         */
         @NameInMap("WatchPlaybackTime")
         public Long watchPlaybackTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123131</p>
+         */
         @NameInMap("WatchProgressMs")
         public Long watchProgressMs;
 

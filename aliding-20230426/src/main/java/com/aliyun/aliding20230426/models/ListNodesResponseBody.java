@@ -4,6 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>next_token</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -12,6 +16,9 @@ public class ListNodesResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -46,6 +53,10 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyNodesStatisticalInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("WordCount")
         public Long wordCount;
 
@@ -65,48 +76,104 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ALIDOC</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T11:29Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01472825524039877041</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>adoc</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasChildren")
         public Boolean hasChildren;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T11:29Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01472825524039877041</p>
+         */
         @NameInMap("ModifierId")
         public String modifierId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MNDoBb60VLBPraakI1Ywxyyn8lemrZQ3</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>READER</p>
+         */
         @NameInMap("PermissionRole")
         public String permissionRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>512</p>
+         */
         @NameInMap("Size")
         public Long size;
 
         @NameInMap("StatisticalInfo")
         public ListNodesResponseBodyNodesStatisticalInfo statisticalInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FILE</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node_url</p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MNDoBb60VLBPraakI1Ywxyyn8lemrZQ3</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

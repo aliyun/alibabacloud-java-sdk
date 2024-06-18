@@ -4,69 +4,147 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateScenegroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AddFriendForbidden")
     public Long addFriendForbidden;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AllMembersCanCreateCalendar")
     public Long allMembersCanCreateCalendar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AllMembersCanCreateMcsConf")
     public Long allMembersCanCreateMcsConf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ChatBannedType")
     public Long chatBannedType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("GroupEmailDisabled")
     public Long groupEmailDisabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GroupLiveSwitch")
     public Long groupLiveSwitch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>@lADOADma*****QKA</p>
+     */
     @NameInMap("Icon")
     public String icon;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ManagementType")
     public Long managementType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MembersToAdminChat")
     public Long membersToAdminChat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MentionAllAuthority")
     public Long mentionAllAuthority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("OnlyAdminCanDing")
     public Long onlyAdminCanDing;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("OnlyAdminCanSetMsgTop")
     public Long onlyAdminCanSetMsgTop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Searchable")
     public Long searchable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ShowHistoryType")
     public Long showHistoryType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>072*****,013*****</p>
+     */
     @NameInMap("SubadminIds")
     public String subadminIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c354***-<em><strong>-</strong></em>-b4ea-6f1ab***65</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试群</p>
      */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>072*****,013*****</p>
+     */
     @NameInMap("UserIds")
     public String userIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>axcf*-<em><strong><strong>-</strong></strong></em>-23da*</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ValidationType")
     public Long validationType;
 

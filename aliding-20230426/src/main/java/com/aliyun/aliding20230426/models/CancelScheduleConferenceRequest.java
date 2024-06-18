@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CancelScheduleConferenceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2a489xxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("ScheduleConferenceId")
     public String scheduleConferenceId;
@@ -35,6 +38,10 @@ public class CancelScheduleConferenceRequest extends TeaModel {
     }
 
     public static class CancelScheduleConferenceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

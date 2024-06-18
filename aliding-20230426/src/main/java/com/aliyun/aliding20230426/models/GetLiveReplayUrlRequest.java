@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetLiveReplayUrlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4d38xxxxx</p>
      */
     @NameInMap("LiveId")
     public String liveId;
@@ -35,6 +38,10 @@ public class GetLiveReplayUrlRequest extends TeaModel {
     }
 
     public static class GetLiveReplayUrlRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -49,6 +49,10 @@ public class AddWorkspaceRequest extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lHiicjNFM2iSFYSdz2iPuI8ZwiEiE</p>
+         */
         @NameInMap("TeamId")
         public String teamId;
 
@@ -76,6 +80,10 @@ public class AddWorkspaceRequest extends TeaModel {
     }
 
     public static class AddWorkspaceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

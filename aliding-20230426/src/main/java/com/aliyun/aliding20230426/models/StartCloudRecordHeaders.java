@@ -34,6 +34,9 @@ public class StartCloudRecordHeaders extends TeaModel {
     public static class StartCloudRecordHeadersAccountContext extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012345</p>
          */
         @NameInMap("accountId")
         public String accountId;

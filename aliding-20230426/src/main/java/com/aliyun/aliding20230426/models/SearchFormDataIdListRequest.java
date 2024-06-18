@@ -6,45 +6,90 @@ import com.aliyun.tea.*;
 public class SearchFormDataIdListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKT0xxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd</p>
+     */
     @NameInMap("CreateFromTimeGMT")
     public String createFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd</p>
+     */
     @NameInMap("CreateToTimeGMT")
     public String createToTimeGMT;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FORM-xxxxx</p>
      */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd</p>
+     */
     @NameInMap("ModifiedFromTimeGMT")
     public String modifiedFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd</p>
+     */
     @NameInMap("ModifiedToTimeGMT")
     public String modifiedToTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>012345</p>
+     */
     @NameInMap("OriginatorId")
     public String originatorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("SearchFieldJson")
     public String searchFieldJson;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

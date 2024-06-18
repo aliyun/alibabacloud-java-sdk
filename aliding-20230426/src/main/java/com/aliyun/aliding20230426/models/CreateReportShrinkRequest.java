@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateReportShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Contents")
     public String contentsShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client</p>
      */
     @NameInMap("DdFrom")
     public String ddFrom;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdfafdsfsafdfsaf</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -27,13 +36,24 @@ public class CreateReportShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ToChat")
     public Boolean toChat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("ToCids")
     public String toCidsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[123,456]</p>
+     */
     @NameInMap("ToUserids")
     public String toUseridsShrink;
 

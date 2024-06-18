@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetFieldDefByUuidRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKT0xxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FORM-xxxxx</p>
      */
     @NameInMap("FormUuid")
     public String formUuid;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

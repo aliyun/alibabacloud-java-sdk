@@ -4,21 +4,41 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class SearchFormDatasResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
     @NameInMap("data")
     public java.util.List<SearchFormDatasResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -79,9 +99,17 @@ public class SearchFormDatasResponseBody extends TeaModel {
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EngilishName</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZH-CN</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -117,6 +145,10 @@ public class SearchFormDatasResponseBody extends TeaModel {
     }
 
     public static class SearchFormDatasResponseBodyDataModifyUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -150,9 +182,17 @@ public class SearchFormDatasResponseBody extends TeaModel {
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EngilishName</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZH-CN</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -188,6 +228,10 @@ public class SearchFormDatasResponseBody extends TeaModel {
     }
 
     public static class SearchFormDatasResponseBodyDataOriginator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -218,33 +262,69 @@ public class SearchFormDatasResponseBody extends TeaModel {
     }
 
     public static class SearchFormDatasResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-24 11:22:01</p>
+         */
         @NameInMap("CreatedTimeGMT")
         public String createdTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("CreatorUserId")
         public String creatorUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002</p>
+         */
         @NameInMap("DataId")
         public Long dataId;
 
         @NameInMap("FormData")
         public java.util.Map<String, ?> formData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINST-BNKJDRF</p>
+         */
         @NameInMap("FormInstanceId")
         public String formInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FORM-EF6Y93URN24F1SCX15VA2P918LPEIJ2H3UFORCJ1</p>
+         */
         @NameInMap("FormUuid")
         public String formUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("InstanceValue")
         public String instanceValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FORM-EF6Y93URN24F1SCX15VA2P918LPEIJ2H3UFORCJ1</p>
+         */
         @NameInMap("ModelUuid")
         public String modelUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-24 11:22:01</p>
+         */
         @NameInMap("ModifiedTimeGMT")
         public String modifiedTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("ModifierUserId")
         public String modifierUserId;
 
@@ -254,15 +334,27 @@ public class SearchFormDatasResponseBody extends TeaModel {
         @NameInMap("Originator")
         public SearchFormDatasResponseBodyDataOriginator originator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Sequence")
         public String sequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>231008101012015353</p>
+         */
         @NameInMap("SerialNo")
         public String serialNo;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Version")
         public Long version;
 

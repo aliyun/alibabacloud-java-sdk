@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class UpdateMeetingRoomGroupRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试分组</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
@@ -46,6 +53,10 @@ public class UpdateMeetingRoomGroupRequest extends TeaModel {
     }
 
     public static class UpdateMeetingRoomGroupRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

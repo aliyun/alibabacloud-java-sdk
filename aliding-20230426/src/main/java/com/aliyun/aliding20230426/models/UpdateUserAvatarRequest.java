@@ -4,6 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserAvatarRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>@lADPDfYH3A-xxxx</p>
+     */
     @NameInMap("AvatarMediaId")
     public String avatarMediaId;
 

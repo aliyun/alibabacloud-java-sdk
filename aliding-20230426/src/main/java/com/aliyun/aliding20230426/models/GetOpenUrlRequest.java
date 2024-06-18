@@ -6,25 +6,42 @@ import com.aliyun.tea.*;
 public class GetOpenUrlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKT0xxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.aliwork.com/fileHandle?appType=APP_VN7I6xxx&fileName=fileName.xlsx&instId=&type=download">https://www.aliwork.com/fileHandle?appType=APP_VN7I6xxx&amp;fileName=fileName.xlsx&amp;instId=&amp;type=download</a></p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60000L</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 

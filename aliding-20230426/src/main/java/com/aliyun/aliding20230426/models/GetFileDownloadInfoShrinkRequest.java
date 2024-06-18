@@ -4,12 +4,20 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetFileDownloadInfoShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>798xxxxx</p>
+     */
     @NameInMap("DentryId")
     public String dentryId;
 
     @NameInMap("Option")
     public String optionShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>854xxxx</p>
+     */
     @NameInMap("SpaceId")
     public String spaceId;
 

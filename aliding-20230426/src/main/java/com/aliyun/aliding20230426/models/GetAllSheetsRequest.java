@@ -9,6 +9,9 @@ public class GetAllSheetsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;
@@ -35,6 +38,10 @@ public class GetAllSheetsRequest extends TeaModel {
     }
 
     public static class GetAllSheetsRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

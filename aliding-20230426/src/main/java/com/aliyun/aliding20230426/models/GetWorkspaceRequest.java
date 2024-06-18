@@ -7,11 +7,18 @@ public class GetWorkspaceRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetWorkspaceRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("WithPermissionRole")
     public Boolean withPermissionRole;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MJ0pDSKMV9dO20E4</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -46,6 +53,10 @@ public class GetWorkspaceRequest extends TeaModel {
     }
 
     public static class GetWorkspaceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

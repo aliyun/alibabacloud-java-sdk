@@ -7,12 +7,24 @@ public class CreateDeliveryPlanRequest extends TeaModel {
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1699265024987</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1028</p>
+     */
     @NameInMap("ResId")
     public String resId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1699265024987</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -76,6 +88,10 @@ public class CreateDeliveryPlanRequest extends TeaModel {
     }
 
     public static class CreateDeliveryPlanRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class GetRangeShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3:C3</p>
      */
     @NameInMap("RangeAddress")
     public String rangeAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>values</p>
+     */
     @NameInMap("Select")
     public String select;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sheet1</p>
      */
     @NameInMap("SheetId")
     public String sheetId;
@@ -24,6 +34,9 @@ public class GetRangeShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;

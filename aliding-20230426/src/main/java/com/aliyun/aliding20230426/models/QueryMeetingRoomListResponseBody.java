@@ -4,14 +4,25 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryMeetingRoomListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("nextToken")
     public Long nextToken;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,12 +68,24 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomListResponseBodyResultRoomGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试分组</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
@@ -98,9 +121,17 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomListResponseBodyResultRoomLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LabelId")
         public Long labelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>电视</p>
+         */
         @NameInMap("LabelName")
         public String labelName;
 
@@ -128,9 +159,17 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomListResponseBodyResultRoomLocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx市xx区xx街道xx号</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx公司</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -158,18 +197,34 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomListResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ding994axxxx</p>
+         */
         @NameInMap("CorpId")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxIsvRoomId</p>
+         */
         @NameInMap("IsvRoomId")
         public String isvRoomId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RoomCapacity")
         public Integer roomCapacity;
 
         @NameInMap("RoomGroup")
         public QueryMeetingRoomListResponseBodyResultRoomGroup roomGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0ffb7xxxxx</p>
+         */
         @NameInMap("RoomId")
         public String roomId;
 
@@ -179,15 +234,31 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         @NameInMap("RoomLocation")
         public QueryMeetingRoomListResponseBodyResultRoomLocation roomLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试会议室</p>
+         */
         @NameInMap("RoomName")
         public String roomName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://static.dingtalk.com/media/lADPxxxxx.jpg">https://static.dingtalk.com/media/lADPxxxxx.jpg</a></p>
+         */
         @NameInMap("RoomPicture")
         public String roomPicture;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012241xxxxx</p>
+         */
         @NameInMap("RoomStaffId")
         public String roomStaffId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RoomStatus")
         public Integer roomStatus;
 

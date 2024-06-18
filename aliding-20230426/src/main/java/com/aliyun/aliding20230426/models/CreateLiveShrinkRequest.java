@@ -4,24 +4,42 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://sss/sss">http://sss/sss</a></p>
+     */
     @NameInMap("CoverUrl")
     public String coverUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>这是一个直播</p>
+     */
     @NameInMap("Introduction")
     public String introduction;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1698596800000</p>
      */
     @NameInMap("PreEndTime")
     public Long preEndTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1691596800000</p>
      */
     @NameInMap("PreStartTime")
     public Long preStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PublicType")
     public Long publicType;
 
@@ -30,6 +48,9 @@ public class CreateLiveShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>标题</p>
      */
     @NameInMap("Title")
     public String title;

@@ -7,23 +7,36 @@ public class UploadMediaShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.jpg</p>
+     */
     @NameInMap("mediaName")
     public String mediaName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
      */
     @NameInMap("mediaType")
     public String mediaType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567</p>
      */
     @NameInMap("orgId")
     public Long orgId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://alicdn.com/xxx.jpg">https://alicdn.com/xxx.jpg</a></p>
      */
     @NameInMap("url")
     public String url;

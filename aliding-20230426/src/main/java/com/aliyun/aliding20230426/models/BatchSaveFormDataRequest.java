@@ -4,24 +4,48 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class BatchSaveFormDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_XCE0EVXS6DYG3YDYC5RD</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AsynchronousExecution")
     public Boolean asynchronousExecution;
 
     @NameInMap("FormDataJsonList")
     public java.util.List<String> formDataJsonList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FORM-GX866MC1NC1VOFF6WVQW33FD16E23L3CPMKVKA</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("KeepRunningAfterException")
     public Boolean keepRunningAfterException;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NoExecuteExpression")
     public Boolean noExecuteExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>09866181UTZVVD4R3DC955FNKIM52HVPU5WWK7</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

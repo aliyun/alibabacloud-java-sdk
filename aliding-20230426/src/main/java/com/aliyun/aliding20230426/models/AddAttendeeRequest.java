@@ -12,12 +12,18 @@ public class AddAttendeeRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cnNTbW1YbU9sL2p6aFJZdEgvdlQrQT08</p>
      */
     @NameInMap("EventId")
     public String eventId;
@@ -74,9 +80,17 @@ public class AddAttendeeRequest extends TeaModel {
     }
 
     public static class AddAttendeeRequestAttendeesToAdd extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isOptional")
         public Boolean isOptional;
 

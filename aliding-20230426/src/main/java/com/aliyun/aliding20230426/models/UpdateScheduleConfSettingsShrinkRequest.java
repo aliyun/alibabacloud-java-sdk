@@ -7,6 +7,10 @@ public class UpdateScheduleConfSettingsShrinkRequest extends TeaModel {
     @NameInMap("ScheduleConfSettingModel")
     public String scheduleConfSettingModelShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f6fb627e-a7e8-403e-b1f8-26e85450f4a9</p>
+     */
     @NameInMap("ScheduleConferenceId")
     public String scheduleConferenceId;
 

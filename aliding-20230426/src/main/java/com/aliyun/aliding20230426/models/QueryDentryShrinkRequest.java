@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class QueryDentryShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("DentryId")
     public String dentryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeSpace")
     public Boolean includeSpace;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>space-fxhb96vuddz8htqt</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;

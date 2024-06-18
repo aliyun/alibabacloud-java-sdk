@@ -32,6 +32,10 @@ public class RecallHonorHeaders extends TeaModel {
     }
 
     public static class RecallHonorHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1323845308033417</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

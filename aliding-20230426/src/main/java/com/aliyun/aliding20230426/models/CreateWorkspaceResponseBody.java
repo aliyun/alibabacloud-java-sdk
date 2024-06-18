@@ -4,21 +4,40 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>知识库描述</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>知识库</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://xxx/workspaceId">https://xxx/workspaceId</a></p>
+     */
     @NameInMap("url")
     public String url;
 
+    /**
+     * <strong>example:</strong>
+     * <p>YRBGvyxxxx</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 

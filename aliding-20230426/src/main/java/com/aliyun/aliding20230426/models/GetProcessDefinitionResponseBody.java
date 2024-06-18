@@ -4,42 +4,78 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetProcessDefinitionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FORM-EF6Y4xxx</p>
+     */
     @NameInMap("formUuid")
     public String formUuid;
 
     @NameInMap("originator")
     public GetProcessDefinitionResponseBodyOriginator originator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agree</p>
+     */
     @NameInMap("outResult")
     public String outResult;
 
     @NameInMap("owners")
     public java.util.List<GetProcessDefinitionResponseBodyOwners> owners;
 
+    /**
+     * <strong>example:</strong>
+     * <p>proc-123</p>
+     */
     @NameInMap("processId")
     public String processId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f30233fb-72e1-4xxx</p>
+     */
     @NameInMap("processInstanceId")
     public String processInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("status")
     public String status;
 
     @NameInMap("tasks")
     public java.util.List<GetProcessDefinitionResponseBodyTasks> tasks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>李四发起的请购单</p>
+     */
     @NameInMap("title")
     public String title;
 
     @NameInMap("variables")
     public java.util.Map<String, ?> variables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -153,27 +189,59 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     }
 
     public static class GetProcessDefinitionResponseBodyOriginatorMasterDataDepartments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发部</p>
+         */
         @NameInMap("DeptName")
         public String deptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>development department</p>
+         */
         @NameInMap("DeptNameInEnglish")
         public String deptNameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>develop-A</p>
+         */
         @NameInMap("DeptNo")
         public String deptNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>总部-开发部</p>
+         */
         @NameInMap("DeptPath")
         public String deptPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxafafaf</p>
+         */
         @NameInMap("HumanSourceGroupOrderNumber")
         public String humanSourceGroupOrderNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123311221</p>
+         */
         @NameInMap("HumanSourceGroupWorkNo")
         public String humanSourceGroupWorkNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1732245789</p>
+         */
         @NameInMap("MasterWorkNo")
         public String masterWorkNo;
 
@@ -249,33 +317,69 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     }
 
     public static class GetProcessDefinitionResponseBodyOriginator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发部成立于2000年</p>
+         */
         @NameInMap("DepartmentDescription")
         public String departmentDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZhangSan</p>
+         */
         @NameInMap("DisplayEnName")
         public String displayEnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试应用</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         @NameInMap("MasterDataDepartments")
         public java.util.List<GetProcessDefinitionResponseBodyOriginatorMasterDataDepartments> masterDataDepartments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>o-YDJKINSxxx</p>
+         */
         @NameInMap("OrderNumber")
         public String orderNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://abc.com/a.png">https://abc.com/a.png</a></p>
+         */
         @NameInMap("PersonalPhoto")
         public String personalPhoto;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wang123</p>
+         */
         @NameInMap("TbWang")
         public String tbWang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("UserInfo")
         public String userInfo;
 
@@ -367,27 +471,59 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     }
 
     public static class GetProcessDefinitionResponseBodyOwnersMasterDataDepartments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发部</p>
+         */
         @NameInMap("DeptName")
         public String deptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>development department</p>
+         */
         @NameInMap("DeptNameInEnglish")
         public String deptNameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>develop-A</p>
+         */
         @NameInMap("DeptNo")
         public String deptNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>总部-开发部</p>
+         */
         @NameInMap("DeptPath")
         public String deptPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxafafaf</p>
+         */
         @NameInMap("HumanSourceGroupOrderNumber")
         public String humanSourceGroupOrderNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123311221</p>
+         */
         @NameInMap("HumanSourceGroupWorkNo")
         public String humanSourceGroupWorkNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1732245789</p>
+         */
         @NameInMap("MasterWorkNo")
         public String masterWorkNo;
 
@@ -463,33 +599,69 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     }
 
     public static class GetProcessDefinitionResponseBodyOwners extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发部成立于2000年</p>
+         */
         @NameInMap("DepartmentDescription")
         public String departmentDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZhangSan</p>
+         */
         @NameInMap("DisplayEnName")
         public String displayEnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试应用</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         @NameInMap("MasterDataDepartments")
         public java.util.List<GetProcessDefinitionResponseBodyOwnersMasterDataDepartments> masterDataDepartments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>o-YDJKINSxxx</p>
+         */
         @NameInMap("OrderNumber")
         public String orderNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://abc.com/a.png">https://abc.com/a.png</a></p>
+         */
         @NameInMap("PersonalPhoto")
         public String personalPhoto;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wang123</p>
+         */
         @NameInMap("TbWang")
         public String tbWang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("UserInfo")
         public String userInfo;
 
@@ -581,18 +753,38 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     }
 
     public static class GetProcessDefinitionResponseBodyTasksActivity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>act-xxaanfaf</p>
+         */
         @NameInMap("ActivityId")
         public String activityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("ActivityInstanceStatus")
         public String activityInstanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>activity-124</p>
+         */
         @NameInMap("ActivityName")
         public String activityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>redirect task</p>
+         */
         @NameInMap("ActivityNameInEnglish")
         public String activityNameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -644,15 +836,27 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     }
 
     public static class GetProcessDefinitionResponseBodyTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("ActionerId")
         public String actionerId;
 
         @NameInMap("Activity")
         public GetProcessDefinitionResponseBodyTasksActivity activity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>792</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 

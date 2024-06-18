@@ -7,21 +7,41 @@ public class GetFormDataByIDResponseBody extends TeaModel {
     @NameInMap("formData")
     public java.util.Map<String, ?> formData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FORM_INST_12345</p>
+     */
     @NameInMap("formInstId")
     public String formInstId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("modifiedTimeGMT")
     public String modifiedTimeGMT;
 
     @NameInMap("originator")
     public GetFormDataByIDResponseBodyOriginator originator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -87,12 +107,24 @@ public class GetFormDataByIDResponseBody extends TeaModel {
     }
 
     public static class GetFormDataByIDResponseBodyOriginatorName extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZhangSan</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i18n</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -128,15 +160,27 @@ public class GetFormDataByIDResponseBody extends TeaModel {
     }
 
     public static class GetFormDataByIDResponseBodyOriginator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发部</p>
+         */
         @NameInMap("DepartmentName")
         public String departmentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:abc@alimail.com">abc@alimail.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
         @NameInMap("Name")
         public GetFormDataByIDResponseBodyOriginatorName name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

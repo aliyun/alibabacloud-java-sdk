@@ -7,11 +7,18 @@ public class QueryUserHonorsResponseBody extends TeaModel {
     @NameInMap("honors")
     public java.util.List<QueryUserHonorsResponseBodyHonors> honors;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http-trigger-nodejs10.luoni-old.1431999136518149.cn-hangzhou.fc.devsapp.net</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -46,9 +53,17 @@ public class QueryUserHonorsResponseBody extends TeaModel {
     }
 
     public static class QueryUserHonorsResponseBodyHonorsGrantHistory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12312312312312312</p>
+         */
         @NameInMap("grantTime")
         public Long grantTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>363784</p>
+         */
         @NameInMap("senderUserid")
         public String senderUserid;
 
@@ -76,6 +91,10 @@ public class QueryUserHonorsResponseBody extends TeaModel {
     }
 
     public static class QueryUserHonorsResponseBodyHonors extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("expirationTime")
         public Long expirationTime;
 
@@ -85,6 +104,10 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         @NameInMap("honorDesc")
         public String honorDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21659398</p>
+         */
         @NameInMap("honorId")
         public String honorId;
 

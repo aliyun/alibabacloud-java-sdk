@@ -7,6 +7,10 @@ public class GetUserRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetUserRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("language")
     public String language;
 
@@ -32,6 +36,10 @@ public class GetUserRequest extends TeaModel {
     }
 
     public static class GetUserRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

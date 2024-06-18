@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ExpandGroupCapacityShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidt*****Xa4K10w==</p>
      */
     @NameInMap("OpenConversationId")
     public String openConversationId;

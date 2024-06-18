@@ -34,6 +34,9 @@ public class DeleteSubscribedCalendarHeaders extends TeaModel {
     public static class DeleteSubscribedCalendarHeadersAccountContext extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012345</p>
          */
         @NameInMap("accountId")
         public String accountId;

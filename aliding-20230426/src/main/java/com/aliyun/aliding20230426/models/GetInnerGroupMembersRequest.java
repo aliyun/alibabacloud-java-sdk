@@ -4,12 +4,24 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetInnerGroupMembersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UZr*****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cidB8Pzg****FIWPv2PMA==</p>
+     */
     @NameInMap("OpenConversationId")
     public String openConversationId;
 

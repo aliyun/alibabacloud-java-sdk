@@ -4,21 +4,45 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetCorpAccomplishmentTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[{}]</p>
+     */
     @NameInMap("data")
     public java.util.List<GetCorpAccomplishmentTasksResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -76,51 +100,115 @@ public class GetCorpAccomplishmentTasksResponseBody extends TeaModel {
     }
 
     public static class GetCorpAccomplishmentTasksResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("ActiveTimeGMT")
         public String activeTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("ActualActionerId")
         public String actualActionerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>APP_XCxxx</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("CreateTimeGMT")
         public String createTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("FinishTimeGMT")
         public String finishTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123456@li.com">123456@li.com</a></p>
+         */
         @NameInMap("OriginatorEmail")
         public String originatorEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("OriginatorId")
         public String originatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>名称</p>
+         */
         @NameInMap("OriginatorName")
         public String originatorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("OriginatorNameInEnglish")
         public String originatorNameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>昵称</p>
+         */
         @NameInMap("OriginatorNickName")
         public String originatorNickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>english nick</p>
+         */
         @NameInMap("OriginatorNickNameInEnglish")
         public String originatorNickNameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>originatorPhotoexample</p>
+         */
         @NameInMap("OriginatorPhoto")
         public String originatorPhoto;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agree</p>
+         */
         @NameInMap("OutResult")
         public String outResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>结果名称</p>
+         */
         @NameInMap("OutResultName")
         public String outResultName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instancexxxx</p>
+         */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("Title")
         public String title;
 

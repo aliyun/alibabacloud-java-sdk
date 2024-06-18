@@ -7,9 +7,17 @@ public class SendSearchShadeShrinkRequest extends TeaModel {
     @NameInMap("Content")
     public String contentShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1693881641000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1693881641000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

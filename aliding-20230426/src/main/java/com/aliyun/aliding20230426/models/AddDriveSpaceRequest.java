@@ -35,6 +35,10 @@ public class AddDriveSpaceRequest extends TeaModel {
     }
 
     public static class AddDriveSpaceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -4,33 +4,68 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryLiveWatchDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>84600</p>
+     */
     @NameInMap("avgWatchTime")
     public Long avgWatchTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("liveUv")
     public Integer liveUv;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("msgCount")
     public Integer msgCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("playbackUv")
     public Integer playbackUv;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("praiseCount")
     public Integer praiseCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("pv")
     public Integer pv;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1222000</p>
+     */
     @NameInMap("totalWatchTime")
     public Long totalWatchTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("uv")
     public Integer uv;
 

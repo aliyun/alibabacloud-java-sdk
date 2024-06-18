@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetDocContentTakIdShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qnYMoO1rWxrkmoj2I5L2PYkoJ47Z3je9</p>
      */
     @NameInMap("DentryUuid")
     public String dentryUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>markdown</p>
+     */
     @NameInMap("TargetFormat")
     public String targetFormat;
 

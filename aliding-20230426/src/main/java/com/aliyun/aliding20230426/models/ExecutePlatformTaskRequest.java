@@ -4,27 +4,55 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ExecutePlatformTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBxxx</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("FormDataJson")
     public String formDataJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>y</p>
+     */
     @NameInMap("NoExecuteExpressions")
     public String noExecuteExpressions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Agree</p>
+     */
     @NameInMap("OutResult")
     public String outResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f30233fb-72e1-4af4-8cb8-c7e0ea9ee530</p>
+     */
     @NameInMap("ProcessInstanceId")
     public String processInstanceId;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxyy</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

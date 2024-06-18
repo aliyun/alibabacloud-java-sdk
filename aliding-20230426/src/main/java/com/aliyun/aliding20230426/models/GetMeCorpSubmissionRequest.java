@@ -4,33 +4,73 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetMeCorpSubmissionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[\&quot;APP_xxx\&quot;,\&quot;APP_xxx\&quot;]</p>
+     */
     @NameInMap("AppTypes")
     public String appTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ding123</p>
+     */
     @NameInMap("CorpId")
     public String corpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateFromTimeGMT")
     public Long createFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateToTimeGMT")
     public Long createToTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[\&quot;xx\&quot;,\&quot;xxx\&quot;]</p>
+     */
     @NameInMap("ProcessCodes")
     public String processCodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JHASD123HAXXX</p>
+     */
     @NameInMap("Token")
     public String token;
 

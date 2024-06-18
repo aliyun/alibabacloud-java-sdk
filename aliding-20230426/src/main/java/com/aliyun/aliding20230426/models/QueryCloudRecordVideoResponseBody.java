@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryCloudRecordVideoResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,30 +38,66 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
     }
 
     public static class QueryCloudRecordVideoResponseBodyVideoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>59886</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631172094000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1127942</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>faa1566c5bc24f21821ae2394f82db2e</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>290882268xxx1172033231</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RecordType")
         public Long recordType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631172094000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

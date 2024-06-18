@@ -32,6 +32,10 @@ public class GetReportUnReadCountHeaders extends TeaModel {
     }
 
     public static class GetReportUnReadCountHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

@@ -4,11 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ClearDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A1:B2</p>
+     */
     @NameInMap("a1Notation")
     public String a1Notation;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;

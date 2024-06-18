@@ -9,6 +9,9 @@ public class QueryScheduleConferenceShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2a489c68-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("scheduleConferenceId")
     public String scheduleConferenceId;

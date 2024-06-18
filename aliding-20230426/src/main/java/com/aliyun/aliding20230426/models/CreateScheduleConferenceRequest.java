@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateScheduleConferenceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1687928400000L</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1687924800000L</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -21,6 +27,9 @@ public class CreateScheduleConferenceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>预约会议标题</p>
      */
     @NameInMap("Title")
     public String title;
@@ -63,6 +72,10 @@ public class CreateScheduleConferenceRequest extends TeaModel {
     }
 
     public static class CreateScheduleConferenceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

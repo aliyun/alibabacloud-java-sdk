@@ -32,6 +32,10 @@ public class GetSheetHeaders extends TeaModel {
     }
 
     public static class GetSheetHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

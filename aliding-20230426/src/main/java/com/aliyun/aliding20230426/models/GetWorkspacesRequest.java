@@ -12,6 +12,9 @@ public class GetWorkspacesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace_id</p>
      */
     @NameInMap("WorkspaceIds")
     public java.util.List<String> workspaceIds;
@@ -46,6 +49,10 @@ public class GetWorkspacesRequest extends TeaModel {
     }
 
     public static class GetWorkspacesRequestOption extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("WithPermissionRole")
         public Boolean withPermissionRole;
 
@@ -65,6 +72,10 @@ public class GetWorkspacesRequest extends TeaModel {
     }
 
     public static class GetWorkspacesRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

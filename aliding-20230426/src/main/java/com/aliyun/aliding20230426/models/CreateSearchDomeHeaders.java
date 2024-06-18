@@ -32,6 +32,10 @@ public class CreateSearchDomeHeaders extends TeaModel {
     }
 
     public static class CreateSearchDomeHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ba3a9b612345678d8fedf544ef69d19e</p>
+         */
         @NameInMap("userToken")
         public String userToken;
 

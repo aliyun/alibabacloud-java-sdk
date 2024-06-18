@@ -4,30 +4,66 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetProcessDefinitionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBxxx</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ding123</p>
+     */
     @NameInMap("CorpId")
     public String corpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-xxafafaf</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("NameSpace")
     public String nameSpace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>o-YDJKIxxx</p>
+     */
     @NameInMap("OrderNumber")
     public String orderNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f30233fb-72e1-4af4-8cb8-c7e0ea9ee530</p>
+     */
     @NameInMap("ProcessInstanceId")
     public String processInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxyy</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexabc1234</p>
+     */
     @NameInMap("SystemType")
     public String systemType;
 

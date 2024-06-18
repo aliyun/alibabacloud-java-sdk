@@ -7,9 +7,17 @@ public class QueryOrgTodoTasksRequest extends TeaModel {
     @NameInMap("TenantContext")
     public QueryOrgTodoTasksRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isDone")
     public Boolean isDone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -43,6 +51,10 @@ public class QueryOrgTodoTasksRequest extends TeaModel {
     }
 
     public static class QueryOrgTodoTasksRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

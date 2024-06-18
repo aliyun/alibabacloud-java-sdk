@@ -34,6 +34,9 @@ public class QueryLiveInfoHeaders extends TeaModel {
     public static class QueryLiveInfoHeadersAccountContext extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012345</p>
          */
         @NameInMap("accountId")
         public String accountId;

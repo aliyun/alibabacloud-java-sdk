@@ -34,6 +34,9 @@ public class CreateWorkspaceDocHeaders extends TeaModel {
     public static class CreateWorkspaceDocHeadersAccountContext extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012345</p>
          */
         @NameInMap("accountId")
         public String accountId;

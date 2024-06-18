@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMineWorkspaceResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class GetMineWorkspaceResponseBody extends TeaModel {
     }
 
     public static class GetMineWorkspaceResponseBodyWorkspaceIcon extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example/file-manage-files/zh-CN/202***13/ldet/avatar3.jpg">https://example/file-manage-files/zh-CN/202***13/ldet/avatar3.jpg</a></p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -65,48 +76,104 @@ public class GetMineWorkspaceResponseBody extends TeaModel {
     }
 
     public static class GetMineWorkspaceResponseBodyWorkspace extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ding16b241fd05********288</p>
+         */
         @NameInMap("CorpId")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example/file-manage-files/zh-CN/202***13/ldet/XXXX.jpg">https://example/file-manage-files/zh-CN/202***13/ldet/XXXX.jpg</a></p>
+         */
         @NameInMap("Cover")
         public String cover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T11:29Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01472825524039877041</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace_description</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Icon")
         public GetMineWorkspaceResponseBodyWorkspaceIcon icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T11:29Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01472825524039877041</p>
+         */
         @NameInMap("ModifierId")
         public String modifierId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>READER</p>
+         */
         @NameInMap("PermissionRole")
         public String permissionRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MNDoBb60VLBPraakI1Ywxyyn8lemrZQ3</p>
+         */
         @NameInMap("RootNodeId")
         public String rootNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lHiicjNFM2iSFYSdz2iPuI8ZwiEiE</p>
+         */
         @NameInMap("TeamId")
         public String teamId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEAM</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace_url</p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9r09jSO3WARyxd8A</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

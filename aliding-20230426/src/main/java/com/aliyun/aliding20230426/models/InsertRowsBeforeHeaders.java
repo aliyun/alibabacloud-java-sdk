@@ -32,6 +32,10 @@ public class InsertRowsBeforeHeaders extends TeaModel {
     }
 
     public static class InsertRowsBeforeHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

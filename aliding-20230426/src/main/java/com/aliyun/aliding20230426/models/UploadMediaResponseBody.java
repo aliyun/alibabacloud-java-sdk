@@ -4,11 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UploadMediaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>abcd1234</p>
+     */
     @NameInMap("mediaId")
     public String mediaId;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd-1234-wxyz-9876</p>
      */
     @NameInMap("requestId")
     public String requestId;

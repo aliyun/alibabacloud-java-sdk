@@ -7,24 +7,43 @@ public class AddAttendeeResponseBody extends TeaModel {
     @NameInMap("Content")
     public AddAttendeeResponseBodyContent content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorCtx")
     public java.util.Map<String, ?> errorCtx;
 
+    /**
+     * <strong>example:</strong>
+     * <p>error check permissions</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9BCC17ED-0187-54A0-BD31-56FDBE865447</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -90,6 +109,10 @@ public class AddAttendeeResponseBody extends TeaModel {
     }
 
     public static class AddAttendeeResponseBodyContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Data")
         public Object data;
 

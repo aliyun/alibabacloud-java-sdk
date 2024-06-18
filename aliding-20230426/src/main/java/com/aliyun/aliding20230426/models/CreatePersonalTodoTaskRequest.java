@@ -4,14 +4,25 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreatePersonalTodoTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>待办备注信息</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1703750708595</p>
+     */
     @NameInMap("DueTime")
     public Long dueTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ &quot;012345&quot; ]</p>
      */
     @NameInMap("ExecutorIds")
     public java.util.List<String> executorIds;
@@ -19,11 +30,18 @@ public class CreatePersonalTodoTaskRequest extends TeaModel {
     @NameInMap("NotifyConfigs")
     public CreatePersonalTodoTaskRequestNotifyConfigs notifyConfigs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[ &quot;012345&quot; ]</p>
+     */
     @NameInMap("ParticipantIds")
     public java.util.List<String> participantIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>待办标题</p>
      */
     @NameInMap("Subject")
     public String subject;
@@ -93,6 +111,10 @@ public class CreatePersonalTodoTaskRequest extends TeaModel {
     }
 
     public static class CreatePersonalTodoTaskRequestNotifyConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DingNotify")
         public String dingNotify;
 
@@ -112,6 +134,10 @@ public class CreatePersonalTodoTaskRequest extends TeaModel {
     }
 
     public static class CreatePersonalTodoTaskRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

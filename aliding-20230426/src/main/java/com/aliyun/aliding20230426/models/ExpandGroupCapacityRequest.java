@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ExpandGroupCapacityRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidt*****Xa4K10w==</p>
      */
     @NameInMap("OpenConversationId")
     public String openConversationId;
@@ -35,6 +38,10 @@ public class ExpandGroupCapacityRequest extends TeaModel {
     }
 
     public static class ExpandGroupCapacityRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

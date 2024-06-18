@@ -4,12 +4,24 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetRelatedWorkspacesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -54,15 +66,31 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
     }
 
     public static class GetRelatedWorkspacesResponseBodyWorkspacesRecentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1638256965936</p>
+         */
         @NameInMap("LastEditTime")
         public Long lastEditTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>知识库</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nb9XxxxxxxmyAp</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://alidocs.xxxx/nb9XJKdxxxxmyAp">https://alidocs.xxxx/nb9XJKdxxxxmyAp</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -106,27 +134,55 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
     }
 
     public static class GetRelatedWorkspacesResponseBodyWorkspaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1638256965936</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Deleted")
         public Boolean deleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>知识库</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Q2xwPOKiSLxxxx</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
         @NameInMap("RecentList")
         public java.util.List<GetRelatedWorkspacesResponseBodyWorkspacesRecentList> recentList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OWNER</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://alidocs.xxxx/nb9XJKdxxxxmyAp/docs/nb9XxxxxxxmyAp">https://alidocs.xxxx/nb9XJKdxxxxmyAp/docs/nb9XxxxxxxmyAp</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nb9XJKdxxxxmyAp</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

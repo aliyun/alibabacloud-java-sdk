@@ -9,12 +9,18 @@ public class CreateOrgHonorTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fsdfasdjf132342d</p>
      */
     @NameInMap("avatarFrameMediaId")
     public String avatarFrameMediaId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#FFFBB4</p>
      */
     @NameInMap("defaultBgColor")
     public String defaultBgColor;
@@ -27,6 +33,9 @@ public class CreateOrgHonorTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1273adf23</p>
      */
     @NameInMap("medalMediaId")
     public String medalMediaId;
@@ -39,12 +48,18 @@ public class CreateOrgHonorTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("orgId")
     public Long orgId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>363784</p>
      */
     @NameInMap("userId")
     public String userId;

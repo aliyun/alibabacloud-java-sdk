@@ -7,9 +7,17 @@ public class SendBannerRequest extends TeaModel {
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1693881641000L</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1693881641000L</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -54,6 +62,10 @@ public class SendBannerRequest extends TeaModel {
     }
 
     public static class SendBannerRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

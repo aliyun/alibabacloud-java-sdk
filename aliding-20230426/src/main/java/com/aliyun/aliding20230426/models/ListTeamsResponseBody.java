@@ -4,18 +4,34 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListTeamsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2023-05-15T11:29Z</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("teams")
     public java.util.List<ListTeamsResponseBodyTeams> teams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -65,9 +81,17 @@ public class ListTeamsResponseBody extends TeaModel {
     }
 
     public static class ListTeamsResponseBodyTeamsIcon extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example/file-manage-files/zh-CN/202***13/ldet/avatar3.jpg">https://example/file-manage-files/zh-CN/202***13/ldet/avatar3.jpg</a></p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,33 +119,69 @@ public class ListTeamsResponseBody extends TeaModel {
     }
 
     public static class ListTeamsResponseBodyTeams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ding16b241fd05********288</p>
+         */
         @NameInMap("CorpId")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example/file-manage-files/zh-CN/202***13/ldet/XXXX.jpg">https://example/file-manage-files/zh-CN/202***13/ldet/XXXX.jpg</a></p>
+         */
         @NameInMap("Cover")
         public String cover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01472825524039877041</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>team_description</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Icon")
         public ListTeamsResponseBodyTeamsIcon icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T11:29Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("ModifierId")
         public String modifierId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>team_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lHiicjNFM2iSFYSdz2iPuI8ZwiEiE</p>
+         */
         @NameInMap("TeamId")
         public String teamId;
 

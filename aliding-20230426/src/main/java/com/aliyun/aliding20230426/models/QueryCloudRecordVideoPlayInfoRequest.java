@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class QueryCloudRecordVideoPlayInfoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6139b4xxx</p>
      */
     @NameInMap("ConferenceId")
     public String conferenceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44444444</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,6 +72,10 @@ public class QueryCloudRecordVideoPlayInfoRequest extends TeaModel {
     }
 
     public static class QueryCloudRecordVideoPlayInfoRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

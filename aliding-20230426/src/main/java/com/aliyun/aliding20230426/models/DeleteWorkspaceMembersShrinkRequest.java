@@ -15,6 +15,9 @@ public class DeleteWorkspaceMembersShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

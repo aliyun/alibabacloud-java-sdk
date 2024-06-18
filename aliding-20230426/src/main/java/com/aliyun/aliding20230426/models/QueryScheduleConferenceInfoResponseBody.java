@@ -7,18 +7,38 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
     @NameInMap("conferenceList")
     public java.util.List<QueryScheduleConferenceInfoResponseBodyConferenceList> conferenceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -76,21 +96,45 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
     }
 
     public static class QueryScheduleConferenceInfoResponseBodyConferenceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>636cf59f2b032f014ae32902</p>
+         */
         @NameInMap("ConferenceId")
         public String conferenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1668087732000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("RoomCode")
         public String roomCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1668087731000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx发起的视频会议</p>
+         */
         @NameInMap("Title")
         public String title;
 

@@ -4,6 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetRelatedWorkspacesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeRecent")
     public Boolean includeRecent;
 
@@ -32,6 +36,10 @@ public class GetRelatedWorkspacesRequest extends TeaModel {
     }
 
     public static class GetRelatedWorkspacesRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

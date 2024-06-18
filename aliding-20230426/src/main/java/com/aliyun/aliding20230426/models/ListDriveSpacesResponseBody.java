@@ -4,18 +4,34 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListDriveSpacesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fekaf</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("spaces")
     public java.util.List<ListDriveSpacesResponseBodySpaces> spaces;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -65,27 +81,55 @@ public class ListDriveSpacesResponseBody extends TeaModel {
     }
 
     public static class ListDriveSpacesResponseBodySpaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2016-02-28T10:47:08Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-02-28T10:47:08Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acl</p>
+         */
         @NameInMap("PermissionMode")
         public String permissionMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2147483648</p>
+         */
         @NameInMap("Quota")
         public Long quota;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 
         @NameInMap("SpaceName")
         public String spaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>org</p>
+         */
         @NameInMap("SpaceType")
         public String spaceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>640445953</p>
+         */
         @NameInMap("UsedQuota")
         public Long usedQuota;
 

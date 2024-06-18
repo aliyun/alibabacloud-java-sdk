@@ -9,12 +9,18 @@ public class RemoveAttendeeRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iiiP35sJadba8aBSgjrwPRKgiEiF</p>
      */
     @NameInMap("EventId")
     public String eventId;

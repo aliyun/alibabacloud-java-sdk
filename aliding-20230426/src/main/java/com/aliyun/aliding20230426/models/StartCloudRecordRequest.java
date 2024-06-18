@@ -4,9 +4,17 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class StartCloudRecordRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>speech</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>relative_right</p>
+     */
     @NameInMap("SmallWindowPosition")
     public String smallWindowPosition;
 
@@ -15,6 +23,9 @@ public class StartCloudRecordRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61289fxxx</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;
@@ -57,6 +68,10 @@ public class StartCloudRecordRequest extends TeaModel {
     }
 
     public static class StartCloudRecordRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

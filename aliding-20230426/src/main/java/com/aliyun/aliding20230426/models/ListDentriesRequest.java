@@ -4,26 +4,48 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListDentriesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next_token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MODIFIED_TIME</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ParentId")
     public String parentId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>854xxxxx</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;
@@ -31,6 +53,10 @@ public class ListDentriesRequest extends TeaModel {
     @NameInMap("TenantContext")
     public ListDentriesRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithThumbnail")
     public Boolean withThumbnail;
 
@@ -104,6 +130,10 @@ public class ListDentriesRequest extends TeaModel {
     }
 
     public static class ListDentriesRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

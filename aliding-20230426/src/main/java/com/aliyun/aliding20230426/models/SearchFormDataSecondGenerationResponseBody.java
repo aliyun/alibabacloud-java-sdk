@@ -7,18 +7,38 @@ public class SearchFormDataSecondGenerationResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<SearchFormDataSecondGenerationResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -79,6 +99,10 @@ public class SearchFormDataSecondGenerationResponseBody extends TeaModel {
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>English</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
@@ -109,6 +133,10 @@ public class SearchFormDataSecondGenerationResponseBody extends TeaModel {
         @NameInMap("Name")
         public SearchFormDataSecondGenerationResponseBodyDataModifyUserName name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -139,6 +167,10 @@ public class SearchFormDataSecondGenerationResponseBody extends TeaModel {
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>English</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
@@ -169,6 +201,10 @@ public class SearchFormDataSecondGenerationResponseBody extends TeaModel {
         @NameInMap("Name")
         public SearchFormDataSecondGenerationResponseBodyDataOriginatorName name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -196,27 +232,55 @@ public class SearchFormDataSecondGenerationResponseBody extends TeaModel {
     }
 
     public static class SearchFormDataSecondGenerationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-01 10:10:10</p>
+         */
         @NameInMap("CreateTimeGMT")
         public String createTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("CreatorUserId")
         public String creatorUserId;
 
         @NameInMap("FormData")
         public java.util.Map<String, ?> formData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINST-xxxx</p>
+         */
         @NameInMap("FormInstanceId")
         public String formInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FORM-xxxx</p>
+         */
         @NameInMap("FormUuid")
         public String formUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1023</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("InstanceValue")
         public String instanceValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-01 10:10:10</p>
+         */
         @NameInMap("ModifiedTimeGMT")
         public String modifiedTimeGMT;
 
@@ -229,15 +293,27 @@ public class SearchFormDataSecondGenerationResponseBody extends TeaModel {
         @NameInMap("Originator")
         public SearchFormDataSecondGenerationResponseBodyDataOriginator originator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Sequence")
         public String sequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sagc1b3090d</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Version")
         public Long version;
 

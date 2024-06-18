@@ -32,6 +32,10 @@ public class QueryOrgHonorsHeaders extends TeaModel {
     }
 
     public static class QueryOrgHonorsHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>243331014234180628</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

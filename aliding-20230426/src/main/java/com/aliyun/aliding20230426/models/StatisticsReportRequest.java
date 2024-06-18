@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StatisticsReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>173xxxx</p>
      */
     @NameInMap("ReportId")
     public String reportId;
@@ -35,6 +38,10 @@ public class StatisticsReportRequest extends TeaModel {
     }
 
     public static class StatisticsReportRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

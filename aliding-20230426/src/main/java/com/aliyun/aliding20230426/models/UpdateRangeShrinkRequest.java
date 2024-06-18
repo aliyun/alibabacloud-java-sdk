@@ -4,23 +4,41 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateRangeShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[[&quot;#ff0000&quot;,&quot;#ff0000&quot;,&quot;#ff0000&quot;]]</p>
+     */
     @NameInMap("BackgroundColors")
     public String backgroundColorsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[[&quot;type&quot;: &quot;path&quot;,&quot;link&quot;: &quot;<a href="https://www.dingtalk.com%22,%22text">https://www.dingtalk.com&quot;,&quot;text</a>&quot;: &quot;test&quot;]]</p>
+     */
     @NameInMap("Hyperlinks")
     public String hyperlinksShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>General</p>
+     */
     @NameInMap("NumberFormat")
     public String numberFormat;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3:C3</p>
      */
     @NameInMap("RangeAddress")
     public String rangeAddress;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sheet1</p>
      */
     @NameInMap("SheetId")
     public String sheetId;
@@ -28,11 +46,18 @@ public class UpdateRangeShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]]</p>
+     */
     @NameInMap("Values")
     public String valuesShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;

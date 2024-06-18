@@ -7,18 +7,38 @@ public class GetInstancesResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<GetInstancesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -76,12 +96,24 @@ public class GetInstancesResponseBody extends TeaModel {
     }
 
     public static class GetInstancesResponseBodyDataActionExecutorName extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZhangSan</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i18n</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -117,15 +149,27 @@ public class GetInstancesResponseBody extends TeaModel {
     }
 
     public static class GetInstancesResponseBodyDataActionExecutor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发部</p>
+         */
         @NameInMap("DeptName")
         public String deptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:abc@alimail.com">abc@alimail.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
         @NameInMap("Name")
         public GetInstancesResponseBodyDataActionExecutorName name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -169,12 +213,24 @@ public class GetInstancesResponseBody extends TeaModel {
     }
 
     public static class GetInstancesResponseBodyDataOriginatorName extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZhangSan</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i18n</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -210,15 +266,27 @@ public class GetInstancesResponseBody extends TeaModel {
     }
 
     public static class GetInstancesResponseBodyDataOriginator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开发部</p>
+         */
         @NameInMap("DeptName")
         public String deptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:abc@alimail.com">abc@alimail.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
         @NameInMap("Name")
         public GetInstancesResponseBodyDataOriginatorName name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -265,36 +333,72 @@ public class GetInstancesResponseBody extends TeaModel {
         @NameInMap("ActionExecutor")
         public java.util.List<GetInstancesResponseBodyDataActionExecutor> actionExecutor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agree</p>
+         */
         @NameInMap("ApprovedResult")
         public String approvedResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-01</p>
+         */
         @NameInMap("CreateTimeGMT")
         public String createTimeGMT;
 
         @NameInMap("Data")
         public java.util.Map<String, ?> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FORM-EF6Y4G8WO2FN0SUB43TDQ3CGC3FMFQ1G9400RCJ3</p>
+         */
         @NameInMap("FormUuid")
         public String formUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-05-01</p>
+         */
         @NameInMap("ModifiedTimeGMT")
         public String modifiedTimeGMT;
 
         @NameInMap("Originator")
         public GetInstancesResponseBodyDataOriginator originator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TPROC--X1Gxxx</p>
+         */
         @NameInMap("ProcessCode")
         public String processCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f30233fb-72e1-4af4-8cb8-c7e0ea9ee530</p>
+         */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小红发起的请购单</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Version")
         public Long version;
 

@@ -7,6 +7,10 @@ public class RemoveAttendeeResponseBody extends TeaModel {
     @NameInMap("Content")
     public RemoveAttendeeResponseBodyContent content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -16,15 +20,26 @@ public class RemoveAttendeeResponseBody extends TeaModel {
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A348BA5D-FFD4-57E4-9450-23A14D72F331</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -90,6 +105,10 @@ public class RemoveAttendeeResponseBody extends TeaModel {
     }
 
     public static class RemoveAttendeeResponseBodyContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Data")
         public Object data;
 

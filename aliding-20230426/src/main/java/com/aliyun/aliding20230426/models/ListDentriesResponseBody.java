@@ -7,15 +7,31 @@ public class ListDentriesResponseBody extends TeaModel {
     @NameInMap("dentries")
     public java.util.List<ListDentriesResponseBodyDentries> dentries;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next_token</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -65,6 +81,10 @@ public class ListDentriesResponseBody extends TeaModel {
     }
 
     public static class ListDentriesResponseBodyDentriesProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
@@ -84,12 +104,24 @@ public class ListDentriesResponseBody extends TeaModel {
     }
 
     public static class ListDentriesResponseBodyDentriesThumbnail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>url</p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -128,60 +160,128 @@ public class ListDentriesResponseBody extends TeaModel {
         @NameInMap("AppProperties")
         public java.util.Map<String, java.util.List<DentriesAppPropertiesValue>> appProperties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-01T10:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cHtUxxxxx</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>txt</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>657xxxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-01T10:00:00Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cHtUxxxxx</p>
+         */
         @NameInMap("ModifierId")
         public String modifierId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试文件夹</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC_OSS_PARTITION</p>
+         */
         @NameInMap("PartitionType")
         public String partitionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>./test.txt</p>
+         */
         @NameInMap("Path")
         public String path;
 
         @NameInMap("Properties")
         public ListDentriesResponseBodyDentriesProperties properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>512</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>854xxxxx</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DINGTALK</p>
+         */
         @NameInMap("StorageDriver")
         public String storageDriver;
 
         @NameInMap("Thumbnail")
         public ListDentriesResponseBodyDentriesThumbnail thumbnail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FILE</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123xxxxx</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public Long version;
 

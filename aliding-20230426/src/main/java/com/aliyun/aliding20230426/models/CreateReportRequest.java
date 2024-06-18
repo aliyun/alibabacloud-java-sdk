@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Contents")
     public java.util.List<CreateReportRequestContents> contents;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client</p>
      */
     @NameInMap("DdFrom")
     public String ddFrom;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdfafdsfsafdfsaf</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -27,13 +36,24 @@ public class CreateReportRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ToChat")
     public Boolean toChat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("ToCids")
     public java.util.List<String> toCids;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[123,456]</p>
+     */
     @NameInMap("ToUserids")
     public java.util.List<String> toUserids;
 
@@ -101,30 +121,45 @@ public class CreateReportRequest extends TeaModel {
     public static class CreateReportRequestContents extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <h3>序号1</h3>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>markdown</p>
          */
         @NameInMap("ContentType")
         public String contentType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>今日完成工作</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Sort")
         public Long sort;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Long type;
@@ -177,6 +212,10 @@ public class CreateReportRequest extends TeaModel {
     }
 
     public static class CreateReportRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

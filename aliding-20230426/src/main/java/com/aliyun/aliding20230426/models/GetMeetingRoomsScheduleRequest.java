@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetMeetingRoomsScheduleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-01-01T10:15:30+08:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;4002xxxxx&quot;]</p>
      */
     @NameInMap("RoomIds")
     public java.util.List<String> roomIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-01-01T10:15:30+08:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -32,6 +32,10 @@ public class UpdateTodoTaskHeaders extends TeaModel {
     }
 
     public static class UpdateTodoTaskHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

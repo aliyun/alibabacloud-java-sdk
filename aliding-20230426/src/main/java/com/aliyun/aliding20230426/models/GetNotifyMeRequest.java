@@ -4,44 +4,90 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetNotifyMeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBKTxxx</p>
+     */
     @NameInMap("AppTypes")
     public String appTypes;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>corpIdxxx</p>
      */
     @NameInMap("CorpId")
     public String corpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateFromTimeGMT")
     public Long createFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateToTimeGMT")
     public Long createToTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("InstanceCreateFromTimeGMT")
     public Long instanceCreateFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("InstanceCreateToTimeGMT")
     public Long instanceCreateToTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>keyword</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;xx&quot;,&quot;xxx&quot;]</p>
+     */
     @NameInMap("ProcessCodes")
     public String processCodes;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("Token")
     public String token;

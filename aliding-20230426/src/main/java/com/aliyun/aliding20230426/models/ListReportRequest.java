@@ -6,34 +6,58 @@ import com.aliyun.tea.*;
 public class ListReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Cursor")
     public Long cursor;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1507564800000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1507564800000</p>
+     */
     @NameInMap("ModifiedEndTime")
     public Long modifiedEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1507564800000</p>
+     */
     @NameInMap("ModifiedStartTime")
     public Long modifiedStartTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Size")
     public Long size;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1507564800000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>我管理的模版</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -110,6 +134,10 @@ public class ListReportRequest extends TeaModel {
     }
 
     public static class ListReportRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

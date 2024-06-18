@@ -6,31 +6,66 @@ import com.aliyun.tea.*;
 public class ListEventsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxAttendees")
     public Integer maxAttendees;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cnNTbW1YbxxxxdlQrQT09</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cnNTbWxxxxaFJZdEgvdlQrQT09</p>
+     */
     @NameInMap("SeriesMasterId")
     public String seriesMasterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ShowDeleted")
     public Boolean showDeleted;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zxcasdfvc000009</p>
+     */
     @NameInMap("SyncToken")
     public String syncToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-21T00:00:00+08:00</p>
+     */
     @NameInMap("TimeMax")
     public String timeMax;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-20T00:00:00+08:00</p>
+     */
     @NameInMap("TimeMin")
     public String timeMin;
 

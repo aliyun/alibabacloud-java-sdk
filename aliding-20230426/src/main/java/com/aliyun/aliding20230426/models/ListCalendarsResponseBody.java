@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListCalendarsResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,24 +38,52 @@ public class ListCalendarsResponseBody extends TeaModel {
     }
 
     public static class ListCalendarsResponseBodyResponseCalendars extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ETag")
         public String ETag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cnNTbWxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VIEW_DETAIL</p>
+         */
         @NameInMap("Privilege")
         public String privilege;
 
+        /**
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>primary</p>
+         */
         @NameInMap("Type")
         public String type;
 

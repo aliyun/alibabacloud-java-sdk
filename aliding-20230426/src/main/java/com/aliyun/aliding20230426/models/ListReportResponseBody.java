@@ -7,18 +7,33 @@ public class ListReportResponseBody extends TeaModel {
     @NameInMap("dataList")
     public java.util.List<ListReportResponseBodyDataList> dataList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12312131231</p>
+     */
     @NameInMap("nextCursor")
     public Long nextCursor;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("size")
     public Long size;
 
@@ -68,15 +83,31 @@ public class ListReportResponseBody extends TeaModel {
     }
 
     public static class ListReportResponseBodyDataListContents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Sort")
         public String sort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ce9ab5d4a80a9401f97c7077e6a9634bd</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -123,12 +154,24 @@ public class ListReportResponseBody extends TeaModel {
         @NameInMap("Contents")
         public java.util.List<ListReportResponseBodyDataListContents> contents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1678416166000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1127123</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
@@ -138,18 +181,34 @@ public class ListReportResponseBody extends TeaModel {
         @NameInMap("Images")
         public java.util.List<String> images;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31.1264</p>
+         */
         @NameInMap("Latitude")
         public String latitude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>108.938036</p>
+         */
         @NameInMap("Longitude")
         public String longitude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1653543540000</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d64994d09916c76276dd9bfa23637644</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 

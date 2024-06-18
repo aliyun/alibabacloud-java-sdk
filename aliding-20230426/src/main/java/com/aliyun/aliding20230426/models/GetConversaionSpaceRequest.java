@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetConversaionSpaceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidB8Pzg****FIWPv2PMA==</p>
      */
     @NameInMap("OpenConversationId")
     public String openConversationId;
@@ -35,6 +38,10 @@ public class GetConversaionSpaceRequest extends TeaModel {
     }
 
     public static class GetConversaionSpaceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SaveContentShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Contents")
     public String contentsShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client</p>
      */
     @NameInMap("DdFrom")
     public String ddFrom;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdfafdsfsafdfsaf</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

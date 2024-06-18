@@ -4,102 +4,218 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("active")
     public Boolean active;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("admin")
     public Boolean admin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("boss")
     public Boolean boss;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[2,3,4]</p>
+     */
     @NameInMap("deptIdList")
     public java.util.List<Long> deptIdList;
 
     @NameInMap("deptOrderList")
     public java.util.List<GetUserResponseBodyDeptOrderList> deptOrderList;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@xxx.com">test@xxx.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("exclusiveAccount")
     public Boolean exclusiveAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingxxx</p>
+     */
     @NameInMap("exclusiveAccountCorpId")
     public String exclusiveAccountCorpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>组织名称</p>
+     */
     @NameInMap("exclusiveAccountCorpName")
     public String exclusiveAccountCorpName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("exclusiveAccountType")
     public String exclusiveAccountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;爱好&quot;:&quot;旅游&quot;,&quot;年龄&quot;:&quot;24&quot;}</p>
+     */
     @NameInMap("extension")
     public String extension;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("hideMobile")
     public Boolean hideMobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1597573616828</p>
+     */
     @NameInMap("hiredDate")
     public Long hiredDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("jobNumber")
     public String jobNumber;
 
     @NameInMap("leaderInDept")
     public java.util.List<GetUserResponseBodyLeaderInDept> leaderInDept;
 
+    /**
+     * <strong>example:</strong>
+     * <p>login_id3</p>
+     */
     @NameInMap("loginId")
     public String loginId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>manager240</p>
+     */
     @NameInMap("managerUserid")
     public String managerUserid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18513027676</p>
+     */
     @NameInMap("mobile")
     public String mobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>昵称</p>
+     */
     @NameInMap("nickname")
     public String nickname;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@xxx.com">test@xxx.com</a></p>
+     */
     @NameInMap("orgEmail")
     public String orgEmail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("realAuthed")
     public Boolean realAuthed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>备注备注</p>
+     */
     @NameInMap("remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("roleList")
     public java.util.List<GetUserResponseBodyRoleList> roleList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("senior")
     public Boolean senior;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("stateCode")
     public String stateCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>010-86123456-2345</p>
+     */
     @NameInMap("telephone")
     public String telephone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>技术总监</p>
+     */
     @NameInMap("title")
     public String title;
 
     @NameInMap("unionEmpExt")
     public GetUserResponseBodyUnionEmpExt unionEmpExt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
+     */
     @NameInMap("userid")
     public String userid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>未来park</p>
+     */
     @NameInMap("workPlace")
     public String workPlace;
 
@@ -433,12 +549,20 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyRoleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>职务</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -474,9 +598,17 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUnionEmpExtUnionEmpMapList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dingxxx</p>
+         */
         @NameInMap("cropId")
         public String cropId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("userid")
         public String userid;
 
@@ -504,12 +636,20 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUnionEmpExt extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dingxxx</p>
+         */
         @NameInMap("corpId")
         public String corpId;
 
         @NameInMap("unionEmpMapList")
         public java.util.List<GetUserResponseBodyUnionEmpExtUnionEmpMapList> unionEmpMapList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("userid")
         public String userid;
 

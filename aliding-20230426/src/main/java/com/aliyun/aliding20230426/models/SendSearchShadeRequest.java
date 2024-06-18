@@ -7,9 +7,17 @@ public class SendSearchShadeRequest extends TeaModel {
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1693881641000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1693881641000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -54,6 +62,10 @@ public class SendSearchShadeRequest extends TeaModel {
     }
 
     public static class SendSearchShadeRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteMeetingRoomShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ffb7xxxxx</p>
      */
     @NameInMap("RoomId")
     public String roomId;

@@ -32,6 +32,10 @@ public class GetMineWorkspaceRequest extends TeaModel {
     }
 
     public static class GetMineWorkspaceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

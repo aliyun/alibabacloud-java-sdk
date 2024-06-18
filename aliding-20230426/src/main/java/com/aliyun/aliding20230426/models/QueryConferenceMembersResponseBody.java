@@ -7,15 +7,26 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
     @NameInMap("memberModels")
     public java.util.List<QueryConferenceMembersResponseBodyMemberModels> memberModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123000000</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -57,36 +68,80 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
     }
 
     public static class QueryConferenceMembersResponseBodyMemberModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("AttendStatus")
         public Integer attendStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CoHost")
         public Boolean coHost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6323dxxxxx</p>
+         */
         @NameInMap("ConferenceId")
         public String conferenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Host")
         public Boolean host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1663293270000</p>
+         */
         @NameInMap("JoinTime")
         public Long joinTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1663293280000</p>
+         */
         @NameInMap("LeaveTime")
         public Long leaveTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OuterOrgMember")
         public Boolean outerOrgMember;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PstnJoin")
         public Boolean pstnJoin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-12345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小钉</p>
+         */
         @NameInMap("UserNick")
         public String userNick;
 
