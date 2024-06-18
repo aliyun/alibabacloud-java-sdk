@@ -4,6 +4,9 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class ReserveIntlDomainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

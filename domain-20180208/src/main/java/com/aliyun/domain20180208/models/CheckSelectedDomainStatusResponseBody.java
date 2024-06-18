@@ -4,18 +4,34 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class CheckSelectedDomainStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OssFileNotFound</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Module")
     public CheckSelectedDomainStatusResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E2598CAF-DBFE-494E-95EF-B42A33C178AA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,41 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
     }
 
     public static class CheckSelectedDomainStatusResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1567353497</p>
+         */
         @NameInMap("DeadDate")
         public Long deadDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1567353497</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("Premium")
         public Boolean premium;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20.00</p>
+         */
         @NameInMap("Price")
         public Double price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1566353497</p>
+         */
         @NameInMap("RegDate")
         public Long regDate;
 

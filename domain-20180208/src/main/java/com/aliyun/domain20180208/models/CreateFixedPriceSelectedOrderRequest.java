@@ -4,18 +4,44 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class CreateFixedPriceSelectedOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DX123456</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11935401</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20.00</p>
+     */
     @NameInMap("ExpectedPrice")
     public Double expectedPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>partnername</p>
+     */
     @NameInMap("Source")
     public String source;
 

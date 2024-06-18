@@ -4,9 +4,17 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class GetReserveDomainUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D34B02AE-09AF-41C1-A6D3-951A2233EDB0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com">http://example.com</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

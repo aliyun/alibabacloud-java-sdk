@@ -4,6 +4,12 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class SelectedDomainListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20231109</p>
+     */
     @NameInMap("ListDate")
     public String listDate;
 

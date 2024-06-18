@@ -4,6 +4,12 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class QueryAuctionDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("AuctionId")
     public String auctionId;
 

@@ -4,12 +4,21 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class PurchaseIntlDomainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuctionId")
     public String auctionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Price")
     public Double price;
 
