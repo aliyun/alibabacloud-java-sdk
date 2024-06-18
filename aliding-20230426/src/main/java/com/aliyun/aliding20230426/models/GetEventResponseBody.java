@@ -10,9 +10,17 @@ public class GetEventResponseBody extends TeaModel {
     @NameInMap("categories")
     public java.util.List<GetEventResponseBodyCategories> categories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-01-01T10:15:30+08:00</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-01-01T10:15:30+08:00</p>
+     */
     @NameInMap("description")
     public String description;
 
@@ -22,9 +30,17 @@ public class GetEventResponseBody extends TeaModel {
     @NameInMap("extendedProperties")
     public GetEventResponseBodyExtendedProperties extendedProperties;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iiiP35sJxxxxPRKgiEiF</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isAllDay")
     public Boolean isAllDay;
 
@@ -51,6 +67,9 @@ public class GetEventResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>requestId</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -58,18 +77,34 @@ public class GetEventResponseBody extends TeaModel {
     @NameInMap("richTextDescription")
     public GetEventResponseBodyRichTextDescription richTextDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cnNTbW1YbxxxxvdlQrQT09</p>
+     */
     @NameInMap("seriesMasterId")
     public String seriesMasterId;
 
     @NameInMap("start")
     public GetEventResponseBodyStart start;
 
+    /**
+     * <strong>example:</strong>
+     * <p>confirmed</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test event</p>
+     */
     @NameInMap("summary")
     public String summary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-01-01T10:15:30+08:00</p>
+     */
     @NameInMap("updateTime")
     public String updateTime;
 
@@ -255,18 +290,38 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyAttendees extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>jack</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsOptional")
         public Boolean isOptional;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accepted</p>
+         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Self")
         public Boolean self;
 
@@ -337,12 +392,24 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyEnd extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -378,9 +445,17 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyExtendedPropertiesSharedProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dingd*****1231231</p>
+         */
         @NameInMap("BelongCorpId")
         public String belongCorpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zxcvasdfvb123====</p>
+         */
         @NameInMap("SourceOpenCid")
         public String sourceOpenCid;
 
@@ -460,12 +535,24 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyMeetingRooms extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>room 1-2-3</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accepted</p>
+         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c10315a8b4e740a317813ab6fxxxxxx</p>
+         */
         @NameInMap("RoomId")
         public String roomId;
 
@@ -501,15 +588,27 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyOnlineMeetingInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5c4df21d-xxxx-a6db402b9f3a</p>
+         */
         @NameInMap("ConferenceId")
         public String conferenceId;
 
         @NameInMap("ExtraInfo")
         public java.util.Map<String, ?> extraInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk://dingtalkclient/page/videoxxxxalendar?confId=5c4df21d-xxxx9f3f&amp;calendarId=127xxxx124</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -553,15 +652,31 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyOrganizer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tony</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accepted</p>
+         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Self")
         public Boolean self;
 
@@ -605,6 +720,10 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyOriginStart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01T00:00:00Z</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
@@ -624,18 +743,38 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyRecurrencePattern extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("DayOfMonth")
         public Integer dayOfMonth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>monday</p>
+         */
         @NameInMap("DaysOfWeek")
         public String daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>first</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>daily</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -687,12 +826,24 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyRecurrenceRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("NumberOfOccurrences")
         public Integer numberOfOccurrences;
 
+        /**
+         * <strong>example:</strong>
+         * <p>noEnd</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -758,9 +909,17 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyReminders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Minutes")
         public String minutes;
 
@@ -807,12 +966,24 @@ public class GetEventResponseBody extends TeaModel {
     }
 
     public static class GetEventResponseBodyStart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 

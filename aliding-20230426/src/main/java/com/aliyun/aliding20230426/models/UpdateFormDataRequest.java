@@ -4,21 +4,45 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateFormDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBKTxxx</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FORM_INxxx</p>
+     */
     @NameInMap("FormInstanceId")
     public String formInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("UpdateFormDataJson")
     public String updateFormDataJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseLatestVersion")
     public Boolean useLatestVersion;
 

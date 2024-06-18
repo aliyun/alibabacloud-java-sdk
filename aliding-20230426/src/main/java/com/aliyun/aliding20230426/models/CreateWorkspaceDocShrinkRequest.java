@@ -6,22 +6,40 @@ import com.aliyun.tea.*;
 public class CreateWorkspaceDocShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOC</p>
      */
     @NameInMap("DocType")
     public String docType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试文档</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>YRBGv0Ye</p>
+     */
     @NameInMap("ParentNodeId")
     public String parentNodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123243</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>team_template</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 
@@ -30,6 +48,9 @@ public class CreateWorkspaceDocShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

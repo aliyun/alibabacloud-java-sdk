@@ -7,18 +7,33 @@ public class SimpleListReportResponseBody extends TeaModel {
     @NameInMap("dataList")
     public java.util.List<SimpleListReportResponseBodyDataList> dataList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12312131231</p>
+     */
     @NameInMap("nextCursor")
     public Long nextCursor;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("size")
     public Long size;
 
@@ -68,24 +83,48 @@ public class SimpleListReportResponseBody extends TeaModel {
     }
 
     public static class SimpleListReportResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1567034772000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1701038</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xinmu</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
         @NameInMap("DeptName")
         public String deptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ops</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d64994d09916c76276dd9bfa23637644</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WG-Template</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

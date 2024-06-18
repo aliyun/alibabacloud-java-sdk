@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryMeetingRoomResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -13,9 +16,17 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
     @NameInMap("result")
     public QueryMeetingRoomResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -117,12 +128,24 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomResponseBodyResultRoomGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试分组</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
@@ -158,9 +181,17 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomResponseBodyResultRoomLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LabelId")
         public Long labelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>电视</p>
+         */
         @NameInMap("LabelName")
         public String labelName;
 
@@ -188,9 +219,17 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomResponseBodyResultRoomLocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx市xx区xx街道xx号</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx公司</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -218,27 +257,51 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ding994axxxxx</p>
+         */
         @NameInMap("CorpId")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[ &quot;2iPOLbpxxxxuwggiiqiPwiEiF&quot; ]</p>
+         */
         @NameInMap("DeviceUnionIds")
         public java.util.List<String> deviceUnionIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableCycleReservation")
         public Boolean enableCycleReservation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxIsvRoomId</p>
+         */
         @NameInMap("IsvRoomId")
         public String isvRoomId;
 
         @NameInMap("ReservationAuthority")
         public QueryMeetingRoomResponseBodyResultReservationAuthority reservationAuthority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RoomCapacity")
         public Integer roomCapacity;
 
         @NameInMap("RoomGroup")
         public QueryMeetingRoomResponseBodyResultRoomGroup roomGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0ffb7184xxxxx</p>
+         */
         @NameInMap("RoomId")
         public String roomId;
 
@@ -248,15 +311,31 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         @NameInMap("RoomLocation")
         public QueryMeetingRoomResponseBodyResultRoomLocation roomLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试会议室</p>
+         */
         @NameInMap("RoomName")
         public String roomName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://static.dingtalk.com/media/lADxxxxx.jpg">https://static.dingtalk.com/media/lADxxxxx.jpg</a></p>
+         */
         @NameInMap("RoomPicture")
         public String roomPicture;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0122414</p>
+         */
         @NameInMap("RoomStaffId")
         public String roomStaffId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RoomStatus")
         public Integer roomStatus;
 

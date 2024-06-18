@@ -4,6 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CheckUserIsGroupMemberRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cidB8Pz*******FIWPv2PMA==</p>
+     */
     @NameInMap("OpenConversationId")
     public String openConversationId;
 

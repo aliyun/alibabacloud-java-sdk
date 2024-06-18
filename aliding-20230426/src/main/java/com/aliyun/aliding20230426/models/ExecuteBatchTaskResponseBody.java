@@ -4,21 +4,45 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ExecuteBatchTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("failNumber")
     public Integer failNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("successNumber")
     public Integer successNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("total")
     public Integer total;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 

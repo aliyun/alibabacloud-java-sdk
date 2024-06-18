@@ -4,14 +4,25 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next_token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MNDoBb60VLBPraakI1Ywxyyn8lemrZQ3</p>
      */
     @NameInMap("ParentNodeId")
     public String parentNodeId;
@@ -19,6 +30,10 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("TenantContext")
     public ListNodesRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("WithPermissionRole")
     public Boolean withPermissionRole;
 
@@ -68,6 +83,10 @@ public class ListNodesRequest extends TeaModel {
     }
 
     public static class ListNodesRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

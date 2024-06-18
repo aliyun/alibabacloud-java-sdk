@@ -7,9 +7,17 @@ public class QueryOrgTodoTasksShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isDone")
     public Boolean isDone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

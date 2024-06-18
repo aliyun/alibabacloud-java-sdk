@@ -32,6 +32,10 @@ public class WearOrgHonorHeaders extends TeaModel {
     }
 
     public static class WearOrgHonorHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1915607600538524</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryLiveWatchDetailShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4d38xxxxx</p>
      */
     @NameInMap("LiveId")
     public String liveId;

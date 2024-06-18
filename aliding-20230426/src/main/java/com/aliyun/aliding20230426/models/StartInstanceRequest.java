@@ -4,27 +4,55 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBxxx</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18295</p>
+     */
     @NameInMap("DepartmentId")
     public String departmentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("FormDataJson")
     public String formDataJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FORM-EF6Yxxx</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TPROC--EF6Y4xxx</p>
+     */
     @NameInMap("ProcessCode")
     public String processCode;
 
     @NameInMap("ProcessData")
     public String processData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxyy</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

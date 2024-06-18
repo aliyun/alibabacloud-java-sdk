@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteScenegroupMemberRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidvkLfbOyIiSYqjgvAiWwFow==</p>
      */
     @NameInMap("OpenConversationId")
     public String openConversationId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123xxx,223xxx</p>
      */
     @NameInMap("UserIds")
     public String userIds;

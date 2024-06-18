@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetConversaionSpaceShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidB8Pzg****FIWPv2PMA==</p>
      */
     @NameInMap("OpenConversationId")
     public String openConversationId;

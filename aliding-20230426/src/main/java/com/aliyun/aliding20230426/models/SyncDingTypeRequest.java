@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class SyncDingTypeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANT_DING</p>
      */
     @NameInMap("DingType")
     public String dingType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>y</p>
+     */
     @NameInMap("IsDimission")
     public String isDimission;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>antding</p>
      */
     @NameInMap("Source")
     public String source;
@@ -24,6 +34,9 @@ public class SyncDingTypeRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>012345</p>
      */
     @NameInMap("WorkNo")
     public String workNo;
@@ -74,6 +87,10 @@ public class SyncDingTypeRequest extends TeaModel {
     }
 
     public static class SyncDingTypeRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

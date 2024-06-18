@@ -12,6 +12,9 @@ public class AddWorkspaceMembersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -46,12 +49,24 @@ public class AddWorkspaceMembersRequest extends TeaModel {
     }
 
     public static class AddWorkspaceMembersRequestMembers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("MemberType")
         public String memberType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EDITOR</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 
@@ -87,6 +102,10 @@ public class AddWorkspaceMembersRequest extends TeaModel {
     }
 
     public static class AddWorkspaceMembersRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

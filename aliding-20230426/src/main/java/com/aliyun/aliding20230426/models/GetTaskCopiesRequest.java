@@ -4,32 +4,67 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetTaskCopiesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBKxxx</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateFromTimeGMT")
     public Long createFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateToTimeGMT")
     public Long createToTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>keyword</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;xx&quot;,&quot;xxx&quot;]</p>
+     */
     @NameInMap("ProcessCodes")
     public String processCodes;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

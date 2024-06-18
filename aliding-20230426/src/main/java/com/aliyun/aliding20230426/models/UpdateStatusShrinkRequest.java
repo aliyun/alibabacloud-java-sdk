@@ -4,21 +4,41 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateStatusShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBKT0MFBEBTDO8T7SLVP</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
     @NameInMap("ErrorLines")
     public String errorLinesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>seq-123</p>
+     */
     @NameInMap("ImportSequence")
     public String importSequence;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

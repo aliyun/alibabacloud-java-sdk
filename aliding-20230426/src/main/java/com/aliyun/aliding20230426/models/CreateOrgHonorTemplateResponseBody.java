@@ -4,11 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateOrgHonorTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>21660610</p>
+     */
     @NameInMap("honorId")
     public String honorId;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;

@@ -4,6 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetRelatedWorkspacesShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeRecent")
     public Boolean includeRecent;
 

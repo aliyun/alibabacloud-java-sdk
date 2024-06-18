@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CancelScheduleConferenceShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2a489xxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("ScheduleConferenceId")
     public String scheduleConferenceId;

@@ -7,11 +7,18 @@ public class DeleteTodoTaskRequest extends TeaModel {
     @NameInMap("TenantContext")
     public DeleteTodoTaskRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("operatorId")
     public String operatorId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63edc8da7e917d6ecdaab11b</p>
      */
     @NameInMap("taskId")
     public String taskId;
@@ -46,6 +53,10 @@ public class DeleteTodoTaskRequest extends TeaModel {
     }
 
     public static class DeleteTodoTaskRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

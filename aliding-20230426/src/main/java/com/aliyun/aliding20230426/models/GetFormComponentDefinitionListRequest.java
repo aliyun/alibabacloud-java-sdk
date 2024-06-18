@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class GetFormComponentDefinitionListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKT0xxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FORM-xxxxx</p>
      */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

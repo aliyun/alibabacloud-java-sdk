@@ -12,6 +12,9 @@ public class GetNodeByUrlShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y">https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y</a></p>
      */
     @NameInMap("Url")
     public String url;

@@ -4,15 +4,27 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetOperationRecordsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<GetOperationRecordsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -54,75 +66,171 @@ public class GetOperationRecordsResponseBody extends TeaModel {
     }
 
     public static class GetOperationRecordsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>return</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>同意</p>
+         */
         @NameInMap("ActionExit")
         public String actionExit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-02-01</p>
+         */
         @NameInMap("ActiveTimeGMT")
         public String activeTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>act-xxaanfaf</p>
+         */
         @NameInMap("ActivityId")
         public String activityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("DataId")
         public Long dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss.com/Signature.pdf">https://oss.com/Signature.pdf</a></p>
+         */
         @NameInMap("DigitalSign")
         public String digitalSign;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss.com/a.pdf">https://oss.com/a.pdf</a></p>
+         */
         @NameInMap("Files")
         public String files;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-01</p>
+         */
         @NameInMap("OperateTimeGMT")
         public String operateTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>remove</p>
+         */
         @NameInMap("OperateType")
         public String operateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("OperatorDisplayName")
         public String operatorDisplayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>李四</p>
+         */
         @NameInMap("OperatorName")
         public String operatorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>无冬</p>
+         */
         @NameInMap("OperatorNickName")
         public String operatorNickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss.com/a.jpeg">https://oss.com/a.jpeg</a></p>
+         */
         @NameInMap("OperatorPhotoUrl")
         public String operatorPhotoUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>良好</p>
+         */
         @NameInMap("OperatorStatus")
         public String operatorStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("OperatorUserId")
         public String operatorUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f30233fb-72e1-4af4-8cb8-c7e0ea9ee530</p>
+         */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>确认同意</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>请购类型</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>同步</p>
+         */
         @NameInMap("TaskExecuteType")
         public String taskExecuteType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-01</p>
+         */
         @NameInMap("TaskHoldTimeGMT")
         public Long taskHoldTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task-123</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>append task</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i18n</p>
+         */
         @NameInMap("Type")
         public String type;
 

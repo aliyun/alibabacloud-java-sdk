@@ -32,6 +32,10 @@ public class UpdateRangeHeaders extends TeaModel {
     }
 
     public static class UpdateRangeHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

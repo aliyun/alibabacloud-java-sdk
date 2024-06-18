@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     }
 
     public static class GetMeetingRoomsScheduleResponseBodyScheduleInformationScheduleItemsEnd extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-02T10:15:30+08:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -65,6 +76,10 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     }
 
     public static class GetMeetingRoomsScheduleResponseBodyScheduleInformationScheduleItemsOrganizer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -84,9 +99,17 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     }
 
     public static class GetMeetingRoomsScheduleResponseBodyScheduleInformationScheduleItemsStart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-02T10:15:30+08:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -117,6 +140,10 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         @NameInMap("End")
         public GetMeetingRoomsScheduleResponseBodyScheduleInformationScheduleItemsEnd end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UzZvxxxxx</p>
+         */
         @NameInMap("EventId")
         public String eventId;
 
@@ -126,6 +153,10 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         @NameInMap("Start")
         public GetMeetingRoomsScheduleResponseBodyScheduleInformationScheduleItemsStart start;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BUSY</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -177,9 +208,17 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     }
 
     public static class GetMeetingRoomsScheduleResponseBodyScheduleInformation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>无权限</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4002f89xxxxx</p>
+         */
         @NameInMap("RoomId")
         public String roomId;
 

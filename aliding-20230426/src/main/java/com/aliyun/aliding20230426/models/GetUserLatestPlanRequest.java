@@ -21,6 +21,10 @@ public class GetUserLatestPlanRequest extends TeaModel {
     }
 
     public static class GetUserLatestPlanRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -7,17 +7,27 @@ public class QueryOrgHonorsRequest extends TeaModel {
     @NameInMap("TenantContext")
     public QueryOrgHonorsRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>48</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("orgId")
     public Long orgId;
@@ -60,6 +70,10 @@ public class QueryOrgHonorsRequest extends TeaModel {
     }
 
     public static class QueryOrgHonorsRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>487986704507650</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

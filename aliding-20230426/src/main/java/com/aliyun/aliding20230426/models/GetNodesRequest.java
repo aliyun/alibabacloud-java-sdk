@@ -46,9 +46,17 @@ public class GetNodesRequest extends TeaModel {
     }
 
     public static class GetNodesRequestOption extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("WithPermissionRole")
         public Boolean withPermissionRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("WithStatisticalInfo")
         public Boolean withStatisticalInfo;
 
@@ -76,6 +84,10 @@ public class GetNodesRequest extends TeaModel {
     }
 
     public static class GetNodesRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

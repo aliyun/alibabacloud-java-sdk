@@ -4,15 +4,31 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetRunningTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{}]</p>
+     */
     @NameInMap("result")
     public java.util.List<GetRunningTasksResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -54,39 +70,87 @@ public class GetRunningTasksResponseBody extends TeaModel {
     }
 
     public static class GetRunningTasksResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("ActiveTimeGMT")
         public String activeTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>act-xxaanfaf</p>
+         */
         @NameInMap("ActivityId")
         public String activityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("ActualActionerId")
         public String actualActionerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("CreateTimeGMT")
         public String createTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("FinishTimeGMT")
         public String finishTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("OriginatorId")
         public String originatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instancexxxx</p>
+         */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>taskId</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>append task</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>title</p>
+         */
         @NameInMap("TitleInEnglish")
         public String titleInEnglish;
 

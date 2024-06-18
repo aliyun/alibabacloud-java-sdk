@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryReportDetailShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18054XXX</p>
      */
     @NameInMap("ReportId")
     public String reportId;

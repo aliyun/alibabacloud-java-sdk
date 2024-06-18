@@ -7,6 +7,10 @@ public class WearOrgHonorResponseBody extends TeaModel {
     @NameInMap("content")
     public WearOrgHonorResponseBodyContent content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
@@ -16,12 +20,24 @@ public class WearOrgHonorResponseBody extends TeaModel {
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32FFC91D-0A9F-585A-B84F-8A54C5187035</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -87,6 +103,10 @@ public class WearOrgHonorResponseBody extends TeaModel {
     }
 
     public static class WearOrgHonorResponseBodyContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("data")
         public Object data;
 

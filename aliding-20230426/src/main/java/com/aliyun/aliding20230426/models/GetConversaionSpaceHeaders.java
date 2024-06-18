@@ -34,6 +34,9 @@ public class GetConversaionSpaceHeaders extends TeaModel {
     public static class GetConversaionSpaceHeadersAccountContext extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012345</p>
          */
         @NameInMap("accountId")
         public String accountId;

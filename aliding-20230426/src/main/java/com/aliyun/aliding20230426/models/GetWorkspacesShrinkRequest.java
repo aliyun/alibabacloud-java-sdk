@@ -12,6 +12,9 @@ public class GetWorkspacesShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace_id</p>
      */
     @NameInMap("WorkspaceIds")
     public String workspaceIdsShrink;

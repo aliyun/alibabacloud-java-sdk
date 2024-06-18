@@ -4,45 +4,84 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryLiveInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxx/kk.jpg">http://xxx/kk.jpg</a></p>
+     */
     @NameInMap("coverUrl")
     public String coverUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59886</p>
+     */
     @NameInMap("duration")
     public Long duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1662447951960</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
     @NameInMap("introduction")
     public String introduction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1211-3442-122</p>
+     */
     @NameInMap("liveId")
     public String liveId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://ssssss">http://ssssss</a></p>
+     */
     @NameInMap("livePlayUrl")
     public String livePlayUrl;
 
     @NameInMap("liveStatus")
     public Integer liveStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13414</p>
+     */
     @NameInMap("playbackDuration")
     public Long playbackDuration;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1627353123000</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("subscribeCount")
     public Integer subscribeCount;
 
     @NameInMap("title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("uv")
     public Integer uv;
 

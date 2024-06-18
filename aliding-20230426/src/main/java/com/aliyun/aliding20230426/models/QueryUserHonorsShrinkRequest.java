@@ -7,23 +7,36 @@ public class QueryUserHonorsShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("orgId")
     public Long orgId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123123</p>
      */
     @NameInMap("userId")
     public String userId;

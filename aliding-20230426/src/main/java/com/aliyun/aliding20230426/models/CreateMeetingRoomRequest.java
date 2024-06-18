@@ -7,15 +7,27 @@ public class CreateMeetingRoomRequest extends TeaModel {
     @NameInMap("EnableCycleReservation")
     public Boolean enableCycleReservation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4644</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxIsvRoomId</p>
+     */
     @NameInMap("IsvRoomId")
     public String isvRoomId;
 
     @NameInMap("ReservationAuthority")
     public CreateMeetingRoomRequestReservationAuthority reservationAuthority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RoomCapacity")
     public Integer roomCapacity;
 
@@ -28,9 +40,17 @@ public class CreateMeetingRoomRequest extends TeaModel {
     @NameInMap("RoomName")
     public String roomName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://static.dingtalk.com/media/lADPxxxxx.jpg">https://static.dingtalk.com/media/lADPxxxxx.jpg</a></p>
+     */
     @NameInMap("RoomPicture")
     public String roomPicture;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RoomStatus")
     public Integer roomStatus;
 
@@ -221,6 +241,10 @@ public class CreateMeetingRoomRequest extends TeaModel {
     }
 
     public static class CreateMeetingRoomRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

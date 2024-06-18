@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetReportTemplateByNameRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我管理的模版</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -35,6 +38,10 @@ public class GetReportTemplateByNameRequest extends TeaModel {
     }
 
     public static class GetReportTemplateByNameRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

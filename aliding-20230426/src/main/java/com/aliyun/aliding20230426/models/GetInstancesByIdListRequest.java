@@ -4,15 +4,31 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetInstancesByIdListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBxxx</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>inst-123,inst-223</p>
+     */
     @NameInMap("ProcessInstanceIds")
     public String processInstanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 

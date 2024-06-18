@@ -32,6 +32,10 @@ public class DeleteTodoTaskHeaders extends TeaModel {
     }
 
     public static class DeleteTodoTaskHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

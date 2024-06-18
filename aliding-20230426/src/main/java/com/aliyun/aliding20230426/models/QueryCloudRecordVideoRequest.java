@@ -9,6 +9,9 @@ public class QueryCloudRecordVideoRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61289fxxx</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;
@@ -35,6 +38,10 @@ public class QueryCloudRecordVideoRequest extends TeaModel {
     }
 
     public static class QueryCloudRecordVideoRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -4,6 +4,10 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryCloudRecordTextResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
@@ -12,6 +16,9 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -46,15 +53,31 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
     }
 
     public static class QueryCloudRecordTextResponseBodyParagraphListSentenceListWordList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7940</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7940</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>这里</p>
+         */
         @NameInMap("Word")
         public String word;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631172050535000#0</p>
+         */
         @NameInMap("WordId")
         public String wordId;
 
@@ -98,15 +121,31 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
     }
 
     public static class QueryCloudRecordTextResponseBodyParagraphListSentenceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7940</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>这里是小钉</p>
+         */
         @NameInMap("Sentence")
         public String sentence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7940</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -161,30 +200,62 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
     }
 
     public static class QueryCloudRecordTextResponseBodyParagraphList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7940</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631172045153000</p>
+         */
         @NameInMap("NextTtoken")
         public Long nextTtoken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小钉</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>嘿！你好，这里是小钉</p>
+         */
         @NameInMap("Paragraph")
         public String paragraph;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44444</p>
+         */
         @NameInMap("RecordId")
         public Long recordId;
 
         @NameInMap("SentenceList")
         public java.util.List<QueryCloudRecordTextResponseBodyParagraphListSentenceList> sentenceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7940</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

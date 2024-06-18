@@ -4,48 +4,108 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceIdListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_PBxxx</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agree</p>
+     */
     @NameInMap("ApprovedResult")
     public String approvedResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateFromTimeGMT")
     public String createFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("CreateToTimeGMT")
     public String createToTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FORM-EF6Yxxx</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-05-01</p>
+     */
     @NameInMap("ModifiedFromTimeGMT")
     public String modifiedFromTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-10</p>
+     */
     @NameInMap("ModifiedToTimeGMT")
     public String modifiedToTimeGMT;
 
+    /**
+     * <strong>example:</strong>
+     * <p>012345</p>
+     */
     @NameInMap("OriginatorId")
     public String originatorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;textField\&quot;:\&quot;123\&quot;}</p>
+     */
     @NameInMap("SearchFieldJson")
     public String searchFieldJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1045001</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

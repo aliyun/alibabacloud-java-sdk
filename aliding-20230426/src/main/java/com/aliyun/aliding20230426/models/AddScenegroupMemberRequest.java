@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddScenegroupMemberRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cidt*****Xa4K10w==</p>
      */
     @NameInMap("OpenConversationId")
     public String openConversationId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123xx,224xx</p>
      */
     @NameInMap("UserIds")
     public String userIds;

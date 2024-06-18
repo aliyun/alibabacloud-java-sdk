@@ -7,14 +7,25 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     @NameInMap("children")
     public java.util.List<GetSpaceDirectoriesResponseBodyChildren> children;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1296</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,9 +68,17 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenCreator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -87,9 +106,17 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenLinkSourceInfoIconUrl extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gh</p>
+         */
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("Small")
         public String small;
 
@@ -117,18 +144,34 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenLinkSourceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>docx</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("IconUrl")
         public GetSpaceDirectoriesResponseBodyChildrenLinkSourceInfoIconUrl iconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LinkType")
         public Long linkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 
@@ -180,9 +223,17 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenSpaceHdIconVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i1/xxxxx.png">https://img.alicdn.com/imgextra/i1/xxxxx.png</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -210,9 +261,17 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenSpaceIconVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i1/xxxxx.png">https://img.alicdn.com/imgextra/i1/xxxxx.png</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -240,9 +299,17 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenSpaceOwner extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>小钉</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -270,12 +337,24 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenSpaceVisitorInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>GET_DENTRY</p>
+         */
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RoleCode")
         public String roleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GET_SPACE</p>
+         */
         @NameInMap("SpaceActions")
         public java.util.List<String> spaceActions;
 
@@ -311,9 +390,17 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenSpace extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i1/O1xxxxx.png">https://img.alicdn.com/imgextra/i1/O1xxxxx.png</a></p>
+         */
         @NameInMap("Cover")
         public String cover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>这是简介</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -323,21 +410,37 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         @NameInMap("IconVO")
         public GetSpaceDirectoriesResponseBodyChildrenSpaceIconVO iconVO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>n9XJxxxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试知识库</p>
+         */
         @NameInMap("Owner")
         public GetSpaceDirectoriesResponseBodyChildrenSpaceOwner owner;
 
         @NameInMap("RecentList")
         public java.util.List<?> recentList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://alidocs.dingtalk.com/i/spaces/n9XJ*******Xy/overview">https://alidocs.dingtalk.com/i/spaces/n9XJ*******Xy/overview</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -442,6 +545,9 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     public static class GetSpaceDirectoriesResponseBodyChildrenStatisticalInfo extends TeaModel {
         /**
          * <p>WordCount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("WordCount")
         public Long wordCount;
@@ -462,9 +568,17 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildrenUpdater extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -495,6 +609,10 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OWNER</p>
+         */
         @NameInMap("RoleCode")
         public String roleCode;
 
@@ -533,57 +651,109 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesResponseBodyChildren extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>alidoc</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         @NameInMap("Creator")
         public GetSpaceDirectoriesResponseBodyChildrenCreator creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("DentryId")
         public String dentryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>file</p>
+         */
         @NameInMap("DentryType")
         public String dentryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cdefg</p>
+         */
         @NameInMap("DentryUuid")
         public String dentryUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aabbcc</p>
+         */
         @NameInMap("DocKey")
         public String docKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alidoc</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasChildren")
         public Boolean hasChildren;
 
         @NameInMap("LinkSourceInfo")
         public GetSpaceDirectoriesResponseBodyChildrenLinkSourceInfo linkSourceInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试组织/测试知识库/abc</p>
+         */
         @NameInMap("Path")
         public String path;
 
         @NameInMap("Space")
         public GetSpaceDirectoriesResponseBodyChildrenSpace space;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bcd</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 
         @NameInMap("StatisticalInfo")
         public GetSpaceDirectoriesResponseBodyChildrenStatisticalInfo statisticalInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
         @NameInMap("Updater")
         public GetSpaceDirectoriesResponseBodyChildrenUpdater updater;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.yy">https://xxx.yy</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

@@ -4,23 +4,42 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetSubscribedCalendarResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>012345</p>
+     */
     @NameInMap("author")
     public String author;
 
+    /**
+     * <strong>example:</strong>
+     * <p>M5MjkxNDUxQHVzZXJzLmRpbmd0YWxrLmNv</p>
+     */
     @NameInMap("calendarId")
     public String calendarId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>中国传统日历</p>
+     */
     @NameInMap("description")
     public String description;
 
     @NameInMap("managers")
     public java.util.List<String> managers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>中国传统日历</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;

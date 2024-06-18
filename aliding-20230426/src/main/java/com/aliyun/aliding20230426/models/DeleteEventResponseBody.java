@@ -7,24 +7,43 @@ public class DeleteEventResponseBody extends TeaModel {
     @NameInMap("content")
     public DeleteEventResponseBodyContent content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
     @NameInMap("errorCtx")
     public java.util.Map<String, ?> errorCtx;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4248DCC9-785F-5A14-8BE0-830FD52E1261</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -90,6 +109,10 @@ public class DeleteEventResponseBody extends TeaModel {
     }
 
     public static class DeleteEventResponseBodyContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("data")
         public Object data;
 

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class InsertColumnsBeforeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Column")
     public Long column;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ColumnCount")
     public Long columnCount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sheet1</p>
      */
     @NameInMap("SheetId")
     public String sheetId;
@@ -27,6 +36,9 @@ public class InsertColumnsBeforeRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;
@@ -77,6 +89,10 @@ public class InsertColumnsBeforeRequest extends TeaModel {
     }
 
     public static class InsertColumnsBeforeRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

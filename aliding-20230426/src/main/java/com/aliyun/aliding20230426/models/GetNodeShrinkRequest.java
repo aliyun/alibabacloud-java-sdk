@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetNodeShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a9E05BDRVQ9K600yf1NplNDxV63zgkYA</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -13,9 +16,17 @@ public class GetNodeShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithPermissionRole")
     public Boolean withPermissionRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithStatisticalInfo")
     public Boolean withStatisticalInfo;
 

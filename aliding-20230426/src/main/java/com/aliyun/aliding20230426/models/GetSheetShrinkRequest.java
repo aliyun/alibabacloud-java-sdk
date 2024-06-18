@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSheetShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sheet1</p>
      */
     @NameInMap("SheetId")
     public String sheetId;
@@ -15,6 +18,9 @@ public class GetSheetShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;

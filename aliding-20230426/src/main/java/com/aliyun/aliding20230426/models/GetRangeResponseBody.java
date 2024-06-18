@@ -4,21 +4,40 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetRangeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("backgroundColors")
     public java.util.List<java.util.List<GetRangeResponseBodyBackgroundColors>> backgroundColors;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("displayValues")
     public java.util.List<java.util.List<String>> displayValues;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("formulas")
     public java.util.List<java.util.List<String>> formulas;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("values")
     public java.util.List<java.util.List<?>> values;
 
@@ -70,24 +89,36 @@ public class GetRangeResponseBody extends TeaModel {
     public static class GetRangeResponseBodyBackgroundColors extends TeaModel {
         /**
          * <p>red</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Red")
         public Integer red;
 
         /**
          * <p>green</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Green")
         public Integer green;
 
         /**
          * <p>blue</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Blue")
         public Integer blue;
 
         /**
          * <p>hexString</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#000000</p>
          */
         @NameInMap("HexString")
         public String hexString;

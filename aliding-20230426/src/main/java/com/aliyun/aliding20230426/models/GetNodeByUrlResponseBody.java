@@ -9,6 +9,9 @@ public class GetNodeByUrlResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,6 +38,10 @@ public class GetNodeByUrlResponseBody extends TeaModel {
     }
 
     public static class GetNodeByUrlResponseBodyNodeStatisticalInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("WordCount")
         public Long wordCount;
 
@@ -54,48 +61,104 @@ public class GetNodeByUrlResponseBody extends TeaModel {
     }
 
     public static class GetNodeByUrlResponseBodyNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ALIDOC</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T11:29Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01472825524039877041</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>adoc</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasChildren")
         public Boolean hasChildren;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T11:29Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01472825524039877041</p>
+         */
         @NameInMap("ModifierId")
         public String modifierId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EpGBa2Lm8aRmzkkNhplMx1prWgN7R35y</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>READER</p>
+         */
         @NameInMap("PermissionRole")
         public String permissionRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>512</p>
+         */
         @NameInMap("Size")
         public Long size;
 
         @NameInMap("StatisticalInfo")
         public GetNodeByUrlResponseBodyNodeStatisticalInfo statisticalInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FILE</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node_url</p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>By8jQS1ZYjGn5b0M</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

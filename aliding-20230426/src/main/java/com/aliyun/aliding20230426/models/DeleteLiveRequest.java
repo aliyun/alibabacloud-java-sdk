@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteLiveRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4d38xxxxx</p>
      */
     @NameInMap("LiveId")
     public String liveId;
@@ -35,6 +38,10 @@ public class DeleteLiveRequest extends TeaModel {
     }
 
     public static class DeleteLiveRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

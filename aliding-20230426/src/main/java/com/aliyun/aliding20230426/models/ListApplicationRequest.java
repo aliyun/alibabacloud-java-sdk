@@ -4,26 +4,48 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>createdByMe</p>
+     */
     @NameInMap("AppFilter")
     public String appFilter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>keyword</p>
+     */
     @NameInMap("AppNameSearchKeyword")
     public String appNameSearchKeyword;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>corpid</p>
      */
     @NameInMap("CorpId")
     public String corpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>keyword</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>keyword</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>keyword</p>
      */
     @NameInMap("Token")
     public String token;

@@ -4,45 +4,89 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateTodoTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>isv_dingtalkTodo</p>
+     */
     @NameInMap("bizTag")
     public String bizTag;
 
     @NameInMap("contentFieldList")
     public java.util.List<CreateTodoTaskResponseBodyContentFieldList> contentFieldList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617675200000</p>
+     */
     @NameInMap("createdTime")
     public Long createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PUoiinWIpa2yH2ymhiiGiP6g</p>
+     */
     @NameInMap("creatorId")
     public String creatorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>应用可以调用该接口发起一个钉钉待办任务，该待办事项会出现在钉钉客户端“待办”页面，需要注意的是，通过开放接口发起的待办，目前仅支持直接跳转ISV应用详情页（ISV在调该接口时需传入自身应用详情页链接）。</p>
+     */
     @NameInMap("description")
     public String description;
 
     @NameInMap("detailUrl")
     public CreateTodoTaskResponseBodyDetailUrl detailUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("done")
     public Boolean done;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617675100000</p>
+     */
     @NameInMap("dueTime")
     public Long dueTime;
 
     @NameInMap("executorIds")
     public java.util.List<String> executorIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617675200000</p>
+     */
     @NameInMap("finishTime")
     public Long finishTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OPJpwtwPVNGIFKURjrzd</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isOnlyShowExecutor")
     public Boolean isOnlyShowExecutor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617675200000</p>
+     */
     @NameInMap("modifiedTime")
     public Long modifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PUoiinWIpa2yH2ymhiiGiP6g</p>
+     */
     @NameInMap("modifierId")
     public String modifierId;
 
@@ -52,24 +96,47 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     @NameInMap("participantIds")
     public java.util.List<String> participantIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("priority")
     public Integer priority;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>isv_dingtalkTodo</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>isv_dingtalkTodo1</p>
+     */
     @NameInMap("sourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1617675000000</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>接入钉钉待办</p>
+     */
     @NameInMap("subject")
     public String subject;
 
@@ -257,11 +324,17 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     public static class CreateTodoTaskResponseBodyContentFieldList extends TeaModel {
         /**
          * <p>fieldKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fieldKey</p>
          */
         @NameInMap("fieldKey")
         public String fieldKey;
 
         /**
+         * <p>fieldValue</p>
+         * 
+         * <strong>example:</strong>
          * <p>fieldValue</p>
          */
         @NameInMap("fieldValue")
@@ -291,9 +364,17 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     }
 
     public static class CreateTodoTaskResponseBodyDetailUrl extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.dingtalk.com">https://www.dingtalk.com</a></p>
+         */
         @NameInMap("appUrl")
         public String appUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.dingtalk.com">https://www.dingtalk.com</a></p>
+         */
         @NameInMap("pcUrl")
         public String pcUrl;
 
@@ -321,6 +402,10 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     }
 
     public static class CreateTodoTaskResponseBodyNotifyConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dingNotify")
         public String dingNotify;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ClearShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3:C3</p>
      */
     @NameInMap("RangeAddress")
     public String rangeAddress;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sheet1</p>
      */
     @NameInMap("SheetId")
     public String sheetId;
@@ -21,6 +27,9 @@ public class ClearShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;

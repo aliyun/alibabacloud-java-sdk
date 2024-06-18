@@ -32,6 +32,10 @@ public class ClearHeaders extends TeaModel {
     }
 
     public static class ClearHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

@@ -4,15 +4,27 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListNavigationByFormTypeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<ListNavigationByFormTypeResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -54,12 +66,24 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
     }
 
     public static class ListNavigationByFormTypeResponseBodyResultTitle extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("NameInChinese")
         public String nameInChinese;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZhangSan</p>
+         */
         @NameInMap("NameInEnglish")
         public String nameInEnglish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>未知</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -95,9 +119,17 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
     }
 
     public static class ListNavigationByFormTypeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FORM-EF6Yxxx</p>
+         */
         @NameInMap("FormUuid")
         public String formUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TPROC--X1Gxxx</p>
+         */
         @NameInMap("ProcessCode")
         public String processCode;
 

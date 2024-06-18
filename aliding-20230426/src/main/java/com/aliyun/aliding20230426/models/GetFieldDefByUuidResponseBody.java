@@ -4,18 +4,34 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetFieldDefByUuidResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public java.util.List<GetFieldDefByUuidResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -65,24 +81,48 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
     }
 
     public static class GetFieldDefByUuidResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Behavior")
         public String behavior;
 
         @NameInMap("Children")
         public String children;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TextareaField</p>
+         */
         @NameInMap("ComponentName")
         public String componentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>textField_laq7xxx</p>
+         */
         @NameInMap("FieldId")
         public String fieldId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Label")
         public Object label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Props")
         public Object props;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

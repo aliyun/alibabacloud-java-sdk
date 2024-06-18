@@ -4,11 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryOrgTodoTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -46,9 +53,17 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
     }
 
     public static class QueryOrgTodoTasksResponseBodyTodoCardsDetailUrl extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.dingtalk.com">https://www.dingtalk.com</a></p>
+         */
         @NameInMap("appUrl")
         public String appUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.dingtalk.com">https://www.dingtalk.com</a></p>
+         */
         @NameInMap("pcUrl")
         public String pcUrl;
 
@@ -76,36 +91,76 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
     }
 
     public static class QueryOrgTodoTasksResponseBodyTodoCards extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>isv_dingtalkTodo</p>
+         */
         @NameInMap("bizTag")
         public String bizTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1617675000000</p>
+         */
         @NameInMap("createdTime")
         public Long createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("creatorId")
         public String creatorId;
 
         @NameInMap("detailUrl")
         public QueryOrgTodoTasksResponseBodyTodoCardsDetailUrl detailUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1617675000000</p>
+         */
         @NameInMap("dueTime")
         public Long dueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isDone")
         public Boolean isDone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1617675000000</p>
+         */
         @NameInMap("modifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>isv_dingtalkTodo1</p>
+         */
         @NameInMap("sourceId")
         public String sourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>接入钉钉待办</p>
+         */
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>taskOPJpwtwPVNGIFKURjrzd</p>
+         */
         @NameInMap("taskId")
         public String taskId;
 

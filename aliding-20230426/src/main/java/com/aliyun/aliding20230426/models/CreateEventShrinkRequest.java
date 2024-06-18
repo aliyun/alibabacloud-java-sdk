@@ -16,6 +16,10 @@ public class CreateEventShrinkRequest extends TeaModel {
     @NameInMap("Extra")
     public String extraShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAllDay")
     public Boolean isAllDay;
 
@@ -28,6 +32,10 @@ public class CreateEventShrinkRequest extends TeaModel {
     @NameInMap("Recurrence")
     public String recurrenceShrink;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Reminders")
     public String remindersShrink;
 
@@ -45,6 +53,9 @@ public class CreateEventShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("calendarId")
     public String calendarId;

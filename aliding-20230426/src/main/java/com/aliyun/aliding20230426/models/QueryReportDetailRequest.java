@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryReportDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18054XXX</p>
      */
     @NameInMap("ReportId")
     public String reportId;
@@ -35,6 +38,10 @@ public class QueryReportDetailRequest extends TeaModel {
     }
 
     public static class QueryReportDetailRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

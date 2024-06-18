@@ -4,23 +4,41 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateRangeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[[&quot;#ff0000&quot;,&quot;#ff0000&quot;,&quot;#ff0000&quot;]]</p>
+     */
     @NameInMap("BackgroundColors")
     public java.util.List<java.util.List<String>> backgroundColors;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[[&quot;type&quot;: &quot;path&quot;,&quot;link&quot;: &quot;<a href="https://www.dingtalk.com%22,%22text">https://www.dingtalk.com&quot;,&quot;text</a>&quot;: &quot;test&quot;]]</p>
+     */
     @NameInMap("Hyperlinks")
     public java.util.List<java.util.List<UpdateRangeRequestHyperlinks>> hyperlinks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>General</p>
+     */
     @NameInMap("NumberFormat")
     public String numberFormat;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3:C3</p>
      */
     @NameInMap("RangeAddress")
     public String rangeAddress;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sheet1</p>
      */
     @NameInMap("SheetId")
     public String sheetId;
@@ -28,11 +46,18 @@ public class UpdateRangeRequest extends TeaModel {
     @NameInMap("TenantContext")
     public UpdateRangeRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]]</p>
+     */
     @NameInMap("Values")
     public java.util.List<java.util.List<String>> values;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;
@@ -107,12 +132,24 @@ public class UpdateRangeRequest extends TeaModel {
     }
 
     public static class UpdateRangeRequestHyperlinks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>path</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.dingtalk.com">https://www.dingtalk.com</a></p>
+         */
         @NameInMap("Link")
         public String link;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -148,6 +185,10 @@ public class UpdateRangeRequest extends TeaModel {
     }
 
     public static class UpdateRangeRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class ExecuteBatchTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKTxxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disagree</p>
      */
     @NameInMap("OutResult")
     public String outResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>remark</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;taskId&quot;:&quot;2291xxx&quot;,&quot;formInstId&quot;:&quot;d84a79xxx&quot;}, {&quot;taskId&quot;:&quot;2291xxx&quot;,&quot;formInstId&quot;:&quot;f8035e2axxx&quot;}]</p>
      */
     @NameInMap("TaskInformationList")
     public String taskInformationList;

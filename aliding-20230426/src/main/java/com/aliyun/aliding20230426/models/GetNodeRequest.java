@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetNodeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a9E05BDRVQ9K600yf1NplNDxV63zgkYA</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -13,9 +16,17 @@ public class GetNodeRequest extends TeaModel {
     @NameInMap("TenantContext")
     public GetNodeRequestTenantContext tenantContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithPermissionRole")
     public Boolean withPermissionRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithStatisticalInfo")
     public Boolean withStatisticalInfo;
 
@@ -57,6 +68,10 @@ public class GetNodeRequest extends TeaModel {
     }
 
     public static class GetNodeRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

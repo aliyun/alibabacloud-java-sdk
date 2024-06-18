@@ -4,9 +4,17 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryMeetingRoomListShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>124L</p>
+     */
     @NameInMap("NextToken")
     public Long nextToken;
 

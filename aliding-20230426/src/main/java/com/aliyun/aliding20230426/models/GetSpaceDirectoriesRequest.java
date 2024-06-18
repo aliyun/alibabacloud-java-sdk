@@ -4,20 +4,34 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class GetSpaceDirectoriesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>asdasd</p>
+     */
     @NameInMap("DentryId")
     public String dentryId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123123</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qweqwe</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;
@@ -71,6 +85,10 @@ public class GetSpaceDirectoriesRequest extends TeaModel {
     }
 
     public static class GetSpaceDirectoriesRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

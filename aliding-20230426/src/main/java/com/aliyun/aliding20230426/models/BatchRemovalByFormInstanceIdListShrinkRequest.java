@@ -6,30 +6,50 @@ import com.aliyun.tea.*;
 public class BatchRemovalByFormInstanceIdListShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_XCE0EVXS6DYG3YDYC5RD</p>
      */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AsynchronousExecution")
     public Boolean asynchronousExecution;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExecuteExpression")
     public Boolean executeExpression;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("FormInstanceIdList")
     public String formInstanceIdListShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FORM-GX866MC1NC1VOFF6WVQW33FD16E23L3CPMKVKA</p>
      */
     @NameInMap("FormUuid")
     public String formUuid;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09866181UTZVVD4R3DC955FNKIM52HVPU5WWK7</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

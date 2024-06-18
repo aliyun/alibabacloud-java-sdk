@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryMeetingRoomGroupListResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,12 +38,24 @@ public class QueryMeetingRoomGroupListResponseBody extends TeaModel {
     }
 
     public static class QueryMeetingRoomGroupListResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>172</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试分组</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 

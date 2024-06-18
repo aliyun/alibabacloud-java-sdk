@@ -12,6 +12,9 @@ public class InviteUsersShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61289fxxx</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;

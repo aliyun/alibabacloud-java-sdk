@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDriveSpaceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("SpaceId")
     public String spaceId;
@@ -35,6 +38,10 @@ public class DeleteDriveSpaceRequest extends TeaModel {
     }
 
     public static class DeleteDriveSpaceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

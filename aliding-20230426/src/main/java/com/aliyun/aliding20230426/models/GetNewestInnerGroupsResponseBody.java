@@ -7,12 +7,24 @@ public class GetNewestInnerGroupsResponseBody extends TeaModel {
     @NameInMap("groupInfos")
     public java.util.List<GetNewestInnerGroupsResponseBodyGroupInfos> groupInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -54,12 +66,24 @@ public class GetNewestInnerGroupsResponseBody extends TeaModel {
     }
 
     public static class GetNewestInnerGroupsResponseBodyGroupInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>@lADOADma*****QKA</p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MemberAmount")
         public String memberAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cid1e******==</p>
+         */
         @NameInMap("OpenConversationId")
         public String openConversationId;
 

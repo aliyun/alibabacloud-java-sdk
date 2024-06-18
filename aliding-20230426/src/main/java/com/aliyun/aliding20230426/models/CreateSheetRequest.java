@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSheetRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sheet1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -15,6 +18,9 @@ public class CreateSheetRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stxxxx</p>
      */
     @NameInMap("WorkbookId")
     public String workbookId;
@@ -49,6 +55,10 @@ public class CreateSheetRequest extends TeaModel {
     }
 
     public static class CreateSheetRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

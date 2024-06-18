@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetOpenUrlResponseBody extends TeaModel {
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https/<a href="http://www.aliwork.com">www.aliwork.com</a></p>
+     */
     @NameInMap("result")
     public String result;
 

@@ -4,44 +4,87 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryDentryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>alidoc</p>
+     */
     @NameInMap("contentType")
     public String contentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345678</p>
+     */
     @NameInMap("createdTime")
     public Long createdTime;
 
     @NameInMap("creator")
     public QueryDentryResponseBodyCreator creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("dentryId")
     public String dentryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>file</p>
+     */
     @NameInMap("dentryType")
     public String dentryType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cdefg</p>
+     */
     @NameInMap("dentryUuid")
     public String dentryUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aabbcc</p>
+     */
     @NameInMap("docKey")
     public String docKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alidoc</p>
+     */
     @NameInMap("extension")
     public String extension;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("hasChildren")
     public Boolean hasChildren;
 
     @NameInMap("linkSourceInfo")
     public QueryDentryResponseBodyLinkSourceInfo linkSourceInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hello</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试组织/测试知识库/abc</p>
+     */
     @NameInMap("path")
     public String path;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -49,15 +92,27 @@ public class QueryDentryResponseBody extends TeaModel {
     @NameInMap("space")
     public QueryDentryResponseBodySpace space;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bcd</p>
+     */
     @NameInMap("spaceId")
     public String spaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345678</p>
+     */
     @NameInMap("updatedTime")
     public Long updatedTime;
 
     @NameInMap("updater")
     public QueryDentryResponseBodyUpdater updater;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://xxx.yy">https://xxx.yy</a></p>
+     */
     @NameInMap("url")
     public String url;
 
@@ -222,9 +277,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodyCreator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -252,9 +315,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodyLinkSourceInfoIconUrl extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gh</p>
+         */
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("Small")
         public String small;
 
@@ -282,18 +353,34 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodyLinkSourceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>docx</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("IconUrl")
         public QueryDentryResponseBodyLinkSourceInfoIconUrl iconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LinkType")
         public Long linkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 
@@ -345,9 +432,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceHdIconVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http://</p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>type</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -375,9 +470,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceIconVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http://</p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>type</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -405,9 +508,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceOwner extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>小钉</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -435,9 +546,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceRecentListCreator extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -465,9 +584,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceRecentListLinkSourceInfoIconUrl extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gh</p>
+         */
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("Small")
         public String small;
 
@@ -495,18 +622,34 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceRecentListLinkSourceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>docx</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("IconUrl")
         public QueryDentryResponseBodySpaceRecentListLinkSourceInfoIconUrl iconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LinkType")
         public Long linkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>def</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 
@@ -577,9 +720,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceRecentListUpdater extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -610,6 +761,10 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RoleCode")
         public String roleCode;
 
@@ -648,57 +803,109 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceRecentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>alidoc</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         @NameInMap("Creator")
         public QueryDentryResponseBodySpaceRecentListCreator creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("DentryId")
         public String dentryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>file</p>
+         */
         @NameInMap("DentryType")
         public String dentryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cdefg</p>
+         */
         @NameInMap("DentryUuid")
         public String dentryUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aabbcc</p>
+         */
         @NameInMap("DocKey")
         public String docKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alidoc</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasChildren")
         public Boolean hasChildren;
 
         @NameInMap("LinkSourceInfo")
         public QueryDentryResponseBodySpaceRecentListLinkSourceInfo linkSourceInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试组织/测试知识库/abc</p>
+         */
         @NameInMap("Path")
         public String path;
 
         @NameInMap("Space")
         public Object space;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bcd</p>
+         */
         @NameInMap("SpaceId")
         public String spaceId;
 
         @NameInMap("StatisticalInfo")
         public QueryDentryResponseBodySpaceRecentListStatisticalInfo statisticalInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
         @NameInMap("Updater")
         public QueryDentryResponseBodySpaceRecentListUpdater updater;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.yy">https://xxx.yy</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -865,12 +1072,24 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpaceVisitorInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>GET_DENTRY</p>
+         */
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RoleCode")
         public String roleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GET_SPACE</p>
+         */
         @NameInMap("SpaceActions")
         public java.util.List<String> spaceActions;
 
@@ -906,9 +1125,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodySpace extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i1/O1xxxxx.png">https://img.alicdn.com/imgextra/i1/O1xxxxx.png</a></p>
+         */
         @NameInMap("Cover")
         public String cover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>这是简介</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -918,21 +1145,37 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("IconVO")
         public QueryDentryResponseBodySpaceIconVO iconVO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>n9XJxxxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试知识库</p>
+         */
         @NameInMap("Owner")
         public QueryDentryResponseBodySpaceOwner owner;
 
         @NameInMap("RecentList")
         public java.util.List<QueryDentryResponseBodySpaceRecentList> recentList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://alidocs.dingtalk.com/i/spaces/n9XJ*******Xy/overview">https://alidocs.dingtalk.com/i/spaces/n9XJ*******Xy/overview</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -1035,9 +1278,17 @@ public class QueryDentryResponseBody extends TeaModel {
     }
 
     public static class QueryDentryResponseBodyUpdater extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -1068,6 +1319,10 @@ public class QueryDentryResponseBody extends TeaModel {
         @NameInMap("DentryActions")
         public java.util.List<String> dentryActions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RoleCode")
         public String roleCode;
 

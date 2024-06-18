@@ -4,9 +4,17 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryConferenceMembersShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123000000</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -15,6 +23,9 @@ public class QueryConferenceMembersShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61289fxxx</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSubscribedCalendarsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>M5MjkxNDUxQHVzZXJzLmRpbmd0YWxrLmNv</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;

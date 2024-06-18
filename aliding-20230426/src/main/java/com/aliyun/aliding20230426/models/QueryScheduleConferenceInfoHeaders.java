@@ -32,6 +32,10 @@ public class QueryScheduleConferenceInfoHeaders extends TeaModel {
     }
 
     public static class QueryScheduleConferenceInfoHeadersAccountContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 

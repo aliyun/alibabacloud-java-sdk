@@ -10,6 +10,10 @@ public class DentriesAppPropertiesValue extends TeaModel {
     @NameInMap("Value")
     public String value;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Visibility")
     public String visibility;
 

@@ -7,18 +7,38 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<GetMeCorpSubmissionResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("totalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -76,57 +96,129 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
     }
 
     public static class GetMeCorpSubmissionResponseBodyDataActioner extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>某研究部</p>
+         */
         @NameInMap("BuName")
         public String buName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:abc@alimail.com">abc@alimail.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>正式</p>
+         */
         @NameInMap("EmployeeType")
         public String employeeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>official</p>
+         */
         @NameInMap("EmployeeTypeInformation")
         public String employeeTypeInformation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123311221</p>
+         */
         @NameInMap("HumanResourceGroupWorkNumber")
         public String humanResourceGroupWorkNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSystemAdmin")
         public Boolean isSystemAdmin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P7</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>请购单</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>与心</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>o-YDJKINSxxx</p>
+         */
         @NameInMap("OrderNumber")
         public String orderNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://abc.com/a.png">https://abc.com/a.png</a></p>
+         */
         @NameInMap("PersonalPhoto")
         public String personalPhoto;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss/zhangsan.png">https://oss/zhangsan.png</a></p>
+         */
         @NameInMap("PersonalPhotoUrl")
         public String personalPhotoUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XIAOHONG</p>
+         */
         @NameInMap("PinyinNameAll")
         public String pinyinNameAll;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaohong</p>
+         */
         @NameInMap("PinyinNickName")
         public String pinyinNickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("SuperUserId")
         public String superUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wang123</p>
+         */
         @NameInMap("TbWang")
         public String tbWang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -282,18 +374,38 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
     }
 
     public static class GetMeCorpSubmissionResponseBodyDataCurrentActivityInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>act-xxaanfaf</p>
+         */
         @NameInMap("ActivityId")
         public String activityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("ActivityInstanceStatus")
         public String activityInstanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>activity-124</p>
+         */
         @NameInMap("ActivityName")
         public String activityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>redirect task</p>
+         */
         @NameInMap("ActivityNameEn")
         public String activityNameEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -354,9 +466,17 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         @NameInMap("ActionerName")
         public java.util.List<String> actionerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>APP_PBKT0xxx</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-01</p>
+         */
         @NameInMap("CreateTimeGMT")
         public String createTimeGMT;
 
@@ -366,60 +486,136 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         @NameInMap("DataMap")
         public java.util.Map<String, ?> dataMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>edit</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-01</p>
+         */
         @NameInMap("FinishTimeGMT")
         public String finishTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINST-NJYJxxx</p>
+         */
         @NameInMap("FormInstanceId")
         public String formInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FORM-EF6xxx</p>
+         */
         @NameInMap("FormUuid")
         public String formUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>符合宜搭表单实例格式的json数据</p>
+         */
         @NameInMap("InstanceValue")
         public String instanceValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-01</p>
+         */
         @NameInMap("ModifiedTimeGMT")
         public String modifiedTimeGMT;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan@mediaId</p>
+         */
         @NameInMap("OriginatorAvatar")
         public String originatorAvatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("OriginatorDisplayName")
         public String originatorDisplayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manager123</p>
+         */
         @NameInMap("OriginatorId")
         public String originatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>同意</p>
+         */
         @NameInMap("ProcessApprovedResult")
         public String processApprovedResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>通过</p>
+         */
         @NameInMap("ProcessApprovedResultText")
         public String processApprovedResultText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TPROC--X1Gxxx</p>
+         */
         @NameInMap("ProcessCode")
         public String processCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>52330</p>
+         */
         @NameInMap("ProcessId")
         public Long processId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f30233fb-72e1-xxx</p>
+         */
         @NameInMap("ProcessInstanceId")
         public String processInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
         @NameInMap("ProcessInstanceStatus")
         public String processInstanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>已同意</p>
+         */
         @NameInMap("ProcessInstanceStatusText")
         public String processInstanceStatusText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小红的单子</p>
+         */
         @NameInMap("ProcessName")
         public String processName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小红发起的请购单</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public Long version;
 

@@ -7,14 +7,25 @@ public class CommentListReportResponseBody extends TeaModel {
     @NameInMap("comments")
     public java.util.List<CommentListReportResponseBodyComments> comments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("hasMore")
     public Boolean hasMore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1568442466000</p>
+     */
     @NameInMap("nextCursor")
     public Long nextCursor;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -60,9 +71,17 @@ public class CommentListReportResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1678442466000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("Userid")
         public String userid;
 

@@ -4,14 +4,25 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class ListNodesShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next_token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MNDoBb60VLBPraakI1Ywxyyn8lemrZQ3</p>
      */
     @NameInMap("ParentNodeId")
     public String parentNodeId;
@@ -19,6 +30,10 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("TenantContext")
     public String tenantContextShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("WithPermissionRole")
     public Boolean withPermissionRole;
 

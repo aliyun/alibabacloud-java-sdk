@@ -4,15 +4,31 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateSearchDomeShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1699265024987</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1030</p>
+     */
     @NameInMap("ResId")
     public String resId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1699265024987</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

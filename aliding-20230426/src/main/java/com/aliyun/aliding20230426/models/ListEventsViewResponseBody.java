@@ -7,11 +7,18 @@ public class ListEventsViewResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<ListEventsViewResponseBodyEvents> events;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cnNTbWxxx</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -46,18 +53,38 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsAttendees extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tony</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsOptional")
         public Boolean isOptional;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accepted</p>
+         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Self")
         public Boolean self;
 
@@ -109,6 +136,10 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsCategories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tony</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -128,12 +159,24 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsEnd extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -169,9 +212,17 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsExtendedPropertiesSharedProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dingd8*****1231</p>
+         */
         @NameInMap("BelongCorpId")
         public String belongCorpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zxcvasdfa123===</p>
+         */
         @NameInMap("SourceOpenCid")
         public String sourceOpenCid;
 
@@ -218,6 +269,10 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsLocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tony</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -248,12 +303,24 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsMeetingRooms extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tony</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accepted</p>
+         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c10315a8b4e740a317813ab6fxxxxxx</p>
+         */
         @NameInMap("RoomId")
         public String roomId;
 
@@ -289,15 +356,27 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsOnlineMeetingInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5c4df2xxx</p>
+         */
         @NameInMap("ConferenceId")
         public String conferenceId;
 
         @NameInMap("ExtraInfo")
         public java.util.Map<String, ?> extraInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk://dingtalkclient/page/xxx?confId=xxx&amp;calendarId=xxx</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -341,15 +420,31 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsOrganizer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>tony</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>accepted</p>
+         */
         @NameInMap("ResponseStatus")
         public String responseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Self")
         public Boolean self;
 
@@ -393,6 +488,10 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsOriginStart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
@@ -412,18 +511,38 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsRecurrencePattern extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("DayOfMonth")
         public Integer dayOfMonth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sunday</p>
+         */
         @NameInMap("DaysOfWeek")
         public String daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>first</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -475,12 +594,24 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsRecurrenceRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("NumberOfOccurrences")
         public Integer numberOfOccurrences;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -565,12 +696,24 @@ public class ListEventsViewResponseBody extends TeaModel {
     }
 
     public static class ListEventsViewResponseBodyEventsStart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
@@ -612,9 +755,17 @@ public class ListEventsViewResponseBody extends TeaModel {
         @NameInMap("Categories")
         public java.util.List<ListEventsViewResponseBodyEventsCategories> categories;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>something about this event</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -624,9 +775,17 @@ public class ListEventsViewResponseBody extends TeaModel {
         @NameInMap("ExtendedProperties")
         public ListEventsViewResponseBodyEventsExtendedProperties extendedProperties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iiiP35xxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAllDay")
         public Boolean isAllDay;
 
@@ -651,18 +810,34 @@ public class ListEventsViewResponseBody extends TeaModel {
         @NameInMap("RichTextDescription")
         public ListEventsViewResponseBodyEventsRichTextDescription richTextDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cnNTbxxx</p>
+         */
         @NameInMap("SeriesMasterId")
         public String seriesMasterId;
 
         @NameInMap("Start")
         public ListEventsViewResponseBodyEventsStart start;
 
+        /**
+         * <strong>example:</strong>
+         * <p>confirmed</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test event</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-01T10:15:30+08:00</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

@@ -9,24 +9,36 @@ public class WearOrgHonorRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21659595</p>
      */
     @NameInMap("honorId")
     public String honorId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("orgId")
     public Long orgId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>363784</p>
      */
     @NameInMap("userId")
     public String userId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("wear")
     public Boolean wear;
@@ -77,6 +89,10 @@ public class WearOrgHonorRequest extends TeaModel {
     }
 
     public static class WearOrgHonorRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>306752103647458</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

@@ -9,6 +9,9 @@ public class QueryScheduleConferenceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2a489c68-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("scheduleConferenceId")
     public String scheduleConferenceId;
@@ -35,6 +38,10 @@ public class QueryScheduleConferenceRequest extends TeaModel {
     }
 
     public static class QueryScheduleConferenceRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

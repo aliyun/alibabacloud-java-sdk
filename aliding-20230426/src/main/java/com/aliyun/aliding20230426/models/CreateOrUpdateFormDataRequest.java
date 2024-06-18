@@ -4,24 +4,48 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateFormDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APP_XCE0EVXS6DYG3YDYC5RD</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;countrySelectField_l0c1cwiu\&quot;:[{\&quot;value\&quot;:\&quot;US\&quot;}]}</p>
+     */
     @NameInMap("FormDataJson")
     public String formDataJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FORM-GX866MC1NC1VOFF6WVQW33FD16E23L3CPMKVKA</p>
+     */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NoExecuteExpression")
     public Boolean noExecuteExpression;
 
     @NameInMap("SearchCondition")
     public String searchCondition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>09866181UTZVVD4R3DC955FNKIM52HVPU5WWK7</p>
+     */
     @NameInMap("SystemToken")
     public String systemToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>012345</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

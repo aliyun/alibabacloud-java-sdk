@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetReportTemplateByNameShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我管理的模版</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

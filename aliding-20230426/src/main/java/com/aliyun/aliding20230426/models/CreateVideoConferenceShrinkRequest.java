@@ -10,6 +10,10 @@ public class CreateVideoConferenceShrinkRequest extends TeaModel {
     @NameInMap("ConfTitle")
     public String confTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("InviteCaller")
     public Boolean inviteCaller;
 

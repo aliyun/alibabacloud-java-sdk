@@ -4,11 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateMeetingRoomGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>测试分组</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172L</p>
      */
     @NameInMap("ParentGroupId")
     public Long parentGroupId;
@@ -46,6 +53,10 @@ public class CreateMeetingRoomGroupRequest extends TeaModel {
     }
 
     public static class CreateMeetingRoomGroupRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

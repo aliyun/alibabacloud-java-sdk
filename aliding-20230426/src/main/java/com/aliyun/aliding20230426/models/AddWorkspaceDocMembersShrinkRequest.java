@@ -12,6 +12,9 @@ public class AddWorkspaceDocMembersShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -21,6 +24,9 @@ public class AddWorkspaceDocMembersShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

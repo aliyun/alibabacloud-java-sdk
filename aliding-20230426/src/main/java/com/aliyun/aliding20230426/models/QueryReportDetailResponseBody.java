@@ -7,9 +7,17 @@ public class QueryReportDetailResponseBody extends TeaModel {
     @NameInMap("content")
     public java.util.List<QueryReportDetailResponseBodyContent> content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1691980997000</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>012345</p>
+     */
     @NameInMap("creatorId")
     public String creatorId;
 
@@ -19,24 +27,44 @@ public class QueryReportDetailResponseBody extends TeaModel {
     @NameInMap("deptName")
     public String deptName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1691980997000</p>
+     */
     @NameInMap("modifiedTime")
     public Long modifiedTime;
 
     @NameInMap("remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231232134</p>
+     */
     @NameInMap("reportId")
     public String reportId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("templateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
     @NameInMap("vendorRequestId")
     public String vendorRequestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
     @NameInMap("vendorType")
     public String vendorType;
 
@@ -148,9 +176,17 @@ public class QueryReportDetailResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Sort")
         public String sort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public String type;
 

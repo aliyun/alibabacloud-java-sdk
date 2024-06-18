@@ -6,21 +6,39 @@ import com.aliyun.tea.*;
 public class GetRunningTasksRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKxxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;xx&quot;,&quot;xxx&quot;]</p>
+     */
     @NameInMap("ProcessCodes")
     public String processCodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>instxxxxx</p>
+     */
     @NameInMap("ProcessInstanceId")
     public String processInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

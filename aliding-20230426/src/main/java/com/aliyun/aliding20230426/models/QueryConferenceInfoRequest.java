@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryConferenceInfoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>607452e01401526ee39609e1</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;

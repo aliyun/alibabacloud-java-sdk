@@ -6,21 +6,39 @@ import com.aliyun.tea.*;
 public class GetFormListInAppRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKT0xxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>receipt</p>
+     */
     @NameInMap("FormTypes")
     public String formTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

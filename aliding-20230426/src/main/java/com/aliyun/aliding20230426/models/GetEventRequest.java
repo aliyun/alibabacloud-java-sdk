@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class GetEventRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>311525211</p>
      */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxAttendees")
     public Long maxAttendees;
 

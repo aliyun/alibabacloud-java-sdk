@@ -4,11 +4,18 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateMeetingRoomGroupShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>测试分组</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172L</p>
      */
     @NameInMap("ParentGroupId")
     public Long parentGroupId;

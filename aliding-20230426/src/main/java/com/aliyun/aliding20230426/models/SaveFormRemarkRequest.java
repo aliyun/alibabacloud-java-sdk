@@ -6,33 +6,57 @@ import com.aliyun.tea.*;
 public class SaveFormRemarkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKxxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("AtUserId")
     public String atUserId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instxxxx</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instxxxx</p>
      */
     @NameInMap("FormInstanceId")
     public String formInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
+     */
     @NameInMap("ReplyId")
     public Long replyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;

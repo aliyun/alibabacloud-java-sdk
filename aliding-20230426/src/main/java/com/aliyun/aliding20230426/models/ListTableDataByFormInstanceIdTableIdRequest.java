@@ -6,36 +6,59 @@ import com.aliyun.tea.*;
 public class ListTableDataByFormInstanceIdTableIdRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP_PBKT0xxx</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FORM_PBKT0xxx</p>
      */
     @NameInMap("FormInstanceId")
     public String formInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FORM-xxxxx</p>
      */
     @NameInMap("FormUuid")
     public String formUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hexxxx</p>
      */
     @NameInMap("SystemToken")
     public String systemToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1111</p>
      */
     @NameInMap("TableFieldId")
     public String tableFieldId;

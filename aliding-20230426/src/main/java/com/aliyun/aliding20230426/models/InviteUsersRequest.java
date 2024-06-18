@@ -12,6 +12,9 @@ public class InviteUsersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61289fxxx</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;
@@ -59,10 +62,17 @@ public class InviteUsersRequest extends TeaModel {
     public static class InviteUsersRequestInviteeList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试用户</p>
          */
         @NameInMap("Nick")
         public String nick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -90,6 +100,10 @@ public class InviteUsersRequest extends TeaModel {
     }
 
     public static class InviteUsersRequestTenantContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 

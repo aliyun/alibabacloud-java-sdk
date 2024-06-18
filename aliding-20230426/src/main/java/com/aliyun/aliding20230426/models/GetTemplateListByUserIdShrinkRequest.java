@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetTemplateListByUserIdShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Offset")
     public Long offset;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Size")
     public Long size;

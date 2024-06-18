@@ -6,22 +6,45 @@ import com.aliyun.tea.*;
 public class ListEventsViewRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxAttendees")
     public Integer maxAttendees;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cnNTbW1xxx</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-11-28T00:00:00+08:00</p>
+     */
     @NameInMap("TimeMax")
     public String timeMax;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-11-27T00:00:00+08:00</p>
+     */
     @NameInMap("TimeMin")
     public String timeMin;
 

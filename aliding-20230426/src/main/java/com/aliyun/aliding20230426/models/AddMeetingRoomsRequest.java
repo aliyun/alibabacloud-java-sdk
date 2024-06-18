@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddMeetingRoomsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("CalendarId")
     public String calendarId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>U5Kxxxxx</p>
      */
     @NameInMap("EventId")
     public String eventId;
@@ -52,6 +58,10 @@ public class AddMeetingRoomsRequest extends TeaModel {
     }
 
     public static class AddMeetingRoomsRequestMeetingRoomsToAdd extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4002fxxxxx</p>
+         */
         @NameInMap("RoomId")
         public String roomId;
 

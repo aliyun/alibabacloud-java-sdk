@@ -16,6 +16,10 @@ public class CreateEventRequest extends TeaModel {
     @NameInMap("Extra")
     public java.util.Map<String, String> extra;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAllDay")
     public Boolean isAllDay;
 
@@ -28,6 +32,10 @@ public class CreateEventRequest extends TeaModel {
     @NameInMap("Recurrence")
     public CreateEventRequestRecurrence recurrence;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Reminders")
     public java.util.List<CreateEventRequestReminders> reminders;
 
@@ -45,6 +53,9 @@ public class CreateEventRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("calendarId")
     public String calendarId;
@@ -173,9 +184,17 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestAttendees extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7845</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isOptional")
         public Boolean isOptional;
 
@@ -203,12 +222,24 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestEnd extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;2020-09-21&quot;</p>
+         */
         @NameInMap("date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;2021-09-20T10:15:30+08:00&quot;</p>
+         */
         @NameInMap("dateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;Asia/Shanghai&quot;</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 
@@ -263,6 +294,10 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestOnlineMeetingInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -282,18 +317,38 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestRecurrencePattern extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dayOfMonth")
         public Integer dayOfMonth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;monday&quot;</p>
+         */
         @NameInMap("daysOfWeek")
         public String daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;last&quot;</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;daily&quot;</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -345,12 +400,24 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestRecurrenceRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;2021-12-31T10:15:30+08:00&quot;</p>
+         */
         @NameInMap("endDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("numberOfOccurrences")
         public Integer numberOfOccurrences;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;endDate&quot;</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -416,9 +483,17 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestReminders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
+         */
         @NameInMap("method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("minutes")
         public Integer minutes;
 
@@ -465,9 +540,17 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestUiConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;updateEventButton&quot;</p>
+         */
         @NameInMap("uiName")
         public String uiName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;hide&quot;</p>
+         */
         @NameInMap("uiStatus")
         public String uiStatus;
 
@@ -495,12 +578,24 @@ public class CreateEventRequest extends TeaModel {
     }
 
     public static class CreateEventRequestStart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;2021-09-20&quot;</p>
+         */
         @NameInMap("date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;2021-09-20T10:15:30+08:00&quot;</p>
+         */
         @NameInMap("dateTime")
         public String dateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;Asia/Shanghai&quot;</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 

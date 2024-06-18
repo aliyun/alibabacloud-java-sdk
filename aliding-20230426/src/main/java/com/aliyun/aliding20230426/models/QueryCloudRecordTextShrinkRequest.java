@@ -4,15 +4,31 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class QueryCloudRecordTextShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20000</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1631172045153000</p>
+     */
     @NameInMap("NextToken")
     public Long nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7940</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -21,6 +37,9 @@ public class QueryCloudRecordTextShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61289fxxx</p>
      */
     @NameInMap("conferenceId")
     public String conferenceId;
