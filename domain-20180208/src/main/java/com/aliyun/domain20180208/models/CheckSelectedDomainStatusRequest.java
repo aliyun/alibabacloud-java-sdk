@@ -4,6 +4,12 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class CheckSelectedDomainStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("Domain")
     public String domain;
 

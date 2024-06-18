@@ -21,12 +21,21 @@ public class ChangeAuctionRequest extends TeaModel {
     }
 
     public static class ChangeAuctionRequestAuctionListBidRecords extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Price")
         public Float price;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -65,9 +74,15 @@ public class ChangeAuctionRequest extends TeaModel {
         @NameInMap("BidRecords")
         public java.util.List<ChangeAuctionRequestAuctionListBidRecords> bidRecords;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
@@ -86,9 +101,15 @@ public class ChangeAuctionRequest extends TeaModel {
         @NameInMap("TimeLeft")
         public Long timeLeft;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Winner")
         public String winner;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("WinnerPrice")
         public Float winnerPrice;
 

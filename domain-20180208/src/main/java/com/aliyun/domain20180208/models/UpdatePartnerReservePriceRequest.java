@@ -4,15 +4,27 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class UpdatePartnerReservePriceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BiddingId")
     public Integer biddingId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PartnerType")
     public String partnerType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReservePrice")
     public Double reservePrice;
 

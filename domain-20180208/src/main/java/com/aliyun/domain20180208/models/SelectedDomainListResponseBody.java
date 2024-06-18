@@ -4,6 +4,10 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class SelectedDomainListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OssFileNotFound</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -12,10 +16,17 @@ public class SelectedDomainListResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80011ABC-F573-4795-B0E8-377BFBBA3422</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -57,6 +68,10 @@ public class SelectedDomainListResponseBody extends TeaModel {
     }
 
     public static class SelectedDomainListResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://selected-domain.oss-cn-zhangjiakou.aliyuncs.com/aliyun_selected_domain_20231109.gz?Expires=1699524493&OSSAccessKeyId=LTAI5tPMAybR4gfSEjdfAk1F&Signature=2Tpo7Eaf%2BqIop8SuMtI91m%2FAFpY%3D">http://selected-domain.oss-cn-zhangjiakou.aliyuncs.com/aliyun_selected_domain_20231109.gz?Expires=1699524493&amp;OSSAccessKeyId=LTAI5tPMAybR4gfSEjdfAk1F&amp;Signature=2Tpo7Eaf%2BqIop8SuMtI91m%2FAFpY%3D</a></p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 

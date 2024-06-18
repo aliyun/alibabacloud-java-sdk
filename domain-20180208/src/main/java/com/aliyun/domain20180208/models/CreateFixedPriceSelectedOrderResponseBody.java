@@ -4,18 +4,34 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DomainNotOnSale</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Module")
     public CreateFixedPriceSelectedOrderResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C50E41A0-09F1-4491-8DB8-AF55BD2D0CC8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
     }
 
     public static class CreateFixedPriceSelectedOrderResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31199295f2074ce895645d386cb22c36</p>
+         */
         @NameInMap("OrderNo")
         public String orderNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20.00</p>
+         */
         @NameInMap("Price")
         public Long price;
 

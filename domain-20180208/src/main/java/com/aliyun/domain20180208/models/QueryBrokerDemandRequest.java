@@ -4,15 +4,31 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class QueryBrokerDemandRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SE20183915FI0178</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public String status;
 

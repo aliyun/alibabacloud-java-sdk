@@ -4,21 +4,41 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class QueryAuctionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<QueryAuctionsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UUID</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -76,60 +96,132 @@ public class QueryAuctionsResponseBody extends TeaModel {
     }
 
     public static class QueryAuctionsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1515961936000</p>
+         */
         @NameInMap("AuctionEndTime")
         public Long auctionEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("AuctionId")
         public String auctionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1515961936000</p>
+         */
         @NameInMap("BookEndTime")
         public Long bookEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("BookedPartner")
         public String bookedPartner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RMB</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1515961936000</p>
+         */
         @NameInMap("DeliveryTime")
         public Long deliveryTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailCode")
         public String failCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("HighBid")
         public Float highBid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("HighBidder")
         public String highBidder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110</p>
+         */
         @NameInMap("NextValidBid")
         public Float nextValidBid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("PartnerType")
         public String partnerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1515961936000</p>
+         */
         @NameInMap("PayEndTime")
         public Long payEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("PayPrice")
         public Float payPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PayStatus")
         public String payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ProduceStatus")
         public String produceStatus;
 
         @NameInMap("ReserveMax")
         public Long reserveMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ReserveMet")
         public Boolean reserveMet;
 
@@ -139,15 +231,31 @@ public class QueryAuctionsResponseBody extends TeaModel {
         @NameInMap("ReservePrice")
         public Long reservePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("TransferInPrice")
         public Float transferInPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("YourCurrentBid")
         public Float yourCurrentBid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("YourMaxBid")
         public Float yourMaxBid;
 

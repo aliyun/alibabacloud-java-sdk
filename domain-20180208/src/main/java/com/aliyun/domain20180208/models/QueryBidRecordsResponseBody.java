@@ -4,21 +4,41 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class QueryBidRecordsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<QueryBidRecordsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UUID</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -76,18 +96,38 @@ public class QueryBidRecordsResponseBody extends TeaModel {
     }
 
     public static class QueryBidRecordsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Bid")
         public Float bid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1515961936000</p>
+         */
         @NameInMap("BidTime")
         public Long bidTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Bidder")
         public String bidder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RMB</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 

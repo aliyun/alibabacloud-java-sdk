@@ -4,27 +4,55 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class QueryBookingDomainInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("AuctionId")
     public Integer auctionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1517985730419</p>
+     */
     @NameInMap("BookEndTime")
     public Long bookEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USD</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("MaxBid")
     public Float maxBid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("PartnerType")
     public String partnerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234234njhjkhkj</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SnatchNo")
     public String snatchNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17</p>
+     */
     @NameInMap("TransferInPrice")
     public Float transferInPrice;
 

@@ -4,6 +4,12 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class AcceptDemandRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SE20183A0Q7C5556</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 

@@ -4,9 +4,19 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class ReserveDomainRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("Channels")
     public java.util.List<String> channels;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

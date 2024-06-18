@@ -4,21 +4,41 @@ package com.aliyun.domain20180208.models;
 import com.aliyun.tea.*;
 
 public class QueryBrokerDemandResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<QueryBrokerDemandResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>497F7522-82B0-4BD4-84FE-AE8749E4C2F9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -79,18 +99,38 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         @NameInMap("AuditStatus")
         public Integer auditStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13300000001</p>
+         */
         @NameInMap("BargainSellerMobile")
         public String bargainSellerMobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("BargainSellerPrice")
         public Float bargainSellerPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SE20183915FI0178</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>taobao.com</p>
+         */
         @NameInMap("DemandDomain")
         public String demandDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DemandPrice")
         public Float demandPrice;
 
@@ -100,6 +140,10 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13300000000</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
@@ -109,27 +153,58 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         @NameInMap("PartnerDomain")
         public String partnerDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.com</p>
+         */
         @NameInMap("PayDomain")
         public String payDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PayPrice")
         public Float payPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1524800053000</p>
+         */
         @NameInMap("PayTime")
         public Long payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ProduceType")
         public Integer produceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1524800053000</p>
+         */
         @NameInMap("PublishTime")
         public Long publishTime;
 
         @NameInMap("PurchaseStatus")
         public Integer purchaseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18800</p>
+         */
         @NameInMap("ServicePayPrice")
         public Float servicePayPrice;
 
+        @NameInMap("SettleBasePrice")
+        public Float settleBasePrice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -280,6 +355,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         }
         public Float getServicePayPrice() {
             return this.servicePayPrice;
+        }
+
+        public QueryBrokerDemandResponseBodyData setSettleBasePrice(Float settleBasePrice) {
+            this.settleBasePrice = settleBasePrice;
+            return this;
+        }
+        public Float getSettleBasePrice() {
+            return this.settleBasePrice;
         }
 
         public QueryBrokerDemandResponseBodyData setStatus(String status) {
