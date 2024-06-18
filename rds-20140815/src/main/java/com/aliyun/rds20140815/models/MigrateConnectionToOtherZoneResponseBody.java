@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class MigrateConnectionToOtherZoneResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParam</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid Parameter.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>
      */
     @NameInMap("RequestId")
     public String requestId;

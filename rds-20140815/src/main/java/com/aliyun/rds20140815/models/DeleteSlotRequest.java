@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteSlotRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOC****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp102g323jd4****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -28,6 +32,9 @@ public class DeleteSlotRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group. You can leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -40,19 +47,24 @@ public class DeleteSlotRequest extends TeaModel {
 
     /**
      * <p>The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>slot_test01</p>
      */
     @NameInMap("SlotName")
     public String slotName;
 
     /**
      * <p>The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:</p>
-     * <br>
-     * <p>*   ACTIVE</p>
-     * <p>*   INACTIVE</p>
-     * <br>
+     * <ul>
+     * <li>ACTIVE</li>
+     * <li>INACTIVE</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INACTIVE</p>
      */
     @NameInMap("SlotStatus")
     public String slotStatus;

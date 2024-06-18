@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class DestroyDBInstanceRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>> You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <blockquote>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the ID of the instance.</p>
-     * <br>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

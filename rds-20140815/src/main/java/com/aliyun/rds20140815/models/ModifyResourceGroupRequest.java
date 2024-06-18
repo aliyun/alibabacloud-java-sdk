@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ModifyResourceGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bpxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -26,8 +31,10 @@ public class ModifyResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The resource group ID. You can call the ListResourceGroups operation to obtain the resource group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acxxxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

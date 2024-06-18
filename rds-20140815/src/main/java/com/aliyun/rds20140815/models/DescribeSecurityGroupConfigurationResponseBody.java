@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -18,6 +21,9 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>87BDAE8C-ACB0-4A26-BBCC-7D1DD31D630D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,27 +60,40 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
         /**
          * <p>The network type of the ECS security group. Valid values:</p>
-         * <br>
-         * <p>*   **Classic**</p>
-         * <p>*   **VPC**</p>
+         * <ul>
+         * <li><strong>Classic</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the ECS security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxxxxx</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The security group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>security-group-emraccess</p>
          */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;

@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class RevokeAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The name of the account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDB</p>
      */
     @NameInMap("DBName")
     public String DBName;

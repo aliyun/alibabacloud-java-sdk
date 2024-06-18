@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class PurgeDBInstanceLogRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

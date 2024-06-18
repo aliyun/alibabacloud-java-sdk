@@ -6,53 +6,64 @@ import com.aliyun.tea.*;
 public class DescribeDBProxyPerformanceRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4n3axxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
      * <p>The type of the database proxy instance. Valid values:</p>
-     * <br>
-     * <p>*   common: the general-purpose database proxy</p>
-     * <p>*   exclusive: the dedicated database proxy</p>
+     * <ul>
+     * <li>common: the general-purpose database proxy</li>
+     * <li>exclusive: the dedicated database proxy</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DedicatedProxy</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-21T18:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The performance metrics that you want to query.</p>
-     * <br>
-     * <p>If the instance runs MySQL, you can query only the **Maxscale_CpuUsage** performance metric, which indicates the CPU utilization of the instance.</p>
-     * <br>
+     * <p>If the instance runs MySQL, you can query only the <strong>Maxscale_CpuUsage</strong> performance metric, which indicates the CPU utilization of the instance.</p>
      * <p>If the instance runs PostgreSQL, you can query the following performance metrics:</p>
-     * <br>
-     * <p>*   **Maxscale_TotalConns**: the number of connections per second</p>
-     * <p>*   **Maxscale_CurrentConns**: the number of connections that are established</p>
-     * <p>*   **Maxscale_DownFlows**: outbound traffic</p>
-     * <p>*   **Maxscale_UpFlows**: inbound traffic</p>
-     * <p>*   **Maxscale_QPS**: QPS</p>
-     * <p>*   **Maxscale_MemUsage**: memory usage</p>
-     * <p>*   **Maxscale_CpuUsage**: CPU utilization</p>
-     * <br>
+     * <ul>
+     * <li><strong>Maxscale_TotalConns</strong>: the number of connections per second</li>
+     * <li><strong>Maxscale_CurrentConns</strong>: the number of connections that are established</li>
+     * <li><strong>Maxscale_DownFlows</strong>: outbound traffic</li>
+     * <li><strong>Maxscale_UpFlows</strong>: inbound traffic</li>
+     * <li><strong>Maxscale_QPS</strong>: QPS</li>
+     * <li><strong>Maxscale_MemUsage</strong>: memory usage</li>
+     * <li><strong>Maxscale_CpuUsage</strong>: CPU utilization</li>
+     * </ul>
      * <p>If you want to query more than one performance metric, separate the performance metrics with commas (,). You can specify up to six performance metrics in a single request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Maxscale_CpuUsage</p>
      */
     @NameInMap("MetricsName")
     public String metricsName;
@@ -62,8 +73,10 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -75,9 +88,11 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-19T01:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

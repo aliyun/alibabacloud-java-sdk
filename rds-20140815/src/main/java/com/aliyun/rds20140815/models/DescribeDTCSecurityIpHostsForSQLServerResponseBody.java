@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The number of distributed transaction whitelists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IpHostPairNum")
     public String ipHostPairNum;
@@ -24,6 +30,9 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2CA62A70-2203-45C6-8E90-8971D5ACC0C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,13 +76,19 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
 
     public static class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups extends TeaModel {
         /**
-         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Multiple values are separated with semicolons (;).</p>
+         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: <code>IP address,Hostname</code>. Multiple values are separated with semicolons (;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.100,k3ecstest</p>
          */
         @NameInMap("SecurityIpHosts")
         public String securityIpHosts;
 
         /**
          * <p>The name of the distributed transaction whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("WhitelistGroupName")
         public String whitelistGroupName;

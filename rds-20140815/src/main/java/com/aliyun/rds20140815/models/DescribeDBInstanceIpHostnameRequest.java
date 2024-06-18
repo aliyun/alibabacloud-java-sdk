@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceIpHostnameRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,8 +22,10 @@ public class DescribeDBInstanceIpHostnameRequest extends TeaModel {
 
     /**
      * <p>You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

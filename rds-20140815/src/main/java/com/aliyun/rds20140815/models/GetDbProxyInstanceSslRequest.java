@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class GetDbProxyInstanceSslRequest extends TeaModel {
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4n3axxxxx</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

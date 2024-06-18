@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     /**
      * <p>The response code returned. Valid values:</p>
-     * <br>
-     * <p>*   **200**: success</p>
-     * <p>*   **400**: client error</p>
-     * <p>*   **401**: identity authentication failed</p>
-     * <p>*   **404**: request page not found</p>
-     * <p>*   **500**: server error</p>
+     * <ul>
+     * <li><strong>200</strong>: success</li>
+     * <li><strong>400</strong>: client error</li>
+     * <li><strong>401</strong>: identity authentication failed</li>
+     * <li><strong>404</strong>: request page not found</li>
+     * <li><strong>500</strong>: server error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,31 +28,45 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned. Valid values:</p>
-     * <br>
-     * <p>*   **200**: success</p>
-     * <p>*   **400**: client error</p>
-     * <p>*   **500**: server error</p>
+     * <ul>
+     * <li><strong>200</strong>: success</li>
+     * <li><strong>400</strong>: client error</li>
+     * <li><strong>500</strong>: server error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16C62438-491B-5C02-9B49-BA924A1372A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -109,30 +127,45 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     public static class DescribeAllWhitelistTemplateResponseBodyDataTemplates extends TeaModel {
         /**
          * <p>The primary key of the data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.2.X.X,10.0.X.X</p>
          */
         @NameInMap("Ips")
         public String ips;
 
         /**
          * <p>The ID of the whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>412</p>
          */
         @NameInMap("TemplateId")
         public Integer templateId;
 
         /**
          * <p>The name of the whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template_123</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168****</p>
          */
         @NameInMap("UserId")
         public Integer userId;
@@ -187,30 +220,44 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     public static class DescribeAllWhitelistTemplateResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrPageNumbers")
         public Integer currPageNumbers;
 
         /**
          * <p>Indicates whether the data that meets the conditions is displayed on the next page. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
         /**
          * <p>Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasPrev")
         public Boolean hasPrev;
 
         /**
          * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxRecordsPerPage")
         public Integer maxRecordsPerPage;
@@ -223,12 +270,18 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalPageNumbers")
         public Integer totalPageNumbers;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>402</p>
          */
         @NameInMap("TotalRecords")
         public Integer totalRecords;

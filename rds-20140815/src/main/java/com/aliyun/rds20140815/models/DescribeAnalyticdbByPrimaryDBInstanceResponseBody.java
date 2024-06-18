@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeAnalyticdbByPrimaryDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The number of associated analytic instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AnalyticDBCount")
     public Integer analyticDBCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>77862BFF-ED59-552A-A2E8-692FEAFC9527</p>
      */
     @NameInMap("RequestId")
     public String requestId;

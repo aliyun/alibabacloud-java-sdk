@@ -6,20 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeParametersResponseBody extends TeaModel {
     /**
      * <p>The list of parameters that are being synchronized.</p>
-     * <br>
-     * <p>> After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</p>
+     * <blockquote>
+     * <p>After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</p>
+     * </blockquote>
      */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.5</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -32,6 +39,9 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -98,18 +108,27 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static class DescribeParametersResponseBodyConfigParametersDBInstanceParameter extends TeaModel {
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fill factor</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -167,24 +186,36 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static class DescribeParametersResponseBodyParamGroupInfo extends TeaModel {
         /**
          * <p>The ID of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-sys-01040401010200</p>
          */
         @NameInMap("ParamGroupId")
         public String paramGroupId;
 
         /**
          * <p>The description of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sync_binlog=1000, innodb_flush_log_at_trx_commit=2, async</p>
          */
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
         /**
          * <p>The name of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_innodb_8.0_basic_normal_high</p>
          */
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
         /**
          * <p>The type of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterGroupType")
         public String parameterGroupType;
@@ -231,18 +262,27 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static class DescribeParametersResponseBodyRunningParametersDBInstanceParameter extends TeaModel {
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fill factor</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

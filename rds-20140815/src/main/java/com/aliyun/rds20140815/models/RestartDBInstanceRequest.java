@@ -6,22 +6,31 @@ import com.aliyun.tea.*;
 public class RestartDBInstanceRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the ID of the instance.</p>
-     * <br>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The node ID, which can be used to restart a specified node. You can call the [DescribeDBInstanceHAConfig](https://help.aliyun.com/document_detail/610434.html) operation to obtain the node ID.</p>
-     * <br>
-     * <p>> : The secondary instance restart feature is supported for RDS instances that run SQL Server EE on RDS Cluster Edition. For more information, see [Restart a secondary database](https://help.aliyun.com/document_detail/2411880.html).</p>
+     * <p>The node ID, which can be used to restart a specified node. You can call the <a href="https://help.aliyun.com/document_detail/610434.html">DescribeDBInstanceHAConfig</a> operation to obtain the node ID.</p>
+     * <blockquote>
+     * <p>: The secondary instance restart feature is supported for RDS instances that run SQL Server EE on RDS Cluster Edition. For more information, see <a href="https://help.aliyun.com/document_detail/2411880.html">Restart a secondary database</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2614****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

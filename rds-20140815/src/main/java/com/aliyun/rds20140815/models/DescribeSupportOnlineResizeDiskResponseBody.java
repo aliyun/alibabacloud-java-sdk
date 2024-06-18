@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NotExists.InstanceId</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The response result set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;SupportOnlineResizeDisk&quot;:true,&quot;DBInstanceName&quot;:&quot;rm-uf6wjk5xxxxxxx&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

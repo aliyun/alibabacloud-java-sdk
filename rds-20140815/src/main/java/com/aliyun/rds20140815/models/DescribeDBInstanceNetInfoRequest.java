@@ -6,37 +6,53 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOC*****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The type of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: regular endpoint</p>
-     * <p>*   **ReadWriteSplitting**: read/write splitting endpoint</p>
-     * <br>
-     * <p>> By default, the system returns both types of endpoints.</p>
+     * <ul>
+     * <li><strong>Normal</strong>: regular endpoint</li>
+     * <li><strong>ReadWriteSplitting</strong>: read/write splitting endpoint</li>
+     * </ul>
+     * <blockquote>
+     * <p>By default, the system returns both types of endpoints.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("DBInstanceNetRWSplitType")
     public String DBInstanceNetRWSplitType;
 
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Flag")
     public Integer flag;
 
     /**
      * <p>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rgc-2ze*****</p>
      */
     @NameInMap("GeneralGroupName")
     public String generalGroupName;

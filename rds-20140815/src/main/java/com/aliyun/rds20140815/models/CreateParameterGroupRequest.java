@@ -6,34 +6,43 @@ import com.aliyun.tea.*;
 public class CreateParameterGroupRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
-     * <br>
-     * <p>*   **mysql**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <br>
+     * <ul>
+     * <li><strong>mysql</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database engine version of the instance.</p>
-     * <br>
-     * <p>*   If the instance runs MySQL, the instance must run one of the following MySQL versions:</p>
-     * <br>
-     * <p>    *   **5.6**</p>
-     * <p>    *   **5.7**</p>
-     * <p>    *   **8.0**</p>
-     * <br>
-     * <p>*   If the instance runs PostgreSQL, the instance must run one of the following PostgreSQL versions:</p>
-     * <br>
-     * <p>    *   **10.0**</p>
-     * <p>    *   **11.0**</p>
-     * <p>    *   **12.0**</p>
-     * <p>    *   **13.0**</p>
-     * <p>    *   **14.0**</p>
-     * <p>    *   **15.0**</p>
-     * <br>
+     * <ul>
+     * <li><p>If the instance runs MySQL, the instance must run one of the following MySQL versions:</p>
+     * <ul>
+     * <li><strong>5.6</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>If the instance runs PostgreSQL, the instance must run one of the following PostgreSQL versions:</p>
+     * <ul>
+     * <li><strong>10.0</strong></li>
+     * <li><strong>11.0</strong></li>
+     * <li><strong>12.0</strong></li>
+     * <li><strong>13.0</strong></li>
+     * <li><strong>14.0</strong></li>
+     * <li><strong>15.0</strong></li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.7</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -43,39 +52,52 @@ public class CreateParameterGroupRequest extends TeaModel {
 
     /**
      * <p>The description of the parameter template. The value can be up to 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ParameterGroupDesc")
     public String parameterGroupDesc;
 
     /**
      * <p>The name of the parameter template.</p>
-     * <br>
-     * <p>*   The value must start with a letter and can contain letters, digits, periods (.), and underscores (_).</p>
-     * <p>*   The value can be 8 to 64 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>The value must start with a letter and can contain letters, digits, periods (.), and underscores (_).</li>
+     * <li>The value can be 8 to 64 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1234</p>
      */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
 
     /**
-     * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {"Parameter 1":"Value of Parameter 1","Parameter 2":"Value of Parameter 2"...}. For more information about the parameters that can be modified, see [Modify the parameters of an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/96063.html) or [Modify the parameters of an ApsaraDB RDS for PostgreSQL instance](https://help.aliyun.com/document_detail/96751.html).</p>
-     * <br>
+     * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;back_log&quot;:&quot;3000&quot;,&quot;wait_timeout&quot;:&quot;86400&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
      * <p>The region ID of the parameter template. You can call the DescribeRegions operation to query the most recent zone list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -12,24 +12,36 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E4A6E1B-789B-5F16-9736-39AA57FC7374</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
@@ -82,75 +94,112 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
     public static class DescribeCloudMigrationPrecheckResultResponseBodyItems extends TeaModel {
         /**
          * <p>The content of the assessment report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[Check rds empty]\nCheck rds databases: success\n[Check source connectivity]\nCheck ip connectable: success\nCheck port connectable: success\nCheck database connectable: success\nCheck account replication privilege: success\nCheck account createrole privilege: success\nCheck account monitor privilege: success\n[Check source version]\nCheck major version consistent: success\n[Check source glibc version]\nCheck source glibc version compatible: warning(warning:source glibc version is not compatible with rds pg)\n[Check disk size]\nCheck disk size enough: success\n[Check wal keep size]\nCheck wal keep size large enough: success\n[Check spec params]\nCheck if spec params too large: success\n [Check triggers]\nCheck triggers compatible: success\n[Check user functions]\nCheck user functions compatible: success\n<em>Migrate check success</em></p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-25T06:57:41Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
          * <p>The time when the task was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-25T06:58:00Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>migratetest</p>
          */
         @NameInMap("SourceAccount")
         public String sourceAccount;
 
         /**
          * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
-         * <br>
-         * <p>*   **idcOnVpc**: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</p>
-         * <p>*   **ecsOnVpc**: The self-managed PostgreSQL instance resides on an ECS instance.</p>
+         * <ul>
+         * <li><strong>idcOnVpc</strong>: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</li>
+         * <li><strong>ecsOnVpc</strong>: The self-managed PostgreSQL instance resides on an ECS instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecsonvpc</p>
          */
         @NameInMap("SourceCategory")
         public String sourceCategory;
 
         /**
          * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.2.XX.XX</p>
          */
         @NameInMap("SourceIpAddress")
         public String sourceIpAddress;
 
         /**
          * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("SourcePassword")
         public String sourcePassword;
 
         /**
          * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         @NameInMap("SourcePort")
         public Long sourcePort;
 
         /**
          * <p>A reserved parameter. The return value of this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("TargetEip")
         public String targetEip;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440420798</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
          * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lxbv6rtxno8</p>
          */
         @NameInMap("TaskName")
         public String taskName;

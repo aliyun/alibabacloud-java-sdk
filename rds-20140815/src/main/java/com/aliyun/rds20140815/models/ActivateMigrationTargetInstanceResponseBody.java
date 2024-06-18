@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
     /**
      * <p>The name of the destination instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp102g323jd4****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76364A52-E0AB-5CC8-9818-CF1DC482C092</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.XX.XX</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
 
     /**
      * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5432</p>
      */
     @NameInMap("SourcePort")
     public Long sourcePort;
 
     /**
      * <p>The ID of the identification task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>440913675</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

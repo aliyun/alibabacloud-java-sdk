@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeDedicatedHostGroupsRequest extends TeaModel {
     /**
      * <p>The dedicated cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-7a9xxxxxxxx</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
      * <p>The image based on which the hosts in the dedicated clusters are created. Valid values:</p>
-     * <br>
-     * <p>*   **WindowsWithMssqlStdLicense**: a Windows image that contains the licenses of SQL Server Standard Edition</p>
-     * <p>*   **WindowsWithMssqlEntLisence**: a Windows image that contains the licenses of SQL Server Enterprise Edition</p>
-     * <p>*   **WindowsWithMssqlWebLisence**: a Windows image that contains the licenses of SQL Server Web Edition</p>
-     * <p>*   **AliLinux**: a Linux image</p>
+     * <ul>
+     * <li><strong>WindowsWithMssqlStdLicense</strong>: a Windows image that contains the licenses of SQL Server Standard Edition</li>
+     * <li><strong>WindowsWithMssqlEntLisence</strong>: a Windows image that contains the licenses of SQL Server Enterprise Edition</li>
+     * <li><strong>WindowsWithMssqlWebLisence</strong>: a Windows image that contains the licenses of SQL Server Web Edition</li>
+     * <li><strong>AliLinux</strong>: a Linux image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WindowsWithMssqlStdLicense</p>
      */
     @NameInMap("ImageCategory")
     public String imageCategory;
@@ -26,8 +33,10 @@ public class DescribeDedicatedHostGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

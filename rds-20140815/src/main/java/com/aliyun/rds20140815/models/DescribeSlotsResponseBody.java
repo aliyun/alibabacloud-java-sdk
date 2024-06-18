@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSlotsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76AF0609-4195-5DFC-BC78-3AD76FF872BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,57 +43,84 @@ public class DescribeSlotsResponseBody extends TeaModel {
     public static class DescribeSlotsResponseBodySlots extends TeaModel {
         /**
          * <p>The name of the database in which the replication slot resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_test01</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The extension used by the replication slot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_decoding</p>
          */
         @NameInMap("Plugin")
         public String plugin;
 
         /**
          * <p>The replication slot name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slot_test01</p>
          */
         @NameInMap("SlotName")
         public String slotName;
 
         /**
          * <p>The replication slot status. Valid values:</p>
-         * <br>
-         * <p>*   ACTIVE</p>
-         * <p>*   INACTIVE</p>
+         * <ul>
+         * <li>ACTIVE</li>
+         * <li>INACTIVE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INACTIVE</p>
          */
         @NameInMap("SlotStatus")
         public String slotStatus;
 
         /**
          * <p>The replication slot type. Valid values:</p>
-         * <br>
-         * <p>*   physical</p>
-         * <p>*   logical</p>
+         * <ul>
+         * <li>physical</li>
+         * <li>logical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>logical</p>
          */
         @NameInMap("SlotType")
         public String slotType;
 
         /**
          * <p>The latency of the logical subscription on the subscriber node that corresponds to the current replication slot. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SubReplayLag")
         public String subReplayLag;
 
         /**
          * <p>Indicates whether the replication slot is a temporary replication slot. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Temporary")
         public String temporary;
 
         /**
          * <p>The number of logs accumulated in the replication slot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16 MB</p>
          */
         @NameInMap("WalDelay")
         public String walDelay;

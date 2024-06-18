@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesResponseBody extends TeaModel {
     /**
-     * <p>The information about the database.</p>
+     * <p>The information about the databases.</p>
      */
     @NameInMap("Databases")
     public DescribeDatabasesResponseBodyDatabases databases;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2603CA96-B17D-4903-BC04-61A2C829CD94</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,23 +43,33 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public static class DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccountPrivilegeInfo extends TeaModel {
         /**
          * <p>The account username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Account")
         public String account;
 
         /**
          * <p>The permissions that the account has on the database. Valid values:</p>
-         * <br>
-         * <p>*   **ReadWrite**: read and write permissions</p>
-         * <p>*   **ReadOnly**: read-only permissions</p>
-         * <p>*   **DMLOnly**: DML-only permissions</p>
-         * <p>*   **DDLOnly**: DDL-only permissions</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: read and write permissions</li>
+         * <li><strong>ReadOnly</strong>: read-only permissions</li>
+         * <li><strong>DMLOnly</strong>: DML-only permissions</li>
+         * <li><strong>DDLOnly</strong>: DDL-only permissions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DMLOnly</p>
          */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
         /**
          * <p>The permission that the account has on the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("AccountPrivilegeDetail")
         public String accountPrivilegeDetail;
@@ -177,122 +190,174 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         /**
          * <p>The advanced information about the database.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
          */
         @NameInMap("AdvancedInfo")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo advancedInfo;
 
         /**
          * <p>The basic information about the database.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
          */
         @NameInMap("BasicInfo")
         public DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo basicInfo;
 
         /**
          * <p>The name of the character set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("CharacterSetName")
         public String characterSetName;
 
         /**
-         * <p>The collation of the character set. The example value C stands for localization.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>The collation of the character set. The example value C indicates localization.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>C</p>
          */
         @NameInMap("Collate")
         public String collate;
 
         /**
          * <p>The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("ConnLimit")
         public String connLimit;
 
         /**
          * <p>The type of the character set.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US.utf8</p>
          */
         @NameInMap("Ctype")
         public String ctype;
 
         /**
          * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("DBDescription")
         public String DBDescription;
 
         /**
          * <p>The ID of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB01</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The database status. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Running**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Cold</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("DBStatus")
         public String DBStatus;
 
         /**
          * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The runtime information about the database.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
          */
         @NameInMap("RuntimeInfo")
         public DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo runtimeInfo;
 
         /**
          * <p>The database tablespace.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run PostgreSQL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pg_default</p>
          */
         @NameInMap("Tablespace")
         public String tablespace;
 
         /**
          * <p>The total number of entries returned.</p>
-         * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

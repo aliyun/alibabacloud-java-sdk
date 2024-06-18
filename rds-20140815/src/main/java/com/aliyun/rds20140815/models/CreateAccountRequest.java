@@ -6,71 +6,87 @@ import com.aliyun.tea.*;
 public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
-     * <br>
-     * <p>> : The name cannot start with http:// or https://.</p>
+     * <blockquote>
+     * <p>: The name cannot start with http:// or https://.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Test Account A</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
      * <p>The name of the database account.</p>
-     * <br>
-     * <br>
-     * <p>*   The name must be unique.</p>
-     * <br>
-     * <p>*   The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.</p>
-     * <br>
-     * <p>*   The name must start with a letter and end with a letter or digit.</p>
-     * <br>
-     * <p>*   For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is `Test1`, the name of the standard account cannot be `test1`.</p>
-     * <br>
-     * <p>*   The length of the value must meet the following requirements:</p>
-     * <br>
-     * <p>    *   If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.</p>
-     * <p>    *   If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.</p>
-     * <p>    *   If the instance runs SQL Server, the value must be 2 to 64 characters in length.</p>
-     * <p>    *   If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.</p>
-     * <p>    *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</p>
-     * <p>    *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.</p>
-     * <br>
-     * <p>*   For more information about invalid characters, see [Forbidden keywords](https://help.aliyun.com/document_detail/26317.html).</p>
-     * <br>
+     * <ul>
+     * <li><p>The name must be unique.</p>
+     * </li>
+     * <li><p>The name can contain lowercase letters, digits, and underscores (_). For MySQL databases, the name can contain uppercase letters.</p>
+     * </li>
+     * <li><p>The name must start with a letter and end with a letter or digit.</p>
+     * </li>
+     * <li><p>For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is <code>Test1</code>, the name of the standard account cannot be <code>test1</code>.</p>
+     * </li>
+     * <li><p>The length of the value must meet the following requirements:</p>
+     * <ul>
+     * <li>If the instance runs MySQL 5.7 or MySQL 8.0, the value must be 2 to 32 characters in length.</li>
+     * <li>If the instance runs MySQL 5.6, the value must be 2 to 16 characters in length.</li>
+     * <li>If the instance runs SQL Server, the value must be 2 to 64 characters in length.</li>
+     * <li>If the instance runs PostgreSQL with cloud disks, the value must be 2 to 63 characters in length.</li>
+     * <li>If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.</li>
+     * <li>If the instance runs MariaDB, the value must be 2 to 16 characters in length.</li>
+     * </ul>
+     * </li>
+     * <li><p>For more information about invalid characters, see <a href="https://help.aliyun.com/document_detail/26317.html">Forbidden keywords</a>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The password of the account.</p>
-     * <p> </p>
-     * <br>
-     * <p>*   The value must be 8 to 32 characters in length.</p>
-     * <br>
-     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <br>
-     * <p>*   Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
-     * <br>
+     * <ul>
+     * <li><p>The value must be 8 to 32 characters in length.</p>
+     * </li>
+     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * </li>
+     * <li><p>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test123456</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>The account type. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: standard account (default).</p>
-     * <p>*   **Super**: privileged account.</p>
-     * <p>*   **Sysadmin**: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</p>
-     * <br>
-     * <p>Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](https://help.aliyun.com/document_detail/170736.html).</p>
+     * <ul>
+     * <li><strong>Normal</strong>: standard account (default).</li>
+     * <li><strong>Super</strong>: privileged account.</li>
+     * <li><strong>Sysadmin</strong>: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.</li>
+     * </ul>
+     * <p>Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see <a href="https://help.aliyun.com/document_detail/170736.html">Create a system admin account</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

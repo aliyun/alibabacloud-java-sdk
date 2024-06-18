@@ -6,23 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeGadInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the global active database cluster.</p>
-     * <br>
-     * <p>*   If you leave this parameter empty, this operation returns the details about all global active database clusters that are created within your Alibaba Cloud account.</p>
-     * <p>*   If you specify this parameter, this operation returns the details about the global active database cluster that you specify.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter when you call this operation for the first time, the IDs of all clusters that are created by using the current account are returned. Then, you can specify the cluster ID to view the cluster details.</p>
+     * <ul>
+     * <li>If you leave this parameter empty, this operation returns the details about all global active database clusters that are created within your Alibaba Cloud account.</li>
+     * <li>If you specify this parameter, this operation returns the details about the global active database cluster that you specify.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter when you call this operation for the first time, the IDs of all clusters that are created by using the current account are returned. Then, you can specify the cluster ID to view the cluster details.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gad-rm-bp1npi2j8********</p>
      */
     @NameInMap("GadInstanceName")
     public String gadInstanceName;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

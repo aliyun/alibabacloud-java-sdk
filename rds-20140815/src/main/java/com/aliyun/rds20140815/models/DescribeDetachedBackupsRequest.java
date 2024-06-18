@@ -6,72 +6,102 @@ import com.aliyun.tea.*;
 public class DescribeDetachedBackupsRequest extends TeaModel {
     /**
      * <p>The ID of the backup set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>327xxxxx3</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The backup method. Valid values:</p>
-     * <br>
-     * <p>*   **Automated**</p>
-     * <p>*   **Manual**</p>
+     * <ul>
+     * <li><strong>Automated</strong></li>
+     * <li><strong>Manual</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Automated</p>
      */
     @NameInMap("BackupMode")
     public String backupMode;
 
     /**
      * <p>The status of the backup set. Valid values:</p>
-     * <br>
-     * <p>*   **Success**</p>
-     * <p>*   **Failed**</p>
+     * <ul>
+     * <li><strong>Success</strong></li>
+     * <li><strong>Failed</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("BackupStatus")
     public String backupStatus;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The end of the time range to query. The end time must be later than the start time.</p>
-     * <br>
-     * <p>Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-15T16:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
-     * <p>> The default value is 1.</p>
+     * <blockquote>
+     * <p>The default value is 1.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>> The default value is **30**.</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>The default value is <strong>30</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -81,8 +111,10 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
-     * <p>Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-01T16:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

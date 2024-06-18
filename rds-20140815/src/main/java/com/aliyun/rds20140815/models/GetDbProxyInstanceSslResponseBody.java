@@ -12,6 +12,9 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D330E60C-8AAA-4D63-8F64-5B78F4692F98</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
     public static class GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems extends TeaModel {
         /**
          * <p>The dedicated proxy endpoint for which SSL encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1234.rwlb.rds.aliyuncs.com</p>
          */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n3axxxxx</p>
          */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
 
         /**
          * <p>The ID of the dedicated proxy endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buxxxxxxx</p>
          */
         @NameInMap("EndpointName")
         public String endpointName;
 
         /**
-         * <p>The default identifier of the dedicated proxy endpoint. The value is fixed as **RWSplit**.</p>
+         * <p>The default identifier of the dedicated proxy endpoint. The value is fixed as <strong>RWSplit</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RWSplit</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
         /**
          * <p>The time at which the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-16T08:43:20Z</p>
          */
         @NameInMap("SslExpiredTime")
         public String sslExpiredTime;

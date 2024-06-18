@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The internal IP addresses and hostnames of the ECS instances on which the primary and secondary instances reside. Format: `IP address 1,Hostname 1;IP address 2,Hostname 2`.</p>
+     * <p>The internal IP addresses and hostnames of the ECS instances on which the primary and secondary instances reside. Format: <code>IP address 1,Hostname 1;IP address 2,Hostname 2</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.xx.xx,sdxxxxxxxxB;172.16.xx.xx,sdxxxxxxxxA</p>
      */
     @NameInMap("IpHostnameInfos")
     public String ipHostnameInfos;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67CD4719-51E3-4A76-A38C-02F45FAE7E36</p>
      */
     @NameInMap("RequestId")
     public String requestId;

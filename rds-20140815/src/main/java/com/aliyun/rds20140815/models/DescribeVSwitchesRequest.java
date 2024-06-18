@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID. If you specify this parameter, the details of all vSwitches in the VPC to which the dedicated cluster belongs are returned.</p>
-     * <br>
-     * <p>>  You must specify this parameter or the **VpcId** parameter.</p>
+     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID. If you specify this parameter, the details of all VSwitches in the VPC to which the dedicated cluster belongs are returned.</p>
+     * <blockquote>
+     * <p> You must specify this parameter or the <strong>VpcId</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-7a9********</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -19,25 +23,37 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1 to 50**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1 to 50</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the vSwitch. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID of the VSwitch. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -52,15 +68,22 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the VPC to which the vSwitch belongs.</p>
-     * <br>
-     * <p>> You must configure this parameter or **DedicatedHostGroupId**.</p>
+     * <p>The ID of the VPC to which the VSwitch belongs.</p>
+     * <blockquote>
+     * <p>You must configure this parameter or <strong>DedicatedHostGroupId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1opxu1zkhn**********</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitch belongs. You can call the DescribeAvailableZones operation to query zone IDs. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the vSwitch that is deployed in the specified zone are returned.</p>
+     * <p>The ID of the zone to which the VSwitch belongs. You can call the DescribeAvailableZones operation to query zone IDs. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the VSwitch that is deployed in the specified zone are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

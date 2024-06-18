@@ -6,40 +6,53 @@ import com.aliyun.tea.*;
 public class ListClassesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The commodity code of the instances.</p>
-     * <br>
-     * <p>*   **bards_intl**: The instances are pay-as-you-go primary instances.</p>
-     * <p>*   **rds_intl**: The instances are subscription primary instances.</p>
-     * <p>*   **rords_intl**: The instances are pay-as-you-go read-only instances.</p>
-     * <p>*   **rds_rordspre_public_intl**: The instances are subscription read-only instances.</p>
-     * <br>
+     * <ul>
+     * <li><strong>bards_intl</strong>: The instances are pay-as-you-go primary instances.</li>
+     * <li><strong>rds_intl</strong>: The instances are subscription primary instances.</li>
+     * <li><strong>rords_intl</strong>: The instances are pay-as-you-go read-only instances.</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: The instances are subscription read-only instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bards_intl</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
-     * <p>>  If you set the **CommodityCode** parameter to the commodity code of read-only instances, you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If you set the <strong>CommodityCode</strong> parameter to the commodity code of read-only instances, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The type of order that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **BUY**: specifies the query orders that are used to purchase instances.</p>
-     * <p>*   **UPGRADE**: specifies the query orders that are used to change the specifications of instances.</p>
-     * <p>*   **RENEW**: specifies the query orders that are used to renew instances.</p>
-     * <p>*   **CONVERT**: specifies the query orders that are used to change the billing methods of instances.</p>
-     * <br>
+     * <ul>
+     * <li><strong>BUY</strong>: specifies the query orders that are used to purchase instances.</li>
+     * <li><strong>UPGRADE</strong>: specifies the query orders that are used to change the specifications of instances.</li>
+     * <li><strong>RENEW</strong>: specifies the query orders that are used to renew instances.</li>
+     * <li><strong>CONVERT</strong>: specifies the query orders that are used to change the billing methods of instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BUY</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -49,8 +62,12 @@ public class ListClassesRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
-     * <p>>  If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify this parameter.</p>
+     * <blockquote>
+     * <p> If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

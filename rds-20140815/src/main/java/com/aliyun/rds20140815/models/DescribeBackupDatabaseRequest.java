@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeBackupDatabaseRequest extends TeaModel {
     /**
      * <p>The ID of the backup set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90262212</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

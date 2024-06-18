@@ -6,103 +6,137 @@ import com.aliyun.tea.*;
 public class CreateDdrInstanceRequest extends TeaModel {
     /**
      * <p>The backup set ID that you want to use for the restoration. You can call the DescribeCrossRegionBackups operation to query backup set ID.</p>
-     * <br>
-     * <p>>  This parameter is required when you set the **RestoreType** parameter to **BackupSet**.</p>
+     * <blockquote>
+     * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupSet</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>14***</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The connection mode of the destination instance. Valid values:</p>
-     * <br>
-     * <p>*   **Standard**: standard mode</p>
-     * <p>*   **Safe**: database proxy mode</p>
-     * <br>
-     * <p>Default value: **Standard**.</p>
+     * <ul>
+     * <li><strong>Standard</strong>: standard mode</li>
+     * <li><strong>Safe</strong>: database proxy mode</li>
+     * </ul>
+     * <p>Default value: <strong>Standard</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("ConnectionMode")
     public String connectionMode;
 
     /**
-     * <p>The instance type of the destination instance. For more information, see [Primary ApsaraDB RDS instance types](https://help.aliyun.com/document_detail/26312.html).</p>
-     * <br>
+     * <p>The instance type of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds.mysql.s1.small</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (_), and hyphens (-), and must start with a letter.</p>
-     * <br>
-     * <p>>  The value cannot start with http:// or https://.</p>
+     * <blockquote>
+     * <p> The value cannot start with http:// or https://.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Test database</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
      * <p>The network connection type of the destination instance. Valid values:</p>
-     * <br>
-     * <p>*   **Internet**</p>
-     * <p>*   **Intranet**</p>
-     * <br>
+     * <ul>
+     * <li><strong>Internet</strong></li>
+     * <li><strong>Intranet</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Intranet</p>
      */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
 
     /**
-     * <p>The storage capacity of the destination instance. Valid values: **5 to 2000**. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see [Primary instance types](https://help.aliyun.com/document_detail/26312.html).</p>
-     * <br>
+     * <p>The storage capacity of the destination instance. Valid values: <strong>5 to 2000</strong>. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the destination instance. Only the local SSD storage type is supported. Default value: **local_ssd**.</p>
+     * <p>The storage type of the destination instance. Only the local SSD storage type is supported. Default value: <strong>local_ssd</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>local_ssd</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
     /**
      * <p>The database engine of the destination instance. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **SQLServer**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <br>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.</p>
-     * <br>
-     * <p>*   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
-     * <p>*   Valid values when Engine is set to SQLServer: **2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent**</p>
-     * <p>*   Valid values when Engine is set to PostgreSQL: **9.4, 10.0, 11.0, 12.0, and 13.0**</p>
-     * <br>
+     * <p>The major engine version of the destination instance. The value of this parameter varies based on the value of <strong>Engine</strong>.</p>
+     * <ul>
+     * <li>Valid values when Engine is set to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></li>
+     * <li>Valid values when Engine is set to SQLServer: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</strong></li>
+     * <li>Valid values when Engine is set to PostgreSQL: <strong>9.4, 10.0, 11.0, 12.0, and 13.0</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.6</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **Classic**</p>
-     * <br>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>Classic</strong></li>
+     * </ul>
      * <p>Default value: Classic.</p>
-     * <br>
-     * <p>> If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.</p>
+     * <blockquote>
+     * <p>If you set this parameter to <strong>VPC</strong>, you must also specify <strong>VpcId</strong> and <strong>VSwitchId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Classic</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -115,42 +149,58 @@ public class CreateDdrInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Postpaid**: pay-as-you-go</p>
-     * <p>*   **Prepaid**: subscription</p>
-     * <br>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The unit that is used to measure the subscription duration of the destination instance. Valid values:</p>
-     * <br>
-     * <p>*   **Year**</p>
-     * <p>*   **Month**</p>
-     * <br>
-     * <p>> If you set PayType to **Prepaid**, you must specify UsedTime.</p>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>If you set PayType to <strong>Prepaid</strong>, you must specify UsedTime.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.XXX.XXX.69</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
      * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyxxxxxxxxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -162,93 +212,132 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>> If **RestoreType** is set to **BackupTime**, you must specify this parameter.</p>
+     * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>If <strong>RestoreType</strong> is set to <strong>BackupTime</strong>, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-30T03:29:10Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     /**
      * <p>The restoration method that you want to use. Valid values:</p>
-     * <br>
-     * <p>*   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetId**.</p>
-     * <p>*   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.</p>
-     * <br>
+     * <ul>
+     * <li><strong>BackupSet</strong>: restores data from a backup set. If you use this value, you must also specify <strong>BackupSetId</strong>.</li>
+     * <li><strong>BackupTime</strong>: restores data to a point in time. If you use this value, you must also specify <strong>RestoreTime</strong>, <strong>SourceRegion</strong>, and <strong>SourceDBInstanceName</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BackupSet</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;
 
     /**
-     * <p>The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see [Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance](https://help.aliyun.com/document_detail/43185.html). The entries in the IP address whitelist must be in one of the following formats:</p>
-     * <br>
-     * <p>*   IP address. Example: 10.23.12.24.</p>
-     * <p>*   CIDR block. Example: 10.23.12.24/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from 1 to 32.</p>
-     * <br>
+     * <p>The IP address whitelist of the destination instance. If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add a maximum of 1,000 entries. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a>. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <ul>
+     * <li>IP address. Example: 10.23.12.24.</li>
+     * <li>CIDR block. Example: 10.23.12.24/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from 1 to 32.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
     /**
      * <p>The source instance ID, which is used if you want to restore data to a point in time.</p>
-     * <br>
-     * <p>>  This parameter is required when you set the **RestoreType** parameter to **BackupTime**.</p>
+     * <blockquote>
+     * <p> This parameter is required when you set the <strong>RestoreType</strong> parameter to <strong>BackupTime</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
 
     /**
      * <p>The region ID of the source instance if you want to restore data to a point in time.</p>
-     * <br>
-     * <p>> If you set **RestoreType** to **BackupTime**, you must specify this parameter.</p>
+     * <blockquote>
+     * <p>If you set <strong>RestoreType</strong> to <strong>BackupTime</strong>, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("SourceRegion")
     public String sourceRegion;
 
     /**
      * <p>The character set of the destination instance. Valid values:</p>
-     * <br>
-     * <p>*   **utf8**</p>
-     * <p>*   **gbk**</p>
-     * <p>*   **latin1**</p>
-     * <p>*   **utf8mb4**</p>
+     * <ul>
+     * <li><strong>utf8</strong></li>
+     * <li><strong>gbk</strong></li>
+     * <li><strong>latin1</strong></li>
+     * <li><strong>utf8mb4</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>uft8</p>
      */
     @NameInMap("SystemDBCharset")
     public String systemDBCharset;
 
     /**
      * <p>The subscription duration of the instance.</p>
-     * <br>
-     * <p>*   If you set **Period** to **Year**, the value of UsedTime ranges from **1 to 3**.</p>
-     * <p>*   If you set **Period** to **Month**, the value of UsedTime ranges from **1 to 9**.</p>
-     * <br>
-     * <p>> If you set PayType to **Prepaid**, you must specify UsedTime.</p>
+     * <ul>
+     * <li>If you set <strong>Period</strong> to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 3</strong>.</li>
+     * <li>If you set <strong>Period</strong> to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 9</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you set PayType to <strong>Prepaid</strong>, you must specify UsedTime.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;
 
     /**
-     * <p>The VPC ID of the destination instance. This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.</p>
-     * <br>
-     * <p>>  If you specify this parameter, you must also specify the **ZoneId** parameter.</p>
+     * <p>The VPC ID of the destination instance. This parameter is available only when you set the <strong>InstanceNetworkType</strong> parameter to <strong>VPC</strong>.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxxxxxxxxxxx</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.</p>
-     * <br>
-     * <p>>  If you specify this parameter, you must also specify the **ZoneId** parameter.</p>
+     * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the <strong>InstanceNetworkType</strong> parameter to <strong>VPC</strong>.</p>
+     * <blockquote>
+     * <p> If you specify this parameter, you must also specify the <strong>ZoneId</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-xxxxxxxxxxx</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The zone ID of the destination instance. If the destination instance is deployed in multiple zones, separate the IDs of the zones with colons (:).</p>
-     * <br>
-     * <p>> If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
+     * <blockquote>
+     * <p>If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

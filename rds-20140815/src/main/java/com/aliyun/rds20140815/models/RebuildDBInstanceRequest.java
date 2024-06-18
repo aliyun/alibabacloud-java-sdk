@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class RebuildDBInstanceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-4nxxxxxxx</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
      * <p>The ID of the host on which the system rebuilds the secondary instance.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bpxxxxxxx</p>
      */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
@@ -33,15 +41,22 @@ public class RebuildDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The role of the secondary instance that you want to rebuild. Valid values:</p>
-     * <br>
-     * <p>*   **FOLLOWER**: secondary instance</p>
-     * <p>*   **LOG**: logger instance</p>
+     * <ul>
+     * <li><strong>FOLLOWER</strong>: secondary instance</li>
+     * <li><strong>LOG</strong>: logger instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FOLLOWER</p>
      */
     @NameInMap("RebuildNodeType")
     public String rebuildNodeType;
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,8 +25,10 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the ECS security group. Each instance can be added to up to 10 security groups. Separate multiple security groups with commas (,). To delete an ECS security group, leave this parameter empty. You can call the DescribeSecurityGroups operation to query the ID of the ECS security group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-xxxxxxx</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

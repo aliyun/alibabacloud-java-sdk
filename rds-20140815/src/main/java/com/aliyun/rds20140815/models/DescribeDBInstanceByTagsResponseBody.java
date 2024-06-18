@@ -12,24 +12,36 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,12 +94,18 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
     public static class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -137,6 +155,9 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
     public static class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag extends TeaModel {
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6w**********</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,6 +21,9 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B7E9A79C-DE1B-4398-845F-D654FC0958BD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,30 +60,45 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     public static class DescribeDiagnosticReportListResponseBodyReportList extends TeaModel {
         /**
          * <p>The time when the diagnosis was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-17T12:46:09Z</p>
          */
         @NameInMap("DiagnosticTime")
         public String diagnosticTime;
 
         /**
          * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
          */
         @NameInMap("DownloadURL")
         public String downloadURL;
 
         /**
          * <p>The end time of the monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-10T15:31:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The diagnostic score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Score")
         public Integer score;
 
         /**
          * <p>The start time of the monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-10T15:30:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;

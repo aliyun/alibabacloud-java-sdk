@@ -6,32 +6,38 @@ import com.aliyun.tea.*;
 public class ModifyCollationTimeZoneRequest extends TeaModel {
     /**
      * <p>The character set collation of the instance. By default, the system does not modify the character set collation of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Chinese_PRC_CI_AS**</p>
-     * <p>*   **Chinese_PRC_CS_AS**</p>
-     * <p>*   **Chinese_PRC_BIN**</p>
-     * <p>*   **Latin1_General_CI_AS**</p>
-     * <p>*   **Latin1_General_CS_AS**</p>
-     * <p>*   **SQL_Latin1_General_CP1_CI_AS**</p>
-     * <p>*   **SQL_Latin1_General_CP1_CS_AS**</p>
-     * <p>*   **Japanese_CI_AS**</p>
-     * <p>*   **Japanese_CS_AS**</p>
-     * <p>*   **Chinese_Taiwan_Stroke_CI_AS**</p>
-     * <p>*   **Chinese_Taiwan_Stroke_CS_AS**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The default character set collation of the instance is **Chinese_PRC_CI_AS**.</p>
-     * <br>
-     * <p>*   You must specify one of the **Collation** and **Timezone** parameters.</p>
+     * <ul>
+     * <li><strong>Chinese_PRC_CI_AS</strong></li>
+     * <li><strong>Chinese_PRC_CS_AS</strong></li>
+     * <li><strong>Chinese_PRC_BIN</strong></li>
+     * <li><strong>Latin1_General_CI_AS</strong></li>
+     * <li><strong>Latin1_General_CS_AS</strong></li>
+     * <li><strong>SQL_Latin1_General_CP1_CI_AS</strong></li>
+     * <li><strong>SQL_Latin1_General_CP1_CS_AS</strong></li>
+     * <li><strong>Japanese_CI_AS</strong></li>
+     * <li><strong>Japanese_CS_AS</strong></li>
+     * <li><strong>Chinese_Taiwan_Stroke_CI_AS</strong></li>
+     * <li><strong>Chinese_Taiwan_Stroke_CS_AS</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>The default character set collation of the instance is <strong>Chinese_PRC_CI_AS</strong>.</li>
+     * <li>You must specify one of the <strong>Collation</strong> and <strong>Timezone</strong> parameters.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Latin1_General_CI_AS</p>
      */
     @NameInMap("Collation")
     public String collation;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -47,12 +53,15 @@ public class ModifyCollationTimeZoneRequest extends TeaModel {
 
     /**
      * <p>The time zone of the instance. By default, the system does not modify the time zone.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The default time zone of the instance is **China Standard Time**.</p>
-     * <br>
-     * <p>*   You must specify one of the **Collation** and **Timezone** parameters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The default time zone of the instance is <strong>China Standard Time</strong>.</li>
+     * <li>You must specify one of the <strong>Collation</strong> and <strong>Timezone</strong> parameters.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>China Standard Time</p>
      */
     @NameInMap("Timezone")
     public String timezone;

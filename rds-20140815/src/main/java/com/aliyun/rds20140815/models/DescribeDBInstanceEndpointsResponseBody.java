@@ -12,6 +12,9 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>777C4593-8053-427B-****105593277CAB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem extends TeaModel {
         /**
          * <p>The endpoints of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm****.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.71.XX.XX</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The type of the IP address. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: Internet</p>
-         * <p>*   **Private**: internal network</p>
+         * <ul>
+         * <li><strong>Public</strong>: Internet</li>
+         * <li><strong>Private</strong>: internal network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("IpType")
         public String ipType;
 
         /**
          * <p>The port number of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp12u14ecz****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp17xdic25d****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -154,20 +176,28 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem extends TeaModel {
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-u****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rn-****13p6tum4289h</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The weight of the node. Read requests are distributed based on the weight.</p>
-         * <br>
          * <p>Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -231,21 +261,31 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>The user-defined description of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for readonly business</p>
          */
         @NameInMap("EndpointDescription")
         public String endpointDescription;
 
         /**
          * <p>The endpoint ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
          * <p>The type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Primary**: the read/write endpoint of the instance</p>
-         * <p>*   **Readonly**: the read-only endpoint of the instance</p>
+         * <ul>
+         * <li><strong>Primary</strong>: the read/write endpoint of the instance</li>
+         * <li><strong>Readonly</strong>: the read-only endpoint of the instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Readonly</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
@@ -331,15 +371,22 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-u****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
          * <p>The version of the IP protocol. Valid values:</p>
-         * <br>
-         * <p>*   **ipv4**</p>
-         * <p>*   **ipv6**</p>
+         * <ul>
+         * <li><strong>ipv4</strong></li>
+         * <li><strong>ipv6</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;

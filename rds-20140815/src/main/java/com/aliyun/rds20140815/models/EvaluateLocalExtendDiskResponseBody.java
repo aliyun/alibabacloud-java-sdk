@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the instance is available. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Available")
     public String available;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1375i66nd******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The data transfer type supported by the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DBInstanceTransType")
     public String DBInstanceTransType;
 
     /**
      * <p>The maximum value of the local disk. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("LocalUpgradeDiskLimit")
     public Long localUpgradeDiskLimit;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4C4D26F-E5CE-5A28-8C54-46A6FB318223</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,46 +6,63 @@ import com.aliyun.tea.*;
 public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <br>
-     * <p>1.  **true**: You must make sure that your account balance is sufficient.</p>
-     * <p>2.  **false**: An unpaid order is generated.</p>
-     * <br>
-     * <p>>  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <ol>
+     * <li><strong>true</strong>: You must make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong>: An unpaid order is generated.</li>
+     * </ol>
+     * <blockquote>
+     * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The additional business information about the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;shopCartItemId\&quot;:\&quot;25******\&quot;,\&quot;produceDriver\&quot;:\&quot;NoOrder\&quot;,\&quot;aliyun_shopcart_order_source\&quot;:\&quot;fromShopcart\&quot;,\&quot;shopCartId\&quot;:\&quot;10190203suffix20230509******\&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The commodity code. Valid values:</p>
-     * <br>
-     * <p>*   **bards**: The instance is a pay-as-you-go primary instance.</p>
-     * <p>*   **rds**: The instance is a subscription primary instance.</p>
-     * <p>*   **rords**: The instance is a pay-as-you-go read-only instance.</p>
-     * <p>*   **rds_rordspre_public_cn**: The instance is a subscription read-only instance.</p>
-     * <p>*   **bards_intl**: The instance is a pay-as-you-go primary instance.</p>
-     * <p>*   **rds_intl**: The instance is a subscription primary instance.</p>
-     * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance.</p>
-     * <p>*   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.</p>
-     * <br>
+     * <ul>
+     * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance.</li>
+     * <li><strong>rds</strong>: The instance is a subscription primary instance.</li>
+     * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance.</li>
+     * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance.</li>
+     * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance.</li>
+     * <li><strong>rds_intl</strong>: The instance is a subscription primary instance.</li>
+     * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance.</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bards</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-8vb******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -58,17 +75,23 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
 
     /**
      * <p>The database engine version of the instance. Valid values:</p>
-     * <br>
-     * <p>Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
+     * <p>Valid values if you set Engine to MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.7</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The type of the database node. Valid values:</p>
-     * <br>
-     * <p>*   **Master**: the primary node</p>
-     * <p>*   **Slave**: the secondary node</p>
+     * <ul>
+     * <li><strong>Master</strong>: the primary node</li>
+     * <li><strong>Slave</strong>: the secondary node</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Master</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
@@ -78,24 +101,36 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
 
     /**
      * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliwood-1688-mobile-promotion</p>
      */
     @NameInMap("PromotionCode")
     public String promotionCode;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/610399.html) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>buy</p>
      */
     @NameInMap("Resource")
     public String resource;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -108,6 +143,9 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
 
     /**
      * <p>The zone ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-a</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

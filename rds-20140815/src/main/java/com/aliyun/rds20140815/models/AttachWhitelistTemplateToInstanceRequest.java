@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     /**
      * <p>The name of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp191w771kd3****</p>
      */
     @NameInMap("InsName")
     public String insName;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group. For more information about resource groups, see Resource groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,8 +40,10 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>412</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;

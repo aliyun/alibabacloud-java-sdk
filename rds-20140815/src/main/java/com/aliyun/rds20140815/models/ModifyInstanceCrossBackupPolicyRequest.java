@@ -6,42 +6,60 @@ import com.aliyun.tea.*;
 public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the cross-region backup feature on the instance. This parameter specifies whether you can back up data and logs. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disables the feature.</p>
-     * <p>*   **1:** enables the feature.</p>
-     * <br>
-     * <p>> Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.</p>
+     * <ul>
+     * <li><strong>0</strong>: disables the feature.</li>
+     * <li><strong>1:</strong> enables the feature.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Before you enable the cross-region backup feature, you must configure the CrossBackupRegion parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
 
     /**
      * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
 
     /**
-     * <p>The policy that is used to save the cross-region backup files of the instance. Set the value to **1**. The value 1 specifies that all cross-region backup files are saved.</p>
+     * <p>The policy that is used to save the cross-region backup files of the instance. Set the value to <strong>1</strong>. The value 1 specifies that all cross-region backup files are saved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CrossBackupType")
     public String crossBackupType;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>Specifies whether to enable the cross-region log backup feature on the instance. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disables the feature.</p>
-     * <p>*   **1:** enables the feature.</p>
-     * <br>
-     * <p>> You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.</p>
+     * <ul>
+     * <li><strong>0</strong>: disables the feature.</li>
+     * <li><strong>1:</strong> enables the feature.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can enable the cross-region log backup feature only when the cross-region backup feature is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
@@ -51,8 +69,10 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
 
     /**
      * <p>The region ID of the source instance. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -64,13 +84,19 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The policy that is used to retain the cross-region backup files of the instance. Set the value to 1. The value **1** specifies that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+     * <p>The policy that is used to retain the cross-region backup files of the instance. Set the value to 1. The value <strong>1</strong> specifies that the cross-region backup files of the instance are retained based on the specified retention period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RetentType")
     public Integer retentType;
 
     /**
-     * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: **7 to 1825**.</p>
+     * <p>The number of days for which the cross-region backup files of the instance are retained. Valid values: <strong>7 to 1825</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("Retention")
     public Integer retention;

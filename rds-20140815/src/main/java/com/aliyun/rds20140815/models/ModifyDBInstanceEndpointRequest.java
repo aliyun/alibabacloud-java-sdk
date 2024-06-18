@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceEndpointRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The user-defined description of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>for readonly business</p>
      */
     @NameInMap("DBInstanceEndpointDescription")
     public String DBInstanceEndpointDescription;
 
     /**
      * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-****</p>
      */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The information about the endpoint.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("NodeItems")
     public java.util.List<ModifyDBInstanceEndpointRequestNodeItems> nodeItems;
@@ -99,25 +111,33 @@ public class ModifyDBInstanceEndpointRequest extends TeaModel {
     public static class ModifyDBInstanceEndpointRequestNodeItems extends TeaModel {
         /**
          * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The node ID.</p>
-         * <br>
          * <p>You can query the node ID by using the following methods:</p>
-         * <br>
-         * <p>*   Log on the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology in the lower part of the instance details page.</p>
-         * <p>*   Call the DescribeDBInstanceAttribute operation to query the node ID.</p>
+         * <ul>
+         * <li>Log on the ApsaraDB RDS console, go to the instance details page, and then view the ID of the node in the instance topology in the lower part of the instance details page.</li>
+         * <li>Call the DescribeDBInstanceAttribute operation to query the node ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rn-xxxx-****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The weight of the node. Read requests are distributed based on the weight.</p>
-         * <br>
          * <p>Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Weight")
         public Long weight;

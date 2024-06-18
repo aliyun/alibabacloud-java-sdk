@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBProxyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC452BB1-EED8-4278-95C7-0324B3710DF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

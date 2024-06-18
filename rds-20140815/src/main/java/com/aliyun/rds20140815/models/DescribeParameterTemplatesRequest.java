@@ -6,48 +6,64 @@ import com.aliyun.tea.*;
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: RDS Basic Edition</p>
-     * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>*   **Finance**: RDS Enterprise Edition</p>
+     * <ul>
+     * <li><strong>Basic</strong>: RDS Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+     * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1imnm**********</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The database engine of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **mysql**: MySQL</p>
-     * <p>*   **mssql**: SQL Server</p>
-     * <p>*   **PostgreSQL**: PostgreSQL</p>
-     * <p>*   **MariaDB**: MariaDB</p>
-     * <br>
+     * <ul>
+     * <li><strong>mysql</strong>: MySQL</li>
+     * <li><strong>mssql</strong>: SQL Server</li>
+     * <li><strong>PostgreSQL</strong>: PostgreSQL</li>
+     * <li><strong>MariaDB</strong>: MariaDB</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   Valid values when you set the Engine parameter to mysql: **5.5, 5.6, 5.7, and 8.0**.</p>
-     * <p>*   Valid values when you set the Engine parameter to mssql: **2008r2**.</p>
-     * <p>*   Valid values when you set the Engine parameter to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**.</p>
-     * <p>*   Valid values when you set the Engine parameter to MariaDB: **10.3**.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values when you set the Engine parameter to mysql: <strong>5.5, 5.6, 5.7, and 8.0</strong>.</li>
+     * <li>Valid values when you set the Engine parameter to mssql: <strong>2008r2</strong>.</li>
+     * <li>Valid values when you set the Engine parameter to PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</strong>.</li>
+     * <li>Valid values when you set the Engine parameter to MariaDB: <strong>10.3</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -60,6 +76,9 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

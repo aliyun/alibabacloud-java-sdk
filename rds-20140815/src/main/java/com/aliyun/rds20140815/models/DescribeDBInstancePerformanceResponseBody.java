@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2012-06-19T15:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The database engine of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -30,12 +39,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5409D02-D661-4BF3-8F3D-0A814D0574E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2012-06-10T15:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,13 +110,19 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
         /**
-         * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-05-30T03:29:00Z</p>
          */
         @NameInMap("Date")
         public String date;
 
         /**
          * <p>The value of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0&amp;13.6</p>
          */
         @NameInMap("Value")
         public String value;
@@ -151,20 +172,30 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
         /**
          * <p>The name of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL_Sessions</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The unit of the performance metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The format in which the value of the performance metric is returned.</p>
-         * <br>
-         * <p>>  If a performance metric value consists of multiple fields, the values are separated with ampersands (&). Example: com_delete\\&com_insert\\&com_insert_select\\&com_replace.</p>
+         * <blockquote>
+         * <p> If a performance metric value consists of multiple fields, the values are separated with ampersands (&amp;). Example: com_delete\&amp;com_insert\&amp;com_insert_select\&amp;com_replace.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>recv_k&amp;sent_k</p>
          */
         @NameInMap("ValueFormat")
         public String valueFormat;

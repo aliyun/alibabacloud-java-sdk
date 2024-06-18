@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707ec21345</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47A514A1-4B77-4E30-B4C5-2A880650B3FD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource type. The value `ALIYUN::RDS::INSTANCE` indicates ApsaraDB RDS instances.</p>
+         * <p>The resource type. The value <code>ALIYUN::RDS::INSTANCE</code> indicates ApsaraDB RDS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::RDS::INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value that is associated with the specified tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

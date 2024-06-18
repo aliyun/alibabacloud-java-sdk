@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDBProxyEndpointAddressResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

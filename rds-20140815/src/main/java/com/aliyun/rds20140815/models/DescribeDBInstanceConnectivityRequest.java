@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceConnectivityRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4ns09hgoy99i5gez</p>
      */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;
@@ -20,6 +22,9 @@ public class DescribeDBInstanceConnectivityRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -35,8 +40,10 @@ public class DescribeDBInstanceConnectivityRequest extends TeaModel {
 
     /**
      * <p>The source IP address.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.XX.XX</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;

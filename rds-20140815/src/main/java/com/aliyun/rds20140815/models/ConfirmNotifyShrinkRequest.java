@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class ConfirmNotifyShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to **0**, which indicates that the notification is confirmed by the system.</p>
-     * <br>
+     * <p>The ID of the Alibaba Cloud account that is used to confirm the notification. You can set this parameter to <strong>0</strong>, which indicates that the notification is confirmed by the system.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Confirmor")
     public Long confirmor;
 
     /**
      * <p>The notification IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("NotifyIdList")
     public String notifyIdListShrink;

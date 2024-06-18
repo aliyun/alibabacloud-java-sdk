@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/610396.html) operation to query the ID of the instance.</p>
-     * <br>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp1c808s731l****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,8 +19,10 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
 
     /**
      * <p>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12.0</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;

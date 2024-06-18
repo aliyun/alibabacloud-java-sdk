@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeDBProxyEndpointRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1ja4f56s7us****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The proxy endpoint that you want to query. You can call the DescribeDBProxy interface to query the proxy endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testproxy****.rwlb.rds.aliyuncs.com</p>
      */
     @NameInMap("DBProxyConnectString")
     public String DBProxyConnectString;
 
     /**
      * <p>The name of the proxy terminal. You can call the DescribeDBProxy interface to query the name of the proxy terminal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>keaxncrjluwu0gue****</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
@@ -35,6 +46,9 @@ public class DescribeDBProxyEndpointRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeSQLLogFilesRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the audit log file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custinsxxxxx.csv</p>
      */
     @NameInMap("FileName")
     public String fileName;
@@ -25,13 +30,19 @@ public class DescribeSQLLogFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: **1 to 100000**. Default value: **1**.</p>
+     * <p>The number of the page to return. Valid values: <strong>1 to 100000</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid value: <strong>30 to 200</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

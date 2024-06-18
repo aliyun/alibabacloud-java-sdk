@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CopyDatabaseBetweenInstancesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>803D11AF-C370-465B-AB46-CB3A642DC303</p>
      */
     @NameInMap("RequestId")
     public String requestId;

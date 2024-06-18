@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsmexxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
      * <p>The end time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-21T18:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,12 +39,18 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD31056F-A0CE-41D7-AD39-689B6ABAE982</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-19T01:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,13 +110,19 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
         /**
-         * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-10T09:00:00Z</p>
          */
         @NameInMap("Date")
         public String date;
 
         /**
          * <p>The value of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.83</p>
          */
         @NameInMap("Value")
         public String value;
@@ -151,12 +172,18 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
         /**
          * <p>The performance parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_ratio</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The format in which the value of the performance metric is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker_container_cpu</p>
          */
         @NameInMap("ValueFormat")
         public String valueFormat;

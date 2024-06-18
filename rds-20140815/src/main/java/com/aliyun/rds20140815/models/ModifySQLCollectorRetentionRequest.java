@@ -6,22 +6,27 @@ import com.aliyun.tea.*;
 public class ModifySQLCollectorRetentionRequest extends TeaModel {
     /**
      * <p>The log retention period that is allowed by the SQL Explorer feature on the instance. Valid values:</p>
-     * <br>
-     * <p>*   30: 30 days</p>
-     * <p>*   180: 180 days</p>
-     * <p>*   365: one year</p>
-     * <p>*   1095: three years</p>
-     * <p>*   1825: five years</p>
-     * <br>
+     * <ul>
+     * <li>30: 30 days</li>
+     * <li>180: 180 days</li>
+     * <li>365: one year</li>
+     * <li>1095: three years</li>
+     * <li>1825: five years</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365</p>
      */
     @NameInMap("ConfigValue")
     public String configValue;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -34,6 +39,9 @@ public class ModifySQLCollectorRetentionRequest extends TeaModel {
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyxxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

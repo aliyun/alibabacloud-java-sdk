@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyHASwitchConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6AE1448-D846-4831-B1C7-CFF3E99D5470</p>
      */
     @NameInMap("RequestId")
     public String requestId;

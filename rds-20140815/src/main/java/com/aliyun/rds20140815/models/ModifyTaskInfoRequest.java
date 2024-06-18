@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
      * <p>The action parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;recoverTime\&quot;:\&quot;2023-04-12T18:30:00Z\&quot;,\&quot;recoverMode\&quot;:\&quot;timePoint\&quot;}</p>
      */
     @NameInMap("ActionParams")
     public String actionParams;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,25 +34,34 @@ public class ModifyTaskInfoRequest extends TeaModel {
 
     /**
      * <p>The name of the execution step.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha_switch</p>
      */
     @NameInMap("StepName")
     public String stepName;
 
     /**
      * <p>The name of the operation that you can call to execute the task. Valid values:</p>
-     * <br>
-     * <p>*   ImportImage</p>
-     * <p>*   ExportImage</p>
-     * <p>*   RedeployInstance</p>
-     * <p>*   ModifyDiskSpec</p>
+     * <ul>
+     * <li>ImportImage</li>
+     * <li>ExportImage</li>
+     * <li>RedeployInstance</li>
+     * <li>ModifyDiskSpec</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ImportImage</p>
      */
     @NameInMap("TaskAction")
     public String taskAction;
 
     /**
      * <p>The task ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-83br18hloum8u3948s</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -6,13 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeCharacterSetNameRequest extends TeaModel {
     /**
      * <p>The type of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   **mysql**</p>
-     * <p>*   **mssql**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **MariaDB**</p>
-     * <br>
+     * <ul>
+     * <li><strong>mysql</strong></li>
+     * <li><strong>mssql</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>MariaDB</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -25,14 +28,19 @@ public class DescribeCharacterSetNameRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxRecordsPerPage")
     public Integer maxRecordsPerPage;
@@ -24,18 +30,27 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The page number returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFB6083A-7699-489B-8278-C0CB4793A96E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -95,97 +110,142 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
 
     public static class DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems extends TeaModel {
         /**
-         * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](https://help.aliyun.com/document_detail/126002.html).</p>
-         * <br>
-         * <p>>  This parameter is available only for instances that run **PostgreSQL**.</p>
+         * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes for AliPG</a>.</p>
+         * <blockquote>
+         * <p> This parameter is available only for instances that run <strong>PostgreSQL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>13.6</p>
          */
         @NameInMap("CommunityMinorVersion")
         public String communityMinorVersion;
 
         /**
          * <p>The database engine that corresponds to the minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The database engine version that corresponds to the minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The expiration time of the minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20231213</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
         /**
          * <p>The expiration status of the minor engine version. Valid values:</p>
-         * <br>
-         * <p>*   **vaild**</p>
-         * <p>*   **expired**</p>
-         * <br>
-         * <p>>  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+         * <ul>
+         * <li><strong>vaild</strong></li>
+         * <li><strong>expired</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vaild</p>
          */
         @NameInMap("ExpireStatus")
         public String expireStatus;
 
         /**
          * <p>An internal parameter. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("IsHotfixVersion")
         public Boolean isHotfixVersion;
 
         /**
          * <p>The minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_20220731</p>
          */
         @NameInMap("MinorVersion")
         public String minorVersion;
 
         /**
          * <p>The RDS edition of the instance that runs the minor engine version. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: RDS Basic Edition</p>
-         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-         * <p>*   **Finance**: RDS Enterprise Edition</p>
+         * <ul>
+         * <li><strong>Basic</strong>: RDS Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+         * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The URL of the release notes for the minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com">https://example.com</a></p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
          * <p>The release type. Valid values:</p>
-         * <br>
-         * <p>*   **LTS**: a long-term version</p>
-         * <p>*   **BETA**: a preview version</p>
+         * <ul>
+         * <li><strong>LTS</strong>: a long-term version</li>
+         * <li><strong>BETA</strong>: a preview version</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BETA</p>
          */
         @NameInMap("ReleaseType")
         public String releaseType;
 
         /**
          * <p>The status of the minor engine version. Valid values:</p>
-         * <br>
-         * <p>*   **Offline**: discontinued</p>
-         * <p>*   **Online**: available</p>
-         * <br>
-         * <p>>  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+         * <ul>
+         * <li><strong>Offline</strong>: discontinued</li>
+         * <li><strong>Online</strong>: available</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The tag that corresponds to the minor engine version. Valid values:</p>
-         * <br>
-         * <p>*   **pgsql_docker_image**: tag of common instances</p>
-         * <p>*   **pgsql_babelfish_image**: tag of instances for which Babelfish is enabled</p>
-         * <br>
-         * <p>>  This parameter is available only for instances that run **PostgreSQL**.</p>
+         * <ul>
+         * <li><strong>pgsql_docker_image</strong>: tag of common instances</li>
+         * <li><strong>pgsql_babelfish_image</strong>: tag of instances for which Babelfish is enabled</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only for instances that run <strong>PostgreSQL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pgsql_babelfish_image</p>
          */
         @NameInMap("Tag")
         public String tag;

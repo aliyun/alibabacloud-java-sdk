@@ -6,42 +6,60 @@ import com.aliyun.tea.*;
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>The filter condition that is used to return tasks based on the settings of task cancellation. Default value: -1. Valid values:</p>
-     * <br>
-     * <p>*   **-1**: returns all tasks.</p>
-     * <p>*   **0**: returns only tasks that cannot be canceled.</p>
-     * <p>*   **1**: returns only tasks that can be canceled.</p>
+     * <ul>
+     * <li><strong>-1</strong>: returns all tasks.</li>
+     * <li><strong>0</strong>: returns only tasks that cannot be canceled.</li>
+     * <li><strong>1</strong>: returns only tasks that can be canceled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("AllowCancel")
     public Integer allowCancel;
 
     /**
      * <p>The filter condition that is used to return tasks based on the settings of the switching time. Default value: -1. Valid values:</p>
-     * <br>
-     * <p>*   **-1**: returns all tasks.</p>
-     * <p>*   **0**: returns only tasks for which the switching time cannot be changed.</p>
-     * <p>*   **1**: returns only tasks for which the switching time can be changed.</p>
+     * <ul>
+     * <li><strong>-1</strong>: returns all tasks.</li>
+     * <li><strong>0</strong>: returns only tasks for which the switching time cannot be changed.</li>
+     * <li><strong>1</strong>: returns only tasks for which the switching time can be changed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("AllowChange")
     public Integer allowChange;
 
     /**
      * <p>The filter condition that is used to return tasks based on the task level. Default value: all. Valid values:</p>
-     * <br>
-     * <p>*   **all**: all types</p>
-     * <p>*   **S0**: returns the tasks of the exception fixing level.</p>
-     * <p>*   **S1**: returns the tasks of the system O\\&M level.</p>
+     * <ul>
+     * <li><strong>all</strong>: all types</li>
+     * <li><strong>S0</strong>: returns the tasks of the exception fixing level.</li>
+     * <li><strong>S1</strong>: returns the tasks of the system O\&amp;M level.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("ChangeLevel")
     public String changeLevel;
 
     /**
      * <p>The type of the database. Default value: all. Valid values: mysql, pgsql, and mssql.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("DbType")
     public String dbType;
 
     /**
      * <p>The name of the instance. You can leave this parameter empty. If you configure this parameter, you can specify the name only of one instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp191w771kd3****</p>
      */
     @NameInMap("InsName")
     public String insName;
@@ -54,26 +72,39 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 25. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the service. Valid values: RDS, POLARDB, MongoDB, and Redis. For RDS instances, set the value to RDS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
      * <p>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
-     * <p>>  The value **all** indicates all regions.</p>
+     * <blockquote>
+     * <p> The value <strong>all</strong> indicates all regions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("Region")
     public String region;
@@ -89,25 +120,33 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
 
     /**
      * <p>The status of the task, which is used as a filter condition to return tasks.</p>
-     * <br>
-     * <p>*   **-1**: all tasks</p>
-     * <p>*   **3**: pending</p>
-     * <p>*   **4**: being processed</p>
-     * <p>*   **5**: completed</p>
-     * <p>*   **6**: failed</p>
-     * <p>*   **7**: canceled</p>
+     * <ul>
+     * <li><strong>-1</strong>: all tasks</li>
+     * <li><strong>3</strong>: pending</li>
+     * <li><strong>4</strong>: being processed</li>
+     * <li><strong>5</strong>: completed</li>
+     * <li><strong>6</strong>: failed</li>
+     * <li><strong>7</strong>: canceled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **rds_apsaradb_ha**: primary/secondary switchover</p>
-     * <p>*   **rds_apsaradb_transfer**: instance migration</p>
-     * <p>*   **rds_apsaradb_upgrade**: update of the minor engine version</p>
-     * <p>*   **rds_apsaradb_maxscale**: update of the minor version of the proxy</p>
-     * <p>*   **all**: all types</p>
+     * <ul>
+     * <li><strong>rds_apsaradb_ha</strong>: primary/secondary switchover</li>
+     * <li><strong>rds_apsaradb_transfer</strong>: instance migration</li>
+     * <li><strong>rds_apsaradb_upgrade</strong>: update of the minor engine version</li>
+     * <li><strong>rds_apsaradb_maxscale</strong>: update of the minor version of the proxy</li>
+     * <li><strong>all</strong>: all types</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rds_apsaradb_upgrade</p>
      */
     @NameInMap("TaskType")
     public String taskType;

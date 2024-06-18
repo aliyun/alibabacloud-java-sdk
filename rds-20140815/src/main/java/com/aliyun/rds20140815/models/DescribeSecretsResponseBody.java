@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSecretsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,36 +77,54 @@ public class DescribeSecretsResponseBody extends TeaModel {
     public static class DescribeSecretsResponseBodySecrets extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1266348003******</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The description of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</p>
          */
         @NameInMap("SecretArn")
         public String secretArn;
 
         /**
          * <p>The name of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Foo</p>
          */
         @NameInMap("SecretName")
         public String secretName;
 
         /**
          * <p>The username that is used to access the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_jack</p>
          */
         @NameInMap("Username")
         public String username;

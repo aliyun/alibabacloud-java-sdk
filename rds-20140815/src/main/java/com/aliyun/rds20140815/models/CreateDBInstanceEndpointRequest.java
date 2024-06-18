@@ -6,50 +6,60 @@ import com.aliyun.tea.*;
 public class CreateDBInstanceEndpointRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The prefix of the internal endpoint.</p>
-     * <br>
      * <p>When you create any type of endpoint, an internal endpoint is automatically created for the endpoint. This parameter specifies the prefix of the internal endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-****-ro</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
      * <p>The user-defined description of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>for readonly business</p>
      */
     @NameInMap("DBInstanceEndpointDescription")
     public String DBInstanceEndpointDescription;
 
     /**
      * <p>The endpoint type. Valid values:</p>
-     * <br>
-     * <p>*   Primary: read/write endpoint of the instance</p>
-     * <p>*   Readonly: read-only endpoint of the instance</p>
-     * <br>
+     * <ul>
+     * <li>Primary: read/write endpoint of the instance</li>
+     * <li>Readonly: read-only endpoint of the instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Readonly</p>
      */
     @NameInMap("DBInstanceEndpointType")
     public String DBInstanceEndpointType;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The information about the endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeItems")
@@ -57,22 +67,29 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
 
     /**
      * <p>The port number of the internal endpoint. You can specify the port number for the internal endpoint.</p>
-     * <br>
      * <p>Valid values: 3000 to 5999.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The IP address of the internal endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.XX.XX</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -82,16 +99,20 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID of the internal endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1kqp****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The VPC ID of the internal endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxxmmxjqqi****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -200,24 +221,30 @@ public class CreateDBInstanceEndpointRequest extends TeaModel {
     public static class CreateDBInstanceEndpointRequestNodeItems extends TeaModel {
         /**
          * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The node ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rn-xxxx-****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The weight of the node. Read requests are distributed based on the weight.</p>
-         * <br>
          * <p>Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Weight")
         public Long weight;

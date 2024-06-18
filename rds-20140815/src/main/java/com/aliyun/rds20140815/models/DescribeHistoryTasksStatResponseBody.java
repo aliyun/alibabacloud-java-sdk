@@ -12,6 +12,9 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,27 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     public static class DescribeHistoryTasksStatResponseBodyItems extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   Scheduled</p>
-         * <p>*   Running</p>
-         * <p>*   Succeed</p>
-         * <p>*   Failed</p>
-         * <p>*   Cancelling</p>
-         * <p>*   Canceled</p>
-         * <p>*   Waiting</p>
+         * <ul>
+         * <li>Scheduled</li>
+         * <li>Running</li>
+         * <li>Succeed</li>
+         * <li>Failed</li>
+         * <li>Cancelling</li>
+         * <li>Canceled</li>
+         * <li>Waiting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed,Waiting</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

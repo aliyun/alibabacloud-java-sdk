@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeWhitelistTemplateResponseBody extends TeaModel {
     /**
      * <p>The response code returned. Valid values:</p>
-     * <br>
-     * <p>*   **200**: success</p>
-     * <p>*   **400**: client error</p>
-     * <p>*   **401**: identity authentication failed</p>
-     * <p>*   **404**: request page not found</p>
-     * <p>*   **500**: server error</p>
+     * <ul>
+     * <li><strong>200</strong>: success</li>
+     * <li><strong>400</strong>: client error</li>
+     * <li><strong>401</strong>: identity authentication failed</li>
+     * <li><strong>404</strong>: request page not found</li>
+     * <li><strong>500</strong>: server error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,31 +28,45 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned. Valid values:</p>
-     * <br>
-     * <p>*   **200**: success</p>
-     * <p>*   **400**: client error</p>
-     * <p>*   **500**: server error</p>
+     * <ul>
+     * <li><strong>200</strong>: success</li>
+     * <li><strong>400</strong>: client error</li>
+     * <li><strong>500</strong>: server error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED169A3E-1657-4104-82AB-24EA8CD0DB75</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -109,30 +127,45 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
     public static class DescribeWhitelistTemplateResponseBodyDataTemplate extends TeaModel {
         /**
          * <p>The primary key of the data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1013</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.X.X,2.3.X.X</p>
          */
         @NameInMap("Ips")
         public String ips;
 
         /**
          * <p>The ID of the whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>424</p>
          */
         @NameInMap("TemplateId")
         public Integer templateId;
 
         /**
          * <p>The name of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template_123</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16****</p>
          */
         @NameInMap("UserId")
         public Integer userId;

@@ -9,16 +9,22 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>>  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/26243.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can specify any region for this parameter, which does not affect your query results. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -31,10 +37,13 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
 
     /**
      * <p>The SLR name.</p>
-     * <br>
-     * <p>>  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](https://help.aliyun.com/document_detail/342840.html).</p>
-     * <br>
+     * <blockquote>
+     * <p> For more information about the SLRs supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunServiceRoleForRdsPgsqlOnEcs</p>
      */
     @NameInMap("ServiceLinkedRole")
     public String serviceLinkedRole;

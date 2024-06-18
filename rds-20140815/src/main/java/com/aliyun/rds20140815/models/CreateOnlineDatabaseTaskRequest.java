@@ -6,43 +6,56 @@ import com.aliyun.tea.*;
 public class CreateOnlineDatabaseTaskRequest extends TeaModel {
     /**
      * <p>The consistency check method after the database is open. Valid values:</p>
-     * <br>
-     * <p>*   **SyncExecuteDBCheck**: synchronous database check</p>
-     * <p>*   **AsyncExecuteDBCheck**: asynchronous database check</p>
-     * <br>
-     * <p>> The check methods are supported for RDS instances that run SQL Server 2008 R2.</p>
-     * <br>
+     * <ul>
+     * <li><strong>SyncExecuteDBCheck</strong>: synchronous database check</li>
+     * <li><strong>AsyncExecuteDBCheck</strong>: asynchronous database check</li>
+     * </ul>
+     * <blockquote>
+     * <p>The check methods are supported for RDS instances that run SQL Server 2008 R2.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AsyncExecuteDBCheck</p>
      */
     @NameInMap("CheckDBMode")
     public String checkDBMode;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDB</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
      * <p>The ID of the migration task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5652255443</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;

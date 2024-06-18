@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CheckAccountNameAvailableResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E4AA101-1EE5-41C0-AE6D-0F066331AC1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

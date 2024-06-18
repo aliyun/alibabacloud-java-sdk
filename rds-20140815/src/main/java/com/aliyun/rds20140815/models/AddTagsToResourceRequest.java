@@ -9,16 +9,22 @@ public class AddTagsToResourceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).</p>
-     * <br>
+     * <blockquote>
+     * <p> You can enter up to 30 instance IDs in a single request. If you enter more than one instance ID, you must separate the instance IDs with commas (,).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -31,14 +37,19 @@ public class AddTagsToResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hagnzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -50,15 +61,22 @@ public class AddTagsToResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags that you want to add. Each tag consists of a tag key and a tag value. You can specify a maximum of five tags in the following format for each request: {"key1":"value1","key2":"value2"...}.</p>
-     * <br>
-     * <p>>  The tag key is required and the tag value is optional.</p>
+     * <p>The tags that you want to add. Each tag consists of a tag key and a tag value. You can specify a maximum of five tags in the following format for each request: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</p>
+     * <blockquote>
+     * <p> The tag key is required and the tag value is optional.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{“key1”:”value1”,“key2”:””}</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The ID of the proxy mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
      */
     @NameInMap("proxyId")
     public String proxyId;
@@ -159,12 +177,18 @@ public class AddTagsToResourceRequest extends TeaModel {
     public static class AddTagsToResourceRequestTag extends TeaModel {
         /**
          * <p>The tag key of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The tag value of the first tag that you want to add. Each tag consists of a tag key and a tag value. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         @NameInMap("value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAvailableMetricsResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1*****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -18,12 +21,18 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5CD61041-35F7-10F7-BE94-33A48B221218</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of enhanced monitoring metrics that are available for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -68,61 +77,90 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     public static class DescribeAvailableMetricsResponseBodyItems extends TeaModel {
         /**
          * <p>The description of the Enhanced Monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OS CPU utilization, equal to the number of OS-consumed CPUs divided by the total number of CPUs</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The category of the Enhanced Monitoring metric. Valid values:</p>
-         * <br>
-         * <p>*   **os**: OS metric</p>
-         * <p>*   **db**: database metric</p>
+         * <ul>
+         * <li><strong>os</strong>: OS metric</li>
+         * <li><strong>db</strong>: database metric</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>os</p>
          */
         @NameInMap("Dimension")
         public String dimension;
 
         /**
          * <p>The key of the group to which the Enhanced Monitoring metric belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os.cpu_usage</p>
          */
         @NameInMap("GroupKey")
         public String groupKey;
 
         /**
          * <p>The name of the group to which the Enhanced Monitoring metric belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU Utilization Rate</p>
          */
         @NameInMap("GroupKeyType")
         public String groupKeyType;
 
         /**
          * <p>The method that is used to aggregate the monitoring data of the Enhanced Monitoring metric. Valid values:</p>
-         * <br>
-         * <p>*   **avg**: The system calculates the average value of the Enhanced Monitoring metric.</p>
-         * <p>*   **min**: The system calculates the minimum value of the Enhanced Monitoring metric.</p>
-         * <p>*   **max**: The system calculates the maximum value of the Enhanced Monitoring metric.</p>
+         * <ul>
+         * <li><strong>avg</strong>: The system calculates the average value of the Enhanced Monitoring metric.</li>
+         * <li><strong>min</strong>: The system calculates the minimum value of the Enhanced Monitoring metric.</li>
+         * <li><strong>max</strong>: The system calculates the maximum value of the Enhanced Monitoring metric.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>avg</p>
          */
         @NameInMap("Method")
         public String method;
 
         /**
          * <p>The key of the Enhanced Monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os.cpu_usage.sys.avg</p>
          */
         @NameInMap("MetricsKey")
         public String metricsKey;
 
         /**
          * <p>The alias of the Enhanced Monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_sys_per_core</p>
          */
         @NameInMap("MetricsKeyAlias")
         public String metricsKeyAlias;
 
         /**
          * <p>The serial number of the Enhanced Monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SortRule")
         public Integer sortRule;
 
         /**
          * <p>The unit of the Enhanced Monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
          */
         @NameInMap("Unit")
         public String unit;

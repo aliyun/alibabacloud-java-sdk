@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   **200**: success</p>
-     * <p>*   **400**: client error</p>
-     * <p>*   **401**: identity authentication failed</p>
-     * <p>*   **404**: request page not found</p>
-     * <p>*   **500**: server error</p>
+     * <ul>
+     * <li><strong>200</strong>: success</li>
+     * <li><strong>400</strong>: client error</li>
+     * <li><strong>401</strong>: identity authentication failed</li>
+     * <li><strong>404</strong>: request page not found</li>
+     * <li><strong>500</strong>: server error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,31 +28,45 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned. Valid values:</p>
-     * <br>
-     * <p>*   **200**: success</p>
-     * <p>*   **400**: client error</p>
-     * <p>*   **500**: server error</p>
+     * <ul>
+     * <li><strong>200</strong>: success</li>
+     * <li><strong>400</strong>: client error</li>
+     * <li><strong>500</strong>: server error</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -109,9 +127,13 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     public static class DetachWhitelistTemplateToInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The status code returned. Valid values:</p>
-         * <br>
-         * <p>*   **ok**: The request is successful.</p>
-         * <p>*   **error**: The request fails.</p>
+         * <ul>
+         * <li><strong>ok</strong>: The request is successful.</li>
+         * <li><strong>error</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         @NameInMap("Status")
         public String status;

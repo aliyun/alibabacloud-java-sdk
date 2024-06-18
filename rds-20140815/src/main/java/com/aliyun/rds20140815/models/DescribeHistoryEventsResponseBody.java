@@ -11,25 +11,37 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
     public java.util.List<DescribeHistoryEventsResponseBodyItems> items;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer. Default value: **1**.</p>
+     * <p>The page number. Valid values: any non-zero positive integer. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,171 +93,253 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsResponseBodyItemsData extends TeaModel {
         /**
-         * <p>The cloud service type of the application group. Valid values: **web** and native. The value web indicates a web application. The value **native** indicates a local application.</p>
+         * <p>The cloud service type of the application group. Valid values: <strong>web</strong> and native. The value web indicates a web application. The value <strong>native</strong> indicates a local application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         @NameInMap("CmsProduct")
         public String cmsProduct;
 
         /**
          * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The pagination parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DetailImpact")
         public String detailImpact;
 
         /**
          * <p>The details of the instance operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("DetailReason")
         public String detailReason;
 
         /**
-         * <p>The time when the alert was closed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
+         * <p>The time when the alert was closed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-06T11:46:01Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).</p>
+         * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exception</p>
          */
         @NameInMap("EventCategory")
         public String eventCategory;
 
         /**
          * <p>The event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENT000014</p>
          */
         @NameInMap("EventCode")
         public String eventCode;
 
         /**
          * <p>The event details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         @NameInMap("EventDetail")
         public String eventDetail;
 
         /**
          * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>669036</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
          * <p>The event impact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         @NameInMap("EventImpact")
         public String eventImpact;
 
         /**
-         * <p>The event level. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).</p>
+         * <p>The event level. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("EventLevel")
         public String eventLevel;
 
         /**
          * <p>The event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         @NameInMap("EventReason")
         public String eventReason;
 
         /**
          * <p>The status of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   **1**: pending</p>
-         * <p>*   **2**: ignored</p>
-         * <p>*   **4**: confirmed</p>
-         * <p>*   **8**: marked as false positive</p>
-         * <p>*   **16**: handling</p>
-         * <p>*   **32**: handled</p>
-         * <p>*   **64**: expired</p>
+         * <ul>
+         * <li><strong>1</strong>: pending</li>
+         * <li><strong>2</strong>: ignored</li>
+         * <li><strong>4</strong>: confirmed</li>
+         * <li><strong>8</strong>: marked as false positive</li>
+         * <li><strong>16</strong>: handling</li>
+         * <li><strong>32</strong>: handled</li>
+         * <li><strong>64</strong>: expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EventStatus")
         public String eventStatus;
 
         /**
          * <p>The event type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StatusNotification</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The creation time. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-17T16:05:40Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The update time. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
+         * <p>The update time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-14T09:44:39.000+0000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The handling status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>done</p>
          */
         @NameInMap("HandleStatus")
         public String handleStatus;
 
         /**
          * <p>Indicates whether the event has a lifecycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasLifeCycle")
         public Integer hasLifeCycle;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dhimgsearch</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>Indicates whether the alert is closed. Valid values: **0**: closed. **1**: not closed.</p>
+         * <p>Indicates whether the alert is closed. Valid values: <strong>0</strong>: closed. <strong>1</strong>: not closed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsClosed")
         public Integer isClosed;
 
         /**
          * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The resource type. The value is fixed as **INSTANCE**.</p>
+         * <p>The resource type. The value is fixed as <strong>INSTANCE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The type of the source data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The start time. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
+         * <p>The start time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-29T07:23Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The ID of the resource owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16986832xxxxx</p>
          */
         @NameInMap("Uid")
         public String uid;
@@ -482,42 +576,63 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
 
         /**
          * <p>The task ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4309</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>loanBill</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("Specversion")
         public String specversion;
 
         /**
          * <p>The name of the pending event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QiTian</p>
          */
         @NameInMap("Subject")
         public String subject;
 
         /**
          * <p>The amount of time that has elapsed from the start time of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675232573125</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
-         * <p>The event type. For more information, see [View the event history of an ApsaraDB RDS instance](https://help.aliyun.com/document_detail/129759.html).</p>
+         * <p>The event type. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         @NameInMap("Type")
         public String type;

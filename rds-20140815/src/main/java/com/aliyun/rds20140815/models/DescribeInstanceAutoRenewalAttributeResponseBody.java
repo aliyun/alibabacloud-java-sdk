@@ -12,24 +12,36 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4182309D-CD29-49B1-B4A5-D7CB4D56C31F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,30 +94,45 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
         /**
          * <p>Indicates whether to enable auto-renewal for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("AutoRenew")
         public String autoRenew;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bpxxxxxxx</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The renewal period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;

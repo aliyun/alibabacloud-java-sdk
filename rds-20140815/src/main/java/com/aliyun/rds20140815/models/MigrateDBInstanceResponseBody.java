@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class MigrateDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The serial number of the task in the migration task queue. When the serial number becomes 0, the system starts the migration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>224****</p>
      */
     @NameInMap("MigrationId")
     public Integer migrationId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>498AE8CA-8C81-4A01-AF37-2B902014ED30</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10824****</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

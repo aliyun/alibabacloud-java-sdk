@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteDBInstanceEndpointAddressRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The public endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-****</p>
      */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

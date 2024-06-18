@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -16,38 +18,47 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key of the **configuration item** for the database proxy. Valid values:</p>
-     * <br>
-     * <p>*   **TransparentSwitch**: transparent switchover</p>
-     * <p>*   **PersistentConnections**: short-lived connection optimization</p>
-     * <p>*   **AttacksProtection**: brute-force attack protection</p>
-     * <br>
+     * <p>The key of the <strong>configuration item</strong> for the database proxy. Valid values:</p>
+     * <ul>
+     * <li><strong>TransparentSwitch</strong>: transparent switchover</li>
+     * <li><strong>PersistentConnections</strong>: short-lived connection optimization</li>
+     * <li><strong>AttacksProtection</strong>: brute-force attack protection</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TransparentSwitch</p>
      */
     @NameInMap("ProxyConfigurationKey")
     public String proxyConfigurationKey;
 
     /**
      * <p>The features and status of the database proxy:</p>
-     * <br>
-     * <p>*   **TransparentSwitch**: transparent switchover. Valid values:</p>
-     * <br>
-     * <p>    *   **Enable**: The feature is enabled. This is the default value.</p>
-     * <p>    *   **Disable**: The feature is disabled.</p>
-     * <br>
-     * <p>*   **PersistentConnections**: short-lived connection optimization. Valid values:</p>
-     * <br>
-     * <p>    *   **Enable**: The feature is enabled.</p>
-     * <p>    *   **Disable**: The feature is disabled. This is the default value.</p>
-     * <br>
-     * <p>*   **AttacksProtection**: brute-force attack protection. Valid values:</p>
-     * <br>
-     * <p>    *   **Enable**: The feature is enabled.</p>
-     * <p>    *   **Disable**: The feature is disabled. This is the default value.</p>
-     * <br>
-     * <p>Format: {"Feature 1":"Status 1","Feature 2":"Status 2"...}</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>TransparentSwitch</strong>: transparent switchover. Valid values:</p>
+     * <ul>
+     * <li><strong>Enable</strong>: The feature is enabled. This is the default value.</li>
+     * <li><strong>Disable</strong>: The feature is disabled.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>PersistentConnections</strong>: short-lived connection optimization. Valid values:</p>
+     * <ul>
+     * <li><strong>Enable</strong>: The feature is enabled.</li>
+     * <li><strong>Disable</strong>: The feature is disabled. This is the default value.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>AttacksProtection</strong>: brute-force attack protection. Valid values:</p>
+     * <ul>
+     * <li><strong>Enable</strong>: The feature is enabled.</li>
+     * <li><strong>Disable</strong>: The feature is disabled. This is the default value.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>Format: {&quot;Feature 1&quot;:&quot;Status 1&quot;,&quot;Feature 2&quot;:&quot;Status 2&quot;...}</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;status&quot;:&quot;Enable&quot;}</p>
      */
     @NameInMap("ProxyConfigurationValue")
     public String proxyConfigurationValue;

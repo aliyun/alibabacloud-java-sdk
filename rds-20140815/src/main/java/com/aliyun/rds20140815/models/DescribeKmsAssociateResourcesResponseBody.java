@@ -12,15 +12,22 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether an associated RDS instance exists.</p>
-     * <br>
-     * <p>- **true**: Yes</p>
-     * <p>- **false**: No</p>
+     * <ul>
+     * <li><strong>true</strong>: Yes</li>
+     * <li><strong>false</strong>: No</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AssociateStatus")
     public Boolean associateStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,40 +64,55 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
     public static class DescribeKmsAssociateResourcesResponseBodyAssociateDBInstances extends TeaModel {
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp16p6f68130****</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
          * <p>The database engine. Valid values:</p>
-         * <br>
-         * <p>*   **MySQL**</p>
-         * <p>*   **SQLServer**</p>
-         * <p>*   **PostgreSQL**</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostgreSQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The purpose of the key. Valid values:</p>
-         * <br>
-         * <p>*   **DiskEncryption**: cloud disk encryption</p>
-         * <p>*   **TDE**: transparent data encryption</p>
+         * <ul>
+         * <li><strong>DiskEncryption</strong>: cloud disk encryption</li>
+         * <li><strong>TDE</strong>: transparent data encryption</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DiskEncryption</p>
          */
         @NameInMap("KeyUsedBy")
         public String keyUsedBy;
 
         /**
          * <p>The state of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **CREATING**: The instance is being created.</p>
-         * <p>*   **ACTIVATION**: The instance is running.</p>
-         * <p>*   **DELETING**: The instance is being deleted.</p>
-         * <p>*   **RESTARTING**: The instance is being restarted.</p>
-         * <p>*   **INS_MAINTAINING**: The configuration of the instance is being changed.</p>
-         * <p>*   **INS_MAINTAINING**: The instance is being maintained.</p>
-         * <p>*   **BACKUP_RECOVERING**: The instance is being restored.</p>
-         * <p>*   **NET_MODIFYING**: The network type of the instance is being changed.</p>
+         * <ul>
+         * <li><strong>CREATING</strong>: The instance is being created.</li>
+         * <li><strong>ACTIVATION</strong>: The instance is running.</li>
+         * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+         * <li><strong>RESTARTING</strong>: The instance is being restarted.</li>
+         * <li><strong>INS_MAINTAINING</strong>: The configuration of the instance is being changed.</li>
+         * <li><strong>INS_MAINTAINING</strong>: The instance is being maintained.</li>
+         * <li><strong>BACKUP_RECOVERING</strong>: The instance is being restored.</li>
+         * <li><strong>NET_MODIFYING</strong>: The network type of the instance is being changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
          */
         @NameInMap("Status")
         public String status;

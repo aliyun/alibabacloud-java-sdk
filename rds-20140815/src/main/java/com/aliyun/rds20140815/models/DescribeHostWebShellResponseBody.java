@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeHostWebShellResponseBody extends TeaModel {
     /**
      * <p>The webshell URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("LoginUrl")
     public String loginUrl;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>842B73C8-5776-4BD9-9872-69C8C46DD7D3</p>
      */
     @NameInMap("RequestId")
     public String requestId;

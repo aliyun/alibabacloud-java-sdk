@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class RecoveryDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54325****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFB6083A-7699-489B-8278-C0CB4793A96E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

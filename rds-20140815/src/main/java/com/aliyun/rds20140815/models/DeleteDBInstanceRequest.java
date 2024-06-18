@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDBInstanceRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,12 +22,17 @@ public class DeleteDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:</p>
-     * <br>
-     * <p>*   **None**: No archived backup files are retained.</p>
-     * <p>*   **Lastest**: Only the last archived backup file is retained.</p>
-     * <p>*   **All**: All archived backup files are retained.</p>
-     * <br>
-     * <p>> This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.</p>
+     * <ul>
+     * <li><strong>None</strong>: No archived backup files are retained.</li>
+     * <li><strong>Lastest</strong>: Only the last archived backup file is retained.</li>
+     * <li><strong>All</strong>: All archived backup files are retained.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Lastest</p>
      */
     @NameInMap("ReleasedKeepPolicy")
     public String releasedKeepPolicy;

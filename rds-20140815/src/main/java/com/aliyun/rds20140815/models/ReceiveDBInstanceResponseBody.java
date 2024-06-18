@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ReceiveDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the disaster recovery instance after the switchover.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-tr2whku*****</p>
      */
     @NameInMap("GuardDBInstanceId")
     public String guardDBInstanceId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFB6083A-7699-489B-8278-C0CB4793A96E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

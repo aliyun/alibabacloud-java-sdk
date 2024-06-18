@@ -6,36 +6,47 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceConfigRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of the configuration item that you want to modify. Valid values:</p>
-     * <br>
-     * <p>*   **pgbouncer**. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.</p>
-     * <p>*   **clear_errorlog**. This configuration item is supported for ApsaraDB RDS for SQL Server instances.</p>
-     * <br>
+     * <ul>
+     * <li><strong>pgbouncer</strong>. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.</li>
+     * <li><strong>clear_errorlog</strong>. This configuration item is supported for ApsaraDB RDS for SQL Server instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgbouncer</p>
      */
     @NameInMap("ConfigName")
     public String configName;
 
     /**
      * <p>The value of the configuration item that you want to modify. Valid values:</p>
-     * <br>
-     * <p>*   If you set ConfigName to pgbouncer, the valid values are **true** and **false**.</p>
-     * <p>*   If you set ConfigName to clear_errorlog, set the value to **1**. The value 1 indicates that error logs are cleaned up.</p>
-     * <br>
+     * <ul>
+     * <li>If you set ConfigName to pgbouncer, the valid values are <strong>true</strong> and <strong>false</strong>.</li>
+     * <li>If you set ConfigName to clear_errorlog, set the value to <strong>1</strong>. The value 1 indicates that error logs are cleaned up.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ConfigValue")
     public String configValue;
 
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -48,6 +59,9 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
 
     /**
      * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

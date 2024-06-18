@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeCustinsResourceInfoRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/26232.html) operation to query the instance ID.</p>
-     * <br>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-wz9s06u4drmqj4aqv</p>
      */
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
@@ -17,6 +19,9 @@ public class DescribeCustinsResourceInfoRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

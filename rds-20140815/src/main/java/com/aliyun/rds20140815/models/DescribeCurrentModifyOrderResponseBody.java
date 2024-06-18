@@ -12,6 +12,9 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C87415BE-F5AB-55A4-A60E-A0A329EAF2A4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,57 +43,85 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
     public static class DescribeCurrentModifyOrderResponseBodyModifyOrder extends TeaModel {
         /**
          * <p>The instance family of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;
 
         /**
          * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Cpu")
         public String cpu;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-cn-nwy39qeys0003r</p>
          */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
         /**
          * <p>The effective time. Valid values:</p>
-         * <br>
-         * <p>*   **Immediate**: This is the default value.</p>
-         * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](https://help.aliyun.com/document_detail/610402.html).</p>
+         * <ul>
+         * <li><strong>Immediate</strong>: This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaintainTime</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6MTg2MjEwOTkwLCJzdGFydCI6InNob3BpZnktdXNlci1jb3JlXHUwMDAwIn0</p>
          */
         @NameInMap("Mark")
         public String mark;
 
         /**
          * <p>The memory capacity that is supported by the instance type. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("MemoryClass")
         public String memoryClass;
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed,Scheduled,Running,Cancelling,Canceled,Waiting</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage capacity of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Storage")
         public String storage;
 
         /**
          * <p>The new instance type of the instance. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.x2.medium.2c</p>
          */
         @NameInMap("TargetDBInstanceClass")
         public String targetDBInstanceClass;

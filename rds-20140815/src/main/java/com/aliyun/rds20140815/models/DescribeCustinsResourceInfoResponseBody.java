@@ -12,6 +12,9 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,138 +43,207 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
     public static class DescribeCustinsResourceInfoResponseBodyData extends TeaModel {
         /**
          * <p>The deadline for the CPU adjustment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-25</p>
          */
         @NameInMap("CpuAdjustDeadline")
         public String cpuAdjustDeadline;
 
         /**
          * <p>The maximum percentage of the system CPU resources that the instance can use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("CpuAdjustableMaxRatio")
         public String cpuAdjustableMaxRatio;
 
         /**
          * <p>The maximum CPU utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("CpuAdjustableMaxValue")
         public String cpuAdjustableMaxValue;
 
         /**
          * <p>The CPU utilization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CpuIncreaseRatio")
         public String cpuIncreaseRatio;
 
         /**
          * <p>The CPU utilization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("CpuIncreaseRatioValue")
         public String cpuIncreaseRatioValue;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-wz92gn1ll9fe5d3a4</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The maximum IOPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("IopsAdjustableMaxValue")
         public String iopsAdjustableMaxValue;
 
         /**
          * <p>The deadline for the adjustment of the maximum number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-25</p>
          */
         @NameInMap("MaxConnAdjustDeadline")
         public String maxConnAdjustDeadline;
 
         /**
          * <p>The maximum number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("MaxConnAdjustableMaxValue")
         public String maxConnAdjustableMaxValue;
 
         /**
          * <p>The maximum number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("MaxConnIncreaseRatio")
         public String maxConnIncreaseRatio;
 
         /**
          * <p>The maximum number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxConnIncreaseRatioValue")
         public String maxConnIncreaseRatioValue;
 
         /**
          * <p>The deadline for the adjustment of the maximum IOPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-25</p>
          */
         @NameInMap("MaxIopsAdjustDeadline")
         public String maxIopsAdjustDeadline;
 
         /**
          * <p>The maximum IOPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("MaxIopsIncreaseRatio")
         public String maxIopsIncreaseRatio;
 
         /**
          * <p>The maximum IOPS that can be supported by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxIopsIncreaseRatioValue")
         public String maxIopsIncreaseRatioValue;
 
         /**
          * <p>The maximum percentage of the system memory that the instance can use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("MemAdjustableMaxRatio")
         public String memAdjustableMaxRatio;
 
         /**
          * <p>The maximum value of the resources to be evaluated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MemAdjustableMaxValue")
         public String memAdjustableMaxValue;
 
         /**
          * <p>The deadline for the memory adjustment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-25</p>
          */
         @NameInMap("MemoryAdjustDeadline")
         public String memoryAdjustDeadline;
 
         /**
          * <p>The memory increase percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-25</p>
          */
         @NameInMap("MemoryIncreaseRatio")
         public String memoryIncreaseRatio;
 
         /**
          * <p>The memory usage. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MemoryIncreaseRatioValue")
         public String memoryIncreaseRatioValue;
 
         /**
          * <p>The number of CPUs of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("OriginCpu")
         public String originCpu;
 
         /**
          * <p>The maximum number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("OriginMaxConn")
         public String originMaxConn;
 
         /**
          * <p>The maximum IOPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("OriginMaxIops")
         public String originMaxIops;
 
         /**
          * <p>The actual memory used. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("OriginMemory")
         public String originMemory;

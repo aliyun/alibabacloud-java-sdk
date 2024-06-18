@@ -6,45 +6,57 @@ import com.aliyun.tea.*;
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The permissions that you want to grant to the account. The number of permissions must be the same as the number of databases that you specify for the DBName parameter. You can specify this parameter based on your business requirements. Valid values:</p>
-     * <br>
-     * <p>*   **ReadWrite**: read and write permissions</p>
-     * <p>*   **ReadOnly**: read-only permissions</p>
-     * <p>*   **DDLOnly**: DDL-only permissions</p>
-     * <p>*   **DMLOnly**: DML-only permissions</p>
-     * <p>*   **DBOwner**: database owner permissions</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the instance runs MySQL or MariaDB, you can set this parameter to **ReadWrite**, **ReadOnly**, **DDLOnly**, or **DMLOnly**.</p>
-     * <br>
-     * <p>*   If the instance runs SQL Server, you can set this parameter to **ReadWrite**, **ReadOnly**, or **DBOwner**.</p>
-     * <p>*   If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to **DBOwner**.</p>
-     * <br>
+     * <ul>
+     * <li><strong>ReadWrite</strong>: read and write permissions</li>
+     * <li><strong>ReadOnly</strong>: read-only permissions</li>
+     * <li><strong>DDLOnly</strong>: DDL-only permissions</li>
+     * <li><strong>DMLOnly</strong>: DML-only permissions</li>
+     * <li><strong>DBOwner</strong>: database owner permissions</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If the instance runs MySQL or MariaDB, you can set this parameter to <strong>ReadWrite</strong>, <strong>ReadOnly</strong>, <strong>DDLOnly</strong>, or <strong>DMLOnly</strong>.</p>
+     * </li>
+     * <li><p>If the instance runs SQL Server, you can set this parameter to <strong>ReadWrite</strong>, <strong>ReadOnly</strong>, or <strong>DBOwner</strong>.</p>
+     * </li>
+     * <li><p>If the instance runs PostgreSQL and uses cloud disks, you can set this parameter to <strong>DBOwner</strong>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ReadWrite</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf6wjk5xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database on which you want to grant permissions. Separate multiple database names with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDB1</p>
      */
     @NameInMap("DBName")
     public String DBName;

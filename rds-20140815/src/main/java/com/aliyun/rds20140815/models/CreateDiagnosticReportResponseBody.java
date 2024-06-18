@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDiagnosticReportResponseBody extends TeaModel {
     /**
      * <p>The ID of the diagnostic report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10166270</p>
      */
     @NameInMap("ReportId")
     public String reportId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8DA8956A-53DA-423E-9540-387428ED37FF-5711</p>
      */
     @NameInMap("RequestId")
     public String requestId;

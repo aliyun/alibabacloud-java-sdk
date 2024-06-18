@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceSSLRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp162dfr55g47****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

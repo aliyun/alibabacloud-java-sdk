@@ -6,52 +6,71 @@ import com.aliyun.tea.*;
 public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     /**
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-t4n3a****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The network type of the proxy endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Public**: Internet</p>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **Classic**: classic network</p>
-     * <br>
-     * <p>If the instance runs MySQL, the default value of this parameter is **Classic**.</p>
-     * <br>
-     * <p>> If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.</p>
+     * <ul>
+     * <li><strong>Public</strong>: Internet</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>Classic</strong>: classic network</li>
+     * </ul>
+     * <p>If the instance runs MySQL, the default value of this parameter is <strong>Classic</strong>.</p>
+     * <blockquote>
+     * <p>If the instance runs PostgreSQL, you must set this parameter to <strong>Public</strong> or <strong>VPC</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
      */
     @NameInMap("DBProxyConnectStringNetType")
     public String DBProxyConnectStringNetType;
 
     /**
      * <p>The ID of the dedicated proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ta9um4****</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
     /**
      * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
      * <p>The new prefix of the proxy endpoint. Enter a prefix.</p>
-     * <br>
-     * <p>> You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test123456</p>
      */
     @NameInMap("DBProxyNewConnectString")
     public String DBProxyNewConnectString;
 
     /**
      * <p>The port number that is associated with the proxy endpoint. Enter a port number.</p>
-     * <br>
-     * <p>> You must specify at least one of the **DBProxyNewConnectString** and **DBProxyNewConnectStringPort** parameters.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>DBProxyNewConnectString</strong> and <strong>DBProxyNewConnectStringPort</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3307</p>
      */
     @NameInMap("DBProxyNewConnectStringPort")
     public String DBProxyNewConnectStringPort;
