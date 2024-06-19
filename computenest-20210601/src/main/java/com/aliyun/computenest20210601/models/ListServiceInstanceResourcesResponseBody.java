@@ -4,12 +4,24 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ListServiceInstanceResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,30 +66,66 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
     }
 
     public static class ListServiceInstanceResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-01T12:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-03-01T12:00:00</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Subscription</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RDS</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
+         */
         @NameInMap("RenewStatus")
         public String renewStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RenewalPeriod")
         public Integer renewalPeriod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("RenewalPeriodUnit")
         public String renewalPeriodUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>arn:acs:sag:cn-hangzhou:130920852836****:ccn/ccn-b3qf0q439sq2de****</p>
+         */
         @NameInMap("ResourceARN")
         public String resourceARN;
 

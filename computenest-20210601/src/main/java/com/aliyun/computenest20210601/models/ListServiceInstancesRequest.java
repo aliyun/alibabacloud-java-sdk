@@ -7,15 +7,33 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<ListServiceInstancesRequestFilter> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -76,6 +94,10 @@ public class ListServiceInstancesRequest extends TeaModel {
     }
 
     public static class ListServiceInstancesRequestFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ServiceInstanceId</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -106,9 +128,17 @@ public class ListServiceInstancesRequest extends TeaModel {
     }
 
     public static class ListServiceInstancesRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
