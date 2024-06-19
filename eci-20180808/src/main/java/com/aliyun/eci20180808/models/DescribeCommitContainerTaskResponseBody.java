@@ -12,24 +12,36 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
      * <p>The query token that is returned in this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45D5B0AD-3B00-4A9B-9911-6D5303B06712</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,28 +94,41 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
     public static class DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos extends TeaModel {
         /**
          * <p>The message about the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pull base image for container container-1 successfully</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The phase name. Valid values:</p>
-         * <br>
-         * <p>*   PullBaseImage: Pull the original container image.</p>
-         * <p>*   CommitContainer: Commit the container to generate an image.</p>
-         * <p>*   PushCommittedImage: Push the image to Container Registry.</p>
+         * <ul>
+         * <li>PullBaseImage: Pull the original container image.</li>
+         * <li>CommitContainer: Commit the container to generate an image.</li>
+         * <li>PushCommittedImage: Push the image to Container Registry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PullBaseImage</p>
          */
         @NameInMap("Phase")
         public String phase;
 
         /**
          * <p>The record time of the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05T14:06:40.920005316+08:00</p>
          */
         @NameInMap("RecordTime")
         public String recordTime;
 
         /**
          * <p>The state of the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -156,46 +181,68 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
 
         /**
          * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker0</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
          * <p>The message about the state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Commit container -xxxxxx</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
          * <p>The time when the task was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-06T08:22:40Z</p>
          */
         @NameInMap("TaskCreationTime")
         public String taskCreationTime;
 
         /**
          * <p>The time when the task was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-06T08:23:40Z</p>
          */
         @NameInMap("TaskFinishedTime")
         public String taskFinishedTime;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-2zej6nstkg744qc3****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The progress of the task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50%</p>
          */
         @NameInMap("TaskProgress")
         public String taskProgress;
 
         /**
          * <p>The state of the task. Valid values:</p>
-         * <br>
-         * <p>*   Running</p>
-         * <p>*   Succeeded</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;

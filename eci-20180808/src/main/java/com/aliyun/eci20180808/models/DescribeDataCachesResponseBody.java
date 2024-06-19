@@ -12,18 +12,27 @@ public class DescribeDataCachesResponseBody extends TeaModel {
 
     /**
      * <p>The query token. Set the value to the NextToken value that is returned in the previous call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d78f2dd8-5979-42fe-xaee-b16db43be5bc</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8756BA0-6452-419C-9727-37A6209C85E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,17 +77,32 @@ public class DescribeDataCachesResponseBody extends TeaModel {
     public static class DescribeDataCachesResponseBodyDataCachesDataSource extends TeaModel {
         /**
          * <p>The parameters that are configured for the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;options&quot;: {
+         *             &quot;path&quot;: &quot;/&quot;,
+         *             &quot;server&quot;: &quot;0ce1f4****-or***.cn-hangzhou.nas.aliyuncs.com&quot;,
+         *             &quot;vers&quot;: &quot;3&quot;,
+         *             &quot;options&quot;: &quot;nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport&quot;
+         *       },
+         *       &quot;type&quot;: &quot;NAS&quot;
+         * }</p>
          */
         @NameInMap("Options")
         public String options;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   NAS</p>
-         * <p>*   OSS</p>
-         * <p>*   URL</p>
-         * <p>*   SNAPSHOT</p>
+         * <ul>
+         * <li>NAS</li>
+         * <li>OSS</li>
+         * <li>URL</li>
+         * <li>SNAPSHOT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
          */
         @NameInMap("Type")
         public String type;
@@ -109,45 +133,67 @@ public class DescribeDataCachesResponseBody extends TeaModel {
     public static class DescribeDataCachesResponseBodyDataCachesEvents extends TeaModel {
         /**
          * <p>The number of times that the event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The time when the event started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-16T02:14:48Z</p>
          */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
         /**
          * <p>The time when the event ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-16T02:24:48Z</p>
          */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully check data cache resource.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datacache</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The reason for the transition into the current status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The type of the event. Valid values:</p>
-         * <br>
-         * <p>*   Normal</p>
-         * <p>*   Warning</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Warning</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Type")
         public String type;
@@ -218,12 +264,18 @@ public class DescribeDataCachesResponseBody extends TeaModel {
     public static class DescribeDataCachesResponseBodyDataCachesTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -254,24 +306,36 @@ public class DescribeDataCachesResponseBody extends TeaModel {
     public static class DescribeDataCachesResponseBodyDataCaches extends TeaModel {
         /**
          * <p>The bucket that stores the data cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The ID of the elastic container instance that was generated when the data cache was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-8vb1y2w1dv7zeirn****</p>
          */
         @NameInMap("ContainerGroupId")
         public String containerGroupId;
 
         /**
          * <p>The time when the data cache was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-16T02:43Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the data cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edc-bp15l4vvys94oo******</p>
          */
         @NameInMap("DataCacheId")
         public String dataCacheId;
@@ -290,75 +354,108 @@ public class DescribeDataCachesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the data cache expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-26T02:43Z</p>
          */
         @NameInMap("ExpireDateTime")
         public String expireDateTime;
 
         /**
          * <p>The ID of the on-premises snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp12w3v37sit96t6****</p>
          */
         @NameInMap("FlashSnapshotId")
         public String flashSnapshotId;
 
         /**
          * <p>The time when the data cache was last matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-18T02:43Z</p>
          */
         @NameInMap("LastMatchedTime")
         public String lastMatchedTime;
 
         /**
          * <p>The name of the data cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The directory in which the virtual host of the data cache resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/models/</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The creation progress of the data cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2hlt3ux4****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The size of the data cache. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zec5oj8e1yhxijt****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The status of the data cache. Valid values:</p>
-         * <br>
-         * <p>*   Loading: The data cache is loading data.</p>
-         * <p>*   Creating: The data cache is being created.</p>
-         * <p>*   Available: The data cache is created.</p>
-         * <p>*   Failed: The data cache failed to be created.</p>
-         * <p>*   Updating: The data cache is being updated.</p>
-         * <p>*   UpdateFailed: The data cache failed to be updated.</p>
-         * <br>
+         * <ul>
+         * <li>Loading: The data cache is loading data.</li>
+         * <li>Creating: The data cache is being created.</li>
+         * <li>Available: The data cache is created.</li>
+         * <li>Failed: The data cache failed to be created.</li>
+         * <li>Updating: The data cache is being updated.</li>
+         * <li>UpdateFailed: The data cache failed to be updated.</li>
+         * </ul>
          * <p>If the data cache is in the Available state, the data cache can be used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

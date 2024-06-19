@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDataCacheResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0F8A012-1426-5EB2-96F5-B4416DEB5B78</p>
      */
     @NameInMap("RequestId")
     public String requestId;

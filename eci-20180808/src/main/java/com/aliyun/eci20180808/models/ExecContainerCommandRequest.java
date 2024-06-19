@@ -5,20 +5,32 @@ import com.aliyun.tea.*;
 
 public class ExecContainerCommandRequest extends TeaModel {
     /**
-     * <p>The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\</p>
-     * <p>The strings must be in the JSON format. Example: `["/bin/sh", "-c", "ls -a"]`.</p>
+     * <p>The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\
+     * The strings must be in the JSON format. Example: <code>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</p>
      */
     @NameInMap("Command")
     public String command;
 
     /**
      * <p>The ID of the elastic container instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-2zebxkiifulhl****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
      * <p>The name of the container.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nginx</p>
      */
     @NameInMap("ContainerName")
     public String containerName;
@@ -31,6 +43,10 @@ public class ExecContainerCommandRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,20 +59,29 @@ public class ExecContainerCommandRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to read the commands from standard input (stdin). Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Stdin")
     public Boolean stdin;
 
     /**
-     * <p>Specifies whether to run the command immediately and return the result. Default value: false.\</p>
-     * <p>If you set this parameter to true, set the value of TTY to false.</p>
+     * <p>Specifies whether to immediately run the command and synchronously return the result. Default value: false.\
+     * If this parameter is set to true, TTY must be set to false. Command cannot be set to <code>/bin/bash</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Sync")
     public Boolean sync;
 
     /**
-     * <p>Specifies whether to enable interaction. Default value: false.\</p>
-     * <p>If the command is a /bin/bash command, set the value to true.</p>
+     * <p>Specifies whether to enable interaction. Default value: false.\
+     * If the Command parameter is set to <code>/bin/bash</code>, set this parameter to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("TTY")
     public Boolean TTY;

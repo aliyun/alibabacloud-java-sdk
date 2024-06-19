@@ -12,6 +12,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6829735A-FF76-58C6-AECB-27CBF135A7AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,28 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
         /**
          * <p>The category of resources based on stock status. Valid values:</p>
-         * <br>
-         * <p>*   WithStock: Resources are in sufficient stock.</p>
-         * <p>*   ClosedWithStock: Resources are insufficient. We recommend that you use instance types that are in sufficient stock.</p>
-         * <p>*   WithoutStock: Resources are sold out and will be replenished. We recommend that you use instance types that are in sufficient stock.</p>
-         * <p>*   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use instance types that are in sufficient stock.</p>
+         * <ul>
+         * <li>WithStock: Resources are in sufficient stock.</li>
+         * <li>ClosedWithStock: Resources are insufficient. We recommend that you use instance types that are in sufficient stock.</li>
+         * <li>WithoutStock: Resources are sold out and will be replenished. We recommend that you use instance types that are in sufficient stock.</li>
+         * <li>ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use instance types that are in sufficient stock.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WithStock</p>
          */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
         /**
          * <p>The ECS instance types or instance families that are available in the zones.</p>
-         * <br>
-         * <p>*   If the return value of the Type parameter is InstanceTypeFamily, this parameter indicates instance families that are returned.</p>
-         * <p>*   If the return value of the Type parameter is InstanceType, this parameter indicates instance types that are returned.</p>
+         * <ul>
+         * <li>If the return value of the Type parameter is InstanceTypeFamily, this parameter indicates instance families that are returned.</li>
+         * <li>If the return value of the Type parameter is InstanceType, this parameter indicates instance types that are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6</p>
          */
         @NameInMap("Value")
         public String value;
@@ -109,9 +120,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>*   InstanceTypeFamily: instance families.</p>
-         * <p>*   InstanceType: instance types.</p>
+         * <ul>
+         * <li>InstanceTypeFamily: instance families.</li>
+         * <li>InstanceType: instance types.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceTypeFamily</p>
          */
         @NameInMap("Type")
         public String type;
@@ -167,12 +182,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The region ID of the resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The zone ID of the resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

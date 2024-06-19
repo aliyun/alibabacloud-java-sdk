@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateInstanceOpsTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89945DD3-9072-47D0-A318-353284CFC7B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The creation result of the O&M task.</p>
+     * <p>The creation result of the O&amp;M task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Coredump settings has been configured successfully.</p>
      */
     @NameInMap("Result")
     public String result;

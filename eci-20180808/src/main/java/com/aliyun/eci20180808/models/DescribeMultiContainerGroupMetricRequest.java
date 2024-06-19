@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeMultiContainerGroupMetricRequest extends TeaModel {
     /**
      * <p>The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;eci-2zegym1qhbmdfr1s****&quot;,&quot;eci-2ze39w5svzj5ic34****&quot;]</p>
      */
     @NameInMap("ContainerGroupIds")
     public String containerGroupIds;
 
     /**
      * <p>The type of the monitoring data. Set the value to summary. This value indicates that records are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>summary</p>
      */
     @NameInMap("MetricType")
     public String metricType;
@@ -24,12 +31,19 @@ public class DescribeMultiContainerGroupMetricRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the elastic container instances belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzw2jz2z****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeContainerLogResponseBody extends TeaModel {
     /**
      * <p>The container name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nginx</p>
      */
     @NameInMap("ContainerName")
     public String containerName;
 
     /**
      * <p>The content of the log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CA850ADA-<strong><strong>-4AC8-</strong></strong>-5B5990EAB7D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,26 +5,39 @@ import com.aliyun.tea.*;
 
 public class ResizeContainerGroupVolumeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the elastic container instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-2zelg8vwnlzdhf8hv****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
      * <p>The size of the volume after the volume is scaled up. Unit: GiB. Valid values:</p>
-     * <br>
-     * <p>*   Ultra disk (cloud_efficiency): 20 to 32768</p>
-     * <p>*   Standard SSD (cloud_ssd): 20 to 32768</p>
-     * <p>*   Enhanced SSD (cloud_essd): 20 to 32768</p>
-     * <p>*   Basic disk (cloud): 5 to 2000</p>
-     * <br>
-     * <p>>  The capacity of the volume after the volume is scaled up must be greater than the original capacity of the volume. If the new capacity is equal to the original capacity of the volume, only the file system is scaled up.</p>
+     * <ul>
+     * <li>Ultra disk (cloud_efficiency): 20 to 32768</li>
+     * <li>Standard SSD (cloud_ssd): 20 to 32768</li>
+     * <li>Enhanced SSD (cloud_essd): 20 to 32768</li>
+     * <li>Basic disk (cloud): 5 to 2000</li>
+     * </ul>
+     * <blockquote>
+     * <p> The capacity of the volume after the volume is scaled up must be greater than the original capacity of the volume. If the new capacity is equal to the original capacity of the volume, only the file system is scaled up.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("NewSize")
     public Long newSize;
@@ -37,6 +50,10 @@ public class ResizeContainerGroupVolumeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,6 +66,10 @@ public class ResizeContainerGroupVolumeRequest extends TeaModel {
 
     /**
      * <p>The name of the volume that you want to scale up. The volume must be an Alibaba Cloud disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-volume1</p>
      */
     @NameInMap("VolumeName")
     public String volumeName;

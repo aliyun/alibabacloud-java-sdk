@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class ExecContainerCommandResponseBody extends TeaModel {
     /**
-     * <p>The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see [Use and integrate the Elastic Container Instance terminal](~~202846~~).</p>
+     * <p>The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see <a href="https://help.aliyun.com/document_detail/202846.html">Use and integrate the Elastic Container Instance terminal</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://eci.console.aliyun.com/terminal?param=X32a">https://eci.console.aliyun.com/terminal?param=X32a</a>****</p>
      */
     @NameInMap("HttpUrl")
     public String httpUrl;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28B583A8-313D-4383-7817-B5A9F7E0****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The output of the command. This parameter is returned only if Sync is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello</p>
      */
     @NameInMap("SyncResponse")
     public String syncResponse;
 
     /**
      * <p>The WebSocket URL. You can use this URL to establish a WebSocket connection with the container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wss://eci-cn-shanghai.aliyun.com/exec/?s=ktHPx****</p>
      */
     @NameInMap("WebSocketUri")
     public String webSocketUri;

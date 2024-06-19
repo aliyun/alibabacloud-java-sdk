@@ -6,30 +6,47 @@ import com.aliyun.tea.*;
 public class CopyDataCacheRequest extends TeaModel {
     /**
      * <p>The bucket in which the DataCache is stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Bucket")
     public String bucket;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the DataCache in the source region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edc-bp15l4vvys94oo******</p>
      */
     @NameInMap("DataCacheId")
     public String dataCacheId;
 
     /**
      * <p>The destination region of the DataCache.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
     /**
      * <p>The DataCache name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -42,18 +59,28 @@ public class CopyDataCacheRequest extends TeaModel {
 
     /**
      * <p>The storage path of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/bucket-test</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The source region of the DataCache.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group to which the DataCache belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-2df3isufhi38****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -66,6 +93,9 @@ public class CopyDataCacheRequest extends TeaModel {
 
     /**
      * <p>The number of days for which the DataCache is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
@@ -196,12 +226,18 @@ public class CopyDataCacheRequest extends TeaModel {
     public static class CopyDataCacheRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;

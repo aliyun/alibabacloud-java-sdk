@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeContainerLogRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-uf6fonnghi50v6nq****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
      * <p>The name of the container.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nginx</p>
      */
     @NameInMap("ContainerName")
     public String containerName;
 
     /**
      * <p>Specifies whether to query the logs of the previous container if the container exits and restarts. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("LastTime")
     public Boolean lastTime;
 
     /**
      * <p>The limit on the total size of logs. Unit: bytes. Valid values: 1 to 1048576(1 MB).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123798</p>
      */
     @NameInMap("LimitBytes")
     public Long limitBytes;
@@ -41,6 +55,9 @@ public class DescribeContainerLogRequest extends TeaModel {
 
     /**
      * <p>The region ID of the elastic container instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,29 +70,42 @@ public class DescribeContainerLogRequest extends TeaModel {
 
     /**
      * <p>A relative time in seconds before the current time from which to show logs. Examples: 10, 20, and 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("SinceSeconds")
     public Integer sinceSeconds;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-08-02T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The number of log entries that you want to query. Default value: 500. Maximum value: 2000. A maximum of 1 MB of logs can be returned.</p>
+     * <p>The number of the most recent log entries that you want to query. Default value: 500. Maximum value: 2000.\
+     * A maximum of 1 MB log data can be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("Tail")
     public Integer tail;
 
     /**
      * <p>Specifies whether to return the timestamps of logs. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Timestamps")
     public Boolean timestamps;

@@ -5,22 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCommitContainerTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the elastic container instance on which the CommitContainer task is executed.\</p>
-     * <p>You must enter the instance ID, the task ID, or both for the request.</p>
+     * <p>The ID of the elastic container instance on which the CommitContainer task is executed.\
+     * You must enter the instance ID, the task ID, or both for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-2zelg8vwnlzdhf8hv****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
-     * <p>The number of entries to return on each page.\</p>
-     * <p>Maximum value: 50.\</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries to return on each page.\
+     * Maximum value: 50.\
+     * Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -33,6 +42,10 @@ public class DescribeCommitContainerTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,10 +64,14 @@ public class DescribeCommitContainerTaskRequest extends TeaModel {
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   Running</p>
-     * <p>*   Succeeded</p>
-     * <p>*   Failed</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Succeeded</li>
+     * <li>Failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;

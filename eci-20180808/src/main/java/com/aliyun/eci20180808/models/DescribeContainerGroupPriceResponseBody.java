@@ -12,6 +12,9 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7A872585-33C7-4D69-AB8E-412E81EBA387</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoRulesRule extends TeaModel {
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Receive a 15% discount on a 1-year subscription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
@@ -95,18 +104,27 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo extends TeaModel {
         /**
          * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000098</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         @NameInMap("Resource")
         public String resource;
@@ -119,6 +137,9 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
 
         /**
          * <p>The transaction price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000098</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -192,9 +213,13 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The currency unit. Valid values:</p>
-         * <br>
-         * <p>*   CNY: This value only applies to the China site (aliyun.com).</p>
-         * <p>*   USD: This value only applies to the International site (alibabacloud.com).</p>
+         * <ul>
+         * <li>CNY: This value only applies to the China site (aliyun.com).</li>
+         * <li>USD: This value only applies to the International site (alibabacloud.com).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
@@ -207,18 +232,27 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
 
         /**
          * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00012252</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         /**
          * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00012252</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -273,12 +307,18 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoRulesRule extends TeaModel {
         /**
          * <p>The description of the promotion rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Receive a 15% discount on a 1-year subscription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the promotion rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
@@ -328,24 +368,36 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice extends TeaModel {
         /**
          * <p>The ECS instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.622</p>
          */
         @NameInMap("OriginPrice")
         public Float originPrice;
 
         /**
          * <p>The prices of preemptible elastic container instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.056</p>
          */
         @NameInMap("SpotPrice")
         public Float spotPrice;
 
         /**
          * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

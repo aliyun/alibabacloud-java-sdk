@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     /**
-     * <p>The collection of status of the elastic container instances.</p>
+     * <p>The collection of the statuses of the container groups.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeContainerGroupStatusResponseBodyData> data;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1340C38D-6189-54D1-86F6-7D5ECF3E0088</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,35 +77,55 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusConditions extends TeaModel {
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The cause of the event.</p>
+         * <p>The reason for the transition into the current status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The time when the status last changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-12T07:02:47Z</p>
          */
         @NameInMap("lastTransitionTime")
         public String lastTransitionTime;
 
         /**
-         * <p>The state of the pod condition.</p>
+         * <p>The status of the condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The type of the pod condition. Valid values:</p>
-         * <br>
-         * <p>*   PodScheduled</p>
-         * <p>*   Ready</p>
-         * <p>*   Initialized</p>
-         * <p>*   Unschedulable</p>
+         * <p>The type of the condition. Valid values:</p>
+         * <ul>
+         * <li>PodReadyToStartContainers</li>
+         * <li>Initialized</li>
+         * <li>Ready</li>
+         * <li>ContainersReady</li>
+         * <li>PodScheduled</li>
+         * <li>ContainerHasSufficientDisk</li>
+         * <li>ContainerInstanceCreated</li>
+         * <li>Unschedulable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         @NameInMap("type")
         public String type;
@@ -150,7 +179,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning extends TeaModel {
         /**
-         * <p>The start time.</p>
+         * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-23T20:49:31Z</p>
          */
         @NameInMap("StartedAtstartedAt")
         public String startedAtstartedAt;
@@ -173,42 +205,63 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated extends TeaModel {
         /**
          * <p>The container ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>containerd://3ff993933bea366c4719e43a1b067d89bc7f01f1f573981659a44ff17a******</p>
          */
         @NameInMap("ContainerID")
         public String containerID;
 
         /**
          * <p>The exit code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Integer exitCode;
 
         /**
-         * <p>The end time.</p>
+         * <p>The time when the container ends running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-23T20:49:31Z</p>
          */
         @NameInMap("FinishedAt")
         public String finishedAt;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The cause of the event.</p>
+         * <p>The reason for the transition into the current status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The signal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Signal")
         public Integer signal;
 
         /**
-         * <p>The start time.</p>
+         * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-12T07:02:52Z</p>
          */
         @NameInMap("StartedAt")
         public String startedAt;
@@ -279,12 +332,18 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting extends TeaModel {
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Back-off</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The cause of the event.</p>
+         * <p>The reason for the transition into the current status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -320,7 +379,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning running;
 
         /**
-         * <p>The container is terminated and exits after a successful or failed run.</p>
+         * <p>The container is terminated and exits after a successful or failed running.</p>
          */
         @NameInMap("Terminated")
         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated terminated;
@@ -364,7 +423,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning extends TeaModel {
         /**
-         * <p>The start time.</p>
+         * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-23T20:49:31Z</p>
          */
         @NameInMap("StartedAtstartedAt")
         public String startedAtstartedAt;
@@ -387,42 +449,63 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated extends TeaModel {
         /**
          * <p>The container ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>containerd://3ff993933bea366c4719e43a1b067d89bc7f01f1f573981659a44ff17a******</p>
          */
         @NameInMap("ContainerID")
         public String containerID;
 
         /**
          * <p>The exit code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Integer exitCode;
 
         /**
-         * <p>The end time.</p>
+         * <p>The time when the container ends running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-23T20:55:31Z</p>
          */
         @NameInMap("FinishedAt")
         public String finishedAt;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The cause of the event.</p>
+         * <p>The reason for the transition into the current status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The signal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Signal")
         public Integer signal;
 
         /**
-         * <p>The start time.</p>
+         * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-23T20:49:31Z</p>
          */
         @NameInMap("StartedAt")
         public String startedAt;
@@ -493,12 +576,18 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting extends TeaModel {
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Back-off</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The cause of the event.</p>
+         * <p>The reason for the transition into the current status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -534,7 +623,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning running;
 
         /**
-         * <p>The container is terminated and exits after a successful or failed run.</p>
+         * <p>The container is terminated and exits after a successful or failed running.</p>
          */
         @NameInMap("Terminated")
         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated terminated;
@@ -579,52 +668,71 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses extends TeaModel {
         /**
          * <p>The image of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-zhangjiakou.aliyuncs.com/eci_open/ubuntu:18.04</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-zhangjiakou.aliyuncs.com/eci_open/ubuntu@sha256:134c7fe821b9d359490cd009ce7ca322453f4f2d018623f849e580a89a685e5d</p>
          */
         @NameInMap("ImageID")
         public String imageID;
 
         /**
-         * <p>The most recent state of the container.</p>
+         * <p>The last status of the container.</p>
          */
         @NameInMap("LastState")
         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState lastState;
 
         /**
-         * <p>The container name.</p>
+         * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ubuntu</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Indicates whether the container is ready for use.</p>
+         * <p>Indicates whether the container is ready.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Ready")
         public Boolean ready;
 
         /**
-         * <p>The number of restarts.</p>
+         * <p>The number of times that the container restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RestartCount")
         public Integer restartCount;
 
         /**
          * <p>Indicates whether the container is started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Started")
         public Boolean started;
 
         /**
-         * <p>The state of the container. Valid values:</p>
-         * <br>
-         * <p>*   Waiting</p>
-         * <p>*   Running</p>
-         * <p>*   Terminated</p>
+         * <p>The status of the container. Valid values:</p>
+         * <ul>
+         * <li>Waiting</li>
+         * <li>Running</li>
+         * <li>Terminated</li>
+         * </ul>
          */
         @NameInMap("State")
         public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState state;
@@ -702,7 +810,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps extends TeaModel {
         /**
-         * <p>The IP address of the pod.</p>
+         * <p>The IP address of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -724,49 +835,64 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     public static class DescribeContainerGroupStatusResponseBodyDataPodStatus extends TeaModel {
         /**
-         * <p>The information about the pod conditions.</p>
+         * <p>The conditions of the container group.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusConditions> conditions;
 
         /**
-         * <p>The state information about the container.</p>
+         * <p>The statuses about the containers.</p>
          */
         @NameInMap("ContainerStatuses")
         public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses> containerStatuses;
 
         /**
          * <p>The IP address of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("HostIp")
         public String hostIp;
 
         /**
-         * <p>The lifecycle phase of the pod.</p>
+         * <p>The lifecycle phase of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Phase")
         public String phase;
 
         /**
-         * <p>The IP address of the pod.</p>
+         * <p>The IP address of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("PodIp")
         public String podIp;
 
         /**
-         * <p>The collection of pod IP addresses.</p>
+         * <p>The IP addresses of the container groups.</p>
          */
         @NameInMap("PodIps")
         public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps> podIps;
 
         /**
-         * <p>The quality of service (QoS) of the pod.</p>
+         * <p>The quality of service (QoS) of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Guaranteed</p>
          */
         @NameInMap("QosClass")
         public String qosClass;
 
         /**
          * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-12T07:02:47Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -844,43 +970,61 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     public static class DescribeContainerGroupStatusResponseBodyData extends TeaModel {
         /**
-         * <p>The annotations of the elastic container instance.</p>
+         * <p>Annotations that are added to the container groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;tenancy.x-k8s.io/namespace\&quot;:\&quot;redis\&quot;}&quot;</p>
          */
         @NameInMap("Annotations")
         public String annotations;
 
         /**
-         * <p>The ID of the elastic container instance.</p>
+         * <p>The ID of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp1jrgfqqy54kg5hc****</p>
          */
         @NameInMap("ContainerGroupId")
         public String containerGroupId;
 
         /**
-         * <p>The name of the elastic container instance.</p>
+         * <p>The name of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The namespace where the elastic container instance resides.</p>
+         * <p>The namespace in which the container group resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The state information about the elastic container instance.</p>
+         * <p>The status of the container group.</p>
          */
         @NameInMap("PodStatus")
         public DescribeContainerGroupStatusResponseBodyDataPodStatus podStatus;
 
         /**
-         * <p>The state of the elastic container instance.</p>
+         * <p>The status of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The UUID of the elastic container instance. The UUID of an elastic container instance is similar to the UID of a Kubernetes pod in concept and usage.</p>
+         * <p>The universally unique identifier (UUID) of the container group, which is similar to the unique identifier (UID) of the Kubernetes pod in terms of the concept and usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78ee0657-987g-b8b2-1f507dic4****</p>
          */
         @NameInMap("uuid")
         public String uuid;

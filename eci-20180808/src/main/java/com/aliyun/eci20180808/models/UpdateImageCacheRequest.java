@@ -12,74 +12,105 @@ public class UpdateImageCacheRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable reuse of image cache layers. If you enable this feature and the image cache that you want to create and an existing image cache contain duplicate image layers, the system reuses the duplicate image layers to create the new image cache. This accelerates the creation of the image cache. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoMatchImageCache")
     public Boolean autoMatchImageCache;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request?](~~25693~~)</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure the idempotence of a request?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-xxx-xxx-xxxx-42665544xxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the elastic IP address (EIP). If you want to pull public images, you must make sure that the elastic container instance can access the Internet. To enable Internet access, you can configure an EIP or a NAT gateway for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zedsm5mfl3uhdj2d****</p>
      */
     @NameInMap("EipInstanceId")
     public String eipInstanceId;
 
     /**
      * <p>The elimination policy for the image cache. This parameter is empty by default, which indicates that the image cache is always retained.</p>
-     * <br>
      * <p>You can set this parameter to LRU, which indicates that the image cache can be automatically deleted. When the number of image caches reaches the quota, the system automatically deletes the image caches whose EliminationStrategy parameter is set to LRU and that are least recently used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LRU</p>
      */
     @NameInMap("EliminationStrategy")
     public String eliminationStrategy;
 
     /**
      * <p>Specifies whether to enable the instant image cache feature. The feature can accelerate the creation of image caches. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Flash")
     public Boolean flash;
 
     /**
      * <p>The number of duplicates of temporary local snapshots. By default, the system creates one snapshot for each image cache. If you use the image cache to create multiple elastic container instances at a time, we recommend that you configure this parameter to create multiple snapshot duplicates for the image cache. We recommend that you create one snapshot duplicate for creation of every 1,000 elastic container instances.</p>
-     * <br>
-     * <p>> If you enable the instant image cache feature by setting Flash to true, a local snapshot is first created during the creation of the image cache. After the local snapshot is created, regular snapshots start to be created. After the regular snapshots are created, the local snapshot is automatically deleted.</p>
+     * <blockquote>
+     * <p>If you enable the instant image cache feature by setting Flash to true, a local snapshot is first created during the creation of the image cache. After the local snapshot is created, regular snapshots start to be created. After the regular snapshots are created, the local snapshot is automatically deleted.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("FlashCopyCount")
     public Integer flashCopyCount;
 
     /**
      * <p>Container images that are used to create the image cache.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:1.15.10-perl</p>
      */
     @NameInMap("Image")
     public java.util.List<String> image;
 
     /**
      * <p>The ID of the image cache.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>imc-bp195erqe9o2pb09****</p>
      */
     @NameInMap("ImageCacheId")
     public String imageCacheId;
 
     /**
      * <p>The name of the image cache.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testcache</p>
      */
     @NameInMap("ImageCacheName")
     public String imageCacheName;
 
     /**
      * <p>The size of the image cache. Unit: GiB. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("ImageCacheSize")
     public Integer imageCacheSize;
@@ -98,12 +129,19 @@ public class UpdateImageCacheRequest extends TeaModel {
 
     /**
      * <p>The region ID of the image cache.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the image cache belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzh43v*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -116,22 +154,33 @@ public class UpdateImageCacheRequest extends TeaModel {
 
     /**
      * <p>The retention period of the image cache. Unit: days. When the retention period elapses, the image cache expires and is deleted. By default, image caches never expire.</p>
-     * <br>
-     * <p>> The image caches that fail to be created are retained for only 1 day.</p>
+     * <blockquote>
+     * <p>The image caches that fail to be created are retained for only 1 day.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
     /**
      * <p>The ID of the security group to which the image cache belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf66jeqopgqa9hdn****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The number of duplicates of regular snapshots. By default, the system creates one snapshot for each image cache. If you use the image cache to create multiple elastic container instances at a time, we recommend that you configure this parameter to create multiple snapshot duplicates for the image cache. We recommend that you create one snapshot duplicate for creation of every 1,000 elastic container instances.</p>
-     * <br>
-     * <p>> If you disable the instant image cache feature by setting Flash to false, only regular snapshots are generated when you create an image cache.</p>
+     * <blockquote>
+     * <p>If you disable the instant image cache feature by setting Flash to false, only regular snapshots are generated when you create an image cache.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("StandardCopyCount")
     public Integer standardCopyCount;
@@ -144,6 +193,9 @@ public class UpdateImageCacheRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the image cache is connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6h3rbwbm90urjwa****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -340,24 +392,36 @@ public class UpdateImageCacheRequest extends TeaModel {
     public static class UpdateImageCacheRequestAcrRegistryInfo extends TeaModel {
         /**
          * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify multiple domain names. Separate multiple domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****-registry.cn-hangzhou.cr.aliyuncs.com</p>
          */
         @NameInMap("Domain")
         public java.util.List<String> domain;
 
         /**
          * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-nwj395hgf6f3****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the Container Registry Enterprise Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -404,18 +468,27 @@ public class UpdateImageCacheRequest extends TeaModel {
     public static class UpdateImageCacheRequestImageRegistryCredential extends TeaModel {
         /**
          * <p>The password that is used to access the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>The image repository address without `http://` or `https://` as a prefix.</p>
+         * <p>The image repository address without <code>http://</code> or <code>https://</code> as a prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("Server")
         public String server;
 
         /**
          * <p>The username that is used to access the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -454,12 +527,18 @@ public class UpdateImageCacheRequest extends TeaModel {
     public static class UpdateImageCacheRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

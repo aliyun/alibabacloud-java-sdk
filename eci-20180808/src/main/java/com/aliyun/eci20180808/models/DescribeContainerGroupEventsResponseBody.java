@@ -12,12 +12,18 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1340C38D-6189-54D1-86F6-7D5ECF3E0088</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries of returned events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,12 +60,18 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     public static class DescribeContainerGroupEventsResponseBodyDataEventsMetadata extends TeaModel {
         /**
          * <p>The event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-uto-created-eci-for-ubuntu.167e3fb73cc7f9cb</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -90,12 +102,18 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     public static class DescribeContainerGroupEventsResponseBodyDataEventsSource extends TeaModel {
         /**
          * <p>The component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kubelet</p>
          */
         @NameInMap("Component")
         public String component;
 
         /**
          * <p>The host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci</p>
          */
         @NameInMap("Host")
         public String host;
@@ -126,30 +144,45 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     public static class DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject extends TeaModel {
         /**
          * <p>The version of Kubernetes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("ApiVersion")
         public String apiVersion;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pod</p>
          */
         @NameInMap("Kind")
         public String kind;
 
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace where the resource resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-8vb5nkcq3a5cu0p3****</p>
          */
         @NameInMap("Uid")
         public String uid;
@@ -204,24 +237,36 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     public static class DescribeContainerGroupEventsResponseBodyDataEvents extends TeaModel {
         /**
          * <p>The number of events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The first occurrence time of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-04T09:08:04Z</p>
          */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
         /**
          * <p>The most recent occurrence time of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-04T09:08:04Z</p>
          */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started container</p>
          */
         @NameInMap("Message")
         public String message;
@@ -234,18 +279,27 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
         /**
          * <p>The cause of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The component from which the event is reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ReportingComponent")
         public String reportingComponent;
 
         /**
          * <p>The instance from which the event is reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ReportingInstance")
         public String reportingInstance;
@@ -258,9 +312,13 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
         /**
          * <p>The event type. Valid values:</p>
-         * <br>
-         * <p>*   Normal</p>
-         * <p>*   Warning</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Warning</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Type")
         public String type;
@@ -369,12 +427,18 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     public static class DescribeContainerGroupEventsResponseBodyData extends TeaModel {
         /**
          * <p>The annotations of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;tenancy.x-k8s.io/namespace\&quot;:\&quot;redis\&quot;}&quot;</p>
          */
         @NameInMap("Annotations")
         public String annotations;
 
         /**
          * <p>The ID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-uf6fonnghi50v6nq****</p>
          */
         @NameInMap("ContainerGroupId")
         public String containerGroupId;
@@ -387,18 +451,27 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace where the elastic container instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The UUID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3fc6b309-<strong><strong>-</strong></strong></p>
          */
         @NameInMap("uuid")
         public String uuid;

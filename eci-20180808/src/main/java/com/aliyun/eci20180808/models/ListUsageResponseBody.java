@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class ListUsageResponseBody extends TeaModel {
     /**
      * <p>The information about the used amounts and upper limits of privileges and quotas that you have in the specified region. The information contains the following items:</p>
-     * <br>
-     * <p>*   UsedCpu: the number of existing vCPUs.</p>
-     * <p>*   MaxCpu: the upper limit of vCPUs.</p>
-     * <p>*   MaxImageCacheCount: the upper limit of manually created image caches.</p>
-     * <p>*   UsedImageCacheCount: the number of existing image caches that are manually created.</p>
-     * <p>*   MaxAutoImageCacheCount: the upper limit of automatically created image caches.</p>
-     * <p>*   UsedAutoImageCacheCount: the number of existing image caches that are automatically created.</p>
-     * <p>*   MaxDataCacheCount: the upper limit of DataCaches.</p>
-     * <p>*   UsedDataCacheCount: the number of existing DataCaches.</p>
+     * <ul>
+     * <li>UsedCpu: the number of existing vCPUs.</li>
+     * <li>MaxCpu: the upper limit of vCPUs.</li>
+     * <li>MaxImageCacheCount: the upper limit of manually created image caches.</li>
+     * <li>UsedImageCacheCount: the number of existing image caches that are manually created.</li>
+     * <li>MaxAutoImageCacheCount: the upper limit of automatically created image caches.</li>
+     * <li>UsedAutoImageCacheCount: the number of existing image caches that are automatically created.</li>
+     * <li>MaxDataCacheCount: the upper limit of DataCaches.</li>
+     * <li>UsedDataCacheCount: the number of existing DataCaches.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;UsedCpu&quot;: 11,&quot;MaxCpu&quot;: 1000,&quot;MaxImageCacheCount&quot;: 50,&quot;UsedImageCacheCount&quot;: 0}</p>
      */
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89164E78-FC82-4684-BE97-DCDD85D26546</p>
      */
     @NameInMap("RequestId")
     public String requestId;

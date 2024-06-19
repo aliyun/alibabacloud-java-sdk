@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeInstanceOpsRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the elastic container instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-bp1dvysdafbh00t7****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
-     * <p>The type of the O\&M task. Valid values:</p>
-     * <br>
-     * <p>*   coredump</p>
-     * <p>*   tcpdump</p>
+     * <p>The type of the O\&amp;M task. Valid values:</p>
+     * <ul>
+     * <li>coredump</li>
+     * <li>tcpdump</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>coredump</p>
      */
     @NameInMap("OpsType")
     public String opsType;
@@ -27,6 +36,10 @@ public class DescribeInstanceOpsRecordsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

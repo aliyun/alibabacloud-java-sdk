@@ -6,51 +6,73 @@ import com.aliyun.tea.*;
 public class DescribeContainerGroupEventsRequest extends TeaModel {
     /**
      * <p>The IDs of the elastic container instances. You can specify up to 20 IDs. Each ID must be a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;eci-bp17gw49eu09yiwm****&quot;, &quot;eci-bp19aq49du01abcm****&quot;, &quot;eci-2zegym1qhbmdfr1s****&quot;]</p>
      */
     @NameInMap("ContainerGroupIds")
     public String containerGroupIds;
 
     /**
      * <p>The event source. Valid values:</p>
-     * <br>
-     * <p>*   EciService</p>
-     * <p>*   K8sAgent</p>
-     * <br>
+     * <ul>
+     * <li>EciService</li>
+     * <li>K8sAgent</li>
+     * </ul>
      * <p>This parameter is empty by default. This indicates that all events are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>K8sAgent</p>
      */
     @NameInMap("EventSource")
     public String eventSource;
 
     /**
      * <p>The maximum number of elastic container instances to be returned for this request. Default value: 200.</p>
-     * <br>
-     * <p>>  The number of elastic container instances to be returned is no greater than this parameter value.</p>
+     * <blockquote>
+     * <p> The number of elastic container instances to be returned is no greater than this parameter value.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
-     * <br>
      * <p>You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d78f2dd8-5979-42fe-xaee-b16db43be5bc</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-uf66jeqopgqa9hdn****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>A relative time in seconds before the current time from which to show event information. This parameter is used to poll incremental events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("SinceSecond")
     public Integer sinceSecond;
@@ -63,12 +85,18 @@ public class DescribeContainerGroupEventsRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-uf6h3rbwbm90urjwa****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The zone ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-k</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -161,12 +189,18 @@ public class DescribeContainerGroupEventsRequest extends TeaModel {
     public static class DescribeContainerGroupEventsRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Value")
         public String value;

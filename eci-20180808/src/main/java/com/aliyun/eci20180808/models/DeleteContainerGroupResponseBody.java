@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteContainerGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45D5B0AD-3B00-4A9B-9911-6D5303B06712</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDataCacheResponseBody extends TeaModel {
     /**
      * <p>The DataCache ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edc-bp15l4vvys94oo******</p>
      */
     @NameInMap("DataCacheId")
     public String dataCacheId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D81A4A13-6DCC-4579-AC62-90A6C3EC7BBC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

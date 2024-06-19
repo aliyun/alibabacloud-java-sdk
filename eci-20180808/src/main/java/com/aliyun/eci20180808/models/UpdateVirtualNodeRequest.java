@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class UpdateVirtualNodeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests?](~~25693~~)</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency of requests?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The IP address of the DNS server. If `dnsPolicy=ClusterFirst` is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).</p>
+     * <p>The IP address of the DNS server. If <code>dnsPolicy=ClusterFirst</code> is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100.1.XX.XX</p>
      */
     @NameInMap("ClusterDNS")
     public String clusterDNS;
 
     /**
      * <p>The domain name of the cluster. If this parameter is specified, in addition to the search domain of the host, Kubelet configures all containers to search for the specified domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("ClusterDomain")
     public String clusterDomain;
 
     /**
-     * <p>The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the `Resource name = Number of resources` format to specify custom resources. Separate multiple resources with commas (,).</p>
+     * <p>The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the <code>Resource name = Number of resources</code> format to specify custom resources. Separate multiple resources with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example1.com=100,example2.com=200</p>
      */
     @NameInMap("CustomResources")
     public String customResources;
@@ -36,6 +48,10 @@ public class UpdateVirtualNodeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the virtual node.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,12 +70,19 @@ public class UpdateVirtualNodeRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual node.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vnd-2ze960zkdqrldeaw****</p>
      */
     @NameInMap("VirtualNodeId")
     public String virtualNodeId;
 
     /**
      * <p>The name of the virtual node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testNode</p>
      */
     @NameInMap("VirtualNodeName")
     public String virtualNodeName;
@@ -168,12 +191,18 @@ public class UpdateVirtualNodeRequest extends TeaModel {
     public static class UpdateVirtualNodeRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

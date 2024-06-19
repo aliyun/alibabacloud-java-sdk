@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateVirtualNodeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89164E78-FC82-4684-BE97-DCDD85D26546</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the VNode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vnd-2ze960zkdqrldeaw****</p>
      */
     @NameInMap("VirtualNodeId")
     public String virtualNodeId;
