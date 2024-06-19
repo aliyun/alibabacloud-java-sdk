@@ -5,14 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
     @NameInMap("Data")
-    public java.util.List<CreateBackupResponseBodyData> data;
+    public CreateBackupResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -21,11 +33,11 @@ public class CreateBackupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateBackupResponseBody setData(java.util.List<CreateBackupResponseBodyData> data) {
+    public CreateBackupResponseBody setData(CreateBackupResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<CreateBackupResponseBodyData> getData() {
+    public CreateBackupResponseBodyData getData() {
         return this.data;
     }
 
@@ -55,18 +67,18 @@ public class CreateBackupResponseBody extends TeaModel {
 
     public static class CreateBackupResponseBodyData extends TeaModel {
         @NameInMap("BackupSetId")
-        public Long backupSetId;
+        public String backupSetId;
 
         public static CreateBackupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateBackupResponseBodyData self = new CreateBackupResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public CreateBackupResponseBodyData setBackupSetId(Long backupSetId) {
+        public CreateBackupResponseBodyData setBackupSetId(String backupSetId) {
             this.backupSetId = backupSetId;
             return this;
         }
-        public Long getBackupSetId() {
+        public String getBackupSetId() {
             return this.backupSetId;
         }
 

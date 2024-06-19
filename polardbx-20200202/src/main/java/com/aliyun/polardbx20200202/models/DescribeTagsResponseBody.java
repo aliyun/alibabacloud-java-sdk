@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTagsResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>requestid</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +41,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         @NameInMap("DBInstanceIds")
         public java.util.List<String> DBInstanceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

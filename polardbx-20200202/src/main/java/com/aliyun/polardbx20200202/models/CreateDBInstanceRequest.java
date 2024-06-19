@@ -4,21 +4,37 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     @NameInMap("CNNodeCount")
     public String CNNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxx-xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("CnClass")
     public String cnClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>polarx.x4.2xlarge.2d</p>
+     */
     @NameInMap("DBNodeClass")
     public String DBNodeClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("DBNodeCount")
     public Integer DBNodeCount;
 
@@ -28,54 +44,134 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DnClass")
     public String dnClass;
 
+    @NameInMap("DnStorageSpace")
+    public String dnStorageSpace;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("IsColumnarReadDBInstance")
+    public Boolean isColumnarReadDBInstance;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsReadDBInstance")
     public Boolean isReadDBInstance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pxc-*********</p>
+     */
     @NameInMap("PrimaryDBInstanceName")
     public String primaryDBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen-e</p>
+     */
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen-a</p>
+     */
     @NameInMap("SecondaryZone")
     public String secondaryZone;
 
+    @NameInMap("Series")
+    public String series;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen-e</p>
+     */
     @NameInMap("TertiaryZone")
     public String tertiaryZone;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3azones</p>
+     */
     @NameInMap("TopologyType")
     public String topologyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UsedTime")
     public Integer usedTime;
 
     /**
      * <p>VPC ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-*****</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-*********</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-a</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -148,12 +244,28 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.dnClass;
     }
 
+    public CreateDBInstanceRequest setDnStorageSpace(String dnStorageSpace) {
+        this.dnStorageSpace = dnStorageSpace;
+        return this;
+    }
+    public String getDnStorageSpace() {
+        return this.dnStorageSpace;
+    }
+
     public CreateDBInstanceRequest setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public CreateDBInstanceRequest setIsColumnarReadDBInstance(Boolean isColumnarReadDBInstance) {
+        this.isColumnarReadDBInstance = isColumnarReadDBInstance;
+        return this;
+    }
+    public Boolean getIsColumnarReadDBInstance() {
+        return this.isColumnarReadDBInstance;
     }
 
     public CreateDBInstanceRequest setIsReadDBInstance(Boolean isReadDBInstance) {
@@ -226,6 +338,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getSecondaryZone() {
         return this.secondaryZone;
+    }
+
+    public CreateDBInstanceRequest setSeries(String series) {
+        this.series = series;
+        return this;
+    }
+    public String getSeries() {
+        return this.series;
     }
 
     public CreateDBInstanceRequest setTertiaryZone(String tertiaryZone) {

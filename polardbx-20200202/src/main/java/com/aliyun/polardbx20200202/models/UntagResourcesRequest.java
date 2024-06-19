@@ -7,12 +7,27 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PolarDBXInstance</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

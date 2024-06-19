@@ -4,15 +4,31 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupSetRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-htri0ori2r****</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     @NameInMap("DestCrossRegion")
     public String destCrossRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

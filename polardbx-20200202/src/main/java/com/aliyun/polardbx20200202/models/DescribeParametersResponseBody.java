@@ -7,6 +7,10 @@ public class DescribeParametersResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeParametersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONN_POOL_XPROTO_STORAGE_DB_PORT</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -76,9 +88,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONN_POOL_XPROTO_STORAGE_DB_PORT</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -117,9 +137,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("ConfigParameters")
         public java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 

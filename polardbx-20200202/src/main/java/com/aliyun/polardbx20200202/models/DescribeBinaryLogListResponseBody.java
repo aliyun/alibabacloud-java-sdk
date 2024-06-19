@@ -7,15 +7,31 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     @NameInMap("LogList")
     public java.util.List<DescribeBinaryLogListResponseBodyLogList> logList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2DFF784E-DC31-5BBC-9B25-9261CD9E0AA9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalNumber")
     public Integer totalNumber;
 
@@ -65,36 +81,80 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     }
 
     public static class DescribeBinaryLogListResponseBodyLogList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-09 10:27:46</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-09 10:27:46</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&OSSAccessKeyId=LT13fds12dsafddsf&Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D">http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&amp;OSSAccessKeyId=LT13fds12dsafddsf&amp;Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D</a></p>
+         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-09 10:27:46</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>binlog.000001</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>536870912</p>
+         */
         @NameInMap("LogSize")
         public Long logSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-09 10:27:46</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PurgeStatus")
         public Integer purgeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.110.88.9</p>
+         */
         @NameInMap("UploadHost")
         public String uploadHost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UploadStatus")
         public Integer uploadStatus;
 

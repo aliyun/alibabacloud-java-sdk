@@ -4,18 +4,44 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyParameterRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-hzjasdyuoo</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>compute</p>
+     */
     @NameInMap("ParamLevel")
     public String paramLevel;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;CONN_POOL_BLOCK_TIMEOUT&quot;:6000}</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

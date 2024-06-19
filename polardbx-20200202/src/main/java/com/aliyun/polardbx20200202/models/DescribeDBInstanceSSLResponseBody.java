@@ -7,6 +7,10 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeDBInstanceSSLResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceSSLResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-sddddddcym7g7w****.polarx.singapore.rds.aliyuncs.com</p>
+         */
         @NameInMap("CertCommonName")
         public String certCommonName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SSLEnabled")
         public Boolean SSLEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-04T09:39:07Z</p>
+         */
         @NameInMap("SSLExpiredTime")
         public String SSLExpiredTime;
 

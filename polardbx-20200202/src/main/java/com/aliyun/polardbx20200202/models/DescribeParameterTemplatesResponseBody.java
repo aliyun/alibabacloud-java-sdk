@@ -7,6 +7,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeParameterTemplatesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyDataParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[0|1]</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Dynamic")
         public Integer dynamic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx hatp addition param</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>loose_enable_gts</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Revisable")
         public Integer revisable;
 
@@ -106,12 +134,24 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>polarx</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>218</p>
+         */
         @NameInMap("ParameterCount")
         public Integer parameterCount;
 

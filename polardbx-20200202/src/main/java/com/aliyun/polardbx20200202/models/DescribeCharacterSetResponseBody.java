@@ -7,12 +7,24 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeCharacterSetResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>709C1E40-092D-4A3D-9958-6D7438******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -57,6 +69,10 @@ public class DescribeCharacterSetResponseBody extends TeaModel {
         @NameInMap("CharacterSet")
         public java.util.List<String> characterSet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx</p>
+         */
         @NameInMap("Engine")
         public String engine;
 

@@ -4,24 +4,52 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdateBackupPolicyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1001000</p>
+     */
     @NameInMap("BackupPeriod")
     public String backupPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>03:00Z</p>
+     */
     @NameInMap("BackupPlanBegin")
     public String backupPlanBegin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("BackupSetRetention")
     public Integer backupSetRetention;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BackupType")
     public String backupType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>P</p>
+     */
     @NameInMap("BackupWay")
     public String backupWay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("ColdDataBackupInterval")
     public Integer coldDataBackupInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("ColdDataBackupRetention")
     public Integer coldDataBackupRetention;
 
@@ -31,12 +59,22 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     @NameInMap("CrossRegionLogBackupRetention")
     public Integer crossRegionLogBackupRetention;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-hzjasdyuoo</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     @NameInMap("DestCrossRegion")
     public String destCrossRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ForceCleanOnHighSpaceUsage")
     public Integer forceCleanOnHighSpaceUsage;
 
@@ -46,21 +84,43 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     @NameInMap("IsCrossRegionLogBackupEnabled")
     public Boolean isCrossRegionLogBackupEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("IsEnabled")
     public Integer isEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("LocalLogRetention")
     public Integer localLogRetention;
 
     @NameInMap("LocalLogRetentionNumber")
     public Integer localLogRetentionNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("LogLocalRetentionSpace")
     public Integer logLocalRetentionSpace;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("RemoveLogRetention")
     public Integer removeLogRetention;
 

@@ -7,15 +7,31 @@ public class DescribeEventsResponseBody extends TeaModel {
     @NameInMap("EventItems")
     public java.util.List<DescribeEventsResponseBodyEventItems> eventItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4748127A-6D50-432C-B635-433467074C27</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -65,36 +81,80 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEventItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50421290</p>
+         */
         @NameInMap("EventId")
         public Long eventId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ModifySecurityIps</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;Domain\&quot;: \&quot;rds-cn-hangzhou.aliyuncs.com\&quot;}</p>
+         */
         @NameInMap("EventPayload")
         public String eventPayload;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FROM_USER</p>
+         */
         @NameInMap("EventReason")
         public String eventReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-15T06:39:49Z</p>
+         */
         @NameInMap("EventRecordTime")
         public String eventRecordTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-15T06:35:00Z</p>
+         */
         @NameInMap("EventTime")
         public String eventTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SecurityManagement</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USRE</p>
+         */
         @NameInMap("EventUserType")
         public String eventUserType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>px-bp1v8udesc89g156g</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instance</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

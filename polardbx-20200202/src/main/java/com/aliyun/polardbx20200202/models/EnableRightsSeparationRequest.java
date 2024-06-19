@@ -4,27 +4,71 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class EnableRightsSeparationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test123</p>
+     */
     @NameInMap("AuditAccountDescription")
     public String auditAccountDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account_audit</p>
+     */
     @NameInMap("AuditAccountName")
     public String auditAccountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("AuditAccountPassword")
     public String auditAccountPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-htri0ori2r4k9p</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test123</p>
+     */
     @NameInMap("SecurityAccountDescription")
     public String securityAccountDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account_sec</p>
+     */
     @NameInMap("SecurityAccountName")
     public String securityAccountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SecurityAccountPassword")
     public String securityAccountPassword;
 

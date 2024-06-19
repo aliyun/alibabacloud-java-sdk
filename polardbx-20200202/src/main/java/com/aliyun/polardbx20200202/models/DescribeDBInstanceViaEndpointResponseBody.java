@@ -7,6 +7,10 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
     @NameInMap("DBInstance")
     public DescribeDBInstanceViaEndpointResponseBodyDBInstance DBInstance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14036EBE-CF2E-44DB-ACE9-AC6157D3A6FC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,47 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceViaEndpointResponseBodyDBInstanceConnAddrs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>polardbx-xxx.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxx</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-*********</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-zkralxpc5d****</p>
+         */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 
@@ -109,21 +136,45 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceViaEndpointResponseBodyDBInstanceDBNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-i-********</p>
+         */
         @NameInMap("ComputeNodeId")
         public String computeNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-xdb-xxxxxx</p>
+         */
         @NameInMap("DataNodeId")
         public String dataNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxi-*********</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx.x4.large.2e</p>
+         */
         @NameInMap("NodeClass")
         public String nodeClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -183,9 +234,17 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceViaEndpointResponseBodyDBInstanceTagSet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key2</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value2</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -213,132 +272,282 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceViaEndpointResponseBodyDBInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>polarx.x4.xlarge.2e</p>
+         */
         @NameInMap("CnNodeClassCode")
         public String cnNodeClassCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CnNodeCount")
         public Integer cnNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>drds_polarxpost_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         @NameInMap("ConnAddrs")
         public java.util.List<DescribeDBInstanceViaEndpointResponseBodyDBInstanceConnAddrs> connAddrs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-sprpx766vo****.polarx.singapore.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-31T08:56:25.000+0000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
+         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx.x4.large.2e</p>
+         */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DBNodeCount")
         public Integer DBNodeCount;
 
         @NameInMap("DBNodes")
         public java.util.List<DescribeDBInstanceViaEndpointResponseBodyDBInstanceDBNodes> DBNodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx</p>
+         */
         @NameInMap("DBType")
         public String DBType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.5</p>
+         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test instance</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mysql.x8.large.25</p>
+         */
         @NameInMap("DnNodeClassCode")
         public String dnNodeClassCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DnNodeCount")
         public Integer dnNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-31T16:00:00.000+0000</p>
+         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Expired")
         public String expired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-zkralxpc5d****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("KindCode")
         public Integer kindCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("LTSVersions")
         public java.util.List<String> LTSVersions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
+         */
         @NameInMap("LatestMinorVersion")
         public String latestMinorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Unlock</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>06:00</p>
+         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>06:00</p>
+         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
+         */
         @NameInMap("MinorVersion")
         public String minorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("Port")
         public String port;
 
         @NameInMap("ReadDBInstances")
         public java.util.List<String> readDBInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("RightsSeparationEnabled")
         public Boolean rightsSeparationEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>disabled</p>
+         */
         @NameInMap("RightsSeparationStatus")
         public String rightsSeparationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enterprise</p>
+         */
         @NameInMap("Series")
         public String series;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17042505728</p>
+         */
         @NameInMap("StorageUsed")
         public Long storageUsed;
 
         @NameInMap("TagSet")
         public java.util.List<DescribeDBInstanceViaEndpointResponseBodyDBInstanceTagSet> tagSet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
+         */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxx</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-********</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

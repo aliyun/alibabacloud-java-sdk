@@ -4,12 +4,24 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DisableRightsSeparationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FE5D94E3-3C93-3594-95D9-AAED2A980915</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -7,15 +7,31 @@ public class DescribeTasksResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<DescribeTasksResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D6045D78-C119-5A17-9DEA-0F810394E008</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,36 +81,80 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-20T19:40:00Z</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DBName</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-20T20:00:00Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ProgressInfo</p>
+         */
         @NameInMap("ProgressInfo")
         public String progressInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
+         */
         @NameInMap("ScaleOutToken")
         public String scaleOutToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>multi_scale_out</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TaskErrorCode</p>
+         */
         @NameInMap("TaskErrorCode")
         public String taskErrorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TaskErrorMessage</p>
+         */
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20089398</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

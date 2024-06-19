@@ -7,6 +7,10 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     @NameInMap("Data")
     public CheckCloudResourceAuthorizedResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A501A191-BD70-5E50-98A9-C2A486A82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     }
 
     public static class CheckCloudResourceAuthorizedResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AuthorizationState")
         public String authorizationState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 

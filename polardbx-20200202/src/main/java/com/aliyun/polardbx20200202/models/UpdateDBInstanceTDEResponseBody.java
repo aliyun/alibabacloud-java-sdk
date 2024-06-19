@@ -7,6 +7,10 @@ public class UpdateDBInstanceTDEResponseBody extends TeaModel {
     @NameInMap("Data")
     public UpdateDBInstanceTDEResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class UpdateDBInstanceTDEResponseBody extends TeaModel {
     }
 
     public static class UpdateDBInstanceTDEResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>42292****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

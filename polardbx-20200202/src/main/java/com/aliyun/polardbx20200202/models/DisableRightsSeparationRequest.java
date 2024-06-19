@@ -4,15 +4,39 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DisableRightsSeparationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-sprcym7g7w****</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account_1</p>
+     */
     @NameInMap("DbaAccountName")
     public String dbaAccountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("DbaAccountPassword")
     public String dbaAccountPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hanghzou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

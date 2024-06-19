@@ -7,6 +7,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeDBInstanceTDEResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceTDEResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TDEStatus")
         public String TDEStatus;
 

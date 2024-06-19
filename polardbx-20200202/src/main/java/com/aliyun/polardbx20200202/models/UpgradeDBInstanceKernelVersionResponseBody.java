@@ -4,15 +4,31 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pxc-hzjasd****</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>polarx-kernel_5.4.7-16001481_xcluster-20200910</p>
+     */
     @NameInMap("TargetMinorVersion")
     public String targetMinorVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>422922413</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
