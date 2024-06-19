@@ -7,12 +7,24 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeDistributeTableListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,15 +66,31 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
     }
 
     public static class DescribeDistributeTableListResponseBodyDataTables extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("DbKey")
         public String dbKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sbtest1</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>multi</p>
+         */
         @NameInMap("TableType")
         public String tableType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("TbKey")
         public String tbKey;
 

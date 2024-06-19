@@ -4,27 +4,57 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dinga93c84f4d***</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("MustHasCdc")
     public Boolean mustHasCdc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmyst47hjw***</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enterprise</p>
+     */
     @NameInMap("Series")
     public String series;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{\&quot;TagKey\&quot;:\&quot;test\&quot;,\&quot;TagValue\&quot;:\&quot;test-value\&quot;}]</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

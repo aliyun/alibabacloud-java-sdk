@@ -4,27 +4,73 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBNodePerformanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polarx_cn</p>
+     */
     @NameInMap("CharacterType")
     public String characterType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-*******</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-i-<strong><strong><strong>,pxc-i-</strong></strong></strong>*</p>
+     */
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>master</p>
+     */
     @NameInMap("DBNodeRole")
     public String DBNodeRole;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2012-06-18T15:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cpu_Usage,Mem_Usage</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2012-06-08T15:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

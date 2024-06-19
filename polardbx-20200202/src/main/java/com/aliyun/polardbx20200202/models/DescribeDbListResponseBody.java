@@ -7,12 +7,24 @@ public class DescribeDbListResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeDbListResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +66,17 @@ public class DescribeDbListResponseBody extends TeaModel {
     }
 
     public static class DescribeDbListResponseBodyDataAccounts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>root4test</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
+         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
@@ -87,15 +107,31 @@ public class DescribeDbListResponseBody extends TeaModel {
         @NameInMap("Accounts")
         public java.util.List<DescribeDbListResponseBodyDataAccounts> accounts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
+         */
         @NameInMap("CharacterSetName")
         public String characterSetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DBDescription")
         public String DBDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-********</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 

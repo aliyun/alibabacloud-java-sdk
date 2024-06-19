@@ -4,12 +4,24 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pxc-*********</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

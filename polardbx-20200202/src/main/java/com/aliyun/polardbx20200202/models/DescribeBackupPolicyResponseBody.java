@@ -5,14 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("Data")
-    public java.util.List<DescribeBackupPolicyResponseBodyData> data;
+    public DescribeBackupPolicyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B87E2AB3-B7C9-4394-9160-7F639F732031</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -21,11 +33,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupPolicyResponseBody setData(java.util.List<DescribeBackupPolicyResponseBodyData> data) {
+    public DescribeBackupPolicyResponseBody setData(DescribeBackupPolicyResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<DescribeBackupPolicyResponseBodyData> getData() {
+    public DescribeBackupPolicyResponseBodyData getData() {
         return this.data;
     }
 

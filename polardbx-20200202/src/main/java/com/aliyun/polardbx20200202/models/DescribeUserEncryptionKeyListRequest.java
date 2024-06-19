@@ -4,9 +4,17 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pxc-hzjasd****</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

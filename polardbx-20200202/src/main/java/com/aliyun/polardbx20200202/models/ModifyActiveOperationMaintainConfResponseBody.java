@@ -4,6 +4,10 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4035409E-7297-4115-ABC9-C1C3942BC069</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

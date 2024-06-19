@@ -4,39 +4,89 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("AllowCancel")
     public Long allowCancel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("AllowChange")
     public Long allowChange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("ChangeLevel")
     public String changeLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>polarx</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pxc-xxxxx</p>
+     */
     @NameInMap("InsName")
     public String insName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>polarx</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("Status")
     public Long status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

@@ -4,30 +4,74 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAccount</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test@1111</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ReadWrite</p>
+     */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-**************</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testdb</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>securityAccount</p>
+     */
     @NameInMap("SecurityAccountName")
     public String securityAccountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>securityPassword</p>
+     */
     @NameInMap("SecurityAccountPassword")
     public String securityAccountPassword;
 

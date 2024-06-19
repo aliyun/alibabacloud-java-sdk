@@ -4,21 +4,41 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +96,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -125,12 +153,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ch-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportPolarx10")
         public Boolean supportPolarx10;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportPolarx20")
         public Boolean supportPolarx20;
 

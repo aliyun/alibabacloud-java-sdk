@@ -7,9 +7,17 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     @NameInMap("Config")
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("HasConfig")
     public Long hasConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A586DCB-39A6-4050-81CC-C7BD4CCDB49F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +51,52 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-11T10:08:27Z</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,6,7</p>
+         */
         @NameInMap("CycleTime")
         public String cycleTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Week</p>
+         */
         @NameInMap("CycleType")
         public String cycleType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>04:00:00Z</p>
+         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>04:00:00Z</p>
+         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-11T10:08:27Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Long status;
 

@@ -4,6 +4,10 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class AllocateColdDataVolumeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D6A4256F-7B83-5BD7-9AC0-72E1FAC05330</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

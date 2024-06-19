@@ -4,21 +4,57 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3,4,5,6,7</p>
+     */
     @NameInMap("CycleTime")
     public String cycleTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Week</p>
+     */
     @NameInMap("CycleType")
     public String cycleType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02:00:00Z</p>
+     */
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02:00:00Z</p>
+     */
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

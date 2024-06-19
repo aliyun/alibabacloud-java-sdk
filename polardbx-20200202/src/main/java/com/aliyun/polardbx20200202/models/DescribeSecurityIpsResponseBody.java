@@ -7,12 +7,24 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeSecurityIpsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14036EBE-CF2E-44DB-ACE9-AC6157D3A6FC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +66,17 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpsResponseBodyDataGroupItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>defaultGroup</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1,172.168.0.0</p>
+         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
@@ -84,6 +104,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-hzjasd****</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 

@@ -4,9 +4,17 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20211103105558</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

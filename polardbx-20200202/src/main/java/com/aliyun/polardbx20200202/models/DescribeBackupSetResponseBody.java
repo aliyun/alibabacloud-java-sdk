@@ -7,12 +7,24 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeBackupSetResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successs</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,15 +66,31 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSetResponseBodyDataOSSList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hins3084_data_20220418110623_qp.xb</p>
+         */
         @NameInMap("BackupSetFile")
         public String backupSetFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI5tJEmRFdJ8aBPDR7****&Expires=1650441697&dd=7KJzkUSbXf6dwy">https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI5tJEmRFdJ8aBPDR7****&amp;Expires=1650441697&amp;dd=7KJzkUSbXf6dwy</a></p>
+         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb">http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb</a>?</p>
+         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-20T08:01:37Z</p>
+         */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
@@ -106,27 +134,55 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSetResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BackupModel")
         public Integer backupModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("BackupSetId")
         public Long backupSetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>88803195</p>
+         */
         @NameInMap("BackupSetSize")
         public Long backupSetSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BackupType")
         public Integer backupType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1650250861754</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1650251308000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
         @NameInMap("OSSList")
         public java.util.List<DescribeBackupSetResponseBodyDataOSSList> OSSList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

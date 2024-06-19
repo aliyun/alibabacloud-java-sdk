@@ -4,12 +4,26 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Category</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>polarx</p>
+     */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,9 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-**************</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-**************</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
@@ -16,9 +28,19 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
+     */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

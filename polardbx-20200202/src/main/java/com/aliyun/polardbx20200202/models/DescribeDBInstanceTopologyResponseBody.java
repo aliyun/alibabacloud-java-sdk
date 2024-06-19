@@ -7,6 +7,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeDBInstanceTopologyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -128,9 +132,17 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("Azone")
         public String azone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>leader</p>
+         */
         @NameInMap("Role")
         public String role;
 
@@ -158,12 +170,24 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsConnectionIp extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-xdb-m-pxcdym7g7w********.mysql.singapore.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DBInstanceNetType")
         public Integer DBInstanceNetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("Port")
         public String port;
 
@@ -199,9 +223,17 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Activated")
         public Boolean activated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("Azone")
         public String azone;
 
@@ -217,33 +249,65 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("DBInstanceConnType")
         public Integer DBInstanceConnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-21T10:30:45Z</p>
+         */
         @NameInMap("DBInstanceCreateTime")
         public String DBInstanceCreateTime;
 
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>304726049</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-i-tk6t4z****</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("DBInstanceStatus")
         public Integer DBInstanceStatus;
 
         @NameInMap("DBInstanceStatusDescription")
         public String DBInstanceStatusDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3145728</p>
+         */
         @NameInMap("DiskSize")
         public Long diskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mysql</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.7</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LockMode")
         public Integer lockMode;
 
@@ -256,27 +320,58 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7000</p>
+         */
         @NameInMap("MaxIops")
         public Integer maxIops;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx.x4.large.2e</p>
+         */
         @NameInMap("NodeClass")
         public String nodeClass;
 
         @NameInMap("PhyInstanceName")
         public String phyInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageUsed")
+        public String storageUsed;
+
+        /**
+         * <strong>example:</strong>
+         * <p>polarx-cdc-kernel-2.0.0-3985896</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -493,6 +588,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setStorageUsed(String storageUsed) {
+            this.storageUsed = storageUsed;
+            return this;
+        }
+        public String getStorageUsed() {
+            return this.storageUsed;
+        }
+
         public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setVersion(String version) {
             this.version = version;
             return this;
@@ -504,33 +607,73 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopology extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>lvs</p>
+         */
         @NameInMap("DBInstanceConnType")
         public String DBInstanceConnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-21T10:30:45Z 04:00:00</p>
+         */
         @NameInMap("DBInstanceCreateTime")
         public String DBInstanceCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-sprcym7g7wj7k</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>304726047</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-sprcym7g7w****</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("DBInstanceStatus")
         public Integer DBInstanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TDE_MODIFYING</p>
+         */
         @NameInMap("DBInstanceStatusDescription")
         public String DBInstanceStatusDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
@@ -540,15 +683,27 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("Items")
         public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LockMode")
         public Integer lockMode;
 
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>05:00:00</p>
+         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>04:00:00</p>
+         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 

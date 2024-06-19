@@ -4,9 +4,17 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeScaleOutMigrateTaskListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("Progress")
     public Integer progress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

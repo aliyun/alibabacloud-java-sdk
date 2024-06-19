@@ -4,6 +4,12 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeScaleOutMigrateTaskListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-********</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
@@ -12,6 +18,12 @@ public class DescribeScaleOutMigrateTaskListRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -46,6 +58,14 @@ public class DescribeScaleOutMigrateTaskListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeScaleOutMigrateTaskListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeScaleOutMigrateTaskListRequest setResourceOwnerAccount(String resourceOwnerAccount) {

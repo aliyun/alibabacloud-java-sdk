@@ -4,18 +4,34 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBNodePerformanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pxc-********</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-20T02:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("PerformanceKeys")
     public DescribeDBNodePerformanceResponseBodyPerformanceKeys performanceKeys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EFB5E10B-5268-170F-A378-9AF86CCEACC8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-20T00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -65,9 +81,17 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1600822800000</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42.38</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,12 +138,24 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBNodePerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-i-********</p>
+         */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Logic_TPS</p>
+         */
         @NameInMap("Measurement")
         public String measurement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>logic_tps</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 

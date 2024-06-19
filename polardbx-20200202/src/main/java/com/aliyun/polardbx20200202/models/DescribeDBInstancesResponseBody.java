@@ -7,15 +7,31 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     @NameInMap("DBInstances")
     public java.util.List<DescribeDBInstancesResponseBodyDBInstances> DBInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C458B1E8-1683-3645-B154-6BA32080EEA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TotalNumber")
     public Integer totalNumber;
 
@@ -65,15 +81,27 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstancesNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>polarx.x4.large.2e</p>
+         */
         @NameInMap("ClassCode")
         public String classCode;
 
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g-aliyun</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -117,9 +145,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstancesTagSet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -147,12 +183,24 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyDBInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-c-dmlgit****</p>
+         */
         @NameInMap("CdcInstanceName")
         public String cdcInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx.x4.large.2e</p>
+         */
         @NameInMap("CnNodeClassCode")
         public String cnNodeClassCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CnNodeCount")
         public Integer cnNodeCount;
 
@@ -162,71 +210,147 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ColumnarReadDBInstances")
         public java.util.List<String> columnarReadDBInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>drds_polarxpre_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ContainBinlogX")
         public Boolean containBinlogX;
 
+        @NameInMap("CpuType")
+        public String cpuType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-01T03:49:50.000+0000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-xxxxx</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx</p>
+         */
         @NameInMap("DBType")
         public String DBType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.7</p>
+         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mysql.n4.medium.25</p>
+         */
         @NameInMap("DnNodeClassCode")
         public String dnNodeClassCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("DnNodeCount")
         public Integer dnNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-01T16:00:00.000+0000</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-hzr2yeov9jmg3z</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Unlock</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx-kernel_5.4.12-16349923_xcluster-20210926</p>
+         */
         @NameInMap("MinorVersion")
         public String minorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <strong>example:</strong>
+         * <p>polarx.x4.large.2e</p>
+         */
         @NameInMap("NodeClass")
         public String nodeClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("NodeCount")
         public Integer nodeCount;
 
         @NameInMap("Nodes")
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>主可用区。</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("PrimaryZone")
         public String primaryZone;
@@ -234,9 +358,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ReadDBInstances")
         public java.util.List<String> readDBInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-xxxxxx</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -246,15 +378,31 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("SecondaryZone")
         public String secondaryZone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enterprise</p>
+         */
         @NameInMap("Series")
         public String series;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40658534400</p>
+         */
         @NameInMap("StorageUsed")
         public Long storageUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportBinlogX")
         public Boolean supportBinlogX;
 
@@ -269,24 +417,43 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         /**
          * <p>拓扑类型：</p>
-         * <br>
-         * <p>- **3azones**：三可用区；</p>
-         * <p>- **1azone**：单可用区。</p>
+         * <ul>
+         * <li><strong>3azones</strong>：三可用区；</li>
+         * <li><strong>1azone</strong>：单可用区。</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("TopologyType")
         public String topologyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
+         */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPCID</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("gdnRole")
+        public String gdnRole;
+
+        @NameInMap("isInGdn")
+        public Boolean isInGdn;
 
         public static DescribeDBInstancesResponseBodyDBInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesResponseBodyDBInstances self = new DescribeDBInstancesResponseBodyDBInstances();
@@ -347,6 +514,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public Boolean getContainBinlogX() {
             return this.containBinlogX;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setCpuType(String cpuType) {
+            this.cpuType = cpuType;
+            return this;
+        }
+        public String getCpuType() {
+            return this.cpuType;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setCreateTime(String createTime) {
@@ -619,6 +794,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setGdnRole(String gdnRole) {
+            this.gdnRole = gdnRole;
+            return this;
+        }
+        public String getGdnRole() {
+            return this.gdnRole;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setIsInGdn(Boolean isInGdn) {
+            this.isInGdn = isInGdn;
+            return this;
+        }
+        public Boolean getIsInGdn() {
+            return this.isInGdn;
         }
 
     }

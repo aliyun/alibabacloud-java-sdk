@@ -4,12 +4,24 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NeedPop")
     public Long needPop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EC7E27FC-58F8-4722-89BB-D1B6D0971956</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TaskCount")
     public Long taskCount;
 

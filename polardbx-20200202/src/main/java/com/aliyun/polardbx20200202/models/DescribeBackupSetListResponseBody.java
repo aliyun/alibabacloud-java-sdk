@@ -7,12 +7,24 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeBackupSetListResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,24 +66,52 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSetListResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BackupModel")
         public Integer backupModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("BackupSetId")
-        public Long backupSetId;
+        public String backupSetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>88803195</p>
+         */
         @NameInMap("BackupSetSize")
         public Long backupSetSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BackupType")
         public Integer backupType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1635706960956</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1635706960956</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -88,11 +128,11 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             return this.backupModel;
         }
 
-        public DescribeBackupSetListResponseBodyData setBackupSetId(Long backupSetId) {
+        public DescribeBackupSetListResponseBodyData setBackupSetId(String backupSetId) {
             this.backupSetId = backupSetId;
             return this;
         }
-        public Long getBackupSetId() {
+        public String getBackupSetId() {
             return this.backupSetId;
         }
 

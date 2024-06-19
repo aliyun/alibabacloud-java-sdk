@@ -4,24 +4,58 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountPrivilegeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account_sec</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ReadWrite</p>
+     */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-htri0ori2r4k9p</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sbtest</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>account_audit</p>
+     */
     @NameInMap("SecurityAccountName")
     public String securityAccountName;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SecurityAccountPassword")
     public String securityAccountPassword;
 

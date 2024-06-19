@@ -4,35 +4,88 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateDBRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testaccount</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ReadWrite</p>
+     */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>utf8mb4</p>
+     */
     @NameInMap("Charset")
     public String charset;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-**************</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>db for test</p>
+     */
     @NameInMap("DbDescription")
     public String dbDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>auto</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>securityAccount</p>
+     */
     @NameInMap("SecurityAccountName")
     public String securityAccountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>securityPassword</p>
+     */
     @NameInMap("SecurityAccountPassword")
     public String securityAccountPassword;
+
+    @NameInMap("StoragePoolName")
+    public String storagePoolName;
 
     public static CreateDBRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBRequest self = new CreateDBRequest();
@@ -117,6 +170,14 @@ public class CreateDBRequest extends TeaModel {
     }
     public String getSecurityAccountPassword() {
         return this.securityAccountPassword;
+    }
+
+    public CreateDBRequest setStoragePoolName(String storagePoolName) {
+        this.storagePoolName = storagePoolName;
+        return this;
+    }
+    public String getStoragePoolName() {
+        return this.storagePoolName;
     }
 
 }
