@@ -6,58 +6,87 @@ import com.aliyun.tea.*;
 public class DescribeIntranetAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Auto-renewal is enabled.</p>
-     * <p>*   **false**: Auto-renewal is disabled.</p>
-     * <br>
-     * <p>> If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * <ul>
+     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+     * <li><strong>false</strong>: Auto-renewal is disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
     /**
-     * <p>The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the *yyyy-MM-dd* T *HH:mm:ss* Z format.</p>
-     * <br>
-     * <p>> If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * <p>The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em> T <em>HH:mm:ss</em> Z format.</p>
+     * <blockquote>
+     * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-06T16:00:00Z</p>
      */
     @NameInMap("BandwidthExpireTime")
     public String bandwidthExpireTime;
 
     /**
      * <p>The billing methods of unexpired bandwith plans. Valid values:</p>
-     * <p>- **0**: Pay-as-you-go</p>
-     * <p>- **1**: Subscription</p>
+     * <ul>
+     * <li><strong>0</strong>: Pay-as-you-go</li>
+     * <li><strong>1</strong>: Subscription</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("BandwidthPrePaid")
     public String bandwidthPrePaid;
 
     /**
-     * <p>The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-     * <br>
-     * <p>> If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, **0** is returned for this parameter.</p>
+     * <p>The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * <blockquote>
+     * <p>If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, <strong>0</strong> is returned for this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
      * <p>Specifies whether the instance has unexpired bandwidth plans. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The instance has unexpired bandwidth plans.</p>
-     * <p>*   **false**: The instance does not have unexpired bandwidth plans.</p>
-     * <br>
-     * <p>> If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * <ul>
+     * <li><strong>true</strong>: The instance has unexpired bandwidth plans.</li>
+     * <li><strong>false</strong>: The instance does not have unexpired bandwidth plans.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If no extra internal bandwidth is purchased, this parameter is not returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HasPrePaidBandWidthOrderRunning")
     public Boolean hasPrePaidBandWidthOrderRunning;
 
     /**
      * <p>The current internal bandwidth of the instance. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102</p>
      */
     @NameInMap("IntranetBandwidth")
     public Integer intranetBandwidth;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25D42CC3-FBA1-4AEC-BCE2-B8DD3137****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

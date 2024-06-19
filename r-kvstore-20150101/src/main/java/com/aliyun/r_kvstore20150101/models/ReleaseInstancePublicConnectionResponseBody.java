@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ReleaseInstancePublicConnectionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88F850B5-CC68-48B4-83CA-5497C3C191DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

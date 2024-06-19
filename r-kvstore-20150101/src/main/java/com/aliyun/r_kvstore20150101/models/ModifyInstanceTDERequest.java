@@ -5,27 +5,40 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTDERequest extends TeaModel {
     /**
-     * <p>The ID of the custom key. You can call the [DescribeEncryptionKeyList](~~302339~~) operation to query the key ID.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you do not specify this parameter, [Key Management Service (KMS)](~~28935~~) automatically generates a key.</p>
-     * <br>
-     * <p>*   To create a custom key, you can call the [CreateKey](~~28947~~) operation of the KMS API.</p>
+     * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/302339.html">DescribeEncryptionKeyList</a> operation to query the key ID.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If you do not specify this parameter, <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> automatically generates a key.</p>
+     * </li>
+     * <li><p>To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of the KMS API.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ad463061-992d-4195-8a94-ed63********</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
      * <p>The encryption algorithm. Default value: AES-CTR-256.</p>
-     * <br>
-     * <p>> This parameter is available only if the **TDEStatus** parameter is set to **Enabled**.</p>
+     * <blockquote>
+     * <p>This parameter is available only if the <strong>TDEStatus</strong> parameter is set to <strong>Enabled</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>AES-CTR-256</p>
      */
     @NameInMap("EncryptionName")
     public String encryptionName;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -43,13 +56,18 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of `acs:ram::$accountID:role/$roleName`. After the role is attached, your ApsaraDB for Redis instance can use KMS.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   `$accountID`: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click **Security Settings**.</p>
-     * <br>
-     * <p>*   `$roleName`: the name of the RAM role. Replace $roleName with **AliyunRdsInstanceEncryptionDefaultRole**.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of <code>acs:ram::$accountID:role/$roleName</code>. After the role is attached, your ApsaraDB for Redis instance can use KMS.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p><code>$accountID</code>: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click <strong>Security Settings</strong>.</p>
+     * </li>
+     * <li><p><code>$roleName</code>: the name of the RAM role. Replace $roleName with <strong>AliyunRdsInstanceEncryptionDefaultRole</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
@@ -58,9 +76,14 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether to enable TDE. Set the value to **Enabled**.</p>
-     * <br>
-     * <p>> TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see [Enable TDE](~~265913~~).</p>
+     * <p>Specifies whether to enable TDE. Set the value to <strong>Enabled</strong>.</p>
+     * <blockquote>
+     * <p>TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("TDEStatus")
     public String TDEStatus;

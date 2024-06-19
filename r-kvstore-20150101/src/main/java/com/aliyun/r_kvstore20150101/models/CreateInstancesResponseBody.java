@@ -12,12 +12,18 @@ public class CreateInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20905403119****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

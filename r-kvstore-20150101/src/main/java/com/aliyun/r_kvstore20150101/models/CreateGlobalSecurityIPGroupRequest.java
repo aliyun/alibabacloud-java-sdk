@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The IP addresses in the IP whitelist template.</p>
-     * <br>
-     * <p>>  Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.</p>
+     * <blockquote>
+     * <p> Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111.175.56.206,47.253.88.168,111.181.0.162</p>
      */
     @NameInMap("GIpList")
     public String GIpList;
 
     /**
      * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name can contain lowercase letters, digits, and underscores (\_).</p>
-     * <p>*   The name must start with a letter and end with a letter or digit.</p>
-     * <p>*   The name must be 2 to 120 characters in length.</p>
+     * <ul>
+     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The name must start with a letter and end with a letter or digit.</li>
+     * <li>The name must be 2 to 120 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_123</p>
      */
     @NameInMap("GlobalIgName")
     public String globalIgName;
@@ -30,12 +40,19 @@ public class CreateGlobalSecurityIPGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

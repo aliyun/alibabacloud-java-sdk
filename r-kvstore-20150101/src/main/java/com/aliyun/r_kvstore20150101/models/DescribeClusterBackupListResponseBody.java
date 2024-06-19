@@ -12,48 +12,73 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
     /**
      * <p>This parameter does not take effect. Ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
      */
     @NameInMap("FreeSize")
     public Long freeSize;
 
     /**
      * <p>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</p>
-     * <br>
-     * <p>>  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid full backups of the instance.</p>
+     * <blockquote>
+     * <p> The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid full backups of the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("FullStorageSize")
     public Long fullStorageSize;
 
     /**
      * <p>The size of the log backup file of the instance. Unit: bytes. This parameter is valid only when flashback is enabled.</p>
-     * <br>
-     * <p>>  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid log backups of the instance.</p>
+     * <blockquote>
+     * <p> The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid log backups of the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
      */
     @NameInMap("LogStorageSize")
     public Long logStorageSize;
 
     /**
-     * <p>The number of entries to return per page. Valid values: 1 to 100.</p>
-     * <p>Default value: 30.</p>
-     * <p>>If you specify this parameter, PageSize and PageNumber are unavailable.</p>
+     * <p>The number of entries to return per page. Valid values: 1 to 100.
+     * Default value: 30.</p>
+     * <blockquote>
+     * <p>If you specify this parameter, PageSize and PageNumber are unavailable.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C009DA42-3B19-5B81-963D-1509DE2408DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -130,6 +155,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     public static class DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo extends TeaModel {
         /**
          * <p>The engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         @NameInMap("CustinsDbVersion")
         public String custinsDbVersion;
@@ -152,59 +180,88 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     public static class DescribeClusterBackupListResponseBodyClusterBackupsBackups extends TeaModel {
         /**
          * <p>The public download URL of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb">http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb</a></p>
          */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
         /**
-         * <p>The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-09T17:21:57</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         /**
          * <p>The ID of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>514645788</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
          * <p>The internal download URL of the backup file.</p>
-         * <br>
-         * <p>>  You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
+         * <blockquote>
+         * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote-internal.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb">http://rdsbakbucket-huhehaote-v2.oss-cn-huhehaote-internal.aliyuncs.com/custins424747958/hins100322105_data_20240110012135.rdb</a></p>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
         /**
          * <p>The backup name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hins100322105_data_20240110012135.rdb</p>
          */
         @NameInMap("BackupName")
         public String backupName;
 
         /**
          * <p>The size of the backup file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("BackupSize")
         public String backupSize;
 
         /**
-         * <p>The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-09T17:21:30Z</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
          * <p>The status of the backup. Valid values:</p>
-         * <br>
-         * <p>*   **OK**</p>
-         * <p>*   **ERROR**</p>
+         * <ul>
+         * <li><strong>OK</strong></li>
+         * <li><strong>ERROR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
-         * <p>The database engine. The return value is **redis**.</p>
+         * <p>The database engine. The return value is <strong>redis</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -217,18 +274,28 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hins100322105_data_20240108012127.rdb</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>Indicates whether the backup set is available. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unavailable</p>
-         * <p>*   **1**: available</p>
+         * <ul>
+         * <li><strong>0</strong>: unavailable</li>
+         * <li><strong>1</strong>: available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsAvail")
         public String isAvail;
+
+        @NameInMap("RecoverConfigMode")
+        public String recoverConfigMode;
 
         public static DescribeClusterBackupListResponseBodyClusterBackupsBackups build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterBackupListResponseBodyClusterBackupsBackups self = new DescribeClusterBackupListResponseBodyClusterBackupsBackups();
@@ -331,6 +398,14 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             return this.isAvail;
         }
 
+        public DescribeClusterBackupListResponseBodyClusterBackupsBackups setRecoverConfigMode(String recoverConfigMode) {
+            this.recoverConfigMode = recoverConfigMode;
+            return this;
+        }
+        public String getRecoverConfigMode() {
+            return this.recoverConfigMode;
+        }
+
     }
 
     public static class DescribeClusterBackupListResponseBodyClusterBackups extends TeaModel {
@@ -342,58 +417,86 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
         /**
          * <p>The end time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-10T17:21:55Z</p>
          */
         @NameInMap("ClusterBackupEndTime")
         public String clusterBackupEndTime;
 
         /**
          * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb-zmdqj2m3xyxjtdt0</p>
          */
         @NameInMap("ClusterBackupId")
         public String clusterBackupId;
 
         /**
          * <p>The backup mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         @NameInMap("ClusterBackupMode")
         public String clusterBackupMode;
 
         /**
          * <p>The size of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         @NameInMap("ClusterBackupSize")
         public String clusterBackupSize;
 
         /**
          * <p>The start time of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-10T17:21:25Z</p>
          */
         @NameInMap("ClusterBackupStartTime")
         public String clusterBackupStartTime;
 
         /**
          * <p>The status of the backup set.</p>
-         * <br>
-         * <p>*   OK</p>
-         * <p>*   RUNNING</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>OK</li>
+         * <li>RUNNING</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("ClusterBackupStatus")
         public String clusterBackupStatus;
 
         /**
          * <p>Indicates whether the backup set is valid. A value of 0 indicates that node-level backups failed or have not been completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsAvail")
         public Integer isAvail;
 
         /**
          * <p>The backup progress. The system displays only the progress of running backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The memory size of a single node during a full backup. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("ShardClassMemory")
         public Integer shardClassMemory;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,6 +27,9 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>794120D1-E0CF-4713-BAE4-EBAEA04506AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,33 +74,49 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     public static class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo extends TeaModel {
         /**
          * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         /**
          * <p>The storage capacity of the node. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5120</p>
          */
         @NameInMap("Capacity")
         public String capacity;
 
         /**
          * <p>The maximum number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>320000</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp10noxlhcoim2****-proxy-3#542****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The node type. Valid values:</p>
-         * <br>
-         * <p>*   **db**: a data node.</p>
-         * <p>*   **normal**: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.</p>
+         * <ul>
+         * <li><strong>db</strong>: a data node.</li>
+         * <li><strong>normal</strong>: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -168,42 +190,62 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     public static class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo extends TeaModel {
         /**
          * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         /**
          * <p>The storage capacity of the node. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         @NameInMap("Capacity")
         public String capacity;
 
         /**
          * <p>The maximum number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp10noxlhcoim2****-db-0#688****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The node type. Valid values:</p>
-         * <br>
-         * <p>*   **proxy**: proxy node</p>
-         * <p>*   **db**: data node</p>
+         * <ul>
+         * <li><strong>proxy</strong>: proxy node</li>
+         * <li><strong>db</strong>: data node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The type of the child instance. Valid values:</p>
-         * <br>
-         * <p>*   **master**: master node</p>
-         * <p>*   **readonly**: read-only instance</p>
+         * <ul>
+         * <li><strong>master</strong>: master node</li>
+         * <li><strong>readonly</strong>: read-only instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("SubInstanceType")
         public String subInstanceType;

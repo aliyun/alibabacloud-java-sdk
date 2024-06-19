@@ -12,6 +12,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>493B7308-D9C2-55F6-B042-0313BD63****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class AvailableResource extends TeaModel {
         /**
          * <p>The memory size of the instance. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16384</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
          * <p>The code of the instance type. If you want to view the code of an instance type, you can search for the code of the instance type in Help Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis.amber.logic.sharding.2g.8db.0rodb.24proxy.multithread</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
          * <p>The description of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16 GB cluster instance with 8 nodes (1,920,000 queries per second and 240,000 connections)</p>
          */
         @NameInMap("InstanceClassRemark")
         public String instanceClassRemark;
@@ -115,9 +127,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The node type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **single**: standalone</p>
-         * <p>*   **double**: master-replica</p>
+         * <ul>
+         * <li><strong>single</strong>: standalone</li>
+         * <li><strong>double</strong>: master-replica</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>double</p>
          */
         @NameInMap("SupportedNodeType")
         public String supportedNodeType;
@@ -167,6 +183,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class SupportedShardNumber extends TeaModel {
         /**
          * <p>The number of shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("ShardNumber")
         public String shardNumber;
@@ -222,10 +241,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class SupportedArchitectureType extends TeaModel {
         /**
          * <p>The architecture of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **standard**: standard architecture</p>
-         * <p>*   **cluster**: cluster architecture</p>
-         * <p>*   **rwsplit**: read/write splitting architecture</p>
+         * <ul>
+         * <li><strong>standard</strong>: standard architecture</li>
+         * <li><strong>cluster</strong>: cluster architecture</li>
+         * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("Architecture")
         public String architecture;
@@ -287,6 +310,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         @NameInMap("Version")
         public String version;
@@ -336,9 +362,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesType extends TeaModel {
         /**
          * <p>The instance series. Valid values:</p>
-         * <br>
-         * <p>*   **enhanced_performance_type**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
-         * <p>*   **hybrid_storage**: ApsaraDB for Redis Community Edition hybrid-storage instance</p>
+         * <ul>
+         * <li><strong>enhanced_performance_type</strong>: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
+         * <li><strong>hybrid_storage</strong>: ApsaraDB for Redis Community Edition hybrid-storage instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enhanced_performance_type</p>
          */
         @NameInMap("SeriesType")
         public String seriesType;
@@ -394,9 +424,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionType extends TeaModel {
         /**
          * <p>The edition of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Community**: Community Edition</p>
-         * <p>*   **Enterprise**: Enhanced Edition (Tair)</p>
+         * <ul>
+         * <li><strong>Community</strong>: Community Edition</li>
+         * <li><strong>Enterprise</strong>: Enhanced Edition (Tair)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise</p>
          */
         @NameInMap("EditionType")
         public String editionType;
@@ -452,6 +486,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngine extends TeaModel {
         /**
          * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -507,6 +544,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -519,12 +559,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the zone in which the instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou Zone H</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;

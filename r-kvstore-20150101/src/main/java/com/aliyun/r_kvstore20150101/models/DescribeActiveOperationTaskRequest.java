@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the historical tasks. Default value: 0. Valid values:</p>
-     * <br>
-     * <p>*   **0**: returns the current task.</p>
-     * <p>*   **1**: returns the historical tasks.</p>
+     * <ul>
+     * <li><strong>0</strong>: returns the current task.</li>
+     * <li><strong>1</strong>: returns the historical tasks.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsHistory")
     public Integer isHistory;
@@ -20,21 +24,32 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Specify a value greater than <strong>10</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the O&M task. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
-     * <br>
-     * <p>> A value of **all** indicates all region IDs.</p>
+     * <p>The region ID of the O&amp;M task. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p>A value of <strong>all</strong> indicates all region IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("Region")
     public String region;
@@ -49,11 +64,16 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The type of the O\&M task. Valid values:</p>
-     * <br>
-     * <p>*   **rds_apsaradb_ha**: master-replica switchover</p>
-     * <p>*   **rds_apsaradb_transfer**: instance migration</p>
-     * <p>*   **rds_apsaradb_upgrade**: minor version update</p>
+     * <p>The type of the O\&amp;M task. Valid values:</p>
+     * <ul>
+     * <li><strong>rds_apsaradb_ha</strong>: master-replica switchover</li>
+     * <li><strong>rds_apsaradb_transfer</strong>: instance migration</li>
+     * <li><strong>rds_apsaradb_upgrade</strong>: minor version update</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("TaskType")
     public String taskType;

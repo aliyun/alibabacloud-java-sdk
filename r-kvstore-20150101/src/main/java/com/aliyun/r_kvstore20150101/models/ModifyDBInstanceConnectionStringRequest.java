@@ -6,29 +6,45 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The current endpoint of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The network type of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Private**: internal network</p>
-     * <p>*   **Public**: Internet</p>
+     * <ul>
+     * <li><strong>Private</strong>: internal network</li>
+     * <li><strong>Public</strong>: Internet</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
      */
     @NameInMap("IPType")
     public String IPType;
 
     /**
-     * <p>The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
-     * <br>
-     * <p>>  You must specify one of the **NewConnectionString** and **Port** parameters.</p>
+     * <p>The prefix of the new endpoint. Specify the endpoint in the <code>&lt;prefix&gt;.redis.rds.aliyuncs.com</code> format. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
+     * <blockquote>
+     * <p> You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>standardredis</p>
      */
     @NameInMap("NewConnectionString")
     public String newConnectionString;
@@ -40,9 +56,13 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port number that is used to connect to the instance. Valid values: **1024** to **65535**.</p>
-     * <br>
-     * <p>> You must specify one of the **NewConnectionString** and **Port** parameters.</p>
+     * <p>The port number that is used to connect to the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * <p>You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>6379</p>
      */
     @NameInMap("Port")
     public String port;

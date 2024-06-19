@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
      * <p>The network type. Valid values:</p>
-     * <br>
-     * <p>*   **CLASSIC**: The instance runs in a classic network.</p>
-     * <p>*   **VPC**: The instance runs in a virtual private cloud (VPC).</p>
+     * <ul>
+     * <li><strong>CLASSIC</strong>: The instance runs in a classic network.</li>
+     * <li><strong>VPC</strong>: The instance runs in a virtual private cloud (VPC).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CLASSIC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -21,6 +25,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC77D4E1-2A7C-4F0B-A4CC-CE0B9C314B9B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,87 +64,128 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     public static class DescribeDBInstanceNetInfoResponseBodyNetInfoItemsInstanceNetInfo extends TeaModel {
         /**
          * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Internet</p>
-         * <p>*   **1**: classic network</p>
-         * <p>*   **2**: Virtual Private Cloud (VPC)</p>
+         * <ul>
+         * <li><strong>0</strong>: Internet</li>
+         * <li><strong>1</strong>: classic network</li>
+         * <li><strong>2</strong>: Virtual Private Cloud (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
         /**
          * <p>Indicates whether the address is a private endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The address is not a private endpoint.</p>
-         * <p>*   **1**: The address is a private endpoint.</p>
+         * <ul>
+         * <li><strong>0</strong>: The address is not a private endpoint.</li>
+         * <li><strong>1</strong>: The address is a private endpoint.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DirectConnection")
         public Integer directConnection;
 
         /**
          * <p>The expiration time of the classic network endpoint. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5183779</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.49.***</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The network type of the IP address. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: Internet</p>
-         * <p>*   **Inner**: classic network</p>
-         * <p>*   **Private**: VPC</p>
+         * <ul>
+         * <li><strong>Public</strong>: Internet</li>
+         * <li><strong>Inner</strong>: classic network</li>
+         * <li><strong>Private</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Inner</p>
          */
         @NameInMap("IPType")
         public String IPType;
 
         /**
          * <p>Indicates whether the address is the endpoint for the secondary zone. Valid values: 1 and 0. A value of 1 indicates that the address is the endpoint for the secondary zone.</p>
-         * <br>
-         * <p>>  This parameter is returned only after you enable the multi-zone read/write splitting architecture for the instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned only after you enable the multi-zone read/write splitting architecture for the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsSlaveProxy")
         public Integer isSlaveProxy;
 
         /**
          * <p>The service port of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The remaining validity period of the classic network endpoint. Unit: seconds.</p>
-         * <br>
-         * <p>>  **A value of 0 indicates that the endpoint never expires.</p>
+         * <blockquote>
+         * <p> **A value of 0 indicates that the endpoint never expires.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
         /**
          * <p>The ID of the VPC to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1ky7j6qc7umk****</p>
          */
         @NameInMap("VPCInstanceId")
         public String VPCInstanceId;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

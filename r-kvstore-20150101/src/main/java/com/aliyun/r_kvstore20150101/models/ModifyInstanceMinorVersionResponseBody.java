@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyInstanceMinorVersionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28761557-0B33-41DF-AEEB-322DFF96****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

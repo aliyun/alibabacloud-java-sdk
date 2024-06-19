@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SwitchNetworkResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F0997EE8-F4C2-4503-9168-85177ED78C70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>578678678</p>
      */
     @NameInMap("TaskId")
     public String taskId;

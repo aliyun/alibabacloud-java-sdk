@@ -12,12 +12,18 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,26 +60,39 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
     public static class DescribeDBNodeDirectVipInfoResponseBodyDirectVipInfoVipInfo extends TeaModel {
         /**
          * <p>The network type of the security group. Valid values:</p>
-         * <br>
-         * <p>*   **vpc**: Virtual Private Cloud (VPC)</p>
+         * <ul>
+         * <li><strong>vpc</strong>: Virtual Private Cloud (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The shard ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-8vb3679b04551444-db-2</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The port number. Valid values: **1024** to **65535**. Default value: **6379**.</p>
+         * <p>The port number. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The VIP of the shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.115.61.8</p>
          */
         @NameInMap("Vip")
         public String vip;

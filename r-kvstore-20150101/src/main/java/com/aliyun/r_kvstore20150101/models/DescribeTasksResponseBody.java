@@ -12,24 +12,36 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>608FAEC9-485E-4C65-82DE-2E5B955E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -81,74 +93,108 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     public static class DescribeTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The beginning time of the task. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The beginning time of the task. The time follows the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-13T06:16:54Z</p>
          */
         @NameInMap("BeginTime")
         public String beginTime;
 
         /**
          * <p>The name of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>init_redis</p>
          */
         @NameInMap("CurrentStepName")
         public String currentStepName;
 
         /**
-         * <p>The end time of the task. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the task. The time follows the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-13T06:17:18Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The progress of the task. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Float progress;
 
         /**
          * <p>The estimated remaining duration of the task. Unit: seconds.</p>
-         * <br>
-         * <p>>  If the task is not running, this parameter is not returned or the returned value is **0**.</p>
+         * <blockquote>
+         * <p> If the task is not running, this parameter is not returned or the returned value is <strong>0</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Remain")
         public Integer remain;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The task is pending.</p>
-         * <p>*   **1**: The task is running.</p>
-         * <p>*   **2**: The task is complete.</p>
-         * <p>*   **4**: The task is closed.</p>
-         * <p>*   **7**: The task is paused.</p>
-         * <p>*   **8**: The task is interrupted.</p>
+         * <ul>
+         * <li><strong>0</strong>: The task is pending.</li>
+         * <li><strong>1</strong>: The task is running.</li>
+         * <li><strong>2</strong>: The task is complete.</li>
+         * <li><strong>4</strong>: The task is closed.</li>
+         * <li><strong>7</strong>: The task is paused.</li>
+         * <li><strong>8</strong>: The task is interrupted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The progress of the subtask.</p>
-         * <br>
-         * <p>>  If the subtask does not exist, this parameter is not returned.</p>
+         * <blockquote>
+         * <p> If the subtask does not exist, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3/3</p>
          */
         @NameInMap("StepProgressInfo")
         public String stepProgressInfo;
 
         /**
-         * <p>The information about the subtask in the JSON format. This includes the expected remaining duration (**remain**), the name of the subtask (**name**), and the task progress (**progress**).</p>
-         * <br>
-         * <p>>  If the subtask does not exist, this parameter is not returned.</p>
+         * <p>The information about the subtask in the JSON format. This includes the expected remaining duration (<strong>remain</strong>), the name of the subtask (<strong>name</strong>), and the task progress (<strong>progress</strong>).</p>
+         * <blockquote>
+         * <p> If the subtask does not exist, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;remain\&quot;:0,\&quot;name\&quot;:\&quot;init_instance\&quot;,\&quot;progress\&quot;:100},{\&quot;remain\&quot;:107,\&quot;name\&quot;:\&quot;init_redis\&quot;,\&quot;progress\&quot;:12.3},{\&quot;remain\&quot;:1881,\&quot;name\&quot;:\&quot;init_config\&quot;,\&quot;progress\&quot;:0}]</p>
          */
         @NameInMap("StepsInfo")
         public String stepsInfo;
 
         /**
          * <p>The identifier of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModifyDBInstanceParameter</p>
          */
         @NameInMap("TaskAction")
         public String taskAction;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32302****</p>
          */
         @NameInMap("TaskId")
         public String taskId;

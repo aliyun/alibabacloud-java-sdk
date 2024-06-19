@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class RenewInstanceResponseBody extends TeaModel {
     /**
      * <p>The end time of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-19T00:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111111111111111</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2222245-222A-4155-9349-E22222****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

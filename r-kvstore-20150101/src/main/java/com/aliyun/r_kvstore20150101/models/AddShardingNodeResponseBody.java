@@ -12,12 +12,18 @@ public class AddShardingNodeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20741011111111</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B79C1A90-495B-4E99-A2AA-A4DB13B8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

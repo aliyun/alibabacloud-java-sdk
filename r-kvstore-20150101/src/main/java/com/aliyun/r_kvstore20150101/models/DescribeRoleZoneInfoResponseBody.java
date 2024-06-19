@@ -12,24 +12,36 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>224B97FB-A275-4EAC-86E9-8922FEA2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,92 +94,137 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     public static class DescribeRoleZoneInfoResponseBodyNodeNodeInfo extends TeaModel {
         /**
          * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
-         * <br>
-         * <p>> *   You can call the [EnableAdditionalBandwidth](~~206173~~) operation to specify the increased bandwidth.</p>
-         * <p>> *   You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to specify the increased bandwidth.</li>
+         * <li>You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CurrentBandWidth")
         public Long currentBandWidth;
 
         /**
          * <p>The minor version of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis-5.0_0.3.10</p>
          */
         @NameInMap("CurrentMinorVersion")
         public String currentMinorVersion;
 
         /**
          * <p>The ID of the data shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30381****</p>
          */
         @NameInMap("CustinsId")
         public String custinsId;
 
         /**
          * <p>The default bandwidth of the node. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         @NameInMap("DefaultBandWidth")
         public Long defaultBandWidth;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-t4nlenc2p04uvb****</p>
          */
         @NameInMap("InsName")
         public String insName;
 
         /**
-         * <p>Indicates whether the node is a read replica. If the node is a read replica, **3** is returned.</p>
-         * <br>
-         * <p>>  If the node is not a read replica, no value is returned.</p>
+         * <p>Indicates whether the node is a read replica. If the node is a read replica, <strong>3</strong> is returned.</p>
+         * <blockquote>
+         * <p> If the node is not a read replica, no value is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("InsType")
         public Integer insType;
 
         /**
          * <p>Indicates whether the minor version is the latest version. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The minor version is not the latest version.</p>
-         * <p>*   **1**: The minor version is the latest version.</p>
-         * <br>
-         * <p>>  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.</p>
+         * <ul>
+         * <li><strong>0</strong>: The minor version is not the latest version.</li>
+         * <li><strong>1</strong>: The minor version is the latest version.</li>
+         * </ul>
+         * <blockquote>
+         * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsLatestVersion")
         public Integer isLatestVersion;
 
         /**
          * <p>Indicates whether the bandwidth of the node is increased. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The bandwidth of the node is not increased.</p>
-         * <p>*   **false**: The bandwidth of the node is increased.</p>
+         * <ul>
+         * <li><strong>true</strong>: The bandwidth of the node is not increased.</li>
+         * <li><strong>false</strong>: The bandwidth of the node is increased.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsOpenBandWidthService")
         public Boolean isOpenBandWidthService;
 
         /**
          * <p>This parameter is used only for internal maintenance of ApsaraDB for Redis instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10065****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The node type. Valid values:</p>
-         * <br>
-         * <p>*   **db**: data node.</p>
-         * <p>*   **proxy**: proxy node.</p>
-         * <p>*   **normal**: regular node. This value is returned when the instance runs in the standard architecture.</p>
+         * <ul>
+         * <li><strong>db</strong>: data node.</li>
+         * <li><strong>proxy</strong>: proxy node.</li>
+         * <li><strong>normal</strong>: regular node. This value is returned when the instance runs in the standard architecture.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The role of the node. Valid values:</p>
-         * <br>
-         * <p>*   **master**: master node</p>
-         * <p>*   **slave**: replica node</p>
+         * <ul>
+         * <li><strong>master</strong>: master node</li>
+         * <li><strong>slave</strong>: replica node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,22 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     /**
      * <p>The time range to query. Default value: 7. Unit: days.</p>
-     * <br>
-     * <p>> If daily automatic analysis has not started and manual analysis is not performed, no records are returned.</p>
+     * <blockquote>
+     * <p>If daily automatic analysis has not started and manual analysis is not performed, no records are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("Days")
     public Integer days;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the child node in the cluster instance.</p>
-     * <br>
-     * <p>> If this parameter is not specified, the analysis results of all child nodes in the instance are returned.</p>
+     * <blockquote>
+     * <p>If this parameter is not specified, the analysis results of all child nodes in the instance are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -34,14 +46,21 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
-     * <br>
-     * <p>> The default value is **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <blockquote>
+     * <p>The default value is <strong>30</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

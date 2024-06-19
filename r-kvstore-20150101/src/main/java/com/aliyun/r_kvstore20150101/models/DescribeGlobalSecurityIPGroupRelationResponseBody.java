@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-t4n885e834f6****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,6 +21,9 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,26 +60,39 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     public static class DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel extends TeaModel {
         /**
          * <p>The IP address in the IP whitelist template.</p>
-         * <br>
-         * <p>>  Multiple IP addresses are separated by commas (,).</p>
+         * <blockquote>
+         * <p> Multiple IP addresses are separated by commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1,10.10.10.10</p>
          */
         @NameInMap("GIpList")
         public String GIpList;
 
         /**
          * <p>The name of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
         /**
          * <p>The ID of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-zsldxfiwjmti0kcm****</p>
          */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

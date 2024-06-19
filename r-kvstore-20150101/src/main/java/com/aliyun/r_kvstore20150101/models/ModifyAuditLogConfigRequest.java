@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class ModifyAuditLogConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the audit log feature. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables the audit log feature.</p>
-     * <p>*   **false**: disables the audit log feature.</p>
-     * <br>
-     * <p>> If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the audit log feature.</li>
+     * <li><strong>false</strong>: disables the audit log feature.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting architecture</a>, the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DbAudit")
     public Boolean dbAudit;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,10 +43,16 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of audit logs. Valid values: **1** to **365**. Unit: days.</p>
-     * <br>
-     * <p>> *   This parameter is required only if the **DbAudit** parameter is set to **true**.</p>
-     * <p>> *   The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.</p>
+     * <p>The retention period of audit logs. Valid values: <strong>1</strong> to <strong>365</strong>. Unit: days.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required only if the <strong>DbAudit</strong> parameter is set to <strong>true</strong>.</li>
+     * <li>The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Retention")
     public Integer retention;

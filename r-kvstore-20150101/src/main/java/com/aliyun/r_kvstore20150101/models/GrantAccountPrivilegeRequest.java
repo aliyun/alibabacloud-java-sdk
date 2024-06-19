@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
-     * <p>The name of the account. You can call the [DescribeAccounts](~~DescribeAccounts~~) operation to obtain the name of the account.</p>
+     * <p>The name of the account. You can call the <a href="~~DescribeAccounts~~">DescribeAccounts</a> operation to obtain the name of the account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoaccount</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The permissions of the account. Default value: RoleReadWrite. Valid values:</p>
-     * <br>
-     * <p>*   RoleReadOnly: The account has the read-only permissions.</p>
-     * <p>*   RoleReadWrite: The account has the read and write permissions.</p>
+     * <ul>
+     * <li>RoleReadOnly: The account has the read-only permissions.</li>
+     * <li>RoleReadWrite: The account has the read and write permissions.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RoleReadWrite</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
      * <p>The ID of the instance to which the account belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The display language of the **LocalName** parameter value. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese</p>
-     * <p>*   **en-US**: English</p>
-     * <br>
-     * <p>> The default value is **zh-CN**.</p>
+     * <p>The display language of the <strong>LocalName</strong> parameter value. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese</li>
+     * <li><strong>en-US</strong>: English</li>
+     * </ul>
+     * <blockquote>
+     * <p>The default value is <strong>zh-CN</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

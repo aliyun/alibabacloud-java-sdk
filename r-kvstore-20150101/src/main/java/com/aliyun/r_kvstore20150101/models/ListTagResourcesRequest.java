@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token used to start the next query to retrieve more results.</p>
-     * <br>
-     * <p>> This parameter is not required in the first query. If not all results are returned in one query, you can specify the **NextToken** value returned for the query to perform the next query.</p>
+     * <blockquote>
+     * <p>This parameter is not required in the first query. If not all results are returned in one query, you can specify the <strong>NextToken</strong> value returned for the query to perform the next query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707ec2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -20,14 +24,24 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the instances.</p>
-     * <br>
-     * <p>> *   You must specify this parameter or the **Tag** parameter.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You must specify this parameter or the <strong>Tag</strong> parameter.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -39,13 +53,17 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags of the instance. You must specify this parameter or the **ResourceId** parameter.</p>
+     * <p>The tags of the instance. You must specify this parameter or the <strong>ResourceId</strong> parameter.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -130,12 +148,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The keys of the tags associated with the instances you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demokey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The values of the tags associated with the instances you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demovalue</p>
          */
         @NameInMap("Value")
         public String value;

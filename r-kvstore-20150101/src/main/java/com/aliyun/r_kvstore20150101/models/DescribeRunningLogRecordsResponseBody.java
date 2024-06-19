@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,36 +30,54 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of log entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The maximum number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>093B8579-9264-43A0-ABA9-AA86****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-12-03T07:01Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -138,26 +162,39 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
         /**
          * <p>The content of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONFIG REWRITE executed with success.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the log was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03T07:07:30Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the node.</p>
-         * <br>
-         * <p>>  If a standard instance is queried, `(null)` is returned.</p>
+         * <blockquote>
+         * <p> If a standard instance is queried, <code>(null)</code> is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;

@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the account.</p>
-     * <br>
-     * <p>*   The description must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain letters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The description must be 2 to 256 characters in length.</p>
+     * <ul>
+     * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>The description must be 2 to 256 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testescription</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
-     * <p>The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.</p>
+     * <p>The username of the account. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoaccount</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

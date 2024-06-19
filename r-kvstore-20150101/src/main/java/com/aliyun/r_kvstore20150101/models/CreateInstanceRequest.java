@@ -6,181 +6,260 @@ import com.aliyun.tea.*;
 public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable append-only file (AOF) persistence for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **yes** (default): enables AOF persistence.</p>
-     * <p>*   **no**: disables AOF persistence.</p>
-     * <br>
+     * <ul>
+     * <li><strong>yes</strong> (default): enables AOF persistence.</li>
+     * <li><strong>no</strong>: disables AOF persistence.</li>
+     * </ul>
      * <p>**</p>
-     * <br>
-     * <p>**Description** This parameter is applicable to classic instances, and is unavailable for cloud-native instances.</p>
+     * <p><strong>Description</strong> This parameter is applicable to classic instances, and is unavailable for cloud-native instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yes</p>
      */
     @NameInMap("Appendonly")
     public String appendonly;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false**: disables auto-renewal.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
-     * <br>
-     * <p>> This parameter is required only if the **AutoRenew** parameter is set to **true**.</p>
+     * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <blockquote>
+     * <p>This parameter is required only if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("AutoRenewPeriod")
     public String autoRenewPeriod;
 
     /**
      * <p>Specifies whether to use a coupon. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: uses a coupon.</p>
-     * <p>*   **false**: does not use a coupon.</p>
+     * <ul>
+     * <li><strong>true</strong>: uses a coupon.</li>
+     * <li><strong>false</strong>: does not use a coupon.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
-     * <p>The ID of the backup file of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup files.</p>
-     * <br>
-     * <p>> After you specify the **SrcDBInstanceId** parameter, you must use the **BackupId** or **RestoreTime** parameter to specify the backup file.</p>
+     * <p>The ID of the backup file of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the <strong>SrcDBInstanceId</strong> parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query the IDs of backup files.</p>
+     * <blockquote>
+     * <p>After you specify the <strong>SrcDBInstanceId</strong> parameter, you must use the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter to specify the backup file.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>111111111</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The ID of the promotional event or business information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>000000000</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The storage capacity of the instance. Unit: MB.</p>
-     * <br>
-     * <p>> You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call this operation.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call this operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>16384</p>
      */
     @NameInMap("Capacity")
     public Long capacity;
 
     /**
      * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The backup set ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb-hyxdof5x9kqbtust</p>
      */
     @NameInMap("ClusterBackupId")
     public String clusterBackupId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>AllocateInstancePublicConnection</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
-     * <p>The coupon code. Default value: `default`.</p>
+     * <p>The coupon code. Default value: <code>default</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
      * <p>The ID of the dedicated cluster. This parameter is required if you create an instance in a dedicated cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-uv4fnk6r7zff****</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
      * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The database engine version of the instance. Valid values: **4.0**, **5.0**, **6.0**, and **7.0**.</p>
-     * <br>
-     * <p>> The default value is **5.0**.</p>
+     * <p>The database engine version of the instance. Valid values: <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+     * <blockquote>
+     * <p>The default value is <strong>5.0</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>Specifies whether to use the new instance as the first child instance of the distributed instance. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: uses the new instance as the first child instance.</p>
-     * <p>*   **false**: does not use the new instance as the first child instance.</p>
-     * <p>*   If you want to create an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that runs Redis 5.0, you must set this parameter to **true**.</p>
-     * <br>
-     * <p>*   This parameter is available only on the China site (aliyun.com).</p>
+     * <ul>
+     * <li><p><strong>true</strong>: uses the new instance as the first child instance.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not use the new instance as the first child instance.</p>
+     * </li>
+     * <li><p>If you want to create an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that runs Redis 5.0, you must set this parameter to <strong>true</strong>.</p>
+     * </li>
+     * <li><p>This parameter is available only on the China site (aliyun.com).</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("GlobalInstance")
     public Boolean globalInstance;
 
     /**
      * <p>The ID of the distributed instance. This parameter is available only on the China site (aliyun.com).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gr-bp14rkqrhac****</p>
      */
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
     /**
      * <p>The global IP whitelist template for the instance. Multiple IP whitelist templates should be separated by English commas (,) and cannot be duplicated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-zsldxfiwjmti0kcm****</p>
      */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
 
     /**
-     * <p>The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see [Overview](~~26350~~).</p>
-     * <br>
+     * <p>The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</p>
      * <p>**</p>
-     * <br>
-     * <p>**Description** You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call the CreateInstance operation.</p>
+     * <p><strong>Description</strong> You must specify at least one of the <strong>Capacity</strong> and <strong>InstanceClass</strong> parameters when you call the CreateInstance operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>redis.master.small.default</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 80 characters in length and must start with a letter. It cannot contain spaces or specific special characters. These special characters include `@ / : = " < > { [ ] }`</p>
+     * <p>The name of the instance. The name must be 2 to 80 characters in length and must start with a letter. It cannot contain spaces or specific special characters. These special characters include <code>@ / : = &quot; &lt; &gt; { [ ] }</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>apitest</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The category of the instance. Default value: Redis. Valid values:</p>
-     * <br>
-     * <p>*   **Redis**</p>
-     * <p>*   **Memcache**</p>
+     * <ul>
+     * <li><strong>Redis</strong></li>
+     * <li><strong>Memcache</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The network type of the instance. Default value: VPC. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**</p>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The node type. Valid values:</p>
-     * <br>
-     * <p>*   **MASTER_SLAVE**: high availability (master-replica)</p>
-     * <p>*   **STAND_ALONE**: standalone</p>
-     * <p>*   **double**: master-replica</p>
-     * <p>*   **single**: standalone</p>
-     * <br>
-     * <p>>  To create a cloud-native instance, set this parameter to **MASTER_SLAVE** or **STAND_ALONE**. To create a classic instance, set this parameter to **double** or **single**.</p>
+     * <ul>
+     * <li><strong>MASTER_SLAVE</strong>: high availability (master-replica)</li>
+     * <li><strong>STAND_ALONE</strong>: standalone</li>
+     * <li><strong>double</strong>: master-replica</li>
+     * <li><strong>single</strong>: standalone</li>
+     * </ul>
+     * <blockquote>
+     * <p> To create a cloud-native instance, set this parameter to <strong>MASTER_SLAVE</strong> or <strong>STAND_ALONE</strong>. To create a classic instance, set this parameter to <strong>double</strong> or <strong>single</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>STAND_ALONE</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
@@ -193,52 +272,82 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The parameter template ID, which must be globally unique.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rpg-test**</p>
      */
     @NameInMap("ParamGroupId")
     public String paramGroupId;
 
     /**
-     * <p>The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
+     * <p>The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pass!123456</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The subscription duration. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**,**36**, and **60**. Unit: months.</p>
-     * <br>
-     * <p>> This parameter is available and required only if the **ChargeType** parameter is set to **PrePaid**.</p>
+     * <p>The subscription duration. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>,<strong>36</strong>, and <strong>60</strong>. Unit: months.</p>
+     * <blockquote>
+     * <p>This parameter is available and required only if the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The port number that is used to connect to the instance. Valid values: **1024** to **65535**. Default value: **6379**.</p>
+     * <p>The port number that is used to connect to the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>. Default value: <strong>6379</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6379</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The private IP address of the instance.</p>
-     * <br>
-     * <p>> The private IP address must be available within the CIDR block of the vSwitch to which to connect the instance.</p>
+     * <blockquote>
+     * <p>The private IP address must be available within the CIDR block of the vSwitch to which to connect the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.0.***</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
      * <p>The number of read-only nodes in the instance. This parameter is available only if you create a read/write splitting instance that uses cloud disks. Valid values: 1 to 5.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ReadOnlyCount")
     public Integer readOnlyCount;
 
+    @NameInMap("RecoverConfigMode")
+    public String recoverConfigMode;
+
     /**
-     * <p>The ID of the region where you want to create the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-resourcegroupid1</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -250,17 +359,25 @@ public class CreateInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time at which the specified original instance is backed up. The point in time must be within the retention period of backup files of the original instance. If you want to create an instance based on a backup file of a specified instance, you can set this parameter to specify a point in time after you set the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that was created at the specified point in time for the original instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>> After you specify the **SrcDBInstanceId** parameter, you must use the **BackupId** or **RestoreTime** parameter to specify the backup file.</p>
+     * <p>The point in time at which the specified original instance is backed up. The point in time must be within the retention period of backup files of the original instance. If you want to create an instance based on a backup file of a specified instance, you can set this parameter to specify a point in time after you set the <strong>SrcDBInstanceId</strong> parameter. Then, the system creates an instance based on the backup file that was created at the specified point in time for the original instance. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>After you specify the <strong>SrcDBInstanceId</strong> parameter, you must use the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter to specify the backup file.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-19T16:00:00Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     /**
-     * <p>The secondary zone ID of the instance. You can call the [DescribeZones](~~472448~~) operation to query the most recent zone list.</p>
-     * <br>
-     * <p>> If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</p>
+     * <p>The secondary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/472448.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <blockquote>
+     * <p>If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
@@ -273,12 +390,21 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("ShardCount")
     public Integer shardCount;
 
+    @NameInMap("SlaveReadOnlyCount")
+    public Integer slaveReadOnlyCount;
+
     /**
-     * <p>The ID of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter and use the **BackupId** or **RestoreTime** parameter to specify the backup file.</p>
+     * <p>The ID of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter and use the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter to specify the backup file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
@@ -291,24 +417,36 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("Token")
     public String token;
 
     /**
      * <p>The ID of the vSwitch to which you want the instance to connect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1e7clcw529l773d****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1nme44gek34slfc****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent zone list.</p>
+     * <p>The primary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -558,6 +696,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.readOnlyCount;
     }
 
+    public CreateInstanceRequest setRecoverConfigMode(String recoverConfigMode) {
+        this.recoverConfigMode = recoverConfigMode;
+        return this;
+    }
+    public String getRecoverConfigMode() {
+        return this.recoverConfigMode;
+    }
+
     public CreateInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -622,6 +768,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.shardCount;
     }
 
+    public CreateInstanceRequest setSlaveReadOnlyCount(Integer slaveReadOnlyCount) {
+        this.slaveReadOnlyCount = slaveReadOnlyCount;
+        return this;
+    }
+    public Integer getSlaveReadOnlyCount() {
+        return this.slaveReadOnlyCount;
+    }
+
     public CreateInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {
         this.srcDBInstanceId = srcDBInstanceId;
         return this;
@@ -673,20 +827,29 @@ public class CreateInstanceRequest extends TeaModel {
     public static class CreateInstanceRequestTag extends TeaModel {
         /**
          * <p>The keys of the tags that are added to the instance.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   **N** specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</p>
-         * <br>
-         * <p>*   If the key of the tag does not exist, the tag is automatically created.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>N</strong> specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</p>
+         * </li>
+         * <li><p>If the key of the tag does not exist, the tag is automatically created.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The values of the tags that are added to the instance.</p>
-         * <br>
-         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.</p>
+         * <blockquote>
+         * <p><strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;

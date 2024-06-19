@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +21,9 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9C4AF387-1EA3-4C84-8013-3F6B973EDDF5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,30 +60,45 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     public static class ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem extends TeaModel {
         /**
          * <p>The endpoint of the classic network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
-         * <p>The network type of the instance. The returned value is **Classic**.</p>
+         * <p>The network type of the instance. The returned value is <strong>Classic</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Classic</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
         /**
          * <p>The expiration time of the classic network endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-01T09:29:18Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The IP address of the instance in the classic network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.118.142.***</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The port number that is used to connect to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6379</p>
          */
         @NameInMap("Port")
         public String port;

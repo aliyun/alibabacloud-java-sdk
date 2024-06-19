@@ -11,13 +11,19 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyOrder order;
 
     /**
-     * <p>The parameters of the order. This parameter is returned when OrderParamOut is set to `true`.</p>
+     * <p>The parameters of the order. This parameter is returned when OrderParamOut is set to <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>String</p>
      */
     @NameInMap("OrderParams")
     public String orderParams;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3A40BE4E-1890-4972-889C-FEFA37663635</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,24 +88,36 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyOrderCouponsCoupon extends TeaModel {
         /**
          * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         @NameInMap("CouponNo")
         public String couponNo;
 
         /**
          * <p>The description of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coupondemo</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the coupon was selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsSelected")
         public String isSelected;
 
         /**
          * <p>The coupon name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -415,6 +433,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
@@ -424,12 +445,18 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The discount amount of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.21</p>
          */
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
         /**
          * <p>The service fees of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("HandlingFeeAmount")
         public String handlingFeeAmount;
@@ -442,6 +469,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The original price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.21</p>
          */
         @NameInMap("OriginalAmount")
         public String originalAmount;
@@ -466,6 +496,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The transaction price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TradeAmount")
         public String tradeAmount;
@@ -592,18 +625,27 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyRulesRule extends TeaModel {
         /**
          * <p>The name of the promotion rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111111111</p>
          */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
         /**
          * <p>The title of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Title")
         public String title;
@@ -1508,12 +1550,18 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The discount amount of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.21</p>
          */
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1xxxxxxxxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -1529,6 +1577,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The original price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.21</p>
          */
         @NameInMap("OriginalAmount")
         public String originalAmount;
@@ -1550,6 +1601,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The final price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TradeAmount")
         public String tradeAmount;

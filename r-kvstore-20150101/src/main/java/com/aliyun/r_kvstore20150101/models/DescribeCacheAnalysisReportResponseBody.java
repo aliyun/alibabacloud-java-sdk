@@ -12,38 +12,54 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
 
     /**
      * <p>Details of the hotkeys.</p>
-     * <br>
-     * <p>> This parameter is not returned because ApsaraDB for Redis does not support hotkey analytics.</p>
+     * <blockquote>
+     * <p>This parameter is not returned because ApsaraDB for Redis does not support hotkey analytics.</p>
+     * </blockquote>
      */
     @NameInMap("HotKeys")
     public java.util.List<java.util.Map<String, ?>> hotKeys;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A057C066-C3F5-4CC9-9FE4-A8D8B0DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>160</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;

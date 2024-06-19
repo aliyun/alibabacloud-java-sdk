@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeZonesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1D42F072-72FE-4DC4-BB8E-64B1D298****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,62 @@ public class DescribeZonesResponseBody extends TeaModel {
     public static class DescribeZonesResponseBodyZonesKVStoreZone extends TeaModel {
         /**
          * <p>Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:</p>
-         * <br>
-         * <p>*   **true**: ApsaraDB for Redis instances cannot be created in the current zone.</p>
-         * <p>*   **false**: ApsaraDB for Redis instances can be created in the current zone.</p>
+         * <ul>
+         * <li><strong>true</strong>: ApsaraDB for Redis instances cannot be created in the current zone.</li>
+         * <li><strong>false</strong>: ApsaraDB for Redis instances can be created in the current zone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
-         * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is **true** in ApsaraDB for Redis.</p>
+         * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <strong>true</strong> in ApsaraDB for Redis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsRds")
         public Boolean isRds;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Indicates whether the network type of the instance can be changed from the classic network to Virtual Private Cloud (VPC). Valid values:</p>
-         * <br>
-         * <p>*   **true**: The network type of the instance can be changed from the classic network to VPC.</p>
-         * <p>*   **false**: The network type of the instance cannot be changed from the classic network to VPC.</p>
+         * <ul>
+         * <li><strong>true</strong>: The network type of the instance can be changed from the classic network to VPC.</li>
+         * <li><strong>false</strong>: The network type of the instance cannot be changed from the classic network to VPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SwitchNetwork")
         public Boolean switchNetwork;
 
         /**
          * <p>The ID of the zone within the specified region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The name of the zone within the specified region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hohhot Zone B</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;
