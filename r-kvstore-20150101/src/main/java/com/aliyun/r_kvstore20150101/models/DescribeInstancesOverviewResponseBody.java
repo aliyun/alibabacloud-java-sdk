@@ -12,12 +12,18 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E83311F-0EE4-4922-A3BF-730B312B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,161 +60,233 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
     public static class DescribeInstancesOverviewResponseBodyInstances extends TeaModel {
         /**
          * <p>The architecture of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **cluster**: cluster architecture</p>
-         * <p>*   **standard**: standard architecture</p>
-         * <p>*   **rwsplit**: read/write splitting architecture</p>
+         * <ul>
+         * <li><strong>cluster</strong>: cluster architecture</li>
+         * <li><strong>standard</strong>: standard architecture</li>
+         * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("ArchitectureType")
         public String architectureType;
 
         /**
          * <p>The storage capacity of the instance. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **PrePaid**: subscription</p>
-         * <p>*   **PostPaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The internal endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-07T08:49:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the subscription instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13T16:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+         * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The ID of the distributed instance.</p>
-         * <br>
-         * <p>> This parameter is returned only when the instance is a child instance of a distributed instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the instance is a child instance of a distributed instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gr-bp14rkqrhac****</p>
          */
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
 
         /**
          * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis.logic.sharding.2g.2db.0rodb.4proxy.default</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The state of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The instance is normal.</p>
-         * <p>*   **Creating**: The instance is being created.</p>
-         * <p>*   **Changing**: The configurations of the instance are being changed.</p>
-         * <p>*   **Inactive**: The instance is disabled.</p>
-         * <p>*   **Flushing**: The instance is being released.</p>
-         * <p>*   **Released**: The instance is released.</p>
-         * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
-         * <p>*   **Unavailable**: The instance is unavailable.</p>
-         * <p>*   **Error**: The instance failed to be created.</p>
-         * <p>*   **Migrating**: The instance is being migrated.</p>
-         * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
-         * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
-         * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
-         * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
-         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Creating</strong>: The instance is being created.</li>
+         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+         * <li><strong>Inactive</strong>: The instance is disabled.</li>
+         * <li><strong>Flushing</strong>: The instance is being released.</li>
+         * <li><strong>Released</strong>: The instance is released.</li>
+         * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
+         * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
+         * <li><strong>Error</strong>: The instance failed to be created.</li>
+         * <li><strong>Migrating</strong>: The instance is being migrated.</li>
+         * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
+         * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
+         * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
+         * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
          * <p>The category of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Tair**</p>
-         * <p>*   **Redis**</p>
-         * <p>*   **Memcache**</p>
+         * <ul>
+         * <li><strong>Tair</strong></li>
+         * <li><strong>Redis</strong></li>
+         * <li><strong>Memcache</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **CLASSIC**: classic network</p>
-         * <p>*   **VPC**: VPC</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: classic network</li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLASSIC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The private IP address of the instance.</p>
-         * <br>
-         * <p>> This parameter is not returned when the instance is deployed in the classic network.</p>
+         * <blockquote>
+         * <p>This parameter is not returned when the instance is deployed in the classic network.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.49.***</p>
          */
         @NameInMap("PrivateIp")
         public String privateIp;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Instance\"s secondary zone id.</p>
-         * <p>> This parameter is only returned when the instance has a secondary zone ID.</p>
+         * <p>Instance\&quot;s secondary zone id.</p>
+         * <blockquote>
+         * <p>This parameter is only returned when the instance has a secondary zone ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
         /**
          * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

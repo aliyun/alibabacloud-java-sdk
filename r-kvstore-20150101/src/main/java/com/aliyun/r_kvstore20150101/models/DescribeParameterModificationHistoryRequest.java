@@ -6,20 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeParameterModificationHistoryRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-05T09:49:27Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the node.</p>
-     * <br>
-     * <p>> You can set this parameter to query the parameter settings of the specified node in a cluster instance.</p>
+     * <blockquote>
+     * <p>You can set this parameter to query the parameter settings of the specified node in a cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1xxxxxxxxxxxxx-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -32,6 +44,9 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
 
     /**
      * <p>The name of the parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>script_check_enable</p>
      */
     @NameInMap("ParameterName")
     public String parameterName;
@@ -47,6 +62,10 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-05T08:49:27Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

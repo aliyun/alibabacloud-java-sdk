@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     /**
      * <p>The public endpoint to be released.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
      * <p>The ID of the instance for which you want to release a public endpoint.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

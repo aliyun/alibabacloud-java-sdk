@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGlobalDistributeCacheRequest extends TeaModel {
     /**
      * <p>The ID of the distributed instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gr-bp14rkqrhac****</p>
      */
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
@@ -17,13 +20,19 @@ public class DescribeGlobalDistributeCacheRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries to return each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -39,6 +48,9 @@ public class DescribeGlobalDistributeCacheRequest extends TeaModel {
 
     /**
      * <p>The ID of the child instance that is attached to the distributed instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gr-bp1zcjlobkyrq****</p>
      */
     @NameInMap("SubInstanceId")
     public String subInstanceId;

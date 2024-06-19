@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAccountResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8129F11A-D70B-43A6-9455-CE9EAA71****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

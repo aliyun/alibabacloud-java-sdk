@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,6 +28,10 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group that you want to manage. You can specify up to 10 security groups. Separate multiple security group IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bpcfmyiu4ekp****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

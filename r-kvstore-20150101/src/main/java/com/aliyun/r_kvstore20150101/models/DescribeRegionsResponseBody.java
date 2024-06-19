@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The **region IDs**.</p>
+     * <p>The <strong>region IDs</strong>.</p>
      */
     @NameInMap("RegionIds")
     public DescribeRegionsResponseBodyRegionIds regionIds;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AD425AD3-CC7B-4EE2-A5CB-2F61BA73****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,18 +62,27 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static class DescribeRegionsResponseBodyRegionIdsKVStoreRegion extends TeaModel {
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The endpoint of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-kvstore.aliyuncs.com</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -83,6 +95,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         /**
          * <p>The IDs of the zones in the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneIds")
         public String zoneIds;

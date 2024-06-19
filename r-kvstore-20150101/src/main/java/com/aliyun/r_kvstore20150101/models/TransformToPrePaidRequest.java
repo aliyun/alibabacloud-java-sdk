@@ -6,15 +6,23 @@ import com.aliyun.tea.*;
 public class TransformToPrePaidRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -26,7 +34,11 @@ public class TransformToPrePaidRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration of the instance. Unit: months. Valid values: **1** to **9**, **12**, **24**, and **36**.</p>
+     * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Period")
     public Long period;

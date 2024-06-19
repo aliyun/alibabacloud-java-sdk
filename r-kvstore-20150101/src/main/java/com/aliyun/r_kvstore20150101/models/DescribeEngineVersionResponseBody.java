@@ -12,55 +12,81 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     /**
      * <p>The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;releaseInfo\&quot;:{\&quot;createTime\&quot;:\&quot;2021-07-27\&quot;,\&quot;level\&quot;:1,\&quot;releaseVersion\&quot;:\&quot;0.5.4\&quot;,\&quot;releaseNote\&quot;:\&quot;功能更新：增强稳定性。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</p>
      */
     @NameInMap("DBVersionRelease")
     public String DBVersionRelease;
 
     /**
      * <p>Indicates whether the major version can be upgraded for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The major version can be upgraded.</p>
-     * <p>*   **false**: The major version is the latest version and cannot be upgraded.</p>
-     * <br>
-     * <p>>  To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.</p>
+     * <ul>
+     * <li><strong>true</strong>: The major version can be upgraded.</li>
+     * <li><strong>false</strong>: The major version is the latest version and cannot be upgraded.</li>
+     * </ul>
+     * <blockquote>
+     * <p> To upgrade the major version, call the <a href="https://help.aliyun.com/document_detail/95259.html">ModifyInstanceMajorVersion</a> operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableUpgradeMajorVersion")
     public Boolean enableUpgradeMajorVersion;
 
     /**
      * <p>Indicates whether the minor version can be updated for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The minor version can be updated.</p>
-     * <p>*   **false**: The minor version is the latest version and cannot be updated.</p>
-     * <br>
-     * <p>>  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.</p>
+     * <ul>
+     * <li><strong>true</strong>: The minor version can be updated.</li>
+     * <li><strong>false</strong>: The minor version is the latest version and cannot be updated.</li>
+     * </ul>
+     * <blockquote>
+     * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableUpgradeMinorVersion")
     public Boolean enableUpgradeMinorVersion;
 
     /**
-     * <p>The database engine of the instance. Valid values: **redis** and **memcache**.</p>
+     * <p>The database engine of the instance. Valid values: <strong>redis</strong> and <strong>memcache</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>redis</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>是否打开了小版本升级。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("IsAutoUpgradeOpen")
     public String isAutoUpgradeOpen;
 
     /**
      * <p>Indicates whether the instance minor version is the latest version. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The instance minor version is the latest version.</p>
-     * <p>*   **false**: The instance minor version is not the latest version.</p>
+     * <ul>
+     * <li><strong>true</strong>: The instance minor version is the latest version.</li>
+     * <li><strong>false</strong>: The instance minor version is not the latest version.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
     /**
      * <p>是否支持新版 ssl。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsNewSSLMode")
     public String isNewSSLMode;
@@ -70,24 +96,36 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the instance supports the new SSL encryption feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsRedisCompatibleVersion")
     public String isRedisCompatibleVersion;
 
     /**
      * <p>是否打开了小版本升级。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsSSLEnable")
     public String isSSLEnable;
 
     /**
      * <p>The major version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.0</p>
      */
     @NameInMap("MajorVersion")
     public String majorVersion;
 
     /**
      * <p>The minor version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>redis-5.0_0.5.0</p>
      */
     @NameInMap("MinorVersion")
     public String minorVersion;
@@ -100,22 +138,33 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     /**
      * <p>The minor version of proxy nodes.</p>
-     * <br>
-     * <p>>  This parameter is returned only for cluster and read/write splitting instances.</p>
+     * <blockquote>
+     * <p> This parameter is returned only for cluster and read/write splitting instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>6.6.0</p>
      */
     @NameInMap("ProxyMinorVersion")
     public String proxyMinorVersion;
 
     /**
      * <p>The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.</p>
-     * <br>
-     * <p>>  This parameter is returned only for cluster and read/write splitting instances.</p>
+     * <blockquote>
+     * <p> This parameter is returned only for cluster and read/write splitting instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;releaseInfo\&quot;:[{\&quot;createTime\&quot;:\&quot;2021-06-08\&quot;,\&quot;level\&quot;:0,\&quot;releaseVersion\&quot;:\&quot;6.6.2\&quot;,\&quot;releaseNote\&quot;:\&quot;新特性：增加对部分内部命令的支持。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</p>
      */
     @NameInMap("ProxyVersionRelease")
     public String proxyVersionRelease;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A52974D1-9D57-4805-86CC-92E6EDE8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -264,30 +313,45 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public static class DescribeEngineVersionResponseBodyDBLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList extends TeaModel {
         /**
          * <p>实例的创建时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-21T13:28Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>重要等级。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>版本发布说明。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>发布说明</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
          * <p>可升级的版本英文描述。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>版本升级英文描述</p>
          */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
         /**
          * <p>EMR发行版。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.7.0</p>
          */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
@@ -367,9 +431,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
         /**
          * <p>版本升级的重要性（推荐升级程度），取值：</p>
-         * <p>* 0：一般重要</p>
-         * <p>* 1：比较重要</p>
-         * <p>* 2：非常重要</p>
+         * <ul>
+         * <li>0：一般重要</li>
+         * <li>1：比较重要</li>
+         * <li>2：非常重要</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("VersionChangesLevel")
         public String versionChangesLevel;
@@ -400,15 +469,23 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public static class DescribeEngineVersionResponseBodyDBLatestMinorVersion extends TeaModel {
         /**
          * <p>版本变更的重要性，取值：</p>
-         * <p>* **0**：一般重要</p>
-         * <p>* **1**：比较重要</p>
-         * <p>* **2**：非常重要</p>
+         * <ul>
+         * <li><strong>0</strong>：一般重要</li>
+         * <li><strong>1</strong>：比较重要</li>
+         * <li><strong>2</strong>：非常重要</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>版本号。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.0.1.4</p>
          */
         @NameInMap("MinorVersion")
         public String minorVersion;
@@ -453,33 +530,50 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public static class DescribeEngineVersionResponseBodyProxyLatestMinorVersionVersionReleaseReleaseInfoReleaseInfoList extends TeaModel {
         /**
          * <p>版本的发布时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-23T14:26:20Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>版本变更的重要性，取值：</p>
-         * <p>* **0**：一般重要</p>
-         * <p>* **1**：比较重要</p>
-         * <p>* **2**：非常重要</p>
+         * <ul>
+         * <li><strong>0</strong>：一般重要</li>
+         * <li><strong>1</strong>：比较重要</li>
+         * <li><strong>2</strong>：非常重要</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>版本的变更说明。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>版本变更说明</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
          * <p>可升级的版本英文描述。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>版本升级英文描述</p>
          */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
         /**
          * <p>EMR发行版。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EMR-5.9.1</p>
          */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
@@ -559,9 +653,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
         /**
          * <p>版本升级的重要性（推荐升级程度），取值：</p>
-         * <p>* 0：一般重要</p>
-         * <p>* 1：比较重要</p>
-         * <p>* 2：非常重要</p>
+         * <ul>
+         * <li>0：一般重要</li>
+         * <li>1：比较重要</li>
+         * <li>2：非常重要</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("VersionChangesLevel")
         public String versionChangesLevel;
@@ -592,15 +691,23 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     public static class DescribeEngineVersionResponseBodyProxyLatestMinorVersion extends TeaModel {
         /**
          * <p>版本变更的重要性，取值：</p>
-         * <p>* **0**：一般重要</p>
-         * <p>* **1**：比较重要</p>
-         * <p>* **2**：非常重要</p>
+         * <ul>
+         * <li><strong>0</strong>：一般重要</li>
+         * <li><strong>1</strong>：比较重要</li>
+         * <li><strong>2</strong>：非常重要</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>版本号。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.0.6</p>
          */
         @NameInMap("MinorVersion")
         public String minorVersion;

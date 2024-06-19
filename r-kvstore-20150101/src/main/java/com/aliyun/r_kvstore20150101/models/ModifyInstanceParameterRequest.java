@@ -4,6 +4,12 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceParameterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,9 +19,17 @@ public class ModifyInstanceParameterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>g-idhwofwofewhf****</p>
+     */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;hz&quot;: &quot;50&quot;}</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 

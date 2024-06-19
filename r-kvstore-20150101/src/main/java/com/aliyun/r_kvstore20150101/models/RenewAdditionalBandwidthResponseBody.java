@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RenewAdditionalBandwidthResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2084452111111</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D622714-AEDD-4609-9167-F5DDD3D1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

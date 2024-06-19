@@ -6,41 +6,62 @@ import com.aliyun.tea.*;
 public class TransformInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Automatic payment is enabled.</p>
-     * <p>*   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
+     * <ul>
+     * <li><strong>true</strong>: Automatic payment is enabled.</li>
+     * <li><strong>false</strong>: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane of the Billing Management console, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false** (default): disables auto-renewal.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong> (default): disables auto-renewal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
-     * <br>
-     * <p>>  This parameter is required if the **AutoRenew** parameter is set to **true**.</p>
+     * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+     * <blockquote>
+     * <p> This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Long autoRenewPeriod;
 
     /**
      * <p>The new billing method. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also specify the **Period** parameter.</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription. If you set this parameter to PrePaid, you must also specify the <strong>Period</strong> parameter.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -52,9 +73,13 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, **36**.</p>
-     * <br>
-     * <p>>  This parameter is valid and required only if you set the **ChargeType** parameter to **PrePaid**.</p>
+     * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>.</p>
+     * <blockquote>
+     * <p> This parameter is valid and required only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Long period;

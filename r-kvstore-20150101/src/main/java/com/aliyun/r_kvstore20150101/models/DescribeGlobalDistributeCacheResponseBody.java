@@ -12,24 +12,36 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3F44BE3-5419-4B61-9BAC-E66E295A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,52 +94,70 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
     public static class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances extends TeaModel {
         /**
          * <p>The ID of the distributed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gr-bp14rkqrhac****</p>
          */
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
 
         /**
          * <p>The instance type of the child instance. For more information, see the following topics:</p>
-         * <br>
-         * <p>*   [Standard DRAM-based instances](~~145228~~)</p>
-         * <p>*   [Cluster DRAM-based instances](~~150458~~)</p>
-         * <p>*   [Read/write splitting DRAM-based instances](~~150459~~)</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/145228.html">Standard DRAM-based instances</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/150458.html">Cluster DRAM-based instances</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/150459.html">Read/write splitting DRAM-based instances</a></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>redis.amber.logic.sharding.2g.2db.0rodb.6proxy.multithread</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
          * <p>The ID of the child instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The state of the child instance. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The instance is normal.</p>
-         * <p>*   **Creating**: The instance is being created.</p>
-         * <p>*   **Changing**: The configurations of the instance are being changed.</p>
-         * <p>*   **Inactive**: The instance is disabled.</p>
-         * <p>*   **Flushing**: The instance is being released.</p>
-         * <p>*   **Released**: The instance is released.</p>
-         * <p>*   **Transforming**: The billing method of the instance is changing.</p>
-         * <p>*   **Unavailable**: The instance is suspended.</p>
-         * <p>*   **Error**: The instance failed to be created.</p>
-         * <p>*   **Migrating**: The instance is being migrated.</p>
-         * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
-         * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
-         * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
-         * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
-         * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains available during the upgrade.</p>
-         * <br>
-         * <p>>  For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Creating</strong>: The instance is being created.</li>
+         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+         * <li><strong>Inactive</strong>: The instance is disabled.</li>
+         * <li><strong>Flushing</strong>: The instance is being released.</li>
+         * <li><strong>Released</strong>: The instance is released.</li>
+         * <li><strong>Transforming</strong>: The billing method of the instance is changing.</li>
+         * <li><strong>Unavailable</strong>: The instance is suspended.</li>
+         * <li><strong>Error</strong>: The instance failed to be created.</li>
+         * <li><strong>Migrating</strong>: The instance is being migrated.</li>
+         * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
+         * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
+         * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
+         * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains available during the upgrade.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -182,16 +212,23 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
     public static class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches extends TeaModel {
         /**
          * <p>The ID of the distributed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gr-bp14rkqrhac****</p>
          */
         @NameInMap("GlobalInstanceId")
         public String globalInstanceId;
 
         /**
          * <p>The state of the distributed instance. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The instance is normal.</p>
-         * <p>*   **Changing**: The configurations of the instance are being changed.</p>
-         * <p>*   **Creating**: The instance is being created.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+         * <li><strong>Creating</strong>: The instance is being created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;

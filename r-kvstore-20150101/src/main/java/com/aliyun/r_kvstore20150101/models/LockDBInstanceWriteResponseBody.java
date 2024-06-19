@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class LockDBInstanceWriteResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-2ev03avw0r0552***</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The reason why write operations on the instance are locked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lock reason</p>
      */
     @NameInMap("LockReason")
     public String lockReason;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21986****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

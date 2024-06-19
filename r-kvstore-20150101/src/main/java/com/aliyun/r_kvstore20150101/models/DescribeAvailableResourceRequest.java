@@ -6,63 +6,92 @@ import com.aliyun.tea.*;
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese</p>
-     * <p>*   **en-US**: English</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese</li>
+     * <li><strong>en-US</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The category of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Redis**</p>
-     * <p>*   **Memcache**</p>
+     * <ul>
+     * <li><strong>Redis</strong></li>
+     * <li><strong>Memcache</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
-     * <br>
-     * <p>> The default value is **PrePaid**.</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * <blockquote>
+     * <p>The default value is <strong>PrePaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> This parameter is available and required only if the **OrderType** parameter is set to **UPGRADE** or **DOWNGRADE**.</p>
+     * <blockquote>
+     * <p>This parameter is available and required only if the <strong>OrderType</strong> parameter is set to <strong>UPGRADE</strong> or <strong>DOWNGRADE</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The edition of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **professional**: Standard Edition. This edition supports the standalone, master-replica, read /write splitting, and cluster architectures and provides high scalability.</p>
+     * <ul>
+     * <li><strong>professional</strong>: Standard Edition. This edition supports the standalone, master-replica, read /write splitting, and cluster architectures and provides high scalability.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>professional</p>
      */
     @NameInMap("InstanceScene")
     public String instanceScene;
 
     /**
-     * <p>The ID of the data node for which you want to query available resources that can be created. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the ID of the data node. Remove the number sign (`#`) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\*\*\*\*-db-0.</p>
-     * <br>
-     * <p>> Before you specify this parameter, you must set the **InstanceId** parameter to the ID of an instance that uses the cluster or read/write splitting architecture.</p>
+     * <p>The ID of the data node for which you want to query available resources that can be created. You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query the ID of the data node. Remove the number sign (<code>#</code>) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\<em>\</em>\<em>\</em>-db-0.</p>
+     * <blockquote>
+     * <p>Before you specify this parameter, you must set the <strong>InstanceId</strong> parameter to the ID of an instance that uses the cluster or read/write splitting architecture.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The type of the order. Default value: BUY. Valid values:</p>
-     * <br>
-     * <p>*   **BUY**: orders that are newly created</p>
-     * <p>*   **UPGRADE**: orders that are used to upgrade instances</p>
-     * <p>*   **DOWNGRADE**: orders that are used to downgrade instances</p>
+     * <ul>
+     * <li><strong>BUY</strong>: orders that are newly created</li>
+     * <li><strong>UPGRADE</strong>: orders that are used to upgrade instances</li>
+     * <li><strong>DOWNGRADE</strong>: orders that are used to downgrade instances</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BUY</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -75,26 +104,38 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The series of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Local**: classic ApsaraDB for Redis Community Edition instance or classic ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
-     * <p>*   **Tair_rdb**: cloud-native ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
-     * <p>*   **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</p>
-     * <p>*   **Tair_essd**: ESSD-based instance</p>
-     * <p>*   **OnECS**: cloud-native ApsaraDB for Redis Community Edition instance</p>
+     * <ul>
+     * <li><strong>Local</strong>: classic ApsaraDB for Redis Community Edition instance or classic ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
+     * <li><strong>Tair_rdb</strong>: cloud-native ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
+     * <li><strong>Tair_scm</strong>: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</li>
+     * <li><strong>Tair_essd</strong>: ESSD-based instance</li>
+     * <li><strong>OnECS</strong>: cloud-native ApsaraDB for Redis Community Edition instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Local</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
-     * <br>
-     * <p>> You can also query the IDs of resource groups in the Resource Management console. For more information, see [View basic information about a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
+     * <blockquote>
+     * <p>You can also query the IDs of resource groups in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4e******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -109,7 +150,10 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -18,19 +18,26 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The status of the backup task. Valid values:</p>
-     * <br>
-     * <p>*   **NoStart**: The backup task is not started.</p>
-     * <p>*   **Preparing**: The backup task is being prepared.</p>
-     * <p>*   **Waiting**: The backup task is pending.</p>
-     * <p>*   **Uploading:** The system is uploading the backup file.</p>
-     * <p>*   **Checking:** The system is checking the uploaded backup file.</p>
-     * <p>*   **Finished**: The backup task is complete.</p>
+     * <ul>
+     * <li><strong>NoStart</strong>: The backup task is not started.</li>
+     * <li><strong>Preparing</strong>: The backup task is being prepared.</li>
+     * <li><strong>Waiting</strong>: The backup task is pending.</li>
+     * <li><strong>Uploading:</strong> The system is uploading the backup file.</li>
+     * <li><strong>Checking:</strong> The system is checking the uploaded backup file.</li>
+     * <li><strong>Finished</strong>: The backup task is complete.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BB73740C-23E2-4392-9DA4-2660C74C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -75,42 +82,63 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     public static class DescribeBackupTasksResponseBodyAccessDeniedDetail extends TeaModel {
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
@@ -181,55 +209,79 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     public static class DescribeBackupTasksResponseBodyBackupJobs extends TeaModel {
         /**
          * <p>The ID of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8491111</p>
          */
         @NameInMap("BackupJobID")
         public Long backupJobID;
 
         /**
          * <p>The state of the backup task. Valid values:</p>
-         * <br>
-         * <p>*   **NoStart**: The backup task is not started.</p>
-         * <p>*   **Preparing**: The backup task is being prepared.</p>
-         * <p>*   **Waiting**: The backup task is pending.</p>
-         * <p>*   **Uploading**: The system is uploading the backup file.</p>
-         * <p>*   **Checking**: The system is checking the uploaded backup file.</p>
-         * <p>*   **Finished**: The backup task is completed.</p>
+         * <ul>
+         * <li><strong>NoStart</strong>: The backup task is not started.</li>
+         * <li><strong>Preparing</strong>: The backup task is being prepared.</li>
+         * <li><strong>Waiting</strong>: The backup task is pending.</li>
+         * <li><strong>Uploading</strong>: The system is uploading the backup file.</li>
+         * <li><strong>Checking</strong>: The system is checking the uploaded backup file.</li>
+         * <li><strong>Finished</strong>: The backup task is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         @NameInMap("BackupProgressStatus")
         public String backupProgressStatus;
 
         /**
          * <p>The backup mode. Valid values:</p>
-         * <br>
-         * <p>*   **Automated**: automatic backup</p>
-         * <p>*   **Manual**: manual backup</p>
+         * <ul>
+         * <li><strong>Automated</strong>: automatic backup</li>
+         * <li><strong>Manual</strong>: manual backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("JobMode")
         public String jobMode;
 
         /**
          * <p>The ID of the data node.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The progress of the backup task in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Process")
         public String process;
 
         /**
-         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-05T19:24:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The type of the backup task. Valid values:</p>
-         * <br>
-         * <p>*   **TempBackupTask**: The backup task was manually performed.</p>
-         * <p>*   **NormalBackupTask**: The backup task was automatically performed.</p>
+         * <ul>
+         * <li><strong>TempBackupTask</strong>: The backup task was manually performed.</li>
+         * <li><strong>NormalBackupTask</strong>: The backup task was automatically performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NormalBackupTask</p>
          */
         @NameInMap("TaskAction")
         public String taskAction;

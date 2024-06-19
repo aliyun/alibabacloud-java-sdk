@@ -6,27 +6,41 @@ import com.aliyun.tea.*;
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false**: disables auto-renewal.</p>
-     * <br>
-     * <p>> The default value is **false**.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The default value is <strong>false</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
      * <p>The ID of the instance. Separate multiple instance IDs with commas (,).</p>
-     * <br>
-     * <p>> You can specify up to 30 instance IDs.</p>
+     * <blockquote>
+     * <p>You can specify up to 30 instance IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The auto-renewal period. Valid values: **1** to **12**. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.</p>
-     * <br>
-     * <p>> This parameter is available and required only if the **AutoRenew** parameter is set to **true**.</p>
+     * <p>The auto-renewal period. Valid values: <strong>1</strong> to <strong>12</strong>. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.</p>
+     * <blockquote>
+     * <p>This parameter is available and required only if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Duration")
     public String duration;

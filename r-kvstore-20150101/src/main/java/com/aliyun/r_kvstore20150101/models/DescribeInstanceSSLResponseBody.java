@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSSLResponseBody extends TeaModel {
     /**
      * <p>The common name of the CA certificate. The default value is the internal endpoint of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</p>
      */
     @NameInMap("CertCommonName")
     public String certCommonName;
 
     /**
      * <p>The download URL of the CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://apsaradb-public.oss-ap-sout****-1.aliy****.com/ApsaraDB-CA-Chain.zip">https://apsaradb-public.oss-ap-sout****-1.aliy****.com/ApsaraDB-CA-Chain.zip</a></p>
      */
     @NameInMap("CertDownloadURL")
     public String certDownloadURL;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02260F96-913E-4655-9BA5-A3651CAF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the TLS (SSL) encryption feature. Valid values:</p>
-     * <br>
-     * <p>*   **Enable**: SSL encryption is enabled.</p>
-     * <p>*   **Disable**: SSL encryption is disabled.</p>
+     * <ul>
+     * <li><strong>Enable</strong>: SSL encryption is enabled.</li>
+     * <li><strong>Disable</strong>: SSL encryption is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("SSLEnabled")
     public String SSLEnabled;
 
     /**
      * <p>The time when the CA certificate expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-08-05T09:05:53Z</p>
      */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;

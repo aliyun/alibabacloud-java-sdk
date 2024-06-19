@@ -15,8 +15,12 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
-     * <br>
-     * <p>>  You do not need to specify system parameters.</p>
+     * <blockquote>
+     * <p> You do not need to specify system parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,6 +36,10 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
 
     /**
      * <p>The ID of the existing instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("SeedSubInstanceId")
     public String seedSubInstanceId;

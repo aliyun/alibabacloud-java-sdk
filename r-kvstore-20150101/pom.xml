@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>r_kvstore20150101</artifactId>
-  <version>4.0.1</version>
+  <version>4.1.0</version>
   <packaging>jar</packaging>
   <name>r_kvstore20150101</name>
   <description>Alibaba Cloud R-kvstore (20150101) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.21</version>
+      <version>0.2.22</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.2</version>
+      <version>0.3.3</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

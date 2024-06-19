@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSecurityIpsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFC9161F-15E3-4A6E-8A99-C09916D1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,30 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
         /**
          * <p>The attribute of the whitelist. This parameter is empty by default.</p>
-         * <br>
-         * <p>>  If the instance is authorized to use a service such as Database Autonomy Service (DAS), Data Management (DMS), or Data Transmission Service (DTS), this service automatically generates a **hidden** whitelist for the instance. This type of whitelists cannot be modified or deleted.</p>
+         * <blockquote>
+         * <p> If the instance is authorized to use a service such as Database Autonomy Service (DAS), Data Management (DMS), or Data Transmission Service (DTS), this service automatically generates a <strong>hidden</strong> whitelist for the instance. This type of whitelists cannot be modified or deleted.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
 
         /**
          * <p>The name of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
         /**
          * <p>The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.202.<em><strong>/24,10.10.10.</strong></em></p>
          */
         @NameInMap("SecurityIpList")
         public String securityIpList;

@@ -12,56 +12,80 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The retention period of the backup data. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
     /**
      * <p>Indicates whether the backup-as-a-service feature is enabled for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The backup-as-a-service feature is enabled for the instance.</p>
-     * <p>*   **0**: The backup-as-a-service feature is disabled for the instance.</p>
+     * <ul>
+     * <li><strong>1</strong>: The backup-as-a-service feature is enabled for the instance.</li>
+     * <li><strong>0</strong>: The backup-as-a-service feature is disabled for the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DbsInstance")
     public String dbsInstance;
 
     /**
      * <p>Indicates whether incremental data backup is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Incremental data backup is enabled.</p>
-     * <p>*   **0**: Incremental data backup is disabled.</p>
+     * <ul>
+     * <li><strong>1</strong>: Incremental data backup is enabled.</li>
+     * <li><strong>0</strong>: Incremental data backup is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
     /**
      * <p>The backup cycle. Valid values:</p>
-     * <br>
-     * <p>*   **Monday**</p>
-     * <p>*   **Tuesday**</p>
-     * <p>*   **Wednesday**</p>
-     * <p>*   **Thursday**</p>
-     * <p>*   **Friday**</p>
-     * <p>*   **Saturday**</p>
-     * <p>*   **Sunday**</p>
+     * <ul>
+     * <li><strong>Monday</strong></li>
+     * <li><strong>Tuesday</strong></li>
+     * <li><strong>Wednesday</strong></li>
+     * <li><strong>Thursday</strong></li>
+     * <li><strong>Friday</strong></li>
+     * <li><strong>Saturday</strong></li>
+     * <li><strong>Sunday</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05:00Z-06:00Z</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
     /**
-     * <p>The next backup time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The next backup time. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-03-14T05:28Z</p>
      */
     @NameInMap("PreferredNextBackupTime")
     public String preferredNextBackupTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90B82DB7-FB28-4CC2-ADBF-1F8659F3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -138,42 +162,63 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public static class DescribeBackupPolicyResponseBodyAccessDeniedDetail extends TeaModel {
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
         /**
          * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_</p>
          */
         @NameInMap("PolicyType")
         public String policyType;

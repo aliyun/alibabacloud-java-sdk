@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UnlockDBInstanceWriteResponseBody extends TeaModel {
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-2ev03avw0r0552***</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

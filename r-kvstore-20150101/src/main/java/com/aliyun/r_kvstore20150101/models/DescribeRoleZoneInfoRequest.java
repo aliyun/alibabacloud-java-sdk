@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleZoneInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query instance IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-t4nlenc2p04uvb****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,25 +21,37 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>10</strong>, <strong>20</strong>, and <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of node to query. Default value: 1. Valid values:</p>
-     * <br>
-     * <p>*   **0**: proxy node</p>
-     * <br>
-     * <p>> This parameter is supported only for cluster and read/write splitting instances.</p>
-     * <br>
-     * <p>*   **1**: data node</p>
+     * <ul>
+     * <li><strong>0</strong>: proxy node</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is supported only for cluster and read/write splitting instances.</p>
+     * </blockquote>
+     * <ul>
+     * <li><strong>1</strong>: data node</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("QueryType")
     public Integer queryType;

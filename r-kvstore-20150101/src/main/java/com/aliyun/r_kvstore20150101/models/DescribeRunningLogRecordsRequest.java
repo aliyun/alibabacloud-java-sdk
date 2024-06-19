@@ -6,48 +6,74 @@ import com.aliyun.tea.*;
 public class DescribeRunningLogRecordsRequest extends TeaModel {
     /**
      * <p>The shard type of the cluster instance. Valid values:</p>
-     * <br>
-     * <p>*   **proxy**: proxy node</p>
-     * <p>*   **db**: data node</p>
-     * <p>*   **cs**: config server node</p>
-     * <br>
-     * <p>>  If you set this parameter, you must also set the **NodeId** parameter.</p>
+     * <ul>
+     * <li><strong>proxy</strong>: proxy node</li>
+     * <li><strong>db</strong>: data node</li>
+     * <li><strong>cs</strong>: config server node</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set this parameter, you must also set the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>proxy</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-12-03T08:01Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.</p>
-     * <br>
-     * <p>> *   This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.</p>
-     * <p>> *   If you set this parameter, you must also set the **CharacterType** parameter.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.</li>
+     * <li>If you set this parameter, you must also set the <strong>CharacterType</strong> parameter.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The method that is used to sort the returned log entries. Valid values:</p>
-     * <br>
-     * <p>*   **asc**: ascending order</p>
-     * <p>*   **desc**: descending order</p>
+     * <ul>
+     * <li><strong>asc</strong>: ascending order</li>
+     * <li><strong>desc</strong>: descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -59,25 +85,37 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The keyword that is used to query operational logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aof</p>
      */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -90,9 +128,13 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
 
     /**
      * <p>The role of the data shard. Default value: master. Valid values:</p>
-     * <br>
-     * <p>*   **master**: master node</p>
-     * <p>*   **slave**: replica node</p>
+     * <ul>
+     * <li><strong>master</strong>: master node</li>
+     * <li><strong>slave</strong>: replica node</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>master</p>
      */
     @NameInMap("RoleType")
     public String roleType;
@@ -101,7 +143,11 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-12-03T07:01Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -5,9 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the O\&M task. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the [DescribeActiveOperationTask](~~197387~~) operation to query the ID of an O\&M task.</p>
+     * <p>The ID of the O\&amp;M task. Separate multiple IDs with commas (,).</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/197387.html">DescribeActiveOperationTask</a> operation to query the ID of an O\&amp;M task.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111,22222</p>
      */
     @NameInMap("Ids")
     public String ids;
@@ -28,9 +33,14 @@ public class ModifyActiveOperationTaskRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The time cannot be later than the latest operation time. You can call the [DescribeActiveOperationTask](~~197387~~) operation to obtain the latest operation time, which is the value of the **Deadline** parameter in the response.</p>
+     * <p>The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>The time cannot be later than the latest operation time. You can call the <a href="https://help.aliyun.com/document_detail/197387.html">DescribeActiveOperationTask</a> operation to obtain the latest operation time, which is the value of the <strong>Deadline</strong> parameter in the response.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-10-17T18:50:00Z</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class UnlockDBInstanceWriteRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

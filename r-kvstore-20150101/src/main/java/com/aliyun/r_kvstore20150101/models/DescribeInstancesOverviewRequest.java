@@ -6,91 +6,126 @@ import com.aliyun.tea.*;
 public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The architecture of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cluster**: cluster architecture</p>
-     * <p>*   **standard**: standard architecture</p>
-     * <p>*   **rwsplit**: read/write splitting architecture</p>
+     * <ul>
+     * <li><strong>cluster</strong>: cluster architecture</li>
+     * <li><strong>standard</strong>: standard architecture</li>
+     * <li><strong>rwsplit</strong>: read/write splitting architecture</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("ArchitectureType")
     public String architectureType;
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The edition of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Community**: Community Edition</p>
-     * <p>*   **Enterprise**: Enhanced Edition (Tair)</p>
+     * <ul>
+     * <li><strong>Community</strong>: Community Edition</li>
+     * <li><strong>Enterprise</strong>: Enhanced Edition (Tair)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enterprise</p>
      */
     @NameInMap("EditionType")
     public String editionType;
 
     /**
      * <p>The database engine version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>The instance type of the instance. For more information, see [Instance types](~~107984~~).</p>
+     * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107984.html">Instance types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>redis.master.small.default</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
      * <p>The IDs of instances.</p>
-     * <br>
-     * <p>> By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+     * <blockquote>
+     * <p>By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>The state of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: The instance is normal.</p>
-     * <p>*   **Creating**: The instance is being created.</p>
-     * <p>*   **Changing**: The configurations of the instance are being changed.</p>
-     * <p>*   **Inactive**: The instance is disabled.</p>
-     * <p>*   **Flushing**: The instance is being released.</p>
-     * <p>*   **Released**: The instance is released.</p>
-     * <p>*   **Transforming**: The billing method of the instance is being changed.</p>
-     * <p>*   **Unavailable**: The instance is unavailable.</p>
-     * <p>*   **Error**: The instance failed to be created.</p>
-     * <p>*   **Migrating**: The instance is being migrated.</p>
-     * <p>*   **BackupRecovering**: The instance is being restored from a backup.</p>
-     * <p>*   **MinorVersionUpgrading**: The minor version of the instance is being updated.</p>
-     * <p>*   **NetworkModifying**: The network type of the instance is being changed.</p>
-     * <p>*   **SSLModifying**: The SSL certificate of the instance is being changed.</p>
-     * <p>*   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</p>
-     * <br>
-     * <p>> For more information about instance states, see [Instance states and impacts](~~200740~~).</p>
+     * <ul>
+     * <li><strong>Normal</strong>: The instance is normal.</li>
+     * <li><strong>Creating</strong>: The instance is being created.</li>
+     * <li><strong>Changing</strong>: The configurations of the instance are being changed.</li>
+     * <li><strong>Inactive</strong>: The instance is disabled.</li>
+     * <li><strong>Flushing</strong>: The instance is being released.</li>
+     * <li><strong>Released</strong>: The instance is released.</li>
+     * <li><strong>Transforming</strong>: The billing method of the instance is being changed.</li>
+     * <li><strong>Unavailable</strong>: The instance is unavailable.</li>
+     * <li><strong>Error</strong>: The instance failed to be created.</li>
+     * <li><strong>Migrating</strong>: The instance is being migrated.</li>
+     * <li><strong>BackupRecovering</strong>: The instance is being restored from a backup.</li>
+     * <li><strong>MinorVersionUpgrading</strong>: The minor version of the instance is being updated.</li>
+     * <li><strong>NetworkModifying</strong>: The network type of the instance is being changed.</li>
+     * <li><strong>SSLModifying</strong>: The SSL certificate of the instance is being changed.</li>
+     * <li><strong>MajorVersionUpgrading</strong>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
     /**
      * <p>The category of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Tair**</p>
-     * <p>*   **Redis**</p>
-     * <p>*   **Memcache**</p>
+     * <ul>
+     * <li><strong>Tair</strong></li>
+     * <li><strong>Redis</strong></li>
+     * <li><strong>Memcache</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **CLASSIC**: classic network</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+     * <ul>
+     * <li><strong>CLASSIC</strong>: classic network</li>
+     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CLASSIC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -103,20 +138,30 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
 
     /**
      * <p>The private IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.49.***</p>
      */
     @NameInMap("PrivateIp")
     public String privateIp;
 
     /**
-     * <p>The ID of the region in which the instances you want to query reside. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instances you want to query belong.</p>
-     * <br>
-     * <p>> You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <blockquote>
+     * <p>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -129,6 +174,9 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
 
     /**
      * <p>The keyword used for fuzzy search. The keyword can be based on an instance ID or an instance description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apitest</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
@@ -138,18 +186,27 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1e7clcw529l773d****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1nme44gek34slfc****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The zone ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -12,6 +12,9 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
     public static class CreateGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup extends TeaModel {
         /**
          * <p>The IP addresses in the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         @NameInMap("GIpList")
         public String GIpList;
 
         /**
          * <p>The name of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>white_list_test_sg</p>
          */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
         /**
          * <p>The ID of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-sdgwqyp4f5j1x3qk7yvm</p>
          */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

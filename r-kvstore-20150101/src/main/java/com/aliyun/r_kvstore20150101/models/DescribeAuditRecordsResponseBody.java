@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeAuditRecordsResponseBody extends TeaModel {
     /**
      * <p>The end time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-03-25T12:10:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -24,30 +30,45 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F5EB478-824E-4AC4-8D2B-58F31A02****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-03-24T12:10:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22222</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -124,56 +145,84 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public static class DescribeAuditRecordsResponseBodyItemsSQL extends TeaModel {
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The time when the command was run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-25T03:22:08Z</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.16.100.***</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The ID of the node.</p>
-         * <br>
-         * <p>> A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.</p>
+         * <blockquote>
+         * <p>A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The command that was run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONFIG GET maxmemory</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The type of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>non_read_write</p>
          */
         @NameInMap("SQLType")
         public String SQLType;
 
         /**
          * <p>The amount of time consumed to run the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalExecutionTimes")
         public String totalExecutionTimes;

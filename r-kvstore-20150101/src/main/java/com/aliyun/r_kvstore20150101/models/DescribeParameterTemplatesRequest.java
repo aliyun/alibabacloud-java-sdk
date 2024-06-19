@@ -5,28 +5,44 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
-     * <p>The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:</p>
-     * <br>
-     * <p>*   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.</p>
-     * <p>*   **normal**: The instance is a standard master-replica instance.</p>
+     * <p>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Overview</a>. Valid values:</p>
+     * <ul>
+     * <li><strong>logic</strong>: The instance is a cluster master-replica instance or a read/write splitting instance.</li>
+     * <li><strong>normal</strong>: The instance is a standard master-replica instance.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logic</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
-     * <p>The database engine that is run on the instance. Set the value to **Redis**.</p>
+     * <p>The database engine that is run on the instance. Set the value to <strong>Redis</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The major version that is run on the instance. Valid values: **2.8**, **4.0**, and **5.0**.</p>
+     * <p>The major version that is run on the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the IDs of instances.</p>
+     * <p>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the IDs of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -38,9 +54,13 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
-     * <br>
-     * <p>>  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
+     * <blockquote>
+     * <p> You can also query the ID of a resource group in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

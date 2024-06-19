@@ -6,66 +6,97 @@ import com.aliyun.tea.*;
 public class RenewInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables automatic payment.</p>
-     * <p>*   **false**: disables automatic payment.</p>
-     * <br>
-     * <p>If you select false, you must choose **Expenses** > **Renewal Management** in the top navigation bar. In the left-side navigation pane, click **Orders**. Find the specified order and pay for it.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables automatic payment.</li>
+     * <li><strong>false</strong>: disables automatic payment.</li>
+     * </ul>
+     * <p>If you select false, you must choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong> in the top navigation bar. In the left-side navigation pane, click <strong>Orders</strong>. Find the specified order and pay for it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.</p>
-     * <p>*   **false** (default): disables auto-renewal.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.</li>
+     * <li><strong>false</strong> (default): disables auto-renewal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The ID of the promotional event or business information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>000000000</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
-     * <br>
-     * <p>> To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.</p>
+     * <blockquote>
+     * <p>To change the specifications when you renew the instance, you must specify at least one of the <code>Capacity</code> and <code>InstanceClass</code> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("Capacity")
     public String capacity;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TF-ModifyInstanceSpec-1686645570-7dac7257-4a14-4811-939c-51a282f</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>The source of the request. The default value is **OpenAPI** and cannot be changed.</p>
+     * <p>The source of the request. The default value is <strong>OpenAPI</strong> and cannot be changed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenAPI</p>
      */
     @NameInMap("FromApp")
     public String fromApp;
 
     /**
-     * <p>The instance type code. For more information, see [Instance specifications overview](~~26350~~). When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
-     * <br>
-     * <p>> To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.</p>
+     * <p>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications overview</a>. When you renew the instance, you can specify this parameter to change specifications of the instance.</p>
+     * <blockquote>
+     * <p>To change the specifications when you renew the instance, you must specify at least one of the <code>Capacity</code> and <code>InstanceClass</code> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>redis.master.small.default</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -77,7 +108,11 @@ public class RenewInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal period. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**. Unit: months.</p>
+     * <p>The renewal period. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>. Unit: months.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("Period")
     public Long period;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class FlushExpireKeysResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>82E30AB7-E3A4-46AC-88A0-3E4DCDC5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21986****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

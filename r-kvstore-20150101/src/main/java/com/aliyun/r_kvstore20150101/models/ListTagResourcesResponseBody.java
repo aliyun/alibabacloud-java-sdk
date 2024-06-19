@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token required to obtain more results. If a query does not return all results, in the next query, you can provide the token returned by the previous query to obtain more results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707ec2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47A514A1-4B77-4E30-B4C5-2A880650****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The resource ID, which is also the ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource type. The return value is **ALIYUN::KVSTORE::INSTANCE**. This value indicates an ApsaraDB for Redis instance.</p>
+         * <p>The resource type. The return value is <strong>ALIYUN::KVSTORE::INSTANCE</strong>. This value indicates an ApsaraDB for Redis instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::KVSTORE::INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The keys of the tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demokey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The values of the tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demovalue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

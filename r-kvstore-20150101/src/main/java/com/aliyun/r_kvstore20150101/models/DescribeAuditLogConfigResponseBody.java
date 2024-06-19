@@ -6,23 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeAuditLogConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false**: disabled</p>
-     * <br>
-     * <p>> You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DbAudit")
     public String dbAudit;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The retention period of audit logs. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Retention")
     public String retention;

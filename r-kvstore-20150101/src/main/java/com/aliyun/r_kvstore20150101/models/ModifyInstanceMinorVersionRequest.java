@@ -6,23 +6,35 @@ import com.aliyun.tea.*;
 public class ModifyInstanceMinorVersionRequest extends TeaModel {
     /**
      * <p>The time when the minor version is updated. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately**: The minor version is immediately updated.</p>
-     * <p>*   **MaintainTime**: The minor version is updated within the maintenance window.</p>
-     * <br>
-     * <p>>  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+     * <ul>
+     * <li><strong>Immediately</strong>: The minor version is immediately updated.</li>
+     * <li><strong>MaintainTime</strong>: The minor version is updated within the maintenance window.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediately</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The minor version to which you want to update. Default value: **latest_version**.</p>
+     * <p>The minor version to which you want to update. Default value: <strong>latest_version</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>latest_version</p>
      */
     @NameInMap("Minorversion")
     public String minorversion;

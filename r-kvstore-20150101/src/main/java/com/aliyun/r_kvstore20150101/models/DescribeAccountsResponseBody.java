@@ -12,6 +12,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C9E114C-217C-4118-83C0-B4070222****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
         /**
          * <p>The permission of the account. Default value: RoleReadWrite. Valid values:</p>
-         * <br>
-         * <p>*   **RoleReadOnly**: The account has the read-only permissions.</p>
-         * <p>*   **RoleReadWrite**: The account has the read and write permissions.</p>
+         * <ul>
+         * <li><strong>RoleReadOnly</strong>: The account has the read-only permissions.</li>
+         * <li><strong>RoleReadWrite</strong>: The account has the read and write permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RoleReadWrite</p>
          */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
@@ -84,30 +91,44 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
         /**
          * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdec</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoaccount</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The state of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Unavailable**: The account is unavailable.</p>
-         * <p>*   **Available**: The account is available.</p>
+         * <ul>
+         * <li><strong>Unavailable</strong>: The account is unavailable.</li>
+         * <li><strong>Available</strong>: The account is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
          * <p>The type of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: standard account</p>
-         * <p>*   **Super**: super account</p>
+         * <ul>
+         * <li><strong>Normal</strong>: standard account</li>
+         * <li><strong>Super</strong>: super account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("AccountType")
         public String accountType;
@@ -120,6 +141,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp10noxlhcoim2****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

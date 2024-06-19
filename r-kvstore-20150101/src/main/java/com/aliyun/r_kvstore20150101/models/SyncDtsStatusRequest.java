@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class SyncDtsStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +22,9 @@ public class SyncDtsStatusRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -33,17 +40,25 @@ public class SyncDtsStatusRequest extends TeaModel {
 
     /**
      * <p>Disables configuration changes for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **0**: does not disable configuration changes.</p>
-     * <p>*   **1**: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.</p>
+     * <ul>
+     * <li><strong>0</strong>: does not disable configuration changes.</li>
+     * <li><strong>1</strong>: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The ID of the DTS instance. You can view the ID in the [DTS console](https://dts.console.aliyun.com/).</p>
-     * <br>
-     * <p>> An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</p>
+     * <p>The ID of the DTS instance. You can view the ID in the <a href="https://dts.console.aliyun.com/">DTS console</a>.</p>
+     * <blockquote>
+     * <p>An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtss0611o8vv90****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

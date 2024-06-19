@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E83311F-0EE4-4922-A3BF-730B312B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

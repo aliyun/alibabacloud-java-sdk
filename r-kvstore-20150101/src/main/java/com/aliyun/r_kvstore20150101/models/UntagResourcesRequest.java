@@ -6,11 +6,16 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: removes all tags from the instance.</p>
-     * <p>*   **false** (default): does not remove all tags from the instance.</p>
-     * <br>
-     * <p>> If you specify both this parameter and the **TagKey.N** parameter, this parameter does not take effect.</p>
+     * <ul>
+     * <li><strong>true</strong>: removes all tags from the instance.</li>
+     * <li><strong>false</strong> (default): does not remove all tags from the instance.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you specify both this parameter and the <strong>TagKey.N</strong> parameter, this parameter does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -22,13 +27,21 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the instances.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -40,13 +53,20 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The list of tag keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demokey</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeAccountsRequest extends TeaModel {
     /**
      * <p>The name of the account that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoaccount</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

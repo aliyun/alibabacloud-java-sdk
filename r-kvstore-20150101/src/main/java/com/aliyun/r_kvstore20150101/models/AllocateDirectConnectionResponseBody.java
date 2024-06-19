@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AllocateDirectConnectionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

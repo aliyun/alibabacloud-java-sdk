@@ -12,12 +12,18 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1041xxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>743D0A03-52DE-4E6F-8D09-EC1414CF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,27 +60,40 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask extends TeaModel {
         /**
          * <p>The ID of the child node in the cluster instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The start time of the offline key analytics task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-01T19:08:49Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the offline key analytics task. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **running**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>running</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156465****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -140,6 +159,9 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask extends TeaModel {
         /**
          * <p>The date when the offline key analytics task was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-01Z</p>
          */
         @NameInMap("Date")
         public String date;

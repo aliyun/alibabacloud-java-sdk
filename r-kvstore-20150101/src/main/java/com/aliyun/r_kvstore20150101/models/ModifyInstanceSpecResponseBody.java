@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyInstanceSpecResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20722623431****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DA1D7EF-C80D-432C-8758-7D225182626B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The database engine that the instance runs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Redis</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp10n********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,36 +30,54 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of log entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The maximum number of log entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>686BB8A6-BBA5-47E5-8A75-D2ADE433****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-03-10T13:11Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total number of returned log entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -138,54 +162,81 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public static class DescribeSlowLogRecordsResponseBodyItemsLogRecords extends TeaModel {
         /**
          * <p>The ID of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Account")
         public String account;
 
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The slow query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KEYS *</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The database name. This parameter serves the same purpose as the **DBName** parameter. We recommend that you use the **DBName** parameter.</p>
+         * <p>The database name. This parameter serves the same purpose as the <strong>DBName</strong> parameter. We recommend that you use the <strong>DBName</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("DataBaseName")
         public String dataBaseName;
 
         /**
          * <p>The amount of time consumed to execute the slow query statement. Unit: microseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>248</p>
          */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
         /**
          * <p>The start time when the slow query statement was executed. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-20T09:18:41Z</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp1zxszhcgatnx****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
