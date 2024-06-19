@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 新增AIGC人脸检测能力
-     *
+     * <b>summary</b> : 
+     * <p>新增AIGC人脸检测能力</p>
+     * 
      * @param request AIGCFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AIGCFaceVerifyResponse
@@ -84,8 +85,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 新增AIGC人脸检测能力
-     *
+     * <b>summary</b> : 
+     * <p>新增AIGC人脸检测能力</p>
+     * 
      * @param request AIGCFaceVerifyRequest
      * @return AIGCFaceVerifyResponse
      */
@@ -95,8 +97,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银行卡要素核验接口
-     *
+     * <b>summary</b> : 
+     * <p>银行卡要素核验接口</p>
+     * 
      * @param request BankMetaVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BankMetaVerifyResponse
@@ -150,8 +153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银行卡要素核验接口
-     *
+     * <b>summary</b> : 
+     * <p>银行卡要素核验接口</p>
+     * 
      * @param request BankMetaVerifyRequest
      * @return BankMetaVerifyResponse
      */
@@ -596,8 +600,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 凭证核验
-     *
+     * <b>summary</b> : 
+     * <p>凭证核验</p>
+     * 
      * @param request CredentialVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CredentialVerifyResponse
@@ -665,14 +670,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 凭证核验
-     *
+     * <b>summary</b> : 
+     * <p>凭证核验</p>
+     * 
      * @param request CredentialVerifyRequest
      * @return CredentialVerifyResponse
      */
     public CredentialVerifyResponse credentialVerify(CredentialVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.credentialVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>人脸凭证核验服务</p>
+     * 
+     * @param request DeepfakeDetectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeepfakeDetectResponse
+     */
+    public DeepfakeDetectResponse deepfakeDetectWithOptions(DeepfakeDetectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceInputType)) {
+            query.put("FaceInputType", request.faceInputType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceUrl)) {
+            query.put("FaceUrl", request.faceUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outerOrderNo)) {
+            query.put("OuterOrderNo", request.outerOrderNo);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceBase64)) {
+            body.put("FaceBase64", request.faceBase64);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeepfakeDetect"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeepfakeDetectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>人脸凭证核验服务</p>
+     * 
+     * @param request DeepfakeDetectRequest
+     * @return DeepfakeDetectResponse
+     */
+    public DeepfakeDetectResponse deepfakeDetect(DeepfakeDetectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deepfakeDetectWithOptions(request, runtime);
     }
 
     /**
@@ -813,8 +877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Open API新增金融级数据统计API
-     *
+     * <b>summary</b> : 
+     * <p>Open API新增金融级数据统计API</p>
+     * 
      * @param request DescribePageFaceVerifyDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePageFaceVerifyDataResponse
@@ -864,8 +929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Open API新增金融级数据统计API
-     *
+     * <b>summary</b> : 
+     * <p>Open API新增金融级数据统计API</p>
+     * 
      * @param request DescribePageFaceVerifyDataRequest
      * @return DescribePageFaceVerifyDataResponse
      */
@@ -1149,8 +1215,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 身份二要素接口
-     *
+     * <b>summary</b> : 
+     * <p>身份二要素接口</p>
+     * 
      * @param request Id2MetaVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return Id2MetaVerifyResponse
@@ -1188,8 +1255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 身份二要素接口
-     *
+     * <b>summary</b> : 
+     * <p>身份二要素接口</p>
+     * 
      * @param request Id2MetaVerifyRequest
      * @return Id2MetaVerifyResponse
      */
@@ -1463,8 +1531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 手机三要素详版接口
-     *
+     * <b>summary</b> : 
+     * <p>手机三要素详版接口</p>
+     * 
      * @param request Mobile3MetaDetailVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return Mobile3MetaDetailVerifyResponse
@@ -1506,8 +1575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 手机三要素详版接口
-     *
+     * <b>summary</b> : 
+     * <p>手机三要素详版接口</p>
+     * 
      * @param request Mobile3MetaDetailVerifyRequest
      * @return Mobile3MetaDetailVerifyResponse
      */
@@ -1517,8 +1587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 手机号三要素简版接口
-     *
+     * <b>summary</b> : 
+     * <p>手机号三要素简版接口</p>
+     * 
      * @param request Mobile3MetaSimpleVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return Mobile3MetaSimpleVerifyResponse
@@ -1560,8 +1631,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 手机号三要素简版接口
-     *
+     * <b>summary</b> : 
+     * <p>手机号三要素简版接口</p>
+     * 
      * @param request Mobile3MetaSimpleVerifyRequest
      * @return Mobile3MetaSimpleVerifyResponse
      */
@@ -1571,8 +1643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 号码检测
-     *
+     * <b>summary</b> : 
+     * <p>号码检测</p>
+     * 
      * @param request MobileDetectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MobileDetectResponse
@@ -1606,8 +1679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 号码检测
-     *
+     * <b>summary</b> : 
+     * <p>号码检测</p>
+     * 
      * @param request MobileDetectRequest
      * @return MobileDetectResponse
      */
@@ -1617,8 +1691,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询手机号在网状态
-     *
+     * <b>summary</b> : 
+     * <p>查询手机号在网状态</p>
+     * 
      * @param request MobileOnlineStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MobileOnlineStatusResponse
@@ -1652,8 +1727,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询手机号在网状态
-     *
+     * <b>summary</b> : 
+     * <p>查询手机号在网状态</p>
+     * 
      * @param request MobileOnlineStatusRequest
      * @return MobileOnlineStatusResponse
      */
@@ -1663,8 +1739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询手机号在网时长
-     *
+     * <b>summary</b> : 
+     * <p>查询手机号在网时长</p>
+     * 
      * @param request MobileOnlineTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MobileOnlineTimeResponse
@@ -1698,8 +1775,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询手机号在网时长
-     *
+     * <b>summary</b> : 
+     * <p>查询手机号在网时长</p>
+     * 
      * @param request MobileOnlineTimeRequest
      * @return MobileOnlineTimeResponse
      */

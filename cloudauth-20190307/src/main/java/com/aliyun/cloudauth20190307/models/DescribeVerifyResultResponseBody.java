@@ -4,21 +4,41 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifyResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>97</p>
+     */
     @NameInMap("AuthorityComparisionScore")
     public Float authorityComparisionScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>97</p>
+     */
     @NameInMap("FaceComparisonScore")
     public Float faceComparisonScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>97</p>
+     */
     @NameInMap("IdCardFaceComparisonScore")
     public Float idCardFaceComparisonScore;
 
     @NameInMap("Material")
     public DescribeVerifyResultResponseBodyMaterial material;
 
+    /**
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("VerifyStatus")
     public Integer verifyStatus;
 
@@ -82,15 +102,31 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
         @NameInMap("Authority")
         public String authority;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg</a></p>
+         */
         @NameInMap("BackImageUrl")
         public String backImageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19900101</p>
+         */
         @NameInMap("Birth")
         public String birth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20201101</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg</a></p>
+         */
         @NameInMap("FrontImageUrl")
         public String frontImageUrl;
 
@@ -100,9 +136,17 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
         @NameInMap("Nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>02343218901123****</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20201101</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
@@ -194,15 +238,31 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
     }
 
     public static class DescribeVerifyResultResponseBodyMaterial extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/face-global-example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/face-global-example.jpg</a></p>
+         */
         @NameInMap("FaceGlobalUrl")
         public String faceGlobalUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/face-image-example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/face-image-example.jpg</a></p>
+         */
         @NameInMap("FaceImageUrl")
         public String faceImageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("FaceMask")
         public Boolean faceMask;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("FaceQuality")
         public String faceQuality;
 
@@ -212,6 +272,10 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
         @NameInMap("IdCardName")
         public String idCardName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>02343218901123****</p>
+         */
         @NameInMap("IdCardNumber")
         public String idCardNumber;
 

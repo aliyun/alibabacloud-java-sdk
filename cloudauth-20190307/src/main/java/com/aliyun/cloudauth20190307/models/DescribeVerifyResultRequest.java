@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeVerifyResultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39ecf51e-2f81-4dc5-90ee-ff86125b****</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FVBioOnlyTest</p>
      */
     @NameInMap("BizType")
     public String bizType;

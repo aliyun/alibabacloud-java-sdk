@@ -7,42 +7,94 @@ public class CompareFaceVerifyRequest extends TeaModel {
     @NameInMap("Crop")
     public String crop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
+     */
     @NameInMap("OuterOrderNo")
     public String outerOrderNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PV_FC</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000000006</p>
+     */
     @NameInMap("SceneId")
     public Long sceneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0bfa7c493f850e5178b9f8613634c9xx</p>
+     */
     @NameInMap("SourceCertifyId")
     public String sourceCertifyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
+     */
     @NameInMap("SourceFaceContrastPicture")
     public String sourceFaceContrastPicture;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
+     */
     @NameInMap("SourceFaceContrastPictureUrl")
     public String sourceFaceContrastPictureUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
+     */
     @NameInMap("SourceOssBucketName")
     public String sourceOssBucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>verify/xxxxx/xxxxxx.jpeg</p>
+     */
     @NameInMap("SourceOssObjectName")
     public String sourceOssObjectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0bfa7c493f850e5178b9f8613634c9xx</p>
+     */
     @NameInMap("TargetCertifyId")
     public String targetCertifyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
+     */
     @NameInMap("TargetFaceContrastPicture")
     public String targetFaceContrastPicture;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
+     */
     @NameInMap("TargetFaceContrastPictureUrl")
     public String targetFaceContrastPictureUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
+     */
     @NameInMap("TargetOssBucketName")
     public String targetOssBucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>verify/xxxxx/xxxxxx.jpeg</p>
+     */
     @NameInMap("TargetOssObjectName")
     public String targetOssObjectName;
 

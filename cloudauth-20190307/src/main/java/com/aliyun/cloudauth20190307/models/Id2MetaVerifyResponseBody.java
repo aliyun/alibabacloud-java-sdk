@@ -4,12 +4,24 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class Id2MetaVerifyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class Id2MetaVerifyResponseBody extends TeaModel {
     }
 
     public static class Id2MetaVerifyResponseBodyResultObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 

@@ -4,9 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class MobileDetectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>138********,156********</p>
+     */
     @NameInMap("Mobiles")
     public String mobiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("ParamType")
     public String paramType;
 

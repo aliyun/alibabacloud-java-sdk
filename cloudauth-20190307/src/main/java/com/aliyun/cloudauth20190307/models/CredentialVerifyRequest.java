@@ -4,27 +4,59 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CredentialVerifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4601*****</p>
+     */
     @NameInMap("CertNum")
     public String certNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0104</p>
+     */
     @NameInMap("CredName")
     public String credName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01</p>
+     */
     @NameInMap("CredType")
     public String credType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>429001********8211</p>
+     */
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>base64</p>
+     */
     @NameInMap("ImageContext")
     public String imageContext;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg">http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg</a></p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("IsCheck")
     public String isCheck;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("IsOCR")
     public String isOCR;
 

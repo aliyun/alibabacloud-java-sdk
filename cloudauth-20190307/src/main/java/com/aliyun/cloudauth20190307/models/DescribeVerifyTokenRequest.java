@@ -6,52 +6,114 @@ import com.aliyun.tea.*;
 public class DescribeVerifyTokenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39ecf51e-2f81-4dc5-90ee-ff86125be683</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RPBasicTest</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("CallbackSeed")
     public String callbackSeed;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
+     */
     @NameInMap("FaceRetainedImageUrl")
     public String faceRetainedImageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("FailedRedirectUrl")
     public String failedRedirectUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
+     */
     @NameInMap("IdCardBackImageUrl")
     public String idCardBackImageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
+     */
     @NameInMap("IdCardFrontImageUrl")
     public String idCardFrontImageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>330100xxxxxxxxxxxx</p>
+     */
     @NameInMap("IdCardNumber")
     public String idCardNumber;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("PassedRedirectUrl")
     public String passedRedirectUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user111</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.<em><strong>.</strong></em></p>
+     */
     @NameInMap("UserIp")
     public String userIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>187********</p>
+     */
     @NameInMap("UserPhoneNumber")
     public String userPhoneNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
+     */
     @NameInMap("UserRegistTime")
     public Long userRegistTime;
 

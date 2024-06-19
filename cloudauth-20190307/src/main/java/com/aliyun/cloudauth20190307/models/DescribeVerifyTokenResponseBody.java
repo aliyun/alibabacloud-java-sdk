@@ -7,12 +7,24 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
     @NameInMap("OssUploadToken")
     public DescribeVerifyTokenResponseBodyOssUploadToken ossUploadToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
+     */
     @NameInMap("VerifyPageUrl")
     public String verifyPageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c302c0797679457685410ee51a5ba375</p>
+     */
     @NameInMap("VerifyToken")
     public String verifyToken;
 
@@ -54,24 +66,52 @@ public class DescribeVerifyTokenResponseBody extends TeaModel {
     }
 
     public static class DescribeVerifyTokenResponseBodyOssUploadToken extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cloudauth-zhangjiakou-external</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-zhangjiakou.aliyuncs.com">https://oss-cn-zhangjiakou.aliyuncs.com</a></p>
+         */
         @NameInMap("EndPoint")
         public String endPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582636610000</p>
+         */
         @NameInMap("Expired")
         public Long expired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STS.NU8rUBj****</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod/RdNLC@Ox2n-1s7NMt</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FwmnyoqT8dHj7nJLuM67T****</p>
+         */
         @NameInMap("Secret")
         public String secret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uWia500nTS5knZaDzq4/KqpvhcLnO****</p>
+         */
         @NameInMap("Token")
         public String token;
 

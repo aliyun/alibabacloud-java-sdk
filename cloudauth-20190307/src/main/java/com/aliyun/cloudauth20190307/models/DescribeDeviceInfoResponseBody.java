@@ -4,18 +4,34 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("DeviceInfoList")
     public DescribeDeviceInfoResponseBodyDeviceInfoList deviceInfoList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +81,38 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceInfoResponseBodyDeviceInfoListDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20180101</p>
+         */
         @NameInMap("BeginDay")
         public String beginDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FACE_TEST</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20180101</p>
+         */
         @NameInMap("ExpiredDay")
         public String expiredDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3iJ1AY$oHcu7mC69</p>
+         */
         @NameInMap("UserDeviceId")
         public String userDeviceId;
 

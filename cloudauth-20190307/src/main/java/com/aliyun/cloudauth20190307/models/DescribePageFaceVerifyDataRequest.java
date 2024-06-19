@@ -4,21 +4,45 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribePageFaceVerifyDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-30</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ID_PLUS</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>36**01</p>
+     */
     @NameInMap("SceneId")
     public Long sceneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-10</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

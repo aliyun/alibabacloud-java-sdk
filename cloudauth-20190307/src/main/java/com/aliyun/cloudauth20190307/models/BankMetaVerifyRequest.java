@@ -4,24 +4,48 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class BankMetaVerifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>610*************1181</p>
+     */
     @NameInMap("BankCard")
     public String bankCard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>429001********8211</p>
+     */
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>138******11</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("ParamType")
     public String paramType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BANK_CARD_2_META</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VERIFY_BANK_CARD</p>
+     */
     @NameInMap("VerifyMode")
     public String verifyMode;
 

@@ -12,21 +12,39 @@ public class CreateVerifySettingRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UserRegister</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("GuideStep")
     public Boolean guideStep;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("PrivacyStep")
     public Boolean privacyStep;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ResultStep")
     public Boolean resultStep;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RPBasic</p>
      */
     @NameInMap("Solution")
     public String solution;

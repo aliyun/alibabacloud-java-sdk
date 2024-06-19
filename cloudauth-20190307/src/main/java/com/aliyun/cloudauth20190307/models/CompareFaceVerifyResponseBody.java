@@ -4,12 +4,24 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CompareFaceVerifyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,9 +69,17 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         @NameInMap("CertifyId")
         public String certifyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T</p>
+         */
         @NameInMap("Passed")
         public String passed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.60875</p>
+         */
         @NameInMap("VerifyScore")
         public Float verifyScore;
 
