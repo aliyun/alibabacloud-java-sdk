@@ -3,20 +3,20 @@ package com.aliyun.computenest20210601.models;
 
 import com.aliyun.tea.*;
 
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class RestartServiceInstanceResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>464C8CB6-A548-5206-B83C-D32A8E43EC21</p>
+     * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
+    public static RestartServiceInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RestartServiceInstanceResponseBody self = new RestartServiceInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
+    public RestartServiceInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

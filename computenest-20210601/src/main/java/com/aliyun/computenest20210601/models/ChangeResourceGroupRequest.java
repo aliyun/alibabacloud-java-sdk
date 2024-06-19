@@ -4,15 +4,31 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmzmhzo******</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-5dc794a7fd254e******</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>service</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

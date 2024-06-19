@@ -3,10 +3,10 @@ package com.aliyun.computenest20210601.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteServiceInstancesRequest extends TeaModel {
+public class StartServiceInstanceRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -22,16 +22,19 @@ public class DeleteServiceInstancesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
      */
     @NameInMap("ServiceInstanceId")
-    public java.util.List<String> serviceInstanceId;
+    public String serviceInstanceId;
 
-    public static DeleteServiceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteServiceInstancesRequest self = new DeleteServiceInstancesRequest();
+    public static StartServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartServiceInstanceRequest self = new StartServiceInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteServiceInstancesRequest setClientToken(String clientToken) {
+    public StartServiceInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -39,7 +42,7 @@ public class DeleteServiceInstancesRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DeleteServiceInstancesRequest setRegionId(String regionId) {
+    public StartServiceInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -47,11 +50,11 @@ public class DeleteServiceInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeleteServiceInstancesRequest setServiceInstanceId(java.util.List<String> serviceInstanceId) {
+    public StartServiceInstanceRequest setServiceInstanceId(String serviceInstanceId) {
         this.serviceInstanceId = serviceInstanceId;
         return this;
     }
-    public java.util.List<String> getServiceInstanceId() {
+    public String getServiceInstanceId() {
         return this.serviceInstanceId;
     }
 

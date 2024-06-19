@@ -4,15 +4,34 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>786***45</p>
+     */
     @NameInMap("MarketInstanceId")
     public String marketInstanceId;
 
+    @NameInMap("OrderId")
+    public String orderId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>si-d6ab3a63ccbb4b17****</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Created</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -27,6 +46,14 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     }
     public String getMarketInstanceId() {
         return this.marketInstanceId;
+    }
+
+    public CreateServiceInstanceResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public CreateServiceInstanceResponseBody setRequestId(String requestId) {
