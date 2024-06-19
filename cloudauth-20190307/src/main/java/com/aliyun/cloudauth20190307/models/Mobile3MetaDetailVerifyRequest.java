@@ -4,12 +4,24 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class Mobile3MetaDetailVerifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>520181199902104631</p>
+     */
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>150000xxxx</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("ParamType")
     public String paramType;
 

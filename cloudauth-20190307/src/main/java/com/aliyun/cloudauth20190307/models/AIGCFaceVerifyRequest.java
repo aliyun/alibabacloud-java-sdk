@@ -4,24 +4,52 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class AIGCFaceVerifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
+     */
     @NameInMap("FaceContrastPicture")
     public String faceContrastPicture;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
+     */
     @NameInMap("FaceContrastPictureUrl")
     public String faceContrastPictureUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
+     */
     @NameInMap("OssBucketName")
     public String ossBucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>verify/xxxxx/xxxxxx.jpeg</p>
+     */
     @NameInMap("OssObjectName")
     public String ossObjectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
+     */
     @NameInMap("OuterOrderNo")
     public String outerOrderNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LR_FR_AIGC</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100000xxxx</p>
+     */
     @NameInMap("SceneId")
     public Long sceneId;
 

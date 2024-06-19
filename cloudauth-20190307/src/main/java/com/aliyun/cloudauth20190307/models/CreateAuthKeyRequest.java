@@ -4,15 +4,31 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthKeyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuthYears")
     public Integer authYears;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FACE_TEST</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Test")
     public Boolean test;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3iJ1AY$oHcu7mC69</p>
+     */
     @NameInMap("UserDeviceId")
     public String userDeviceId;
 

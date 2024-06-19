@@ -7,6 +7,10 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
     @NameInMap("OssUploadToken")
     public DescribeOssUploadTokenResponseBodyOssUploadToken ossUploadToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2FA2C773-47DB-4156-B1EE-5B047321A939</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
     }
 
     public static class DescribeOssUploadTokenResponseBodyOssUploadToken extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cloudauth-zhangjiakou-external</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-zhangjiakou.aliyuncs.com">https://oss-cn-zhangjiakou.aliyuncs.com</a></p>
+         */
         @NameInMap("EndPoint")
         public String endPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582636610000</p>
+         */
         @NameInMap("Expired")
         public Long expired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STS.NU8rUBj****</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod/RdNLC@Ox2n-1s7NMt</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FwmnyoqT8dHj7nJLuM67T****</p>
+         */
         @NameInMap("Secret")
         public String secret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uWia500nTS5knZaDzq4/KqpvhcLnO****</p>
+         */
         @NameInMap("Token")
         public String token;
 

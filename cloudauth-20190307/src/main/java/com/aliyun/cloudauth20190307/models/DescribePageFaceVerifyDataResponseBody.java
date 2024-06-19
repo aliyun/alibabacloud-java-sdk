@@ -4,30 +4,62 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     @NameInMap("Items")
     public java.util.List<DescribePageFaceVerifyDataResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-A***B-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalPage")
     public String totalPage;
 
@@ -109,21 +141,41 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
     }
 
     public static class DescribePageFaceVerifyDataResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-24T00:00:00.000Z</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ID_PLUS</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20**40</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessCount")
         public String successCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19</p>
+         */
         @NameInMap("TotalCount")
         public String totalCount;
 

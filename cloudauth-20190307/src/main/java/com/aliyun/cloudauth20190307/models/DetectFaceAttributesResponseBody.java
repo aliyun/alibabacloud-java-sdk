@@ -4,18 +4,34 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DetectFaceAttributesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DetectFaceAttributesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Error.InternalError</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     }
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-1.5683923959732056</p>
+         */
         @NameInMap("PitchAngle")
         public Float pitchAngle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7.163370132446289</p>
+         */
         @NameInMap("RollAngle")
         public Float rollAngle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-6.925303936004639</p>
+         */
         @NameInMap("YawAngle")
         public Float yawAngle;
 
@@ -106,9 +134,17 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     }
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>95</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>97</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -136,24 +172,48 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     }
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.1419367790222168</p>
+         */
         @NameInMap("Blur")
         public Float blur;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Facequal")
         public Float facequal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Face</p>
+         */
         @NameInMap("Facetype")
         public String facetype;
 
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("Glasses")
         public String glasses;
 
         @NameInMap("Headpose")
         public DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose headpose;
 
+        /**
+         * <strong>example:</strong>
+         * <p>70</p>
+         */
         @NameInMap("Integrity")
         public Integer integrity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Wear</p>
+         */
         @NameInMap("Respirator")
         public String respirator;
 
@@ -232,15 +292,31 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     }
 
     public static class DetectFaceAttributesResponseBodyDataFaceInfosFaceAttributesDetectInfoFaceRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>473</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>354</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>453</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>473</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -336,9 +412,17 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         @NameInMap("FaceInfos")
         public DetectFaceAttributesResponseBodyDataFaceInfos faceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("ImgHeight")
         public Integer imgHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("ImgWidth")
         public Integer imgWidth;
 

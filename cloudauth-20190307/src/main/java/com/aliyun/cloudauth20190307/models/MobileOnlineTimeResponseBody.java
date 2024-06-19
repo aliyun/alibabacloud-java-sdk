@@ -4,12 +4,24 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class MobileOnlineTimeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,24 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
     }
 
     public static class MobileOnlineTimeResponseBodyResultObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CMCC</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TimeCode")
         public String timeCode;
 

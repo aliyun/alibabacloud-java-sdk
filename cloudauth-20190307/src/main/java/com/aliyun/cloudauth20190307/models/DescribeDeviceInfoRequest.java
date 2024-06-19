@@ -4,24 +4,52 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FACE_TEST</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20200330</p>
+     */
     @NameInMap("ExpiredEndDay")
     public String expiredEndDay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20190401</p>
+     */
     @NameInMap("ExpiredStartDay")
     public String expiredStartDay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3iJ1AY$oHcu7mC69</p>
+     */
     @NameInMap("UserDeviceId")
     public String userDeviceId;
 

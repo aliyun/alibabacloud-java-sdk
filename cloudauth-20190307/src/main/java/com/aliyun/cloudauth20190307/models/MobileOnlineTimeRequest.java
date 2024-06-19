@@ -4,9 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class MobileOnlineTimeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>130********</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("ParamType")
     public String paramType;
 

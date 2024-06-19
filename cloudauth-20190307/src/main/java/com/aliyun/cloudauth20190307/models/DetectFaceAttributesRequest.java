@@ -4,11 +4,18 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DetectFaceAttributesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>RPBasicTest</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</a></p>
      */
     @NameInMap("MaterialValue")
     public String materialValue;

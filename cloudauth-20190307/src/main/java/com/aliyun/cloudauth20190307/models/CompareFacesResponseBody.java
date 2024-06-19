@@ -4,18 +4,34 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CompareFacesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CompareFacesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Error.InternalError</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class CompareFacesResponseBody extends TeaModel {
     }
 
     public static class CompareFacesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;0.0001&quot;:&quot;90.07&quot;,&quot;0.001&quot;:&quot;80.01&quot;,&quot;0.01&quot;:&quot;70.02&quot;}</p>
+         */
         @NameInMap("ConfidenceThresholds")
         public String confidenceThresholds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>98.7913</p>
+         */
         @NameInMap("SimilarityScore")
         public Float similarityScore;
 

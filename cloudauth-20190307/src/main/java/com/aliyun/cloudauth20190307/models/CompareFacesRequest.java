@@ -4,15 +4,31 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CompareFacesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FacePic</p>
+     */
     @NameInMap("SourceImageType")
     public String sourceImageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
+     */
     @NameInMap("SourceImageValue")
     public String sourceImageValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FacePic</p>
+     */
     @NameInMap("TargetImageType")
     public String targetImageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
+     */
     @NameInMap("TargetImageValue")
     public String targetImageValue;
 

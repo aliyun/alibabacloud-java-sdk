@@ -7,12 +7,24 @@ public class CreateVerifySettingResponseBody extends TeaModel {
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UserRegister</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RPBasic</p>
+     */
     @NameInMap("Solution")
     public String solution;
 

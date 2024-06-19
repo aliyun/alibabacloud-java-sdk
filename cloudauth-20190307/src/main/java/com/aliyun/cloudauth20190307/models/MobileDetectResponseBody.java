@@ -4,12 +4,24 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class MobileDetectResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>969434DF-926B-4997-9881-4DE94E39F805</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,15 +69,31 @@ public class MobileDetectResponseBody extends TeaModel {
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CMCC</p>
+         */
         @NameInMap("IspName")
         public String ispName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>131********</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("SubCode")
         public String subCode;
 
@@ -117,6 +145,10 @@ public class MobileDetectResponseBody extends TeaModel {
     }
 
     public static class MobileDetectResponseBodyResultObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ChargeCount")
         public String chargeCount;
 

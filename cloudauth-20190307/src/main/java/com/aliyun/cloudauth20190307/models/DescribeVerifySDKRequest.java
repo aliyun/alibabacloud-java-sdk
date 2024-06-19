@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVerifySDKRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1KQMcnLd4m37LN2D0F0WCD</p>
      */
     @NameInMap("TaskId")
     public String taskId;

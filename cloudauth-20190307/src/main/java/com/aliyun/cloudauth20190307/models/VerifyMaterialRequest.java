@@ -6,30 +6,50 @@ import com.aliyun.tea.*;
 public class VerifyMaterialRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39ecf51e-2f81-4dc5-90ee-ff86125b****</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RPMinTest</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</a></p>
      */
     @NameInMap("FaceImageUrl")
     public String faceImageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg</a></p>
+     */
     @NameInMap("IdCardBackImageUrl")
     public String idCardBackImageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg</a></p>
+     */
     @NameInMap("IdCardFrontImageUrl")
     public String idCardFrontImageUrl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02343218901123****</p>
      */
     @NameInMap("IdCardNumber")
     public String idCardNumber;
@@ -40,6 +60,10 @@ public class VerifyMaterialRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>54sdj</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

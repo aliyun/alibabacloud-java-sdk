@@ -4,9 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifySDKResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://www.xxx.com">https://www.xxx.com</a></p>
+     */
     @NameInMap("SdkUrl")
     public String sdkUrl;
 

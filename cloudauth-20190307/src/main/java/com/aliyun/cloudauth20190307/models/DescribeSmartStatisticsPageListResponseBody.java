@@ -4,21 +4,41 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Items")
     public java.util.List<DescribeSmartStatisticsPageListResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>96943***4E39F805</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>29</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -76,24 +96,48 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
     }
 
     public static class DescribeSmartStatisticsPageListResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11/8</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("PassRate")
         public String passRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SMART_VERIFY</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20**40</p>
+         */
         @NameInMap("SceneId")
         public Long sceneId;
 
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
