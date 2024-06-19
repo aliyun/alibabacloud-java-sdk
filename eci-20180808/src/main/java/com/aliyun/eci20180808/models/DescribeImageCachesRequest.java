@@ -6,50 +6,74 @@ import com.aliyun.tea.*;
 public class DescribeImageCachesRequest extends TeaModel {
     /**
      * <p>The container images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nginx</p>
      */
     @NameInMap("Image")
     public String image;
 
     /**
      * <p>The IDs of the image caches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>imc-bp195erqe9o2pb09****</p>
      */
     @NameInMap("ImageCacheId")
     public String imageCacheId;
 
     /**
      * <p>The names of the image caches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testcache</p>
      */
     @NameInMap("ImageCacheName")
     public String imageCacheName;
 
     /**
-     * <p>Specifies whether the image layers of the image caches must contain all image layers of the container image.\</p>
-     * <p>If you configure MatchImage, you can configure this parameter to further filter query results.</p>
+     * <p>Specifies whether the image layers of the image caches must contain all image layers of the container image.\
+     * If you configure MatchImage, you can configure this parameter to further filter query results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ImageFullMatch")
     public Boolean imageFullMatch;
 
     /**
-     * <p>The quantity of image caches whose image layers contain all image layers of the container image.\</p>
-     * <p>If you configure MatchImage, you can configure this parameter to further filter query results.</p>
+     * <p>The quantity of image caches whose image layers contain all image layers of the container image.\
+     * If you configure MatchImage, you can configure this parameter to further filter query results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ImageMatchCountRequest")
     public Integer imageMatchCountRequest;
 
     /**
      * <p>The maximum entries of query results that are allowed to be displayed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The container images used to match the image caches that you want to query. You can specify a maximum of 100 container images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:1.15.10-perl</p>
      */
     @NameInMap("MatchImage")
     public java.util.List<String> matchImage;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -62,12 +86,19 @@ public class DescribeImageCachesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the image caches.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the image caches belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-2df3isufhi38****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -80,6 +111,9 @@ public class DescribeImageCachesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the snapshots that correspond to the image caches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-2zec5oj8e1yhxijt****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
@@ -226,12 +260,18 @@ public class DescribeImageCachesRequest extends TeaModel {
     public static class DescribeImageCachesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

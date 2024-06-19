@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeVirtualNodesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9C9B9917-ED22-50D5-ADE6-9FA9D58AD05F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of virtual nodes that were queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,45 +77,67 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
     public static class DescribeVirtualNodesResponseBodyVirtualNodesEvents extends TeaModel {
         /**
          * <p>The number of events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The time when the event started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-08T02:24:48Z</p>
          */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
         /**
          * <p>The time when the event ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-08T02:24:52Z</p>
          */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
         /**
          * <p>The message of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the object to which the event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The type of the event. Valid values:</p>
-         * <br>
-         * <p>*   Normal</p>
-         * <p>*   Warning</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Warning</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Type")
         public String type;
@@ -177,12 +208,18 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
     public static class DescribeVirtualNodesResponseBodyVirtualNodesTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -213,6 +250,9 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
     public static class DescribeVirtualNodesResponseBodyVirtualNodes extends TeaModel {
         /**
          * <p>The time when the virtual node was created. The time follows the RFC 3339 standard and is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-08T15:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -225,34 +265,50 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
 
         /**
          * <p>The public IP address of the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address of the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.19.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The ID of the region in which the virtual node resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the virtual node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uf66jeqopgqa9hdn****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the virtual node. Valid values:</p>
-         * <br>
-         * <p>*   Pending</p>
-         * <p>*   Ready</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Ready</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         @NameInMap("Status")
         public String status;
@@ -265,30 +321,45 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnd-2ze960zkdqrldeaw****</p>
          */
         @NameInMap("VirtualNodeId")
         public String virtualNodeId;
 
         /**
          * <p>The name of the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNode</p>
          */
         @NameInMap("VirtualNodeName")
         public String virtualNodeName;
 
         /**
          * <p>The ID of the security group to which the virtual node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zeeyaaxlkq9sppl****</p>
          */
         @NameInMap("VirtualNodeSecurityGroupId")
         public String virtualNodeSecurityGroupId;
 
         /**
          * <p>The ID of the vSwitch with which the virtual node is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze23nqzig8inprou****</p>
          */
         @NameInMap("VirtualNodeVSwitchId")
         public String virtualNodeVSwitchId;
 
         /**
          * <p>The ID of the VPC to which the virtual node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-1vzjjflab6wvjox****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

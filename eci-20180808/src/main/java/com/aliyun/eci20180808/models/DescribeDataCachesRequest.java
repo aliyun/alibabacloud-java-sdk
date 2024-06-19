@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDataCachesRequest extends TeaModel {
     /**
      * <p>The bucket that stores the data cache. Default value: default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Bucket")
     public String bucket;
@@ -18,12 +21,18 @@ public class DescribeDataCachesRequest extends TeaModel {
 
     /**
      * <p>The maximum entries of query results that are allowed to be displayed. Valid values: 1 to 20. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The query token. Set the value to the NextToken value that is returned in the previous call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -36,18 +45,28 @@ public class DescribeDataCachesRequest extends TeaModel {
 
     /**
      * <p>The virtual host (vHost) directory in which the data cache resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/data/models/</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The region ID of the data caches that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the data cache belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzw2jz2z****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -168,12 +187,18 @@ public class DescribeDataCachesRequest extends TeaModel {
     public static class DescribeDataCachesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;

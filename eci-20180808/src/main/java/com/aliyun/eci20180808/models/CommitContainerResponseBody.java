@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CommitContainerResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB8D2B22-D636-4182-****-1FC9DBDAD66F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-bp18cwvrb3v9tjk0tekz</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class CreateDataCacheRequest extends TeaModel {
     /**
      * <p>The bucket in which the data is stored. By default, the default bucket is used. You can use a custom bucket for business grouping and to prevent path conflicts.</p>
-     * <br>
-     * <p>>  eci-system is the reserved bucket of the ECI and cannot be used.</p>
+     * <blockquote>
+     * <p> eci-system is the reserved bucket of the ECI and cannot be used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Bucket")
     public String bucket;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-<strong><strong>-12d3-</strong></strong>-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -32,12 +39,18 @@ public class CreateDataCacheRequest extends TeaModel {
 
     /**
      * <p>The existing elastic IP address (EIP) to be associated. If no NAT gateway is configured for the virtual private cloud (VPC), you can associate an EIP to pull data from the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-uf66jeqopgqa9hdn****</p>
      */
     @NameInMap("EipInstanceId")
     public String eipInstanceId;
 
     /**
      * <p>The DataCache name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -50,18 +63,28 @@ public class CreateDataCacheRequest extends TeaModel {
 
     /**
      * <p>The storage path of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/model/test</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-2df3isufhi38****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -74,18 +97,27 @@ public class CreateDataCacheRequest extends TeaModel {
 
     /**
      * <p>The number of days for which the DataCache is retained. When the retention days end, the DataCache is deleted. By default, DataCaches do not expire.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
     /**
      * <p>The ID of the security group to which the generated ECI belongs during the creation of the data cache.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-2ze81zoc3yl7a3we****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The size of the data cache. Unit: GiB. Default value: 20. Evaluate the required size based on the actual data size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("Size")
     public Integer size;
@@ -98,6 +130,9 @@ public class CreateDataCacheRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the generated ECI belongs during the creation of the data cache.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1jrgfqqy54kg5hc****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -260,11 +295,15 @@ public class CreateDataCacheRequest extends TeaModel {
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   URL</p>
-         * <p>*   NAS</p>
-         * <p>*   OSS</p>
-         * <p>*   SNAPSHOT</p>
+         * <ul>
+         * <li>URL</li>
+         * <li>NAS</li>
+         * <li>OSS</li>
+         * <li>SNAPSHOT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -295,36 +334,53 @@ public class CreateDataCacheRequest extends TeaModel {
     public static class CreateDataCacheRequestEipCreateParam extends TeaModel {
         /**
          * <p>The bandwidth of the EIP. Unit: Mbit/s. Default value: 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The EIP bandwidth plan to be associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-2zeukbj916scmj51m****</p>
          */
         @NameInMap("CommonBandwidthPackage")
         public String commonBandwidthPackage;
 
         /**
          * <p>The line type of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   BGP: BGP (Multi-ISP) line</p>
-         * <p>*   BGP_PRO: BGP (Multi-ISP) Pro line</p>
+         * <ul>
+         * <li>BGP: BGP (Multi-ISP) line</li>
+         * <li>BGP_PRO: BGP (Multi-ISP) Pro line</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("ISP")
         public String ISP;
 
         /**
          * <p>The metering method of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-         * <p>*   PayByTraffic: pay-by-data-transfer</p>
+         * <ul>
+         * <li>PayByBandwidth: pay-by-bandwidth</li>
+         * <li>PayByTraffic: pay-by-data-transfer</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The ID of the IP address pool. The EIP is allocated from the IP address pool. You cannot use the IP address pool feature by default. To use this feature, you must apply for the privilege in the Quota Center console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-2vc4xdtjhwl4t0go5****</p>
          */
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
@@ -379,12 +435,18 @@ public class CreateDataCacheRequest extends TeaModel {
     public static class CreateDataCacheRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;

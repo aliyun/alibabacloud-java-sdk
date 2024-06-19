@@ -5,26 +5,36 @@ import com.aliyun.tea.*;
 
 public class CommitContainerRequest extends TeaModel {
     /**
-     * <p>The access credential configurations of the Container Registry Enterprise Edition instance.\</p>
-     * <p>If you use a Container Registry Personal Edition instance, you can leave this parameter empty.</p>
+     * <p>The access credential configurations of the Container Registry Enterprise Edition instance.</p>
+     * <blockquote>
+     * <p> If you use a Container Registry Personal Edition instance, you do not need to configure this parameter. If you use a Container Registry Enterprise Edition instance, you must configure this parameter.</p>
+     * </blockquote>
      */
     @NameInMap("AcrRegistryInfo")
     public CommitContainerRequestAcrRegistryInfo acrRegistryInfo;
 
     /**
-     * <p>The ARN that is required for authorization.</p>
+     * <p>The details about the ARN that is required for authorization.</p>
      */
     @NameInMap("Arn")
     public CommitContainerRequestArn arn;
 
     /**
      * <p>The ID of the container group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-bp1do4xz75fa5sd****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
      * <p>The name of the container.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>container-1</p>
      */
     @NameInMap("ContainerName")
     public String containerName;
@@ -43,6 +53,10 @@ public class CommitContainerRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -140,25 +154,37 @@ public class CommitContainerRequest extends TeaModel {
 
     public static class CommitContainerRequestAcrRegistryInfo extends TeaModel {
         /**
-         * <p>The RAM role ARN of the account to which permissions are granted during a cross-account authorization.</p>
+         * <p>The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1609982529******:role/role-test</p>
          */
         @NameInMap("ArnService")
         public String arnService;
 
         /**
-         * <p>The RAM role ARN of the account that is used to grant permissions during a cross-account authorization.</p>
+         * <p>The ARN of the RAM role that is assigned to the authorizer in cross-account authorization scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1298452580******:role/role-test</p>
          */
         @NameInMap("ArnUser")
         public String arnUser;
 
         /**
          * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-nwj395hgf6f3****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the region where the Container Registry Enterprise Edition instance resides.</p>
+         * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -204,13 +230,19 @@ public class CommitContainerRequest extends TeaModel {
 
     public static class CommitContainerRequestArn extends TeaModel {
         /**
-         * <p>The ARN of the RAM role of the Container Registry Enterprise Edition instance.</p>
+         * <p>The ARN of the authorized role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:xxx</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
 
         /**
-         * <p>The type of the authorization.</p>
+         * <p>The authorization type. A value of service indicates that RAM roles are used for authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("RoleType")
         public String roleType;
@@ -241,24 +273,38 @@ public class CommitContainerRequest extends TeaModel {
     public static class CommitContainerRequestImage extends TeaModel {
         /**
          * <p>The authorization of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECI</p>
          */
         @NameInMap("Author")
         public String author;
 
         /**
          * <p>The message about the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test commit</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eastest/registry-test</p>
          */
         @NameInMap("Repository")
         public String repository;
 
         /**
          * <p>The tag of the image. This parameter is empty by default, which indicates that the tag is not modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.6</p>
          */
         @NameInMap("Tag")
         public String tag;

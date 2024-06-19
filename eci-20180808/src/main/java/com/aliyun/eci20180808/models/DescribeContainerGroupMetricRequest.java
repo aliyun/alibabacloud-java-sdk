@@ -6,14 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeContainerGroupMetricRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-bp17da5olmkuagfr****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
      * <p>The end of the time range to query. The default value is the current time.</p>
-     * <br>
      * <p>Specify the time in RFC 3339 format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-12T01:05:00.000Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -26,14 +32,21 @@ public class DescribeContainerGroupMetricRequest extends TeaModel {
 
     /**
      * <p>The data aggregation period. Unit: seconds. Valid values: 15, 30, 60, and 600. Default value: 60.</p>
-     * <br>
-     * <p>>  If the StartTime and EndTime parameters are not specified, the system returns the monitoring data generated in the last 5 minutes with a data aggregation period of 15s. The Period parameter is ignored.</p>
+     * <blockquote>
+     * <p> If the StartTime and EndTime parameters are not specified, the system returns the monitoring data generated in the last 5 minutes with a data aggregation period of 15s. The Period parameter is ignored.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,8 +59,10 @@ public class DescribeContainerGroupMetricRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. The beginning of the time range must be a time point in the last 30 days. The default value is 5 minutes before the value of EndTime.</p>
-     * <br>
      * <p>Specify the time in RFC 3339 format. For example, to query the data starting from March 12, 2019, 09:00 UTC+8, you can set the parameter to 2019-03-12T09:00:00.000+08:00 or 2019-03-12T01:00:00.000Z.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-03-12T01:00:00.000Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

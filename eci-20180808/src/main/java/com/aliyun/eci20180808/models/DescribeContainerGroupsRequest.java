@@ -6,34 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeContainerGroupsRequest extends TeaModel {
     /**
      * <p>The computing power type of the elastic container instance. A value of economy specifies economic elastic container instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>economy</p>
      */
     @NameInMap("ComputeCategory")
     public String computeCategory;
 
     /**
      * <p>The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;eci-bp17gw49eu09yiwm****&quot;, &quot;eci-bp19aq49du01abcm****&quot;, &quot;eci-2zegym1qhbmdfr1s****&quot;]</p>
      */
     @NameInMap("ContainerGroupIds")
     public String containerGroupIds;
 
     /**
      * <p>The name of the elastic container instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ContainerGroupName")
     public String containerGroupName;
 
     /**
      * <p>The maximum number of resources to return. Default value: 20. Maximum value: 20.</p>
-     * <br>
-     * <p>>  The number of returned resources is less than or equal to the specified number.</p>
+     * <blockquote>
+     * <p> The number of returned resources is less than or equal to the specified number.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The token that determines the start point of the query. If this parameter is left empty, all results have been returned.</p>
-     * <br>
-     * <p>> You do not need to specify this parameter in the first request. Starting from the second request, you can obtain the token from the result returned by the previous request.</p>
+     * <blockquote>
+     * <p>You do not need to specify this parameter in the first request. Starting from the second request, you can obtain the token from the result returned by the previous request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -46,12 +63,19 @@ public class DescribeContainerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzh43v*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -64,23 +88,30 @@ public class DescribeContainerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf66jeqopgqa9hdn****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The status of the elastic container instance. Valid values:</p>
-     * <br>
-     * <p>*   Pending: The instance is being started.</p>
-     * <p>*   Running: The instance is running.</p>
-     * <p>*   Succeeded: The instance runs successfully.</p>
-     * <p>*   Failed: The instance fails to run.</p>
-     * <p>*   Scheduling: The instance is being created.</p>
-     * <p>*   ScheduleFailed: The instance fails to be created.</p>
-     * <p>*   Restarting: The instance is being restarted.</p>
-     * <p>*   Updating: The instance is being updated.</p>
-     * <p>*   Terminating: The instance is being terminated.</p>
-     * <p>*   Expired: The instance expires.</p>
+     * <ul>
+     * <li>Pending: The instance is being started.</li>
+     * <li>Running: The instance is running.</li>
+     * <li>Succeeded: The instance runs successfully.</li>
+     * <li>Failed: The instance fails to run.</li>
+     * <li>Scheduling: The instance is being created.</li>
+     * <li>ScheduleFailed: The instance fails to be created.</li>
+     * <li>Restarting: The instance is being restarted.</li>
+     * <li>Updating: The instance is being updated.</li>
+     * <li>Terminating: The instance is being terminated.</li>
+     * <li>Expired: The instance expires.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
@@ -93,20 +124,28 @@ public class DescribeContainerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the elastic container instances are connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1jrgfqqy54kg5hc****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>Specify whether to return event information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("WithEvent")
     public Boolean withEvent;
 
     /**
      * <p>The ID of the zone in which the elastic container instances are deployed. If you do not specify this parameter, the system selects a zone.</p>
-     * <br>
      * <p>This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -255,12 +294,18 @@ public class DescribeContainerGroupsRequest extends TeaModel {
     public static class DescribeContainerGroupsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
     /**
-     * <p>The details of the O\&M tasks.</p>
+     * <p>The details of the O\&amp;M tasks.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeInstanceOpsRecordsResponseBodyRecords> records;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89945DD3-9072-47D0-A318-353284CFC7B3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,37 +42,62 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
 
     public static class DescribeInstanceOpsRecordsResponseBodyRecords extends TeaModel {
         /**
-         * <p>The time when the O\&M task was created.</p>
+         * <p>The time when the O\&amp;M task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-29T15:00:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The time when the O\&M task expires.</p>
+         * <p>The time when the O\&amp;M task expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099-12-29T15:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
-         * <p>The status of the O\&M task.</p>
+         * <p>The status of the O\&amp;M task.</p>
+         * <ul>
+         * <li>Ready</li>
+         * <li>Failed</li>
+         * <li>Expired</li>
+         * <li>Closed</li>
+         * <li>Success</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         @NameInMap("OpsStatus")
         public String opsStatus;
 
         /**
-         * <p>The type of the O\&M task.</p>
+         * <p>The type of the O\&amp;M task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coredump</p>
          */
         @NameInMap("OpsType")
         public String opsType;
 
         /**
-         * <p>The content of the O\&M result. The content is the download URL of the files that are generated for the O\&M task.</p>
+         * <p>The content of the O\&amp;M result. The content is the download URL of the files that are generated for the O\&amp;M task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://******</p>
          */
         @NameInMap("ResultContent")
         public String resultContent;
 
         /**
-         * <p>The type of the O\&M result. Valid value: OSS. This value indicates that the files generated for the O\&M task are saved to Object Storage Service (OSS) buckets.</p>
+         * <p>The type of the O\&amp;M result. Valid value: OSS. This value indicates that the files generated for the O\&amp;M task are saved to Object Storage Service (OSS) buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("ResultType")
         public String resultType;

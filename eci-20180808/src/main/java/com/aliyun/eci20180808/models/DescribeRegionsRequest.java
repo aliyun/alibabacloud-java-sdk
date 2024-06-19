@@ -12,6 +12,9 @@ public class DescribeRegionsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

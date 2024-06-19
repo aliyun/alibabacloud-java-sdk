@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateContainerGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the elastic container instance.</p>
+     * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eci-uf6fonnghi50u374****</p>
      */
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89945DD3-9072-47D0-A318-353284CFC7B3</p>
      */
     @NameInMap("RequestId")
     public String requestId;

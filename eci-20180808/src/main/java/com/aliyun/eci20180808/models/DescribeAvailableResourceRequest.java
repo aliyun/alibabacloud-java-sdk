@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The information about the resource that you want to query.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationResource")
     public DescribeAvailableResourceRequestDestinationResource destinationResource;
@@ -18,8 +19,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the ECS instance families.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~146965~~) operation to query the most recent list of regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/146965.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,8 +42,10 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The zone ID of the ECS instance families.</p>
-     * <br>
      * <p>This parameter is empty by default, which indicates that ECS instance families available in all zones in the specified region are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -116,30 +122,45 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public static class DescribeAvailableResourceRequestDestinationResource extends TeaModel {
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>*   InstanceTypeFamily: queries instance families. If you use this parameter value, you must also specify the Value parameter.</p>
-         * <p>*   InstanceType: queries instance types. If you use this parameter value, you must also specify the Value, Cores, and Memory parameters.</p>
+         * <ul>
+         * <li>InstanceTypeFamily: queries instance families. If you use this parameter value, you must also specify the Value parameter.</li>
+         * <li>InstanceType: queries instance types. If you use this parameter value, you must also specify the Value, Cores, and Memory parameters.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceTypeFamily</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The number of vCPUs. This parameter is available only when the Category parameter is set to InstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cores")
         public Float cores;
 
         /**
          * <p>The size of the memory. Unit: GiB. This parameter is available only when the Category parameter is set to InstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Memory")
         public Float memory;
 
         /**
          * <p>Instance families or instance types.</p>
-         * <br>
-         * <p>*   If you set Category to InstanceTypeFamily, you must set this parameter to instance families such as ecs.c5.</p>
-         * <p>*   If you set Category to InstanceType, you must set this parameter to instance types such as ecs.c5.large.</p>
+         * <ul>
+         * <li>If you set Category to InstanceTypeFamily, you must set this parameter to instance families such as ecs.c5.</li>
+         * <li>If you set Category to InstanceType, you must set this parameter to instance types such as ecs.c5.large.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6</p>
          */
         @NameInMap("Value")
         public String value;
@@ -186,26 +207,36 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public static class DescribeAvailableResourceRequestSpotResource extends TeaModel {
         /**
          * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
         /**
          * <p>The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places. If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         @NameInMap("SpotPriceLimit")
         public Double spotPriceLimit;
 
         /**
          * <p>The bidding policy for the elastic container instance. Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
-         * <br>
+         * <ul>
+         * <li>NoSpot: The instance is created as a regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * </ul>
          * <p>Default value: NoSpot.</p>
-         * <br>
-         * <p>> If you set this parameter to SpotWithPriceLimit or SpotAsPriceGo to query preemptible instances, you must set Category to InstanceType. You must also use the Value parameter to specify instance types, or use the Cores and Memory parameters to specify the number of vCPUs and memory size.</p>
+         * <blockquote>
+         * <p>If you set this parameter to SpotWithPriceLimit or SpotAsPriceGo to query preemptible instances, you must set Category to InstanceType. You must also use the Value parameter to specify instance types, or use the Cores and Memory parameters to specify the number of vCPUs and memory size.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SpotAsPriceGo</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;

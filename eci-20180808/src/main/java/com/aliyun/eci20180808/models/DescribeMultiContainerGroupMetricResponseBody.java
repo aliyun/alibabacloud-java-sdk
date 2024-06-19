@@ -12,6 +12,9 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8756BA0-6452-419C-9727-37A6209C85E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU extends TeaModel {
         /**
          * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("Limit")
         public Long limit;
 
         /**
          * <p>The average load in the last 10 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Load")
         public Long load;
 
         /**
          * <p>The cumulative usage of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70769883</p>
          */
         @NameInMap("UsageCoreNanoSeconds")
         public Long usageCoreNanoSeconds;
 
         /**
          * <p>The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UsageNanoCores")
         public Long usageNanoCores;
@@ -104,24 +119,36 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU extends TeaModel {
         /**
          * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321234</p>
          */
         @NameInMap("Limit")
         public Long limit;
 
         /**
          * <p>The average load in the last 10 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12341</p>
          */
         @NameInMap("Load")
         public Long load;
 
         /**
          * <p>The cumulative usage of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40876694</p>
          */
         @NameInMap("UsageCoreNanoSeconds")
         public Long usageCoreNanoSeconds;
 
         /**
          * <p>The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UsageNanoCores")
         public Long usageNanoCores;
@@ -168,30 +195,45 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory extends TeaModel {
         /**
          * <p>The size of the available memory. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4285091840</p>
          */
         @NameInMap("AvailableBytes")
         public Long availableBytes;
 
         /**
          * <p>The size of the cache. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9289728</p>
          */
         @NameInMap("Cache")
         public Long cache;
 
         /**
          * <p>The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9289728</p>
          */
         @NameInMap("Rss")
         public Long rss;
 
         /**
          * <p>The size of the used memory. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9289728</p>
          */
         @NameInMap("UsageBytes")
         public Long usageBytes;
 
         /**
          * <p>The usage of the working set. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9289728</p>
          */
         @NameInMap("WorkingSet")
         public Long workingSet;
@@ -258,6 +300,9 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -296,30 +341,45 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk extends TeaModel {
         /**
          * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/vda</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
          * <p>The amount of data that was read from the disk. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210714112</p>
          */
         @NameInMap("ReadBytes")
         public Long readBytes;
 
         /**
          * <p>This parameter is unavailable for public use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ReadIo")
         public Long readIo;
 
         /**
          * <p>The amount of data that was written to the disk. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1375109120</p>
          */
         @NameInMap("WriteBytes")
         public Long writeBytes;
 
         /**
          * <p>This parameter is unavailable for public use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("WriteIo")
         public Long writeIo;
@@ -374,24 +434,36 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem extends TeaModel {
         /**
          * <p>The size of the available space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35319836672</p>
          */
         @NameInMap("Available")
         public Long available;
 
         /**
          * <p>The total file system space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41610981376</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
          * <p>The name of the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/root</p>
          */
         @NameInMap("FsName")
         public String fsName;
 
         /**
          * <p>The size of used space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4368744448</p>
          */
         @NameInMap("Usage")
         public Long usage;
@@ -438,30 +510,45 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory extends TeaModel {
         /**
          * <p>The size of the available memory. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4289445888</p>
          */
         @NameInMap("AvailableBytes")
         public Long availableBytes;
 
         /**
          * <p>The size of the cache. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7028736</p>
          */
         @NameInMap("Cache")
         public Long cache;
 
         /**
          * <p>The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593344</p>
          */
         @NameInMap("Rss")
         public Long rss;
 
         /**
          * <p>The size of the used memory. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11153408</p>
          */
         @NameInMap("UsageBytes")
         public Long usageBytes;
 
         /**
          * <p>The usage of the working set. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5521408</p>
          */
         @NameInMap("WorkingSet")
         public Long workingSet;
@@ -516,54 +603,81 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces extends TeaModel {
         /**
          * <p>The name of the NIC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The total number of bytes received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>505001954</p>
          */
         @NameInMap("RxBytes")
         public Long rxBytes;
 
         /**
          * <p>The number of packets that fail to be received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RxDrops")
         public Long rxDrops;
 
         /**
          * <p>The number of receipt errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RxErrors")
         public Long rxErrors;
 
         /**
          * <p>The total number of packets received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4800583</p>
          */
         @NameInMap("RxPackets")
         public Long rxPackets;
 
         /**
          * <p>The total number of bytes sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381805699</p>
          */
         @NameInMap("TxBytes")
         public Long txBytes;
 
         /**
          * <p>The number of packets that fail to arrive at their destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TxDrops")
         public Long txDrops;
 
         /**
          * <p>The total number of sending errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TxErrors")
         public Long txErrors;
 
         /**
          * <p>The total number of packets sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5158427</p>
          */
         @NameInMap("TxPackets")
         public Long txPackets;
@@ -708,6 +822,9 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
         /**
          * <p>The time when the entry of monitoring data was collected. The time follows the RFC 3339 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-19T02:31:54Z</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
@@ -778,6 +895,9 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatas extends TeaModel {
         /**
          * <p>The ID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp15oolgorelvhfb****</p>
          */
         @NameInMap("ContainerGroupId")
         public String containerGroupId;

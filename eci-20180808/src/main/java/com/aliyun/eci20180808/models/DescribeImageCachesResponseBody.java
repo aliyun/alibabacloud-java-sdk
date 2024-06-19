@@ -12,18 +12,27 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39FC2E43-3DD7-4CEF-9EF4-E4AD6E635301</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,42 +77,63 @@ public class DescribeImageCachesResponseBody extends TeaModel {
     public static class DescribeImageCachesResponseBodyImageCachesEvents extends TeaModel {
         /**
          * <p>The number of events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The time when the event started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-09T02:24:48Z</p>
          */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
         /**
          * <p>The time when the event ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-09T02:24:48Z</p>
          */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully check image cache resource.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imagetest.1661f31f851a****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The cause of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The type of the event. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Type")
         public String type;
@@ -174,12 +204,18 @@ public class DescribeImageCachesResponseBody extends TeaModel {
     public static class DescribeImageCachesResponseBodyImageCachesTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -210,20 +246,28 @@ public class DescribeImageCachesResponseBody extends TeaModel {
     public static class DescribeImageCachesResponseBodyImageCaches extends TeaModel {
         /**
          * <p>The ID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp18oq3m15prd9jb****</p>
          */
         @NameInMap("ContainerGroupId")
         public String containerGroupId;
 
         /**
          * <p>The time when the image cache was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-09T02:24:07Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The elimination policy of the image cache. This parameter is empty by default, which indicates that the image cache is always retained.</p>
-         * <br>
          * <p>You can set this parameter to LRU, which indicates that the image cache can be automatically deleted. When the number of image caches reaches the quota, the system automatically deletes the image caches whose EliminationStrategy parameter is set to LRU and that are least regularly used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LRU</p>
          */
         @NameInMap("EliminationStrategy")
         public String eliminationStrategy;
@@ -236,30 +280,45 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the image cache expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-10T09:00:48Z</p>
          */
         @NameInMap("ExpireDateTime")
         public String expireDateTime;
 
         /**
          * <p>The ID of the local snapshot. A temporary local snapshot is created if the instant image cache feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp12w3v37sit96t6****</p>
          */
         @NameInMap("FlashSnapshotId")
         public String flashSnapshotId;
 
         /**
          * <p>The ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-bp195erqe9o2pb09****</p>
          */
         @NameInMap("ImageCacheId")
         public String imageCacheId;
 
         /**
          * <p>The name of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imagetest</p>
          */
         @NameInMap("ImageCacheName")
         public String imageCacheName;
 
         /**
          * <p>The size of the image cache. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ImageCacheSize")
         public Integer imageCacheSize;
@@ -272,47 +331,66 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the image cache was last matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-18T03:48:10Z</p>
          */
         @NameInMap("LastMatchedTime")
         public String lastMatchedTime;
 
         /**
          * <p>The progress of creating the snapshot that is used to create the image cache.</p>
-         * <br>
-         * <p>>  If the instant image cache feature is enabled, the system creates a temporary local snapshot and then a regular snapshot. In this case, this parameter indicates the progress of creating the regular snapshot.</p>
+         * <blockquote>
+         * <p> If the instant image cache feature is enabled, the system creates a temporary local snapshot and then a regular snapshot. In this case, this parameter indicates the progress of creating the regular snapshot.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The region ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the image cache belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-2df3isufhi38****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the snapshot that corresponds to the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zec5oj8e1yhxijt****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The status of the image cache. Valid values:</p>
-         * <br>
-         * <p>*   Preparing: The image cache is being prepared.</p>
-         * <p>*   Creating: The image is being created.</p>
-         * <p>*   Ready: The image cache is created.</p>
-         * <p>*   Failed: The image cache failed to be created.</p>
-         * <p>*   Updating: The image cache is being updated.</p>
-         * <p>*   UpdateFailed: The image cache failed to be updated.</p>
-         * <br>
+         * <ul>
+         * <li>Preparing: The image cache is being prepared.</li>
+         * <li>Creating: The image is being created.</li>
+         * <li>Ready: The image cache is created.</li>
+         * <li>Failed: The image cache failed to be created.</li>
+         * <li>Updating: The image cache is being updated.</li>
+         * <li>UpdateFailed: The image cache failed to be updated.</li>
+         * </ul>
          * <p>The image cache is ready for use when it is in the Ready state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         @NameInMap("Status")
         public String status;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteDataCacheRequest extends TeaModel {
     /**
      * <p>The bucket that stores the DataCache. By default, the bucket is named default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Bucket")
     public String bucket;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure the idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5e74729e-ce21-4c3e-9163-cbaf0f02768e</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the DataCache.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edc-bp1a7n7uawwwol******</p>
      */
     @NameInMap("DataCacheId")
     public String dataCacheId;
@@ -30,12 +39,19 @@ public class DeleteDataCacheRequest extends TeaModel {
 
     /**
      * <p>The directory in which the virtual host of the DataCache is located.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/data/models/</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The region ID of the DataCache.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
