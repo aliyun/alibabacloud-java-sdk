@@ -9,10 +9,17 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66A98669-CC6E-4F3E-80A6-3014***B11AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,18 +53,38 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
     }
 
     public static class DescribeApisecAbnormalDomainStatisticResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ApiCount")
         public Long apiCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ba.aliyun.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("High")
         public Long high;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Low")
         public Long low;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("Medium")
         public Long medium;
 

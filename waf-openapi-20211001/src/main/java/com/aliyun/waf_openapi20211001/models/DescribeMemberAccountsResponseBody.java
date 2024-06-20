@@ -12,6 +12,9 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50C4A80D-D46C-57E0-9A7D-03C0****4852</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,34 +43,50 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
     public static class DescribeMemberAccountsResponseBodyAccountInfos extends TeaModel {
         /**
          * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169************21</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipflgmqqnbjg</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The status of the member.</p>
-         * <br>
-         * <p>*   **enabled**: managed.</p>
-         * <p>*   **disabled**: not managed.</p>
-         * <p>*   **disabling**: being deleted.</p>
+         * <ul>
+         * <li><strong>enabled</strong>: managed.</li>
+         * <li><strong>disabled</strong>: not managed.</li>
+         * <li><strong>disabling</strong>: being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
          * <p>The description of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the member was added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683367751000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;

@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeSlsLogStoreResponseBody extends TeaModel {
     /**
      * <p>The name of the Logstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wafng-logstore</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
 
     /**
      * <p>The name of the Simple Log Service project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wafng-project-14316572********-cn-hangzhou</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The capacity of the Logstore. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3298534883328</p>
      */
     @NameInMap("Quota")
     public Long quota;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAC0A24B-486A-5E12-9894-BE860E5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The storage duration of the Logstore. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;
 
     /**
      * <p>The used capacity of the Logstore. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35471136</p>
      */
     @NameInMap("Used")
     public Long used;

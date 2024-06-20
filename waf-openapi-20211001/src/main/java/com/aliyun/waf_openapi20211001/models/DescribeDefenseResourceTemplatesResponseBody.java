@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2305CEB0-BA5A-5543-A1D3-3F1D0891****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,75 +43,106 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
     public static class DescribeDefenseResourceTemplatesResponseBodyTemplates extends TeaModel {
         /**
          * <p>The scenario in which the protection template is used.</p>
-         * <br>
-         * <p>*   **waf_group**: basic protection.</p>
-         * <p>*   **antiscan**: scan protection.</p>
-         * <p>*   **ip_blacklist**: IP address blacklist.</p>
-         * <p>*   **custom_acl**: custom rule.</p>
-         * <p>*   **whitelist**: whitelist.</p>
-         * <p>*   **region_block**: region blacklist.</p>
-         * <p>*   **custom_response**: custom response.</p>
-         * <p>*   **cc**: HTTP flood protection.</p>
-         * <p>*   **tamperproof**: website tamper-proofing.</p>
-         * <p>*   **dlp**: data leakage prevention.</p>
+         * <ul>
+         * <li><strong>waf_group</strong>: basic protection.</li>
+         * <li><strong>antiscan</strong>: scan protection.</li>
+         * <li><strong>ip_blacklist</strong>: IP address blacklist.</li>
+         * <li><strong>custom_acl</strong>: custom rule.</li>
+         * <li><strong>whitelist</strong>: whitelist.</li>
+         * <li><strong>region_block</strong>: region blacklist.</li>
+         * <li><strong>custom_response</strong>: custom response.</li>
+         * <li><strong>cc</strong>: HTTP flood protection.</li>
+         * <li><strong>tamperproof</strong>: website tamper-proofing.</li>
+         * <li><strong>dlp</strong>: data leakage prevention.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>whitelist</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
          * <p>The sub-scenario in which the template is used. Valid values:</p>
-         * <br>
-         * <p>*   **web**: bot management for website protection.</p>
-         * <p>*   **app**: bot management for app protection.</p>
-         * <p>*   **basic**: bot management for basic protection.</p>
+         * <ul>
+         * <li><strong>web</strong>: bot management for website protection.</li>
+         * <li><strong>app</strong>: bot management for app protection.</li>
+         * <li><strong>basic</strong>: bot management for basic protection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         @NameInMap("DefenseSubScene")
         public String defenseSubScene;
 
         /**
          * <p>The description of the protection template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the protection template was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1692930539000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the protection template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>The name of the protection template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestTemplateName</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The origin of the protection template. The value custom indicates that the template is a custom template created by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("TemplateOrigin")
         public String templateOrigin;
 
         /**
          * <p>The status of the protection template. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled.</p>
-         * <p>*   **1**: enabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TemplateStatus")
         public Integer templateStatus;
 
         /**
          * <p>The type of the protection template. Valid values:</p>
-         * <br>
-         * <p>*   **user_default**: default template.</p>
-         * <p>*   **user_custom**: custom template.</p>
+         * <ul>
+         * <li><strong>user_default</strong>: default template.</li>
+         * <li><strong>user_custom</strong>: custom template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user_custom</p>
          */
         @NameInMap("TemplateType")
         public String templateType;

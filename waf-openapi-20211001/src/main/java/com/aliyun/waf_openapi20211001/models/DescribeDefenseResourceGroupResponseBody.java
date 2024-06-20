@@ -12,6 +12,9 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E67D21C6-5376-5F94-B745-70E08D03E3CB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
     public static class DescribeDefenseResourceGroupResponseBodyGroup extends TeaModel {
         /**
          * <p>The description of the protected object group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the protected object group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23242312312</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The most recent time when the protected object group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23242312312</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The name of the protected object group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The protected objects in the protected object group. The protected objects are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.aliyundoc.com,test2.aliyundoc.com</p>
          */
         @NameInMap("ResourceList")
         public String resourceList;

@@ -12,12 +12,18 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41631674-EEB0-5B02-BEB4-40A758E9B841</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of IP addresses in the blacklist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,38 +60,57 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     public static class DescribeMajorProtectionBlackIpsResponseBodyIpList extends TeaModel {
         /**
          * <p>The description of the IP address in the blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0003asdffas</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time after which the IP address blacklist becomes invalid. Unit: seconds.</p>
-         * <br>
-         * <p>>  If the value of this parameter is **0**, the blacklist is permanently valid.</p>
+         * <blockquote>
+         * <p> If the value of this parameter is <strong>0</strong>, the blacklist is permanently valid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1662603328</p>
          */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
         /**
          * <p>The most recent time when the IP address blacklist was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665456202000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The IP address in the IP address blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The ID of the IP address blacklist rule for major event protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8508970</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The ID of the rule template for major event protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9684</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVisitTopIpResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D2B8DAE-A761-58CB-A68D-74989E4831DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeVisitTopIpResponseBody extends TeaModel {
     public static class DescribeVisitTopIpResponseBodyTopIp extends TeaModel {
         /**
          * <p>The ordinal number of the area to which the IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310000</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The total number of requests that are sent from the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2622</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAA</p>
          */
         @NameInMap("Isp")
         public String isp;

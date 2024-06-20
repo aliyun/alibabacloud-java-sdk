@@ -6,52 +6,75 @@ import com.aliyun.tea.*;
 public class DescribeCertsRequest extends TeaModel {
     /**
      * <p>The type of the encryption algorithm. Valid values:</p>
-     * <br>
-     * <p>*   **NotSM2**: The encryption algorithm is not the SM2 algorithm. This is the default value.</p>
-     * <p>*   **SM2**: The encryption algorithm is the SM2 algorithm.</p>
+     * <ul>
+     * <li><strong>NotSM2</strong>: The encryption algorithm is not the SM2 algorithm. This is the default value.</li>
+     * <li><strong>SM2</strong>: The encryption algorithm is the SM2 algorithm.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SM2</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyun.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The ID of the WAF instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v3prepaid_public_cn-5yd****tb02</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmoiy****p2oq</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;

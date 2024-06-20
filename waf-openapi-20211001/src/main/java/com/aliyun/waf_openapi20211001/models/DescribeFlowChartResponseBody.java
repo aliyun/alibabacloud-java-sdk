@@ -12,6 +12,9 @@ public class DescribeFlowChartResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BFA71416-670E-585D-AAE6-E7BBEE248FAB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,144 +43,216 @@ public class DescribeFlowChartResponseBody extends TeaModel {
     public static class DescribeFlowChartResponseBodyFlowChart extends TeaModel {
         /**
          * <p>The number of requests that are blocked by custom access control list (ACL) rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AclCustomBlockSum")
         public Long aclCustomBlockSum;
 
         /**
          * <p>The number of requests that are monitored by custom ACL rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AclCustomReportsSum")
         public Long aclCustomReportsSum;
 
         /**
          * <p>The number of requests that are blocked by scan protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AntiScanBlockSum")
         public Long antiScanBlockSum;
 
         /**
          * <p>The number of requests that are blocked by bot management rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AntibotBlockSum")
         public Long antibotBlockSum;
 
         /**
          * <p>The number of requests that are monitored by bot management rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AntibotReportSum")
         public String antibotReportSum;
 
         /**
          * <p>The number of requests that are monitored by scan protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AntiscanReportsSum")
         public Long antiscanReportsSum;
 
         /**
          * <p>The number of requests that are blocked by the IP address blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BlacklistBlockSum")
         public String blacklistBlockSum;
 
         /**
          * <p>The number of requests that are monitored by the IP address blacklist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BlacklistReportsSum")
         public Long blacklistReportsSum;
 
         /**
          * <p>The number of requests that are blocked by custom HTTP flood protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CcCustomBlockSum")
         public Long ccCustomBlockSum;
 
         /**
          * <p>The number of requests that are monitored by custom HTTP flood protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CcCustomReportsSum")
         public Long ccCustomReportsSum;
 
         /**
          * <p>The number of requests that are blocked by HTTP flood protection rules created by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CcSystemBlocksSum")
         public Long ccSystemBlocksSum;
 
         /**
          * <p>The number of requests that are monitored by HTTP flood protection rules created by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CcSystemReportsSum")
         public Long ccSystemReportsSum;
 
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2932</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The total number of requests that are redirected to the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121645464</p>
          */
         @NameInMap("InBytes")
         public Long inBytes;
 
         /**
          * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Index")
         public Long index;
 
         /**
          * <p>The peak traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2932</p>
          */
         @NameInMap("MaxPv")
         public Long maxPv;
 
         /**
          * <p>The total number of requests that are forwarded by the WAF instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200540464</p>
          */
         @NameInMap("OutBytes")
         public Long outBytes;
 
         /**
          * <p>The number of requests that are blocked by rate limiting rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RatelimitBlockSum")
         public Long ratelimitBlockSum;
 
         /**
          * <p>The number of requests that are monitored by rate limiting rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RatelimitReportSum")
         public Long ratelimitReportSum;
 
         /**
          * <p>The number of requests that are blocked by region blacklist rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RegionBlockBlocksSum")
         public Long regionBlockBlocksSum;
 
         /**
          * <p>The number of requests that are monitored by region blacklist rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RegionBlockReportsSum")
         public Long regionBlockReportsSum;
 
         /**
          * <p>The total number of bot requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1110</p>
          */
         @NameInMap("RobotCount")
         public Long robotCount;
 
         /**
          * <p>The number of requests that are blocked by basic protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WafBlockSum")
         public Long wafBlockSum;
 
         /**
          * <p>The number of requests that are monitored by basic protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WafReportSum")
         public String wafReportSum;

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>waf_openapi20211001</artifactId>
-  <version>3.5.0</version>
+  <version>3.6.0</version>
   <packaging>jar</packaging>
   <name>waf_openapi20211001</name>
   <description>Alibaba Cloud waf-openapi (20211001) SDK for Java

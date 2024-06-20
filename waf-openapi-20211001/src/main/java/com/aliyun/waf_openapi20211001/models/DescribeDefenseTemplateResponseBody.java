@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDefenseTemplateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,65 +42,95 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
 
     public static class DescribeDefenseTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>The scenario in which the template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.</p>
+         * <p>The scenario in which the template is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
         /**
          * <p>The sub-scenario in which the template is used. Valid values:</p>
-         * <br>
-         * <p>*   **web**: The template is a bot management template that is used for website protection.</p>
-         * <p>*   **app**: The template is a bot management template that is used for app protection.</p>
-         * <p>*   **basic**: The template is a bot management template that is used for basic protection.</p>
+         * <ul>
+         * <li><strong>web</strong>: The template is a bot management template that is used for website protection.</li>
+         * <li><strong>app</strong>: The template is a bot management template that is used for app protection.</li>
+         * <li><strong>basic</strong>: The template is a bot management template that is used for basic protection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("DefenseSubScene")
         public String defenseSubScene;
 
         /**
          * <p>The description of the protection rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The most recent time when the protection rule template was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665283642000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the protection rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10097</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>The name of the protection rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0621</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The origin of the protection rule template. If the value of this parameter is custom, the protection rule template is created by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("TemplateOrigin")
         public String templateOrigin;
 
         /**
          * <p>The status of the protection rule template. Valid values:</p>
-         * <br>
-         * <p>*   **0:** disabled.</p>
-         * <p>*   **1:** enabled.</p>
+         * <ul>
+         * <li><strong>0:</strong> disabled.</li>
+         * <li><strong>1:</strong> enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TemplateStatus")
         public Integer templateStatus;
 
         /**
          * <p>The type of the protection rule template. Valid values:</p>
-         * <br>
-         * <p>*   **user_default:** default template.</p>
-         * <p>*   **user_custom:** custom template.</p>
+         * <ul>
+         * <li><strong>user_default:</strong> default template.</li>
+         * <li><strong>user_custom:</strong> custom template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
          */
         @NameInMap("TemplateType")
         public String templateType;

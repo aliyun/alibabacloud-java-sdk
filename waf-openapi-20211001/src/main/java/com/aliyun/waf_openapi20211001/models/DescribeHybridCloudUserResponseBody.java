@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeHybridCloudUserResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9178CB86-285F-5679-A30A-3B3F007E4206</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class DescribeHybridCloudUserResponseBody extends TeaModel {
 
     public static class DescribeHybridCloudUserResponseBodyUserInfo extends TeaModel {
         /**
-         * <p>The HTTP ports. The value is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.</p>
+         * <p>The HTTP ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80,8080</p>
          */
         @NameInMap("HttpPorts")
         public String httpPorts;
 
         /**
-         * <p>The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.</p>
+         * <p>The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8443,443</p>
          */
         @NameInMap("HttpsPorts")
         public String httpsPorts;

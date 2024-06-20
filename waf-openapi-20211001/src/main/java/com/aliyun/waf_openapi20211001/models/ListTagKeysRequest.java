@@ -6,33 +6,45 @@ import com.aliyun.tea.*;
 public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v3prepaid_public_cn-wwo****iw02</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
-     * <br>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

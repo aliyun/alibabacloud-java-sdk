@@ -12,12 +12,18 @@ public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EA4B39A-9C0C-5E57-993E-30B6****3AD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

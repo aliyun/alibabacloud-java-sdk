@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRuleGroupsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02E9A4B8-90FB-5F41-A049-C82277EB82FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,44 +60,64 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
     public static class DescribeRuleGroupsResponseBodyRuleGroups extends TeaModel {
         /**
          * <p>The most recent time when the rule group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1664336364000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>Indicates whether the automatic update feature is enabled for the rule group.</p>
-         * <br>
-         * <p>*   1: The automatic update feature is enabled for the rule group.</p>
-         * <p>*   2: The automatic update feature is disabled for the rule group.</p>
+         * <ul>
+         * <li>1: The automatic update feature is enabled for the rule group.</li>
+         * <li>2: The automatic update feature is disabled for the rule group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsSubscribe")
         public Integer isSubscribe;
 
         /**
          * <p>The ID of the rule group.</p>
-         * <br>
-         * <p>*   0: The rule group is created from scratch.</p>
-         * <p>*   1011: The rule group is a strict rule group.</p>
-         * <p>*   1012: The rule group is a medium rule group.</p>
-         * <p>*   1013: The rue group is a loose rule group.</p>
+         * <ul>
+         * <li>0: The rule group is created from scratch.</li>
+         * <li>1011: The rule group is a strict rule group.</li>
+         * <li>1012: The rule group is a medium rule group.</li>
+         * <li>1013: The rue group is a loose rule group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1012</p>
          */
         @NameInMap("ParentRuleGroupId")
         public Long parentRuleGroupId;
 
         /**
          * <p>The ID of the regular expression rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115361</p>
          */
         @NameInMap("RuleGroupId")
         public Long ruleGroupId;
 
         /**
          * <p>The name of the rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssssss</p>
          */
         @NameInMap("RuleGroupName")
         public String ruleGroupName;
 
         /**
          * <p>The number of built-in rules in the rule group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4444</p>
          */
         @NameInMap("RuleTotalCount")
         public Integer ruleTotalCount;

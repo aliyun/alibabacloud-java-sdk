@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeResourceLogStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DABF8AB-2321-5F8D-A8D7-922D757FBFFE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
     public static class DescribeResourceLogStatusResponseBodyResult extends TeaModel {
         /**
          * <p>The protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-wewbb23dfsetetcic****</p>
          */
         @NameInMap("Resource")
         public String resource;
 
         /**
          * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
-         * <br>
-         * <p>*   **true:** The log collection feature is enabled.</p>
-         * <p>*   **false:** The log collection feature is disabled.</p>
+         * <ul>
+         * <li><strong>true:</strong> The log collection feature is enabled.</li>
+         * <li><strong>false:</strong> The log collection feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Status")
         public Boolean status;

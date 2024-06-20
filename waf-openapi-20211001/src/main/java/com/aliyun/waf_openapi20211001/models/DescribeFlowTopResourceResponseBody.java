@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeFlowTopResourceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8F0E0B9A-B518-5C6D-BEFC-A373DDE4F652</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeFlowTopResourceResponseBody extends TeaModel {
     public static class DescribeFlowTopResourceResponseBodyRuleHitsTopResource extends TeaModel {
         /**
          * <p>The total number of requests received by the protected object in a specified time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181174784</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         @NameInMap("Resource")
         public String resource;

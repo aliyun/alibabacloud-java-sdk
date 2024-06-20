@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDefenseResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D69B341-4F97-58E7-9E16-1B17FE7A9E98</p>
      */
     @NameInMap("RequestId")
     public String requestId;

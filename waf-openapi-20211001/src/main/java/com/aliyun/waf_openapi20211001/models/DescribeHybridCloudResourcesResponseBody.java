@@ -12,12 +12,18 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98D2AA9A-5959-5CCD-83E3-B6606232A2BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,60 +60,84 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
     public static class DescribeHybridCloudResourcesResponseBodyDomainsListen extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72***76-cn-hangzhou</p>
          */
         @NameInMap("CertId")
         public String certId;
 
         /**
          * <p>The types of cipher suites that are added. Valid values:</p>
-         * <br>
-         * <p>*   **1:** all cipher suites.</p>
-         * <p>*   **2:** strong cipher suites.</p>
-         * <p>*   **99:** custom cipher suites.</p>
+         * <ul>
+         * <li><strong>1:</strong> all cipher suites.</li>
+         * <li><strong>2:</strong> strong cipher suites.</li>
+         * <li><strong>99:</strong> custom cipher suites.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CipherSuite")
         public Integer cipherSuite;
 
         /**
          * <p>The custom cipher suites.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of **CipherSuite** is **99**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>CipherSuite</strong> is <strong>99</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
         /**
          * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableTLSv3")
         public Boolean enableTLSv3;
 
         /**
          * <p>Indicates whether exclusive IP addresses are supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ExclusiveIp")
         public Boolean exclusiveIp;
 
         /**
          * <p>Indicates whether the HTTP to HTTPS redirection feature is enabled for the domain name. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("FocusHttps")
         public Boolean focusHttps;
 
         /**
          * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Http2Enabled")
         public Boolean http2Enabled;
@@ -126,46 +156,63 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable IPv6. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IPv6Enabled")
         public Boolean IPv6Enabled;
 
         /**
          * <p>The type of the protection resource. Valid values:</p>
-         * <br>
-         * <p>*   **share:** shared cluster.</p>
-         * <p>*   **gslb:** shared cluster-based intelligent load balancing.</p>
+         * <ul>
+         * <li><strong>share:</strong> shared cluster.</li>
+         * <li><strong>gslb:</strong> shared cluster-based intelligent load balancing.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>share</p>
          */
         @NameInMap("ProtectionResource")
         public String protectionResource;
 
         /**
          * <p>The version of the Transport Layer Security (TLS) protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tlsv1**</p>
-         * <p>*   **tlsv1.1**</p>
-         * <p>*   **tlsv1.2**</p>
+         * <ul>
+         * <li><strong>tlsv1</strong></li>
+         * <li><strong>tlsv1.1</strong></li>
+         * <li><strong>tlsv1.2</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tlsv1.2</p>
          */
         @NameInMap("TLSVersion")
         public String TLSVersion;
 
         /**
          * <p>The method that is used to obtain the actual IP address of a client. Valid values:</p>
-         * <br>
-         * <p>*   **0**: No Layer 7 proxies are deployed in front of WAF.</p>
-         * <p>*   **1**: WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</p>
-         * <p>*   **2**: WAF reads the value of a custom header field as the actual IP address of the client.</p>
+         * <ul>
+         * <li><strong>0</strong>: No Layer 7 proxies are deployed in front of WAF.</li>
+         * <li><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the actual IP address of the client.</li>
+         * <li><strong>2</strong>: WAF reads the value of a custom header field as the actual IP address of the client.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("XffHeaderMode")
         public Integer xffHeaderMode;
 
         /**
-         * <p>The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the ["header1","header2",...] format.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of **XffHeaderMode** is 2.</p>
+         * <p>The custom header fields that are used to obtain the actual IP addresses of clients. The value is in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>XffHeaderMode</strong> is 2.</p>
+         * </blockquote>
          */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
@@ -292,12 +339,18 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
     public static class DescribeHybridCloudResourcesResponseBodyDomainsRedirectRequestHeaders extends TeaModel {
         /**
          * <p>The key of the custom header field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the custom header field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbb</p>
          */
         @NameInMap("Value")
         public String value;
@@ -334,65 +387,95 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the public cloud disaster recovery feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CnameEnabled")
         public Boolean cnameEnabled;
 
         /**
          * <p>The timeout period for connections. Unit: seconds. Valid values: 5 to 120.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("ConnectTimeout")
         public Long connectTimeout;
 
         /**
          * <p>Indicates whether the HTTPS to HTTP redirection feature is enabled for back-to-origin requests. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FocusHttpBackend")
         public Boolean focusHttpBackend;
 
         /**
          * <p>Indicates whether the persistent connection feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Keepalive")
         public Boolean keepalive;
 
         /**
          * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
-         * <br>
-         * <p>>  This parameter indicates the number of reused persistent connections after the persistent connection feature is enabled.</p>
+         * <blockquote>
+         * <p> This parameter indicates the number of reused persistent connections after the persistent connection feature is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("KeepaliveRequests")
         public Long keepaliveRequests;
 
         /**
          * <p>The timeout period for persistent connections that are in the Idle state. Unit: seconds. Valid values: 1 to 60. Default value: 15.</p>
-         * <br>
-         * <p>>  This parameter indicates the period of time during which a reused persistent connection can remain in the Idle state before the persistent connection is released.</p>
+         * <blockquote>
+         * <p> This parameter indicates the period of time during which a reused persistent connection can remain in the Idle state before the persistent connection is released.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("KeepaliveTimeout")
         public Long keepaliveTimeout;
 
         /**
          * <p>The load balancing algorithm that is used to forward requests to the origin server. Valid values:</p>
-         * <br>
-         * <p>*   **iphash**</p>
-         * <p>*   **roundRobin**</p>
-         * <p>*   **leastTime**</p>
+         * <ul>
+         * <li><strong>iphash</strong></li>
+         * <li><strong>roundRobin</strong></li>
+         * <li><strong>leastTime</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>iphash</p>
          */
         @NameInMap("Loadbalance")
         public String loadbalance;
 
         /**
          * <p>The timeout period for read connections. Unit: seconds. Valid values: 5 to 1800.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("ReadTimeout")
         public Long readTimeout;
@@ -405,42 +488,69 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether WAF retries forwarding requests if requests fail to be forwarded to the origin server. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Retry")
         public Boolean retry;
 
         /**
          * <p>The forwarding rules that are configured for the domain name. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
-         * <br>
-         * <p>*   **rs**: the back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.</p>
-         * <p>*   **location**: the name of the protection node. The value is of the STRING type.</p>
-         * <p>*   **locationId**: the ID of the protection node. The value is of the LONG type.</p>
+         * <ul>
+         * <li><strong>rs</strong>: the back-to-origin IP addresses or CNAMEs. The value is of the ARRAY type.</li>
+         * <li><strong>location</strong>: the name of the protection node. The value is of the STRING type.</li>
+         * <li><strong>locationId</strong>: the ID of the protection node. The value is of the LONG type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;rs&quot;: [
+         *                   &quot;1.1.XX.XX&quot;
+         *             ],
+         *             &quot;locationId&quot;: 535,
+         *             &quot;location&quot;: &quot;test1111&quot;
+         *       }
+         * ]</p>
          */
         @NameInMap("RoutingRules")
         public String routingRules;
 
         /**
          * <p>Indicates whether the origin Server Name Indication (SNI) feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SniEnabled")
         public Boolean sniEnabled;
 
         /**
-         * <p>The value of the custom SNI field. If the parameter is left empty, the value of the **Host** field in the request header is automatically used as the value of the SNI field.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of **SniEnabled** is **true**.</p>
+         * <p>The value of the custom SNI field. If the parameter is left empty, the value of the <strong>Host</strong> field in the request header is automatically used as the value of the SNI field.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>SniEnabled</strong> is <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         @NameInMap("SniHost")
         public String sniHost;
 
         /**
          * <p>The timeout period for write connections. Unit: seconds. Valid values: 5 to 1800.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("WriteTimeout")
         public Long writeTimeout;
@@ -575,20 +685,30 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
     public static class DescribeHybridCloudResourcesResponseBodyDomains extends TeaModel {
         /**
          * <p>The CNAME assigned by WAF.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of **CnameEnabled** is true.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>CnameEnabled</strong> is true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50fqmu1ci7g0xtiyxnrhgx6qdhmn****.yundunwaf5.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The access ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -607,24 +727,34 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvtc5z52****</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
         /**
          * <p>The status of the domain name. Valid values:</p>
-         * <br>
-         * <p>*   **1:** The domain name is in a normal state.</p>
-         * <p>*   **2:** The domain name is being created.</p>
-         * <p>*   **3:** The domain name is being modified.</p>
-         * <p>*   **4:** The domain name is being released.</p>
-         * <p>*   **5:** WAF no longer forwards the traffic of the domain name.</p>
+         * <ul>
+         * <li><strong>1:</strong> The domain name is in a normal state.</li>
+         * <li><strong>2:</strong> The domain name is being created.</li>
+         * <li><strong>3:</strong> The domain name is being modified.</li>
+         * <li><strong>4:</strong> The domain name is being released.</li>
+         * <li><strong>5:</strong> WAF no longer forwards the traffic of the domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130715431409****</p>
          */
         @NameInMap("Uid")
         public String uid;

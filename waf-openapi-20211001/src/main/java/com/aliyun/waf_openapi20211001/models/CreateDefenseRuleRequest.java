@@ -6,62 +6,80 @@ import com.aliyun.tea.*;
 public class CreateDefenseRuleRequest extends TeaModel {
     /**
      * <p>The module to which the protection rule that you want to create belongs.</p>
-     * <br>
-     * <p>*   **waf_group:** the basic protection rule module.</p>
-     * <p>*   **antiscan:** the scan protection module.</p>
-     * <p>*   **ip_blacklist:** the IP address blacklist module.</p>
-     * <p>*   **custom_acl:** the custom rule module.</p>
-     * <p>*   **whitelist:** the whitelist module.</p>
-     * <p>*   **region_block:** the region blacklist module.</p>
-     * <p>*   **custom_response:** the custom response module.</p>
-     * <p>*   **cc:** the HTTP flood protection module.</p>
-     * <p>*   **tamperproof:** the website tamper-proofing module.</p>
-     * <p>*   **dlp:** the data leakage prevention module.</p>
-     * <br>
+     * <ul>
+     * <li><strong>waf_group:</strong> the basic protection rule module.</li>
+     * <li><strong>antiscan:</strong> the scan protection module.</li>
+     * <li><strong>ip_blacklist:</strong> the IP address blacklist module.</li>
+     * <li><strong>custom_acl:</strong> the custom rule module.</li>
+     * <li><strong>whitelist:</strong> the whitelist module.</li>
+     * <li><strong>region_block:</strong> the region blacklist module.</li>
+     * <li><strong>custom_response:</strong> the custom response module.</li>
+     * <li><strong>cc:</strong> the HTTP flood protection module.</li>
+     * <li><strong>tamperproof:</strong> the website tamper-proofing module.</li>
+     * <li><strong>dlp:</strong> the data leakage prevention module.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_group</p>
      */
     @NameInMap("DefenseScene")
     public String defenseScene;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v2_public_cn-****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
-     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The configurations of the protection rule. Specify a string that contains multiple parameters in the JSON format.</p>
-     * <br>
-     * <p>>  The parameters vary based on the value of the **DefenseScene** parameter. For more information, see the "**Protection rule parameters**" section in this topic.</p>
-     * <br>
+     * <blockquote>
+     * <p> The parameters vary based on the value of the <strong>DefenseScene</strong> parameter. For more information, see the &quot;<strong>Protection rule parameters</strong>&quot; section in this topic.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>For more information, see the following section.</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
      * <p>The ID of the protection rule template for which you want to create a protection rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1122</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

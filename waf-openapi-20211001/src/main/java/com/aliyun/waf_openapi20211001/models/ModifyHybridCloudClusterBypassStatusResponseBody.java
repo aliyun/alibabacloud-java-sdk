@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyHybridCloudClusterBypassStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

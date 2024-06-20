@@ -12,12 +12,18 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7861F61-***-6B19160D5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,42 +60,63 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
     public static class DescribeResourceInstanceCertsResponseBodyCerts extends TeaModel {
         /**
          * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708415521211</p>
          */
         @NameInMap("AfterDate")
         public Long afterDate;
 
         /**
          * <p>The time when the certificate was issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1708415521211</p>
          */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
         /**
-         * <p>The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-cn-hangzhou</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoCertName</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The common name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.aliyundemo.com</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
          * <p>The domain name for which the certificate is issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf.aliyundemo.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>Indicates whether the certificate chain is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsChainCompleted")
         public Boolean isChainCompleted;

@@ -6,94 +6,137 @@ import com.aliyun.tea.*;
 public class DescribeCloudResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v3prepaid_public_cn-lbj****cn0c</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11769793******</p>
      */
     @NameInMap("OwnerUserId")
     public String ownerUserId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The domain name. You can use this parameter if you set ResourceProduct to fc or sae.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc-domain-test</p>
      */
     @NameInMap("ResourceDomain")
     public String resourceDomain;
 
     /**
      * <p>The function name. You can use this parameter if you set ResourceProduct to fc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc-test</p>
      */
     @NameInMap("ResourceFunction")
     public String resourceFunction;
 
     /**
      * <p>The ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alb-43glijk0fr****gths</p>
      */
     @NameInMap("ResourceInstanceId")
     public String resourceInstanceId;
 
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm4gh****wela</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The name of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alb-name</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
     /**
      * <p>The cloud service to which the resource belongs. Valid values:</p>
-     * <br>
-     * <p>*   **alb**: Application Load Balancer (ALB).</p>
-     * <p>*   **mse**: Microservices Engine (MSE).</p>
-     * <p>*   **fc**: Function Compute.</p>
-     * <p>*   **sae**: Serverless App Engine (SAE).</p>
-     * <br>
-     * <p>>  Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+     * <ul>
+     * <li><strong>alb</strong>: Application Load Balancer (ALB).</li>
+     * <li><strong>mse</strong>: Microservices Engine (MSE).</li>
+     * <li><strong>fc</strong>: Function Compute.</li>
+     * <li><strong>sae</strong>: Serverless App Engine (SAE).</li>
+     * </ul>
+     * <blockquote>
+     * <p> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>alb</p>
      */
     @NameInMap("ResourceProduct")
     public String resourceProduct;
 
     /**
      * <p>The region ID of the resource. For information about region IDs, see the following table.</p>
-     * <br>
-     * <p>>  Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+     * <blockquote>
+     * <p> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
     /**
      * <p>The route name. You can use this parameter if you set ResourceProduct to mse.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-default-traffic</p>
      */
     @NameInMap("ResourceRouteName")
     public String resourceRouteName;

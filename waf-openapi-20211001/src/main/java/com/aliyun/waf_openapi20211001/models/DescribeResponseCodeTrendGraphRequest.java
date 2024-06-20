@@ -6,64 +6,87 @@ import com.aliyun.tea.*;
 public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1665386280</p>
      */
     @NameInMap("EndTimestamp")
     public String endTimestamp;
 
     /**
      * <p>The ID of the WAF instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_cdnsdf3****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The time interval. Unit: seconds. The value must be an integral multiple of 60.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
      * <p>The ID of the region where the WAF instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
-     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The protected object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
      */
     @NameInMap("Resource")
     public String resource;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The beginning of the time range to query. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1665331200</p>
      */
     @NameInMap("StartTimestamp")
     public String startTimestamp;
 
     /**
      * <p>The type of the error codes. Valid values:</p>
-     * <br>
-     * <p>*   **waf:** error codes that are returned to clients from WAF.</p>
-     * <p>*   **upstream:** error codes that are returned to WAF from the origin server.</p>
-     * <br>
+     * <ul>
+     * <li><strong>waf:</strong> error codes that are returned to clients from WAF.</li>
+     * <li><strong>upstream:</strong> error codes that are returned to WAF from the origin server.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf</p>
      */
     @NameInMap("Type")
     public String type;

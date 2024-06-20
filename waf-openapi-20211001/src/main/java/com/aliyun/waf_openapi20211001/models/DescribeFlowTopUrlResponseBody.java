@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeFlowTopUrlResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>520D4E4C-B8EC-5602-ACB6-4D378ACBA28D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
     public static class DescribeFlowTopUrlResponseBodyRuleHitsTopUrl extends TeaModel {
         /**
          * <p>The total number of requests that are initiated by using the URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181174784</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The URL that is used to initiate requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com/path1">www.aliyundoc.com/path1</a></p>
          */
         @NameInMap("Url")
         public String url;

@@ -12,12 +12,18 @@ public class DescribeCertsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19511B0D-5AE0-5600-BB8A-DC2C8345****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,45 +60,67 @@ public class DescribeCertsResponseBody extends TeaModel {
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
         /**
          * <p>The time when the certificate becomes valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1976256736582</p>
          */
         @NameInMap("AfterDate")
         public Long afterDate;
 
         /**
          * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1976256836582</p>
          */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
         /**
-         * <p>The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567-cn-hangzhou</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf1234</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The common name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.example.com</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
          * <p>The domain name that is added to WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>Indicates whether the certificate chain is complete. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsChainCompleted")
         public Boolean isChainCompleted;

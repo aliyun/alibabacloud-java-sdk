@@ -6,17 +6,19 @@ import com.aliyun.tea.*;
 public class CreateMemberAccountsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_cdnsdf3****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The Alibaba Cloud account IDs of the members that you want to add. You can add up to 10 members at the same time.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MemberAccountIds")
@@ -24,21 +26,31 @@ public class CreateMemberAccountsRequest extends TeaModel {
 
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The source IP address of the request. The system automatically obtains the value of this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.X.X</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

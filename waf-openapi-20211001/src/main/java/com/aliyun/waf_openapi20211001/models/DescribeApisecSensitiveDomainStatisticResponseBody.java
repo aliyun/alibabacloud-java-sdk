@@ -9,10 +9,17 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56B40D30-4960-4F19-B7D5-2B1F***6CB70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,15 +53,31 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
     }
 
     public static class DescribeApisecSensitiveDomainStatisticResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ApiCount")
         public Long apiCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("DomainCount")
         public Long domainCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SensitiveCode")
         public String sensitiveCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>L3</p>
+         */
         @NameInMap("SensitiveLevel")
         public String sensitiveLevel;
 

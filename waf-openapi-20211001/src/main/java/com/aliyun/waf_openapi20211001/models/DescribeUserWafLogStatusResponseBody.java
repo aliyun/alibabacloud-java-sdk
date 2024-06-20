@@ -6,53 +6,68 @@ import com.aliyun.tea.*;
 public class DescribeUserWafLogStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the region where WAF logs are stored. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: China (Hangzhou).</p>
-     * <p>*   **cn-beijing**: China (Beijing).</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong).</p>
-     * <p>*   **ap-southeast-1**: Singapore.</p>
-     * <p>*   **ap-southeast-2**: Australia (Sydney).</p>
-     * <p>*   **ap-southeast-3**: Malaysia (Kuala Lumpur).</p>
-     * <p>*   **ap-southeast-5**: Indonesia (Jakarta).</p>
-     * <p>*   **ap-southeast-6**: Philippines (Manila).</p>
-     * <p>*   **ap-southeast-7**: Thailand (Bangkok).</p>
-     * <p>*   **me-east-1**: UAE (Dubai).</p>
-     * <p>*   **eu-central-1**: Germany (Frankfurt).</p>
-     * <p>*   **us-east-1**: US (Virginia).</p>
-     * <p>*   **us-west-1**: US (Silicon Valley).</p>
-     * <p>*   **ap-northeast-1**: Japan (Tokyo).</p>
-     * <p>*   **ap-northeast-2**: South Korea (Seoul).</p>
-     * <p>*   **ap-south-1**: India (Mumbai).</p>
-     * <p>*   **eu-west-1**: UK (London).</p>
-     * <p>*   **cn-hangzhou-finance**: China East 1 Finance.</p>
-     * <p>*   **cn-shanghai-finance-1**: China East 2 Finance.</p>
-     * <p>*   **cn-shenzhen-finance**: China South 1 Finance.</p>
-     * <br>
-     * <p>>  The China East 1 Finance, China East 2 Finance, and China South 1 Finance regions are available only for Alibaba Finance Cloud users. Alibaba Finance Cloud users are also limited to storing logs within these specific regions.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+     * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+     * <li><strong>ap-southeast-2</strong>: Australia (Sydney).</li>
+     * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
+     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+     * <li><strong>ap-southeast-6</strong>: Philippines (Manila).</li>
+     * <li><strong>ap-southeast-7</strong>: Thailand (Bangkok).</li>
+     * <li><strong>me-east-1</strong>: UAE (Dubai).</li>
+     * <li><strong>eu-central-1</strong>: Germany (Frankfurt).</li>
+     * <li><strong>us-east-1</strong>: US (Virginia).</li>
+     * <li><strong>us-west-1</strong>: US (Silicon Valley).</li>
+     * <li><strong>ap-northeast-1</strong>: Japan (Tokyo).</li>
+     * <li><strong>ap-northeast-2</strong>: South Korea (Seoul).</li>
+     * <li><strong>ap-south-1</strong>: India (Mumbai).</li>
+     * <li><strong>eu-west-1</strong>: UK (London).</li>
+     * <li><strong>cn-hangzhou-finance</strong>: China East 1 Finance.</li>
+     * <li><strong>cn-shanghai-finance-1</strong>: China East 2 Finance.</li>
+     * <li><strong>cn-shenzhen-finance</strong>: China South 1 Finance.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The China East 1 Finance, China East 2 Finance, and China South 1 Finance regions are available only for Alibaba Finance Cloud users. Alibaba Finance Cloud users are also limited to storing logs within these specific regions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("LogRegionId")
     public String logRegionId;
 
     /**
      * <p>The status of WAF logs.</p>
-     * <br>
-     * <p>*   **initializing**</p>
-     * <p>*   **initialize_failed**</p>
-     * <p>*   **normal**</p>
-     * <p>*   **releasing**</p>
-     * <p>*   **release_failed**</p>
+     * <ul>
+     * <li><strong>initializing</strong></li>
+     * <li><strong>initialize_failed</strong></li>
+     * <li><strong>normal</strong></li>
+     * <li><strong>releasing</strong></li>
+     * <li><strong>release_failed</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("LogStatus")
     public String logStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The time when the log status was modified. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1706771796859</p>
      */
     @NameInMap("StatusUpdateTime")
     public Long statusUpdateTime;

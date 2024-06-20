@@ -12,6 +12,9 @@ public class DescribeCertDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C115DBE-8E53-5A12-9CAF-FD3F****CDF6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeCertDetailResponseBody extends TeaModel {
     public static class DescribeCertDetailResponseBodyCertDetail extends TeaModel {
         /**
          * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1976256736582</p>
          */
         @NameInMap("AfterDate")
         public Long afterDate;
 
         /**
          * <p>The time when the certificate was issued. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1976256736582</p>
          */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-cn-hangzhou</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testCertName</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The primary domain name, which is a common name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.xxxaliyun.com</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
          * <p>The domain name that is associated with the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.xxxaliyun.com</p>
          */
         @NameInMap("Domain")
         public String domain;

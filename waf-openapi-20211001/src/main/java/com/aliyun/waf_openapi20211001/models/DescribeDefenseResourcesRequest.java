@@ -6,45 +6,65 @@ import com.aliyun.tea.*;
 public class DescribeDefenseResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_cdnsdf3****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The query conditions. Specify the value of this parameter as a string in the JSON format.</p>
-     * <br>
-     * <p>>  The results vary based on the query condition. For more information, see the "**Query parameters**" section in this topic.</p>
+     * <blockquote>
+     * <p> The results vary based on the query condition. For more information, see the &quot;<strong>Query parameters</strong>&quot; section in this topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;product\&quot;:\&quot;waf\&quot;}</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
-     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
@@ -119,12 +139,18 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public static class DescribeDefenseResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tagkey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue1</p>
          */
         @NameInMap("Value")
         public String value;

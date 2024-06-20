@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDefenseResourcesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>618F2626-DB27-5187-8C6C-4E61A491DF29</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,27 +60,39 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
     public static class DescribeDefenseResourcesResponseBodyResources extends TeaModel {
         /**
          * <p>The status of the tracking cookie.</p>
-         * <br>
-         * <p>*   **0:** disabled.</p>
-         * <p>*   **1:** enabled.</p>
+         * <ul>
+         * <li><strong>0:</strong> disabled.</li>
+         * <li><strong>1:</strong> enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AcwCookieStatus")
         public Integer acwCookieStatus;
 
         /**
          * <p>The status of the secure attribute in the tracking cookie.</p>
-         * <br>
-         * <p>*   **0:** disabled.</p>
-         * <p>*   **1:** enabled.</p>
+         * <ul>
+         * <li><strong>0:</strong> disabled.</li>
+         * <li><strong>1:</strong> enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AcwSecureStatus")
         public Integer acwSecureStatus;
 
         /**
          * <p>The status of the secure attribute in the slider CAPTCHA cookie.</p>
-         * <br>
-         * <p>*   **0:** disabled.</p>
-         * <p>*   **1:** enabled.</p>
+         * <ul>
+         * <li><strong>0:</strong> disabled.</li>
+         * <li><strong>1:</strong> enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AcwV3SecureStatus")
         public Integer acwV3SecureStatus;
@@ -87,6 +105,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
@@ -99,60 +120,90 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the protected object was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652149203187</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the protected object was modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665633032000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135*********46</p>
          */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
         /**
          * <p>The pattern in which the protected object is protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         @NameInMap("Pattern")
         public String pattern;
 
         /**
          * <p>The name of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The name of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-rencs***</p>
          */
         @NameInMap("Resource")
         public String resource;
 
         /**
          * <p>The name of the protected object group to which the protected object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
         /**
          * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
         /**
          * <p>The origin of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("ResourceOrigin")
         public String resourceOrigin;
 
         /**
          * <p>Indicates whether the X-Forwarded-For (XFF) proxy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("XffStatus")
         public Integer xffStatus;
