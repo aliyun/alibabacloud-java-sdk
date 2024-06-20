@@ -4,14 +4,25 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class InitializeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,12 +68,24 @@ public class InitializeResponseBody extends TeaModel {
     }
 
     public static class InitializeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ClientCfg")
         public String clientCfg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>08573be80f944d95ac812e019e3655a8</p>
+         */
         @NameInMap("TransactionId")
         public String transactionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http****</p>
+         */
         @NameInMap("TransactionUrl")
         public String transactionUrl;
 

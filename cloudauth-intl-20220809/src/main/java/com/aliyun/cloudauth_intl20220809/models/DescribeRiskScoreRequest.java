@@ -4,12 +4,24 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskScoreRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0xabds***djskjds</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ETH</p>
+     */
     @NameInMap("Coin")
     public String coin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e0c34a***353888</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 

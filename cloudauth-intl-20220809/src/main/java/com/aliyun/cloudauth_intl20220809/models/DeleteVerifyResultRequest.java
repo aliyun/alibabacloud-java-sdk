@@ -4,12 +4,24 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DeleteVerifyResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Y / N</p>
+     */
     @NameInMap("DeleteAfterQuery")
     public String deleteAfterQuery;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Img / Text / All</p>
+     */
     @NameInMap("DeleteType")
     public String deleteType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4ab0b***cbde97</p>
+     */
     @NameInMap("TransactionId")
     public String transactionId;
 

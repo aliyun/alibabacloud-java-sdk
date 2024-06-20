@@ -4,27 +4,55 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class FaceLivenessRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>T</p>
+     */
     @NameInMap("Crop")
     public String crop;
 
     @NameInMap("FacePictureBase64")
     public String facePictureBase64;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
+     */
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>T</p>
+     */
     @NameInMap("FaceQuality")
     public String faceQuality;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>T</p>
+     */
     @NameInMap("Occlusion")
     public String occlusion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FACE_LIVENESS_MIN</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

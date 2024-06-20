@@ -4,12 +4,24 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class Id2MetaVerifyIntlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>429001********8211</p>
+     */
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("ParamType")
     public String paramType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ID_2META</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

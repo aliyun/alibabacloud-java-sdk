@@ -4,12 +4,24 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class FaceLivenessResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42EA58CA-5DF4-55D5-82C4-5E7A40DA62BA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,24 @@ public class FaceLivenessResponseBody extends TeaModel {
     }
 
     public static class FaceLivenessResponseBodyResultExtFaceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("FaceAttack")
         public String faceAttack;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87.19</p>
+         */
         @NameInMap("FaceQualityScore")
         public Double faceQualityScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("OcclusionResult")
         public String occlusionResult;
 
@@ -98,12 +122,24 @@ public class FaceLivenessResponseBody extends TeaModel {
         @NameInMap("ExtFaceInfo")
         public FaceLivenessResponseBodyResultExtFaceInfo extFaceInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("Passed")
         public String passed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>205</p>
+         */
         @NameInMap("SubCode")
         public String subCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>08573be80f944d95ac812e019e3655a8</p>
+         */
         @NameInMap("TransactionId")
         public String transactionId;
 

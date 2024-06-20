@@ -4,21 +4,36 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransactionsListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeTransactionsListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,18 +83,34 @@ public class DescribeTransactionsListResponseBody extends TeaModel {
     }
 
     public static class DescribeTransactionsListResponseBodyDataIn extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0xd90e2***b90ad053324f31b</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0845</p>
+         */
         @NameInMap("Amount")
         public Float amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bi***ce</p>
+         */
         @NameInMap("Label")
         public String label;
 
         @NameInMap("TxHashList")
         public java.util.List<String> txHashList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -131,18 +162,34 @@ public class DescribeTransactionsListResponseBody extends TeaModel {
     }
 
     public static class DescribeTransactionsListResponseBodyDataOut extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0xd90e2***b90ad053324f31b</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>743</p>
+         */
         @NameInMap("Amount")
         public Float amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Tor***uter</p>
+         */
         @NameInMap("Label")
         public String label;
 
         @NameInMap("TxHashList")
         public java.util.List<String> txHashList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -200,12 +247,24 @@ public class DescribeTransactionsListResponseBody extends TeaModel {
         @NameInMap("Out")
         public java.util.List<DescribeTransactionsListResponseBodyDataOut> out;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Long page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("TotalPages")
         public Long totalPages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("TransactionsOnPage")
         public Long transactionsOnPage;
 

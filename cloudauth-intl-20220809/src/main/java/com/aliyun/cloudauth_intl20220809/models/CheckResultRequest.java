@@ -4,18 +4,38 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class CheckResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("ExtraImageControlList")
     public String extraImageControlList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>N</p>
+     */
     @NameInMap("IsReturnImage")
     public String isReturnImage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>djs20d***9-dsskc</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("ReturnFiveCategorySpoofResult")
     public String returnFiveCategorySpoofResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4ab0b***cbde97</p>
+     */
     @NameInMap("TransactionId")
     public String transactionId;
 

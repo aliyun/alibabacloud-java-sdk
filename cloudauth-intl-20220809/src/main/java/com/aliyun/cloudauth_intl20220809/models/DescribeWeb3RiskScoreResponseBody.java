@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWeb3RiskScoreResponseBody extends TeaModel {
     /**
      * <p>Return code. For the full list of codes, see Codes and Messages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeWeb3RiskScoreResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>Response detailed message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The unique ID of the request, which can be used to locate issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E63B760-0ECB-5C07-8503-A65C27876968</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,24 +94,33 @@ public class DescribeWeb3RiskScoreResponseBody extends TeaModel {
     public static class DescribeWeb3RiskScoreResponseBodyDataRiskResults extends TeaModel {
         /**
          * <p>description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>incoming address risk critical xxxxxx</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>[ CRITICAL, HIGH, MEDIUM, LOW, NO ]</p>
-         * <p>100: Critical</p>
-         * <p>67-99: High risk</p>
-         * <p>34-66: Medium risk</p>
-         * <p>1-33: Low risk</p>
-         * <p>0: No risk</p>
+         * <p>[ CRITICAL, HIGH, MEDIUM, LOW, NO ]
+         * 100: Critical
+         * 67-99: High risk
+         * 34-66: Medium risk
+         * 1-33: Low risk
+         * 0: No risk</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HIGH</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
+         * <p>Address
+         * Transaction</p>
+         * 
+         * <strong>example:</strong>
          * <p>Address</p>
-         * <p>Transaction</p>
          */
         @NameInMap("Type")
         public String type;
@@ -144,6 +165,9 @@ public class DescribeWeb3RiskScoreResponseBody extends TeaModel {
 
         /**
          * <p>Risk score</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Score")
         public String score;

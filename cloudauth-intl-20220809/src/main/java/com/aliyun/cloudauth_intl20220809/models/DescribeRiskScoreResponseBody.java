@@ -4,21 +4,36 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskScoreResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeRiskScoreResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -71,12 +86,24 @@ public class DescribeRiskScoreResponseBody extends TeaModel {
         @NameInMap("DetailList")
         public java.util.List<String> detailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MMFinance Exploiter</p>
+         */
         @NameInMap("HackingEvent")
         public String hackingEvent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Severe</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Score")
         public Integer score;
 

@@ -4,24 +4,52 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransactionsListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0xabds***djskjds</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ETH</p>
+     */
     @NameInMap("Coin")
     public String coin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1682235649</p>
+     */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e0c34a***353888</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1682232649</p>
+     */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>in</p>
+     */
     @NameInMap("Type")
     public String type;
 
