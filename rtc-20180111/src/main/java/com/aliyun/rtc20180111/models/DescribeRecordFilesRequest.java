@@ -6,28 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeRecordFilesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yourChannelId</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-02T17:36:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-01T17:36:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yourTaskId</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 

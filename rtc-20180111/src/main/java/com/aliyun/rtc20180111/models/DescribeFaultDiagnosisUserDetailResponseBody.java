@@ -16,6 +16,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     @NameInMap("NetworkOperators")
     public java.util.List<String> networkOperators;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -78,22 +82,45 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     public static class DescribeFaultDiagnosisUserDetailResponseBodyCallInfo extends TeaModel {
         /**
          * <p>App ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0rbd****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("CallStatus")
         public String callStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>311</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620957905</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620958150</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
@@ -153,12 +180,24 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开始发布</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("Ts")
         public Long ts;
 
@@ -197,6 +236,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         @NameInMap("EventList")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItemsEventList> eventList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("Ts")
         public Long ts;
 
@@ -227,9 +270,17 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         @NameInMap("EventDataItems")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedEventDatasEventDataItems> eventDataItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SENDER</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0a497933****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -268,9 +319,17 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615892596</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -309,12 +368,24 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyFactorListRelatedMetricDatasNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SENDER</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AUDIO_STUCK</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0a497933****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -358,9 +429,17 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFactorList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FactorId")
         public String factorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOCAL</p>
+         */
         @NameInMap("FaultSource")
         public String faultSource;
 
@@ -410,9 +489,17 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyFaultMetricDataNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1620957900</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.4540</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -459,9 +546,17 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1620957919</p>
+         */
         @NameInMap("JoinTs")
         public Long joinTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620958150</p>
+         */
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -489,33 +584,69 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserDetailResponseBodyUserDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1620957919</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620958150</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>231</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省-杭州市</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4G</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <strong>example:</strong>
+         * <p>231</p>
+         */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeFaultDiagnosisUserDetailResponseBodyUserDetailOnlinePeriods> onlinePeriods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iOS</p>
+         */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0a497933****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

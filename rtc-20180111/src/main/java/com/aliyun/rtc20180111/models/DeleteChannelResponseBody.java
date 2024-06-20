@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DeleteChannelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

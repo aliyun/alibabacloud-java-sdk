@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAppStreamingOutTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wv7N****</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -46,18 +49,27 @@ public class ModifyAppStreamingOutTemplateRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MediaEncode")
         public Integer mediaEncode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>模版</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac7N****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;

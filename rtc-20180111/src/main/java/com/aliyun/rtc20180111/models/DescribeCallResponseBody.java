@@ -7,6 +7,10 @@ public class DescribeCallResponseBody extends TeaModel {
     @NameInMap("CallInfo")
     public DescribeCallResponseBodyCallInfo callInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -45,22 +49,45 @@ public class DescribeCallResponseBody extends TeaModel {
     public static class DescribeCallResponseBodyCallInfo extends TeaModel {
         /**
          * <p>App ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxx</p>
          */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("CallStatus")
         public String callStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615860711</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615860811</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
@@ -120,33 +147,73 @@ public class DescribeCallResponseBody extends TeaModel {
     }
 
     public static class DescribeCallResponseBodyUserDetailListDurMetricStatData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PubAudio")
         public Long pubAudio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PubVideo1080")
         public Long pubVideo1080;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PubVideo360")
         public Long pubVideo360;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PubVideo720")
         public Long pubVideo720;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PubVideoScreenShare")
         public Long pubVideoScreenShare;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SubAudio")
         public Long subAudio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SubVideo1080")
         public Long subVideo1080;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SubVideo360")
         public Long subVideo360;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SubVideo720")
         public Long subVideo720;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SubVideoScreenShare")
         public Long subVideoScreenShare;
 
@@ -238,9 +305,17 @@ public class DescribeCallResponseBody extends TeaModel {
     }
 
     public static class DescribeCallResponseBodyUserDetailListOnlinePeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("JoinTs")
         public Long joinTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -268,36 +343,68 @@ public class DescribeCallResponseBody extends TeaModel {
     }
 
     public static class DescribeCallResponseBodyUserDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>GOOD</p>
+         */
         @NameInMap("CallExp")
         public String callExp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
         @NameInMap("DurMetricStatData")
         public DescribeCallResponseBodyUserDetailListDurMetricStatData durMetricStatData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省-杭州市</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4G</p>
+         */
         @NameInMap("Network")
         public String network;
 
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeCallResponseBodyUserDetailListOnlinePeriods> onlinePeriods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iOS</p>
+         */
         @NameInMap("Os")
         public String os;
 
@@ -307,12 +414,20 @@ public class DescribeCallResponseBody extends TeaModel {
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuserid</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

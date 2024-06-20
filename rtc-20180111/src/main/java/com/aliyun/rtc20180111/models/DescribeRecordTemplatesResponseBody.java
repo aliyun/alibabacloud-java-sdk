@@ -4,15 +4,27 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C292B80E-5175-4BA4-8CC292B80E-5175-4BA4-8C1E-2ABEC4D7C2FE1E-2ABEC4D7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Templates")
     public java.util.List<DescribeRecordTemplatesResponseBodyTemplates> templates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Long totalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPage")
     public Long totalPage;
 
@@ -54,24 +66,52 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordTemplatesResponseBodyTemplatesBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -139,21 +179,45 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordTemplatesResponseBodyTemplatesClockWidgets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontColor")
         public Integer fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontType")
         public Integer fontType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -213,27 +277,59 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordTemplatesResponseBodyTemplatesWatermarks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Alpha")
         public Float alpha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -309,6 +405,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BackgroundColor")
         public Integer backgroundColor;
 
@@ -318,45 +418,89 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         @NameInMap("ClockWidgets")
         public java.util.List<DescribeRecordTemplatesResponseBodyTemplatesClockWidgets> clockWidgets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-04T06:22:15Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>180</p>
+         */
         @NameInMap("DelayStopTime")
         public Integer delayStopTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableM3u8DateTime")
         public Boolean enableM3u8DateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
         @NameInMap("FileSplitInterval")
         public Integer fileSplitInterval;
 
         @NameInMap("Formats")
         public java.util.List<String> formats;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+         */
         @NameInMap("HttpCallbackUrl")
         public String httpCallbackUrl;
 
         @NameInMap("LayoutIds")
         public java.util.List<Long> layoutIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("MediaEncode")
         public Integer mediaEncode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>record-callback-queue</p>
+         */
         @NameInMap("MnsQueue")
         public String mnsQueue;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtc-record-oss</p>
+         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>record/pre/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
+         */
         @NameInMap("OssFilePrefix")
         public String ossFilePrefix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4IN_1080P</p>
+         */
         @NameInMap("TaskProfile")
         public String taskProfile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1ca698e2-57fa-4314-8e11-00d950d4****</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

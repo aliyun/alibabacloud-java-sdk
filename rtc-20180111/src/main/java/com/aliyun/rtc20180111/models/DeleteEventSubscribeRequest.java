@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteEventSubscribeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9qb1****</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -15,6 +18,9 @@ public class DeleteEventSubscribeRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ad53276431c****</p>
      */
     @NameInMap("SubscribeId")
     public String subscribeId;

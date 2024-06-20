@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeChannelOverallDataRequest extends TeaModel {
     /**
      * <p>APP ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testappid</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615893133</p>
      */
     @NameInMap("CreatedTs")
     public Long createdTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1615893757</p>
+     */
     @NameInMap("DestroyedTs")
     public Long destroyedTs;
 

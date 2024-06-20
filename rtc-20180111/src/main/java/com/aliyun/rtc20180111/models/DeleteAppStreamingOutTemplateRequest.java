@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAppStreamingOutTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wv7N****</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -40,6 +43,9 @@ public class DeleteAppStreamingOutTemplateRequest extends TeaModel {
     public static class DeleteAppStreamingOutTemplateRequestStreamingOutTemplate extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xd4c****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;

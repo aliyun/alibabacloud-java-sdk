@@ -6,22 +6,41 @@ import com.aliyun.tea.*;
 public class DescribeMPULayoutInfoListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("LayoutId")
     public Long layoutId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LayoutName</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

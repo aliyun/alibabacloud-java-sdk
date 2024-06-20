@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>069BCB66-CD80-11E8-A82B-A70F78BBDC00</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoLiveStreamRuleResponseBodyRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callBack">http://example.com/callBack</a></p>
+         */
         @NameInMap("CallBack")
         public String callBack;
 
@@ -41,21 +49,45 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         @NameInMap("ChannelIds")
         public java.util.List<String> channelIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-08-19T02:53:07Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("MediaEncode")
         public Integer mediaEncode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://${domain}/${app}/${stream}</p>
+         */
         @NameInMap("PlayDomain")
         public String playDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testRule</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>disable</p>
+         */
         @NameInMap("Status")
         public String status;
 

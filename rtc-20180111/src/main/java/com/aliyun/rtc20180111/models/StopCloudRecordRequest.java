@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class StopCloudRecordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eo85****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("TaskId")
     public String taskId;

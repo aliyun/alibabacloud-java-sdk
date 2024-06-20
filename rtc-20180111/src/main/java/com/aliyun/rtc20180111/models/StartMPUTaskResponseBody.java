@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class StartMPUTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>760bad53276431c499e30dc36f6b26be</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

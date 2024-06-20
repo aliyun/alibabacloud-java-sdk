@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAppStreamingOutTemplatesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ioeh****</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -13,9 +16,17 @@ public class DescribeAppStreamingOutTemplatesRequest extends TeaModel {
     @NameInMap("Condition")
     public DescribeAppStreamingOutTemplatesRequestCondition condition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -57,9 +68,17 @@ public class DescribeAppStreamingOutTemplatesRequest extends TeaModel {
     }
 
     public static class DescribeAppStreamingOutTemplatesRequestCondition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Bj6D****</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

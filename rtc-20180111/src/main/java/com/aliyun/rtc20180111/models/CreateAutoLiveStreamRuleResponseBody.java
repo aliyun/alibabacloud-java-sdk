@@ -4,9 +4,17 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoLiveStreamRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>760bad53276431c499e30dc36f6b26be</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

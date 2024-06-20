@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAppStreamingOutTemplateShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac7N****</p>
      */
     @NameInMap("AppId")
     public String appId;

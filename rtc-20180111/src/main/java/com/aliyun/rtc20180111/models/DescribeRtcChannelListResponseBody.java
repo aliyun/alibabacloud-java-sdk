@@ -7,15 +7,31 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
     @NameInMap("ChannelList")
     public DescribeRtcChannelListResponseBodyChannelList channelList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalCnt")
     public Long totalCnt;
 
@@ -87,15 +103,31 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         @NameInMap("CallArea")
         public DescribeRtcChannelListResponseBodyChannelListChannelListCallArea callArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testChannel</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-29T02:00:00Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-29T01:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalUserCnt")
         public Long totalUserCnt;
 

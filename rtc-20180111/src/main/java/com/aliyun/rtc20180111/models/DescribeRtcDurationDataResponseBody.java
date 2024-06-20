@@ -7,6 +7,10 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
     @NameInMap("DurationDataPerInterval")
     public DescribeRtcDurationDataResponseBodyDurationDataPerInterval durationDataPerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcDurationDataResponseBodyDurationDataPerIntervalDurationModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("AudioDuration")
         public Long audioDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ContentDuration")
         public Long contentDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-02-04T05:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("TotalDuration")
         public Long totalDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("V1080Duration")
         public Long v1080Duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("V360Duration")
         public Long v360Duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("V720Duration")
         public Long v720Duration;
 

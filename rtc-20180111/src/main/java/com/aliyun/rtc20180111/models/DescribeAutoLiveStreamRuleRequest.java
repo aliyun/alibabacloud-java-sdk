@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAutoLiveStreamRuleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eo85****</p>
      */
     @NameInMap("AppId")
     public String appId;

@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelTopPubUserListResponseBodyTopPubUserDetailListOnlinePeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1615893327</p>
+         */
         @NameInMap("JoinTs")
         public Long joinTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615893442</p>
+         */
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -62,24 +74,48 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelTopPubUserListResponseBodyTopPubUserDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1615893327</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615893442</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省-杭州市</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribeChannelTopPubUserListResponseBodyTopPubUserDetailListOnlinePeriods> onlinePeriods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuserid</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

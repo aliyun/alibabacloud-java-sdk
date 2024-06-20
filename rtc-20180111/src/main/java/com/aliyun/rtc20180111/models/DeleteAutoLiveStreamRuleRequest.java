@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAutoLiveStreamRuleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eo85****</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -15,6 +18,9 @@ public class DeleteAutoLiveStreamRuleRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

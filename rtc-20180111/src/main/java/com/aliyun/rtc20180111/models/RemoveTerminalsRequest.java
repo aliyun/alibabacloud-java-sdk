@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RemoveTerminalsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourChannelId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
@@ -21,6 +27,9 @@ public class RemoveTerminalsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1811xxxx</p>
      */
     @NameInMap("TerminalIds")
     public java.util.List<String> terminalIds;

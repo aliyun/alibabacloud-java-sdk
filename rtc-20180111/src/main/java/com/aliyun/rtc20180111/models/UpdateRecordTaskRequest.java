@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateRecordTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourChannelId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
@@ -37,11 +43,18 @@ public class UpdateRecordTaskRequest extends TeaModel {
     @NameInMap("SubSpecShareScreenUsers")
     public java.util.List<String> subSpecShareScreenUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>userID</p>
+     */
     @NameInMap("SubSpecUsers")
     public java.util.List<String> subSpecUsers;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourTaskId</p>
      */
     @NameInMap("TaskId")
     public String taskId;
@@ -51,6 +64,9 @@ public class UpdateRecordTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76dasgb****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -209,24 +225,52 @@ public class UpdateRecordTaskRequest extends TeaModel {
     }
 
     public static class UpdateRecordTaskRequestUserPanesImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -294,24 +338,52 @@ public class UpdateRecordTaskRequest extends TeaModel {
     }
 
     public static class UpdateRecordTaskRequestUserPanesTexts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontColor")
         public Integer fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontType")
         public Integer fontType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -382,15 +454,27 @@ public class UpdateRecordTaskRequest extends TeaModel {
         @NameInMap("Images")
         public java.util.List<UpdateRecordTaskRequestUserPanesImages> images;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PaneId")
         public Integer paneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>camera</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
         @NameInMap("Texts")
         public java.util.List<UpdateRecordTaskRequestUserPanesTexts> texts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestId</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

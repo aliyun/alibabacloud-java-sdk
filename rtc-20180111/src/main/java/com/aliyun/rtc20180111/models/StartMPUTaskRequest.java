@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class StartMPUTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BackgroundColor")
     public Integer backgroundColor;
 
@@ -18,6 +25,9 @@ public class StartMPUTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourChannelId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
@@ -25,42 +35,86 @@ public class StartMPUTaskRequest extends TeaModel {
     @NameInMap("ClockWidgets")
     public java.util.List<StartMPUTaskRequestClockWidgets> clockWidgets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CropMode")
     public Integer cropMode;
 
     @NameInMap("EnhancedParam")
     public StartMPUTaskRequestEnhancedParam enhancedParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MediaEncode")
     public Integer mediaEncode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MixMode")
     public Integer mixMode;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PayloadType")
     public Integer payloadType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ReportVad")
     public Integer reportVad;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RtpExtInfo")
     public Integer rtpExtInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>camera</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("StreamType")
     public Integer streamType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rtmp://example.com/live/stream</p>
+     */
     @NameInMap("StreamURL")
     public String streamURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>audioUserID</p>
+     */
     @NameInMap("SubSpecAudioUsers")
     public java.util.List<String> subSpecAudioUsers;
 
@@ -70,18 +124,33 @@ public class StartMPUTaskRequest extends TeaModel {
     @NameInMap("SubSpecShareScreenUsers")
     public java.util.List<String> subSpecShareScreenUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>userID</p>
+     */
     @NameInMap("SubSpecUsers")
     public java.util.List<String> subSpecUsers;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourTaskId</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("TaskType")
     public Integer taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15273582735</p>
+     */
     @NameInMap("TimeStampRef")
     public Long timeStampRef;
 
@@ -97,6 +166,10 @@ public class StartMPUTaskRequest extends TeaModel {
     @NameInMap("UserPanes")
     public java.util.List<StartMPUTaskRequestUserPanes> userPanes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86400</p>
+     */
     @NameInMap("VadInterval")
     public Long vadInterval;
 
@@ -349,24 +422,52 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -434,39 +535,87 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestClockWidgets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Alpha")
         public Float alpha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BorderColor")
         public Long borderColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BorderWidth")
         public Integer borderWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Box")
         public Boolean box;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BoxBorderWidth")
         public Integer boxBorderWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BoxColor")
         public Long boxColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontColor")
         public Integer fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontType")
         public Integer fontType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -574,6 +723,10 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestEnhancedParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnablePortraitSegmentation")
         public Boolean enablePortraitSegmentation;
 
@@ -593,24 +746,52 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestUserPanesImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -678,42 +859,94 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestUserPanesTexts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Alpha")
         public Float alpha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BorderColor")
         public Long borderColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BorderWidth")
         public Integer borderWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Box")
         public Boolean box;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BoxBorderWidth")
         public Integer boxBorderWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BoxColor")
         public Long boxColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontColor")
         public Integer fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontType")
         public Integer fontType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -832,18 +1065,34 @@ public class StartMPUTaskRequest extends TeaModel {
         @NameInMap("Images")
         public java.util.List<StartMPUTaskRequestUserPanesImages> images;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PaneId")
         public Integer paneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SegmentType")
         public Integer segmentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>camera</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
         @NameInMap("Texts")
         public java.util.List<StartMPUTaskRequestUserPanesTexts> texts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestId</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -903,27 +1152,59 @@ public class StartMPUTaskRequest extends TeaModel {
     }
 
     public static class StartMPUTaskRequestWatermarks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Alpha")
         public Float alpha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 

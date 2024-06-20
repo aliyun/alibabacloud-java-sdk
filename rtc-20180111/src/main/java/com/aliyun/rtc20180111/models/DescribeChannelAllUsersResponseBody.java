@@ -7,6 +7,10 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
     @NameInMap("ChannelExist")
     public Boolean channelExist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelAllUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1811****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

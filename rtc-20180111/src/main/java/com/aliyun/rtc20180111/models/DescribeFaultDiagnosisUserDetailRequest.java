@@ -6,35 +6,53 @@ import com.aliyun.tea.*;
 public class DescribeFaultDiagnosisUserDetailRequest extends TeaModel {
     /**
      * <p>APP ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0rbd****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>311</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615892596</p>
      */
     @NameInMap("CreatedTs")
     public Long createdTs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JOIN_SLOW</p>
      */
     @NameInMap("FaultType")
     public String faultType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("QueryCallUserInfo")
     public Boolean queryCallUserInfo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c906531af5f9****</p>
      */
     @NameInMap("UserId")
     public String userId;

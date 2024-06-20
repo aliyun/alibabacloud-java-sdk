@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeRtcChannelMetricRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aoe****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
@@ -21,6 +27,9 @@ public class DescribeRtcChannelMetricRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-01-29T00:00:00Z</p>
      */
     @NameInMap("TimePoint")
     public String timePoint;

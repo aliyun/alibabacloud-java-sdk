@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRecordTemplatesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -16,12 +19,24 @@ public class DescribeRecordTemplatesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>76dasgb****</p>
+     */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 

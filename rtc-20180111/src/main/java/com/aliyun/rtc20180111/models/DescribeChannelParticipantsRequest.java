@@ -6,25 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeChannelParticipantsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aec****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

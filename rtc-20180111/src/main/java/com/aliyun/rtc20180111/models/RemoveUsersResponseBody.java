@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class RemoveUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class RemoveUsersResponseBody extends TeaModel {
     }
 
     public static class RemoveUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1811****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

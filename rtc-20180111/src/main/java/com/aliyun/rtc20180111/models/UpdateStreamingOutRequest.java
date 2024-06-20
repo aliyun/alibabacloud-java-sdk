@@ -3,7 +3,7 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class StartStreamingOutRequest extends TeaModel {
+public class UpdateStreamingOutRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -23,22 +23,17 @@ public class StartStreamingOutRequest extends TeaModel {
     public String channelId;
 
     @NameInMap("ClockWidgets")
-    public java.util.List<StartStreamingOutRequestClockWidgets> clockWidgets;
-
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
-    @NameInMap("CropMode")
-    public Integer cropMode;
+    public java.util.List<UpdateStreamingOutRequestClockWidgets> clockWidgets;
 
     @NameInMap("Images")
-    public java.util.List<StartStreamingOutRequestImages> images;
+    public java.util.List<UpdateStreamingOutRequestImages> images;
 
     @NameInMap("Panes")
-    public java.util.List<StartStreamingOutRequestPanes> panes;
+    public java.util.List<UpdateStreamingOutRequestPanes> panes;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -55,23 +50,14 @@ public class StartStreamingOutRequest extends TeaModel {
     public String templateId;
 
     @NameInMap("Texts")
-    public java.util.List<StartStreamingOutRequestTexts> texts;
+    public java.util.List<UpdateStreamingOutRequestTexts> texts;
 
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rtmp://example.com/live/stream</p>
-     */
-    @NameInMap("Url")
-    public String url;
-
-    public static StartStreamingOutRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartStreamingOutRequest self = new StartStreamingOutRequest();
+    public static UpdateStreamingOutRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateStreamingOutRequest self = new UpdateStreamingOutRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartStreamingOutRequest setAppId(String appId) {
+    public UpdateStreamingOutRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -79,7 +65,7 @@ public class StartStreamingOutRequest extends TeaModel {
         return this.appId;
     }
 
-    public StartStreamingOutRequest setChannelId(String channelId) {
+    public UpdateStreamingOutRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
@@ -87,39 +73,31 @@ public class StartStreamingOutRequest extends TeaModel {
         return this.channelId;
     }
 
-    public StartStreamingOutRequest setClockWidgets(java.util.List<StartStreamingOutRequestClockWidgets> clockWidgets) {
+    public UpdateStreamingOutRequest setClockWidgets(java.util.List<UpdateStreamingOutRequestClockWidgets> clockWidgets) {
         this.clockWidgets = clockWidgets;
         return this;
     }
-    public java.util.List<StartStreamingOutRequestClockWidgets> getClockWidgets() {
+    public java.util.List<UpdateStreamingOutRequestClockWidgets> getClockWidgets() {
         return this.clockWidgets;
     }
 
-    public StartStreamingOutRequest setCropMode(Integer cropMode) {
-        this.cropMode = cropMode;
-        return this;
-    }
-    public Integer getCropMode() {
-        return this.cropMode;
-    }
-
-    public StartStreamingOutRequest setImages(java.util.List<StartStreamingOutRequestImages> images) {
+    public UpdateStreamingOutRequest setImages(java.util.List<UpdateStreamingOutRequestImages> images) {
         this.images = images;
         return this;
     }
-    public java.util.List<StartStreamingOutRequestImages> getImages() {
+    public java.util.List<UpdateStreamingOutRequestImages> getImages() {
         return this.images;
     }
 
-    public StartStreamingOutRequest setPanes(java.util.List<StartStreamingOutRequestPanes> panes) {
+    public UpdateStreamingOutRequest setPanes(java.util.List<UpdateStreamingOutRequestPanes> panes) {
         this.panes = panes;
         return this;
     }
-    public java.util.List<StartStreamingOutRequestPanes> getPanes() {
+    public java.util.List<UpdateStreamingOutRequestPanes> getPanes() {
         return this.panes;
     }
 
-    public StartStreamingOutRequest setTaskId(String taskId) {
+    public UpdateStreamingOutRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
@@ -127,7 +105,7 @@ public class StartStreamingOutRequest extends TeaModel {
         return this.taskId;
     }
 
-    public StartStreamingOutRequest setTemplateId(String templateId) {
+    public UpdateStreamingOutRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
@@ -135,23 +113,15 @@ public class StartStreamingOutRequest extends TeaModel {
         return this.templateId;
     }
 
-    public StartStreamingOutRequest setTexts(java.util.List<StartStreamingOutRequestTexts> texts) {
+    public UpdateStreamingOutRequest setTexts(java.util.List<UpdateStreamingOutRequestTexts> texts) {
         this.texts = texts;
         return this;
     }
-    public java.util.List<StartStreamingOutRequestTexts> getTexts() {
+    public java.util.List<UpdateStreamingOutRequestTexts> getTexts() {
         return this.texts;
     }
 
-    public StartStreamingOutRequest setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
-    }
-
-    public static class StartStreamingOutRequestClockWidgetsBoxColor extends TeaModel {
+    public static class UpdateStreamingOutRequestClockWidgetsBoxColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -173,12 +143,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static StartStreamingOutRequestClockWidgetsBoxColor build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestClockWidgetsBoxColor self = new StartStreamingOutRequestClockWidgetsBoxColor();
+        public static UpdateStreamingOutRequestClockWidgetsBoxColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestClockWidgetsBoxColor self = new UpdateStreamingOutRequestClockWidgetsBoxColor();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestClockWidgetsBoxColor setB(Integer b) {
+        public UpdateStreamingOutRequestClockWidgetsBoxColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -186,7 +156,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.b;
         }
 
-        public StartStreamingOutRequestClockWidgetsBoxColor setG(Integer g) {
+        public UpdateStreamingOutRequestClockWidgetsBoxColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -194,7 +164,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.g;
         }
 
-        public StartStreamingOutRequestClockWidgetsBoxColor setR(Integer r) {
+        public UpdateStreamingOutRequestClockWidgetsBoxColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -204,7 +174,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestClockWidgetsFontColor extends TeaModel {
+    public static class UpdateStreamingOutRequestClockWidgetsFontColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -226,12 +196,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static StartStreamingOutRequestClockWidgetsFontColor build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestClockWidgetsFontColor self = new StartStreamingOutRequestClockWidgetsFontColor();
+        public static UpdateStreamingOutRequestClockWidgetsFontColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestClockWidgetsFontColor self = new UpdateStreamingOutRequestClockWidgetsFontColor();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestClockWidgetsFontColor setB(Integer b) {
+        public UpdateStreamingOutRequestClockWidgetsFontColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -239,7 +209,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.b;
         }
 
-        public StartStreamingOutRequestClockWidgetsFontColor setG(Integer g) {
+        public UpdateStreamingOutRequestClockWidgetsFontColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -247,7 +217,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.g;
         }
 
-        public StartStreamingOutRequestClockWidgetsFontColor setR(Integer r) {
+        public UpdateStreamingOutRequestClockWidgetsFontColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -257,7 +227,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestClockWidgets extends TeaModel {
+    public static class UpdateStreamingOutRequestClockWidgets extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -280,7 +250,7 @@ public class StartStreamingOutRequest extends TeaModel {
         public Integer boxBorderw;
 
         @NameInMap("BoxColor")
-        public StartStreamingOutRequestClockWidgetsBoxColor boxColor;
+        public UpdateStreamingOutRequestClockWidgetsBoxColor boxColor;
 
         /**
          * <strong>example:</strong>
@@ -290,7 +260,7 @@ public class StartStreamingOutRequest extends TeaModel {
         public Integer font;
 
         @NameInMap("FontColor")
-        public StartStreamingOutRequestClockWidgetsFontColor fontColor;
+        public UpdateStreamingOutRequestClockWidgetsFontColor fontColor;
 
         /**
          * <strong>example:</strong>
@@ -334,12 +304,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("Zone")
         public Integer zone;
 
-        public static StartStreamingOutRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestClockWidgets self = new StartStreamingOutRequestClockWidgets();
+        public static UpdateStreamingOutRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestClockWidgets self = new UpdateStreamingOutRequestClockWidgets();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestClockWidgets setAlpha(Double alpha) {
+        public UpdateStreamingOutRequestClockWidgets setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -347,7 +317,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.alpha;
         }
 
-        public StartStreamingOutRequestClockWidgets setBoxAlpha(Double boxAlpha) {
+        public UpdateStreamingOutRequestClockWidgets setBoxAlpha(Double boxAlpha) {
             this.boxAlpha = boxAlpha;
             return this;
         }
@@ -355,7 +325,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.boxAlpha;
         }
 
-        public StartStreamingOutRequestClockWidgets setBoxBorderw(Integer boxBorderw) {
+        public UpdateStreamingOutRequestClockWidgets setBoxBorderw(Integer boxBorderw) {
             this.boxBorderw = boxBorderw;
             return this;
         }
@@ -363,15 +333,15 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.boxBorderw;
         }
 
-        public StartStreamingOutRequestClockWidgets setBoxColor(StartStreamingOutRequestClockWidgetsBoxColor boxColor) {
+        public UpdateStreamingOutRequestClockWidgets setBoxColor(UpdateStreamingOutRequestClockWidgetsBoxColor boxColor) {
             this.boxColor = boxColor;
             return this;
         }
-        public StartStreamingOutRequestClockWidgetsBoxColor getBoxColor() {
+        public UpdateStreamingOutRequestClockWidgetsBoxColor getBoxColor() {
             return this.boxColor;
         }
 
-        public StartStreamingOutRequestClockWidgets setFont(Integer font) {
+        public UpdateStreamingOutRequestClockWidgets setFont(Integer font) {
             this.font = font;
             return this;
         }
@@ -379,15 +349,15 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.font;
         }
 
-        public StartStreamingOutRequestClockWidgets setFontColor(StartStreamingOutRequestClockWidgetsFontColor fontColor) {
+        public UpdateStreamingOutRequestClockWidgets setFontColor(UpdateStreamingOutRequestClockWidgetsFontColor fontColor) {
             this.fontColor = fontColor;
             return this;
         }
-        public StartStreamingOutRequestClockWidgetsFontColor getFontColor() {
+        public UpdateStreamingOutRequestClockWidgetsFontColor getFontColor() {
             return this.fontColor;
         }
 
-        public StartStreamingOutRequestClockWidgets setFontSize(Integer fontSize) {
+        public UpdateStreamingOutRequestClockWidgets setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -395,7 +365,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public StartStreamingOutRequestClockWidgets setHasBox(Boolean hasBox) {
+        public UpdateStreamingOutRequestClockWidgets setHasBox(Boolean hasBox) {
             this.hasBox = hasBox;
             return this;
         }
@@ -403,7 +373,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.hasBox;
         }
 
-        public StartStreamingOutRequestClockWidgets setLayer(Integer layer) {
+        public UpdateStreamingOutRequestClockWidgets setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -411,7 +381,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.layer;
         }
 
-        public StartStreamingOutRequestClockWidgets setX(Double x) {
+        public UpdateStreamingOutRequestClockWidgets setX(Double x) {
             this.x = x;
             return this;
         }
@@ -419,7 +389,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.x;
         }
 
-        public StartStreamingOutRequestClockWidgets setY(Double y) {
+        public UpdateStreamingOutRequestClockWidgets setY(Double y) {
             this.y = y;
             return this;
         }
@@ -427,7 +397,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.y;
         }
 
-        public StartStreamingOutRequestClockWidgets setZone(Integer zone) {
+        public UpdateStreamingOutRequestClockWidgets setZone(Integer zone) {
             this.zone = zone;
             return this;
         }
@@ -437,7 +407,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestImages extends TeaModel {
+    public static class UpdateStreamingOutRequestImages extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -472,7 +442,7 @@ public class StartStreamingOutRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://aliyun.com/123xxx.jpg">https://aliyun.com/123xxx.jpg</a></p>
+         * <p><a href="https://aliyun.com/123.jpg">https://aliyun.com/123.jpg</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -504,12 +474,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static StartStreamingOutRequestImages build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestImages self = new StartStreamingOutRequestImages();
+        public static UpdateStreamingOutRequestImages build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestImages self = new UpdateStreamingOutRequestImages();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestImages setAlpha(Double alpha) {
+        public UpdateStreamingOutRequestImages setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -517,7 +487,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.alpha;
         }
 
-        public StartStreamingOutRequestImages setHeight(Double height) {
+        public UpdateStreamingOutRequestImages setHeight(Double height) {
             this.height = height;
             return this;
         }
@@ -525,7 +495,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.height;
         }
 
-        public StartStreamingOutRequestImages setImageCropMode(Integer imageCropMode) {
+        public UpdateStreamingOutRequestImages setImageCropMode(Integer imageCropMode) {
             this.imageCropMode = imageCropMode;
             return this;
         }
@@ -533,7 +503,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.imageCropMode;
         }
 
-        public StartStreamingOutRequestImages setLayer(Integer layer) {
+        public UpdateStreamingOutRequestImages setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -541,7 +511,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.layer;
         }
 
-        public StartStreamingOutRequestImages setUrl(String url) {
+        public UpdateStreamingOutRequestImages setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -549,7 +519,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.url;
         }
 
-        public StartStreamingOutRequestImages setWidth(Double width) {
+        public UpdateStreamingOutRequestImages setWidth(Double width) {
             this.width = width;
             return this;
         }
@@ -557,7 +527,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.width;
         }
 
-        public StartStreamingOutRequestImages setX(Double x) {
+        public UpdateStreamingOutRequestImages setX(Double x) {
             this.x = x;
             return this;
         }
@@ -565,7 +535,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.x;
         }
 
-        public StartStreamingOutRequestImages setY(Double y) {
+        public UpdateStreamingOutRequestImages setY(Double y) {
             this.y = y;
             return this;
         }
@@ -575,7 +545,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestPanesImages extends TeaModel {
+    public static class UpdateStreamingOutRequestPanesImages extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -610,7 +580,7 @@ public class StartStreamingOutRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://aliyun.com/123xxx.jpg">https://aliyun.com/123xxx.jpg</a></p>
+         * <p><a href="https://aliyun.com/123.jpg">https://aliyun.com/123.jpg</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -637,17 +607,17 @@ public class StartStreamingOutRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.3</p>
+         * <p>0.2</p>
          */
         @NameInMap("Y")
         public Double y;
 
-        public static StartStreamingOutRequestPanesImages build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestPanesImages self = new StartStreamingOutRequestPanesImages();
+        public static UpdateStreamingOutRequestPanesImages build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestPanesImages self = new UpdateStreamingOutRequestPanesImages();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestPanesImages setAlpha(Double alpha) {
+        public UpdateStreamingOutRequestPanesImages setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -655,7 +625,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.alpha;
         }
 
-        public StartStreamingOutRequestPanesImages setHeight(Double height) {
+        public UpdateStreamingOutRequestPanesImages setHeight(Double height) {
             this.height = height;
             return this;
         }
@@ -663,7 +633,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.height;
         }
 
-        public StartStreamingOutRequestPanesImages setLayer(Integer layer) {
+        public UpdateStreamingOutRequestPanesImages setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -671,7 +641,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.layer;
         }
 
-        public StartStreamingOutRequestPanesImages setPaneImageCropMode(Integer paneImageCropMode) {
+        public UpdateStreamingOutRequestPanesImages setPaneImageCropMode(Integer paneImageCropMode) {
             this.paneImageCropMode = paneImageCropMode;
             return this;
         }
@@ -679,7 +649,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.paneImageCropMode;
         }
 
-        public StartStreamingOutRequestPanesImages setUrl(String url) {
+        public UpdateStreamingOutRequestPanesImages setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -687,7 +657,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.url;
         }
 
-        public StartStreamingOutRequestPanesImages setWidth(Double width) {
+        public UpdateStreamingOutRequestPanesImages setWidth(Double width) {
             this.width = width;
             return this;
         }
@@ -695,7 +665,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.width;
         }
 
-        public StartStreamingOutRequestPanesImages setX(Double x) {
+        public UpdateStreamingOutRequestPanesImages setX(Double x) {
             this.x = x;
             return this;
         }
@@ -703,7 +673,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.x;
         }
 
-        public StartStreamingOutRequestPanesImages setY(Double y) {
+        public UpdateStreamingOutRequestPanesImages setY(Double y) {
             this.y = y;
             return this;
         }
@@ -713,7 +683,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestPanesTextsBoxColor extends TeaModel {
+    public static class UpdateStreamingOutRequestPanesTextsBoxColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -735,12 +705,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static StartStreamingOutRequestPanesTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestPanesTextsBoxColor self = new StartStreamingOutRequestPanesTextsBoxColor();
+        public static UpdateStreamingOutRequestPanesTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestPanesTextsBoxColor self = new UpdateStreamingOutRequestPanesTextsBoxColor();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestPanesTextsBoxColor setB(Integer b) {
+        public UpdateStreamingOutRequestPanesTextsBoxColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -748,7 +718,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.b;
         }
 
-        public StartStreamingOutRequestPanesTextsBoxColor setG(Integer g) {
+        public UpdateStreamingOutRequestPanesTextsBoxColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -756,7 +726,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.g;
         }
 
-        public StartStreamingOutRequestPanesTextsBoxColor setR(Integer r) {
+        public UpdateStreamingOutRequestPanesTextsBoxColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -766,7 +736,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestPanesTextsFontColor extends TeaModel {
+    public static class UpdateStreamingOutRequestPanesTextsFontColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -788,12 +758,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static StartStreamingOutRequestPanesTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestPanesTextsFontColor self = new StartStreamingOutRequestPanesTextsFontColor();
+        public static UpdateStreamingOutRequestPanesTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestPanesTextsFontColor self = new UpdateStreamingOutRequestPanesTextsFontColor();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestPanesTextsFontColor setB(Integer b) {
+        public UpdateStreamingOutRequestPanesTextsFontColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -801,7 +771,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.b;
         }
 
-        public StartStreamingOutRequestPanesTextsFontColor setG(Integer g) {
+        public UpdateStreamingOutRequestPanesTextsFontColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -809,7 +779,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.g;
         }
 
-        public StartStreamingOutRequestPanesTextsFontColor setR(Integer r) {
+        public UpdateStreamingOutRequestPanesTextsFontColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -819,7 +789,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestPanesTexts extends TeaModel {
+    public static class UpdateStreamingOutRequestPanesTexts extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -842,7 +812,7 @@ public class StartStreamingOutRequest extends TeaModel {
         public Integer boxBorderw;
 
         @NameInMap("BoxColor")
-        public StartStreamingOutRequestPanesTextsBoxColor boxColor;
+        public UpdateStreamingOutRequestPanesTextsBoxColor boxColor;
 
         /**
          * <strong>example:</strong>
@@ -852,7 +822,7 @@ public class StartStreamingOutRequest extends TeaModel {
         public Integer font;
 
         @NameInMap("FontColor")
-        public StartStreamingOutRequestPanesTextsFontColor fontColor;
+        public UpdateStreamingOutRequestPanesTextsFontColor fontColor;
 
         /**
          * <strong>example:</strong>
@@ -898,12 +868,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static StartStreamingOutRequestPanesTexts build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestPanesTexts self = new StartStreamingOutRequestPanesTexts();
+        public static UpdateStreamingOutRequestPanesTexts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestPanesTexts self = new UpdateStreamingOutRequestPanesTexts();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestPanesTexts setAlpha(Double alpha) {
+        public UpdateStreamingOutRequestPanesTexts setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -911,7 +881,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.alpha;
         }
 
-        public StartStreamingOutRequestPanesTexts setBoxAlpha(Double boxAlpha) {
+        public UpdateStreamingOutRequestPanesTexts setBoxAlpha(Double boxAlpha) {
             this.boxAlpha = boxAlpha;
             return this;
         }
@@ -919,7 +889,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.boxAlpha;
         }
 
-        public StartStreamingOutRequestPanesTexts setBoxBorderw(Integer boxBorderw) {
+        public UpdateStreamingOutRequestPanesTexts setBoxBorderw(Integer boxBorderw) {
             this.boxBorderw = boxBorderw;
             return this;
         }
@@ -927,15 +897,15 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.boxBorderw;
         }
 
-        public StartStreamingOutRequestPanesTexts setBoxColor(StartStreamingOutRequestPanesTextsBoxColor boxColor) {
+        public UpdateStreamingOutRequestPanesTexts setBoxColor(UpdateStreamingOutRequestPanesTextsBoxColor boxColor) {
             this.boxColor = boxColor;
             return this;
         }
-        public StartStreamingOutRequestPanesTextsBoxColor getBoxColor() {
+        public UpdateStreamingOutRequestPanesTextsBoxColor getBoxColor() {
             return this.boxColor;
         }
 
-        public StartStreamingOutRequestPanesTexts setFont(Integer font) {
+        public UpdateStreamingOutRequestPanesTexts setFont(Integer font) {
             this.font = font;
             return this;
         }
@@ -943,15 +913,15 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.font;
         }
 
-        public StartStreamingOutRequestPanesTexts setFontColor(StartStreamingOutRequestPanesTextsFontColor fontColor) {
+        public UpdateStreamingOutRequestPanesTexts setFontColor(UpdateStreamingOutRequestPanesTextsFontColor fontColor) {
             this.fontColor = fontColor;
             return this;
         }
-        public StartStreamingOutRequestPanesTextsFontColor getFontColor() {
+        public UpdateStreamingOutRequestPanesTextsFontColor getFontColor() {
             return this.fontColor;
         }
 
-        public StartStreamingOutRequestPanesTexts setFontSize(Integer fontSize) {
+        public UpdateStreamingOutRequestPanesTexts setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -959,7 +929,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public StartStreamingOutRequestPanesTexts setHasBox(Boolean hasBox) {
+        public UpdateStreamingOutRequestPanesTexts setHasBox(Boolean hasBox) {
             this.hasBox = hasBox;
             return this;
         }
@@ -967,7 +937,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.hasBox;
         }
 
-        public StartStreamingOutRequestPanesTexts setLayer(Integer layer) {
+        public UpdateStreamingOutRequestPanesTexts setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -975,7 +945,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.layer;
         }
 
-        public StartStreamingOutRequestPanesTexts setTexture(String texture) {
+        public UpdateStreamingOutRequestPanesTexts setTexture(String texture) {
             this.texture = texture;
             return this;
         }
@@ -983,7 +953,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.texture;
         }
 
-        public StartStreamingOutRequestPanesTexts setX(Double x) {
+        public UpdateStreamingOutRequestPanesTexts setX(Double x) {
             this.x = x;
             return this;
         }
@@ -991,7 +961,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.x;
         }
 
-        public StartStreamingOutRequestPanesTexts setY(Double y) {
+        public UpdateStreamingOutRequestPanesTexts setY(Double y) {
             this.y = y;
             return this;
         }
@@ -1001,9 +971,9 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestPanes extends TeaModel {
+    public static class UpdateStreamingOutRequestPanes extends TeaModel {
         @NameInMap("Images")
-        public java.util.List<StartStreamingOutRequestPanesImages> images;
+        public java.util.List<UpdateStreamingOutRequestPanesImages> images;
 
         /**
          * <strong>example:</strong>
@@ -1013,45 +983,43 @@ public class StartStreamingOutRequest extends TeaModel {
         public Integer paneCropMode;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("PaneId")
-        public String paneId;
+        public Integer paneId;
 
         /**
          * <strong>example:</strong>
-         * <p>1811****</p>
+         * <p>22</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <strong>example:</strong>
-         * <p>Video</p>
+         * <p>video</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         @NameInMap("Texts")
-        public java.util.List<StartStreamingOutRequestPanesTexts> texts;
+        public java.util.List<UpdateStreamingOutRequestPanesTexts> texts;
 
-        public static StartStreamingOutRequestPanes build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestPanes self = new StartStreamingOutRequestPanes();
+        public static UpdateStreamingOutRequestPanes build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestPanes self = new UpdateStreamingOutRequestPanes();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestPanes setImages(java.util.List<StartStreamingOutRequestPanesImages> images) {
+        public UpdateStreamingOutRequestPanes setImages(java.util.List<UpdateStreamingOutRequestPanesImages> images) {
             this.images = images;
             return this;
         }
-        public java.util.List<StartStreamingOutRequestPanesImages> getImages() {
+        public java.util.List<UpdateStreamingOutRequestPanesImages> getImages() {
             return this.images;
         }
 
-        public StartStreamingOutRequestPanes setPaneCropMode(Integer paneCropMode) {
+        public UpdateStreamingOutRequestPanes setPaneCropMode(Integer paneCropMode) {
             this.paneCropMode = paneCropMode;
             return this;
         }
@@ -1059,15 +1027,15 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.paneCropMode;
         }
 
-        public StartStreamingOutRequestPanes setPaneId(String paneId) {
+        public UpdateStreamingOutRequestPanes setPaneId(Integer paneId) {
             this.paneId = paneId;
             return this;
         }
-        public String getPaneId() {
+        public Integer getPaneId() {
             return this.paneId;
         }
 
-        public StartStreamingOutRequestPanes setSource(String source) {
+        public UpdateStreamingOutRequestPanes setSource(String source) {
             this.source = source;
             return this;
         }
@@ -1075,7 +1043,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.source;
         }
 
-        public StartStreamingOutRequestPanes setSourceType(String sourceType) {
+        public UpdateStreamingOutRequestPanes setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
@@ -1083,17 +1051,17 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.sourceType;
         }
 
-        public StartStreamingOutRequestPanes setTexts(java.util.List<StartStreamingOutRequestPanesTexts> texts) {
+        public UpdateStreamingOutRequestPanes setTexts(java.util.List<UpdateStreamingOutRequestPanesTexts> texts) {
             this.texts = texts;
             return this;
         }
-        public java.util.List<StartStreamingOutRequestPanesTexts> getTexts() {
+        public java.util.List<UpdateStreamingOutRequestPanesTexts> getTexts() {
             return this.texts;
         }
 
     }
 
-    public static class StartStreamingOutRequestTextsBoxColor extends TeaModel {
+    public static class UpdateStreamingOutRequestTextsBoxColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -1115,12 +1083,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static StartStreamingOutRequestTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestTextsBoxColor self = new StartStreamingOutRequestTextsBoxColor();
+        public static UpdateStreamingOutRequestTextsBoxColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestTextsBoxColor self = new UpdateStreamingOutRequestTextsBoxColor();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestTextsBoxColor setB(Integer b) {
+        public UpdateStreamingOutRequestTextsBoxColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -1128,7 +1096,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.b;
         }
 
-        public StartStreamingOutRequestTextsBoxColor setG(Integer g) {
+        public UpdateStreamingOutRequestTextsBoxColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -1136,7 +1104,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.g;
         }
 
-        public StartStreamingOutRequestTextsBoxColor setR(Integer r) {
+        public UpdateStreamingOutRequestTextsBoxColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -1146,7 +1114,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestTextsFontColor extends TeaModel {
+    public static class UpdateStreamingOutRequestTextsFontColor extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>255</p>
@@ -1168,12 +1136,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("R")
         public Integer r;
 
-        public static StartStreamingOutRequestTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestTextsFontColor self = new StartStreamingOutRequestTextsFontColor();
+        public static UpdateStreamingOutRequestTextsFontColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestTextsFontColor self = new UpdateStreamingOutRequestTextsFontColor();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestTextsFontColor setB(Integer b) {
+        public UpdateStreamingOutRequestTextsFontColor setB(Integer b) {
             this.b = b;
             return this;
         }
@@ -1181,7 +1149,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.b;
         }
 
-        public StartStreamingOutRequestTextsFontColor setG(Integer g) {
+        public UpdateStreamingOutRequestTextsFontColor setG(Integer g) {
             this.g = g;
             return this;
         }
@@ -1189,7 +1157,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.g;
         }
 
-        public StartStreamingOutRequestTextsFontColor setR(Integer r) {
+        public UpdateStreamingOutRequestTextsFontColor setR(Integer r) {
             this.r = r;
             return this;
         }
@@ -1199,7 +1167,7 @@ public class StartStreamingOutRequest extends TeaModel {
 
     }
 
-    public static class StartStreamingOutRequestTexts extends TeaModel {
+    public static class UpdateStreamingOutRequestTexts extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -1222,7 +1190,7 @@ public class StartStreamingOutRequest extends TeaModel {
         public Integer boxBorderw;
 
         @NameInMap("BoxColor")
-        public StartStreamingOutRequestTextsBoxColor boxColor;
+        public UpdateStreamingOutRequestTextsBoxColor boxColor;
 
         /**
          * <strong>example:</strong>
@@ -1232,7 +1200,7 @@ public class StartStreamingOutRequest extends TeaModel {
         public Integer font;
 
         @NameInMap("FontColor")
-        public StartStreamingOutRequestTextsFontColor fontColor;
+        public UpdateStreamingOutRequestTextsFontColor fontColor;
 
         /**
          * <strong>example:</strong>
@@ -1278,12 +1246,12 @@ public class StartStreamingOutRequest extends TeaModel {
         @NameInMap("Y")
         public Double y;
 
-        public static StartStreamingOutRequestTexts build(java.util.Map<String, ?> map) throws Exception {
-            StartStreamingOutRequestTexts self = new StartStreamingOutRequestTexts();
+        public static UpdateStreamingOutRequestTexts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestTexts self = new UpdateStreamingOutRequestTexts();
             return TeaModel.build(map, self);
         }
 
-        public StartStreamingOutRequestTexts setAlpha(Double alpha) {
+        public UpdateStreamingOutRequestTexts setAlpha(Double alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -1291,7 +1259,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.alpha;
         }
 
-        public StartStreamingOutRequestTexts setBoxAlpha(Double boxAlpha) {
+        public UpdateStreamingOutRequestTexts setBoxAlpha(Double boxAlpha) {
             this.boxAlpha = boxAlpha;
             return this;
         }
@@ -1299,7 +1267,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.boxAlpha;
         }
 
-        public StartStreamingOutRequestTexts setBoxBorderw(Integer boxBorderw) {
+        public UpdateStreamingOutRequestTexts setBoxBorderw(Integer boxBorderw) {
             this.boxBorderw = boxBorderw;
             return this;
         }
@@ -1307,15 +1275,15 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.boxBorderw;
         }
 
-        public StartStreamingOutRequestTexts setBoxColor(StartStreamingOutRequestTextsBoxColor boxColor) {
+        public UpdateStreamingOutRequestTexts setBoxColor(UpdateStreamingOutRequestTextsBoxColor boxColor) {
             this.boxColor = boxColor;
             return this;
         }
-        public StartStreamingOutRequestTextsBoxColor getBoxColor() {
+        public UpdateStreamingOutRequestTextsBoxColor getBoxColor() {
             return this.boxColor;
         }
 
-        public StartStreamingOutRequestTexts setFont(Integer font) {
+        public UpdateStreamingOutRequestTexts setFont(Integer font) {
             this.font = font;
             return this;
         }
@@ -1323,15 +1291,15 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.font;
         }
 
-        public StartStreamingOutRequestTexts setFontColor(StartStreamingOutRequestTextsFontColor fontColor) {
+        public UpdateStreamingOutRequestTexts setFontColor(UpdateStreamingOutRequestTextsFontColor fontColor) {
             this.fontColor = fontColor;
             return this;
         }
-        public StartStreamingOutRequestTextsFontColor getFontColor() {
+        public UpdateStreamingOutRequestTextsFontColor getFontColor() {
             return this.fontColor;
         }
 
-        public StartStreamingOutRequestTexts setFontSize(Integer fontSize) {
+        public UpdateStreamingOutRequestTexts setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -1339,7 +1307,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public StartStreamingOutRequestTexts setHasBox(Boolean hasBox) {
+        public UpdateStreamingOutRequestTexts setHasBox(Boolean hasBox) {
             this.hasBox = hasBox;
             return this;
         }
@@ -1347,7 +1315,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.hasBox;
         }
 
-        public StartStreamingOutRequestTexts setLayer(Integer layer) {
+        public UpdateStreamingOutRequestTexts setLayer(Integer layer) {
             this.layer = layer;
             return this;
         }
@@ -1355,7 +1323,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.layer;
         }
 
-        public StartStreamingOutRequestTexts setTexture(String texture) {
+        public UpdateStreamingOutRequestTexts setTexture(String texture) {
             this.texture = texture;
             return this;
         }
@@ -1363,7 +1331,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.texture;
         }
 
-        public StartStreamingOutRequestTexts setX(Double x) {
+        public UpdateStreamingOutRequestTexts setX(Double x) {
             this.x = x;
             return this;
         }
@@ -1371,7 +1339,7 @@ public class StartStreamingOutRequest extends TeaModel {
             return this.x;
         }
 
-        public StartStreamingOutRequestTexts setY(Double y) {
+        public UpdateStreamingOutRequestTexts setY(Double y) {
             this.y = y;
             return this;
         }

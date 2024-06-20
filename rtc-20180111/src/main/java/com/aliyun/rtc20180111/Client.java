@@ -137,8 +137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建应用推流模版
-     *
+     * <b>summary</b> : 
+     * <p>创建应用推流模版</p>
+     * 
      * @param tmpReq CreateAppStreamingOutTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppStreamingOutTemplateResponse
@@ -178,8 +179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建应用推流模版
-     *
+     * <b>summary</b> : 
+     * <p>创建应用推流模版</p>
+     * 
      * @param request CreateAppStreamingOutTemplateRequest
      * @return CreateAppStreamingOutTemplateResponse
      */
@@ -379,8 +381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除应用推流模版
-     *
+     * <b>summary</b> : 
+     * <p>删除应用推流模版</p>
+     * 
      * @param tmpReq DeleteAppStreamingOutTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppStreamingOutTemplateResponse
@@ -420,8 +423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除应用推流模版
-     *
+     * <b>summary</b> : 
+     * <p>删除应用推流模版</p>
+     * 
      * @param request DeleteAppStreamingOutTemplateRequest
      * @return DeleteAppStreamingOutTemplateResponse
      */
@@ -661,8 +665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看AppKey
-     *
+     * <b>summary</b> : 
+     * <p>查看AppKey</p>
+     * 
      * @param request DescribeAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppKeyResponse
@@ -696,8 +701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看AppKey
-     *
+     * <b>summary</b> : 
+     * <p>查看AppKey</p>
+     * 
      * @param request DescribeAppKeyRequest
      * @return DescribeAppKeyResponse
      */
@@ -707,8 +713,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用推流模版列表
-     *
+     * <b>summary</b> : 
+     * <p>应用推流模版列表</p>
+     * 
      * @param tmpReq DescribeAppStreamingOutTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppStreamingOutTemplatesResponse
@@ -756,8 +763,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用推流模版列表
-     *
+     * <b>summary</b> : 
+     * <p>应用推流模版列表</p>
+     * 
      * @param request DescribeAppStreamingOutTemplatesRequest
      * @return DescribeAppStreamingOutTemplatesResponse
      */
@@ -767,8 +775,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary App列表
-     *
+     * <b>summary</b> : 
+     * <p>App列表</p>
+     * 
      * @param request DescribeAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppsResponse
@@ -822,8 +831,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary App列表
-     *
+     * <b>summary</b> : 
+     * <p>App列表</p>
+     * 
      * @param request DescribeAppsRequest
      * @return DescribeAppsResponse
      */
@@ -875,8 +885,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeCall获取单次通信详情。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeCall获取单次通信详情。</p>
+     * 
      * @param request DescribeCallRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCallResponse
@@ -926,8 +937,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeCall获取单次通信详情。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeCall获取单次通信详情。</p>
+     * 
      * @param request DescribeCallRequest
      * @return DescribeCallResponse
      */
@@ -937,8 +949,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeCallList分页查询时间范围内创建的通信信息。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeCallList分页查询时间范围内创建的通信信息。</p>
+     * 
      * @param request DescribeCallListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCallListResponse
@@ -1004,8 +1017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeCallList分页查询时间范围内创建的通信信息。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeCallList分页查询时间范围内创建的通信信息。</p>
+     * 
      * @param request DescribeCallListRequest
      * @return DescribeCallListResponse
      */
@@ -1015,8 +1029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeChannel
-     *
+     * <b>summary</b> : 
+     * <p>DescribeChannel</p>
+     * 
      * @param request DescribeChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelResponse
@@ -1050,8 +1065,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeChannel
-     *
+     * <b>summary</b> : 
+     * <p>DescribeChannel</p>
+     * 
      * @param request DescribeChannelRequest
      * @return DescribeChannelResponse
      */
@@ -1061,8 +1077,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询频道的所有参会者
-     *
+     * <b>summary</b> : 
+     * <p>查询频道的所有参会者</p>
+     * 
      * @param request DescribeChannelAllUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelAllUsersResponse
@@ -1096,8 +1113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询频道的所有参会者
-     *
+     * <b>summary</b> : 
+     * <p>查询频道的所有参会者</p>
+     * 
      * @param request DescribeChannelAllUsersRequest
      * @return DescribeChannelAllUsersResponse
      */
@@ -1107,8 +1125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</p>
+     * 
      * @param request DescribeChannelAreaDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelAreaDistributionStatDataResponse
@@ -1154,8 +1173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</p>
+     * 
      * @param request DescribeChannelAreaDistributionStatDataRequest
      * @return DescribeChannelAreaDistributionStatDataResponse
      */
@@ -1165,8 +1185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelDistributionStatData获取频道分布统计数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelDistributionStatData获取频道分布统计数据。</p>
+     * 
      * @param request DescribeChannelDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelDistributionStatDataResponse
@@ -1212,8 +1233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelDistributionStatData获取频道分布统计数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelDistributionStatData获取频道分布统计数据。</p>
+     * 
      * @param request DescribeChannelDistributionStatDataRequest
      * @return DescribeChannelDistributionStatDataResponse
      */
@@ -1223,8 +1245,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelOverallData查询频道概览数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelOverallData查询频道概览数据。</p>
+     * 
      * @param request DescribeChannelOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelOverallDataResponse
@@ -1266,8 +1289,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelOverallData查询频道概览数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelOverallData查询频道概览数据。</p>
+     * 
      * @param request DescribeChannelOverallDataRequest
      * @return DescribeChannelOverallDataResponse
      */
@@ -1335,8 +1359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</p>
+     * 
      * @param request DescribeChannelTopPubUserListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelTopPubUserListResponse
@@ -1378,8 +1403,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</p>
+     * 
      * @param request DescribeChannelTopPubUserListRequest
      * @return DescribeChannelTopPubUserListResponse
      */
@@ -1389,8 +1415,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeChannelUser
-     *
+     * <b>summary</b> : 
+     * <p>DescribeChannelUser</p>
+     * 
      * @param request DescribeChannelUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelUserResponse
@@ -1428,8 +1455,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeChannelUser
-     *
+     * <b>summary</b> : 
+     * <p>DescribeChannelUser</p>
+     * 
      * @param request DescribeChannelUserRequest
      * @return DescribeChannelUserResponse
      */
@@ -1439,8 +1467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelUserMetrics查询频道总览中的用户数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</p>
+     * 
      * @param request DescribeChannelUserMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeChannelUserMetricsResponse
@@ -1482,8 +1511,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeChannelUserMetrics查询频道总览中的用户数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</p>
+     * 
      * @param request DescribeChannelUserMetricsRequest
      * @return DescribeChannelUserMetricsResponse
      */
@@ -1539,8 +1569,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeEndPointEventList获取端对端用户事件列表。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeEndPointEventList获取端对端用户事件列表。</p>
+     * 
      * @param request DescribeEndPointEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEndPointEventListResponse
@@ -1586,8 +1617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeEndPointEventList获取端对端用户事件列表。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeEndPointEventList获取端对端用户事件列表。</p>
+     * 
      * @param request DescribeEndPointEventListRequest
      * @return DescribeEndPointEventListResponse
      */
@@ -1597,8 +1629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeEndPointMetricData获取端对端指标数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeEndPointMetricData获取端对端指标数据。</p>
+     * 
      * @param request DescribeEndPointMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEndPointMetricDataResponse
@@ -1656,8 +1689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeEndPointMetricData获取端对端指标数据。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeEndPointMetricData获取端对端指标数据。</p>
+     * 
      * @param request DescribeEndPointMetricDataRequest
      * @return DescribeEndPointMetricDataResponse
      */
@@ -1667,8 +1701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断影响因素分布
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断影响因素分布</p>
+     * 
      * @param request DescribeFaultDiagnosisFactorDistributionStatRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFaultDiagnosisFactorDistributionStatResponse
@@ -1706,8 +1741,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断影响因素分布
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断影响因素分布</p>
+     * 
      * @param request DescribeFaultDiagnosisFactorDistributionStatRequest
      * @return DescribeFaultDiagnosisFactorDistributionStatResponse
      */
@@ -1717,8 +1753,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断总览数据
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断总览数据</p>
+     * 
      * @param request DescribeFaultDiagnosisOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFaultDiagnosisOverallDataResponse
@@ -1760,8 +1797,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断总览数据
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断总览数据</p>
+     * 
      * @param request DescribeFaultDiagnosisOverallDataRequest
      * @return DescribeFaultDiagnosisOverallDataResponse
      */
@@ -1771,8 +1809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断用户详情
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断用户详情</p>
+     * 
      * @param request DescribeFaultDiagnosisUserDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFaultDiagnosisUserDetailResponse
@@ -1822,8 +1861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断用户详情
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断用户详情</p>
+     * 
      * @param request DescribeFaultDiagnosisUserDetailRequest
      * @return DescribeFaultDiagnosisUserDetailResponse
      */
@@ -1833,8 +1873,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断用户明细列表
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断用户明细列表</p>
+     * 
      * @param request DescribeFaultDiagnosisUserListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFaultDiagnosisUserListResponse
@@ -1892,8 +1933,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取异常诊断用户明细列表
-     *
+     * <b>summary</b> : 
+     * <p>获取异常诊断用户明细列表</p>
+     * 
      * @param request DescribeFaultDiagnosisUserListRequest
      * @return DescribeFaultDiagnosisUserListResponse
      */
@@ -1961,8 +2003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</p>
+     * 
      * @param request DescribePubUserListBySubUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePubUserListBySubUserResponse
@@ -2008,8 +2051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</p>
+     * 
      * @param request DescribePubUserListBySubUserRequest
      * @return DescribePubUserListBySubUserResponse
      */
@@ -2019,8 +2063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</p>
+     * 
      * @param request DescribeQoeMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQoeMetricDataResponse
@@ -2066,8 +2111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。
-     *
+     * <b>summary</b> : 
+     * <p>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</p>
+     * 
      * @param request DescribeQoeMetricDataRequest
      * @return DescribeQoeMetricDataResponse
      */
@@ -2077,8 +2123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计区域分布统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计区域分布统计数据</p>
+     * 
      * @param request DescribeQualityAreaDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQualityAreaDistributionStatDataResponse
@@ -2120,8 +2167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计区域分布统计数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计区域分布统计数据</p>
+     * 
      * @param request DescribeQualityAreaDistributionStatDataRequest
      * @return DescribeQualityAreaDistributionStatDataResponse
      */
@@ -2131,8 +2179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计分布数据</p>
+     * 
      * @param request DescribeQualityDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQualityDistributionStatDataResponse
@@ -2174,8 +2223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计分布数据</p>
+     * 
      * @param request DescribeQualityDistributionStatDataRequest
      * @return DescribeQualityDistributionStatDataResponse
      */
@@ -2185,8 +2235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计各操作系统下SDK版本分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计各操作系统下SDK版本分布数据</p>
+     * 
      * @param request DescribeQualityOsSdkVersionDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQualityOsSdkVersionDistributionStatDataResponse
@@ -2224,8 +2275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计各操作系统下SDK版本分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计各操作系统下SDK版本分布数据</p>
+     * 
      * @param request DescribeQualityOsSdkVersionDistributionStatDataRequest
      * @return DescribeQualityOsSdkVersionDistributionStatDataResponse
      */
@@ -2235,8 +2287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计概览数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计概览数据</p>
+     * 
      * @param request DescribeQualityOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeQualityOverallDataResponse
@@ -2278,8 +2331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质量统计概览数据
-     *
+     * <b>summary</b> : 
+     * <p>获取质量统计概览数据</p>
+     * 
      * @param request DescribeQualityOverallDataRequest
      * @return DescribeQualityOverallDataResponse
      */
@@ -2703,8 +2757,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计地域分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计地域分布数据</p>
+     * 
      * @param request DescribeUsageAreaDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUsageAreaDistributionStatDataResponse
@@ -2746,8 +2801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计地域分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计地域分布数据</p>
+     * 
      * @param request DescribeUsageAreaDistributionStatDataRequest
      * @return DescribeUsageAreaDistributionStatDataResponse
      */
@@ -2757,8 +2813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计分布数据</p>
+     * 
      * @param request DescribeUsageDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUsageDistributionStatDataResponse
@@ -2800,8 +2857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计分布数据</p>
+     * 
      * @param request DescribeUsageDistributionStatDataRequest
      * @return DescribeUsageDistributionStatDataResponse
      */
@@ -2811,8 +2869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计各操作系统下SDK版本分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计各操作系统下SDK版本分布数据</p>
+     * 
      * @param request DescribeUsageOsSdkVersionDistributionStatDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUsageOsSdkVersionDistributionStatDataResponse
@@ -2850,8 +2909,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计各操作系统下SDK版本分布数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计各操作系统下SDK版本分布数据</p>
+     * 
      * @param request DescribeUsageOsSdkVersionDistributionStatDataRequest
      * @return DescribeUsageOsSdkVersionDistributionStatDataResponse
      */
@@ -2861,8 +2921,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计概览数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计概览数据</p>
+     * 
      * @param request DescribeUsageOverallDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUsageOverallDataResponse
@@ -2904,8 +2965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用量统计概览数据
-     *
+     * <b>summary</b> : 
+     * <p>获取用量统计概览数据</p>
+     * 
      * @param request DescribeUsageOverallDataRequest
      * @return DescribeUsageOverallDataResponse
      */
@@ -3103,8 +3165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改App信息
-     *
+     * <b>summary</b> : 
+     * <p>修改App信息</p>
+     * 
      * @param request ModifyAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAppResponse
@@ -3142,8 +3205,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改App信息
-     *
+     * <b>summary</b> : 
+     * <p>修改App信息</p>
+     * 
      * @param request ModifyAppRequest
      * @return ModifyAppResponse
      */
@@ -3153,8 +3217,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新应用推流模版
-     *
+     * <b>summary</b> : 
+     * <p>更新应用推流模版</p>
+     * 
      * @param tmpReq ModifyAppStreamingOutTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAppStreamingOutTemplateResponse
@@ -3194,8 +3259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新应用推流模版
-     *
+     * <b>summary</b> : 
+     * <p>更新应用推流模版</p>
+     * 
      * @param request ModifyAppStreamingOutTemplateRequest
      * @return ModifyAppStreamingOutTemplateResponse
      */
@@ -3313,8 +3379,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary RemoveUsers
-     *
+     * <b>summary</b> : 
+     * <p>RemoveUsers</p>
+     * 
      * @param request RemoveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveUsersResponse
@@ -3352,8 +3419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary RemoveUsers
-     *
+     * <b>summary</b> : 
+     * <p>RemoveUsers</p>
+     * 
      * @param request RemoveUsersRequest
      * @return RemoveUsersResponse
      */
@@ -3363,8 +3431,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StartCloudRecord
-     *
+     * <b>summary</b> : 
+     * <p>StartCloudRecord</p>
+     * 
      * @param request StartCloudRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartCloudRecordResponse
@@ -3378,6 +3447,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
             query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clockWidgets)) {
+            query.put("ClockWidgets", request.clockWidgets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cropMode)) {
+            query.put("CropMode", request.cropMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            query.put("Images", request.images);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
@@ -3394,6 +3475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.texts)) {
+            query.put("Texts", request.texts);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3414,8 +3499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StartCloudRecord
-     *
+     * <b>summary</b> : 
+     * <p>StartCloudRecord</p>
+     * 
      * @param request StartCloudRecordRequest
      * @return StartCloudRecordResponse
      */
@@ -3700,8 +3786,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StartStreamingOut
-     *
+     * <b>summary</b> : 
+     * <p>StartStreamingOut</p>
+     * 
      * @param request StartStreamingOutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartStreamingOutResponse
@@ -3717,6 +3804,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChannelId", request.channelId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clockWidgets)) {
+            query.put("ClockWidgets", request.clockWidgets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cropMode)) {
+            query.put("CropMode", request.cropMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            query.put("Images", request.images);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
             query.put("Panes", request.panes);
         }
@@ -3727,6 +3826,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.texts)) {
+            query.put("Texts", request.texts);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
@@ -3751,8 +3854,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StartStreamingOut
-     *
+     * <b>summary</b> : 
+     * <p>StartStreamingOut</p>
+     * 
      * @param request StartStreamingOutRequest
      * @return StartStreamingOutResponse
      */
@@ -3762,8 +3866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除频道
-     *
+     * <b>summary</b> : 
+     * <p>删除频道</p>
+     * 
      * @param request StopChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopChannelResponse
@@ -3797,8 +3902,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除频道
-     *
+     * <b>summary</b> : 
+     * <p>删除频道</p>
+     * 
      * @param request StopChannelRequest
      * @return StopChannelResponse
      */
@@ -3808,8 +3914,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StopCloudRecord
-     *
+     * <b>summary</b> : 
+     * <p>StopCloudRecord</p>
+     * 
      * @param request StopCloudRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopCloudRecordResponse
@@ -3847,8 +3954,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StopCloudRecord
-     *
+     * <b>summary</b> : 
+     * <p>StopCloudRecord</p>
+     * 
      * @param request StopCloudRecordRequest
      * @return StopCloudRecordResponse
      */
@@ -3950,8 +4058,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StopStreamingOut
-     *
+     * <b>summary</b> : 
+     * <p>StopStreamingOut</p>
+     * 
      * @param request StopStreamingOutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopStreamingOutResponse
@@ -3989,8 +4098,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary StopStreamingOut
-     *
+     * <b>summary</b> : 
+     * <p>StopStreamingOut</p>
+     * 
      * @param request StopStreamingOutRequest
      * @return StopStreamingOutResponse
      */
@@ -4067,6 +4177,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAutoLiveStreamRuleResponse updateAutoLiveStreamRule(UpdateAutoLiveStreamRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAutoLiveStreamRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新云端录制任务</p>
+     * 
+     * @param request UpdateCloudRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCloudRecordResponse
+     */
+    public UpdateCloudRecordResponse updateCloudRecordWithOptions(UpdateCloudRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clockWidgets)) {
+            query.put("ClockWidgets", request.clockWidgets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            query.put("Images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
+            query.put("Panes", request.panes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.texts)) {
+            query.put("Texts", request.texts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCloudRecord"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCloudRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新云端录制任务</p>
+     * 
+     * @param request UpdateCloudRecordRequest
+     * @return UpdateCloudRecordResponse
+     */
+    public UpdateCloudRecordResponse updateCloudRecord(UpdateCloudRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCloudRecordWithOptions(request, runtime);
     }
 
     /**
@@ -4401,5 +4583,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRecordTemplateResponse updateRecordTemplate(UpdateRecordTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRecordTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新旁路推流任务</p>
+     * 
+     * @param request UpdateStreamingOutRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateStreamingOutResponse
+     */
+    public UpdateStreamingOutResponse updateStreamingOutWithOptions(UpdateStreamingOutRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clockWidgets)) {
+            query.put("ClockWidgets", request.clockWidgets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.images)) {
+            query.put("Images", request.images);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
+            query.put("Panes", request.panes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.texts)) {
+            query.put("Texts", request.texts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateStreamingOut"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateStreamingOutResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新旁路推流任务</p>
+     * 
+     * @param request UpdateStreamingOutRequest
+     * @return UpdateStreamingOutResponse
+     */
+    public UpdateStreamingOutResponse updateStreamingOut(UpdateStreamingOutRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateStreamingOutWithOptions(request, runtime);
     }
 }

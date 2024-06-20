@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageOverallDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeUsageOverallDataResponseBodyUsageOverallDataNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1615824000</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -65,6 +77,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<DescribeUsageOverallDataResponseBodyUsageOverallDataNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONLINE_USER_PEAK</p>
+         */
         @NameInMap("Type")
         public String type;
 

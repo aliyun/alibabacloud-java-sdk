@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeChannelDistributionStatDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelDistributionStatDataResponseBodyStatList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallUserCount")
         public Integer callUserCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0000</p>
+         */
         @NameInMap("CallUserRatio")
         public String callUserRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OS</p>
+         */
         @NameInMap("Name")
         public String name;
 

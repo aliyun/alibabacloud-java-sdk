@@ -6,48 +6,82 @@ import com.aliyun.tea.*;
 public class DescribeCallListRequest extends TeaModel {
     /**
      * <p>APP ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testappid</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OUT</p>
+     */
     @NameInMap("CallStatus")
     public String callStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>311</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615892596</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BAD_EXP_USER_COUNT_DESC</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("QueryMode")
     public String queryMode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615806196</p>
      */
     @NameInMap("StartTs")
     public Long startTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c906531af5f9****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyAppRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ioeh****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defaultName</p>
      */
     @NameInMap("AppName")
     public String appName;

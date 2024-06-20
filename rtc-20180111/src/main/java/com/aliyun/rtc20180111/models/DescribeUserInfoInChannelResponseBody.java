@@ -4,18 +4,34 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserInfoInChannelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsChannelExist")
     public Boolean isChannelExist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsInChannel")
     public Boolean isInChannel;
 
     @NameInMap("Property")
     public java.util.List<DescribeUserInfoInChannelResponseBodyProperty> property;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1557909133</p>
+     */
     @NameInMap("Timestamp")
     public Integer timestamp;
 
@@ -65,12 +81,24 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeUserInfoInChannelResponseBodyProperty extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1557909133</p>
+         */
         @NameInMap("Join")
         public Integer join;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Role")
         public Integer role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xa744sxx8rtobgj****</p>
+         */
         @NameInMap("Session")
         public String session;
 

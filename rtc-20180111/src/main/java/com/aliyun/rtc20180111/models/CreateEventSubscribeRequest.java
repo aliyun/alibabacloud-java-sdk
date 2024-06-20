@@ -6,40 +6,68 @@ import com.aliyun.tea.*;
 public class CreateEventSubscribeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9qb1****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>http://****.com/callback</p>
      */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123333</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ChannelEvent</p>
      */
     @NameInMap("Events")
     public java.util.List<String> events;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NeedCallbackAuth")
     public Boolean needCallbackAuth;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Role")
     public Long role;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("Users")
     public java.util.List<String> users;
 

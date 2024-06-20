@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RemoveUsersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eo85****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
@@ -54,6 +60,9 @@ public class RemoveUsersRequest extends TeaModel {
     public static class RemoveUsersRequestUsers extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1811****</p>
          */
         @NameInMap("UserId")
         public String userId;

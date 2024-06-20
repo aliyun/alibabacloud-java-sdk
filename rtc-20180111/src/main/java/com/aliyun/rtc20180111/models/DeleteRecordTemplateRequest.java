@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteRecordTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -18,6 +21,9 @@ public class DeleteRecordTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76dasgb****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

@@ -7,6 +7,10 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
     @NameInMap("PeakChannelCntDataPerInterval")
     public DescribeRtcPeakChannelCntDataResponseBodyPeakChannelCntDataPerInterval peakChannelCntDataPerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcPeakChannelCntDataResponseBodyPeakChannelCntDataPerIntervalPeakChannelCntModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ActiveChannelPeak")
         public Long activeChannelPeak;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-29T00:01:00Z</p>
+         */
         @NameInMap("ActiveChannelPeakTime")
         public String activeChannelPeakTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-01-29T00:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

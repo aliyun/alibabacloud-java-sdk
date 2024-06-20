@@ -7,12 +7,24 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
     @NameInMap("RecordFiles")
     public java.util.List<DescribeRecordFilesResponseBodyRecordFiles> recordFiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>760bad53276431c499e30dc36f6b****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Long totalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPage")
     public Long totalPage;
 
@@ -54,24 +66,52 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordFilesResponseBodyRecordFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>yourAppId</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yourChannelId</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-02T17:36:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-01T17:36:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-02T17:36:00Z</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yourTaskId</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

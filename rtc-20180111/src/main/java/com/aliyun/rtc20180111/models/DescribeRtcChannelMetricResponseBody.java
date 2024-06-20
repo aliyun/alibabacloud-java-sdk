@@ -7,6 +7,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     @NameInMap("ChannelMetricInfo")
     public DescribeRtcChannelMetricResponseBodyChannelMetricInfo channelMetricInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfoChannelMetric extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>example_channel</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06T18:57:00Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PubUserCount")
         public Integer pubUserCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-06T17:57:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("SubUserCount")
         public Integer subUserCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("UserCount")
         public Integer userCount;
 
@@ -106,18 +134,38 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfoDurationPubDuration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Audio")
         public Integer audio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Content")
         public Integer content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Video1080")
         public Integer video1080;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Video360")
         public Integer video360;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Video720")
         public Integer video720;
 
@@ -169,18 +217,38 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     }
 
     public static class DescribeRtcChannelMetricResponseBodyChannelMetricInfoDurationSubDuration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Audio")
         public Integer audio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Content")
         public Integer content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Video1080")
         public Integer video1080;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Video360")
         public Integer video360;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Video720")
         public Integer video720;
 
