@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class CreateMPULayoutRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("AudioMixCount")
     public Integer audioMixCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LayoutName</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -74,24 +84,52 @@ public class CreateMPULayoutRequest extends TeaModel {
     }
 
     public static class CreateMPULayoutRequestPanes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.25</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MajorPane")
         public Integer majorPane;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PaneId")
         public Integer paneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.25</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.25</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.25</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 

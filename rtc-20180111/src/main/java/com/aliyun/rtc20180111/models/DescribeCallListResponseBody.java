@@ -7,15 +7,31 @@ public class DescribeCallListResponseBody extends TeaModel {
     @NameInMap("CallList")
     public java.util.List<DescribeCallListResponseBodyCallList> callList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalCnt")
     public Integer totalCnt;
 
@@ -67,28 +83,59 @@ public class DescribeCallListResponseBody extends TeaModel {
     public static class DescribeCallListResponseBodyCallList extends TeaModel {
         /**
          * <p>App ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9qb1****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BadExpUserCnt")
         public Integer badExpUserCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OUT</p>
+         */
         @NameInMap("CallStatus")
         public String callStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>904</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UserCnt")
         public Integer userCnt;
 

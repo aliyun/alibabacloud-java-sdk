@@ -7,12 +7,24 @@ public class DescribeAppsResponseBody extends TeaModel {
     @NameInMap("AppList")
     public DescribeAppsResponseBodyAppList appList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -73,24 +85,48 @@ public class DescribeAppsResponseBody extends TeaModel {
     }
 
     public static class DescribeAppsResponseBodyAppListApp extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rgf1****&quot;</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Default AppName</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>universal</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paybyduration</p>
+         */
         @NameInMap("BillType")
         public String billType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-09T02:02:29Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("ServiceAreas")
         public DescribeAppsResponseBodyAppListAppServiceAreas serviceAreas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

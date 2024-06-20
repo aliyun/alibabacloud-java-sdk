@@ -4,15 +4,31 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelParticipantsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1557909133</p>
+     */
     @NameInMap("Timestamp")
     public Integer timestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 

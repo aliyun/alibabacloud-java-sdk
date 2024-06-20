@@ -13,6 +13,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     @NameInMap("OverallData")
     public DescribeChannelOverallDataResponseBodyOverallData overallData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +58,45 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyCallInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rjdhtnqy</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("CallStatus")
         public String callStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615860711</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615860811</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
@@ -131,9 +159,17 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1612418625</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -172,6 +208,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelOverallDataResponseBodyMetricDatasNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CALL_QUALITY</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -199,18 +239,38 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelOverallDataResponseBodyOverallData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("ConnAvgTime")
         public Float connAvgTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.91</p>
+         */
         @NameInMap("FiveSecJoinRate")
         public Float fiveSecJoinRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("TotalAudioStuckRate")
         public Float totalAudioStuckRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("TotalVideoStuckRate")
         public Float totalVideoStuckRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("TotalVideoVagueRate")
         public Float totalVideoVagueRate;
 

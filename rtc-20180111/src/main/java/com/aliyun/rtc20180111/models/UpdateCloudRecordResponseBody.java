@@ -3,10 +3,8 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class StartCloudRecordResponseBody extends TeaModel {
+public class UpdateCloudRecordResponseBody extends TeaModel {
     /**
-     * <p>requestId</p>
-     * 
      * <strong>example:</strong>
      * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
      */
@@ -14,20 +12,18 @@ public class StartCloudRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>taskId</p>
-     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
-    public static StartCloudRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        StartCloudRecordResponseBody self = new StartCloudRecordResponseBody();
+    public static UpdateCloudRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateCloudRecordResponseBody self = new UpdateCloudRecordResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public StartCloudRecordResponseBody setRequestId(String requestId) {
+    public UpdateCloudRecordResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -35,7 +31,7 @@ public class StartCloudRecordResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StartCloudRecordResponseBody setTaskId(String taskId) {
+    public UpdateCloudRecordResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

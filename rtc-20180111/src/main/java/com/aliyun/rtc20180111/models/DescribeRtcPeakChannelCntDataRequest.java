@@ -4,21 +4,41 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRtcPeakChannelCntDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-01-29T00:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CN</p>
+     */
     @NameInMap("ServiceArea")
     public String serviceArea;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-01-29T00:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

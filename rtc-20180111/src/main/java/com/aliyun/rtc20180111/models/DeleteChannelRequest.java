@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteChannelRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eo85****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;

@@ -4,15 +4,31 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalCnt")
     public Integer totalCnt;
 
@@ -65,6 +81,10 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserListFaultList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JOIN_SLOW</p>
+         */
         @NameInMap("FaultType")
         public String faultType;
 
@@ -84,21 +104,41 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisUserListResponseBodyUserList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("ChannelCreatedTs")
         public Long channelCreatedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>904</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
         @NameInMap("FaultList")
         public java.util.List<DescribeFaultDiagnosisUserListResponseBodyUserListFaultList> faultList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

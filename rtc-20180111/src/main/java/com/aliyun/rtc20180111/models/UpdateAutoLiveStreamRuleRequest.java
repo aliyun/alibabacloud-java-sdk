@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class UpdateAutoLiveStreamRuleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eo85****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+     */
     @NameInMap("CallBack")
     public String callBack;
 
@@ -19,6 +26,10 @@ public class UpdateAutoLiveStreamRuleRequest extends TeaModel {
     @NameInMap("ChannelIds")
     public java.util.List<String> channelIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MediaEncode")
     public Integer mediaEncode;
 
@@ -27,16 +38,26 @@ public class UpdateAutoLiveStreamRuleRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtmp://${domain}/${app}/${stream}</p>
      */
     @NameInMap("PlayDomain")
     public String playDomain;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("RuleId")
     public Integer ruleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testRule</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

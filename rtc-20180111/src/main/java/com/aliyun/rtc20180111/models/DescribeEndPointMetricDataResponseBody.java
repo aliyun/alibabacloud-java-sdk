@@ -7,6 +7,10 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
     @NameInMap("PubMetrics")
     public java.util.List<DescribeEndPointMetricDataResponseBodyPubMetrics> pubMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,9 +50,17 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1548670257</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>230100</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -87,9 +99,17 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<DescribeEndPointMetricDataResponseBodyPubMetricsNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VIDEO_STUCK_CAMERA</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuserid</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -128,9 +148,17 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1548670257</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>230100</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -169,9 +197,17 @@ public class DescribeEndPointMetricDataResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<DescribeEndPointMetricDataResponseBodySubMetricsNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VIDEO_STUCK_CAMERA</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuserid</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

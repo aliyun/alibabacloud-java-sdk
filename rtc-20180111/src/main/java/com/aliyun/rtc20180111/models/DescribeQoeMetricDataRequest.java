@@ -6,29 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeQoeMetricDataRequest extends TeaModel {
     /**
      * <p>APP ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testappid</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1614936817</p>
      */
     @NameInMap("CreatedTs")
     public Long createdTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1614936817</p>
+     */
     @NameInMap("DestroyedTs")
     public Long destroyedTs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testuserid</p>
      */
     @NameInMap("UserId")
     public String userId;

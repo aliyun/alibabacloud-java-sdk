@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DescribeAppKeyResponseBody extends TeaModel {
     /**
      * <p>AppKey。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ba133b2cee4ab9be424674892c33****</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>154EF5DE-3D08-1F2C-A482-281F78D74B7C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,10 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
     @NameInMap("QualityStatDataList")
     public java.util.List<DescribeQualityDistributionStatDataResponseBodyQualityStatDataList> qualityStatDataList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +36,80 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQualityDistributionStatDataResponseBodyQualityStatDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>554</p>
+         */
         @NameInMap("AudioDelay")
         public Long audioDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9953</p>
+         */
         @NameInMap("AudioHighQualityTransmissionRate")
         public String audioHighQualityTransmissionRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0014</p>
+         */
         @NameInMap("AudioStuckRate")
         public String audioStuckRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0000</p>
+         */
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9560</p>
+         */
         @NameInMap("JoinChannelSucFiveSecRate")
         public String joinChannelSucFiveSecRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9575</p>
+         */
         @NameInMap("JoinChannelSucRate")
         public String joinChannelSucRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONE_TO_FIVE</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>517</p>
+         */
         @NameInMap("VideoDelay")
         public Long videoDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1299</p>
+         */
         @NameInMap("VideoFirstPicDuration")
         public Long videoFirstPicDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9981</p>
+         */
         @NameInMap("VideoHighQualityTransmissionRate")
         public String videoHighQualityTransmissionRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0264</p>
+         */
         @NameInMap("VideoStuckRate")
         public String videoStuckRate;
 

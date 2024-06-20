@@ -4,12 +4,20 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribePubUserListBySubUserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>IN</p>
+     */
     @NameInMap("CallStatus")
     public String callStatus;
 
     @NameInMap("PubUserDetailList")
     public java.util.List<DescribePubUserListBySubUserResponseBodyPubUserDetailList> pubUserDetailList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +62,17 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodyPubUserDetailListOnlinePeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("JoinTs")
         public Long joinTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -87,33 +103,65 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         @NameInMap("CallIdList")
         public java.util.List<String> callIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("ClientType")
         public String clientType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省-杭州市</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4G</p>
+         */
         @NameInMap("Network")
         public String network;
 
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribePubUserListBySubUserResponseBodyPubUserDetailListOnlinePeriods> onlinePeriods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iOS</p>
+         */
         @NameInMap("Os")
         public String os;
 
@@ -123,15 +171,27 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuserid</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>旁路转推</p>
+         */
         @NameInMap("UserIdAlias")
         public String userIdAlias;
 
@@ -279,9 +339,17 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodySubUserDetailOnlinePeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("JoinTs")
         public Long joinTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("LeaveTs")
         public Long leaveTs;
 
@@ -309,33 +377,65 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     }
 
     public static class DescribePubUserListBySubUserResponseBodySubUserDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("ClientType")
         public String clientType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("CreatedTs")
         public Long createdTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("DestroyedTs")
         public Long destroyedTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省-杭州市</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4G</p>
+         */
         @NameInMap("Network")
         public String network;
 
         @NameInMap("NetworkList")
         public java.util.List<String> networkList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OnlineDuration")
         public Long onlineDuration;
 
         @NameInMap("OnlinePeriods")
         public java.util.List<DescribePubUserListBySubUserResponseBodySubUserDetailOnlinePeriods> onlinePeriods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iOS</p>
+         */
         @NameInMap("Os")
         public String os;
 
@@ -345,15 +445,27 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("SdkVersion")
         public String sdkVersion;
 
         @NameInMap("SdkVersionList")
         public java.util.List<String> sdkVersionList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuserid</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>旁路转推</p>
+         */
         @NameInMap("UserIdAlias")
         public String userIdAlias;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeChannelUsersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2hz****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAppStreamingOutTemplateResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30D41049-D02D-1C21-86AE-B3E5FD825C17</p>
      */
     @NameInMap("RequestId")
     public String requestId;

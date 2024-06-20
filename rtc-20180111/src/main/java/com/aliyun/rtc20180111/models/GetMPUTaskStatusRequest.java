@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMPUTaskStatusRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -15,6 +18,9 @@ public class GetMPUTaskStatusRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourTaskId</p>
      */
     @NameInMap("TaskId")
     public String taskId;

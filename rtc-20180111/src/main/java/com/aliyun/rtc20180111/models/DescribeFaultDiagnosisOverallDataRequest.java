@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeFaultDiagnosisOverallDataRequest extends TeaModel {
     /**
      * <p>APP ID</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4eah****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615910399</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615824000</p>
      */
     @NameInMap("StartTs")
     public Long startTs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JOIN_SLOW_USER</p>
      */
     @NameInMap("StatDim")
     public String statDim;

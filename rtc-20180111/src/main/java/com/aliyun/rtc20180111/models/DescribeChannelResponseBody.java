@@ -13,6 +13,10 @@ public class DescribeChannelResponseBody extends TeaModel {
     @NameInMap("ChannelExist")
     public Boolean channelExist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,9 +50,17 @@ public class DescribeChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelResponseBodyChannel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testid</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1557909133</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

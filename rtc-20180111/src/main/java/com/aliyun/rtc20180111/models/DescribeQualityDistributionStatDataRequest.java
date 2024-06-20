@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeQualityDistributionStatDataRequest extends TeaModel {
     /**
      * <p>APP ID</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0rbd****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615910399</p>
      */
     @NameInMap("EndDate")
     public Long endDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1615824000</p>
      */
     @NameInMap("StartDate")
     public Long startDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CHANNEL_ONLINE</p>
      */
     @NameInMap("StatDim")
     public String statDim;

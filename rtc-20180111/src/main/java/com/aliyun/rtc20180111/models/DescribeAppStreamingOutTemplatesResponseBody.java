@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B0A2FCBC-43A4-428F-BC1D-3F4F85837F76</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -13,9 +16,17 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     @NameInMap("Templates")
     public java.util.List<DescribeAppStreamingOutTemplatesResponseBodyTemplates> templates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalNum")
     public Long totalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPage")
     public Long totalPage;
 
@@ -57,18 +68,34 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppStreamingOutTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-04T06:22:15Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("LayoutIds")
         public java.util.List<String> layoutIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MediaEncode")
         public Integer mediaEncode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>模版名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Bj6D****</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

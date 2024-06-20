@@ -7,6 +7,10 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
     @NameInMap("QualityOsSdkVersionStatDataList")
     public java.util.List<DescribeQualityOsSdkVersionDistributionStatDataResponseBodyQualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +36,87 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
     }
 
     public static class DescribeQualityOsSdkVersionDistributionStatDataResponseBodyQualityOsSdkVersionStatDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>248</p>
+         */
         @NameInMap("AudioDelay")
         public Long audioDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9987</p>
+         */
         @NameInMap("AudioHighQualityTransmissionRate")
         public String audioHighQualityTransmissionRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0011</p>
+         */
         @NameInMap("AudioStuckRate")
         public String audioStuckRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0984</p>
+         */
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8276</p>
+         */
         @NameInMap("JoinChannelSucFiveSecRate")
         public String joinChannelSucFiveSecRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8276</p>
+         */
         @NameInMap("JoinChannelSucRate")
         public String joinChannelSucRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.1.0.210316.dev--release/rtcsdk_v2.1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>macOS</p>
+         */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <strong>example:</strong>
+         * <p>333</p>
+         */
         @NameInMap("VideoDelay")
         public Long videoDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5643</p>
+         */
         @NameInMap("VideoFirstPicDuration")
         public Long videoFirstPicDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9997</p>
+         */
         @NameInMap("VideoHighQualityTransmissionRate")
         public String videoHighQualityTransmissionRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0054</p>
+         */
         @NameInMap("VideoStuckRate")
         public String videoStuckRate;
 

@@ -6,70 +6,138 @@ import com.aliyun.tea.*;
 public class StartRecordTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourChannelId</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CropMode")
     public Long cropMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1111</p>
+     */
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MediaEncode")
     public Integer mediaEncode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MixMode")
     public Integer mixMode;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>camera</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("StreamType")
     public Integer streamType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SubSpecAudioUsers")
     public java.util.List<String> subSpecAudioUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SubSpecCameraUsers")
     public java.util.List<String> subSpecCameraUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SubSpecShareScreenUsers")
     public java.util.List<String> subSpecShareScreenUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>userID</p>
+     */
     @NameInMap("SubSpecUsers")
     public java.util.List<String> subSpecUsers;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourTaskId</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4IN_1080P</p>
+     */
     @NameInMap("TaskProfile")
     public String taskProfile;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76dasgb****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UnsubSpecAudioUsers")
     public java.util.List<String> unsubSpecAudioUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UnsubSpecCameraUsers")
     public java.util.List<String> unsubSpecCameraUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UnsubSpecShareScreenUsers")
     public java.util.List<String> unsubSpecShareScreenUsers;
 
@@ -242,24 +310,52 @@ public class StartRecordTaskRequest extends TeaModel {
     }
 
     public static class StartRecordTaskRequestUserPanesImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -327,24 +423,52 @@ public class StartRecordTaskRequest extends TeaModel {
     }
 
     public static class StartRecordTaskRequestUserPanesTexts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FontColor")
         public Integer fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontType")
         public Integer fontType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -415,15 +539,27 @@ public class StartRecordTaskRequest extends TeaModel {
         @NameInMap("Images")
         public java.util.List<StartRecordTaskRequestUserPanesImages> images;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PaneId")
         public Integer paneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>camera</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
         @NameInMap("Texts")
         public java.util.List<StartRecordTaskRequestUserPanesTexts> texts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestId</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

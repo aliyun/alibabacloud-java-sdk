@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
     }
 
     public static class DescribeUsageDistributionStatDataResponseBodyUsageStatList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>51</p>
+         */
         @NameInMap("AudioCallDuration")
         public Long audioCallDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9782</p>
+         */
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONE_TO_FIVE</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10636</p>
+         */
         @NameInMap("TotalCallDuration")
         public Long totalCallDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10585</p>
+         */
         @NameInMap("VideoCallDuration")
         public Long videoCallDuration;
 

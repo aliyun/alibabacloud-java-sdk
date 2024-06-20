@@ -6,39 +6,66 @@ import com.aliyun.tea.*;
 public class DescribeEndPointMetricDataRequest extends TeaModel {
     /**
      * <p>APP ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testappid</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1614936817</p>
      */
     @NameInMap("CreatedTs")
     public Long createdTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1614936817</p>
+     */
     @NameInMap("DestroyedTs")
     public Long destroyedTs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VIDEO_STUCK_CAMERA</p>
      */
     @NameInMap("Metrics")
     public String metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testcall1,testcall2</p>
+     */
     @NameInMap("PubCallIdList")
     public String pubCallIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testuserid</p>
+     */
     @NameInMap("PubUserId")
     public String pubUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testuserid</p>
+     */
     @NameInMap("SubUserId")
     public String subUserId;
 

@@ -4,30 +4,58 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ChannelProfile")
     public Integer channelProfile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("CommTotalNum")
     public Integer commTotalNum;
 
     @NameInMap("InteractiveUserList")
     public java.util.List<String> interactiveUserList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("InteractiveUserNum")
     public Integer interactiveUserNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsChannelExist")
     public Boolean isChannelExist;
 
     @NameInMap("LiveUserList")
     public java.util.List<String> liveUserList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("LiveUserNum")
     public Integer liveUserNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6159ba01-6687-4fb2-a831-f0cd8d188648</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1557909133</p>
+     */
     @NameInMap("Timestamp")
     public Integer timestamp;
 

@@ -4,24 +4,48 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3.0</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public String status;
 

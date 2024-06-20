@@ -4,6 +4,10 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
     }
 
     public static class DescribeUsageOsSdkVersionDistributionStatDataResponseBodyUsageOsSdkVersionStatList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AudioCallDuration")
         public Long audioCallDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0984</p>
+         */
         @NameInMap("CallDurationRatio")
         public String callDurationRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>macOS</p>
+         */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <strong>example:</strong>
+         * <p>476</p>
+         */
         @NameInMap("TotalCallDuration")
         public Long totalCallDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>473</p>
+         */
         @NameInMap("VideoCallDuration")
         public Long videoCallDuration;
 

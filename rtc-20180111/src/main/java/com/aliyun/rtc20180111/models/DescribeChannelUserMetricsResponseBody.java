@@ -10,6 +10,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     @NameInMap("OverallData")
     public DescribeChannelUserMetricsResponseBodyOverallData overallData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,9 +50,17 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1612418625</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -87,6 +99,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<DescribeChannelUserMetricsResponseBodyMetricDatasNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL_NUM</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -114,18 +130,38 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserMetricsResponseBodyOverallData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalBadExpNum")
         public Long totalBadExpNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalJoinFailNum")
         public Long totalJoinFailNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPubUserNum")
         public Long totalPubUserNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalSubUserNum")
         public Long totalSubUserNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalUserNum")
         public Long totalUserNum;
 

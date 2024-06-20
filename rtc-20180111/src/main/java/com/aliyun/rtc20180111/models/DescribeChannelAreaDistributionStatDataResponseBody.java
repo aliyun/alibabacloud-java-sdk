@@ -7,6 +7,10 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
     @NameInMap("AreaStatList")
     public java.util.List<DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList> areaStatList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
     }
 
     public static class DescribeChannelAreaDistributionStatDataResponseBodyAreaStatList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省</p>
+         */
         @NameInMap("AreaName")
         public String areaName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallUserCount")
         public Integer callUserCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9999</p>
+         */
         @NameInMap("HighQualityTransmissionRate")
         public String highQualityTransmissionRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PubUserCount")
         public Integer pubUserCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SubUserCount")
         public Integer subUserCount;
 

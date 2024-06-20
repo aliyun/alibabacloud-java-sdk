@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class AddRecordTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourAppId</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BackgroundColor")
     public Integer backgroundColor;
 
@@ -19,39 +26,67 @@ public class AddRecordTemplateRequest extends TeaModel {
     @NameInMap("ClockWidgets")
     public java.util.List<AddRecordTemplateRequestClockWidgets> clockWidgets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>180</p>
+     */
     @NameInMap("DelayStopTime")
     public Integer delayStopTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableM3u8DateTime")
     public Boolean enableM3u8DateTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1800</p>
      */
     @NameInMap("FileSplitInterval")
     public Integer fileSplitInterval;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mp4</p>
      */
     @NameInMap("Formats")
     public java.util.List<String> formats;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+     */
     @NameInMap("HttpCallbackUrl")
     public String httpCallbackUrl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MediaEncode")
     public Integer mediaEncode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>record-callback-queue</p>
+     */
     @NameInMap("MnsQueue")
     public String mnsQueue;
 
@@ -63,6 +98,9 @@ public class AddRecordTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtc-record-oss</p>
      */
     @NameInMap("OssBucket")
     public String ossBucket;
@@ -72,6 +110,9 @@ public class AddRecordTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>record/{AppId}/{ChannelId_TaskId}/{EscapedStartTime}_{EscapedEndTime}</p>
      */
     @NameInMap("OssFilePrefix")
     public String ossFilePrefix;
@@ -81,6 +122,9 @@ public class AddRecordTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4IN_1080P</p>
      */
     @NameInMap("TaskProfile")
     public String taskProfile;
@@ -246,24 +290,52 @@ public class AddRecordTemplateRequest extends TeaModel {
     }
 
     public static class AddRecordTemplateRequestBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -331,21 +403,45 @@ public class AddRecordTemplateRequest extends TeaModel {
     }
 
     public static class AddRecordTemplateRequestClockWidgets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontColor")
         public Integer fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FontType")
         public Integer fontType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
@@ -405,27 +501,59 @@ public class AddRecordTemplateRequest extends TeaModel {
     }
 
     public static class AddRecordTemplateRequestWatermarks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Alpha")
         public Float alpha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Display")
         public Integer display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2456</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7576</p>
+         */
         @NameInMap("Y")
         public Float y;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ZOrder")
         public Integer ZOrder;
 

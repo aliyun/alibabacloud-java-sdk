@@ -7,6 +7,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     @NameInMap("Nodes")
     public java.util.List<DescribeEndPointEventListResponseBodyNodes> nodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>开始发布</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USER</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("Ts")
         public Long ts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817123</p>
+         */
         @NameInMap("TsInMs")
         public String tsInMs;
 
@@ -87,6 +107,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         @NameInMap("EventList")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItemsEventList> eventList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1614936817</p>
+         */
         @NameInMap("Ts")
         public Long ts;
 
@@ -117,6 +141,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         @NameInMap("EventDataItems")
         public java.util.List<DescribeEndPointEventListResponseBodyNodesEventDataItems> eventDataItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testuserid</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

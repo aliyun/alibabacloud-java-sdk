@@ -4,9 +4,17 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRtcChannelListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>aoe****</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testChannel</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
@@ -15,28 +23,49 @@ public class DescribeRtcChannelListRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn</p>
+     */
     @NameInMap("ServiceArea")
     public String serviceArea;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-01-29T00:00:00Z</p>
      */
     @NameInMap("TimePoint")
     public String timePoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testUser</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -10,6 +10,10 @@ public class DescribeChannelUserResponseBody extends TeaModel {
     @NameInMap("InChannel")
     public Boolean inChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +58,24 @@ public class DescribeChannelUserResponseBody extends TeaModel {
     }
 
     public static class DescribeChannelUserResponseBodySessions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1557909133</p>
+         */
         @NameInMap("Joined")
         public Long joined;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xa744sxx8rtobgj****</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1811****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

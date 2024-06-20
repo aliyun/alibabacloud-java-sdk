@@ -7,6 +7,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     @NameInMap("QualityOverallData")
     public java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallData> qualityOverallData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQualityOverallDataResponseBodyQualityOverallDataNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1615831200</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0000</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -62,12 +74,20 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeQualityOverallDataResponseBodyQualityOverallData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9376</p>
+         */
         @NameInMap("Average")
         public String average;
 
         @NameInMap("Nodes")
         public java.util.List<DescribeQualityOverallDataResponseBodyQualityOverallDataNodes> nodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JOIN_CHANNEL_SUC_RATE</p>
+         */
         @NameInMap("Type")
         public String type;
 

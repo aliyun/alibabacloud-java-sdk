@@ -10,6 +10,10 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     @NameInMap("OverallData")
     public DescribeFaultDiagnosisOverallDataResponseBodyOverallData overallData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,9 +50,17 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615824000</p>
+         */
         @NameInMap("X")
         public String x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Y")
         public String y;
 
@@ -103,12 +115,24 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     }
 
     public static class DescribeFaultDiagnosisOverallDataResponseBodyOverallData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("FaultUserCount")
         public Integer faultUserCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("FaultUserRatio")
         public Float faultUserRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("TotalUserCount")
         public Integer totalUserCount;
 
