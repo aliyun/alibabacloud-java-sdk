@@ -11,6 +11,9 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("AlarmMetadata")
     public String alarmMetadata;
 
+    @NameInMap("ApprovalType")
+    public String approvalType;
+
     /**
      * <strong>example:</strong>
      * <p>788E7CP0EN9D51P</p>
@@ -104,6 +107,9 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    @NameInMap("ShareType")
+    public String shareType;
+
     /**
      * <strong>example:</strong>
      * <p>SingleTenant</p>
@@ -146,6 +152,14 @@ public class UpdateServiceRequest extends TeaModel {
     }
     public String getAlarmMetadata() {
         return this.alarmMetadata;
+    }
+
+    public UpdateServiceRequest setApprovalType(String approvalType) {
+        this.approvalType = approvalType;
+        return this;
+    }
+    public String getApprovalType() {
+        return this.approvalType;
     }
 
     public UpdateServiceRequest setClientToken(String clientToken) {
@@ -266,6 +280,14 @@ public class UpdateServiceRequest extends TeaModel {
     }
     public String getServiceVersion() {
         return this.serviceVersion;
+    }
+
+    public UpdateServiceRequest setShareType(String shareType) {
+        this.shareType = shareType;
+        return this;
+    }
+    public String getShareType() {
+        return this.shareType;
     }
 
     public UpdateServiceRequest setTenantType(String tenantType) {
