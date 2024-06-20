@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ImportCustomCallTaggingRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>temp/ImportCustomCallTagging.xlsx</p>
      */
     @NameInMap("FilePath")
     public String filePath;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

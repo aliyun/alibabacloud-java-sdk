@@ -4,15 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListIntervalSkillGroupReportRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1604725528000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hourly</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
@@ -21,10 +32,17 @@ public class ListIntervalSkillGroupReportRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skg-default@ccc-test</p>
      */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1604639129000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

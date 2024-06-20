@@ -6,23 +6,40 @@ import com.aliyun.tea.*;
 public class ListDocumentsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d278629c-c687-4aa3-b044-4fe9b012e7ef</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJ0YWJsZUlkIjoiY2Y2MTQxYjA5NDY0NDUxMzk5YjFjMTA5YTMxZWNkMzEiLCJ0b2tlbiI6IjAwMDAwMDAwMDAwNzAzNzcifQ==</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>schema id</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>profile</p>
      */
     @NameInMap("SchemaId")
     public String schemaId;
@@ -95,9 +112,17 @@ public class ListDocumentsRequest extends TeaModel {
     }
 
     public static class ListDocumentsRequestSorts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>desc</p>
+         */
         @NameInMap("Order")
         public String order;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("PropertyName")
         public String propertyName;
 

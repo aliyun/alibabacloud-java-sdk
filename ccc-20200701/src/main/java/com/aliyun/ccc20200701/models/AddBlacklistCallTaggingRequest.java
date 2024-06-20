@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class AddBlacklistCallTaggingRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-6582589278232****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1764590****</p>
      */
     @NameInMap("Number")
     public String number;

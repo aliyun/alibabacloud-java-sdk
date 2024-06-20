@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListMonoRecordingsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListMonoRecordingsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E836EF2A-EDAE-5310-8921-F983C967D42D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,30 +77,62 @@ public class ListMonoRecordingsResponseBody extends TeaModel {
     }
 
     public static class ListMonoRecordingsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-25920271311543****</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5903871</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav?Expires=1657014031&OSSAccessKeyId=****&Signature=">https://ccc-v2-shanghai.oss-cn-shanghai.aliyuncs.com/ccc-test/job-25920271311543****-798f1e90-1f82-42da-914c-46580c8f4c85-1656926518491.wav?Expires=1657014031&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26972543893791****</p>
+         */
         @NameInMap("RamId")
         public String ramId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620259200000</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetNumberLocationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1312121****</p>
      */
     @NameInMap("Number")
     public String number;

@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ImportAdminsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ImportAdminsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CDB5C94-ACFB-59B5-85FE-C1DAF8049C63</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,18 +77,38 @@ public class ImportAdminsResponseBody extends TeaModel {
     }
 
     public static class ImportAdminsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8021****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26972543893791****</p>
+         */
         @NameInMap("RamId")
         public String ramId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin@ccc-test</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

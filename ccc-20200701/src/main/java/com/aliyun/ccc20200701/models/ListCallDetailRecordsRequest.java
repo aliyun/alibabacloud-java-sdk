@@ -4,56 +4,113 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCallDetailRecordsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1320523****</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>07353988****</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("ContactDisposition")
     public String contactDisposition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;Success&quot;,&quot;NoAnswer&quot;]</p>
+     */
     @NameInMap("ContactDispositionList")
     public String contactDispositionList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-12515239414412****</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Outbound</p>
+     */
     @NameInMap("ContactType")
     public String contactType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;Internal&quot;,&quot;Inbound&quot;]</p>
+     */
     @NameInMap("ContactTypeList")
     public String contactTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;phoneNumber&quot;:&quot;0735&quot;}</p>
+     */
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;NotConnected&quot;,&quot;NoAnswer&quot;]</p>
+     */
     @NameInMap("EarlyMediaStateList")
     public String earlyMediaStateList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532707199000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>startTime</p>
+     */
     @NameInMap("OrderByField")
     public String orderByField;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -61,18 +118,38 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     @NameInMap("SatisfactionDescriptionList")
     public String satisfactionDescriptionList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;1&quot;,&quot;3&quot;]</p>
+     */
     @NameInMap("SatisfactionList")
     public String satisfactionList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IVR</p>
+     */
     @NameInMap("SatisfactionSurveyChannel")
     public String satisfactionSurveyChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532448000000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

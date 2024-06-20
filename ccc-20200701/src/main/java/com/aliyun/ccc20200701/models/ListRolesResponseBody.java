@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListRolesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>711D948F-C616-4E23-8573-0F260513CE09</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +77,17 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Admin</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin@ccc-test</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 

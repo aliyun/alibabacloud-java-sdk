@@ -4,45 +4,86 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeAgentStatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</p>
+     */
     @NameInMap("AgentIdList")
     public String agentIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent</p>
+     */
     @NameInMap("AgentName")
     public String agentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;INBOUND&quot;, &quot;OUTBOUND&quot;]</p>
+     */
     @NameInMap("CallTypeList")
     public String callTypeList;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutboundScenario")
     public Boolean outboundScenario;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;ACW&quot;, &quot;Dialing&quot;]</p>
+     */
     @NameInMap("StateList")
     public String stateList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;OFFICE_PHONE&quot;,&quot;ON_SITE&quot;]</p>
+     */
     @NameInMap("WorkModeList")
     public String workModeList;
 

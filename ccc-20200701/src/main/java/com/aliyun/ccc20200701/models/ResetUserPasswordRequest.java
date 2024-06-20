@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ResetUserPasswordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
      */
     @NameInMap("UserId")
     public String userId;

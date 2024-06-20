@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class HoldCallRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ch:customer:010123****-&gt;1318888****:1609255715825:job-6582589278232****</p>
      */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACC-YUNBS-1.0.10-****</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-6582589278232****</p>
      */
     @NameInMap("JobId")
     public String jobId;
@@ -28,6 +41,10 @@ public class HoldCallRequest extends TeaModel {
     @NameInMap("Music")
     public String music;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

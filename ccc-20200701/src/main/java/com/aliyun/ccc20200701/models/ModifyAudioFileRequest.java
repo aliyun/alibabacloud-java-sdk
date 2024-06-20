@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ModifyAudioFileRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new-test-file.wav</p>
      */
     @NameInMap("AudioFileName")
     public String audioFileName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acc300c4-75c9-41ba-ba5e-2a365c96c248</p>
      */
     @NameInMap("AudioResourceId")
     public String audioResourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -30,6 +39,9 @@ public class ModifyAudioFileRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test/new-test-file.wav</p>
      */
     @NameInMap("OssFileKey")
     public String ossFileKey;

@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class CreateCampaignRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;beginTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:00:00&quot; }]</p>
      */
     @NameInMap("CallableTime")
     public String callableTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccc-test/namelist.csv</p>
+     */
     @NameInMap("CaseFileKey")
     public String caseFileKey;
 
@@ -18,12 +25,18 @@ public class CreateCampaignRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c1f2bc75-422e-43c7-9c9d9d95633a</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1634313600000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -33,30 +46,45 @@ public class CreateCampaignRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxAttemptCount")
     public Long maxAttemptCount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinAttemptInterval")
     public Long minAttemptInterval;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-campaign</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
      */
     @NameInMap("QueueId")
     public String queueId;
@@ -69,18 +97,27 @@ public class CreateCampaignRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1634140800000</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ratio&quot;:1}</p>
      */
     @NameInMap("StrategyParameters")
     public String strategyParameters;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PACING</p>
      */
     @NameInMap("StrategyType")
     public String strategyType;
@@ -222,9 +259,17 @@ public class CreateCampaignRequest extends TeaModel {
         @NameInMap("CustomVariables")
         public String customVariables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1888888888</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 

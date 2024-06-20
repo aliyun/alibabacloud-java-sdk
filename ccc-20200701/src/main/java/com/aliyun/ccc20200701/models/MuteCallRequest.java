@@ -4,24 +4,42 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class MuteCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ch:user:1318888****-&gt;8001****:1609253204816:job-6581536084722****</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-6581536084722****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

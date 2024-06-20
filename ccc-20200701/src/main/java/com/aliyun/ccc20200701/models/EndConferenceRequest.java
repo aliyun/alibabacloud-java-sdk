@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class EndConferenceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-6538214103685****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

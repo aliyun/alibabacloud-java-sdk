@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateCallTagsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;TagA&quot;,&quot;TagB&quot;]</p>
      */
     @NameInMap("CallTagNameList")
     public String callTagNameList;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

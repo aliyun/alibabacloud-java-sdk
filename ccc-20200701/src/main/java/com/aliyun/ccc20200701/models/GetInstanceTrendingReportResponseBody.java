@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceTrendingReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetInstanceTrendingReportResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,24 +77,52 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     }
 
     public static class GetInstanceTrendingReportResponseBodyDataInbound extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsAbandonedInIVR")
         public Long callsAbandonedInIVR;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsAbandonedInQueue")
         public Long callsAbandonedInQueue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsAbandonedInRing")
         public Long callsAbandonedInRing;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsHandled")
         public Long callsHandled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsQueued")
         public Long callsQueued;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
+         */
         @NameInMap("StatsTime")
         public Long statsTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCalls")
         public Long totalCalls;
 
@@ -150,12 +190,24 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     }
 
     public static class GetInstanceTrendingReportResponseBodyDataOutbound extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
+         */
         @NameInMap("StatsTime")
         public Long statsTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCalls")
         public Long totalCalls;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class LaunchSurveyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4685b65a-eb8f-11ec-8ea0-0242ac120002</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
@@ -13,27 +16,49 @@ public class LaunchSurveyRequest extends TeaModel {
     @NameInMap("ContactFlowVariables")
     public String contactFlowVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-6580466654649****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4685b65a-eb8f-11ec-8ea0-0242ac120002</p>
+     */
     @NameInMap("SmsMetadataId")
     public String smsMetadataId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IVR</p>
+     */
     @NameInMap("SurveyChannel")
     public String surveyChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

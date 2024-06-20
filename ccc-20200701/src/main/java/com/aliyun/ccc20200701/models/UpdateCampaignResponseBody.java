@@ -4,15 +4,27 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class UpdateCampaignResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

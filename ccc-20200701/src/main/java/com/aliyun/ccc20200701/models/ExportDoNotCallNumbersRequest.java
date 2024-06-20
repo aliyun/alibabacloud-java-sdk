@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class ExportDoNotCallNumbersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RemarkA</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 

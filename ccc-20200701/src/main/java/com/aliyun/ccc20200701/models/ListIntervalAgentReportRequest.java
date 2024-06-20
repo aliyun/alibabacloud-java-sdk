@@ -6,25 +6,43 @@ import com.aliyun.tea.*;
 public class ListIntervalAgentReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
      */
     @NameInMap("AgentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532707199000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hourly</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532448000000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

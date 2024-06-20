@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class LaunchAuthenticationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af145gfc-1108-4d55-8fca-f719bd512ebb</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
@@ -13,21 +16,35 @@ public class LaunchAuthenticationRequest extends TeaModel {
     @NameInMap("ContactFlowVariables")
     public String contactFlowVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACC-YUNBS-1.0.10-****</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-6538214103685****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

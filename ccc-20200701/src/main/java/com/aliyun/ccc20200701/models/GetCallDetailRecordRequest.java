@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetCallDetailRecordRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-10963442671187****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

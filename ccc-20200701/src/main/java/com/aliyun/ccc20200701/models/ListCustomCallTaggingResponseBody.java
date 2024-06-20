@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCustomCallTaggingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListCustomCallTaggingResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +77,17 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
     }
 
     public static class ListCustomCallTaggingResponseBodyDataListCallTagList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TagA</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
@@ -98,18 +118,34 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         @NameInMap("CallTagList")
         public java.util.List<ListCustomCallTaggingResponseBodyDataListCallTagList> callTagList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1312121****</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-07-05 00:00:00.0</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -172,12 +208,24 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListCustomCallTaggingResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

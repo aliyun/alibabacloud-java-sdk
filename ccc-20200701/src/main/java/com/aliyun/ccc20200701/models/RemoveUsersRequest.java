@@ -12,6 +12,9 @@ public class RemoveUsersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,6 +22,10 @@ public class RemoveUsersRequest extends TeaModel {
     @NameInMap("NotificationEmail")
     public String notificationEmail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;agent1@ccc-test&quot;,&quot;agent2@ccc-test&quot;]</p>
+     */
     @NameInMap("UserIdList")
     public String userIdList;
 

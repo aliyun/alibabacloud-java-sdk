@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListConfigItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListConfigItemsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class ListConfigItemsResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,18 +88,38 @@ public class ListConfigItemsResponseBody extends TeaModel {
     }
 
     public static class ListConfigItemsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>config-item</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("ObjectId")
         public String objectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Value")
         public String value;
 

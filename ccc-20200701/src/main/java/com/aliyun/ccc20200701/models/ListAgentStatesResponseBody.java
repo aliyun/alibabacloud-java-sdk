@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListAgentStatesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +92,62 @@ public class ListAgentStatesResponseBody extends TeaModel {
     }
 
     public static class ListAgentStatesResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Warm-up</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8030****</p>
+         */
         @NameInMap("Dn")
         public String dn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Ready</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("StateDuration")
         public String stateDuration;
 
@@ -186,12 +234,24 @@ public class ListAgentStatesResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListAgentStatesResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

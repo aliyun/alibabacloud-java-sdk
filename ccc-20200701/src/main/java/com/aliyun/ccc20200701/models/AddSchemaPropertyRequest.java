@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddSchemaPropertyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b0eb2742-f37e-4c67-82d4-25c651c1xxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -13,13 +16,19 @@ public class AddSchemaPropertyRequest extends TeaModel {
     @NameInMap("Property")
     public AddSchemaPropertyRequestProperty property;
 
+    /**
+     * <strong>example:</strong>
+     * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>schema id</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>profile</p>
      */
     @NameInMap("SchemaId")
     public String schemaId;
@@ -62,6 +71,10 @@ public class AddSchemaPropertyRequest extends TeaModel {
     }
 
     public static class AddSchemaPropertyRequestProperty extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Array")
         public Boolean array;
 
@@ -70,52 +83,110 @@ public class AddSchemaPropertyRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("DisplayOrder")
         public Integer displayOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>textbox</p>
+         */
         @NameInMap("EditorType")
         public String editorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxLength")
         public Integer maxLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Maximum")
         public Double maximum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinLength")
         public Integer minLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Minimum")
         public Double minimum;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Pattern")
         public String pattern;
 
         @NameInMap("PatternErrorMessage")
         public String patternErrorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Required")
         public Boolean required;
 

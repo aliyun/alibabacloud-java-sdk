@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListPhoneNumbersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListPhoneNumbersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,12 +80,24 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
@@ -117,27 +141,51 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static class ListPhoneNumbersResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</p>
+         */
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
         @NameInMap("ContactFlowName")
         public String contactFlowName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1617958538000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>08330011****</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alicom</p>
+         */
         @NameInMap("Provider")
         public String provider;
 
@@ -147,12 +195,24 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         @NameInMap("SkillGroups")
         public java.util.List<ListPhoneNumbersResponseBodyDataListSkillGroups> skillGroups;
 
+        /**
+         * <strong>example:</strong>
+         * <p>M1</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Bidirection</p>
+         */
         @NameInMap("Usage")
         public String usage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -271,12 +331,24 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListPhoneNumbersResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ImportAdminsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;26972543893791****&quot;]</p>
      */
     @NameInMap("RamIdList")
     public String ramIdList;

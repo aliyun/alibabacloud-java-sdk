@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetCallDetailRecordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetCallDetailRecordResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,12 +77,24 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataAgentEventsEventSequence extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Dialing</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
+         */
         @NameInMap("EventTime")
         public Long eventTime;
 
@@ -106,6 +130,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataAgentEvents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
@@ -115,6 +143,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("EventSequence")
         public java.util.List<GetCallDetailRecordResponseBodyDataAgentEventsEventSequence> eventSequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
@@ -158,9 +190,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataCustomerEventsEventSequence extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Released</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1532458000000</p>
+         */
         @NameInMap("EventTime")
         public Long eventTime;
 
@@ -188,6 +228,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataCustomerEvents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1332315****</p>
+         */
         @NameInMap("CustomerId")
         public String customerId;
 
@@ -218,9 +262,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataIvrEventsEventSequence extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Route2IVR</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
+         */
         @NameInMap("EventTime")
         public Long eventTime;
 
@@ -251,9 +303,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("EventSequence")
         public java.util.List<GetCallDetailRecordResponseBodyDataIvrEventsEventSequence> eventSequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>edaf2eaa-8f88-44ca-812e-41b3cd2b7a90</p>
+         */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MAIN_FLOW</p>
+         */
         @NameInMap("FlowType")
         public String flowType;
 
@@ -289,9 +349,17 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     }
 
     public static class GetCallDetailRecordResponseBodyDataQueueEventsEventSequence extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Enqueue</p>
+         */
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1604639129000</p>
+         */
         @NameInMap("EventTime")
         public Long eventTime;
 
@@ -322,15 +390,27 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("EventSequence")
         public java.util.List<GetCallDetailRecordResponseBodyDataQueueEventsEventSequence> eventSequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>edaf2eaa-8f88-44ca-812e-41b3cd2b7a90</p>
+         */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("QueueId")
         public String queueId;
 
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("QueueType")
         public Integer queueType;
 
@@ -385,15 +465,31 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("AgentEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataAgentEvents> agentEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent1@ccc-test,agent2@ccc-test</p>
+         */
         @NameInMap("AgentIds")
         public String agentIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent1,agent2</p>
+         */
         @NameInMap("AgentNames")
         public String agentNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("CallDuration")
         public Long callDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1332315****</p>
+         */
         @NameInMap("CalledNumber")
         public String calledNumber;
 
@@ -403,12 +499,24 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("CallerLocation")
         public String callerLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0533128****</p>
+         */
         @NameInMap("CallingNumber")
         public String callingNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("ContactDisposition")
         public String contactDisposition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-10963442671187****</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
@@ -418,12 +526,24 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("CustomerEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataCustomerEvents> customerEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NotConnected</p>
+         */
         @NameInMap("EarlyMediaState")
         public String earlyMediaState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1532458000000</p>
+         */
         @NameInMap("EstablishedTime")
         public Long establishedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -433,33 +553,69 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("QueueEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataQueueEvents> queueEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("RecordingReady")
         public Boolean recordingReady;
 
+        /**
+         * <strong>example:</strong>
+         * <p>customer</p>
+         */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200 - OK</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1532458000000</p>
+         */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Satisfaction")
         public Integer satisfaction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IVR</p>
+         */
         @NameInMap("SatisfactionSurveyChannel")
         public String satisfactionSurveyChannel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SatisfactionSurveyOffered")
         public Boolean satisfactionSurveyOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
 
         @NameInMap("SkillGroupNames")
         public String skillGroupNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1532458000000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

@@ -4,6 +4,10 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AnalyzeConversationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>job-10963442671187****</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
@@ -12,10 +16,17 @@ public class AnalyzeConversationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;keywords&quot;]</p>
+     */
     @NameInMap("TaskListJson")
     public String taskListJson;
 

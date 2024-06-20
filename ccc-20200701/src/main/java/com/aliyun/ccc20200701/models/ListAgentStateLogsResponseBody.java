@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStateLogsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListAgentStateLogsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -71,15 +83,31 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620259200000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Break</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHECK_IN_BREAK</p>
+         */
         @NameInMap("StateCode")
         public String stateCode;
 

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DiscardEditingContactFlowRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ff4e021-fd63-4572-ad8c-10ed69972965</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0aa493d6-58eb-4290-9ba2-e1c2c615b46b</p>
      */
     @NameInMap("DraftId")
     public String draftId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

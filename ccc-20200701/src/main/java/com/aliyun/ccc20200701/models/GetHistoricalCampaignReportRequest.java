@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetHistoricalCampaignReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4fc85829-f6fc-476e-9c0d-c350184e36f1</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

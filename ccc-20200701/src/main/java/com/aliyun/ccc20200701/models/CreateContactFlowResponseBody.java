@@ -4,18 +4,34 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateContactFlowResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>78128960-bb00-4ddc-8e82-923a8c5bd22d</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

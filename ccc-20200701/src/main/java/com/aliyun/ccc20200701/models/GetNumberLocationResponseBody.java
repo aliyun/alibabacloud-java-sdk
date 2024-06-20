@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetNumberLocationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetNumberLocationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>584AA2E3-9AC4-561B-BC8D-C74BA11B1387</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,6 +80,10 @@ public class GetNumberLocationResponseBody extends TeaModel {
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1312121****</p>
+         */
         @NameInMap("Number")
         public String number;
 

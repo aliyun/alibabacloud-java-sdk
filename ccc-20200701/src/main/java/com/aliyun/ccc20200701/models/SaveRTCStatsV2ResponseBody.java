@@ -4,24 +4,48 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SaveRTCStatsV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RowCount")
     public Long rowCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1647309061000</p>
+     */
     @NameInMap("TimeStamp")
     public Long timeStamp;
 

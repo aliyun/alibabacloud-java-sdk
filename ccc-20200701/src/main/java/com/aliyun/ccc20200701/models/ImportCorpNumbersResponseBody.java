@@ -4,15 +4,27 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ImportCorpNumbersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C42981C7-93D9-55CD-B078-784F8522E0E1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteContactFlowRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0f87c997-b0c1-41d4-9e9e-1b791de6ad1f</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

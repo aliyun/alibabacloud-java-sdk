@@ -4,9 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class DeleteDocumentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -16,6 +24,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8707EB29-BAED-4302-B999-40BA61877437</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

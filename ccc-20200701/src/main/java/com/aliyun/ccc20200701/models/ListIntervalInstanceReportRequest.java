@@ -4,18 +4,33 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListIntervalInstanceReportRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1620316799000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hourly</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1620230400000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

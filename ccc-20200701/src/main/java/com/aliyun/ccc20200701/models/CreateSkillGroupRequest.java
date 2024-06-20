@@ -15,6 +15,9 @@ public class CreateSkillGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,6 +27,9 @@ public class CreateSkillGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skillgroup</p>
      */
     @NameInMap("Name")
     public String name;

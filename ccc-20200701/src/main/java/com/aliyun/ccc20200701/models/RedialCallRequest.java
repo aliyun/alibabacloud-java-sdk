@@ -4,9 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RedialCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1318888****</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0109810****</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
@@ -15,19 +23,38 @@ public class RedialCallRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-6581536084722****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a=b</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>samzhang@abc</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

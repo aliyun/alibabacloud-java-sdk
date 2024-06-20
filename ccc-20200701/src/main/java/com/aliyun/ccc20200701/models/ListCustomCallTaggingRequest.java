@@ -4,27 +4,44 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCustomCallTaggingRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;TagA&quot;]</p>
+     */
     @NameInMap("CallTagNameList")
     public String callTagNameList;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1312121****</p>
+     */
     @NameInMap("SearchPattern")
     public String searchPattern;
 

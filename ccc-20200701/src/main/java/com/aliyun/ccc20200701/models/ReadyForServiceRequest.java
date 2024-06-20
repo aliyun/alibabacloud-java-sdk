@@ -4,18 +4,33 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ReadyForServiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutboundScenario")
     public Boolean outboundScenario;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user-test@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

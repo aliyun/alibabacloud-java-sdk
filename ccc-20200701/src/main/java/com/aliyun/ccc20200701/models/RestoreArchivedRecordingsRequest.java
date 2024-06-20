@@ -4,11 +4,18 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RestoreArchivedRecordingsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[\&quot;job-216750038017142784\&quot;]</p>
+     */
     @NameInMap("ContactIds")
     public String contactIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

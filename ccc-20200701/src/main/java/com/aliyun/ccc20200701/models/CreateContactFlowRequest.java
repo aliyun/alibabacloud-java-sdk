@@ -12,12 +12,18 @@ public class CreateContactFlowRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -30,6 +36,9 @@ public class CreateContactFlowRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MAIN_FLOW</p>
      */
     @NameInMap("Type")
     public String type;

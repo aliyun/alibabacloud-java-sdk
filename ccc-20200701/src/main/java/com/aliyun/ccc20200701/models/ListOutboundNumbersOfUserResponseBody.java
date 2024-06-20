@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListOutboundNumbersOfUserResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,6 +80,10 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0830019****</p>
+         */
         @NameInMap("Number")
         public String number;
 
@@ -109,12 +125,24 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

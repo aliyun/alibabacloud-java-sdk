@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AnswerCallResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public AnswerCallResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class AnswerCallResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,45 +88,93 @@ public class AnswerCallResponseBody extends TeaModel {
     }
 
     public static class AnswerCallResponseBodyDataCallContextChannelContexts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ANSWERED</p>
+         */
         @NameInMap("ChannelState")
         public String channelState;
 
         @NameInMap("ChannelVariables")
         public String channelVariables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390501****</p>
+         */
         @NameInMap("Destination")
         public String destination;
 
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0830019****</p>
+         */
         @NameInMap("Originator")
         public String originator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390501****</p>
+         */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>404 - No destination</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609138903315</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8032****</p>
+         */
         @NameInMap("UserExtension")
         public String userExtension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -238,15 +298,27 @@ public class AnswerCallResponseBody extends TeaModel {
     }
 
     public static class AnswerCallResponseBodyDataCallContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
         @NameInMap("ChannelContexts")
         public java.util.List<AnswerCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
@@ -290,42 +362,90 @@ public class AnswerCallResponseBody extends TeaModel {
     }
 
     public static class AnswerCallResponseBodyDataUserContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Warm-up</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8032****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609136956378</p>
+         */
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1324730****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609136956378</p>
+         */
         @NameInMap("Reserved")
         public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TALKING</p>
+         */
         @NameInMap("UserState")
         public String userState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 
@@ -444,6 +564,10 @@ public class AnswerCallResponseBody extends TeaModel {
         @NameInMap("CallContext")
         public AnswerCallResponseBodyDataCallContext callContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>103655</p>
+         */
         @NameInMap("ContextId")
         public Long contextId;
 

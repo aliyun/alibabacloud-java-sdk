@@ -4,18 +4,34 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RestoreArchivedRecordingsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<RestoreArchivedRecordingsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Instance 0 does not exist.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F8066648-5D95-55AB-ACD3-2F4AD3BEA715</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,15 +81,31 @@ public class RestoreArchivedRecordingsResponseBody extends TeaModel {
     }
 
     public static class RestoreArchivedRecordingsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>job-25920271311543****</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("Exists")
         public String exists;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Progressing</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 

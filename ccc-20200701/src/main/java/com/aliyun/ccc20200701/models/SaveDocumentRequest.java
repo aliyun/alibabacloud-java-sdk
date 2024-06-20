@@ -4,28 +4,44 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SaveDocumentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("DocumentId")
     public String documentId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;tom&quot;}</p>
      */
     @NameInMap("DocumentJson")
     public String documentJson;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EAF3C248-E123-441B-A545-B6CD02E98EED</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>schema id</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>profile</p>
      */
     @NameInMap("SchemaId")
     public String schemaId;

@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCampaignsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListCampaignsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +92,45 @@ public class ListCampaignsResponseBody extends TeaModel {
     }
 
     public static class ListCampaignsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1634008800000</p>
+         */
         @NameInMap("ActualEndTime")
         public Long actualEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634000460000</p>
+         */
         @NameInMap("ActualStartTime")
         public Long actualStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6badb397-a8b5-40b6-21019d382a09</p>
+         */
         @NameInMap("CampaignId")
         public String campaignId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CasesAborted")
         public Long casesAborted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("CasesConnected")
         public Long casesConnected;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CasesUncompleted")
         public Long casesUncompleted;
 
@@ -100,39 +140,83 @@ public class ListCampaignsResponseBody extends TeaModel {
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MaxAttemptCount")
         public Long maxAttemptCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinAttemptInterval")
         public Long minAttemptInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-campaign</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634054400000</p>
+         */
         @NameInMap("PlanedEndTime")
         public Long planedEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1633968000000</p>
+         */
         @NameInMap("PlanedStartTime")
         public Long planedStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("QueueId")
         public String queueId;
 
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Simulation")
         public Boolean simulation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Completed</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;ratio&quot;:1}</p>
+         */
         @NameInMap("StrategyParameters")
         public String strategyParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PACING</p>
+         */
         @NameInMap("StrategyType")
         public String strategyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCases")
         public Long totalCases;
 
@@ -307,12 +391,24 @@ public class ListCampaignsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListCampaignsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

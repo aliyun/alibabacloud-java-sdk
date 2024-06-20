@@ -4,66 +4,150 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class DataSchemaPropertiesValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>string</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("Pattern")
     public String pattern;
 
     @NameInMap("PatternErrorMessage")
     public String patternErrorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinLength")
     public Integer minLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxLength")
     public Integer maxLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Minimum")
     public Double minimum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Maximum")
     public Double maximum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Required")
     public Boolean required;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("System")
     public Boolean system;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Disabled")
     public Boolean disabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Array")
     public Boolean array;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ReadOnly")
     public Boolean readOnly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>textbox</p>
+     */
     @NameInMap("EditorType")
     public String editorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Attributes")
     public String attributes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DisplayOrder")
     public Integer displayOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-14T09:53:53Z</p>
+     */
     @NameInMap("CreatedTime")
     public Long createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-14T09:53:53Z</p>
+     */
     @NameInMap("UpdatedTime")
     public Long updatedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tom</p>
+     */
     @NameInMap("Creator")
     public String creator;
 

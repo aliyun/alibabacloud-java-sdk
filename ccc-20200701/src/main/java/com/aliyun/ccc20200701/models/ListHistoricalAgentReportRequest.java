@@ -4,11 +4,18 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListHistoricalAgentReportRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</p>
+     */
     @NameInMap("AgentIdList")
     public String agentIdList;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,12 +25,18 @@ public class ListHistoricalAgentReportRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -31,9 +44,17 @@ public class ListHistoricalAgentReportRequest extends TeaModel {
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532448000000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532707199000</p>
+     */
     @NameInMap("StopTime")
     public Long stopTime;
 

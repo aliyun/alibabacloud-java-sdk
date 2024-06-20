@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CommitContactFlowRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7d706489-d06d-4a92-8666-8c9dba2c5cb1</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
@@ -18,18 +21,27 @@ public class CommitContactFlowRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b28f74ca-5846-4496-8bbd-34fb1750798c</p>
      */
     @NameInMap("DraftId")
     public String draftId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

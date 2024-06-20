@@ -4,26 +4,48 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ChangeWorkModeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ACC-YUNBS-1.0.10-****</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1382114****</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;online-1@ccc-test&quot;,&quot;online-2@ccc-test&quot;,&quot;online-3@ccc-test&quot;,&quot;skg-default@ccc-test&quot;]</p>
+     */
     @NameInMap("SignedSkillGroupIdList")
     public String signedSkillGroupIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ON_SITE</p>
      */
     @NameInMap("WorkMode")
     public String workMode;

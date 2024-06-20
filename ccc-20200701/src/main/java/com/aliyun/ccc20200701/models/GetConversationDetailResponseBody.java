@@ -4,9 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetConversationDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -16,6 +24,10 @@ public class GetConversationDetailResponseBody extends TeaModel {
     @NameInMap("Phrases")
     public java.util.List<GetConversationDetailResponseBodyPhrases> phrases;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7E407F9B-A278-52A0-B193-3EE5471D7A87</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,12 +77,24 @@ public class GetConversationDetailResponseBody extends TeaModel {
     }
 
     public static class GetConversationDetailResponseBodyPhrases extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>240</p>
+         */
         @NameInMap("Begin")
         public Integer begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("End")
         public Integer end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("Identity")
         public String identity;
 

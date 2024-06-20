@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RemoveDoNotCallNumbersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class RemoveDoNotCallNumbersResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

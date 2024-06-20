@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetEarlyMediaRecordingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetEarlyMediaRecordingResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +77,17 @@ public class GetEarlyMediaRecordingResponseBody extends TeaModel {
     }
 
     public static class GetEarlyMediaRecordingResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>job-6538214103689****-earlyMedia..wav</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&OSSAccessKeyId=****&Signature=">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com/ccc-record-mixed/ccc-test/2022/06/voicemail.job-054ded02****.wav?Expires=1656074923&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 

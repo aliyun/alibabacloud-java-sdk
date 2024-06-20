@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ChangeWorkModeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ChangeWorkModeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class ChangeWorkModeResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>87731ED1-6224-48A5-99E3-6237FF9B1C00</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,33 +88,65 @@ public class ChangeWorkModeResponseBody extends TeaModel {
     }
 
     public static class ChangeWorkModeResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Warm-up</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
+         */
         @NameInMap("UserState")
         public String userState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 

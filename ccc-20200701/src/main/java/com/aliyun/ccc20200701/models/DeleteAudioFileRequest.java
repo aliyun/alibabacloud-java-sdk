@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteAudioFileRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d5cd7a94-3b6a-47d2-b7fd-0b1cd839bf77</p>
      */
     @NameInMap("AudioResourceId")
     public String audioResourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

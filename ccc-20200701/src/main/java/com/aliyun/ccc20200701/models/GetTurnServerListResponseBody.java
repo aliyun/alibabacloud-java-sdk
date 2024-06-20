@@ -10,6 +10,10 @@ public class GetTurnServerListResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 

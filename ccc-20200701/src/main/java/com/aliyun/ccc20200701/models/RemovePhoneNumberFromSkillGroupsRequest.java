@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class RemovePhoneNumberFromSkillGroupsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0101234****</p>
      */
     @NameInMap("Number")
     public String number;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
      */
     @NameInMap("SkillGroupIdList")
     public String skillGroupIdList;

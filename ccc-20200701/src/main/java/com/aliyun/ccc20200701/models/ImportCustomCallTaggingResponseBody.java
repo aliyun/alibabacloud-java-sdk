@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ImportCustomCallTaggingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ImportCustomCallTaggingResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +77,17 @@ public class ImportCustomCallTaggingResponseBody extends TeaModel {
     }
 
     public static class ImportCustomCallTaggingResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1312121****</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CUSTOM_NUMBER_DUPLICATED</p>
+         */
         @NameInMap("Reason")
         public String reason;
 

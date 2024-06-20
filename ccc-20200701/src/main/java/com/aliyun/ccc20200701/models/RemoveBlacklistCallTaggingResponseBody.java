@@ -4,9 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RemoveBlacklistCallTaggingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,6 +23,9 @@ public class RemoveBlacklistCallTaggingResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03C67DAD-EB26-41D8-949D-9B0C470FB716</p>
      */
     @NameInMap("RequestId")
     public String requestId;

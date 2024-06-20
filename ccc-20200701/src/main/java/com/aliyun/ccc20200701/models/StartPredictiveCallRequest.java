@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class StartPredictiveCallRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1312353****</p>
      */
     @NameInMap("Callee")
     public String callee;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0109810****</p>
      */
     @NameInMap("Caller")
     public String caller;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9774c36c-12fe-4e37-adce-89bc77ce****</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
@@ -27,19 +36,34 @@ public class StartPredictiveCallRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1312353****</p>
+     */
     @NameInMap("MaskedCallee")
     public String maskedCallee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 

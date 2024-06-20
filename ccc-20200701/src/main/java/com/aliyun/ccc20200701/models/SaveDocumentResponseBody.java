@@ -4,12 +4,24 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SaveDocumentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0101234****</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +31,10 @@ public class SaveDocumentResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01B12EE4-6AF2-4730-8B78-EC15F4E5C025</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

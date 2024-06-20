@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListSkillGroupStatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListSkillGroupStatesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1F69EBB0-63E9-5DDE-887F-9FC040ADF309</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,54 +92,110 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupStatesResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AverageWaitingTime")
         public Long averageWaitingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
         @NameInMap("InboundTalkingAgents")
         public Long inboundTalkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LongestCall")
         public Long longestCall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OutboundScenarioReadyAgents")
         public Long outboundScenarioReadyAgents;
 
         @NameInMap("OutboundTalkingAgents")
         public Long outboundTalkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup1@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WaitingCalls")
         public Long waitingCalls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WaitingCallsLevel10")
         public Long waitingCallsLevel10;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WaitingCallsLevel20")
         public Long waitingCallsLevel20;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WaitingCallsLevel30")
         public Long waitingCallsLevel30;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WorkingAgents")
         public Long workingAgents;
 
@@ -274,12 +346,24 @@ public class ListSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListSkillGroupStatesResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

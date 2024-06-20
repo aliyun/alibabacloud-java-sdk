@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetCampaignRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6badb397-a8b5-40b6-21019d382a09</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

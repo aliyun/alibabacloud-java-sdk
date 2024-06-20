@@ -4,27 +4,57 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("AgentIds")
     public String agentIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExcludeOfflineUsers")
     public Boolean excludeOfflineUsers;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("State")
     public String state;
 

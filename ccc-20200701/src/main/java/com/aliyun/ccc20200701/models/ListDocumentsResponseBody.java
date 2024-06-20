@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListDocumentsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListDocumentsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class ListDocumentsResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,27 +88,52 @@ public class ListDocumentsResponseBody extends TeaModel {
     }
 
     public static class ListDocumentsResponseBodyDataSchema extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-14T09:53:53Z</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Deleted")
         public Boolean deleted;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>schame id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87b12784-8ce2-40b6-b21f-c49cb3b5501e</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Properties")
         public java.util.Map<String, DataSchemaPropertiesValue> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-14T09:53:53Z</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
@@ -167,6 +204,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         @NameInMap("Documents")
         public java.util.List<java.util.Map<String, ?>> documents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>54d1a616d95a4a01ba58967a9115b649</p>
+         */
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
@@ -176,6 +217,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         @NameInMap("Schema")
         public ListDocumentsResponseBodyDataSchema schema;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartConferenceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;8045****&quot;,&quot;1317511****&quot;]</p>
      */
     @NameInMap("ParticipantListJson")
     public String participantListJson;
@@ -19,9 +25,17 @@ public class StartConferenceRequest extends TeaModel {
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

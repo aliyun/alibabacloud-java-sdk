@@ -7,6 +7,10 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("AvatarUrl")
     public String avatarUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("DisplayId")
     public String displayId;
 
@@ -18,27 +22,44 @@ public class ModifyUserRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1382114****</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
     @NameInMap("Nickname")
     public String nickname;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Admin@ccc-test</p>
+     */
     @NameInMap("RoleId")
     public String roleId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-test@ccc-test</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ON_SITE</p>
      */
     @NameInMap("WorkMode")
     public String workMode;

@@ -6,34 +6,64 @@ import com.aliyun.tea.*;
 public class MakeCallRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1318888****</p>
      */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>010989****</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>131****8888</p>
+     */
     @NameInMap("MaskedCallee")
     public String maskedCallee;
 
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tags</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

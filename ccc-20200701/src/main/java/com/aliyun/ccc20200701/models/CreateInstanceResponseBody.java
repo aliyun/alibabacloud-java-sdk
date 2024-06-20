@@ -4,18 +4,34 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>75c1346c-1dc2-4ed8-973f-edf8b1e5fe77</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class ListCampaignTrendingReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6badb397-a8b5-40b6-21019d382a09</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-14 20:59:59</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-14 00:00:00</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

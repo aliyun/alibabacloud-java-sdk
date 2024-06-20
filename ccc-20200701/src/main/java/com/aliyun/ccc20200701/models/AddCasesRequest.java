@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddCasesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c58b9719-3bc3-441d-a4d3-fc0309ef7066</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
@@ -15,6 +18,9 @@ public class AddCasesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -58,9 +64,17 @@ public class AddCasesRequest extends TeaModel {
         @NameInMap("MaskedCallee")
         public String maskedCallee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>188888****</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 

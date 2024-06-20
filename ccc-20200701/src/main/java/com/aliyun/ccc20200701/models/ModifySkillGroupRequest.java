@@ -12,12 +12,18 @@ public class ModifySkillGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
      */
     @NameInMap("SkillGroupId")
     public String skillGroupId;

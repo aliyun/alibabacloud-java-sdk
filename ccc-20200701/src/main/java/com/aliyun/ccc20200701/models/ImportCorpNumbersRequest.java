@@ -12,6 +12,9 @@ public class ImportCorpNumbersRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;02912345678\&quot;]</p>
      */
     @NameInMap("NumberList")
     public String numberList;

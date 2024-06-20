@@ -4,23 +4,46 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class UpdateCampaignRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[
+     *       {
+     *             &quot;beginTime&quot;: &quot;09:00:00&quot;,
+     *             &quot;endTime&quot;: &quot;12:00:00&quot;
+     *       }
+     * ]</p>
+     */
     @NameInMap("CallableTime")
     public String callableTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ab11908b-6ebc-4b0c-b51e-3e17c7060</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3a310f56-4d30-4081-ba24-5d87a3b7262e</p>
+     */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1689933600000</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -28,6 +51,10 @@ public class UpdateCampaignRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1689901200000</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

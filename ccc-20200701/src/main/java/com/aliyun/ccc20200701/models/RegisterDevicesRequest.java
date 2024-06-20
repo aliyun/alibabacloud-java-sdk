@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class RegisterDevicesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-device</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
      */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;user-test@ccc-test&quot;]</p>
+     */
     @NameInMap("UserIdListJson")
     public String userIdListJson;
 
