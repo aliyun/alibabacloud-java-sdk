@@ -6,27 +6,33 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</p>
-     * <br>
-     * <p>*   false (default)</p>
-     * <p>*   true</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
-     * <br>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -34,8 +40,10 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -12,12 +12,18 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C327F81A-CCE2-5B21-817C-F93E29C5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of cloud service resources returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,59 +60,87 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     public static class DescribeCloudResourcesResponseBodyCloudResources extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11769793******</p>
          */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
         /**
          * <p>The domain name. This parameter has a value only if the value of ResourceProduct is fc or sae.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-resource-domain</p>
          */
         @NameInMap("ResourceDomain")
         public String resourceDomain;
 
         /**
          * <p>The function name. This parameter has a value only if the value of ResourceProduct is fc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-resource-function</p>
          */
         @NameInMap("ResourceFunction")
         public String resourceFunction;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-ffff****</p>
          */
         @NameInMap("ResourceInstance")
         public String resourceInstance;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-resource-name</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The cloud service to which the resource belongs. Valid values:</p>
-         * <br>
-         * <p>*   **alb**: ALB.</p>
-         * <p>*   **mse**: MSE.</p>
-         * <p>*   **fc**: Function Compute.</p>
-         * <p>*   **sae**: SAE.</p>
+         * <ul>
+         * <li><strong>alb</strong>: ALB.</li>
+         * <li><strong>mse</strong>: MSE.</li>
+         * <li><strong>fc</strong>: Function Compute.</li>
+         * <li><strong>sae</strong>: SAE.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alb</p>
          */
         @NameInMap("ResourceProduct")
         public String resourceProduct;
 
         /**
          * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;
 
         /**
          * <p>The route name. This parameter has a value only if the value of ResourceProduct is mse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-route-name</p>
          */
         @NameInMap("ResourceRouteName")
         public String resourceRouteName;
 
         /**
          * <p>The service name. This parameter has a value only if the value of ResourceProduct is fc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-resource-service</p>
          */
         @NameInMap("ResourceService")
         public String resourceService;

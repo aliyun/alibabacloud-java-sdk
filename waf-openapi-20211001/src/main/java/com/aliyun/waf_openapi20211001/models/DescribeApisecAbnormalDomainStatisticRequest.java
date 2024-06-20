@@ -4,36 +4,75 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisecAbnormalDomainStatisticRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>428</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1687313820</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf-cn-45919n***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("OrderWay")
     public String orderWay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
+     */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1682571600</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

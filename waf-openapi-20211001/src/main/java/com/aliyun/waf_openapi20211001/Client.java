@@ -53,8 +53,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clears an IP address blacklist for major event protection.
-     *
+     * <b>summary</b> : 
+     * <p>Clears an IP address blacklist for major event protection.</p>
+     * 
      * @param request ClearMajorProtectionBlackIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ClearMajorProtectionBlackIpResponse
@@ -100,8 +101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clears an IP address blacklist for major event protection.
-     *
+     * <b>summary</b> : 
+     * <p>Clears an IP address blacklist for major event protection.</p>
+     * 
      * @param request ClearMajorProtectionBlackIpRequest
      * @return ClearMajorProtectionBlackIpResponse
      */
@@ -111,8 +113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a new protection template from the copy.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a new protection template from the copy.</p>
+     * 
      * @param request CopyDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CopyDefenseTemplateResponse
@@ -154,8 +157,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a new protection template from the copy.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a new protection template from the copy.</p>
+     * 
      * @param request CopyDefenseTemplateRequest
      * @return CopyDefenseTemplateResponse
      */
@@ -165,8 +169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a protected object group.</p>
+     * 
      * @param request CreateDefenseResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDefenseResourceGroupResponse
@@ -216,8 +221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a protected object group.</p>
+     * 
      * @param request CreateDefenseResourceGroupRequest
      * @return CreateDefenseResourceGroupResponse
      */
@@ -227,8 +233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a protection rule.</p>
+     * 
      * @param request CreateDefenseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDefenseRuleResponse
@@ -278,8 +285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a protection rule.</p>
+     * 
      * @param request CreateDefenseRuleRequest
      * @return CreateDefenseRuleResponse
      */
@@ -289,8 +297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a protection rule template.</p>
+     * 
      * @param request CreateDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDefenseTemplateResponse
@@ -352,8 +361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a protection rule template.</p>
+     * 
      * @param request CreateDefenseTemplateRequest
      * @return CreateDefenseTemplateResponse
      */
@@ -363,8 +373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a domain name to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Adds a domain name to Web Application Firewall (WAF).</p>
+     * 
      * @param tmpReq CreateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDomainResponse
@@ -428,8 +439,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a domain name to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Adds a domain name to Web Application Firewall (WAF).</p>
+     * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -439,10 +451,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an IP address blacklist for major event protection.
-     *
-     * @description This operation is available only on the China site (aliyun.com).
-     *
+     * <b>description</b> :
+     * <p>This operation is available only on the China site (aliyun.com).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an IP address blacklist for major event protection.</p>
+     * 
      * @param request CreateMajorProtectionBlackIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMajorProtectionBlackIpResponse
@@ -500,10 +514,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an IP address blacklist for major event protection.
-     *
-     * @description This operation is available only on the China site (aliyun.com).
-     *
+     * <b>description</b> :
+     * <p>This operation is available only on the China site (aliyun.com).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an IP address blacklist for major event protection.</p>
+     * 
      * @param request CreateMajorProtectionBlackIpRequest
      * @return CreateMajorProtectionBlackIpResponse
      */
@@ -513,8 +529,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds members to use the multi-account management feature of Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</p>
+     * 
      * @param request CreateMemberAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMemberAccountsResponse
@@ -560,8 +577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds members to use the multi-account management feature of Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</p>
+     * 
      * @param request CreateMemberAccountsRequest
      * @return CreateMemberAccountsResponse
      */
@@ -571,8 +589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.</p>
+     * 
      * @param request CreatePostpaidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePostpaidInstanceResponse
@@ -606,8 +625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go Web Application Firewall (WAF) 3.0 instance.</p>
+     * 
      * @param request CreatePostpaidInstanceRequest
      * @return CreatePostpaidInstanceResponse
      */
@@ -617,8 +637,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除API安全风险
-     *
+     * <b>summary</b> : 
+     * <p>删除API安全风险</p>
+     * 
      * @param request DeleteApisecAbnormalRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApisecAbnormalResponse
@@ -668,8 +689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除API安全风险
-     *
+     * <b>summary</b> : 
+     * <p>删除API安全风险</p>
+     * 
      * @param request DeleteApisecAbnormalRequest
      * @return DeleteApisecAbnormalResponse
      */
@@ -679,8 +701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除API安全事件
-     *
+     * <b>summary</b> : 
+     * <p>删除API安全事件</p>
+     * 
      * @param request DeleteApisecEventRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApisecEventResponse
@@ -730,8 +753,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除API安全事件
-     *
+     * <b>summary</b> : 
+     * <p>删除API安全事件</p>
+     * 
      * @param request DeleteApisecEventRequest
      * @return DeleteApisecEventResponse
      */
@@ -741,8 +765,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a protected object group.</p>
+     * 
      * @param request DeleteDefenseResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDefenseResourceGroupResponse
@@ -784,8 +809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a protected object group.</p>
+     * 
      * @param request DeleteDefenseResourceGroupRequest
      * @return DeleteDefenseResourceGroupResponse
      */
@@ -795,8 +821,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a protection rule.</p>
+     * 
      * @param request DeleteDefenseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDefenseRuleResponse
@@ -842,8 +869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a protection rule.</p>
+     * 
      * @param request DeleteDefenseRuleRequest
      * @return DeleteDefenseRuleResponse
      */
@@ -853,8 +881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a protection rule template.</p>
+     * 
      * @param request DeleteDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDefenseTemplateResponse
@@ -896,8 +925,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a protection rule template.</p>
+     * 
      * @param request DeleteDefenseTemplateRequest
      * @return DeleteDefenseTemplateResponse
      */
@@ -907,8 +937,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a domain name that is added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a domain name that is added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DeleteDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDomainResponse
@@ -954,8 +985,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a domain name that is added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a domain name that is added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -965,8 +997,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an IP address blacklist for major event protection.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an IP address blacklist for major event protection.</p>
+     * 
      * @param request DeleteMajorProtectionBlackIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMajorProtectionBlackIpResponse
@@ -1016,8 +1049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an IP address blacklist for major event protection.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an IP address blacklist for major event protection.</p>
+     * 
      * @param request DeleteMajorProtectionBlackIpRequest
      * @return DeleteMajorProtectionBlackIpResponse
      */
@@ -1027,8 +1061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes the members that are added for multi-account management in Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</p>
+     * 
      * @param request DeleteMemberAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMemberAccountResponse
@@ -1074,8 +1109,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes the members that are added for multi-account management in Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</p>
+     * 
      * @param request DeleteMemberAccountRequest
      * @return DeleteMemberAccountResponse
      */
@@ -1085,8 +1121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</p>
+     * 
      * @param request DescribeAccountDelegatedStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccountDelegatedStatusResponse
@@ -1124,8 +1161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</p>
+     * 
      * @param request DescribeAccountDelegatedStatusRequest
      * @return DescribeAccountDelegatedStatusResponse
      */
@@ -1135,8 +1173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全风险站点统计
-     *
+     * <b>summary</b> : 
+     * <p>查询API安全风险站点统计</p>
+     * 
      * @param request DescribeApisecAbnormalDomainStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisecAbnormalDomainStatisticResponse
@@ -1202,8 +1241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全风险站点统计
-     *
+     * <b>summary</b> : 
+     * <p>查询API安全风险站点统计</p>
+     * 
      * @param request DescribeApisecAbnormalDomainStatisticRequest
      * @return DescribeApisecAbnormalDomainStatisticResponse
      */
@@ -1213,8 +1253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全资产趋势图
-     *
+     * <b>summary</b> : 
+     * <p>查询API安全资产趋势图</p>
+     * 
      * @param request DescribeApisecAssetTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisecAssetTrendResponse
@@ -1268,8 +1309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全资产趋势图
-     *
+     * <b>summary</b> : 
+     * <p>查询API安全资产趋势图</p>
+     * 
      * @param request DescribeApisecAssetTrendRequest
      * @return DescribeApisecAssetTrendResponse
      */
@@ -1279,8 +1321,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全事件站点统计
-     *
+     * <b>summary</b> : 
+     * <p>查询API安全事件站点统计</p>
+     * 
      * @param request DescribeApisecEventDomainStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisecEventDomainStatisticResponse
@@ -1346,8 +1389,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全事件站点统计
-     *
+     * <b>summary</b> : 
+     * <p>查询API安全事件站点统计</p>
+     * 
      * @param request DescribeApisecEventDomainStatisticRequest
      * @return DescribeApisecEventDomainStatisticResponse
      */
@@ -1357,8 +1401,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全敏感数据类型统计
-     *
+     * <b>summary</b> : 
+     * <p>获取API安全日志订阅列表</p>
+     * 
+     * @param request DescribeApisecLogDeliveriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApisecLogDeliveriesResponse
+     */
+    public DescribeApisecLogDeliveriesResponse describeApisecLogDeliveriesWithOptions(DescribeApisecLogDeliveriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApisecLogDeliveries"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApisecLogDeliveriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取API安全日志订阅列表</p>
+     * 
+     * @param request DescribeApisecLogDeliveriesRequest
+     * @return DescribeApisecLogDeliveriesResponse
+     */
+    public DescribeApisecLogDeliveriesResponse describeApisecLogDeliveries(DescribeApisecLogDeliveriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApisecLogDeliveriesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询API安全敏感数据类型统计</p>
+     * 
      * @param request DescribeApisecSensitiveDomainStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApisecSensitiveDomainStatisticResponse
@@ -1428,8 +1525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API安全敏感数据类型统计
-     *
+     * <b>summary</b> : 
+     * <p>查询API安全敏感数据类型统计</p>
+     * 
      * @param request DescribeApisecSensitiveDomainStatisticRequest
      * @return DescribeApisecSensitiveDomainStatisticResponse
      */
@@ -1439,8 +1537,125 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.
-     *
+     * <b>summary</b> : 
+     * <p>查询日志服务SLS的LogStore列表</p>
+     * 
+     * @param request DescribeApisecSlsLogStoresRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApisecSlsLogStoresResponse
+     */
+    public DescribeApisecSlsLogStoresResponse describeApisecSlsLogStoresWithOptions(DescribeApisecSlsLogStoresRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logRegionId)) {
+            query.put("LogRegionId", request.logRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApisecSlsLogStores"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApisecSlsLogStoresResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询日志服务SLS的LogStore列表</p>
+     * 
+     * @param request DescribeApisecSlsLogStoresRequest
+     * @return DescribeApisecSlsLogStoresResponse
+     */
+    public DescribeApisecSlsLogStoresResponse describeApisecSlsLogStores(DescribeApisecSlsLogStoresRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApisecSlsLogStoresWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询日志服务SLS的Project列表</p>
+     * 
+     * @param request DescribeApisecSlsProjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApisecSlsProjectsResponse
+     */
+    public DescribeApisecSlsProjectsResponse describeApisecSlsProjectsWithOptions(DescribeApisecSlsProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logRegionId)) {
+            query.put("LogRegionId", request.logRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApisecSlsProjects"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApisecSlsProjectsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询日志服务SLS的Project列表</p>
+     * 
+     * @param request DescribeApisecSlsProjectsRequest
+     * @return DescribeApisecSlsProjectsResponse
+     */
+    public DescribeApisecSlsProjectsResponse describeApisecSlsProjects(DescribeApisecSlsProjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApisecSlsProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</p>
+     * 
      * @param request DescribeCertDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCertDetailResponse
@@ -1482,8 +1697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</p>
+     * 
      * @param request DescribeCertDetailRequest
      * @return DescribeCertDetailResponse
      */
@@ -1493,8 +1709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeCertsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCertsResponse
@@ -1548,8 +1765,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeCertsRequest
      * @return DescribeCertsResponse
      */
@@ -1559,8 +1777,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries cloud service resources that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries cloud service resources that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeCloudResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudResourcesResponse
@@ -1638,8 +1857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries cloud service resources that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries cloud service resources that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeCloudResourcesRequest
      * @return DescribeCloudResourcesResponse
      */
@@ -1649,8 +1869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a protected object.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a protected object.</p>
+     * 
      * @param request DescribeDefenseResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseResourceResponse
@@ -1692,8 +1913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a protected object.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a protected object.</p>
+     * 
      * @param request DescribeDefenseResourceRequest
      * @return DescribeDefenseResourceResponse
      */
@@ -1703,8 +1925,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a protected object group.</p>
+     * 
      * @param request DescribeDefenseResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseResourceGroupResponse
@@ -1746,8 +1969,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a protected object group.</p>
+     * 
      * @param request DescribeDefenseResourceGroupRequest
      * @return DescribeDefenseResourceGroupResponse
      */
@@ -1757,8 +1981,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the names of protected object groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the names of protected object groups.</p>
+     * 
      * @param request DescribeDefenseResourceGroupNamesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseResourceGroupNamesResponse
@@ -1808,8 +2033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the names of protected object groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the names of protected object groups.</p>
+     * 
      * @param request DescribeDefenseResourceGroupNamesRequest
      * @return DescribeDefenseResourceGroupNamesResponse
      */
@@ -1819,8 +2045,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a pagination query to retrieve the information about protected object groups.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a pagination query to retrieve the information about protected object groups.</p>
+     * 
      * @param request DescribeDefenseResourceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseResourceGroupsResponse
@@ -1874,8 +2101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a pagination query to retrieve the information about protected object groups.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a pagination query to retrieve the information about protected object groups.</p>
+     * 
      * @param request DescribeDefenseResourceGroupsRequest
      * @return DescribeDefenseResourceGroupsResponse
      */
@@ -1885,8 +2113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a pagination query to retrieve the names of protected objects.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a pagination query to retrieve the names of protected objects.</p>
+     * 
      * @param request DescribeDefenseResourceNamesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseResourceNamesResponse
@@ -1936,8 +2165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a pagination query to retrieve the names of protected objects.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a pagination query to retrieve the names of protected objects.</p>
+     * 
      * @param request DescribeDefenseResourceNamesRequest
      * @return DescribeDefenseResourceNamesResponse
      */
@@ -1947,8 +2177,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the protection templates that are associated with a protected object or protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the protection templates that are associated with a protected object or protected object group.</p>
+     * 
      * @param request DescribeDefenseResourceTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseResourceTemplatesResponse
@@ -2002,8 +2233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the protection templates that are associated with a protected object or protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the protection templates that are associated with a protected object or protected object group.</p>
+     * 
      * @param request DescribeDefenseResourceTemplatesRequest
      * @return DescribeDefenseResourceTemplatesResponse
      */
@@ -2013,8 +2245,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries protected objects by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries protected objects by page.</p>
+     * 
      * @param request DescribeDefenseResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseResourcesResponse
@@ -2068,8 +2301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries protected objects by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries protected objects by page.</p>
+     * 
      * @param request DescribeDefenseResourcesRequest
      * @return DescribeDefenseResourcesResponse
      */
@@ -2079,8 +2313,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a protection rule.</p>
+     * 
      * @param request DescribeDefenseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseRuleResponse
@@ -2126,8 +2361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a protection rule.</p>
+     * 
      * @param request DescribeDefenseRuleRequest
      * @return DescribeDefenseRuleResponse
      */
@@ -2137,8 +2373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries protection rules by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries protection rules by page.</p>
+     * 
      * @param request DescribeDefenseRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseRulesResponse
@@ -2192,8 +2429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries protection rules by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries protection rules by page.</p>
+     * 
      * @param request DescribeDefenseRulesRequest
      * @return DescribeDefenseRulesResponse
      */
@@ -2203,8 +2441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a protection rule template.</p>
+     * 
      * @param request DescribeDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseTemplateResponse
@@ -2246,8 +2485,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a protection rule template.</p>
+     * 
      * @param request DescribeDefenseTemplateRequest
      * @return DescribeDefenseTemplateResponse
      */
@@ -2257,8 +2497,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the names of protected object groups for which a protection template can take effect.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the names of protected object groups for which a protection template can take effect.</p>
+     * 
      * @param request DescribeDefenseTemplateValidGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseTemplateValidGroupsResponse
@@ -2316,8 +2557,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the names of protected object groups for which a protection template can take effect.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the names of protected object groups for which a protection template can take effect.</p>
+     * 
      * @param request DescribeDefenseTemplateValidGroupsRequest
      * @return DescribeDefenseTemplateValidGroupsResponse
      */
@@ -2327,8 +2569,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a paging query to retrieve protection templates.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a paging query to retrieve protection templates.</p>
+     * 
      * @param request DescribeDefenseTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDefenseTemplatesResponse
@@ -2398,8 +2641,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a paging query to retrieve protection templates.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a paging query to retrieve protection templates.</p>
+     * 
      * @param request DescribeDefenseTemplatesRequest
      * @return DescribeDefenseTemplatesResponse
      */
@@ -2409,8 +2653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</p>
+     * 
      * @param request DescribeDomainDNSRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainDNSRecordResponse
@@ -2452,8 +2697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</p>
+     * 
      * @param request DescribeDomainDNSRecordRequest
      * @return DescribeDomainDNSRecordResponse
      */
@@ -2463,8 +2709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a domain name that is added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a domain name that is added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeDomainDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainDetailResponse
@@ -2502,8 +2749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a domain name that is added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a domain name that is added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeDomainDetailRequest
      * @return DescribeDomainDetailResponse
      */
@@ -2513,8 +2761,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainsResponse
@@ -2572,8 +2821,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeDomainsRequest
      * @return DescribeDomainsResponse
      */
@@ -2583,8 +2833,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeFlowChartRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFlowChartResponse
@@ -2638,8 +2889,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeFlowChartRequest
      * @return DescribeFlowChartResponse
      */
@@ -2649,8 +2901,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 protected objects that receive requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 protected objects that receive requests.</p>
+     * 
      * @param request DescribeFlowTopResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFlowTopResourceResponse
@@ -2696,8 +2949,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 protected objects that receive requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 protected objects that receive requests.</p>
+     * 
      * @param request DescribeFlowTopResourceRequest
      * @return DescribeFlowTopResourceResponse
      */
@@ -2707,8 +2961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 URLs that are used to initiate requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 URLs that are used to initiate requests.</p>
+     * 
      * @param request DescribeFlowTopUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFlowTopUrlResponse
@@ -2758,8 +3013,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 URLs that are used to initiate requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 URLs that are used to initiate requests.</p>
+     * 
      * @param request DescribeFlowTopUrlRequest
      * @return DescribeFlowTopUrlResponse
      */
@@ -2769,8 +3025,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeHybridCloudGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHybridCloudGroupsResponse
@@ -2832,8 +3089,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeHybridCloudGroupsRequest
      * @return DescribeHybridCloudGroupsResponse
      */
@@ -2843,8 +3101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</p>
+     * 
      * @param request DescribeHybridCloudResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHybridCloudResourcesResponse
@@ -2902,8 +3161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</p>
+     * 
      * @param request DescribeHybridCloudResourcesRequest
      * @return DescribeHybridCloudResourcesResponse
      */
@@ -2913,8 +3173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</p>
+     * 
      * @param request DescribeHybridCloudUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeHybridCloudUserResponse
@@ -2952,8 +3213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</p>
+     * 
      * @param request DescribeHybridCloudUserRequest
      * @return DescribeHybridCloudUserResponse
      */
@@ -2963,8 +3225,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</p>
+     * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstanceResponse
@@ -2998,8 +3261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</p>
+     * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
      */
@@ -3009,8 +3273,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries IP addresses in an IP address blacklist for major event protection by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries IP addresses in an IP address blacklist for major event protection by page.</p>
+     * 
      * @param request DescribeMajorProtectionBlackIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMajorProtectionBlackIpsResponse
@@ -3072,8 +3337,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries IP addresses in an IP address blacklist for major event protection by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries IP addresses in an IP address blacklist for major event protection by page.</p>
+     * 
      * @param request DescribeMajorProtectionBlackIpsRequest
      * @return DescribeMajorProtectionBlackIpsResponse
      */
@@ -3083,8 +3349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about members.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about members.</p>
+     * 
      * @param request DescribeMemberAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMemberAccountsResponse
@@ -3130,8 +3397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about members.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about members.</p>
+     * 
      * @param request DescribeMemberAccountsRequest
      * @return DescribeMemberAccountsResponse
      */
@@ -3141,8 +3409,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the queries per second (QPS) statistics of a WAF instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the queries per second (QPS) statistics of a WAF instance.</p>
+     * 
      * @param request DescribePeakTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePeakTrendResponse
@@ -3196,8 +3465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the queries per second (QPS) statistics of a WAF instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the queries per second (QPS) statistics of a WAF instance.</p>
+     * 
      * @param request DescribePeakTrendRequest
      * @return DescribePeakTrendResponse
      */
@@ -3207,8 +3477,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</p>
+     * 
      * @param request DescribeProductInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeProductInstancesResponse
@@ -3278,8 +3549,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</p>
+     * 
      * @param request DescribeProductInstancesRequest
      * @return DescribeProductInstancesResponse
      */
@@ -3289,8 +3561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</p>
+     * 
      * @param request DescribePunishedDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePunishedDomainsResponse
@@ -3332,8 +3605,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</p>
+     * 
      * @param request DescribePunishedDomainsRequest
      * @return DescribePunishedDomainsResponse
      */
@@ -3343,8 +3617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</p>
+     * 
      * @param request DescribeResourceInstanceCertsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceInstanceCertsResponse
@@ -3394,8 +3669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</p>
+     * 
      * @param request DescribeResourceInstanceCertsRequest
      * @return DescribeResourceInstanceCertsResponse
      */
@@ -3405,8 +3681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the log collection feature is enabled for a protected object.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the log collection feature is enabled for a protected object.</p>
+     * 
      * @param request DescribeResourceLogStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceLogStatusResponse
@@ -3448,8 +3725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the log collection feature is enabled for a protected object.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the log collection feature is enabled for a protected object.</p>
+     * 
      * @param request DescribeResourceLogStatusRequest
      * @return DescribeResourceLogStatusResponse
      */
@@ -3459,8 +3737,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeResourcePortRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourcePortResponse
@@ -3502,8 +3781,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the ports of a cloud service instance that are added to Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeResourcePortRequest
      * @return DescribeResourcePortResponse
      */
@@ -3513,8 +3793,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</p>
+     * 
      * @param request DescribeResourceRegionIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceRegionIdResponse
@@ -3552,8 +3833,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</p>
+     * 
      * @param request DescribeResourceRegionIdRequest
      * @return DescribeResourceRegionIdResponse
      */
@@ -3563,8 +3845,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</p>
+     * 
      * @param request DescribeResourceSupportRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResourceSupportRegionsResponse
@@ -3602,8 +3885,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the region IDs of Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that can be added to Web Application Firewall (WAF) in transparent proxy mode.</p>
+     * 
      * @param request DescribeResourceSupportRegionsRequest
      * @return DescribeResourceSupportRegionsResponse
      */
@@ -3613,8 +3897,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</p>
+     * 
      * @param request DescribeResponseCodeTrendGraphRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeResponseCodeTrendGraphResponse
@@ -3672,8 +3957,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</p>
+     * 
      * @param request DescribeResponseCodeTrendGraphRequest
      * @return DescribeResponseCodeTrendGraphResponse
      */
@@ -3683,8 +3969,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries regular expression rule groups by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries regular expression rule groups by page.</p>
+     * 
      * @param request DescribeRuleGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRuleGroupsResponse
@@ -3738,8 +4025,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries regular expression rule groups by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries regular expression rule groups by page.</p>
+     * 
      * @param request DescribeRuleGroupsRequest
      * @return DescribeRuleGroupsResponse
      */
@@ -3749,8 +4037,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 IP addresses from which attacks are initiated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 IP addresses from which attacks are initiated.</p>
+     * 
      * @param request DescribeRuleHitsTopClientIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRuleHitsTopClientIpResponse
@@ -3804,8 +4093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 IP addresses from which attacks are initiated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 IP addresses from which attacks are initiated.</p>
+     * 
      * @param request DescribeRuleHitsTopClientIpRequest
      * @return DescribeRuleHitsTopClientIpResponse
      */
@@ -3815,8 +4105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 protected objects that trigger protection rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 protected objects that trigger protection rules.</p>
+     * 
      * @param request DescribeRuleHitsTopResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRuleHitsTopResourceResponse
@@ -3866,8 +4157,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 protected objects that trigger protection rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 protected objects that trigger protection rules.</p>
+     * 
      * @param request DescribeRuleHitsTopResourceRequest
      * @return DescribeRuleHitsTopResourceResponse
      */
@@ -3877,8 +4169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IDs of the top 10 protection rules that are matched by requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IDs of the top 10 protection rules that are matched by requests.</p>
+     * 
      * @param request DescribeRuleHitsTopRuleIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRuleHitsTopRuleIdResponse
@@ -3936,8 +4229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IDs of the top 10 protection rules that are matched by requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IDs of the top 10 protection rules that are matched by requests.</p>
+     * 
      * @param request DescribeRuleHitsTopRuleIdRequest
      * @return DescribeRuleHitsTopRuleIdResponse
      */
@@ -3947,8 +4241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 protection modules that are matched.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 protection modules that are matched.</p>
+     * 
      * @param request DescribeRuleHitsTopTuleTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRuleHitsTopTuleTypeResponse
@@ -3994,8 +4289,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 protection modules that are matched.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 protection modules that are matched.</p>
+     * 
      * @param request DescribeRuleHitsTopTuleTypeRequest
      * @return DescribeRuleHitsTopTuleTypeResponse
      */
@@ -4005,8 +4301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 user agents that are used to initiate attacks.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 user agents that are used to initiate attacks.</p>
+     * 
      * @param request DescribeRuleHitsTopUaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRuleHitsTopUaResponse
@@ -4056,8 +4353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 user agents that are used to initiate attacks.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 user agents that are used to initiate attacks.</p>
+     * 
      * @param request DescribeRuleHitsTopUaRequest
      * @return DescribeRuleHitsTopUaResponse
      */
@@ -4067,8 +4365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 URLs that trigger protection rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 URLs that trigger protection rules.</p>
+     * 
      * @param request DescribeRuleHitsTopUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRuleHitsTopUrlResponse
@@ -4122,8 +4421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 URLs that trigger protection rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 URLs that trigger protection rules.</p>
+     * 
      * @param request DescribeRuleHitsTopUrlRequest
      * @return DescribeRuleHitsTopUrlResponse
      */
@@ -4133,8 +4433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether Web Application Firewall (WAF) is authorized to access Logstores.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</p>
+     * 
      * @param request DescribeSlsAuthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlsAuthStatusResponse
@@ -4172,8 +4473,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether Web Application Firewall (WAF) is authorized to access Logstores.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</p>
+     * 
      * @param request DescribeSlsAuthStatusRequest
      * @return DescribeSlsAuthStatusResponse
      */
@@ -4183,8 +4485,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</p>
+     * 
      * @param request DescribeSlsLogStoreRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlsLogStoreResponse
@@ -4222,8 +4525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</p>
+     * 
      * @param request DescribeSlsLogStoreRequest
      * @return DescribeSlsLogStoreResponse
      */
@@ -4233,8 +4537,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of a Simple Log Service Logstore.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status of a Simple Log Service Logstore.</p>
+     * 
      * @param request DescribeSlsLogStoreStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlsLogStoreStatusResponse
@@ -4272,8 +4577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of a Simple Log Service Logstore.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status of a Simple Log Service Logstore.</p>
+     * 
      * @param request DescribeSlsLogStoreStatusRequest
      * @return DescribeSlsLogStoreStatusResponse
      */
@@ -4283,8 +4589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of protected resources for which a protection template takes effect.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of protected resources for which a protection template takes effect.</p>
+     * 
      * @param request DescribeTemplateResourceCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTemplateResourceCountResponse
@@ -4326,8 +4633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of protected resources for which a protection template takes effect.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the number of protected resources for which a protection template takes effect.</p>
+     * 
      * @param request DescribeTemplateResourceCountRequest
      * @return DescribeTemplateResourceCountResponse
      */
@@ -4337,8 +4645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resources that are associated to a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the resources that are associated to a protection rule template.</p>
+     * 
      * @param request DescribeTemplateResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTemplateResourcesResponse
@@ -4384,8 +4693,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resources that are associated to a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the resources that are associated to a protection rule template.</p>
+     * 
      * @param request DescribeTemplateResourcesRequest
      * @return DescribeTemplateResourcesResponse
      */
@@ -4395,8 +4705,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available regions for log storage.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available regions for log storage.</p>
+     * 
      * @param request DescribeUserSlsLogRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserSlsLogRegionsResponse
@@ -4434,8 +4745,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available regions for log storage.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available regions for log storage.</p>
+     * 
      * @param request DescribeUserSlsLogRegionsRequest
      * @return DescribeUserSlsLogRegionsResponse
      */
@@ -4445,8 +4757,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.</p>
+     * 
      * @param request DescribeUserWafLogStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserWafLogStatusResponse
@@ -4484,8 +4797,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status, region ID, and status modification time of Web Application Firewall (WAF) logs.</p>
+     * 
      * @param request DescribeUserWafLogStatusRequest
      * @return DescribeUserWafLogStatusResponse
      */
@@ -4495,8 +4809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 IP addresses from which requests are sent.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 IP addresses from which requests are sent.</p>
+     * 
      * @param request DescribeVisitTopIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVisitTopIpResponse
@@ -4546,8 +4861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 IP addresses from which requests are sent.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 IP addresses from which requests are sent.</p>
+     * 
      * @param request DescribeVisitTopIpRequest
      * @return DescribeVisitTopIpResponse
      */
@@ -4557,8 +4873,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 user agents that are used to initiate requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 user agents that are used to initiate requests.</p>
+     * 
      * @param request DescribeVisitUasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVisitUasResponse
@@ -4604,8 +4921,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top 10 user agents that are used to initiate requests.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top 10 user agents that are used to initiate requests.</p>
+     * 
      * @param request DescribeVisitUasRequest
      * @return DescribeVisitUasResponse
      */
@@ -4615,8 +4933,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.</p>
+     * 
      * @param request DescribeWafSourceIpSegmentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWafSourceIpSegmentResponse
@@ -4654,8 +4973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the back-to-origin CIDR blocks of a Web Application Firewall (WAF) instance.</p>
+     * 
      * @param request DescribeWafSourceIpSegmentRequest
      * @return DescribeWafSourceIpSegmentResponse
      */
@@ -4665,8 +4985,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tag keys.
-     *
+     * <b>summary</b> : 
+     * <p>Queries tag keys.</p>
+     * 
      * @param request ListTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagKeysResponse
@@ -4708,8 +5029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tag keys.
-     *
+     * <b>summary</b> : 
+     * <p>Queries tag keys.</p>
+     * 
      * @param request ListTagKeysRequest
      * @return ListTagKeysResponse
      */
@@ -4719,8 +5041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are added to a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to a resource.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -4766,8 +5089,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are added to a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to a resource.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -4777,8 +5101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tag values of a tag key.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tag values of a tag key.</p>
+     * 
      * @param request ListTagValuesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagValuesResponse
@@ -4820,8 +5145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tag values of a tag key.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tag values of a tag key.</p>
+     * 
      * @param request ListTagValuesRequest
      * @return ListTagValuesResponse
      */
@@ -4831,8 +5157,137 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>修改API安全日志订阅</p>
+     * 
+     * @param request ModifyApisecLogDeliveryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyApisecLogDeliveryResponse
+     */
+    public ModifyApisecLogDeliveryResponse modifyApisecLogDeliveryWithOptions(ModifyApisecLogDeliveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assertKey)) {
+            query.put("AssertKey", request.assertKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logRegionId)) {
+            query.put("LogRegionId", request.logRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logStoreName)) {
+            query.put("LogStoreName", request.logStoreName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
+            query.put("ProjectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApisecLogDelivery"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyApisecLogDeliveryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改API安全日志订阅</p>
+     * 
+     * @param request ModifyApisecLogDeliveryRequest
+     * @return ModifyApisecLogDeliveryResponse
+     */
+    public ModifyApisecLogDeliveryResponse modifyApisecLogDelivery(ModifyApisecLogDeliveryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyApisecLogDeliveryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改API安全日志订阅状态</p>
+     * 
+     * @param request ModifyApisecLogDeliveryStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyApisecLogDeliveryStatusResponse
+     */
+    public ModifyApisecLogDeliveryStatusResponse modifyApisecLogDeliveryStatusWithOptions(ModifyApisecLogDeliveryStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assertKey)) {
+            query.put("AssertKey", request.assertKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApisecLogDeliveryStatus"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyApisecLogDeliveryStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改API安全日志订阅状态</p>
+     * 
+     * @param request ModifyApisecLogDeliveryStatusRequest
+     * @return ModifyApisecLogDeliveryStatusResponse
+     */
+    public ModifyApisecLogDeliveryStatusResponse modifyApisecLogDeliveryStatus(ModifyApisecLogDeliveryStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyApisecLogDeliveryStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a protected object group.</p>
+     * 
      * @param request ModifyDefenseResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseResourceGroupResponse
@@ -4886,8 +5341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a protected object group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a protected object group.</p>
+     * 
      * @param request ModifyDefenseResourceGroupRequest
      * @return ModifyDefenseResourceGroupResponse
      */
@@ -4897,8 +5353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</p>
+     * 
      * @param request ModifyDefenseResourceXffRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseResourceXffResponse
@@ -4960,8 +5417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</p>
+     * 
      * @param request ModifyDefenseResourceXffRequest
      * @return ModifyDefenseResourceXffResponse
      */
@@ -4971,8 +5429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a protection rule.</p>
+     * 
      * @param request ModifyDefenseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseRuleResponse
@@ -5022,8 +5481,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a protection rule.</p>
+     * 
      * @param request ModifyDefenseRuleRequest
      * @return ModifyDefenseRuleResponse
      */
@@ -5033,8 +5493,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the cached page of a website that is protected based on a website tamper-proofing rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</p>
+     * 
      * @param request ModifyDefenseRuleCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseRuleCacheResponse
@@ -5080,8 +5541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the cached page of a website that is protected based on a website tamper-proofing rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</p>
+     * 
      * @param request ModifyDefenseRuleCacheRequest
      * @return ModifyDefenseRuleCacheResponse
      */
@@ -5091,8 +5553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the status of a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the status of a protection rule.</p>
+     * 
      * @param request ModifyDefenseRuleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseRuleStatusResponse
@@ -5142,8 +5605,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the status of a protection rule.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the status of a protection rule.</p>
+     * 
      * @param request ModifyDefenseRuleStatusRequest
      * @return ModifyDefenseRuleStatusResponse
      */
@@ -5153,8 +5617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a protection rule template.</p>
+     * 
      * @param request ModifyDefenseTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseTemplateResponse
@@ -5204,8 +5669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a protection rule template.</p>
+     * 
      * @param request ModifyDefenseTemplateRequest
      * @return ModifyDefenseTemplateResponse
      */
@@ -5215,8 +5681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the status of a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the status of a protection rule template.</p>
+     * 
      * @param request ModifyDefenseTemplateStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDefenseTemplateStatusResponse
@@ -5262,8 +5729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the status of a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the status of a protection rule template.</p>
+     * 
      * @param request ModifyDefenseTemplateStatusRequest
      * @return ModifyDefenseTemplateStatusResponse
      */
@@ -5273,8 +5741,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</p>
+     * 
      * @param tmpReq ModifyDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDomainResponse
@@ -5334,8 +5803,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</p>
+     * 
      * @param request ModifyDomainRequest
      * @return ModifyDomainResponse
      */
@@ -5345,8 +5815,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</p>
+     * 
      * @param request ModifyDomainPunishStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDomainPunishStatusResponse
@@ -5388,8 +5859,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).
-     *
+     * <b>summary</b> : 
+     * <p>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</p>
+     * 
      * @param request ModifyDomainPunishStatusRequest
      * @return ModifyDomainPunishStatusResponse
      */
@@ -5399,8 +5871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</p>
+     * 
      * @param request ModifyHybridCloudClusterBypassStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyHybridCloudClusterBypassStatusResponse
@@ -5438,8 +5911,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables manual bypass for a hybrid cloud cluster of the SDK-based traffic mirroring mode.</p>
+     * 
      * @param request ModifyHybridCloudClusterBypassStatusRequest
      * @return ModifyHybridCloudClusterBypassStatusResponse
      */
@@ -5449,8 +5923,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an IP address blacklist for major event protection.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an IP address blacklist for major event protection.</p>
+     * 
      * @param request ModifyMajorProtectionBlackIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMajorProtectionBlackIpResponse
@@ -5508,8 +5983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an IP address blacklist for major event protection.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an IP address blacklist for major event protection.</p>
+     * 
      * @param request ModifyMajorProtectionBlackIpRequest
      * @return ModifyMajorProtectionBlackIpResponse
      */
@@ -5519,8 +5995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about members that are added for multi-account management.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about members that are added for multi-account management.</p>
+     * 
      * @param request ModifyMemberAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMemberAccountResponse
@@ -5570,8 +6047,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about members that are added for multi-account management.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about members that are added for multi-account management.</p>
+     * 
      * @param request ModifyMemberAccountRequest
      * @return ModifyMemberAccountResponse
      */
@@ -5581,8 +6059,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the log collection feature for a protected object.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the log collection feature for a protected object.</p>
+     * 
      * @param request ModifyResourceLogStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyResourceLogStatusResponse
@@ -5628,8 +6107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the log collection feature for a protected object.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the log collection feature for a protected object.</p>
+     * 
      * @param request ModifyResourceLogStatusRequest
      * @return ModifyResourceLogStatusResponse
      */
@@ -5639,8 +6119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates or disassociates a protected object or protected object group with or from a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Associates or disassociates a protected object or protected object group with or from a protection rule template.</p>
+     * 
      * @param request ModifyTemplateResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTemplateResourcesResponse
@@ -5698,8 +6179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates or disassociates a protected object or protected object group with or from a protection rule template.
-     *
+     * <b>summary</b> : 
+     * <p>Associates or disassociates a protected object or protected object group with or from a protection rule template.</p>
+     * 
      * @param request ModifyTemplateResourcesRequest
      * @return ModifyTemplateResourcesResponse
      */
@@ -5709,10 +6191,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).
-     *
-     * @description SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](https://help.aliyun.com/document_detail/2743168.html) operation to query the status of the task.
-     *
+     * <b>description</b> :
+     * <p>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</p>
+     * 
      * @param request SyncProductInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SyncProductInstanceResponse
@@ -5750,10 +6234,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).
-     *
-     * @description SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](https://help.aliyun.com/document_detail/2743168.html) operation to query the status of the task.
-     *
+     * <b>description</b> :
+     * <p>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronizes Elastic Compute Service (ECS) instances and Classic Load Balancer (CLB) instances to Web Application Firewall (WAF).</p>
+     * 
      * @param request SyncProductInstanceRequest
      * @return SyncProductInstanceResponse
      */
@@ -5763,8 +6249,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds tags to resources.
-     *
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -5806,8 +6293,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds tags to resources.
-     *
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -5817,8 +6305,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from resources and then deletes the tags.
-     *
+     * <b>summary</b> : 
+     * <p>Removes tags from resources and then deletes the tags.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -5864,8 +6353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from resources and then deletes the tags.
-     *
+     * <b>summary</b> : 
+     * <p>Removes tags from resources and then deletes the tags.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */

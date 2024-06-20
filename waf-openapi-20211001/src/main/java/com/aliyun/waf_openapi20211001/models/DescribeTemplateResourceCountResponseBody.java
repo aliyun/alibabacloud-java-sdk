@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTemplateResourceCountResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8064433-9781-5E86-806E-C1DD****1D95</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
     public static class DescribeTemplateResourceCountResponseBodyResourceCount extends TeaModel {
         /**
          * <p>The number of protected object groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
         /**
          * <p>The number of protected objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("SingleCount")
         public Integer singleCount;
 
         /**
          * <p>The ID of the protection template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

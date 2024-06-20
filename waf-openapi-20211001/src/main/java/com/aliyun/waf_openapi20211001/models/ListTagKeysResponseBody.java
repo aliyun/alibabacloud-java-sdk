@@ -12,12 +12,18 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8CB8BB88-24C7-5608-BF5E-4DCA****CF1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,15 +60,22 @@ public class ListTagKeysResponseBody extends TeaModel {
     public static class ListTagKeysResponseBodyKeys extends TeaModel {
         /**
          * <p>The type of the tag. Valid values:</p>
-         * <br>
-         * <p>*   custom</p>
-         * <p>*   system</p>
+         * <ul>
+         * <li>custom</li>
+         * <li>system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoTagKey</p>
          */
         @NameInMap("Key")
         public String key;

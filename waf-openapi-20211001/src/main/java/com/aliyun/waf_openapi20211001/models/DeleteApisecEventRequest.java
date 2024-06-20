@@ -4,24 +4,47 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DeleteApisecEventRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>433</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0b7ab137a065aab7656986***11db</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf-cn-zz11sr5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
+     */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 

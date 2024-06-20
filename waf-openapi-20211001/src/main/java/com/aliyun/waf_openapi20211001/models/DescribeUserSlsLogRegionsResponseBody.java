@@ -12,6 +12,9 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9D11AC3A-A10C-56E7-A342-E87EC892****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

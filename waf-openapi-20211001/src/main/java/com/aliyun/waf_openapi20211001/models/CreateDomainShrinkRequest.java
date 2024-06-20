@@ -6,34 +6,42 @@ import com.aliyun.tea.*;
 public class CreateDomainShrinkRequest extends TeaModel {
     /**
      * <p>The mode in which you want to add the domain name to WAF. Valid values:</p>
-     * <br>
-     * <p>*   **share:** adds the domain name to WAF in CNAME record mode. This is the default value.</p>
-     * <p>*   **hybrid_cloud_cname:** adds the domain name to WAF in hybrid cloud reverse proxy mode.</p>
+     * <ul>
+     * <li><strong>share:</strong> adds the domain name to WAF in CNAME record mode. This is the default value.</li>
+     * <li><strong>hybrid_cloud_cname:</strong> adds the domain name to WAF in hybrid cloud reverse proxy mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>share</p>
      */
     @NameInMap("AccessType")
     public String accessType;
 
     /**
      * <p>The domain name that you want to add to WAF.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_cdnsdf3****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The configurations of the listeners.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
@@ -41,7 +49,6 @@ public class CreateDomainShrinkRequest extends TeaModel {
 
     /**
      * <p>The configurations of the forwarding rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Redirect")
@@ -49,17 +56,23 @@ public class CreateDomainShrinkRequest extends TeaModel {
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: the Chinese mainland</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland</p>
-     * <br>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;

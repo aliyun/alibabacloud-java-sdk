@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDefenseResourceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>439AADF2-368C-5E98-B14E-3086****0573</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,113 +43,167 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
     public static class DescribeDefenseResourceResponseBodyResource extends TeaModel {
         /**
          * <p>The status of the tracking cookie.</p>
-         * <br>
-         * <p>*   **0**: disabled.</p>
-         * <p>*   **1**: enabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AcwCookieStatus")
         public Integer acwCookieStatus;
 
         /**
          * <p>The status of the secure attribute of the tracking cookie.</p>
-         * <br>
-         * <p>*   **0**: disabled.</p>
-         * <p>*   **1**: enabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AcwSecureStatus")
         public Integer acwSecureStatus;
 
         /**
          * <p>The status of the secure attribute of the slider CAPTCHA cookie.</p>
-         * <br>
-         * <p>*   **0**: disabled.</p>
-         * <p>*   **1**: enabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AcwV3SecureStatus")
         public Integer acwV3SecureStatus;
 
         /**
          * <p>The custom header fields.</p>
-         * <br>
-         * <p>>  If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.</p>
+         * <blockquote>
+         * <p> If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.</p>
+         * </blockquote>
          */
         @NameInMap("CustomHeaders")
         public java.util.List<String> customHeaders;
 
         /**
          * <p>The description of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The details of the protected object. Different key-value pairs indicate different attributes of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;product&quot;: &quot;waf&quot;,
+         *  &quot;domain&quot;: &quot;demo.aliyundoc****.com&quot;
+         * }</p>
          */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;
 
         /**
          * <p>The time when the protected object was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607493144000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the protected object was modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1691720010000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170457******9107</p>
          */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
         /**
          * <p>The pattern used for the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         @NameInMap("Pattern")
         public String pattern;
 
         /**
          * <p>The name of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The name of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alb-rencs***</p>
          */
         @NameInMap("Resource")
         public String resource;
 
         /**
          * <p>The name of the protected object group to which the protected object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_resource_group</p>
          */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
         /**
          * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmoiy****p2oq</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
         /**
          * <p>The origin of the protected object. Valid values:</p>
-         * <br>
-         * <p>*   **custom**</p>
-         * <p>*   **access**</p>
+         * <ul>
+         * <li><strong>custom</strong></li>
+         * <li><strong>access</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("ResourceOrigin")
         public String resourceOrigin;
 
         /**
          * <p>Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
-         * <br>
-         * <p>*   **0**: No Layer 7 proxy is deployed.</p>
-         * <p>*   **1**: A Layer 7 proxy is deployed.</p>
+         * <ul>
+         * <li><strong>0</strong>: No Layer 7 proxy is deployed.</li>
+         * <li><strong>1</strong>: A Layer 7 proxy is deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("XffStatus")
         public Integer xffStatus;

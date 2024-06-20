@@ -12,6 +12,9 @@ public class DescribePunishedDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B1F4D802-55A1-5D53-A247-7E79****85E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

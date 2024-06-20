@@ -12,12 +12,18 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABF68BB3-2C48-5FA4-9750-D5FE55700E36</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>146</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,6 +60,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
     public static class DescribeDomainsResponseBodyDomainsBackedsHttp extends TeaModel {
         /**
          * <p>The HTTP address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("Backend")
         public String backend;
@@ -76,6 +85,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
     public static class DescribeDomainsResponseBodyDomainsBackedsHttps extends TeaModel {
         /**
          * <p>The HTTPS address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("Backend")
         public String backend;
@@ -176,12 +188,18 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The CNAME assigned by WAF to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxcvdaf.****.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The domain name that is added to WAF in CNAME record mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
@@ -194,18 +212,25 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvtc5z52****</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
         /**
          * <p>The status of the domain name. Valid values:</p>
-         * <br>
-         * <p>*   **1:** The domain name is in a normal state.</p>
-         * <p>*   **2:** The domain name is being created.</p>
-         * <p>*   **3:** The domain name is being modified.</p>
-         * <p>*   **4:** The domain name is being released.</p>
-         * <p>*   **5:** WAF no longer forwards traffic that is sent to the domain name.</p>
+         * <ul>
+         * <li><strong>1:</strong> The domain name is in a normal state.</li>
+         * <li><strong>2:</strong> The domain name is being created.</li>
+         * <li><strong>3:</strong> The domain name is being modified.</li>
+         * <li><strong>4:</strong> The domain name is being released.</li>
+         * <li><strong>5:</strong> WAF no longer forwards traffic that is sent to the domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

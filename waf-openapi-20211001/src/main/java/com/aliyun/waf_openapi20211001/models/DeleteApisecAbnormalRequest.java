@@ -4,24 +4,47 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DeleteApisecAbnormalRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c0a96***4b9cd303467402a63dcc</p>
+     */
     @NameInMap("AbnormalId")
     public String abnormalId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>428</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf-cn-n6w***x52m</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm2th****v6ay</p>
+     */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 

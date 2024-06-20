@@ -12,12 +12,18 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FDCBAE1E-2B3F-5C13-AD20-844B9473****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,12 +60,18 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
     public static class DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10106183</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trafficxxxx.cn</p>
          */
         @NameInMap("CertificateName")
         public String certificateName;
@@ -96,15 +108,22 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The protocol type. Valid values:</p>
-         * <br>
-         * <p>*   **http**</p>
-         * <p>*   **https**</p>
+         * <ul>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -143,24 +162,36 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
     public static class DescribeProductInstancesResponseBodyProductInstances extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1704********9107</p>
          */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze1tm4pvghp****cluv</p>
          */
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
         /**
          * <p>The public IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.X.X.1</p>
          */
         @NameInMap("ResourceIp")
         public String resourceIp;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-test</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
@@ -173,27 +204,35 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The cloud service to which the instance belongs. Valid values:</p>
-         * <br>
-         * <p>*   **clb4**: Layer 4 CLB.</p>
-         * <p>*   **clb7**: Layer 7 CLB.</p>
-         * <p>*   **ecs**: ECS.</p>
+         * <ul>
+         * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+         * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+         * <li><strong>ecs</strong>: ECS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>clb4</p>
          */
         @NameInMap("ResourceProduct")
         public String resourceProduct;
 
         /**
          * <p>The region ID of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **cn-chengdu**: China (Chengdu).</p>
-         * <p>*   **cn-beijing**: China (Beijing).</p>
-         * <p>*   **cn-zhangjiakou**: China (Zhangjiakou).</p>
-         * <p>*   **cn-hangzhou**: China (Hangzhou).</p>
-         * <p>*   **cn-shanghai**: China (Shanghai).</p>
-         * <p>*   **cn-shenzhen**: China (Shenzhen).</p>
-         * <p>*   **cn-qingdao**: China (Qingdao).</p>
-         * <p>*   **cn-hongkong**: China (Hong Kong).</p>
-         * <p>*   **ap-southeast-3**: Malaysia (Kuala Lumpur).</p>
-         * <p>*   **ap-southeast-5**: Indonesia (Jakarta).</p>
+         * <ul>
+         * <li><strong>cn-chengdu</strong>: China (Chengdu).</li>
+         * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+         * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+         * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+         * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
+         * <li><strong>cn-qingdao</strong>: China (Qingdao).</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
+         * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
+         * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;

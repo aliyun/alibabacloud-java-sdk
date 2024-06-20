@@ -6,63 +6,84 @@ import com.aliyun.tea.*;
 public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     /**
      * <p>The description of the IP address blacklist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Protection for major events</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The time after which the IP address blacklist becomes invalid. Unit: seconds.</p>
-     * <br>
-     * <p>>  If you set the value to **0**, the blacklist is permanently valid.</p>
-     * <br>
+     * <blockquote>
+     * <p> If you set the value to <strong>0</strong>, the blacklist is permanently valid.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1716528465</p>
      */
     @NameInMap("ExpiredTime")
     public Long expiredTime;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v3prepaid_public_cn-2r42s6y****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The IP addresses that you want to add to the IP address blacklist. CIDR blocks and IP addresses are supported. IPv4 and IPv6 addresses are supported. Separate the CIDR blocks or IP addresses with commas (,). For more information, see [Protection for major events](https://help.aliyun.com/document_detail/425591.html).</p>
-     * <br>
+     * <p>The IP addresses that you want to add to the IP address blacklist. CIDR blocks and IP addresses are supported. IPv4 and IPv6 addresses are supported. Separate the CIDR blocks or IP addresses with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Protection for major events</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX,192.0.XX.XX/24</p>
      */
     @NameInMap("IpList")
     public String ipList;
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
-     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The ID of the IP address blacklist rule for major event protection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>232324</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The ID of the IP address blacklist rule template for major event protection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2221</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

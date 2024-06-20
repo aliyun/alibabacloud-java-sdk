@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>716E64DA-044F-51C7-B528-2FBF****AE4F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c754d2a4-28f1-46df-b557-9586173a****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource. ALIYUN::WAF::DEFENSERESOURCE is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of tag N that is added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of tag N that is added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TayValue1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

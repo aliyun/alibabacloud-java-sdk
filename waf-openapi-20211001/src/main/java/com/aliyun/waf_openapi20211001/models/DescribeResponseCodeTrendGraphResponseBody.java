@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7D46493E-84DD-58CE-80A7-8643****9ECC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     public static class DescribeResponseCodeTrendGraphResponseBodyResponseCodes extends TeaModel {
         /**
          * <p>The number of 302 error codes that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("302Pv")
         public Long code302Pv;
 
         /**
          * <p>The number of 405 error codes that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121645464</p>
          */
         @NameInMap("405Pv")
         public Long code405Pv;
 
         /**
          * <p>The number of 444 error codes that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("444Pv")
         public Long code444Pv;
 
         /**
          * <p>The number of 499 error codes that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("499Pv")
         public Long code499Pv;
 
         /**
          * <p>The number of 5xx error codes that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2932</p>
          */
         @NameInMap("5xxPv")
         public Long code5xxPv;
 
         /**
          * <p>The serial number of the time interval. The serial numbers are arranged in chronological order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Index")
         public Long index;

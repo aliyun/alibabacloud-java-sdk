@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
-     * <br>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,8 +35,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -89,12 +97,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tagkey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue1</p>
          */
         @NameInMap("Value")
         public String value;

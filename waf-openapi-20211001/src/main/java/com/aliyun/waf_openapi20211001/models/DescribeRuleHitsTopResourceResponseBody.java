@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADA11BC7-AA95-5C31-9095-5802C02ED1DC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
     public static class DescribeRuleHitsTopResourceResponseBodyRuleHitsTopResource extends TeaModel {
         /**
          * <p>The number of requests that match protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14219</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         @NameInMap("Resource")
         public String resource;

@@ -6,31 +6,36 @@ import com.aliyun.tea.*;
 public class ModifyHybridCloudClusterBypassStatusRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hdbc_cluster_****</p>
      */
     @NameInMap("ClusterResourceId")
     public String clusterResourceId;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <br>
      * <p>**</p>
-     * <br>
-     * <p>**You can call the **DescribeInstanceInfo[ operation to obtain the ID of the WAF instance.](https://help.aliyun.com/document_detail/140857.html)</p>
-     * <br>
+     * <p>**You can call the **DescribeInstanceInfo<a href="https://help.aliyun.com/document_detail/140857.html"> operation to obtain the ID of the WAF instance.</a></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_elasticity-cn-0xldbqt****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The status of manual bypass. Valid values:</p>
-     * <br>
-     * <p>*   **on**: enabled.</p>
-     * <p>*   **off**: disabled. This is the default value.</p>
-     * <br>
+     * <ul>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled. This is the default value.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("RuleStatus")
     public String ruleStatus;

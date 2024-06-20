@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8E5C7ED7-503A-5986-A005-36F2511EB89F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     public static class DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa extends TeaModel {
         /**
          * <p>The number of attacks that are initiated from the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>531</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The user agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         @NameInMap("Ua")
         public String ua;

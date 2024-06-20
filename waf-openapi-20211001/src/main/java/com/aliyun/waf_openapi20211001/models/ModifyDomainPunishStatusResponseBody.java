@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDomainPunishStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70E65A35-22B8-567C-B0A0-A2E9****20AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,12 +12,18 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BFEC5C77-049B-5E88-A5B6-CB0C****B66E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,30 +60,45 @@ public class DescribeDefenseResourceGroupsResponseBody extends TeaModel {
     public static class DescribeDefenseResourceGroupsResponseBodyGroups extends TeaModel {
         /**
          * <p>The description of the protected object group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is test description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the protected object group was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624343180000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The most recent time when the protected object group was modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1701656305000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The name of the protected object group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apptest</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The names of the protected objects that are added to the protected object group. Separate multiple protected objects with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example02.aliyun-waf,example01.aliyun-waf</p>
          */
         @NameInMap("ResourceList")
         public String resourceList;

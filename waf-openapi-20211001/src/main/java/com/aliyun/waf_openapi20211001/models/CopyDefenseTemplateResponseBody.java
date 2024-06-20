@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CopyDefenseTemplateResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the new protection template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12346</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

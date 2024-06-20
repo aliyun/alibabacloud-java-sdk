@@ -4,27 +4,54 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisecAssetTrendRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>590</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683183599</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v2_public_cn-ww**b06</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek**7uq</p>
+     */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1668496310</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

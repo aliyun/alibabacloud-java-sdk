@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateMajorProtectionBlackIpResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

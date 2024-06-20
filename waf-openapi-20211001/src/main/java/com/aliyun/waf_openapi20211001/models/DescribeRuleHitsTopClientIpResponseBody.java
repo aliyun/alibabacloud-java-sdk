@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F0F9AD6-62E2-50BB-A3E5-30FFB9410262</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     public static class DescribeRuleHitsTopClientIpResponseBodyRuleHitsTopClientIp extends TeaModel {
         /**
          * <p>The IP address of the service client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.3.XX.XX</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The number of attacks that are initiated from the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>531</p>
          */
         @NameInMap("Count")
         public Long count;

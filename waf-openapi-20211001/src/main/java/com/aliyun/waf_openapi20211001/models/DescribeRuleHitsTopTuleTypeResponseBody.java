@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45E377CE-0B04-578E-B653-EEA63CFE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,28 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     public static class DescribeRuleHitsTopTuleTypeResponseBodyRuleHitsTopTuleType extends TeaModel {
         /**
          * <p>The number of requests that match protection rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>698455</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.</p>
-         * <br>
-         * <p>*   **waf:** basic protection rules.</p>
-         * <p>*   **blacklist:** IP address blacklist rules.</p>
-         * <p>*   **custom:** custom rules.</p>
-         * <p>*   **antiscan:** scan protection rules.</p>
-         * <p>*   **cc_system:** HTTP flood protection rules.</p>
-         * <p>*   **region_block:** region blacklist rules.</p>
-         * <p>*   **scene:** bot management rules.</p>
-         * <p>*   **dlp:** data leakage prevention rules.</p>
+         * <ul>
+         * <li><strong>waf:</strong> basic protection rules.</li>
+         * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
+         * <li><strong>custom:</strong> custom rules.</li>
+         * <li><strong>antiscan:</strong> scan protection rules.</li>
+         * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
+         * <li><strong>region_block:</strong> region blacklist rules.</li>
+         * <li><strong>scene:</strong> bot management rules.</li>
+         * <li><strong>dlp:</strong> data leakage prevention rules.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cc_system</p>
          */
         @NameInMap("RuleType")
         public String ruleType;

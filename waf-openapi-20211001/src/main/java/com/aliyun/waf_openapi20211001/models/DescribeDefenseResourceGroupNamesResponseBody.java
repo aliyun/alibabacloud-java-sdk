@@ -12,12 +12,18 @@ public class DescribeDefenseResourceGroupNamesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59DA4258-2F32-5095-B283-57AC****70B3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

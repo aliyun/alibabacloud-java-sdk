@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9087ADDC-9047-4D02-82A7-33021B58083C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

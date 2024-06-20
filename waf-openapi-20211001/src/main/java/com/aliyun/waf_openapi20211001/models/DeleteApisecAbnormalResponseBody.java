@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DeleteApisecAbnormalResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66A98669-CC6E-4F3E-80A6-7B***11AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

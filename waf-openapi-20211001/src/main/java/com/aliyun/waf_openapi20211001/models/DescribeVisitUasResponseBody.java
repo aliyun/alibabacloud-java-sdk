@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVisitUasResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2847CE98-AFAE-5A64-B80E-60461717F9DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeVisitUasResponseBody extends TeaModel {
     public static class DescribeVisitUasResponseBodyUas extends TeaModel {
         /**
          * <p>The number of requests that use the user agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>698455</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The user agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chrome</p>
          */
         @NameInMap("Ua")
         public String ua;

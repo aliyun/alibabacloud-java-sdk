@@ -12,6 +12,9 @@ public class CreateDomainResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class CreateDomainResponseBody extends TeaModel {
     public static class CreateDomainResponseBodyDomainInfo extends TeaModel {
         /**
          * <p>The CNAME that is assigned by WAF to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxwww.****.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The domain name that you added to WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;

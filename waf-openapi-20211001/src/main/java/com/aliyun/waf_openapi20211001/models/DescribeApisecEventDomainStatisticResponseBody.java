@@ -9,10 +9,17 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66A98669-*******-80A6-3014697B11AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,18 +53,38 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeApisecEventDomainStatisticResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ApiCount")
         public Long apiCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a.aliyun.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("High")
         public Long high;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Low")
         public Long low;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Medium")
         public Long medium;
 

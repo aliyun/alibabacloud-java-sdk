@@ -6,88 +6,124 @@ import com.aliyun.tea.*;
 public class DescribeProductInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v3prepaid_public_cn-zxu****9d02</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1704********9107</p>
      */
     @NameInMap("OwnerUserId")
     public String ownerUserId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-2zeugkfj81jvo****4tqm</p>
      */
     @NameInMap("ResourceInstanceId")
     public String resourceInstanceId;
 
     /**
      * <p>The public IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.X.X.1</p>
      */
     @NameInMap("ResourceIp")
     public String resourceIp;
 
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz6ql****5uzi</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exampleResourceName</p>
      */
     @NameInMap("ResourceName")
     public String resourceName;
 
     /**
      * <p>The cloud service to which the instance belongs. Valid values:</p>
-     * <br>
-     * <p>*   **clb4**: Layer 4 Classic Load Balancer (CLB).</p>
-     * <p>*   **clb7**: Layer 7 CLB.</p>
-     * <p>*   **ecs**: Elastic Compute Service (ECS).</p>
+     * <ul>
+     * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
+     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+     * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>clb7</p>
      */
     @NameInMap("ResourceProduct")
     public String resourceProduct;
 
     /**
      * <p>The region ID of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cn-chengdu**: China (Chengdu).</p>
-     * <p>*   **cn-beijing**: China (Beijing).</p>
-     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou).</p>
-     * <p>*   **cn-hangzhou**: China (Hangzhou).</p>
-     * <p>*   **cn-shanghai**: China (Shanghai).</p>
-     * <p>*   **cn-shenzhen**: China (Shenzhen).</p>
-     * <p>*   **cn-qingdao**: China (Qingdao).</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong).</p>
-     * <p>*   **ap-southeast-3**: Malaysia (Kuala Lumpur).</p>
-     * <p>*   **ap-southeast-5**: Indonesia (Jakarta).</p>
+     * <ul>
+     * <li><strong>cn-chengdu</strong>: China (Chengdu).</li>
+     * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
+     * <li><strong>cn-qingdao</strong>: China (Qingdao).</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
+     * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
+     * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;

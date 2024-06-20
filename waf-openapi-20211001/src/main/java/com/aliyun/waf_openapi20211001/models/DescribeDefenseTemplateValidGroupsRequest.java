@@ -6,68 +6,93 @@ import com.aliyun.tea.*;
 public class DescribeDefenseTemplateValidGroupsRequest extends TeaModel {
     /**
      * <p>The scenario in which the protection template is used.</p>
-     * <br>
-     * <p>*   **waf_group**: basic protection.</p>
-     * <p>*   **antiscan**: scan protection.</p>
-     * <p>*   **ip_blacklist**: IP address blacklist.</p>
-     * <p>*   **custom_acl**: custom rule.</p>
-     * <p>*   **whitelist**: whitelist.</p>
-     * <p>*   **region_block**: region blacklist.</p>
-     * <p>*   **custom_response**: custom response.</p>
-     * <p>*   **cc**: HTTP flood protection.</p>
-     * <p>*   **tamperproof**: website tamper-proofing.</p>
-     * <p>*   **dlp**: data leakage prevention.</p>
-     * <br>
+     * <ul>
+     * <li><strong>waf_group</strong>: basic protection.</li>
+     * <li><strong>antiscan</strong>: scan protection.</li>
+     * <li><strong>ip_blacklist</strong>: IP address blacklist.</li>
+     * <li><strong>custom_acl</strong>: custom rule.</li>
+     * <li><strong>whitelist</strong>: whitelist.</li>
+     * <li><strong>region_block</strong>: region blacklist.</li>
+     * <li><strong>custom_response</strong>: custom response.</li>
+     * <li><strong>cc</strong>: HTTP flood protection.</li>
+     * <li><strong>tamperproof</strong>: website tamper-proofing.</li>
+     * <li><strong>dlp</strong>: data leakage prevention.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>region_block</p>
      */
     @NameInMap("DefenseScene")
     public String defenseScene;
 
     /**
      * <p>The name of the protected object group that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group221</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to query the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v3prepaid_public_cn-nwy****pf0e</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **20**.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2th****v6ay</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The ID of the protection template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

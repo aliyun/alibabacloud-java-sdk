@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDefenseResourceNamesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C1823E96-EF4B-5BD2-9E02-1D18****3ED8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeDefenseResourceNamesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

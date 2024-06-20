@@ -5,58 +5,70 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateResourcesRequest extends TeaModel {
     /**
-     * <p>The protected object groups that you want to associate with the protection rule template. Specify the value of this parameter in the ["group1","group2",...] format.</p>
+     * <p>The protected object groups that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
      */
     @NameInMap("BindResourceGroups")
     public java.util.List<String> bindResourceGroups;
 
     /**
-     * <p>The protected objects that you want to associate with the protection rule template. Specify the value of this parameter in the ["XX1","XX2",...] format.</p>
+     * <p>The protected objects that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
      */
     @NameInMap("BindResources")
     public java.util.List<String> bindResources;
 
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstance](https://help.aliyun.com/document_detail/433756.html) operation to obtain the ID of the WAF instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_cdnsdf3****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
-     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
      * <p>The ID of the protection rule template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2291</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>The protected object groups that you want to disassociate from the protection rule template. Specify the value of this parameter in the ["group1","group2",...] format.</p>
+     * <p>The protected object groups that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
      */
     @NameInMap("UnbindResourceGroups")
     public java.util.List<String> unbindResourceGroups;
 
     /**
-     * <p>The protected objects that you want to disassociate from the protection rule template. Specify the value of this parameter in the ["XX1","XX2",...] format.</p>
+     * <p>The protected objects that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
      */
     @NameInMap("UnbindResources")
     public java.util.List<String> unbindResources;
