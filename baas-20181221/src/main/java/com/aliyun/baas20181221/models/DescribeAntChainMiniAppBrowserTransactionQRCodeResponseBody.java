@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody extends
     }
 
     public static class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bDXK6boZ</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iVBORw0KGgo......ABJRU5ErkJggg==</p>
+         */
         @NameInMap("Base64QRCodePNG")
         public String base64QRCodePNG;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://render.antfin.com/p/s/miniapp-web/?type=trans&from=aliyun&bizid=bDXK6boZ&hash=10692388f8b729cbb42d2985eebd3567812def357eb826a7ec810ce97e1f295e">https://render.antfin.com/p/s/miniapp-web/?type=trans&amp;from=aliyun&amp;bizid=bDXK6boZ&amp;hash=10692388f8b729cbb42d2985eebd3567812def357eb826a7ec810ce97e1f295e</a></p>
+         */
         @NameInMap("QRCodeContent")
         public String QRCodeContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10692388f8b729cbb42d2985eebd3567812def357eb826a7ec810ce97e1f295e</p>
+         */
         @NameInMap("TransactionHash")
         public String transactionHash;
 

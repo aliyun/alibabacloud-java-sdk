@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricChaincodeDefinitionTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeFabricChaincodeDefinitionTaskResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,27 +66,59 @@ public class DescribeFabricChaincodeDefinitionTaskResponseBody extends TeaModel 
     }
 
     public static class DescribeFabricChaincodeDefinitionTaskResponseBodyResultContentChaincodeDefinition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sacc_v1.0:698d4e73c5f1d0239fbf0313ac79ddfaf44d5a803ecb02a4d1983cca4a706860</p>
+         */
         @NameInMap("ChaincodePackageId")
         public String chaincodePackageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>collectionconfig</p>
+         */
         @NameInMap("CollectionConfig")
         public String collectionConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OR (&quot;perf9141MSP.member&quot;)</p>
+         */
         @NameInMap("EndorsementPolicy")
         public String endorsementPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("InitRequired")
         public Boolean initRequired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sacc</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Sequence")
         public Long sequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>698d4e73c5f1d0239fbf0313ac79ddfaf44d5a803ecb02a4d1983cca4a706860</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -172,27 +216,55 @@ public class DescribeFabricChaincodeDefinitionTaskResponseBody extends TeaModel 
         @NameInMap("Approvers")
         public java.util.List<String> approvers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f100</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
         @NameInMap("Content")
         public DescribeFabricChaincodeDefinitionTaskResponseBodyResultContent content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>perf9141MSP</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ChaincodeDefinition</p>
+         */
         @NameInMap("Type")
         public String type;
 

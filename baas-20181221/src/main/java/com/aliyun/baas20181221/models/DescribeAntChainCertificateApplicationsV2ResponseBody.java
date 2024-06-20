@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainCertificateApplicationsV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainCertificateApplicationsV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,21 +126,45 @@ public class DescribeAntChainCertificateApplicationsV2ResponseBody extends TeaMo
     }
 
     public static class DescribeAntChainCertificateApplicationsV2ResponseBodyResultCertificateApplications extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8bd720bde18c4b37b0f4a1c7834db163</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609848404000</p>
+         */
         @NameInMap("Createtime")
         public Long createtime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609848404000</p>
+         */
         @NameInMap("Updatetime")
         public Long updatetime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid-103477475017****</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -172,12 +224,24 @@ public class DescribeAntChainCertificateApplicationsV2ResponseBody extends TeaMo
     }
 
     public static class DescribeAntChainCertificateApplicationsV2ResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

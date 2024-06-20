@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeEthereumDeletableResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeEthereumDeletableResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +66,17 @@ public class DescribeEthereumDeletableResponseBody extends TeaModel {
     }
 
     public static class DescribeEthereumDeletableResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Deletable")
         public Boolean deletable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eth-1ilrhcav4ibdl</p>
+         */
         @NameInMap("EthereumId")
         public String ethereumId;
 

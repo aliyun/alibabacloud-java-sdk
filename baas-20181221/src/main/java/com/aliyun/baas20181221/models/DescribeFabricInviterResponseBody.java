@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricInviterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C445762C-8909-4BD8-A2BD-BB45BF2441D8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeFabricInviterResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,18 +66,38 @@ public class DescribeFabricInviterResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricInviterResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>consortium-lianmenyumingyi-hc5d1bwl****</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("ConsortiumName")
         public String consortiumName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544411108000</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3524234</p>
+         */
         @NameInMap("InviterId")
         public Long inviterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("InviterName")
         public String inviterName;
 

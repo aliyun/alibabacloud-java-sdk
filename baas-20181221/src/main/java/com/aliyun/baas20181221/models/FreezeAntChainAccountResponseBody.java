@@ -4,9 +4,17 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class FreezeAntChainAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9F862442-F6AD-4B5F-8969-CE23DE1413CB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Result")
     public String result;
 

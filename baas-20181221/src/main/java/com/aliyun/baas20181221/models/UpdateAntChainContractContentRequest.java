@@ -4,15 +4,33 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class UpdateAntChainContractContentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>update content</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>R6XMn59e</p>
+     */
     @NameInMap("ContentId")
     public String contentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>newFile</p>
+     */
     @NameInMap("ContentName")
     public String contentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>R38DYDop</p>
+     */
     @NameInMap("ParentContentId")
     public String parentContentId;
 

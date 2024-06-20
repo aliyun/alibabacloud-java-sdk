@@ -4,12 +4,30 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainTransactionStatisticsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pYogqb9v</p>
+     */
     @NameInMap("AntChainId")
     public String antChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1563897600000</p>
+     */
     @NameInMap("End")
     public Long end;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1563206400000</p>
+     */
     @NameInMap("Start")
     public Long start;
 

@@ -4,21 +4,48 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricChannelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("BatchTimeout")
     public Integer batchTimeout;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>channelx</p>
+     */
     @NameInMap("ChannelName")
     public String channelName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consortium-aaaaaa-akpcsjjac2jd</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("MaxMessageCount")
     public Integer maxMessageCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Organization")
     public java.util.List<CreateFabricChannelRequestOrganization> organization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("PreferredMaxBytes")
     public Integer preferredMaxBytes;
 
@@ -76,6 +103,10 @@ public class CreateFabricChannelRequest extends TeaModel {
     }
 
     public static class CreateFabricChannelRequestOrganization extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>peers-aaaaaa1-1oxw31d046jtl</p>
+         */
         @NameInMap("Id")
         public String id;
 

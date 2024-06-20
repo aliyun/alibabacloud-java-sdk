@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5EDAC16F-EA3E-4017-B223-D76220F985DF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainContractProjectsResponseBodyResultContractProjects extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DV80nJXq</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1562847564000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("ProjectDescription")
         public String projectDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2L9VK68g</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projectname</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ProjectVersion")
         public String projectVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1563954499000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -117,12 +149,24 @@ public class DescribeAntChainContractProjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainContractProjectsResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

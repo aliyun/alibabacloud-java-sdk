@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainAccountsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1692940F-87C5-468F-8188-6C95FC05BBA5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,15 +39,31 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de44334f1094cbd37e952ef691a837f36eab2e9afdf6bed9bf523c2dde40ff7b1ff526ec11b510d320f536685f75dd90f67fda8d41a69738a76a77c27b1373fb</p>
+         */
         @NameInMap("AccountPublicKey")
         public String accountPublicKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ee54a9c4511345f2de05889540eedb8dfed7b57ab0647c5894e4333596bc2ecef07a0469331d016ad9978b39367a0a5c217ef92ffffcbd6716db6667353891a9</p>
+         */
         @NameInMap("AccountRecoveryKey")
         public String accountRecoveryKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pYogqb9v</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
@@ -95,12 +115,24 @@ public class DescribeAntChainAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainAccountsResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

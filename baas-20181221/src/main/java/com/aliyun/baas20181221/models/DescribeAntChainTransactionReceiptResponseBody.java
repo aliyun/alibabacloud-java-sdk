@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainTransactionReceiptResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9EC8FDC1-ED32-4EC0-AEC2-AFAA906ADBAB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,27 @@ public class DescribeAntChainTransactionReceiptResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainTransactionReceiptResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>data</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("GasUsed")
         public String gasUsed;
 
         @NameInMap("Logs")
         public java.util.List<String> logs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Result")
         public Long result;
 

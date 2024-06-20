@@ -4,9 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainMiniAppBrowserTransactionQRCodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bDXK6boZ</p>
+     */
     @NameInMap("AntChainId")
     public String antChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a1f1371012cf840a9e4c6bde430d5ba600e422e592d153bd2689783cd1f87d0</p>
+     */
     @NameInMap("TransactionHash")
     public String transactionHash;
 

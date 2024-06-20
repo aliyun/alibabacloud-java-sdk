@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ResetFabricOrganizationUserPasswordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public ResetFabricOrganizationUserPasswordResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,21 +66,45 @@ public class ResetFabricOrganizationUserPasswordResponseBody extends TeaModel {
     }
 
     public static class ResetFabricOrganizationUserPasswordResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("Fullname")
         public String fullname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>peers-aaaaaa2-1eqnj5o5w****</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("Username")
         public String username;
 

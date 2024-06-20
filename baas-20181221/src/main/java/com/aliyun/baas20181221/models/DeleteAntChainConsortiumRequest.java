@@ -4,6 +4,12 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DeleteAntChainConsortiumRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q0oWq92P</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 

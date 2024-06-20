@@ -4,6 +4,12 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CheckFabricConsortiumDomainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bank</p>
+     */
     @NameInMap("DomainCode")
     public String domainCode;
 

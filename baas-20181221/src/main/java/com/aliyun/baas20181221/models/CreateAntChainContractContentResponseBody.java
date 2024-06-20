@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateAntChainContractContentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C407F102-062A-44B3-BBDC-E3B2718F633D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,59 @@ public class CreateAntChainContractContentResponseBody extends TeaModel {
     }
 
     public static class CreateAntChainContractContentResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>R6XMn59e</p>
+         */
         @NameInMap("ContentId")
         public String contentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>newFile</p>
+         */
         @NameInMap("ContentName")
         public String contentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1564024964404</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDirectory")
         public Boolean isDirectory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>R38DYDop</p>
+         */
         @NameInMap("ParentContentId")
         public String parentContentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bDXK1b8Z</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1564024964404</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

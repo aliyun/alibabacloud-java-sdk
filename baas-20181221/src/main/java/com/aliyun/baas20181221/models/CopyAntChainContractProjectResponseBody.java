@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CopyAntChainContractProjectResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>45D67F6F-C723-4AD8-8462-F94EE5FF22E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class CopyAntChainContractProjectResponseBody extends TeaModel {
     }
 
     public static class CopyAntChainContractProjectResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DV80nJXq</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1563953475248</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>copy project description</p>
+         */
         @NameInMap("ProjectDescription")
         public String projectDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>R6XMEdXe</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>copyproject</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1.0.1</p>
+         */
         @NameInMap("ProjectVersion")
         public String projectVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1563953475248</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

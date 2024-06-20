@@ -4,18 +4,44 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateAntChainContractContentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newFile</p>
+     */
     @NameInMap("ContentName")
     public String contentName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsDirectory")
     public Boolean isDirectory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>R38DYDop</p>
+     */
     @NameInMap("ParentContentId")
     public String parentContentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bDXK1b8Z</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

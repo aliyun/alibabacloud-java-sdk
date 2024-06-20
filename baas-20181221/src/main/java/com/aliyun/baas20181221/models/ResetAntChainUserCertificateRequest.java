@@ -4,9 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ResetAntChainUserCertificateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bDXK6boZ</p>
+     */
     @NameInMap("AntChainId")
     public String antChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uid-128712635330****</p>
+     */
     @NameInMap("Username")
     public String username;
 

@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class InstallFabricChaincodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public InstallFabricChaincodeResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,51 +66,115 @@ public class InstallFabricChaincodeResponseBody extends TeaModel {
     }
 
     public static class InstallFabricChaincodeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc-198jejf8f8chi8</p>
+         */
         @NameInMap("ChaincodeId")
         public String chaincodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mychannel</p>
+         */
         @NameInMap("ChaincodeName")
         public String chaincodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("ChaincodeVersion")
         public String chaincodeVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mychannel</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>consortium-lianmenyumingyi-hc5d1bwlulg7</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("DeployTime")
         public String deployTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OR (&quot;perf9141MSP.member&quot;)</p>
+         */
         @NameInMap("EndorsePolicy")
         public String endorsePolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>input</p>
+         */
         @NameInMap("Input")
         public String input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Install")
         public Boolean install;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>github.com/hyperledger/fabric-samples/chaincode/sacc</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>providerid</p>
+         */
         @NameInMap("ProviderId")
         public String providerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prividername</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 

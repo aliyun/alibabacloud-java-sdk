@@ -4,6 +4,12 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainContractProjectContentTreeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2L9VK68g</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

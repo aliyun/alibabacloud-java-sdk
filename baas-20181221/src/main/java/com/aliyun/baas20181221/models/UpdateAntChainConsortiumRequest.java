@@ -7,9 +7,18 @@ public class UpdateAntChainConsortiumRequest extends TeaModel {
     @NameInMap("ConsortiumDescription")
     public String consortiumDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q0oWq92P</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConsortiumName")
     public String consortiumName;
 

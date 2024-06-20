@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainDownloadPathsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E6F487D4-8606-41B5-B289-46D5EFBD3417</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeAntChainDownloadPathsResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainDownloadPathsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http://***ca.crt</p>
+         */
         @NameInMap("CaCrtUrl")
         public String caCrtUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***client.crt</p>
+         */
         @NameInMap("ClientCrtUrl")
         public String clientCrtUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***</p>
+         */
         @NameInMap("SdkUrl")
         public String sdkUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***trustCa</p>
+         */
         @NameInMap("TrustCaUrl")
         public String trustCaUrl;
 

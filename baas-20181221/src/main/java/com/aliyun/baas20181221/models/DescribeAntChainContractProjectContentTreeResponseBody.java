@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A0DF307A-A44A-476F-99D8-BA4F205350BD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,15 +39,31 @@ public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaM
         @NameInMap("Children")
         public java.util.List<java.util.Map<String, ?>> children;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("ProjectDescription")
         public String projectDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2L9VK68g</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projectname</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ProjectVersion")
         public String projectVersion;
 

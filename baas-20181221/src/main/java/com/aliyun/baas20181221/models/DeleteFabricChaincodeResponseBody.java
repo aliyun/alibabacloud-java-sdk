@@ -4,12 +4,24 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DeleteFabricChaincodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

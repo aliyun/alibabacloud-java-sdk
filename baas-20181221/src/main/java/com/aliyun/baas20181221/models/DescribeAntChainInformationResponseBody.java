@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainInformationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>91246411-C7E9-4EFD-9074-3939AEDFC1BB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeAntChainInformationResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainInformationResponseBodyResultNodeInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>365216</p>
+         */
         @NameInMap("BlockHeight")
         public Long blockHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>121.199.195.8 18130</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.10</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -84,30 +104,62 @@ public class DescribeAntChainInformationResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainInformationResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AbnormalNodes")
         public Integer abnormalNodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pYogqb9v</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>365236</p>
+         */
         @NameInMap("BlockHeight")
         public Integer blockHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1562847396000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         @NameInMap("NodeInfos")
         public java.util.List<DescribeAntChainInformationResponseBodyResultNodeInfos> nodeInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("NodeNumber")
         public Integer nodeNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Normal")
         public Boolean normal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42</p>
+         */
         @NameInMap("TransactionSum")
         public Integer transactionSum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.10.2.4.7</p>
+         */
         @NameInMap("Version")
         public String version;
 

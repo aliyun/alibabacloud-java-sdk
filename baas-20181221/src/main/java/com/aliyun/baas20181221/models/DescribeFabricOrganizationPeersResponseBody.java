@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricOrganizationPeersResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,30 +66,66 @@ public class DescribeFabricOrganizationPeersResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricOrganizationPeersResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>domain</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>basic</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0.0.2</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0.0.2</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAnchor")
         public Boolean isAnchor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("OrganizationPeerName")
         public String organizationPeerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

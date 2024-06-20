@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class UpgradeFabricChaincodeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A6CC6C63-2D71-4D0C-AEBE-E95F0127C514</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public UpgradeFabricChaincodeResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,51 +66,115 @@ public class UpgradeFabricChaincodeResponseBody extends TeaModel {
     }
 
     public static class UpgradeFabricChaincodeResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>code-sacc-fk9z4r97****</p>
+         */
         @NameInMap("ChaincodeId")
         public String chaincodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mychaincode</p>
+         */
         @NameInMap("ChaincodeName")
         public String chaincodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("ChaincodeVersion")
         public String chaincodeVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>consortium-supplychain-1pxzsp5tb****</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1545215617000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1545215617000</p>
+         */
         @NameInMap("DeployTime")
         public String deployTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OR (&quot;wholesalerMSP.peer&quot;)</p>
+         */
         @NameInMap("EndorsePolicy")
         public String endorsePolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>input</p>
+         */
         @NameInMap("Input")
         public String input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Install")
         public Boolean install;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>github.com/sacc</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1928592</p>
+         */
         @NameInMap("ProviderId")
         public String providerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid-1928592</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 

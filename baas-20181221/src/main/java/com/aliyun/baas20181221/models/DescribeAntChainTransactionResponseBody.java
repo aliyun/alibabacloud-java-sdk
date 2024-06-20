@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainTransactionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7DCE6520-E5DB-4859-90AC-BDDB8A5501C6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +36,81 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainTransactionResponseBodyResultTransaction extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Data")
         public String data;
 
         @NameInMap("Extentions")
         public java.util.List<String> extentions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b</p>
+         */
         @NameInMap("From")
         public String from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000000</p>
+         */
         @NameInMap("Gas")
         public String gas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b3b0d2db83d3e670449d1e2a39d1d13b7e0e6080b0f9c6945f79eca68d1dd2ca</p>
+         */
         @NameInMap("Hash")
         public String hash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5675407026657953619</p>
+         */
         @NameInMap("Nonce")
         public String nonce;
 
+        /**
+         * <p>Period</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563954336850</p>
+         */
         @NameInMap("Period")
         public Long period;
 
         @NameInMap("Signatures")
         public java.util.List<String> signatures;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1563954336850</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>961085f3c7ef705ad587d0cbe11d7863a5a11af7451f4e9b1edadd74402addf5</p>
+         */
         @NameInMap("To")
         public String to;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UNFREEZE_ACCOUNT_CONTRACT</p>
+         */
         @NameInMap("TxType")
         public String txType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -172,18 +218,38 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainTransactionResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1168bc5dd0b78d15446b15ea5a7f7822a7d07c007dd3a50becf98da220fc08f6</p>
+         */
         @NameInMap("BlockHash")
         public String blockHash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>368169</p>
+         */
         @NameInMap("BlockHeight")
         public Long blockHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("BlockVersion")
         public String blockVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1563954336850</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b3b0d2db83d3e670449d1e2a39d1d13b7e0e6080b0f9c6945f79eca68d1dd2ca</p>
+         */
         @NameInMap("Hash")
         public String hash;
 

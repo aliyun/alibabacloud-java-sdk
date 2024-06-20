@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ApplyAntChainCertificateWithKeyAutoCreationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3E1894AF-FEE7-4C6C-8C2A-2B3EE0105B07</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class ApplyAntChainCertificateWithKeyAutoCreationResponseBody extends Tea
     }
 
     public static class ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http://***ca.crt</p>
+         */
         @NameInMap("CaCrtUrl")
         public String caCrtUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***client.crt</p>
+         */
         @NameInMap("ClientCrtUrl")
         public String clientCrtUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***</p>
+         */
         @NameInMap("SdkUrl")
         public String sdkUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***trustCa</p>
+         */
         @NameInMap("TrustCaUrl")
         public String trustCaUrl;
 
@@ -87,6 +107,10 @@ public class ApplyAntChainCertificateWithKeyAutoCreationResponseBody extends Tea
         @NameInMap("DownloadPath")
         public ApplyAntChainCertificateWithKeyAutoCreationResponseBodyResultDownloadPath downloadPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN ENCRYPTED PRIVATE KEY-----\nMII***A=\n-----END ENCRYPTED PRIVATE KEY-----\n</p>
+         */
         @NameInMap("PrivateKey")
         public String privateKey;
 

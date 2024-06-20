@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainInformationV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainInformationV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,15 +126,31 @@ public class DescribeAntChainInformationV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainInformationV2ResponseBodyResultNodeInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>259988</p>
+         */
         @NameInMap("BlockHeight")
         public Long blockHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.136.158.115 18130</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.10</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -150,33 +194,69 @@ public class DescribeAntChainInformationV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainInformationV2ResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AbnormalNodes")
         public Integer abnormalNodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8bd720bde18c4b37b0f4a1c7834db163</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>259988</p>
+         */
         @NameInMap("BlockHeight")
         public Integer blockHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609221924000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsRole")
         public Boolean isRole;
 
         @NameInMap("NodeInfos")
         public java.util.List<DescribeAntChainInformationV2ResponseBodyResultNodeInfos> nodeInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("NodeNumber")
         public Integer nodeNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Normal")
         public Boolean normal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("TransactionSum")
         public Integer transactionSum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.10</p>
+         */
         @NameInMap("Version")
         public String version;
 

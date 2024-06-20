@@ -4,6 +4,12 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeEthereumDeletableRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eth-1ilrhcav4ibdl</p>
+     */
     @NameInMap("EthereumId")
     public String ethereumId;
 

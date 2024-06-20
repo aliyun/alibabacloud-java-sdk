@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainQRCodeAuthorizationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeAntChainQRCodeAuthorizationResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainQRCodeAuthorizationResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bDXK6boZ</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL_USER_AUTHORIZATION</p>
+         */
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MINI_APP_BROWSER_TRANSACTION</p>
+         */
         @NameInMap("QRCodeType")
         public String QRCodeType;
 

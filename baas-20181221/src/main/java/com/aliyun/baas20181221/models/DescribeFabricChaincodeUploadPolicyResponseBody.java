@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricChaincodeUploadPolicyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeFabricChaincodeUploadPolicyResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,21 +66,45 @@ public class DescribeFabricChaincodeUploadPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricChaincodeUploadPolicyResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>accessId</p>
+         */
         @NameInMap("AccessId")
         public String accessId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test3/4bd1de21-2fff-4405-a8e9-f864c4bee24f</p>
+         */
         @NameInMap("Dir")
         public String dir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("Expire")
         public Integer expire;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://chaincode.oss-cn-beijing.aliyuncs.com">https://chaincode.oss-cn-beijing.aliyuncs.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAxOC0wNy0zMVQwODoyNjozMC40NzdaIiwiY29uZGl</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>signature</p>
+         */
         @NameInMap("Signature")
         public String signature;
 

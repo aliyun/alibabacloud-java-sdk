@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateAntChainAccountWithKeyPairAutoCreationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5F058BB4-3043-4638-86D4-EED84AD1AE54</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class CreateAntChainAccountWithKeyPairAutoCreationResponseBody extends Te
     }
 
     public static class CreateAntChainAccountWithKeyPairAutoCreationResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>accountname</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN ENCRYPTED PRIVATE KEY-----\nM***8=\n-----END ENCRYPTED PRIVATE KEY-----\n</p>
+         */
         @NameInMap("AccountPrivateKey")
         public String accountPrivateKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b***7</p>
+         */
         @NameInMap("AccountPublicKey")
         public String accountPublicKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN ENCRYPTED PRIVATE KEY-----\nM***Io=\n-----END ENCRYPTED PRIVATE KEY-----\n</p>
+         */
         @NameInMap("AccountRecoverPrivateKey")
         public String accountRecoverPrivateKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d***b</p>
+         */
         @NameInMap("AccountRecoverPublicKey")
         public String accountRecoverPublicKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1q8B5R9p</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 

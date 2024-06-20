@@ -4,30 +4,78 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class SubmitFabricChaincodeDefinitionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sacc_v1.0:698d4e73c5f1d0239fbf0313ac79ddfaf44d5a803ecb02a4d1983cca4a706860</p>
+     */
     @NameInMap("ChaincodePackageId")
     public String chaincodePackageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("ChaincodeVersion")
     public String chaincodeVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chan-channelx-1l1hmckuuisxo</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>collectionconfig</p>
+     */
     @NameInMap("CollectionConfig")
     public String collectionConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OR (&quot;perf9141MSP.member&quot;)</p>
+     */
     @NameInMap("EndorsePolicy")
     public String endorsePolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("InitRequired")
     public Boolean initRequired;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sacc</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa2-1eqnj5o5w9dt3</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 

@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumChannelsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricConsortiumChannelsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,72 +66,164 @@ public class DescribeFabricConsortiumChannelsResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricConsortiumChannelsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("BatchTimeout")
         public Integer batchTimeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("BlockCount")
         public Integer blockCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ChaincodeCount")
         public Integer chaincodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chan-channelx-1l1hmckuuisxo</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mychammel</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ConsortiumChannelId")
         public Integer consortiumChannelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>consortium-lianmenyumingyi-hc5d1bwlulg7</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("ConsortiumName")
         public String consortiumName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544411108000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544411108000</p>
+         */
         @NameInMap("DeleteTime")
         public String deleteTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Deleted")
         public Boolean deleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("MaxMessageCount")
         public Integer maxMessageCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MemberCount")
         public Integer memberCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MemberJoinedCount")
         public String memberJoinedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedJoined")
         public Boolean needJoined;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("OwnerBid")
         public String ownerBid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid-*</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>212</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>102410241</p>
+         */
         @NameInMap("PreferredMaxBytes")
         public Integer preferredMaxBytes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportChannelConfig")
         public Boolean supportChannelConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544411108000</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

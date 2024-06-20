@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,51 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainConsortiumsResponseBodyResultAntConsortiums extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ChainNum")
         public Long chainNum;
 
         @NameInMap("ConsortiumDescription")
         public String consortiumDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DV80nJXq</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
         @NameInMap("ConsortiumName")
         public String consortiumName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1562845453000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MemberNum")
         public Long memberNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SuperAdmin</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -128,12 +156,24 @@ public class DescribeAntChainConsortiumsResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainConsortiumsResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

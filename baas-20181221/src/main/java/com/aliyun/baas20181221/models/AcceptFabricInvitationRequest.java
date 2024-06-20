@@ -4,9 +4,19 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class AcceptFabricInvitationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secrettoken</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAccepted")
     public Boolean isAccepted;
 

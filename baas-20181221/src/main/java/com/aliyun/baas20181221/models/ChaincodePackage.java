@@ -4,67 +4,115 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ChaincodePackage extends TeaModel {
-    // 链码包ID
+    /**
+     * <strong>example:</strong>
+     * <p>cmcc-1.5:227c3cd472a8a2fcaa1c63f15812a1894348a985dc723006dd47d9f2848d10ed</p>
+     */
     @NameInMap("ChaincodePackageId")
     public String chaincodePackageId;
 
-    // 链码校验值
+    /**
+     * <strong>example:</strong>
+     * <p>15bab12c29edbc095c33545b9867aec9be469c74a6dd5783df6ee74a24334c77</p>
+     */
     @NameInMap("Checksum")
     public String checksum;
 
-    // 删除时间
+    /**
+     * <strong>example:</strong>
+     * <p>1533025590</p>
+     */
     @NameInMap("DeleteTime")
     public String deleteTime;
 
-    // 是否删除
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Deleted")
     public Boolean deleted;
 
-    // 安装时间
+    /**
+     * <strong>example:</strong>
+     * <p>1533025590</p>
+     */
     @NameInMap("InstallTime")
     public String installTime;
 
-    // 链码label
+    /**
+     * <strong>example:</strong>
+     * <p>label</p>
+     */
     @NameInMap("Label")
     public String label;
 
-    // 链码md5值
+    /**
+     * <strong>example:</strong>
+     * <p>N02eVKuRJDA2ODtieMUxVw==</p>
+     */
     @NameInMap("Md5sum")
     public String md5sum;
 
-    // 信息
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // 组织ID
+    /**
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa2-1eqnj5o5w9dt3</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 
-    // 链码包存放bucket内路径
+    /**
+     * <strong>example:</strong>
+     * <p>hi003/7efbe860-1a40-42c9-9e6b-0bc08d7ee3a4/cmcc.tar.gz</p>
+     */
     @NameInMap("OssURL")
     public String ossURL;
 
-    // 上传者Bid
+    /**
+     * <strong>example:</strong>
+     * <p>26842</p>
+     */
     @NameInMap("ProviderBid")
     public String providerBid;
 
-    // 上传者Uid
+    /**
+     * <strong>example:</strong>
+     * <p>1313158505072210</p>
+     */
     @NameInMap("ProviderUid")
     public String providerUid;
 
-    // 链码状态
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("State")
     public String state;
 
-    // 链码类型
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
-    // 链码类型
+    /**
+     * <strong>example:</strong>
+     * <p>golang</p>
+     */
     @NameInMap("TypeName")
     public String typeName;
 
-    // 上传时间
+    /**
+     * <strong>example:</strong>
+     * <p>1533025590</p>
+     */
     @NameInMap("UploadTime")
     public String uploadTime;
 

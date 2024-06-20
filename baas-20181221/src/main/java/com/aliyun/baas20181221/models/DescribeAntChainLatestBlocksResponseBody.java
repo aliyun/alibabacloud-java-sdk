@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainLatestBlocksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B52C552F-DDE6-4779-9BA2-9DD455275528</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

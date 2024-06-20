@@ -4,6 +4,12 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DeleteAntChainContractContentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GKX7KZX0</p>
+     */
     @NameInMap("ContentId")
     public String contentId;
 

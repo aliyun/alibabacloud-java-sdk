@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricCandidateOrganizationsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricCandidateOrganizationsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,15 +66,31 @@ public class DescribeFabricCandidateOrganizationsResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricCandidateOrganizationsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("ClusterState")
         public String clusterState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>peers-1oxw31d04****</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>org1</p>
+         */
         @NameInMap("OrganizationName")
         public String organizationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("ServiceState")
         public String serviceState;
 

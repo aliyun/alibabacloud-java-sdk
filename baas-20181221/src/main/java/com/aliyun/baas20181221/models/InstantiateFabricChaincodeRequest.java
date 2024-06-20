@@ -4,18 +4,42 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class InstantiateFabricChaincodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-198jejf8f8****</p>
+     */
     @NameInMap("ChaincodeId")
     public String chaincodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;requiredPeerCount&quot;:0,&quot;name&quot;:&quot;collectionName&quot;,&quot;maxPeerCount&quot;:3,&quot;blockToLive&quot;:0,&quot;policy&quot;:&quot;OR(\&quot;Org1MSP.peer\&quot;)&quot;}]</p>
+     */
     @NameInMap("CollectionConfig")
     public String collectionConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OR (&#39;perf9141MSP.member&#39;)</p>
+     */
     @NameInMap("EndorsePolicy")
     public String endorsePolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa2-1eqnj5o5w****</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 

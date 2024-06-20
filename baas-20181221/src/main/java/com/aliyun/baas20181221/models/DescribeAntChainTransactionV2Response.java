@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAntChainTransactionV2Response extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeAntChainTransactionV2ResponseBody body;
 
     public static DescribeAntChainTransactionV2Response build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class DescribeAntChainTransactionV2Response extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeAntChainTransactionV2Response setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DescribeAntChainTransactionV2Response setBody(DescribeAntChainTransactionV2ResponseBody body) {

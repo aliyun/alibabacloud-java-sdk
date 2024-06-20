@@ -4,15 +4,35 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ApproveFabricChaincodeDefinitionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code-sacc-jbkuldd3i7ad</p>
+     */
     @NameInMap("ChaincodeId")
     public String chaincodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sacc_v1.0:698d4e73c5f1d0239fbf0313ac79ddfaf44d5a803ecb02a4d1983cca4a706860</p>
+     */
     @NameInMap("ChaincodePackageId")
     public String chaincodePackageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa2-1eqnj5o5w9dt3</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 

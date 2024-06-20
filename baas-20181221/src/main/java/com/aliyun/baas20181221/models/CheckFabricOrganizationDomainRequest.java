@@ -4,9 +4,17 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CheckFabricOrganizationDomainRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>bank</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bank</p>
+     */
     @NameInMap("DomainCode")
     public String domainCode;
 

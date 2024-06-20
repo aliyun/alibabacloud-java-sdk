@@ -4,12 +4,24 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class AcceptFabricInvitationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>52CC8D5B-79A8-4769-BC7B-8940556ADA49</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

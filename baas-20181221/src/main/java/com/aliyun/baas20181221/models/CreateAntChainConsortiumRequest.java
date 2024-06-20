@@ -7,6 +7,9 @@ public class CreateAntChainConsortiumRequest extends TeaModel {
     @NameInMap("ConsortiumDescription")
     public String consortiumDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConsortiumName")
     public String consortiumName;
 

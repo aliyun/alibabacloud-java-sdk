@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainConsortiumsV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainConsortiumsV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,30 +126,62 @@ public class DescribeAntChainConsortiumsV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainConsortiumsV2ResponseBodyResultAntConsortiums extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ChainNum")
         public Long chainNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ConsortiumDescription")
         public String consortiumDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>M8GaMEyX</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
         @NameInMap("ConsortiumName")
         public String consortiumName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609745002000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsEmptyConsortium")
         public Boolean isEmptyConsortium;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MemberNum")
         public Long memberNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Member</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -205,12 +265,24 @@ public class DescribeAntChainConsortiumsV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainConsortiumsV2ResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
