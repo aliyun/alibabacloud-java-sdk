@@ -7,6 +7,10 @@ public class CreateMemberResponseBody extends TeaModel {
     @NameInMap("Members")
     public java.util.List<CreateMemberResponseBodyMembers> members;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA869D1B-035A-43B2-ACC1-C56681BD9FAA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,27 @@ public class CreateMemberResponseBody extends TeaModel {
     }
 
     public static class CreateMemberResponseBodyMembers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>myDisplayName</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>145883-21513926******88039</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21513926******88039</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

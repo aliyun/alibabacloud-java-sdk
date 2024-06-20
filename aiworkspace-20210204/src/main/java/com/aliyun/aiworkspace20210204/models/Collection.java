@@ -4,18 +4,38 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Collection extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AI4D</p>
+     */
     @NameInMap("CollectionName")
     public String collectionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155770209******</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155770209******</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

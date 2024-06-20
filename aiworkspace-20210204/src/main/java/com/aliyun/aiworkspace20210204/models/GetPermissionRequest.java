@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetPermissionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17915******4216</p>
+     */
     @NameInMap("Creator")
     public String creator;
 

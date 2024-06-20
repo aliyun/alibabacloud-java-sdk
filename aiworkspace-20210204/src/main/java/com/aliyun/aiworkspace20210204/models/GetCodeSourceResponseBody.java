@@ -4,48 +4,108 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetCodeSourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>master</p>
+     */
     @NameInMap("CodeBranch")
     public String codeBranch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>44da10***********</p>
+     */
     @NameInMap("CodeCommit")
     public String codeCommit;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
+     */
     @NameInMap("CodeRepo")
     public String codeRepo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("CodeRepoUserName")
     public String codeRepoUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>code-202**********</p>
+     */
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is my data source 1.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MyCodeSource1</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T23:36:01.123Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T23:36:01.123Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root/code</p>
+     */
     @NameInMap("MountPath")
     public String mountPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1722********</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

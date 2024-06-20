@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PAI_isolate</p>
+     */
     @NameInMap("ProductCodes")
     public String productCodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("ServiceCodes")
     public String serviceCodes;
 

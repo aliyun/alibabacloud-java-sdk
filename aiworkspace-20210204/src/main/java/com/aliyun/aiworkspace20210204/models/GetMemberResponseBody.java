@@ -4,24 +4,48 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetMemberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>myDisplayName</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>145883-21513926******88039</p>
+     */
     @NameInMap("MemberId")
     public String memberId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("MemberName")
     public String memberName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Roles")
     public java.util.List<String> roles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21513926******88039</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

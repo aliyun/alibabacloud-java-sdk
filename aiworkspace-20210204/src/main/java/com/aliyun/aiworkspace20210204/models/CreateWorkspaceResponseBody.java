@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1e195c5116124202371861018d5bde</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

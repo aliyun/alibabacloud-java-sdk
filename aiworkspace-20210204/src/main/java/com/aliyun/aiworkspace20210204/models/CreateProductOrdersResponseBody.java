@@ -4,15 +4,27 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateProductOrdersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3ed6a882-0d85-4dd8-ad36-cd8d74ab9fdb</p>
+     */
     @NameInMap("BuyProductRequestId")
     public String buyProductRequestId;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210292536260646</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ksdjf-jksd-*****slkdjf</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

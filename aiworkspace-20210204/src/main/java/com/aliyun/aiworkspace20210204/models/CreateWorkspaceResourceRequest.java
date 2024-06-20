@@ -4,9 +4,16 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateWorkspaceResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CreateAndAttach</p>
+     */
     @NameInMap("Option")
     public String option;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<CreateWorkspaceResourceRequestResources> resources;
 
@@ -62,6 +69,12 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
     }
 
     public static class CreateWorkspaceResourceRequestResourcesQuotas extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232892******92912</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -81,21 +94,45 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
     }
 
     public static class CreateWorkspaceResourceRequestResources extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>groupName</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         @NameInMap("Labels")
         public java.util.List<CreateWorkspaceResourceRequestResourcesLabels> labels;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
@@ -108,6 +145,12 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         @NameInMap("Spec")
         public java.util.Map<String, ?> spec;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

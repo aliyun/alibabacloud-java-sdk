@@ -7,9 +7,17 @@ public class ListImagesResponseBody extends TeaModel {
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,9 +51,17 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImagesLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>system.chipType</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GPU</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -73,18 +89,38 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
         @NameInMap("Accessibility")
         public String accessibility;
 
+        /**
+         * <strong>example:</strong>
+         * <p>desc</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image-tzi7f9******s45t</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
@@ -94,18 +130,34 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Labels")
         public java.util.List<ListImagesResponseBodyImagesLabels> labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tensorflow_2.9</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15577******82932</p>
+         */
         @NameInMap("ParentUserId")
         public String parentUserId;
 
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15577******82932</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20******55</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

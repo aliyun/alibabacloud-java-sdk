@@ -4,39 +4,85 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetServiceTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot;
+     * }</p>
+     */
     @NameInMap("InferenceSpec")
     public java.util.Map<String, ?> inferenceSpec;
 
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890******</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>stable diffusion 1.5</p>
+     */
     @NameInMap("ServiceTemplateDescription")
     public String serviceTemplateDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://***.md</p>
+     */
     @NameInMap("ServiceTemplateDoc")
     public String serviceTemplateDoc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>st-rbvg5wzlj****9ks92</p>
+     */
     @NameInMap("ServiceTemplateId")
     public String serviceTemplateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>stable_diffusion_aigc</p>
+     */
     @NameInMap("ServiceTemplateName")
     public String serviceTemplateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890******</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,6 +4,10 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>quota-name</p>
+     */
     @NameInMap("Name")
     public String name;
 

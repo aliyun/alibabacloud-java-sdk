@@ -4,21 +4,45 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListCodeSourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MyDataSource</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtModifyTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

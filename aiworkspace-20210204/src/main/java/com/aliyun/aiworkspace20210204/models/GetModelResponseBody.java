@@ -4,18 +4,34 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetModelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cv</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
@@ -28,39 +44,83 @@ public class GetModelResponseBody extends TeaModel {
     @NameInMap("ModelDescription")
     public String modelDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://***.md</p>
+     */
     @NameInMap("ModelDoc")
     public String modelDoc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>model-rbvg5wzljz****ks92</p>
+     */
     @NameInMap("ModelId")
     public String modelId;
 
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Checkpoint</p>
+     */
     @NameInMap("ModelType")
     public String modelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ModelScope</p>
+     */
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890******</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text-classification</p>
+     */
     @NameInMap("Task")
     public String task;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890******</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234**</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

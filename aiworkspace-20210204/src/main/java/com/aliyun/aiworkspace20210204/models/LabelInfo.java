@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class LabelInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>key</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>value</p>
+     */
     @NameInMap("Value")
     public String value;
 

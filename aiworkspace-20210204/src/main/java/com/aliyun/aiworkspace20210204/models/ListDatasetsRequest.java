@@ -4,39 +4,83 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("DataSourceTypes")
     public String dataSourceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>COMMON,TEXT</p>
+     */
     @NameInMap("DataTypes")
     public String dataTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myName</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FILE</p>
+     */
     @NameInMap("Properties")
     public String properties;
 
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d-rbvg5wzljzjhc9ks92</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER,ITAG</p>
+     */
     @NameInMap("SourceTypes")
     public String sourceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>324**</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

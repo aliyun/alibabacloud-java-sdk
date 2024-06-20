@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspaceUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1e195c5116124202371861018d5bde</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,9 +51,17 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
     }
 
     public static class ListWorkspaceUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1611******3000</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>she******mo</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

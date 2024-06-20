@@ -4,39 +4,83 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ServiceTemplate extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</p>
+     */
     @NameInMap("InferenceSpec")
     public java.util.Map<String, ?> inferenceSpec;
 
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155770209****904</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>这里是一个描述。</p>
+     */
     @NameInMap("ServiceTemplateDescription")
     public String serviceTemplateDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://***.md</p>
+     */
     @NameInMap("ServiceTemplateDoc")
     public String serviceTemplateDoc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>st-asdkjf**skdhh</p>
+     */
     @NameInMap("ServiceTemplateId")
     public String serviceTemplateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>foo</p>
+     */
     @NameInMap("ServiceTemplateName")
     public String serviceTemplateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155770209****904</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

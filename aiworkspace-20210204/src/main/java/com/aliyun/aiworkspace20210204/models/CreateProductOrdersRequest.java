@@ -4,6 +4,10 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateProductOrdersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -32,12 +36,20 @@ public class CreateProductOrdersRequest extends TeaModel {
     }
 
     public static class CreateProductOrdersRequestProductsInstanceProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>commodity_type。</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss。</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -73,24 +85,48 @@ public class CreateProductOrdersRequest extends TeaModel {
     }
 
     public static class CreateProductOrdersRequestProducts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
         @NameInMap("InstanceProperties")
         public java.util.List<CreateProductOrdersRequestProductsInstanceProperties> instanceProperties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BUY</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DataWorks_share</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 

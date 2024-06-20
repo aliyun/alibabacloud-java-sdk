@@ -4,12 +4,24 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateModelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nlp</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
@@ -19,24 +31,51 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("ModelDescription")
     public String modelDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://*.md</p>
+     */
     @NameInMap("ModelDoc")
     public String modelDoc;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Checkpoint</p>
+     */
     @NameInMap("ModelType")
     public String modelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ModelScope</p>
+     */
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text-classification</p>
+     */
     @NameInMap("Task")
     public String task;
 
+    /**
+     * <strong>example:</strong>
+     * <p>796**</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

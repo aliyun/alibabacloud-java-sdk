@@ -4,18 +4,34 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class TrialLabel extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2023-12-27T03:30:04Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-12-27T03:30:04Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key</p>
+     */
     @NameInMap("Key")
     public String key;
 
     @NameInMap("TrialId")
     public String trialId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>value</p>
+     */
     @NameInMap("Value")
     public String value;
 

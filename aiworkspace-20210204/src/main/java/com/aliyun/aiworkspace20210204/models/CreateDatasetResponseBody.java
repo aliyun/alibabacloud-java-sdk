@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>d-rbvg5*****jhc9ks92</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B2C51F93-1C07-5477-9705-5FDB****F19F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

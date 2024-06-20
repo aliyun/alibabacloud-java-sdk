@@ -7,9 +7,17 @@ public class ListQuotasResponseBody extends TeaModel {
     @NameInMap("Quotas")
     public java.util.List<ListQuotasResponseBodyQuotas> quotas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,12 +51,24 @@ public class ListQuotasResponseBody extends TeaModel {
     }
 
     public static class ListQuotasResponseBodyQuotasSpecs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cu</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>string</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11500</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -87,21 +107,45 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1828233</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>isolate</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>quota-name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxCompute_share</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
+         */
         @NameInMap("QuotaType")
         public String quotaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;cu\&quot;:\&quot;11500\&quot;,\&quot;minCu\&quot;:\&quot;2300\&quot;,\&quot;parentId\&quot;:\&quot;0\&quot;}</p>
+         */
         @NameInMap("Specs")
         public java.util.List<ListQuotasResponseBodyQuotasSpecs> specs;
 

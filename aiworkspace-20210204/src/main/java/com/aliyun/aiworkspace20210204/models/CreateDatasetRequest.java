@@ -4,12 +4,26 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NAS</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>COMMON</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
@@ -19,30 +33,77 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myName</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+     * }</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DIRECTORY</p>
+     */
     @NameInMap("Property")
     public String property;
 
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ProviderType")
     public String providerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jdnhf***fnrimv</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nas://09f****f2.cn-hangzhou/</p>
+     */
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>29884000000186970</p>
+     */
+    @NameInMap("UserId")
+    public String userId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>478**</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -153,6 +214,14 @@ public class CreateDatasetRequest extends TeaModel {
     }
     public String getUri() {
         return this.uri;
+    }
+
+    public CreateDatasetRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public CreateDatasetRequest setWorkspaceId(String workspaceId) {

@@ -7,9 +7,17 @@ public class ListModelsResponseBody extends TeaModel {
     @NameInMap("Models")
     public java.util.List<Model> models;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

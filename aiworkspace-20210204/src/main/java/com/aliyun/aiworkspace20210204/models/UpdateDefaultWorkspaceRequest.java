@@ -4,6 +4,10 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateDefaultWorkspaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

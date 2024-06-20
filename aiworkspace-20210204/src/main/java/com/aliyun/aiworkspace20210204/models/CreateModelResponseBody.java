@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateModelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>model-rbvg5wzljz****ks92</p>
+     */
     @NameInMap("ModelId")
     public String modelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9DAD3112-AE22-5563-9A02-5C7E8****E35</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

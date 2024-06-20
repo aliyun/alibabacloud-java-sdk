@@ -4,36 +4,80 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Id</p>
+     */
     @NameInMap("Fields")
     public String fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PAI</p>
+     */
     @NameInMap("ModuleList")
     public String moduleList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GetWorkspaces</p>
+     */
     @NameInMap("Option")
     public String option;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ENABLED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Verbose")
     public Boolean verbose;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123,234</p>
+     */
     @NameInMap("WorkspaceIds")
     public String workspaceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

@@ -4,15 +4,31 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListMembersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
+     */
     @NameInMap("MemberName")
     public String memberName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PAI.AlgoDeveloper</p>
+     */
     @NameInMap("Roles")
     public String roles;
 

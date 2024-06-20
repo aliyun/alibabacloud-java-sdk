@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class PublishImageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>image-dk******fa</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A0F049F0-8D69-5BAC-8F10-B******A34C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

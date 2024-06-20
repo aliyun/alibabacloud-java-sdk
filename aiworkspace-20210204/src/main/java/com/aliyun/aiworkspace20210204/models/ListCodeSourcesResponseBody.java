@@ -7,9 +7,17 @@ public class ListCodeSourcesResponseBody extends TeaModel {
     @NameInMap("CodeSources")
     public java.util.List<CodeSourceItem> codeSources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

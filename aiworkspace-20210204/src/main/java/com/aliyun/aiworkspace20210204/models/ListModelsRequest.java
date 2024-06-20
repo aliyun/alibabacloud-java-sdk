@@ -4,45 +4,97 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListModelsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AI4D,QuickStart</p>
+     */
     @NameInMap("Collections")
     public String collections;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nlp</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1</p>
+     */
     @NameInMap("Label")
     public String label;
 
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Endpoint</p>
+     */
     @NameInMap("ModelType")
     public String modelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ModelScope</p>
+     */
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nlp</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text-classification</p>
+     */
     @NameInMap("Task")
     public String task;
 
+    /**
+     * <strong>example:</strong>
+     * <p>324**</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

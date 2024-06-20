@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nlp</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
@@ -16,21 +24,41 @@ public class UpdateModelRequest extends TeaModel {
     @NameInMap("ModelDescription")
     public String modelDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://*.md</p>
+     */
     @NameInMap("ModelDoc")
     public String modelDoc;
 
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Checkpoint</p>
+     */
     @NameInMap("ModelType")
     public String modelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ModelScope</p>
+     */
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text-classification</p>
+     */
     @NameInMap("Task")
     public String task;
 

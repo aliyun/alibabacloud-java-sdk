@@ -4,30 +4,66 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelVersionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Approved</p>
+     */
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("EvaluationSpec")
     public java.util.Map<String, ?> evaluationSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</p>
+     */
     @NameInMap("InferenceSpec")
     public java.util.Map<String, ?> inferenceSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Metrics")
     public java.util.Map<String, ?> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PAIFlow</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("TrainingSpec")
     public java.util.Map<String, ?> trainingSpec;
 
