@@ -657,6 +657,288 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建数字水印暗水印透明底图</p>
+     * 
+     * @param request CreateWmBaseImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWmBaseImageResponse
+     */
+    public CreateWmBaseImageResponse createWmBaseImageWithOptions(CreateWmBaseImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
+            body.put("Height", request.height);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opacity)) {
+            body.put("Opacity", request.opacity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scale)) {
+            body.put("Scale", request.scale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.width)) {
+            body.put("Width", request.width);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoBytesB64)) {
+            body.put("WmInfoBytesB64", request.wmInfoBytesB64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoSize)) {
+            body.put("WmInfoSize", request.wmInfoSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoUint)) {
+            body.put("WmInfoUint", request.wmInfoUint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmType)) {
+            body.put("WmType", request.wmType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWmBaseImage"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWmBaseImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建数字水印暗水印透明底图</p>
+     * 
+     * @param request CreateWmBaseImageRequest
+     * @return CreateWmBaseImageResponse
+     */
+    public CreateWmBaseImageResponse createWmBaseImage(CreateWmBaseImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWmBaseImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建嵌入水印任务</p>
+     * 
+     * @param tmpReq CreateWmEmbedTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWmEmbedTaskResponse
+     */
+    public CreateWmEmbedTaskResponse createWmEmbedTaskWithOptions(CreateWmEmbedTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateWmEmbedTaskShrinkRequest request = new CreateWmEmbedTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.documentControl)) {
+            request.documentControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documentControl, "DocumentControl", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentControlShrink)) {
+            body.put("DocumentControl", request.documentControlShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filename)) {
+            body.put("Filename", request.filename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageEmbedJpegQuality)) {
+            body.put("ImageEmbedJpegQuality", request.imageEmbedJpegQuality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageEmbedLevel)) {
+            body.put("ImageEmbedLevel", request.imageEmbedLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoBitrate)) {
+            body.put("VideoBitrate", request.videoBitrate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoIsLong)) {
+            body.put("VideoIsLong", request.videoIsLong);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoBytesB64)) {
+            body.put("WmInfoBytesB64", request.wmInfoBytesB64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoSize)) {
+            body.put("WmInfoSize", request.wmInfoSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoUint)) {
+            body.put("WmInfoUint", request.wmInfoUint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmType)) {
+            body.put("WmType", request.wmType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWmEmbedTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWmEmbedTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建嵌入水印任务</p>
+     * 
+     * @param request CreateWmEmbedTaskRequest
+     * @return CreateWmEmbedTaskResponse
+     */
+    public CreateWmEmbedTaskResponse createWmEmbedTask(CreateWmEmbedTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWmEmbedTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建文件水印提取任务</p>
+     * 
+     * @param request CreateWmExtractTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWmExtractTaskResponse
+     */
+    public CreateWmExtractTaskResponse createWmExtractTaskWithOptions(CreateWmExtractTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentIsCapture)) {
+            body.put("DocumentIsCapture", request.documentIsCapture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filename)) {
+            body.put("Filename", request.filename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoIsLong)) {
+            body.put("VideoIsLong", request.videoIsLong);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoSpeed)) {
+            body.put("VideoSpeed", request.videoSpeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoSize)) {
+            body.put("WmInfoSize", request.wmInfoSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmType)) {
+            body.put("WmType", request.wmType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWmExtractTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWmExtractTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建文件水印提取任务</p>
+     * 
+     * @param request CreateWmExtractTaskRequest
+     * @return CreateWmExtractTaskResponse
+     */
+    public CreateWmExtractTaskResponse createWmExtractTask(CreateWmExtractTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWmExtractTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一条字符串水印信息到数字水印信息的映射记录</p>
+     * 
+     * @param request CreateWmInfoMappingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWmInfoMappingResponse
+     */
+    public CreateWmInfoMappingResponse createWmInfoMappingWithOptions(CreateWmInfoMappingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoBytesB64)) {
+            body.put("WmInfoBytesB64", request.wmInfoBytesB64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmInfoSize)) {
+            body.put("WmInfoSize", request.wmInfoSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wmType)) {
+            body.put("WmType", request.wmType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWmInfoMapping"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWmInfoMappingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一条字符串水印信息到数字水印信息的映射记录</p>
+     * 
+     * @param request CreateWmInfoMappingRequest
+     * @return CreateWmInfoMappingResponse
+     */
+    public CreateWmInfoMappingResponse createWmInfoMapping(CreateWmInfoMappingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWmInfoMappingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除自定义身份源指定用户</p>
      * 
      * @param request DeleteClientUserRequest
@@ -1576,6 +1858,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserGroupResponse getUserGroup(GetUserGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询嵌入水印任务</p>
+     * 
+     * @param request GetWmEmbedTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWmEmbedTaskResponse
+     */
+    public GetWmEmbedTaskResponse getWmEmbedTaskWithOptions(GetWmEmbedTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWmEmbedTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWmEmbedTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询嵌入水印任务</p>
+     * 
+     * @param request GetWmEmbedTaskRequest
+     * @return GetWmEmbedTaskResponse
+     */
+    public GetWmEmbedTaskResponse getWmEmbedTask(GetWmEmbedTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWmEmbedTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询文件水印提取任务详情</p>
+     * 
+     * @param request GetWmExtractTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWmExtractTaskResponse
+     */
+    public GetWmExtractTaskResponse getWmExtractTaskWithOptions(GetWmExtractTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWmExtractTask"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWmExtractTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询文件水印提取任务详情</p>
+     * 
+     * @param request GetWmExtractTaskRequest
+     * @return GetWmExtractTaskResponse
+     */
+    public GetWmExtractTaskResponse getWmExtractTask(GetWmExtractTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWmExtractTaskWithOptions(request, runtime);
     }
 
     /**
@@ -2690,6 +3052,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUsersResponse listUsers(ListUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUsersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据数字水印信息查询字符串水印信息</p>
+     * 
+     * @param request LookupWmInfoMappingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LookupWmInfoMappingResponse
+     */
+    public LookupWmInfoMappingResponse lookupWmInfoMappingWithOptions(LookupWmInfoMappingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LookupWmInfoMapping"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LookupWmInfoMappingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据数字水印信息查询字符串水印信息</p>
+     * 
+     * @param request LookupWmInfoMappingRequest
+     * @return LookupWmInfoMappingResponse
+     */
+    public LookupWmInfoMappingResponse lookupWmInfoMapping(LookupWmInfoMappingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.lookupWmInfoMappingWithOptions(request, runtime);
     }
 
     /**
