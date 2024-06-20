@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetTurnCredentialsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetTurnCredentialsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,9 +88,17 @@ public class GetTurnCredentialsResponseBody extends TeaModel {
     }
 
     public static class GetTurnCredentialsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>M0NQNG/uRUrfIxW7er/S9gKX****</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1602585817:****</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

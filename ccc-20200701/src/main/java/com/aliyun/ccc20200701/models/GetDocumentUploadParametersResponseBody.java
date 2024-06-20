@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetDocumentUploadParametersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetDocumentUploadParametersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9FBA26B0-462B-4D77-B78F-AF35560DBC71</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,24 +88,47 @@ public class GetDocumentUploadParametersResponseBody extends TeaModel {
     }
 
     public static class GetDocumentUploadParametersResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1647313420</p>
+         */
         @NameInMap("ExpireTime")
         public Integer expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test/blacklist.xlsx</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
          * <p>oss host</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
          */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Permit</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zi31STIMtIfa/UN2l+6lww****</p>
+         */
         @NameInMap("Signature")
         public String signature;
 

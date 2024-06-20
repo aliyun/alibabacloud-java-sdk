@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListDoNotCallNumbersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListDoNotCallNumbersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BA03159C-E808-4FF1-B27E-A61B6E888D7F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,21 +88,37 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
     }
 
     public static class ListDoNotCallNumbersResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1626962425000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1900000****</p>
+         */
         @NameInMap("Number")
         public String number;
 
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
@@ -153,12 +181,24 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListDoNotCallNumbersResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

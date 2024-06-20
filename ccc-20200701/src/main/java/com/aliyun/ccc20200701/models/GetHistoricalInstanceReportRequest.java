@@ -4,11 +4,18 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetHistoricalInstanceReportRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1532707199000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,6 +23,10 @@ public class GetHistoricalInstanceReportRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532448000000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

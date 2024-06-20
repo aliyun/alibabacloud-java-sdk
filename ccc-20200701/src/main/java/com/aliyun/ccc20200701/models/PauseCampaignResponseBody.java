@@ -4,15 +4,27 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class PauseCampaignResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4A68E287-6888-5ADB-8048-DB488B4DEF35</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

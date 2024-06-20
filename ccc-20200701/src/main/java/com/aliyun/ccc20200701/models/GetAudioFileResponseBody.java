@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetAudioFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAudioFileResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEE26562-D921-5CB2-AE49-E4C45A42D432</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,24 +77,48 @@ public class GetAudioFileResponseBody extends TeaModel {
     }
 
     public static class GetAudioFileResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-file.wav</p>
+         */
         @NameInMap("AudioFileName")
         public String audioFileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c1a06b46-302a-4c6e-928b-a43c0df485cf</p>
+         */
         @NameInMap("AudioResourceId")
         public String audioResourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test/test-file.wav</p>
+         */
         @NameInMap("OssFileKey")
         public String ossFileKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

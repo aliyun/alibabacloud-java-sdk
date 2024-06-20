@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListLegacyAppraiseLogsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListLegacyAppraiseLogsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A13BB835-94AA-4E55-8D9E-5EA585CE6555&quot;</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +92,38 @@ public class ListLegacyAppraiseLogsResponseBody extends TeaModel {
     }
 
     public static class ListLegacyAppraiseLogsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3786929579</p>
+         */
         @NameInMap("Acid")
         public String acid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Outbound</p>
+         */
         @NameInMap("ContactType")
         public String contactType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10505</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("KeyMarkRelation")
         public String keyMarkRelation;
 
@@ -97,18 +133,38 @@ public class ListLegacyAppraiseLogsResponseBody extends TeaModel {
         @NameInMap("ParentNote")
         public String parentNote;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PressKey")
         public String pressKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>28036411123456****</p>
+         */
         @NameInMap("RamId")
         public String ramId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-03T10:15:30</p>
+         */
         @NameInMap("StatisticDate")
         public String statisticDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Launch</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -219,12 +275,24 @@ public class ListLegacyAppraiseLogsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListLegacyAppraiseLogsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListMultiChannelRecordingsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-25920271311543****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

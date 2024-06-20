@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListRealtimeSkillGroupStatesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -98,39 +110,83 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("BreakCodeDetailList")
         public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList> breakCodeDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LongestWaitingTime")
         public Long longestWaitingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OutboundScenarioReadyAgents")
         public Long outboundScenarioReadyAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup</p>
+         */
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
         @NameInMap("TotalAgents")
         public Long totalAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WaitingCalls")
         public Long waitingCalls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WorkingAgents")
         public Long workingAgents;
 
@@ -249,12 +305,24 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

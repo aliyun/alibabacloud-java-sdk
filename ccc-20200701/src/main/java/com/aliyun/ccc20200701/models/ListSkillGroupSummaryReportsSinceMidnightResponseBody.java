@@ -4,9 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -16,9 +24,17 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     @NameInMap("PagedSkillGroupSummaryReport")
     public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReport pagedSkillGroupSummaryReport;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2B36CEBC-6D11-5451-9E6B-C6D1927841C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,39 +92,83 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     }
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AbandonedInQueueOfQueueCount")
         public Long abandonedInQueueOfQueueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AnsweredByAgentOfQueueCount")
         public Long answeredByAgentOfQueueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AnsweredByAgentOfQueueMaxWaitTimeDuration")
         public Long answeredByAgentOfQueueMaxWaitTimeDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AnsweredByAgentOfQueueWaitTimeDuration")
         public Long answeredByAgentOfQueueWaitTimeDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageRingTime")
         public Long averageRingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageTalkTime")
         public Long averageTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
         @NameInMap("CallsAbandoned")
         public Long callsAbandoned;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsAttendedTransferOut")
         public Long callsAttendedTransferOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsBlindTransferOut")
         public Long callsBlindTransferOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsHandled")
         public Long callsHandled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsOffered")
         public Long callsOffered;
 
@@ -127,63 +187,139 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("CallsQueuingTimeout")
         public Long callsQueuingTimeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsServiceLevel10")
         public Long callsServiceLevel10;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsServiceLevel20")
         public Long callsServiceLevel20;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsServiceLevel30")
         public Long callsServiceLevel30;
 
         @NameInMap("CallsTimeout")
         public Long callsTimeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("GiveUpByAgentOfQueueCount")
         public Long giveUpByAgentOfQueueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HandleRate")
         public Float handleRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InComingQueueOfQueueCount")
         public Long inComingQueueOfQueueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxRingTime")
         public Long maxRingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxTalkTime")
         public String maxTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxWorkTime")
         public Long maxWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OverFlowInQueueOfQueueCount")
         public Long overFlowInQueueOfQueueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("QueueMaxWaitTimeDuration")
         public Long queueMaxWaitTimeDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("QueueWaitTimeDuration")
         public Long queueWaitTimeDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionIndex")
         public Float satisfactionIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysOffered")
         public Long satisfactionSurveysOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ServiceLevel20")
         public Float serviceLevel20;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalRingTime")
         public Long totalRingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalWorkTime")
         public Long totalWorkTime;
 
@@ -491,15 +627,31 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     }
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOutbound extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AnswerRate")
         public Float answerRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageDialingTime")
         public Long averageDialingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageTalkTime")
         public Long averageTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
@@ -509,9 +661,17 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("CallsAgentHandled")
         public Long callsAgentHandled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsDialed")
         public Long callsDialed;
 
@@ -536,39 +696,79 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("CallsQueuingTimeout")
         public Long callsQueuingTimeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsServiceLevel30")
         public String callsServiceLevel30;
 
         @NameInMap("CallsServiceLevel30V2")
         public Long callsServiceLevel30V2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxDialingTime")
         public Long maxDialingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxTalkTime")
         public Long maxTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxWorkTime")
         public Long maxWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionIndex")
         public Float satisfactionIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysOffered")
         public Long satisfactionSurveysOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalDialingTime")
         public Long totalDialingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
 
         @NameInMap("TotalWaitTime")
         public Long totalWaitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalWorkTime")
         public Long totalWorkTime;
 
@@ -796,51 +996,115 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
     }
 
     public static class ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOverall extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageReadyTime")
         public Long averageReadyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageTalkTime")
         public Long averageTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxReadyTime")
         public Long maxReadyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxTalkTime")
         public Long maxTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxWorkTime")
         public Long maxWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OccupancyRate")
         public Float occupancyRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionIndex")
         public Float satisfactionIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysOffered")
         public Long satisfactionSurveysOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalBreakTime")
         public Long totalBreakTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCalls")
         public Long totalCalls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalLoggedInTime")
         public Long totalLoggedInTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalReadyTime")
         public Long totalReadyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalWorkTime")
         public Long totalWorkTime;
 
@@ -983,6 +1247,10 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("Inbound")
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListInbound inbound;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -992,12 +1260,20 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("Overall")
         public ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportListOverall overall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-13 00:00:00</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -1068,12 +1344,24 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @NameInMap("List")
         public java.util.List<ListSkillGroupSummaryReportsSinceMidnightResponseBodyPagedSkillGroupSummaryReportList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

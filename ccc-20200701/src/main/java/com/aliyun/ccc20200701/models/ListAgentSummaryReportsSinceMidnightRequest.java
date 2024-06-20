@@ -4,21 +4,40 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAgentSummaryReportsSinceMidnightRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</p>
+     */
     @NameInMap("AgentIds")
     public String agentIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 

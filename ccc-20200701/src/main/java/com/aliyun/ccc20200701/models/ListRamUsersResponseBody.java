@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListRamUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListRamUsersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class ListRamUsersResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24753D71-C91D-1A38-A8AD-372BF12453F6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,24 +88,48 @@ public class ListRamUsersResponseBody extends TeaModel {
     }
 
     public static class ListRamUsersResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>15772400000****</p>
+         */
         @NameInMap("AliyunUid")
         public Long aliyunUid;
 
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1382114****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Primary")
         public Boolean primary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>28036411123456****</p>
+         */
         @NameInMap("RamId")
         public String ramId;
 
@@ -164,12 +200,24 @@ public class ListRamUsersResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListRamUsersResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,21 +4,40 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class UnmuteCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-6538214103685****</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-6538214103685****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

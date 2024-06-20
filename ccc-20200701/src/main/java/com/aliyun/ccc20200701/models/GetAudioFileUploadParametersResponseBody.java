@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetAudioFileUploadParametersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAudioFileUploadParametersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C81FD1A5-4B99-470A-A527-D80150228784</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,21 +77,45 @@ public class GetAudioFileUploadParametersResponseBody extends TeaModel {
     }
 
     public static class GetAudioFileUploadParametersResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1647313420</p>
+         */
         @NameInMap("ExpireTime")
         public Integer expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test/test-file.wav</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyMi0wNi0yOVQwMDoyOTowMC42NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiYXVkaW8vMTU3NzI0NzExNTQ5MDQwMS9seS1vbmxpbmUvMjAyMjA2MjkwNzI5MDAvIl1d****</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HIyClras8IcVlbTV7RIJWJbU****</p>
+         */
         @NameInMap("Signature")
         public String signature;
 

@@ -4,29 +4,45 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class StartBack2BackCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0102156****</p>
+     */
     @NameInMap("AdditionalBroker")
     public String additionalBroker;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0102157****</p>
      */
     @NameInMap("Broker")
     public String broker;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1372168****</p>
      */
     @NameInMap("Callee")
     public String callee;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1391814****</p>
      */
     @NameInMap("Caller")
     public String caller;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,6 +50,10 @@ public class StartBack2BackCallRequest extends TeaModel {
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 

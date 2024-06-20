@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCampaignTrendingReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListCampaignTrendingReportResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6CCEF32F-8614-535F-A1D9-D85B8C0DC4F0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,18 +77,34 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
     }
 
     public static class ListCampaignTrendingReportResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BreakAgents")
         public Long breakAgents;
 
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Concurrency")
         public Long concurrency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634037840000</p>
+         */
         @NameInMap("Datetime")
         public Long datetime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
@@ -92,18 +120,30 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         @NameInMap("OutboundScenarioWorkingAgents")
         public Long outboundScenarioWorkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
         @NameInMap("StatsTime")
         public Long statsTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TalkAgents")
         public Long talkAgents;
 
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WorkAgents")
         public Long workAgents;
 

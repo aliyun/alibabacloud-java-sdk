@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetUploadAudioDataParamsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-38860977107324****</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

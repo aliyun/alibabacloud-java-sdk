@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SendDtmfSignalingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public SendDtmfSignalingResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>842399EC-7D32-4472-AD08-9504C3F141FF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,27 +88,59 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
     }
 
     public static class SendDtmfSignalingResponseBodyDataCallContextChannelContexts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MONITORING</p>
+         */
         @NameInMap("ChannelFlags")
         public String channelFlags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ch:user:131888****-&gt;8001****:1609234221870:job-6573574060089****</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ANSWERED</p>
+         */
         @NameInMap("ChannelState")
         public String channelState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6573574060089****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0101234****</p>
+         */
         @NameInMap("Originator")
         public String originator;
 
@@ -106,15 +150,31 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609234222367</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("UserExtension")
         public String userExtension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -238,15 +298,27 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
     }
 
     public static class SendDtmfSignalingResponseBodyDataCallContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
         @NameInMap("ChannelContexts")
         public java.util.List<SendDtmfSignalingResponseBodyDataCallContextChannelContexts> channelContexts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6573574060089****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
@@ -290,42 +362,90 @@ public class SendDtmfSignalingResponseBody extends TeaModel {
     }
 
     public static class SendDtmfSignalingResponseBodyDataUserContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Warm-up</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609234222375</p>
+         */
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6573574060089****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1390000****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609234221864</p>
+         */
         @NameInMap("Reserved")
         public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TALKING</p>
+         */
         @NameInMap("UserState")
         public String userState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 

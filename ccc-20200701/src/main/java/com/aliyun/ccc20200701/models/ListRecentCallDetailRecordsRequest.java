@@ -4,30 +4,51 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListRecentCallDetailRecordsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;phoneNumber&quot;:&quot;1312121****&quot;,&quot;callingNumber&quot;:&quot;1312121****&quot;,&quot;calledNumber&quot;:&quot;1312121****&quot;}</p>
+     */
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1604639129000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1604638129000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

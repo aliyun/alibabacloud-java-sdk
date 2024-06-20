@@ -4,24 +4,42 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class MonitorCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent2@ccc-test</p>
      */
     @NameInMap("MonitoredUserId")
     public String monitoredUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

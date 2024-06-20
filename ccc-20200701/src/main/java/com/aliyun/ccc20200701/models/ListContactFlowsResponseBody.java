@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListContactFlowsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListContactFlowsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,24 +77,48 @@ public class ListContactFlowsResponseBody extends TeaModel {
     }
 
     public static class ListContactFlowsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>78128960-bb00-4ddc-8e82-923a8c5bd22d</p>
+         */
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-05 17:35:45.0</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         @NameInMap("Definition")
         public String definition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db07c0bb-6b1f-47d2-b37e-2451c617562d</p>
+         */
         @NameInMap("DraftId")
         public String draftId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("Editor")
         public String editor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -92,12 +128,24 @@ public class ListContactFlowsResponseBody extends TeaModel {
         @NameInMap("NumberList")
         public java.util.List<String> numberList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Published")
         public Boolean published;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MAIN_FLOW</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-08 15:34:49.0</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
@@ -208,12 +256,24 @@ public class ListContactFlowsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListContactFlowsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

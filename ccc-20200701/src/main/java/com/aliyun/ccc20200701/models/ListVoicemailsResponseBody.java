@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListVoicemailsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListVoicemailsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,30 +77,58 @@ public class ListVoicemailsResponseBody extends TeaModel {
     }
 
     public static class ListVoicemailsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0533128****</p>
+         */
         @NameInMap("Callee")
         public String callee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>073xxxx7539</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
         @NameInMap("CdrStartTime")
         public Long cdrStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-125152394144124921</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>voicemail-test</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("RecordingDuration")
         public Long recordingDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631440860000</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -175,12 +215,24 @@ public class ListVoicemailsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListVoicemailsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

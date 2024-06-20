@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListBlacklistCallTaggingsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;number&quot;:&quot;1521083xxxx&quot;,&quot;jobId&quot;:&quot;job-481841171213393920&quot;}]</p>
      */
     @NameInMap("NumberList")
     public String numberList;

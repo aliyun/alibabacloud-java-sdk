@@ -9,15 +9,25 @@ public class AddNumbersToSkillGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;0103182****&quot;,&quot;0102387****&quot;]</p>
+     */
     @NameInMap("NumberList")
     public String numberList;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
      */
     @NameInMap("SkillGroupId")
     public String skillGroupId;

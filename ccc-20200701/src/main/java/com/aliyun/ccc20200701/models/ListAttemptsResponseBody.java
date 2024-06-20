@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAttemptsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListAttemptsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7CC6523B-0E51-1B62-8DA5-6A9831CAE315</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,63 +77,143 @@ public class ListAttemptsResponseBody extends TeaModel {
     }
 
     public static class ListAttemptsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1632883592732</p>
+         */
         @NameInMap("AgentEstablishedTime")
         public Long agentEstablishedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("AgentRingDuration")
         public Long agentRingDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634196287869</p>
+         */
         @NameInMap("AssignAgentTime")
         public Long assignAgentTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-1704342174816****</p>
+         */
         @NameInMap("AttemptId")
         public String attemptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1888888****</p>
+         */
         @NameInMap("Callee")
         public String callee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>05711234****</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
+        /**
+         * <strong>example:</strong>
+         * <p>083046e3-5822-4cda-9b84-04f2a02eb605</p>
+         */
         @NameInMap("CampaignId")
         public String campaignId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21d194a7-60b7-4824-932b-48ed03a83704</p>
+         */
         @NameInMap("CaseId")
         public String caseId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-1704342174816****</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634196286708</p>
+         */
         @NameInMap("CustomerEstablishedTime")
         public Long customerEstablishedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634196317888</p>
+         */
         @NameInMap("CustomerReleasedTime")
         public Long customerReleasedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2734</p>
+         */
         @NameInMap("DialDuration")
         public Long dialDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634196283974</p>
+         */
         @NameInMap("DialTime")
         public Long dialTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634196287789</p>
+         */
         @NameInMap("EnqueueTime")
         public Long enqueueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1634196286740</p>
+         */
         @NameInMap("EnterIvrTime")
         public Long enterIvrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1049</p>
+         */
         @NameInMap("IvrDuration")
         public Long ivrDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("QueueDuration")
         public Long queueDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("QueueId")
         public String queueId;
 
@@ -296,12 +388,24 @@ public class ListAttemptsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListAttemptsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

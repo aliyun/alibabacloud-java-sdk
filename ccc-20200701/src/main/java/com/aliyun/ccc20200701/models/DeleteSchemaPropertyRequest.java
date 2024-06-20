@@ -6,23 +6,35 @@ import com.aliyun.tea.*;
 public class DeleteSchemaPropertyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9cfad875-6260-4a53-ab6e-b13e3fb31f7d</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("PropertyName")
     public String propertyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>schema id</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>profile</p>
      */
     @NameInMap("SchemaId")
     public String schemaId;

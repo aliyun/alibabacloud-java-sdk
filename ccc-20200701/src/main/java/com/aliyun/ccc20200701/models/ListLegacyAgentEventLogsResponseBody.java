@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListLegacyAgentEventLogsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2802EE59-3B53-513A-A130-85E480AF689D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +92,27 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
     }
 
     public static class ListLegacyAgentEventLogsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AgentDropCall")
         public String agentDropCall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentNo")
         public String agentNo;
 
         @NameInMap("CallDir")
         public String callDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>378654****</p>
+         */
         @NameInMap("CallId")
         public String callId;
 
@@ -94,39 +122,83 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1312343****</p>
+         */
         @NameInMap("CalleeId")
         public String calleeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>08331111****</p>
+         */
         @NameInMap("CallerId")
         public String callerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>345467****</p>
+         */
         @NameInMap("ConnId")
         public String connId;
 
         @NameInMap("Event")
         public String event;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup1@ccc-test,skillgroup2@ccc-test</p>
+         */
         @NameInMap("GroupNo")
         public String groupNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8012****</p>
+         */
         @NameInMap("PhoneNo")
         public String phoneNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-03T10:15:30</p>
+         */
         @NameInMap("StatisticDate")
         public String statisticDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("TargetRequest")
         public String targetRequest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("TargetSelect")
         public String targetSelect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acc101</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>07518888****</p>
+         */
         @NameInMap("TransferNumber")
         public String transferNumber;
 
@@ -285,12 +357,24 @@ public class ListLegacyAgentEventLogsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListLegacyAgentEventLogsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

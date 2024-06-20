@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetLoginDetailsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetLoginDetailsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F1A4774A-F28B-5C40-AEF6-D88D2DD6C7E4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,6 +88,10 @@ public class GetLoginDetailsResponseBody extends TeaModel {
     }
 
     public static class GetLoginDetailsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sh-wss-ccc.aliyuncs.com</p>
+         */
         @NameInMap("AgentServerUrl")
         public String agentServerUrl;
 
@@ -100,42 +116,82 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         @NameInMap("ChatUserId")
         public String chatUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8033****</p>
+         */
         @NameInMap("DeviceExt")
         public String deviceExt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Yealink SIP-T23G 44.84.XX.XX</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
+         */
         @NameInMap("DeviceState")
         public String deviceState;
 
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zi31STIMtIfa/UN2l+6lww****</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zi31STIMtIfa/UN2l+6lww****</p>
+         */
         @NameInMap("Signature2")
         public String signature2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sh-sip-ccc.aliyuncs.com:443</p>
+         */
         @NameInMap("SipServerUrl")
         public String sipServerUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
         @NameInMap("UserKey")
         public String userKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>802001:1656406628862&quot;</p>
+         */
         @NameInMap("UserKey2")
         public String userKey2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 

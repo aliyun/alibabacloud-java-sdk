@@ -4,9 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -16,9 +24,17 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     @NameInMap("PagedAgentSummaryReport")
     public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReport pagedAgentSummaryReport;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27DD30C4-CAE2-481A-97CC-D3C54625341D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,51 +92,115 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     }
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListInbound extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageRingTime")
         public Long averageRingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageTalkTime")
         public Long averageTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsHandled")
         public Long callsHandled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsOffered")
         public Long callsOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HandleRate")
         public Float handleRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxRingTime")
         public Long maxRingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxTalkTime")
         public Long maxTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxWorkTime")
         public Long maxWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionIndex")
         public Float satisfactionIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysOffered")
         public Long satisfactionSurveysOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ServiceLevel20")
         public Float serviceLevel20;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalRingTime")
         public Long totalRingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalWorkTime")
         public Long totalWorkTime;
 
@@ -260,48 +340,108 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     }
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOutbound extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AnswerRate")
         public Float answerRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageDialingTime")
         public Long averageDialingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageTalkTime")
         public Long averageTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CallsDialed")
         public Long callsDialed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxDialingTime")
         public Long maxDialingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxTalkTime")
         public Long maxTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxWorkTime")
         public String maxWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionIndex")
         public Float satisfactionIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysOffered")
         public Long satisfactionSurveysOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalDialingTime")
         public Long totalDialingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalWorkTime")
         public Long totalWorkTime;
 
@@ -433,54 +573,122 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     }
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOverall extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageReadyTime")
         public Long averageReadyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageTalkTime")
         public Long averageTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AverageWorkTime")
         public Long averageWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37</p>
+         */
         @NameInMap("MaxReadyTime")
         public Long maxReadyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxTalkTime")
         public Long maxTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxWorkTime")
         public Long maxWorkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OccupancyRate")
         public Float occupancyRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("OneTransferCalls")
         public Long oneTransferCalls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionIndex")
         public Float satisfactionIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysOffered")
         public Long satisfactionSurveysOffered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalBreakTime")
         public Long totalBreakTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCalls")
         public Long totalCalls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalLoggedInTime")
         public Long totalLoggedInTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalReadyTime")
         public Long totalReadyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalTalkTime")
         public Long totalTalkTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalWorkTime")
         public Long totalWorkTime;
 
@@ -628,6 +836,10 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
     }
 
     public static class ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
@@ -637,9 +849,17 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         @NameInMap("Inbound")
         public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListInbound inbound;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("LoginName")
         public String loginName;
 
@@ -649,12 +869,20 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         @NameInMap("Overall")
         public ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportListOverall overall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</p>
+         */
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
 
         @NameInMap("SkillGroupNames")
         public String skillGroupNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-13 00:00:00</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -749,12 +977,24 @@ public class ListAgentSummaryReportsSinceMidnightResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListAgentSummaryReportsSinceMidnightResponseBodyPagedAgentSummaryReportList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

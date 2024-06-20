@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetCaseFileUploadUrlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>case.csv</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

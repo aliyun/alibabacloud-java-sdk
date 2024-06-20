@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetContactFlowResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetContactFlowResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2263B273-AC1B-44EB-BA98-87F2322C6780</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,36 +77,72 @@ public class GetContactFlowResponseBody extends TeaModel {
     }
 
     public static class GetContactFlowResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>274601be-a6d5-4429-bcef-32b51d031c6e</p>
+         */
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         @NameInMap("Definition")
         public String definition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>566399d7-5558-447c-a72f-9be2768b6a82</p>
+         */
         @NameInMap("DraftId")
         public String draftId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>editor-xxx</p>
+         */
         @NameInMap("Editor")
         public String editor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("Published")
         public Boolean published;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MAIN_FLOW</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

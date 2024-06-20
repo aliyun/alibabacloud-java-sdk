@@ -51,8 +51,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 废弃预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>废弃预测式外呼活动</p>
+     * 
      * @param request AbortCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AbortCampaignResponse
@@ -86,8 +87,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 废弃预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>废弃预测式外呼活动</p>
+     * 
      * @param request AbortCampaignRequest
      * @return AbortCampaignResponse
      */
@@ -97,8 +99,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * @param request AcceptChatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AcceptChatResponse
+     */
+    public AcceptChatResponse acceptChatWithOptions(AcceptChatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AcceptChat"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AcceptChatResponse());
+    }
+
+    /**
+     * @param request AcceptChatRequest
+     * @return AcceptChatResponse
+     */
+    public AcceptChatResponse acceptChat(AcceptChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.acceptChatWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request AddBlacklistCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddBlacklistCallTaggingResponse
@@ -136,8 +181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request AddBlacklistCallTaggingRequest
      * @return AddBlacklistCallTaggingResponse
      */
@@ -147,8 +193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 追加联系人
-     *
+     * <b>summary</b> : 
+     * <p>追加联系人</p>
+     * 
      * @param tmpReq AddCasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddCasesResponse
@@ -192,8 +239,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 追加联系人
-     *
+     * <b>summary</b> : 
+     * <p>追加联系人</p>
+     * 
      * @param request AddCasesRequest
      * @return AddCasesResponse
      */
@@ -647,8 +695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 追加联系人
-     *
+     * <b>summary</b> : 
+     * <p>追加联系人</p>
+     * 
      * @param tmpReq AppendCasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AppendCasesResponse
@@ -694,8 +743,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 追加联系人
-     *
+     * <b>summary</b> : 
+     * <p>追加联系人</p>
+     * 
      * @param request AppendCasesRequest
      * @return AppendCasesResponse
      */
@@ -706,11 +756,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
-     *
+     * 
      * @param request AssignUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AssignUsersResponse
      */
+    @Deprecated
     // Deprecated
     public AssignUsersResponse assignUsersWithOptions(AssignUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -754,10 +805,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * @deprecated OpenAPI AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
-     *
+     * 
      * @param request AssignUsersRequest
      * @return AssignUsersResponse
      */
+    @Deprecated
     // Deprecated
     public AssignUsersResponse assignUsers(AssignUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1145,6 +1197,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ClaimChatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ClaimChatResponse
+     */
+    public ClaimChatResponse claimChatWithOptions(ClaimChatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupId)) {
+            query.put("SkillGroupId", request.skillGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClaimChat"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClaimChatResponse());
+    }
+
+    /**
+     * @param request ClaimChatRequest
+     * @return ClaimChatResponse
+     */
+    public ClaimChatResponse claimChat(ClaimChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.claimChatWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CoachCallRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CoachCallResponse
@@ -1361,8 +1459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量创建号码标签
-     *
+     * <b>summary</b> : 
+     * <p>批量创建号码标签</p>
+     * 
      * @param request CreateCallTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCallTagsResponse
@@ -1396,8 +1495,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量创建号码标签
-     *
+     * <b>summary</b> : 
+     * <p>批量创建号码标签</p>
+     * 
      * @param request CreateCallTagsRequest
      * @return CreateCallTagsResponse
      */
@@ -1407,8 +1507,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>创建预测式外呼活动</p>
+     * 
      * @param tmpReq CreateCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCampaignResponse
@@ -1504,8 +1605,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>创建预测式外呼活动</p>
+     * 
      * @param request CreateCampaignRequest
      * @return CreateCampaignResponse
      */
@@ -1569,14 +1671,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建呼入控制号码</p>
+     * 
      * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
-     *
-     * @summary 创建呼入控制号码
-     *
+     * 
      * @param request CreateCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public CreateCustomCallTaggingResponse createCustomCallTaggingWithOptions(CreateCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1607,13 +1711,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建呼入控制号码</p>
+     * 
      * @deprecated OpenAPI CreateCustomCallTagging is deprecated, please use CCC::2020-07-01::CreateCustomCallTaggings instead.
-     *
-     * @summary 创建呼入控制号码
-     *
+     * 
      * @param request CreateCustomCallTaggingRequest
      * @return CreateCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public CreateCustomCallTaggingResponse createCustomCallTagging(CreateCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1913,8 +2019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除号码标签
-     *
+     * <b>summary</b> : 
+     * <p>删除号码标签</p>
+     * 
      * @param request DeleteCallTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCallTagResponse
@@ -1948,8 +2055,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除号码标签
-     *
+     * <b>summary</b> : 
+     * <p>删除号码标签</p>
+     * 
      * @param request DeleteCallTagRequest
      * @return DeleteCallTagResponse
      */
@@ -2001,8 +2109,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>删除呼入控制号码</p>
+     * 
      * @param request DeleteCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCustomCallTaggingResponse
@@ -2036,8 +2145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>删除呼入控制号码</p>
+     * 
      * @param request DeleteCustomCallTaggingRequest
      * @return DeleteCustomCallTaggingResponse
      */
@@ -2487,14 +2597,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导出全部呼入号码标签</p>
+     * 
      * @deprecated OpenAPI ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
-     *
-     * @summary 导出全部呼入号码标签
-     *
+     * 
      * @param request ExportCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public ExportCustomCallTaggingResponse exportCustomCallTaggingWithOptions(ExportCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2521,13 +2633,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导出全部呼入号码标签</p>
+     * 
      * @deprecated OpenAPI ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
-     *
-     * @summary 导出全部呼入号码标签
-     *
+     * 
      * @param request ExportCustomCallTaggingRequest
      * @return ExportCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public ExportCustomCallTaggingResponse exportCustomCallTagging(ExportCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2535,8 +2649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 导出黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>导出黑名单号码</p>
+     * 
      * @param request ExportDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportDoNotCallNumbersResponse
@@ -2574,8 +2689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 导出黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>导出黑名单号码</p>
+     * 
      * @param request ExportDoNotCallNumbersRequest
      * @return ExportDoNotCallNumbersResponse
      */
@@ -2585,8 +2701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetAccessChannelOfStaging
-     *
+     * <b>summary</b> : 
+     * <p>GetAccessChannelOfStaging</p>
+     * 
      * @param request GetAccessChannelOfStagingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccessChannelOfStagingResponse
@@ -2612,8 +2729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetAccessChannelOfStaging
-     *
+     * <b>summary</b> : 
+     * <p>GetAccessChannelOfStaging</p>
+     * 
      * @param request GetAccessChannelOfStagingRequest
      * @return GetAccessChannelOfStagingResponse
      */
@@ -2623,8 +2741,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取音频文件
-     *
+     * <b>summary</b> : 
+     * <p>获取音频文件</p>
+     * 
      * @param request GetAudioFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAudioFileResponse
@@ -2658,8 +2777,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取音频文件
-     *
+     * <b>summary</b> : 
+     * <p>获取音频文件</p>
+     * 
      * @param request GetAudioFileRequest
      * @return GetAudioFileResponse
      */
@@ -2795,8 +2915,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动信息
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动信息</p>
+     * 
      * @param request GetCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCampaignResponse
@@ -2830,8 +2951,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动信息
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动信息</p>
+     * 
      * @param request GetCampaignRequest
      * @return GetCampaignResponse
      */
@@ -2929,8 +3051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取通话文本信息
-     *
+     * <b>summary</b> : 
+     * <p>获取通话文本信息</p>
+     * 
      * @param request GetConversationDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConversationDetailResponse
@@ -2964,8 +3087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取通话文本信息
-     *
+     * <b>summary</b> : 
+     * <p>获取通话文本信息</p>
+     * 
      * @param request GetConversationDetailRequest
      * @return GetConversationDetailResponse
      */
@@ -3017,8 +3141,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取黑名单文件上传地址
-     *
+     * <b>summary</b> : 
+     * <p>获取黑名单文件上传地址</p>
+     * 
      * @param request GetDoNotCallFileUploadParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoNotCallFileUploadParametersResponse
@@ -3052,8 +3177,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取黑名单文件上传地址
-     *
+     * <b>summary</b> : 
+     * <p>获取黑名单文件上传地址</p>
+     * 
      * @param request GetDoNotCallFileUploadParametersRequest
      * @return GetDoNotCallFileUploadParametersResponse
      */
@@ -3109,8 +3235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取早媒体音频
-     *
+     * <b>summary</b> : 
+     * <p>获取早媒体音频</p>
+     * 
      * @param request GetEarlyMediaRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEarlyMediaRecordingResponse
@@ -3144,8 +3271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取早媒体音频
-     *
+     * <b>summary</b> : 
+     * <p>获取早媒体音频</p>
+     * 
      * @param request GetEarlyMediaRecordingRequest
      * @return GetEarlyMediaRecordingResponse
      */
@@ -3205,8 +3333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动历史报表
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动历史报表</p>
+     * 
      * @param request GetHistoricalCampaignReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetHistoricalCampaignReportResponse
@@ -3232,8 +3361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动历史报表
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动历史报表</p>
+     * 
      * @param request GetHistoricalCampaignReportRequest
      * @return GetHistoricalCampaignReportResponse
      */
@@ -3557,8 +3687,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼实时状态
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼实时状态</p>
+     * 
      * @param request GetRealtimeCampaignStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRealtimeCampaignStatsResponse
@@ -3584,8 +3715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼实时状态
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼实时状态</p>
+     * 
      * @param request GetRealtimeCampaignStatsRequest
      * @return GetRealtimeCampaignStatsResponse
      */
@@ -3683,8 +3815,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询技能组
-     *
+     * <b>summary</b> : 
+     * <p>查询技能组</p>
+     * 
      * @param request GetSkillGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSkillGroupResponse
@@ -3718,8 +3851,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询技能组
-     *
+     * <b>summary</b> : 
+     * <p>查询技能组</p>
+     * 
      * @param request GetSkillGroupRequest
      * @return GetSkillGroupResponse
      */
@@ -3809,8 +3943,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质检参数
-     *
+     * <b>summary</b> : 
+     * <p>获取质检参数</p>
+     * 
      * @param request GetUploadAudioDataParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUploadAudioDataParamsResponse
@@ -3836,8 +3971,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取质检参数
-     *
+     * <b>summary</b> : 
+     * <p>获取质检参数</p>
+     * 
      * @param request GetUploadAudioDataParamsRequest
      * @return GetUploadAudioDataParamsResponse
      */
@@ -3893,8 +4029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取视频
-     *
+     * <b>summary</b> : 
+     * <p>获取视频</p>
+     * 
      * @param request GetVideoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetVideoResponse
@@ -3920,14 +4057,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取视频
-     *
+     * <b>summary</b> : 
+     * <p>获取视频</p>
+     * 
      * @param request GetVideoRequest
      * @return GetVideoResponse
      */
     public GetVideoResponse getVideo(GetVideoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getVideoWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request GetVisitorLoginDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVisitorLoginDetailsResponse
+     */
+    public GetVisitorLoginDetailsResponse getVisitorLoginDetailsWithOptions(GetVisitorLoginDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatDeviceId)) {
+            query.put("ChatDeviceId", request.chatDeviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visitorId)) {
+            query.put("VisitorId", request.visitorId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVisitorLoginDetails"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVisitorLoginDetailsResponse());
+    }
+
+    /**
+     * @param request GetVisitorLoginDetailsRequest
+     * @return GetVisitorLoginDetailsResponse
+     */
+    public GetVisitorLoginDetailsResponse getVisitorLoginDetails(GetVisitorLoginDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVisitorLoginDetailsWithOptions(request, runtime);
     }
 
     /**
@@ -4131,14 +4319,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>文件导入呼入控制号码</p>
+     * 
      * @deprecated OpenAPI ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
-     *
-     * @summary 文件导入呼入控制号码
-     *
+     * 
      * @param request ImportCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public ImportCustomCallTaggingResponse importCustomCallTaggingWithOptions(ImportCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4169,13 +4359,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>文件导入呼入控制号码</p>
+     * 
      * @deprecated OpenAPI ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
-     *
-     * @summary 文件导入呼入控制号码
-     *
+     * 
      * @param request ImportCustomCallTaggingRequest
      * @return ImportCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public ImportCustomCallTaggingResponse importCustomCallTagging(ImportCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4183,8 +4375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>添加黑名单号码</p>
+     * 
      * @param request ImportDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportDoNotCallNumbersResponse
@@ -4226,8 +4419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>添加黑名单号码</p>
+     * 
      * @param request ImportDoNotCallNumbersRequest
      * @return ImportDoNotCallNumbersResponse
      */
@@ -4613,14 +4807,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListAgentStates for ACC</p>
+     * 
      * @deprecated OpenAPI ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
-     *
-     * @summary ListAgentStates for ACC
-     *
+     * 
      * @param request ListAgentStatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAgentStatesResponse
      */
+    @Deprecated
     // Deprecated
     public ListAgentStatesResponse listAgentStatesWithOptions(ListAgentStatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4671,13 +4867,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListAgentStates for ACC</p>
+     * 
      * @deprecated OpenAPI ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
-     *
-     * @summary ListAgentStates for ACC
-     *
+     * 
      * @param request ListAgentStatesRequest
      * @return ListAgentStatesResponse
      */
+    @Deprecated
     // Deprecated
     public ListAgentStatesResponse listAgentStates(ListAgentStatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4685,14 +4883,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListAgentSummaryReportsSinceMidnight for acc</p>
+     * 
      * @deprecated OpenAPI ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
-     *
-     * @summary ListAgentSummaryReportsSinceMidnight for acc
-     *
+     * 
      * @param request ListAgentSummaryReportsSinceMidnightRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAgentSummaryReportsSinceMidnightResponse
      */
+    @Deprecated
     // Deprecated
     public ListAgentSummaryReportsSinceMidnightResponse listAgentSummaryReportsSinceMidnightWithOptions(ListAgentSummaryReportsSinceMidnightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4715,13 +4915,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListAgentSummaryReportsSinceMidnight for acc</p>
+     * 
      * @deprecated OpenAPI ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
-     *
-     * @summary ListAgentSummaryReportsSinceMidnight for acc
-     *
+     * 
      * @param request ListAgentSummaryReportsSinceMidnightRequest
      * @return ListAgentSummaryReportsSinceMidnightResponse
      */
+    @Deprecated
     // Deprecated
     public ListAgentSummaryReportsSinceMidnightResponse listAgentSummaryReportsSinceMidnight(ListAgentSummaryReportsSinceMidnightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4729,8 +4931,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼呼叫记录
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼呼叫记录</p>
+     * 
      * @param request ListAttemptsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAttemptsResponse
@@ -4756,8 +4959,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼呼叫记录
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼呼叫记录</p>
+     * 
      * @param request ListAttemptsRequest
      * @return ListAttemptsResponse
      */
@@ -4767,8 +4971,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取音频文件列表
-     *
+     * <b>summary</b> : 
+     * <p>获取音频文件列表</p>
+     * 
      * @param request ListAudioFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAudioFilesResponse
@@ -4814,8 +5019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取音频文件列表
-     *
+     * <b>summary</b> : 
+     * <p>获取音频文件列表</p>
+     * 
      * @param request ListAudioFilesRequest
      * @return ListAudioFilesResponse
      */
@@ -4825,8 +5031,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request ListBlacklistCallTaggingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListBlacklistCallTaggingsResponse
@@ -4860,8 +5067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request ListBlacklistCallTaggingsRequest
      * @return ListBlacklistCallTaggingsResponse
      */
@@ -5043,8 +5251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出号码标签
-     *
+     * <b>summary</b> : 
+     * <p>列出号码标签</p>
+     * 
      * @param request ListCallTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCallTagsResponse
@@ -5082,8 +5291,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出号码标签
-     *
+     * <b>summary</b> : 
+     * <p>列出号码标签</p>
+     * 
      * @param request ListCallTagsRequest
      * @return ListCallTagsResponse
      */
@@ -5093,8 +5303,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动趋势报表
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动趋势报表</p>
+     * 
      * @param request ListCampaignTrendingReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCampaignTrendingReportResponse
@@ -5120,8 +5331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动趋势报表
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动趋势报表</p>
+     * 
      * @param request ListCampaignTrendingReportRequest
      * @return ListCampaignTrendingReportResponse
      */
@@ -5131,8 +5343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动列表
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动列表</p>
+     * 
      * @param request ListCampaignsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCampaignsResponse
@@ -5198,8 +5411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动列表
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动列表</p>
+     * 
      * @param request ListCampaignsRequest
      * @return ListCampaignsResponse
      */
@@ -5209,8 +5423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动的联系人呼叫详情
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动的联系人呼叫详情</p>
+     * 
      * @param request ListCasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCasesResponse
@@ -5260,8 +5475,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取预测式外呼活动的联系人呼叫详情
-     *
+     * <b>summary</b> : 
+     * <p>获取预测式外呼活动的联系人呼叫详情</p>
+     * 
      * @param request ListCasesRequest
      * @return ListCasesResponse
      */
@@ -5375,14 +5591,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>列出呼入控制号码</p>
+     * 
      * @deprecated OpenAPI ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
-     *
-     * @summary 列出呼入控制号码
-     *
+     * 
      * @param request ListCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public ListCustomCallTaggingResponse listCustomCallTaggingWithOptions(ListCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -5425,13 +5643,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>列出呼入控制号码</p>
+     * 
      * @deprecated OpenAPI ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
-     *
-     * @summary 列出呼入控制号码
-     *
+     * 
      * @param request ListCustomCallTaggingRequest
      * @return ListCustomCallTaggingResponse
      */
+    @Deprecated
     // Deprecated
     public ListCustomCallTaggingResponse listCustomCallTagging(ListCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -5481,8 +5701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>查询黑名单号码</p>
+     * 
      * @param request ListDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoNotCallNumbersResponse
@@ -5528,8 +5749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>查询黑名单号码</p>
+     * 
      * @param request ListDoNotCallNumbersRequest
      * @return ListDoNotCallNumbersResponse
      */
@@ -5675,8 +5897,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListHistoricalAgentSkillGroupReport
-     *
+     * <b>summary</b> : 
+     * <p>ListHistoricalAgentSkillGroupReport</p>
+     * 
      * @param request ListHistoricalAgentSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListHistoricalAgentSkillGroupReportResponse
@@ -5736,8 +5959,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListHistoricalAgentSkillGroupReport
-     *
+     * <b>summary</b> : 
+     * <p>ListHistoricalAgentSkillGroupReport</p>
+     * 
      * @param request ListHistoricalAgentSkillGroupReportRequest
      * @return ListHistoricalAgentSkillGroupReportResponse
      */
@@ -5953,8 +6177,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListIntervalAgentSkillGroupReport
-     *
+     * <b>summary</b> : 
+     * <p>ListIntervalAgentSkillGroupReport</p>
+     * 
      * @param request ListIntervalAgentSkillGroupReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIntervalAgentSkillGroupReportResponse
@@ -5980,8 +6205,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListIntervalAgentSkillGroupReport
-     *
+     * <b>summary</b> : 
+     * <p>ListIntervalAgentSkillGroupReport</p>
+     * 
      * @param request ListIntervalAgentSkillGroupReportRequest
      * @return ListIntervalAgentSkillGroupReportResponse
      */
@@ -6149,14 +6375,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListLegacyAgentEventLogs</p>
+     * 
      * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
-     *
-     * @summary ListLegacyAgentEventLogs
-     *
+     * 
      * @param request ListLegacyAgentEventLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLegacyAgentEventLogsResponse
      */
+    @Deprecated
     // Deprecated
     public ListLegacyAgentEventLogsResponse listLegacyAgentEventLogsWithOptions(ListLegacyAgentEventLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6203,13 +6431,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListLegacyAgentEventLogs</p>
+     * 
      * @deprecated OpenAPI ListLegacyAgentEventLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
-     *
-     * @summary ListLegacyAgentEventLogs
-     *
+     * 
      * @param request ListLegacyAgentEventLogsRequest
      * @return ListLegacyAgentEventLogsResponse
      */
+    @Deprecated
     // Deprecated
     public ListLegacyAgentEventLogsResponse listLegacyAgentEventLogs(ListLegacyAgentEventLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -6217,14 +6447,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListLegacyAgentStatusLogs</p>
+     * 
      * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
-     *
-     * @summary ListLegacyAgentStatusLogs
-     *
+     * 
      * @param request ListLegacyAgentStatusLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLegacyAgentStatusLogsResponse
      */
+    @Deprecated
     // Deprecated
     public ListLegacyAgentStatusLogsResponse listLegacyAgentStatusLogsWithOptions(ListLegacyAgentStatusLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6271,13 +6503,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListLegacyAgentStatusLogs</p>
+     * 
      * @deprecated OpenAPI ListLegacyAgentStatusLogs is deprecated, please use CCC::2020-07-01::ListAgentStateLogs instead.
-     *
-     * @summary ListLegacyAgentStatusLogs
-     *
+     * 
      * @param request ListLegacyAgentStatusLogsRequest
      * @return ListLegacyAgentStatusLogsResponse
      */
+    @Deprecated
     // Deprecated
     public ListLegacyAgentStatusLogsResponse listLegacyAgentStatusLogs(ListLegacyAgentStatusLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -6285,8 +6519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListLegacyAppraiseLogs
-     *
+     * <b>summary</b> : 
+     * <p>ListLegacyAppraiseLogs</p>
+     * 
      * @param request ListLegacyAppraiseLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLegacyAppraiseLogsResponse
@@ -6332,8 +6567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListLegacyAppraiseLogs
-     *
+     * <b>summary</b> : 
+     * <p>ListLegacyAppraiseLogs</p>
+     * 
      * @param request ListLegacyAppraiseLogsRequest
      * @return ListLegacyAppraiseLogsResponse
      */
@@ -6343,8 +6579,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListLegacyQueueEventLogs
-     *
+     * <b>summary</b> : 
+     * <p>ListLegacyQueueEventLogs</p>
+     * 
      * @param request ListLegacyQueueEventLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLegacyQueueEventLogsResponse
@@ -6394,8 +6631,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListLegacyQueueEventLogs
-     *
+     * <b>summary</b> : 
+     * <p>ListLegacyQueueEventLogs</p>
+     * 
      * @param request ListLegacyQueueEventLogsRequest
      * @return ListLegacyQueueEventLogsResponse
      */
@@ -6601,8 +6839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取号码列表
-     *
+     * <b>summary</b> : 
+     * <p>获取号码列表</p>
+     * 
      * @param request ListPhoneNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPhoneNumbersResponse
@@ -6652,8 +6891,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取号码列表
-     *
+     * <b>summary</b> : 
+     * <p>获取号码列表</p>
+     * 
      * @param request ListPhoneNumbersRequest
      * @return ListPhoneNumbersResponse
      */
@@ -7043,14 +7283,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListSkillGroupStates for acc</p>
+     * 
      * @deprecated OpenAPI ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
-     *
-     * @summary ListSkillGroupStates for acc
-     *
+     * 
      * @param request ListSkillGroupStatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSkillGroupStatesResponse
      */
+    @Deprecated
     // Deprecated
     public ListSkillGroupStatesResponse listSkillGroupStatesWithOptions(ListSkillGroupStatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7073,13 +7315,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListSkillGroupStates for acc</p>
+     * 
      * @deprecated OpenAPI ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
-     *
-     * @summary ListSkillGroupStates for acc
-     *
+     * 
      * @param request ListSkillGroupStatesRequest
      * @return ListSkillGroupStatesResponse
      */
+    @Deprecated
     // Deprecated
     public ListSkillGroupStatesResponse listSkillGroupStates(ListSkillGroupStatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7087,14 +7331,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListSkillGroupSummaryReportsSinceMidnight for acc</p>
+     * 
      * @deprecated OpenAPI ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
-     *
-     * @summary ListSkillGroupSummaryReportsSinceMidnight for acc
-     *
+     * 
      * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSkillGroupSummaryReportsSinceMidnightResponse
      */
+    @Deprecated
     // Deprecated
     public ListSkillGroupSummaryReportsSinceMidnightResponse listSkillGroupSummaryReportsSinceMidnightWithOptions(ListSkillGroupSummaryReportsSinceMidnightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7117,13 +7363,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListSkillGroupSummaryReportsSinceMidnight for acc</p>
+     * 
      * @deprecated OpenAPI ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
-     *
-     * @summary ListSkillGroupSummaryReportsSinceMidnight for acc
-     *
+     * 
      * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
      * @return ListSkillGroupSummaryReportsSinceMidnightResponse
      */
+    @Deprecated
     // Deprecated
     public ListSkillGroupSummaryReportsSinceMidnightResponse listSkillGroupSummaryReportsSinceMidnight(ListSkillGroupSummaryReportsSinceMidnightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7243,8 +7491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取未分配号码列表
-     *
+     * <b>summary</b> : 
+     * <p>获取未分配号码列表</p>
+     * 
      * @param request ListUnassignedNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUnassignedNumbersResponse
@@ -7282,8 +7531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取未分配号码列表
-     *
+     * <b>summary</b> : 
+     * <p>获取未分配号码列表</p>
+     * 
      * @param request ListUnassignedNumbersRequest
      * @return ListUnassignedNumbersResponse
      */
@@ -7599,8 +7849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request ModifyCustomCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyCustomCallTaggingResponse
@@ -7642,8 +7893,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request ModifyCustomCallTaggingRequest
      * @return ModifyCustomCallTaggingResponse
      */
@@ -8069,8 +8321,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 暂停预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>暂停预测式外呼活动</p>
+     * 
      * @param request PauseCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PauseCampaignResponse
@@ -8104,8 +8357,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 暂停预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>暂停预测式外呼活动</p>
+     * 
      * @param request PauseCampaignRequest
      * @return PauseCampaignResponse
      */
@@ -8211,8 +8465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ProcessAliMeCallbackOfStaging
-     *
+     * <b>summary</b> : 
+     * <p>ProcessAliMeCallbackOfStaging</p>
+     * 
      * @param request ProcessAliMeCallbackOfStagingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ProcessAliMeCallbackOfStagingResponse
@@ -8246,8 +8501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ProcessAliMeCallbackOfStaging
-     *
+     * <b>summary</b> : 
+     * <p>ProcessAliMeCallbackOfStaging</p>
+     * 
      * @param request ProcessAliMeCallbackOfStagingRequest
      * @return ProcessAliMeCallbackOfStagingResponse
      */
@@ -8573,8 +8829,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request RemoveBlacklistCallTaggingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveBlacklistCallTaggingResponse
@@ -8612,8 +8869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑呼入控制号码
-     *
+     * <b>summary</b> : 
+     * <p>编辑呼入控制号码</p>
+     * 
      * @param request RemoveBlacklistCallTaggingRequest
      * @return RemoveBlacklistCallTaggingResponse
      */
@@ -8623,8 +8881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>删除黑名单号码</p>
+     * 
      * @param request RemoveDoNotCallNumbersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveDoNotCallNumbersResponse
@@ -8658,8 +8917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除黑名单号码
-     *
+     * <b>summary</b> : 
+     * <p>删除黑名单号码</p>
+     * 
      * @param request RemoveDoNotCallNumbersRequest
      * @return RemoveDoNotCallNumbersResponse
      */
@@ -9091,8 +9351,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 录音解冻
-     *
+     * <b>summary</b> : 
+     * <p>录音解冻</p>
+     * 
      * @param request RestoreArchivedRecordingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestoreArchivedRecordingsResponse
@@ -9126,8 +9387,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 录音解冻
-     *
+     * <b>summary</b> : 
+     * <p>录音解冻</p>
+     * 
      * @param request RestoreArchivedRecordingsRequest
      * @return RestoreArchivedRecordingsResponse
      */
@@ -9137,8 +9399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 恢复预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>恢复预测式外呼活动</p>
+     * 
      * @param request ResumeCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResumeCampaignResponse
@@ -9172,8 +9435,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 恢复预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>恢复预测式外呼活动</p>
+     * 
      * @param request ResumeCampaignRequest
      * @return ResumeCampaignResponse
      */
@@ -9755,6 +10019,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param tmpReq StartChatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartChatResponse
+     */
+    public StartChatResponse startChatWithOptions(StartChatRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartChatShrinkRequest request = new StartChatShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userList)) {
+            request.userListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userList, "UserList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessChannelId)) {
+            query.put("AccessChannelId", request.accessChannelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userListShrink)) {
+            query.put("UserList", request.userListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartChat"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartChatResponse());
+    }
+
+    /**
+     * @param request StartChatRequest
+     * @return StartChatResponse
+     */
+    public StartChatResponse startChat(StartChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startChatWithOptions(request, runtime);
+    }
+
+    /**
      * @param request StartConferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartConferenceResponse
@@ -9921,8 +10241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发起隐私呼叫
-     *
+     * <b>summary</b> : 
+     * <p>发起隐私呼叫</p>
+     * 
      * @param request StartPrivacyCallRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartPrivacyCallResponse
@@ -9964,8 +10285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发起隐私呼叫
-     *
+     * <b>summary</b> : 
+     * <p>发起隐私呼叫</p>
+     * 
      * @param request StartPrivacyCallRequest
      * @return StartPrivacyCallResponse
      */
@@ -9975,8 +10297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>提交预测式外呼活动</p>
+     * 
      * @param request SubmitCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitCampaignResponse
@@ -10010,8 +10333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交预测式外呼活动
-     *
+     * <b>summary</b> : 
+     * <p>提交预测式外呼活动</p>
+     * 
      * @param request SubmitCampaignRequest
      * @return SubmitCampaignResponse
      */
@@ -10175,8 +10499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除注册设备
-     *
+     * <b>summary</b> : 
+     * <p>删除注册设备</p>
+     * 
      * @param request UnregisterDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnregisterDeviceResponse
@@ -10210,8 +10535,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除注册设备
-     *
+     * <b>summary</b> : 
+     * <p>删除注册设备</p>
+     * 
      * @param request UnregisterDeviceRequest
      * @return UnregisterDeviceResponse
      */
@@ -10221,8 +10547,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Update campaign
-     *
+     * <b>summary</b> : 
+     * <p>Update campaign</p>
+     * 
      * @param request UpdateCampaignRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCampaignResponse
@@ -10280,8 +10607,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Update campaign
-     *
+     * <b>summary</b> : 
+     * <p>Update campaign</p>
+     * 
      * @param request UpdateCampaignRequest
      * @return UpdateCampaignResponse
      */

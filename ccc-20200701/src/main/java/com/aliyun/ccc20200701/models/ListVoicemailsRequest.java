@@ -4,37 +4,66 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListVoicemailsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>073xxxx7539</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-125152394144124921</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532707199000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>voicemail-test</p>
+     */
     @NameInMap("Name")
     @Deprecated
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532448000000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

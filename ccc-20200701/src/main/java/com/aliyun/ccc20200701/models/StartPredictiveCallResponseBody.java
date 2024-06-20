@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class StartPredictiveCallResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public StartPredictiveCallResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class StartPredictiveCallResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,24 +88,52 @@ public class StartPredictiveCallResponseBody extends TeaModel {
     }
 
     public static class StartPredictiveCallResponseBodyDataCallContextChannelContexts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("ChannelFlags")
         public String channelFlags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ch:user:131888****-&gt;8001****:1609225718294:job-6570007401392****</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NONE</p>
+         */
         @NameInMap("ChannelState")
         public String channelState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6570007401392****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1318888****</p>
+         */
         @NameInMap("Originator")
         public String originator;
 
@@ -103,12 +143,24 @@ public class StartPredictiveCallResponseBody extends TeaModel {
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609225718295</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("UserExtension")
         public String userExtension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -216,15 +268,27 @@ public class StartPredictiveCallResponseBody extends TeaModel {
     }
 
     public static class StartPredictiveCallResponseBodyDataCallContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
         @NameInMap("ChannelContexts")
         public java.util.List<StartPredictiveCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6570007401392****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
@@ -268,45 +332,97 @@ public class StartPredictiveCallResponseBody extends TeaModel {
     }
 
     public static class StartPredictiveCallResponseBodyDataUserContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Warm-up</p>
+         */
         @NameInMap("BreakCode")
         public String breakCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("DeviceState")
         public String deviceState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609136956378</p>
+         */
         @NameInMap("Heartbeat")
         public Long heartbeat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6570007401392****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1324730****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609136956378</p>
+         */
         @NameInMap("Reserved")
         public Long reserved;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>READY</p>
+         */
         @NameInMap("UserState")
         public String userState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 

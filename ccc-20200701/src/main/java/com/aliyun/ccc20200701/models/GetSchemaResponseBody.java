@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetSchemaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetSchemaResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Service abnormal, the instance 0418 is ceased.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19D09CCC-F298-4124-849A-AFA217819011</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,9 +92,17 @@ public class GetSchemaResponseBody extends TeaModel {
     }
 
     public static class GetSchemaResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Deleted")
         public Boolean deleted;
 
@@ -87,16 +111,27 @@ public class GetSchemaResponseBody extends TeaModel {
 
         /**
          * <p>schema id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5e0964fd-951c-4e45-b518-d09d4d2db8ca</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Properties")
         public java.util.Map<String, DataPropertiesValue> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-14 10:48:43.0</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 

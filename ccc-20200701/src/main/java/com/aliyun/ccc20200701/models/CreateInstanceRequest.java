@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;24861380681070****&quot;,&quot;105980354482****&quot;]</p>
      */
     @NameInMap("AdminRamIdList")
     public String adminRamIdList;
@@ -15,6 +18,9 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -27,6 +33,9 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;0830011xxxx&quot;, &quot;0830312xxxx&quot;]</p>
      */
     @NameInMap("NumberList")
     public String numberList;

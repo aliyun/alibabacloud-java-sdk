@@ -10,17 +10,27 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("ContactFlowVariables")
     public String contactFlowVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACC-YUNBS-1.0.10-****</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-6538214103685****</p>
      */
     @NameInMap("JobId")
     public String jobId;
@@ -43,11 +53,18 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
      */
     @NameInMap("Transferee")
     public String transferee;
@@ -55,9 +72,17 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("TransfereeType")
     public String transfereeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>08314325****</p>
+     */
     @NameInMap("Transferor")
     public String transferor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

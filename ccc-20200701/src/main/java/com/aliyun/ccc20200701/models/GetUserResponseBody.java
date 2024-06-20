@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetUserResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -79,48 +91,100 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8033****</p>
+         */
         @NameInMap("DeviceExt")
         public String deviceExt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
+         */
         @NameInMap("DeviceState")
         public String deviceState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("DisplayId")
         public String displayId;
 
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8003****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1391234****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
         @NameInMap("Nickname")
         public String nickname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin@ccc-test</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 

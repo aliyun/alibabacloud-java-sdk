@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class RemoveDoNotCallNumbersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;1900000****&quot;,&quot;1312211****&quot;]</p>
+     */
     @NameInMap("NumberList")
     public String numberList;
 

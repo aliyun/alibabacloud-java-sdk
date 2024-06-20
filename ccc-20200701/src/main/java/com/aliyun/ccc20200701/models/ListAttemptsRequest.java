@@ -4,60 +4,107 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAttemptsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>agent@ccc-test</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-16976964500325****</p>
+     */
     @NameInMap("AttemptId")
     public String attemptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1888888****</p>
+     */
     @NameInMap("Callee")
     public String callee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05711234****</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6badb397-a8b5-40b6-21019d382a09</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60ecb1a2-4480-4d01-bede-c5b7655bfadf</p>
      */
     @NameInMap("CaseId")
     public String caseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-16976964500325****</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1634115698291</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1634115688291</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

@@ -4,18 +4,34 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class EnableSchemaPropertyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The operation is not allowed. User state (READY) does not meet expectations (OFFLINE).</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2778FA12-EDD6-42AA-9B15-AF855072E5E5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,42 +4,79 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCampaignsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-14 20:59:59</p>
+     */
     @NameInMap("ActualStartTimeFrom")
     public String actualStartTimeFrom;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-14 20:59:59</p>
+     */
     @NameInMap("ActualStartTimeTo")
     public String actualStartTimeTo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-campaign</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-14 00:00:00</p>
+     */
     @NameInMap("PlanedStartTimeFrom")
     public String planedStartTimeFrom;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-14 20:59:59</p>
+     */
     @NameInMap("PlanedStartTimeTo")
     public String planedStartTimeTo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>skillgroup@ccc-test</p>
+     */
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Draft</p>
+     */
     @NameInMap("State")
     public String state;
 

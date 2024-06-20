@@ -4,15 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ImportDoNotCallNumbersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>temp/blacklist/import/15772471154xxxx/ccc-test/20220315100340/blacklist.xlsx</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;1900000****&quot;,&quot;1312121****&quot;]</p>
+     */
     @NameInMap("NumberList")
     public String numberList;
 

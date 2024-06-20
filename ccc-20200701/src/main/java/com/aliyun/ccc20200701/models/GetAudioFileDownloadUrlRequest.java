@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetAudioFileDownloadUrlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acc300c4-75c9-41ba-ba5e-2a365c96c248</p>
      */
     @NameInMap("AudioResourceId")
     public String audioResourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

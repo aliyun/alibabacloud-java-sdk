@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RedialCallResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public RedialCallResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class RedialCallResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BF268B34-09C2-43FD-BAC4-5D31EA63****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,39 +88,87 @@ public class RedialCallResponseBody extends TeaModel {
     }
 
     public static class RedialCallResponseBodyDataCallContextChannelContexts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COACHING</p>
+         */
         @NameInMap("ChannelFlags")
         public String channelFlags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATED</p>
+         */
         @NameInMap("ChannelState")
         public String channelState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8001****</p>
+         */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6573574060089****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1318888****</p>
+         */
         @NameInMap("Originator")
         public String originator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>139xxxx0501</p>
+         */
         @NameInMap("ReleaseInitiator")
         public String releaseInitiator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>486:USER_BUSY</p>
+         */
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609138903315</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8000****</p>
+         */
         @NameInMap("UserExtension")
         public String userExtension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>samzhang@abc</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -216,15 +276,27 @@ public class RedialCallResponseBody extends TeaModel {
     }
 
     public static class RedialCallResponseBodyDataCallContext extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OUTBOUND</p>
+         */
         @NameInMap("CallType")
         public String callType;
 
         @NameInMap("ChannelContexts")
         public java.util.List<RedialCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6538214103685****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
@@ -274,21 +346,41 @@ public class RedialCallResponseBody extends TeaModel {
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8000****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-6573574060089****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>samzhang@abc</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -389,6 +481,10 @@ public class RedialCallResponseBody extends TeaModel {
         @NameInMap("CallContext")
         public RedialCallResponseBodyDataCallContext callContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456789</p>
+         */
         @NameInMap("ContextId")
         public Long contextId;
 

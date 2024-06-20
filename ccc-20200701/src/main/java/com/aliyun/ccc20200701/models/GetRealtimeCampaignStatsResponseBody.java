@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetRealtimeCampaignStatsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42970829-E2C8-515A-8F42-5A6B59F852A7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,12 +77,24 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
     }
 
     public static class GetRealtimeCampaignStatsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Caps")
         public Long caps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
@@ -86,15 +110,31 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         @NameInMap("OutboundScenarioWorkingAgents")
         public Long outboundScenarioWorkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalAgents")
         public Long totalAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("WorkingAgents")
         public Long workingAgents;
 

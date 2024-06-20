@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AppendCasesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78cf6864-9a22-4ea8-a59d-5adc2d747b0e</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -49,21 +55,41 @@ public class AppendCasesRequest extends TeaModel {
     }
 
     public static class AppendCasesRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01012345678</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
         @NameInMap("CustomVariables")
         public String customVariables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>071*****801</p>
+         */
         @NameInMap("MaskedCallee")
         public String maskedCallee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>188888****</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 

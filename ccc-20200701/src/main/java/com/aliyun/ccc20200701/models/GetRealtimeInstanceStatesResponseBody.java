@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetRealtimeInstanceStatesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>943D8EF3-3321-471F-A104-51C96FCA94D6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -98,33 +110,73 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         @NameInMap("BreakCodeDetailList")
         public java.util.List<GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList> breakCodeDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InteractiveCalls")
         public Long interactiveCalls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LongestWaitingTime")
         public Long longestWaitingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalAgents")
         public Long totalAgents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WaitingCalls")
         public Long waitingCalls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WorkingAgents")
         public Long workingAgents;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteCallTagRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TagA</p>
      */
     @NameInMap("TagName")
     public String tagName;

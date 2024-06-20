@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetAudioFileUploadParametersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-file.wav</p>
      */
     @NameInMap("AudioFileName")
     public String audioFileName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

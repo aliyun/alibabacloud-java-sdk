@@ -6,23 +6,35 @@ import com.aliyun.tea.*;
 public class ImportDocumentsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b0eb2742-f37e-4c67-82d4-25c651c1c450</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test/test-file.wav</p>
      */
     @NameInMap("OssFileKey")
     public String ossFileKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7BEEA660-A45A-45E3-98CC-AFC65E715C23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>schema id</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>profile</p>
      */
     @NameInMap("SchemaId")
     public String schemaId;

@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListIvrTrackingDetailsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListIvrTrackingDetailsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D2RB671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,39 +77,83 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
     }
 
     public static class ListIvrTrackingDetailsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0533128****</p>
+         */
         @NameInMap("Callee")
         public String callee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1332315****</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
+        /**
+         * <strong>example:</strong>
+         * <p>65cp2c15-92ac-4e67-98b2-073a3c541c5d</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A=B;C=D</p>
+         */
         @NameInMap("ChannelVariables")
         public String channelVariables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-10963442671187****</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1621910542876</p>
+         */
         @NameInMap("EnterTime")
         public Long enterTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc99462-1058-47d0-a114-f145ea7444ff</p>
+         */
         @NameInMap("FlowId")
         public String flowId;
 
         @NameInMap("FlowName")
         public String flowName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("Instance")
         public String instance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1621910545105</p>
+         */
         @NameInMap("LeaveTime")
         public Long leaveTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("NodeExitCode")
         public String nodeExitCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e0bc19a3</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -107,9 +163,17 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         @NameInMap("NodeProperties")
         public java.util.Map<String, ?> nodeProperties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PLAY_OR_SAY</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;digits&quot;:&quot;2&quot;}</p>
+         */
         @NameInMap("NodeVariables")
         public java.util.Map<String, ?> nodeVariables;
 
@@ -252,12 +316,24 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListIvrTrackingDetailsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

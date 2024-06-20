@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListLegacyAgentStatusLogsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4C9A5D93-33A6-57F3-A423-4C83BD0A8455</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +92,17 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
     }
 
     public static class ListLegacyAgentStatusLogsResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AgentDropCall")
         public String agentDropCall;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("AgentNo")
         public String agentNo;
 
@@ -88,18 +112,34 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         @NameInMap("CallDir")
         public String callDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>454326****</p>
+         */
         @NameInMap("CallId")
         public String callId;
 
         @NameInMap("CallType")
         public String callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1312121****</p>
+         */
         @NameInMap("CalleeId")
         public String calleeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>08337676****</p>
+         */
         @NameInMap("CallerId")
         public String callerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>487326****</p>
+         */
         @NameInMap("ConnId")
         public String connId;
 
@@ -115,42 +155,90 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         @NameInMap("Extend4")
         public String extend4;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("GroupNo")
         public String groupNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8032****</p>
+         */
         @NameInMap("MonitedAgentNo")
         public String monitedAgentNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8012****</p>
+         */
         @NameInMap("MonitedAgentPhoneNo")
         public String monitedAgentPhoneNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8012****</p>
+         */
         @NameInMap("PhoneNo")
         public String phoneNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-03T10:15:30</p>
+         */
         @NameInMap("StatisticDate")
         public String statisticDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("StatisticTime")
         public Integer statisticTime;
 
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("TargetRequest")
         public String targetRequest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("TargetSelect")
         public String targetSelect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acc6736</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>07551231****</p>
+         */
         @NameInMap("TransferNo")
         public String transferNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>05711231****</p>
+         */
         @NameInMap("TransferNumber")
         public String transferNumber;
 
@@ -373,12 +461,24 @@ public class ListLegacyAgentStatusLogsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListLegacyAgentStatusLogsResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

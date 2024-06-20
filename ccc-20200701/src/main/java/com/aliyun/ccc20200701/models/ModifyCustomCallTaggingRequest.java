@@ -4,6 +4,10 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ModifyCustomCallTaggingRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;TagA&quot;,&quot;TagB&quot;]</p>
+     */
     @NameInMap("CallTagNameList")
     public String callTagNameList;
 
@@ -12,12 +16,18 @@ public class ModifyCustomCallTaggingRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1312121****</p>
      */
     @NameInMap("Number")
     public String number;

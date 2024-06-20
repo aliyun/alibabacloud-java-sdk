@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListContactFlowsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,12 +18,18 @@ public class ListContactFlowsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -28,6 +37,10 @@ public class ListContactFlowsRequest extends TeaModel {
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MAIN_FLOW</p>
+     */
     @NameInMap("Type")
     public String type;
 

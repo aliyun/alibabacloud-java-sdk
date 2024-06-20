@@ -7,6 +7,10 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("AvatarUrl")
     public String avatarUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("DisplayId")
     public String displayId;
 
@@ -18,40 +22,68 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent</p>
      */
     @NameInMap("LoginName")
     public String loginName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1382114****</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
     @NameInMap("Nickname")
     public String nickname;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ResetPassword")
     public Boolean resetPassword;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Agent@ccc-test</p>
      */
     @NameInMap("RoleId")
     public String roleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;skillGroupId&quot;:&quot;skillgroup1@ccc-test&quot;,&quot;skillLevel&quot;:1},{&quot;skillGroupId&quot;:&quot;skillgroup2@ccc-test&quot;,&quot;skillLevel&quot;:10}]</p>
+     */
     @NameInMap("SkillLevelList")
     public String skillLevelList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ON_SITE</p>
+     */
     @NameInMap("WorkMode")
     public String workMode;
 

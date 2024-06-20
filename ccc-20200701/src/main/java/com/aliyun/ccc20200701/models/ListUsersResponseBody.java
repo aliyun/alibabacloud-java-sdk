@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListUsersResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -19,6 +27,10 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,18 +88,30 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyDataListPersonalOutboundNumberList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0830011****</p>
+         */
         @NameInMap("Number")
         public String number;
 
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Bidirection</p>
+         */
         @NameInMap("Usage")
         public String usage;
 
@@ -139,12 +163,24 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyDataListSkillLevelList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup@ccc-test</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skillgroup</p>
+         */
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("SkillLevel")
         public Integer skillLevel;
 
@@ -180,30 +216,62 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8033****</p>
+         */
         @NameInMap("DeviceExt")
         public String deviceExt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACC-YUNBS-1.0.10-****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
+         */
         @NameInMap("DeviceState")
         public String deviceState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("DisplayId")
         public String displayId;
 
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8031****</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1382114****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
@@ -213,24 +281,48 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Primary")
         public Boolean primary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PrimaryAccount")
         public Boolean primaryAccount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21234502254620****</p>
+         */
         @NameInMap("RamId")
         public Long ramId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin@ccc-test</p>
+         */
         @NameInMap("RoleId")
         public String roleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Admin</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
         @NameInMap("SkillLevelList")
         public java.util.List<ListUsersResponseBodyDataListSkillLevelList> skillLevelList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ON_SITE</p>
+         */
         @NameInMap("WorkMode")
         public String workMode;
 
@@ -389,12 +481,24 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListUsersResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

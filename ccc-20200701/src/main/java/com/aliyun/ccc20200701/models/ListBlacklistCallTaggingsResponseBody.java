@@ -4,12 +4,20 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListBlacklistCallTaggingsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -18,6 +26,9 @@ public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>032C73C4-3A6F-4502-872B-4F5B41161C6E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +79,24 @@ public class ListBlacklistCallTaggingsResponseBody extends TeaModel {
     }
 
     public static class ListBlacklistCallTaggingsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Blacklisted")
         public Boolean blacklisted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-481841171213393920</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1521083xxxx</p>
+         */
         @NameInMap("Number")
         public String number;
 

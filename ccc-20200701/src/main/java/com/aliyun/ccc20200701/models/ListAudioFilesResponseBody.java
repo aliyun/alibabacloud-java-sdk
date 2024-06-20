@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListAudioFilesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListAudioFilesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>53223330-EBF1-586B-A2CB-93C3B711FDA0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,30 +77,54 @@ public class ListAudioFilesResponseBody extends TeaModel {
     }
 
     public static class ListAudioFilesResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-file.wav</p>
+         */
         @NameInMap("AudioFileName")
         public String audioFileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d5cd7a94-3b6a-47d2-b7fd-0b1cd839bf77</p>
+         */
         @NameInMap("AudioResourceId")
         public String audioResourceId;
 
         @NameInMap("AuditResult")
         public String auditResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-05 17:35:45.0</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccc-test/test-file.wav</p>
+         */
         @NameInMap("OssFileKey")
         public String ossFileKey;
 
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-08 15:34:49.0</p>
+         */
         @NameInMap("UpdatedTime")
         public String updatedTime;
 
@@ -186,12 +222,24 @@ public class ListAudioFilesResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListAudioFilesResponseBodyDataList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

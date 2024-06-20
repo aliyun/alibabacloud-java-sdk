@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetHistoricalCallerReportRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1900000****</p>
      */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1646841600000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1646928000000</p>
      */
     @NameInMap("StopTime")
     public Long stopTime;

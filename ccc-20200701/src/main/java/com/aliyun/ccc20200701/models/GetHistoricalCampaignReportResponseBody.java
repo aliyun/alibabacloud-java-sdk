@@ -4,18 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetHistoricalCampaignReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetHistoricalCampaignReportResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E3A847C1-9800-57DF-9172-2CDDC026388D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,24 +80,48 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         @NameInMap("AbandonRate")
         public Float abandonRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.10</p>
+         */
         @NameInMap("AbandonedRate")
         public Float abandonedRate;
 
         @NameInMap("AnswerRate")
         public Float answerRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CallsAbandoned")
         public Long callsAbandoned;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("CallsConnected")
         public Long callsConnected;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CallsDialed")
         public Long callsDialed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.50</p>
+         */
         @NameInMap("ConnectedRate")
         public Float connectedRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.50</p>
+         */
         @NameInMap("OccupancyRate")
         public Float occupancyRate;
 

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetContactFlowRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>274601be-a6d5-4429-bcef-32b51d031c6e</p>
      */
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>566399d7-5558-447c-a72f-9be2768b6a82</p>
      */
     @NameInMap("DraftId")
     public String draftId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

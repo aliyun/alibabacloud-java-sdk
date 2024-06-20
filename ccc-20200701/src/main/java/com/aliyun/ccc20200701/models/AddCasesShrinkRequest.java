@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddCasesShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c58b9719-3bc3-441d-a4d3-fc0309ef7066</p>
      */
     @NameInMap("CampaignId")
     public String campaignId;
@@ -15,6 +18,9 @@ public class AddCasesShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccc-test</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
