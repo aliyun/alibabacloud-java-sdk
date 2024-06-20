@@ -1888,6 +1888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AlarmMetadata", request.alarmMetadata);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalType)) {
+            query.put("ApprovalType", request.approvalType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -1946,6 +1950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceVersion)) {
             query.put("ServiceVersion", request.serviceVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareType)) {
+            query.put("ShareType", request.shareType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantType)) {
