@@ -4,9 +4,17 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>consortium-lianmenyumingyi-hc5d1bwl****</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 
@@ -43,9 +51,19 @@ public class DescribeFabricConsortiumsRequest extends TeaModel {
     }
 
     public static class DescribeFabricConsortiumsRequestTag extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

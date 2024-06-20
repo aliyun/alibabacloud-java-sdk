@@ -4,6 +4,12 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DeleteFabricChaincodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code-sacc-1pr09q7jm****</p>
+     */
     @NameInMap("ChaincodeId")
     public String chaincodeId;
 

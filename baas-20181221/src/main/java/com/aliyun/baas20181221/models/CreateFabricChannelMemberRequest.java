@@ -4,9 +4,18 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricChannelMemberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chan-channelx-1l1hmckuuisxo</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Organization")
     public java.util.List<CreateFabricChannelMemberRequestOrganization> organization;
 
@@ -32,6 +41,12 @@ public class CreateFabricChannelMemberRequest extends TeaModel {
     }
 
     public static class CreateFabricChannelMemberRequestOrganization extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>peers-aaaaaa1-1oxw31d046jtl</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

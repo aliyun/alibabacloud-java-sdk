@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,9 +126,17 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBody e
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBodyResultAuthorizedUserList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-07 10:55:42</p>
+         */
         @NameInMap("GmtAuthorized")
         public String gmtAuthorized;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1380013****</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
@@ -128,12 +164,24 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBody e
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -169,9 +217,17 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBody e
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4505A1E4-0EDD-4A02-A4D7-B49219328D49</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SPECIFIC_USER_AUTHORIZATION</p>
+         */
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
@@ -181,6 +237,10 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBody e
         @NameInMap("Pagination")
         public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersV2ResponseBodyResultPagination pagination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MINI_APP_BROWSER_TRANSACTION</p>
+         */
         @NameInMap("QRCodeType")
         public String QRCodeType;
 

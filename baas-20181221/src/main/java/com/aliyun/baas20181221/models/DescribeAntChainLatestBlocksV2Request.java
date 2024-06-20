@@ -4,9 +4,16 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainLatestBlocksV2Request extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AntChainId")
     public String antChainId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>M8GaMEyX</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 

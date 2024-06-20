@@ -4,24 +4,62 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricChaincodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chan-first-channel-1w55v3u39x2xz</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consortium-aaaaaa-akpcsjjac2jd</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OR (\&quot;aaaaaa1MSP.peer\&quot;)</p>
+     */
     @NameInMap("EndorsePolicy")
     public String endorsePolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa1-1oxw31d046jtl</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://chaincode.oss-cn-beijing.aliyuncs.com">https://chaincode.oss-cn-beijing.aliyuncs.com</a></p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aaaaaa1/a0cf8729-7d47-44c9-9ed5-6d2fdfc8dc2c/sacc.cc</p>
+     */
     @NameInMap("OssUrl")
     public String ossUrl;
 

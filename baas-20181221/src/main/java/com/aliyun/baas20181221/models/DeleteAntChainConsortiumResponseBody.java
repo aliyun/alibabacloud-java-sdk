@@ -4,9 +4,17 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DeleteAntChainConsortiumResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F3685787-9F2F-4D60-ADD6-07A5179552CA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Result")
     public String result;
 

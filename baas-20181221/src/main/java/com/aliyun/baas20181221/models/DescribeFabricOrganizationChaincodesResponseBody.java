@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricOrganizationChaincodesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,42 +66,94 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricOrganizationChaincodesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>code-sacc-1pr09q7jmo0np</p>
+         */
         @NameInMap("ChaincodeId")
         public String chaincodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mycc</p>
+         */
         @NameInMap("ChaincodeName")
         public String chaincodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.3</p>
+         */
         @NameInMap("ChaincodeVersion")
         public String chaincodeVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chan-first-channel-31hlgpen5k5lig</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>first-channel</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>consortium-lianmenyumingyi-hc5d1bwlulg7</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid-23425</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("DeployTime")
         public String deployTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OR (&#39;perf9141MSP.member&#39;)</p>
+         */
         @NameInMap("EndorsePolicy")
         public String endorsePolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Installed</p>
+         */
         @NameInMap("Installed")
         public String installed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("State")
         public String state;
 

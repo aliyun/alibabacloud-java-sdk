@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumChaincodesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricConsortiumChaincodesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,54 +66,122 @@ public class DescribeFabricConsortiumChaincodesResponseBody extends TeaModel {
     }
 
     public static class DescribeFabricConsortiumChaincodesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>code-sacc-1pr09q7jmo0np</p>
+         */
         @NameInMap("ChaincodeId")
         public String chaincodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sacc</p>
+         */
         @NameInMap("ChaincodeName")
         public String chaincodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("ChaincodeVersion")
         public String chaincodeVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chan-channelx-1l1hmckuuisxo</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cname</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>consortium-lianmenyumingyi-hc5d1bwlulg7</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544411108000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544411108000</p>
+         */
         @NameInMap("DeployTime")
         public String deployTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OR (\&quot;aaaaaa1MSP.peer\&quot;)</p>
+         */
         @NameInMap("EndorsePolicy")
         public String endorsePolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>input</p>
+         */
         @NameInMap("Input")
         public String input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Install")
         public Boolean install;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>go-sdk-demo/chaincode/src</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>peers-aaaaaa2-1eqnj5o5w9dt3</p>
+         */
         @NameInMap("ProviderId")
         public String providerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Instantiatable</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 

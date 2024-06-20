@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainBlockV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainBlockV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,39 +126,87 @@ public class DescribeAntChainBlockV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainBlockV2ResponseBodyResultTransSummaryList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8bd720bde18c4b37b0f4a1c7834db163</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5abf96debc87f1b64dcbaf4fa57fd46f2a06acdb5de0ba91ef9718d81aebafc7</p>
+         */
         @NameInMap("BlockHash")
         public String blockHash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Category")
         public Integer category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609223363570</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e7d3e769f3f593dadcb8634cc5b09fc90dd3a61c4a06a79cb0923662fe6fae6b</p>
+         */
         @NameInMap("From")
         public String from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000000</p>
+         */
         @NameInMap("GasUsed")
         public Long gasUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>076bba1b726b3bcb958cba6fffc03eaa5cbed59320271dcbc0e05648a18a94f2</p>
+         */
         @NameInMap("Hash")
         public String hash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>254761</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReferenceCount")
         public Integer referenceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e93372533f323b2f12783aa3a586135cf421486439c2cdcde47411b78f9839ec</p>
+         */
         @NameInMap("To")
         public String to;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CALL_CONTRACT</p>
+         */
         @NameInMap("TransTypeV10")
         public String transTypeV10;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("TransTypeV6")
         public String transTypeV6;
 
@@ -238,30 +314,62 @@ public class DescribeAntChainBlockV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainBlockV2ResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8bd720bde18c4b37b0f4a1c7834db163</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5abf96debc87f1b64dcbaf4fa57fd46f2a06acdb5de0ba91ef9718d81aebafc7</p>
+         */
         @NameInMap("BlockHash")
         public String blockHash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609223363570</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>254761</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2444ef0617e0c6845549dead70f118c5a58f03c04575ecb79e283ab5c34b491d</p>
+         */
         @NameInMap("PreviousHash")
         public String previousHash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0000000000000000000000000000000000000000000000000000000000000000</p>
+         */
         @NameInMap("RootTxHash")
         public String rootTxHash;
 
         @NameInMap("TransSummaryList")
         public java.util.List<DescribeAntChainBlockV2ResponseBodyResultTransSummaryList> transSummaryList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TransactionSize")
         public Integer transactionSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public Long version;
 

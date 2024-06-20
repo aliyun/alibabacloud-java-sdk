@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CheckFabricOrganizationDomainResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C30A14C7-800E-468B-9EB2-C704DA49295E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public CheckFabricOrganizationDomainResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,12 +66,24 @@ public class CheckFabricOrganizationDomainResponseBody extends TeaModel {
     }
 
     public static class CheckFabricOrganizationDomainResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bank</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Prompt")
         public String prompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Valid")
         public Boolean valid;
 

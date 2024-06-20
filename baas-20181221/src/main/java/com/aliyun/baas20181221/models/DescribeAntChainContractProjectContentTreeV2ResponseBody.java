@@ -4,27 +4,59 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainContractProjectContentTreeV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;description&quot;:&quot;&quot;,&quot;projectId&quot;:&quot;&quot;,&quot;projectName&quot;:&quot;&quot;,&quot;treeContractContent&quot;:[{&quot;content&quot;:&quot;&quot;,&quot;fileName&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;isDir&quot;:false,&quot;parentId\&quot;:&quot;&quot;}],&quot;type&quot;:&quot;&quot;,&quot;version&quot;:&quot;&quot;}&quot;</p>
+     */
     @NameInMap("Result")
     public String result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

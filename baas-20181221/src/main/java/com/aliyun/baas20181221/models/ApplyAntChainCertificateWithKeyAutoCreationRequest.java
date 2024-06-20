@@ -4,30 +4,84 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ApplyAntChainCertificateWithKeyAutoCreationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1q8B5R9p</p>
+     */
     @NameInMap("AntChainId")
     public String antChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>commonName</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DV80nJXq</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>countryName</p>
+     */
     @NameInMap("CountryName")
     public String countryName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>localityName</p>
+     */
     @NameInMap("LocalityName")
     public String localityName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>organizationName</p>
+     */
     @NameInMap("OrganizationName")
     public String organizationName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>organizationUnitName</p>
+     */
     @NameInMap("OrganizationUnitName")
     public String organizationUnitName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stateOrProvinceName</p>
+     */
     @NameInMap("StateOrProvinceName")
     public String stateOrProvinceName;
 

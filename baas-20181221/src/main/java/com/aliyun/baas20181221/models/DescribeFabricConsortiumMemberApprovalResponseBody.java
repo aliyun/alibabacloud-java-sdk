@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeFabricConsortiumMemberApprovalResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,27 +66,59 @@ public class DescribeFabricConsortiumMemberApprovalResponseBody extends TeaModel
     }
 
     public static class DescribeFabricConsortiumMemberApprovalResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Any</p>
+         */
         @NameInMap("ChannelCreatePolicy")
         public String channelCreatePolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544411108000</p>
+         */
         @NameInMap("ConfirmTime")
         public String confirmTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>consortium-lianmenyumingyi-hc5d1bwlulg7</p>
+         */
         @NameInMap("ConsortiumId")
         public String consortiumId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("ConsortiumName")
         public String consortiumName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>domain</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>peers-aaaaaa2-1eqnj5o5w9dt3</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>orgname</p>
+         */
         @NameInMap("OrganizationName")
         public String organizationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("State")
         public String state;
 

@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainQRCodeAuthorizationV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>980061FC-058D-4298-8598-D9DDB10D0ED4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainQRCodeAuthorizationV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,12 +126,24 @@ public class DescribeAntChainQRCodeAuthorizationV2ResponseBody extends TeaModel 
     }
 
     public static class DescribeAntChainQRCodeAuthorizationV2ResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8bd720bde18c4b37b0f4a1c7834db163</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL_USER_AUTHORIZATION</p>
+         */
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MINI_APP_BROWSER_TRANSACTION</p>
+         */
         @NameInMap("QRCodeType")
         public String QRCodeType;
 

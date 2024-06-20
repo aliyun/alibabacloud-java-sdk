@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBody extends T
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAccessLogResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AccessAlipayAccountCount")
         public Long accessAlipayAccountCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("AccessCount")
         public Long accessCount;
 

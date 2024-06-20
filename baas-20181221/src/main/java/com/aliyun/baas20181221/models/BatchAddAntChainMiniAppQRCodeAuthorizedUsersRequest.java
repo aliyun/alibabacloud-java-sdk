@@ -4,9 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bDXK6boZ</p>
+     */
     @NameInMap("AntChainId")
     public String antChainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;1380013****&quot;, &quot;1380013****&quot;]</p>
+     */
     @NameInMap("PhoneList")
     public java.util.Map<String, ?> phoneList;
 

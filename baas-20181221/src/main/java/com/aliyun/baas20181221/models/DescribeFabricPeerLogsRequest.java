@@ -4,12 +4,28 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricPeerLogsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Lines")
     public String lines;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-test11-tzwny25vqicq</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peer1</p>
+     */
     @NameInMap("PeerName")
     public String peerName;
 

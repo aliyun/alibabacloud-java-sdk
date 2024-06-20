@@ -4,15 +4,39 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateAntChainAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AEDC32...</p>
+     */
     @NameInMap("AccountPubKey")
     public String accountPubKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AEDC32...</p>
+     */
     @NameInMap("AccountRecoverPubKey")
     public String accountRecoverPubKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bDXK6boZ</p>
+     */
     @NameInMap("AntChainId")
     public String antChainId;
 

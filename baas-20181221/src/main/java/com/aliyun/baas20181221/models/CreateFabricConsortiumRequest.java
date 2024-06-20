@@ -4,42 +4,106 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricConsortiumRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("ChannelPolicy")
     public String channelPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>some</p>
+     */
     @NameInMap("ConsortiumDescription")
     public String consortiumDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aaaaa</p>
+     */
     @NameInMap("ConsortiumName")
     public String consortiumName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>helloworld</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>etcdraft</p>
+     */
     @NameInMap("OrdererType")
     public String ordererType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("OrderersCount")
     public Integer orderersCount;
 
     @NameInMap("Organization")
     public java.util.List<CreateFabricConsortiumRequestOrganization> organization;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>month</p>
+     */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PeersCount")
     public Integer peersCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>basic</p>
+     */
     @NameInMap("SpecName")
     public String specName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>random</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -153,6 +217,10 @@ public class CreateFabricConsortiumRequest extends TeaModel {
     }
 
     public static class CreateFabricConsortiumRequestOrganization extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>peers-yidio-1tuigx42b1goc</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

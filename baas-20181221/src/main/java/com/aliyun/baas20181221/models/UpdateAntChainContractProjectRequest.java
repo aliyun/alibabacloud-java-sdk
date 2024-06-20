@@ -7,12 +7,22 @@ public class UpdateAntChainContractProjectRequest extends TeaModel {
     @NameInMap("ProjectDescription")
     public String projectDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bDXK1b8Z</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1.1.1</p>
+     */
     @NameInMap("ProjectVersion")
     public String projectVersion;
 

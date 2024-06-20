@@ -4,12 +4,28 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class JoinFabricChannelRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chan-channelx-1l1hmckuu****</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>accept</p>
+     */
     @NameInMap("Do")
     public String _do;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Location")
     public String location;
 

@@ -4,6 +4,12 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricInvitationCodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consortium-lianmenyumingyi-hc5d1bwl****</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 

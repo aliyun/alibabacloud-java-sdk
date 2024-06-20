@@ -4,9 +4,17 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ApplyAntChainCertificateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D3FB9E67-0E31-4B8B-8895-3660CCE8CA62</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Result")
     public String result;
 

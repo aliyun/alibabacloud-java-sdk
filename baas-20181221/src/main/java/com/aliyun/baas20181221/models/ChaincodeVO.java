@@ -4,87 +4,150 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class ChaincodeVO extends TeaModel {
-    // 链码定义ID
+    /**
+     * <strong>example:</strong>
+     * <p>a5f04baed775b016e8dc386783f40a2c8b13823cac22bc5fd11846cca4a13a9a</p>
+     */
     @NameInMap("ChaincodeDefinitionId")
     public String chaincodeDefinitionId;
 
-    // 链码ID
+    /**
+     * <strong>example:</strong>
+     * <p>code-sacc-jbkuldd3i7ad</p>
+     */
     @NameInMap("ChaincodeId")
     public String chaincodeId;
 
-    // 链码包ID
+    /**
+     * <strong>example:</strong>
+     * <p>sacc_v1.0:698d4e73c5f1d0239fbf0313ac79ddfaf44d5a803ecb02a4d1983cca4a706860</p>
+     */
     @NameInMap("ChaincodePackageId")
     public String chaincodePackageId;
 
-    // 通道ID
+    /**
+     * <strong>example:</strong>
+     * <p>chan-test-b0wx5suhgyb9p</p>
+     */
     @NameInMap("ChannelId")
     public String channelId;
 
-    // 通道名称
+    /**
+     * <strong>example:</strong>
+     * <p>f100</p>
+     */
     @NameInMap("ChannelName")
     public String channelName;
 
-    // 联盟ID
+    /**
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa2-1eqnj5o5w9dt3</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
-    // 创建时间
+    /**
+     * <strong>example:</strong>
+     * <p>1533025590</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 安装部署时间
+    /**
+     * <strong>example:</strong>
+     * <p>1533025590</p>
+     */
     @NameInMap("DeployTime")
     public String deployTime;
 
-    // 背书策略
+    /**
+     * <strong>example:</strong>
+     * <p>OR (&quot;perf9141MSP.member&quot;)</p>
+     */
     @NameInMap("EndorsePolicy")
     public String endorsePolicy;
 
-    // 是否需要初始化
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("InitRequired")
     public Boolean initRequired;
 
-    // 链码初始化参数
+    /**
+     * <strong>example:</strong>
+     * <p>args:&quot;key&quot; args:&quot;val&quot;</p>
+     */
     @NameInMap("Input")
     public String input;
 
-    // 链码是否安装
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Install")
     public Boolean install;
 
-    // 是否是管理链码
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Management")
     public Boolean management;
 
-    // 信息
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // 链码包名称
+    /**
+     * <strong>example:</strong>
+     * <p>sacc</p>
+     */
     @NameInMap("Name")
     public String name;
 
-    // 链码路径
+    /**
+     * <strong>example:</strong>
+     * <p>chaincode/sacc</p>
+     */
     @NameInMap("Path")
     public String path;
 
-    // 上传者ID
+    /**
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa2-1eqnj5o5w9dt3</p>
+     */
     @NameInMap("ProviderId")
     public String providerId;
 
-    // 链码上传者
+    /**
+     * <strong>example:</strong>
+     * <p>perf9141</p>
+     */
     @NameInMap("ProviderName")
     public String providerName;
 
-    // 链码状态
+    /**
+     * <strong>example:</strong>
+     * <p>Pending</p>
+     */
     @NameInMap("State")
     public String state;
 
-    // 链码类型
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
-    // 链码包版本
+    /**
+     * <strong>example:</strong>
+     * <p>1.1</p>
+     */
     @NameInMap("Version")
     public String version;
 

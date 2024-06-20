@@ -4,21 +4,41 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>code</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>msg</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeTasksResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +96,66 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>action</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Handled")
         public Boolean handled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>type</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("RequestTime")
         public Long requestTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533025590</p>
+         */
         @NameInMap("ResponseTime")
         public String responseTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>result</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sender</p>
+         */
         @NameInMap("Sender")
         public String sender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>target</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33</p>
+         */
         @NameInMap("TaskId")
         public Integer taskId;
 

@@ -4,15 +4,37 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeFabricExplorerRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExBody")
     public String exBody;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GET</p>
+     */
     @NameInMap("ExMethod")
     public String exMethod;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/api/v1/channel</p>
+     */
     @NameInMap("ExUrl")
     public String exUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-test11-tzwny25vqicq</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 

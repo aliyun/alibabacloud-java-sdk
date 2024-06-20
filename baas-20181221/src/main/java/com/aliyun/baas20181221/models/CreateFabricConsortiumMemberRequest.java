@@ -4,12 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricConsortiumMemberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consortium-aaaaaa-akpcsjjac2jd</p>
+     */
     @NameInMap("ConsortiumId")
     public String consortiumId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Organization")
     public java.util.List<CreateFabricConsortiumMemberRequestOrganization> organization;
 
@@ -43,6 +58,10 @@ public class CreateFabricConsortiumMemberRequest extends TeaModel {
     }
 
     public static class CreateFabricConsortiumMemberRequestOrganization extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>peers-aaaaaa1-1oxw31d046jtl</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

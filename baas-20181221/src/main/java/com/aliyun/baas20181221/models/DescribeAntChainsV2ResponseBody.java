@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainsV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DBD6C69E-22B9-419E-B072-7A715F3AA330</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainsV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,57 +126,125 @@ public class DescribeAntChainsV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainsV2ResponseBodyResultAntChains extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8bd720bde18c4b37b0f4a1c7834db163</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
         @NameInMap("AntChainName")
         public String antChainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Contract</p>
+         */
         @NameInMap("ChainType")
         public String chainType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>classic</p>
+         */
         @NameInMap("CipherSuit")
         public String cipherSuit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1609221924000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1672329600000</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALIYUN202012291405173265824745109</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAdmin")
         public Boolean isAdmin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ChainApplied</p>
+         */
         @NameInMap("MemberStatus")
         public String memberStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fdmt</p>
+         */
         @NameInMap("MerkleTreeSuit")
         public String merkleTreeSuit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MonitorStatus")
         public Boolean monitorStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Basic</p>
+         */
         @NameInMap("ResourceSize")
         public String resourceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATE</p>
+         */
         @NameInMap("RestStatus")
         public String restStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rsa</p>
+         */
         @NameInMap("TlsAlgo")
         public String tlsAlgo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.19.1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -304,12 +400,24 @@ public class DescribeAntChainsV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainsV2ResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -348,6 +456,10 @@ public class DescribeAntChainsV2ResponseBody extends TeaModel {
         @NameInMap("AntChains")
         public java.util.List<DescribeAntChainsV2ResponseBodyResultAntChains> antChains;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsExist")
         public Boolean isExist;
 

@@ -4,9 +4,21 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class SynchronizeFabricChaincodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code-sacc-1pr09q7jm****</p>
+     */
     @NameInMap("ChaincodeId")
     public String chaincodeId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-aaaaaa2-1eqnj5o5w****</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 

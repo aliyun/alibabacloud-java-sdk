@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainDownloadPathsV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainDownloadPathsV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,15 +126,31 @@ public class DescribeAntChainDownloadPathsV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainDownloadPathsV2ResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http://***ca.crt</p>
+         */
         @NameInMap("CaCrtUrl")
         public String caCrtUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***client.crt</p>
+         */
         @NameInMap("ClientCrtUrl")
         public String clientCrtUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***</p>
+         */
         @NameInMap("SdkUrl")
         public String sdkUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://***trustCa</p>
+         */
         @NameInMap("TrustCaUrl")
         public String trustCaUrl;
 

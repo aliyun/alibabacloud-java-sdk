@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultAuthorizedUserList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1580958389000</p>
+         */
         @NameInMap("GmtAuthorized")
         public String gmtAuthorized;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1380013****</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
@@ -62,12 +74,24 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -103,9 +127,17 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
     }
 
     public static class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bDXK6boZ</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL_USER_AUTHORIZATION</p>
+         */
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
@@ -115,6 +147,10 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
         @NameInMap("Pagination")
         public DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBodyResultPagination pagination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MINI_APP_BROWSER_TRANSACTION</p>
+         */
         @NameInMap("QRCodeType")
         public String QRCodeType;
 

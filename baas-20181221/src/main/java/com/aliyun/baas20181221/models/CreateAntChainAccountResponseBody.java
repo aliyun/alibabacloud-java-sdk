@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateAntChainAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0301F6CB-4FA6-4D03-8668-963623B63D0F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class CreateAntChainAccountResponseBody extends TeaModel {
     }
 
     public static class CreateAntChainAccountResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bDXK6boZ</p>
+         */
         @NameInMap("AntChainId")
         public String antChainId;
 

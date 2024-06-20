@@ -4,15 +4,37 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricOrganizationUserRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>foo=foo1,bar=bar1</p>
+     */
     @NameInMap("Attrs")
     public String attrs;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peers-yidio-1tuigx42b****</p>
+     */
     @NameInMap("OrganizationId")
     public String organizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
+     */
     @NameInMap("Username")
     public String username;
 

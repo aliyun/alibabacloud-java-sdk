@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainLatestBlocksV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeAntChainLatestBlocksV2ResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,33 +126,73 @@ public class DescribeAntChainLatestBlocksV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainLatestBlocksV2ResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8bd720bde18c4b37b0f4a1c7834db163</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b21baa257788d97eb0006672ccc5008f465365e1dec88d0bbd833e150414b3d5</p>
+         */
         @NameInMap("BizData")
         public String bizData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b21baa257788d97eb0006672ccc5008f465365e1dec88d0bbd833e150414b3d5</p>
+         */
         @NameInMap("BlockHash")
         public String blockHash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1610002621000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>259808</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f208834bdc72bd6bb05c5ef1a35abbc8295a16deda9526b7b78c69ec24591b9f</p>
+         */
         @NameInMap("PreviousHash")
         public String previousHash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0000000000000000000000000000000000000000000000000000000000000000</p>
+         */
         @NameInMap("RootTxHash")
         public String rootTxHash;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TransactionSize")
         public Long transactionSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33556226</p>
+         */
         @NameInMap("Version")
         public Long version;
 

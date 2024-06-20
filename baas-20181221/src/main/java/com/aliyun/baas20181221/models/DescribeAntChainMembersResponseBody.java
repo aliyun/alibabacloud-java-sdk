@@ -4,6 +4,10 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainMembersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E0DB75A2-28C8-4295-8851-A157FFB3DFED</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeAntChainMembersResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainMembersResponseBodyResultMembers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1557477823000</p>
+         */
         @NameInMap("JoinTime")
         public Long joinTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid-1388601577407805</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid-1562589998337656</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Member</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AllianceNotJoined</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -95,12 +119,24 @@ public class DescribeAntChainMembersResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainMembersResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

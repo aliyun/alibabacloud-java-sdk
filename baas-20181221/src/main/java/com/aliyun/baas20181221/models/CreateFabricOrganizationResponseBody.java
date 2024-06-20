@@ -4,15 +4,27 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class CreateFabricOrganizationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public CreateFabricOrganizationResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,57 +66,129 @@ public class CreateFabricOrganizationResponseBody extends TeaModel {
     }
 
     public static class CreateFabricOrganizationResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
         @NameInMap("ClusterState")
         public String clusterState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("CodeName")
         public String codeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ConsortiumCount")
         public Integer consortiumCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1544086901984</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>domain</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>desc</p>
+         */
         @NameInMap("OrganizationDescription")
         public String organizationDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zuzhiyumingyi-hc5d1bwlulg7</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zuzhiyumingyi</p>
+         */
         @NameInMap("OrganizationName")
         public String organizationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26842</p>
+         */
         @NameInMap("OwnerBid")
         public String ownerBid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1019556</p>
+         */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("PeerCount")
         public Integer peerCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1890FA4F-067A-4CE9-AC9B-2BD2E58FB5D3</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
         @NameInMap("ServiceState")
         public String serviceState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>baisc</p>
+         */
         @NameInMap("SpecName")
         public String specName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UserCount")
         public Integer userCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zone</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

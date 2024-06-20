@@ -4,27 +4,55 @@ package com.aliyun.baas20181221.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntChainMembersV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D68D66B6-1964-4073-8714-B49F5EF1AEFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeAntChainMembersV2ResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,18 +126,38 @@ public class DescribeAntChainMembersV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainMembersV2ResponseBodyResultMembers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1609745002000</p>
+         */
         @NameInMap("JoinTime")
         public Long joinTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1034774750177934</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid-1034774750177934</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Member</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AllianceJoined</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -161,12 +209,24 @@ public class DescribeAntChainMembersV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeAntChainMembersV2ResponseBodyResultPagination extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
