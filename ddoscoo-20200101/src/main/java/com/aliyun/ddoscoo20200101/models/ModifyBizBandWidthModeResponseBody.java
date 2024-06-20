@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyBizBandWidthModeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
     @NameInMap("RequestId")
     public String requestId;

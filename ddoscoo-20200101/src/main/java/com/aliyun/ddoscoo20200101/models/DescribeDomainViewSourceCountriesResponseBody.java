@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
     public static class DescribeDomainViewSourceCountriesResponseBodySourceCountrys extends TeaModel {
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3390671</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The abbreviation of the country or area. For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic. For example, **cn** indicates China, and **us** indicates the United States.</p>
+         * <p>The abbreviation of the country or area. For more information, see the <strong>Codes of countries and areas</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic. For example, <strong>cn</strong> indicates China, and <strong>us</strong> indicates the United States.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("CountryId")
         public String countryId;

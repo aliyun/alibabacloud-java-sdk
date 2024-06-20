@@ -12,6 +12,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>642319A9-D1F2-4459-A447-E57CFC599FDE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,32 +43,48 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     public static class DescribeInstanceStatisticsResponseBodyInstanceStatistics extends TeaModel {
         /**
          * <p>The number of advanced mitigation sessions that are used in this month.</p>
-         * <br>
-         * <p>> This parameter is returned only if Anti-DDoS Premium instances are queried.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if Anti-DDoS Premium instances are queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DefenseCountUsage")
         public Integer defenseCountUsage;
 
         /**
          * <p>The number of domain names that are protected by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DomainUsage")
         public Integer domainUsage;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The number of ports that are protected by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PortUsage")
         public Integer portUsage;
 
         /**
          * <p>The number of websites that are protected by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SiteUsage")
         public Integer siteUsage;

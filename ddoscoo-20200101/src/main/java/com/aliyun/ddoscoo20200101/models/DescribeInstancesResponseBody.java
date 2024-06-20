@@ -12,12 +12,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A0AF40CC-814A-5A86-AEAA-6F19E88B8A39</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,101 +60,147 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
         /**
          * <p>The time when the instance is created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637751953000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The overdue status of the instance. The value is fixed as **0**, which indicates that your Alibaba Cloud account does not have overdue payments. The instance supports only the subscription billing method.</p>
+         * <p>The overdue status of the instance. The value is fixed as <strong>0</strong>, which indicates that your Alibaba Cloud account does not have overdue payments. The instance supports only the subscription billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DebtStatus")
         public Integer debtStatus;
 
         /**
          * <p>The mitigation plan of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan</p>
-         * <p>*   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan</p>
-         * <p>*   **2**: Anti-DDoS Premium instance of the MCA mitigation plan</p>
-         * <p>*   **9**: Anti-DDoS Pro instance of the Profession mitigation plan</p>
+         * <ul>
+         * <li><strong>0</strong>: Anti-DDoS Premium instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Premium instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Premium instance of the MCA mitigation plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Pro instance of the Profession mitigation plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Edition")
         public Integer edition;
 
         /**
          * <p>The forwarding status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The instance no longer forwards service traffic.</p>
-         * <p>*   **1**: The instance forwards service traffic as expected.</p>
+         * <ul>
+         * <li><strong>0</strong>: The instance no longer forwards service traffic.</li>
+         * <li><strong>1</strong>: The instance forwards service traffic as expected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Enabled")
         public Integer enabled;
 
         /**
          * <p>The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640361600000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-7pp2g9ed****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.199.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</p>
-         * <p>*   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.</p>
+         * <ul>
+         * <li><strong>fnat</strong>: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</li>
+         * <li><strong>v6tov4</strong>: All requests are forwarded to origin servers that use IPv4 addresses.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fnat</p>
          */
         @NameInMap("IpMode")
         public String ipMode;
 
         /**
          * <p>The IP version of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Ipv4**: IPv4</p>
-         * <p>*   **Ipv6**: IPv6</p>
+         * <ul>
+         * <li><strong>Ipv4</strong>: IPv4</li>
+         * <li><strong>Ipv6</strong>: IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipv4</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
          * <p>Indicates whether the 95th percentile metering method has been enabled for the instance. Valid values:</p>
-         * <br>
-         * <p>*   0: The 95th percentile metering method has not been enabled for the instance.</p>
-         * <p>*   1: The 95th percentile metering method has been enabled for the instance.</p>
+         * <ul>
+         * <li>0: The 95th percentile metering method has not been enabled for the instance.</li>
+         * <li>1: The 95th percentile metering method has been enabled for the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsFirstOpenBw")
         public Long isFirstOpenBw;
 
         /**
          * <p>Indicates whether the metering method of the 95th percentile burstable QPS is enabled for the instance. Valid values:</p>
-         * <br>
-         * <p>- 0: no</p>
-         * <p>- 1: yes</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsFirstOpenQps")
         public Long isFirstOpenQps;
 
         /**
          * <p>The remarks of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc-test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **1**: normal</p>
-         * <p>*   **2**: expired</p>
+         * <ul>
+         * <li><strong>1</strong>: normal</li>
+         * <li><strong>2</strong>: expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

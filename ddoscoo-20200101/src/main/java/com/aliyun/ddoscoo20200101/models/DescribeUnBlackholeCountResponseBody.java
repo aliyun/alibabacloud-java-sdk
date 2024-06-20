@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeUnBlackholeCountResponseBody extends TeaModel {
     /**
      * <p>The remaining quota that you can deactivate blackhole filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("RemainCount")
     public Integer remainCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>232929FA-40B6-4C53-9476-EE335ABA44CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total quota that you can deactivate blackhole filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

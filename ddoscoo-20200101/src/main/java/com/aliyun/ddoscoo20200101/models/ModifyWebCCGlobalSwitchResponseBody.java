@@ -4,6 +4,10 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebCCGlobalSwitchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5AE2FC86-C840-41AE-9F1A-3A2747C7C1DF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

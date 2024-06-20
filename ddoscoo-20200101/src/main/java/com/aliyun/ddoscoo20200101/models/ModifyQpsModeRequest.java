@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyQpsModeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-7e225i41****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>month</p>
      */
     @NameInMap("Mode")
     public String mode;

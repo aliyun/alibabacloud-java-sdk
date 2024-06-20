@@ -6,20 +6,23 @@ import com.aliyun.tea.*;
 public class ModifyOcspStatusRequest extends TeaModel {
     /**
      * <p>The domain name for which you want to configure the Static Page Caching policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>click.linktech.cn</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>Specifies whether to enable the OCSP feature. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Enable")

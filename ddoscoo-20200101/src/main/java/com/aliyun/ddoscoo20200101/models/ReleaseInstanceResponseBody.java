@@ -4,6 +4,10 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>06FFAF5F-CD3E-4886-A849-AAB40DFF6515</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SwitchSchedulerRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E3C301F-84BB-50E4-9DB9-2937B2429C1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

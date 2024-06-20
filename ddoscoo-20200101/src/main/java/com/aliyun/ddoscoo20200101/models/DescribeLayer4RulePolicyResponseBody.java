@@ -6,42 +6,62 @@ import com.aliyun.tea.*;
 public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     /**
      * <p>The port of the origin server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022</p>
      */
     @NameInMap("BackendPort")
     public Integer backendPort;
 
     /**
      * <p>The mode that is used to forward service traffic. Valid values:</p>
-     * <br>
-     * <p>*   0: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the [CreateNetworkRules](https://help.aliyun.com/document_detail/157482.html) operation to create a port forwarding rule.</p>
-     * <p>*   1: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the [ConfigLayer4RulePolicy](https://help.aliyun.com/document_detail/312684.html) operation to configure IP addresses.</p>
+     * <ul>
+     * <li>0: the default mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the origin IP address that you specified when you created the port forwarding rule. You can call the <a href="https://help.aliyun.com/document_detail/157482.html">CreateNetworkRules</a> operation to create a port forwarding rule.</li>
+     * <li>1: the origin redundancy mode. In this mode, Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary or secondary origin servers. You can call the <a href="https://help.aliyun.com/document_detail/312684.html">ConfigLayer4RulePolicy</a> operation to configure IP addresses.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BakMode")
     public String bakMode;
 
     /**
      * <p>The origin server that is used to receive service traffic. Valid values:</p>
-     * <br>
-     * <p>*   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</p>
-     * <p>*   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</p>
+     * <ul>
+     * <li><strong>1</strong>: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</li>
+     * <li><strong>2</strong>: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentIndex")
     public Integer currentIndex;
 
     /**
      * <p>The type of the protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>udp</p>
      */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
     /**
      * <p>The forwarding port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020</p>
      */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddosDip-sg-4hr2b3l****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -54,6 +74,9 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6E46CC51-36BE-1100-B14C-DAF8381B8F73</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -144,39 +167,58 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     public static class DescribeLayer4RulePolicyResponseBodyPriRealServers extends TeaModel {
         /**
          * <p>The origin server that is used to receive service traffic. Valid values:</p>
-         * <br>
-         * <p>*   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</p>
-         * <p>*   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</p>
+         * <ul>
+         * <li><strong>1</strong>: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</li>
+         * <li><strong>2</strong>: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentIndex")
         public Integer currentIndex;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         @NameInMap("Eip")
         public String eip;
 
         /**
          * <p>The forwarding port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020</p>
          */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosDip-sg-4hr2b3l****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>udp</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The IP address of the primary origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.1</p>
          */
         @NameInMap("RealServer")
         public String realServer;
@@ -239,39 +281,58 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     public static class DescribeLayer4RulePolicyResponseBodySecRealServers extends TeaModel {
         /**
          * <p>The origin server that is used to receive service traffic. Valid values:</p>
-         * <br>
-         * <p>*   **1**: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</p>
-         * <p>*   **2**: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</p>
+         * <ul>
+         * <li><strong>1</strong>: the primary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the primary origin server.</li>
+         * <li><strong>2</strong>: the secondary origin server, which indicates that Anti-DDoS Pro or Anti-DDoS Premium forwards service traffic to the IP addresses of the secondary origin server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentIndex")
         public Integer currentIndex;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         @NameInMap("Eip")
         public String eip;
 
         /**
          * <p>The forwarding port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020</p>
          */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosDip-sg-4hr2b3l****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>udp</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The IP address of the secondary origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.3</p>
          */
         @NameInMap("RealServer")
         public String realServer;

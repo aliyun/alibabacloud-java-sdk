@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyWebCCGlobalSwitchRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("CcGlobalSwitch")
     public String ccGlobalSwitch;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
      */
     @NameInMap("Domain")
     public String domain;

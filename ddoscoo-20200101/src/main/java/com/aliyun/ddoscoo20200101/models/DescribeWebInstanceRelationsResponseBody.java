@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0222382B-5FE5-4FF7-BC9B-97EE31D58818</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,15 +49,22 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
 
         /**
          * <p>The function plan of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **default**: Standard function plan</p>
-         * <p>*   **enhance**: Enhanced function plan</p>
+         * <ul>
+         * <li><strong>default</strong>: Standard function plan</li>
+         * <li><strong>enhance</strong>: Enhanced function plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enhance</p>
          */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-0pp163pd****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -93,6 +103,9 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     public static class DescribeWebInstanceRelationsResponseBodyWebInstanceRelations extends TeaModel {
         /**
          * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;

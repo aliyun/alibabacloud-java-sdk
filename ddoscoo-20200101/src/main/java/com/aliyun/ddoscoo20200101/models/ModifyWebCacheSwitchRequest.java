@@ -6,29 +6,37 @@ import com.aliyun.tea.*;
 public class ModifyWebCacheSwitchRequest extends TeaModel {
     /**
      * <p>The domain name for which you want to configure the Static Page Caching policy.</p>
-     * <br>
-     * <p>> You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>Specifies whether to enable or disable the Static Page Caching policy for a website. Valid values:</p>
-     * <br>
-     * <p>*   **1**: enables the policy.</p>
-     * <p>*   **0**: disables the policy.</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: enables the policy.</li>
+     * <li><strong>0</strong>: disables the policy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-     * <br>
      * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

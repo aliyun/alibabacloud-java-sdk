@@ -12,6 +12,9 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C814429-21A5-4673-827E-FDD19DC75681</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,45 +41,80 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos extends TeaModel {
+        @NameInMap("CertConfigured")
+        public Boolean certConfigured;
+
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.117.XX.XX</p>
          */
         @NameInMap("Eip")
         public String eip;
 
+        @NameInMap("FunctionVersion")
+        public String functionVersion;
+
         /**
          * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **fnat**: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</p>
-         * <p>*   **v6tov4**: All requests are forwarded to origin servers that use IPv4 addresses.</p>
+         * <ul>
+         * <li><strong>fnat</strong>: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</li>
+         * <li><strong>v6tov4</strong>: All requests are forwarded to origin servers that use IPv4 addresses.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fnat</p>
          */
         @NameInMap("IpMode")
         public String ipMode;
 
         /**
          * <p>The IP version of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **Ipv4**: IPv4</p>
-         * <p>*   **Ipv6**: IPv6</p>
+         * <ul>
+         * <li><strong>Ipv4</strong>: IPv4</li>
+         * <li><strong>Ipv6</strong>: IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ipv4</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        @NameInMap("Ssl13Enabled")
+        public Boolean ssl13Enabled;
+
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: indicates that the instance is normal.</p>
-         * <p>*   **expired**: indicates that the instance expired.</p>
-         * <p>*   **defense**: indicates that traffic scrubbing is performed on the asset that is protected by the instance.</p>
-         * <p>*   **blackhole**: indicates that blackhole filtering is triggered for the asset that is protected by the instance.</p>
-         * <p>*   **punished**: indicates that the instance is in penalty.</p>
+         * <ul>
+         * <li><strong>normal</strong>: indicates that the instance is normal.</li>
+         * <li><strong>expired</strong>: indicates that the instance expired.</li>
+         * <li><strong>defense</strong>: indicates that traffic scrubbing is performed on the asset that is protected by the instance.</li>
+         * <li><strong>blackhole</strong>: indicates that blackhole filtering is triggered for the asset that is protected by the instance.</li>
+         * <li><strong>punished</strong>: indicates that the instance is in penalty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TlsVersion")
+        public String tlsVersion;
+
         public static DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos self = new DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setCertConfigured(Boolean certConfigured) {
+            this.certConfigured = certConfigured;
+            return this;
+        }
+        public Boolean getCertConfigured() {
+            return this.certConfigured;
         }
 
         public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setEip(String eip) {
@@ -85,6 +123,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
         public String getEip() {
             return this.eip;
+        }
+
+        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setFunctionVersion(String functionVersion) {
+            this.functionVersion = functionVersion;
+            return this;
+        }
+        public String getFunctionVersion() {
+            return this.functionVersion;
         }
 
         public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setIpMode(String ipMode) {
@@ -103,12 +149,28 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             return this.ipVersion;
         }
 
+        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setSsl13Enabled(Boolean ssl13Enabled) {
+            this.ssl13Enabled = ssl13Enabled;
+            return this;
+        }
+        public Boolean getSsl13Enabled() {
+            return this.ssl13Enabled;
+        }
+
         public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfos setTlsVersion(String tlsVersion) {
+            this.tlsVersion = tlsVersion;
+            return this;
+        }
+        public String getTlsVersion() {
+            return this.tlsVersion;
         }
 
     }
@@ -122,12 +184,18 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-zvp2eibz****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The protection line of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coop-line-001</p>
          */
         @NameInMap("Line")
         public String line;

@@ -5,21 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeWebAccessLogDispatchStatusRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-     * <br>
      * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -6,33 +6,42 @@ import com.aliyun.tea.*;
 public class ModifyPortAutoCcStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The mode of the Intelligent Protection policy. Valid values:</p>
-     * <br>
-     * <p>*   **normal**</p>
-     * <p>*   **loose**</p>
-     * <p>*   **strict**</p>
-     * <br>
+     * <ul>
+     * <li><strong>normal</strong></li>
+     * <li><strong>loose</strong></li>
+     * <li><strong>strict</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>Specifies the status of the Intelligent Protection policy. Valid values:</p>
-     * <br>
-     * <p>*   **on**: enables the policy.</p>
-     * <p>*   **off**: disables the policy.</p>
-     * <br>
+     * <ul>
+     * <li><strong>on</strong>: enables the policy.</li>
+     * <li><strong>off</strong>: disables the policy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Switch")
     public String _switch;

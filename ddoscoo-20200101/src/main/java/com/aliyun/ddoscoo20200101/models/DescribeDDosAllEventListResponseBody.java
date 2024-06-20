@@ -12,12 +12,18 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25D83ED5-28CB-5683-9CF7-AECE521F3005</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of DDoS attack events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -54,69 +60,97 @@ public class DescribeDDosAllEventListResponseBody extends TeaModel {
     public static class DescribeDDosAllEventListResponseBodyAttackEvents extends TeaModel {
         /**
          * <p>The source location or region from which the attack was initiated. Valid values:</p>
-         * <br>
-         * <p>*   **cn**: Chinese mainland</p>
-         * <p>*   **alb-cn-hongkong-gf-2**: China (Hongkong)</p>
-         * <p>*   **alb-us-west-1-gf-2**: US (Silicon Valley)</p>
-         * <p>*   **alb-ap-northeast-1-gf-1**: Japan (Tokyo)</p>
-         * <p>*   **alb-ap-southeast-gf-1**: Singapore</p>
-         * <p>*   **alb-eu-central-1-gf-1**: Germany (Frankfurt)</p>
-         * <p>*   **alb-eu-central-1-gf-1** or **selb-eu-west-1-gf-1a**: UK (London)</p>
-         * <p>*   **alb-us-east-gf-1**: US (Virginia)</p>
-         * <p>*   **CT-yundi**: China (Hongkong) This value is returned only for Anti-DDoS Premium instances of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.</p>
+         * <ul>
+         * <li><strong>cn</strong>: Chinese mainland</li>
+         * <li><strong>alb-cn-hongkong-gf-2</strong>: China (Hongkong)</li>
+         * <li><strong>alb-us-west-1-gf-2</strong>: US (Silicon Valley)</li>
+         * <li><strong>alb-ap-northeast-1-gf-1</strong>: Japan (Tokyo)</li>
+         * <li><strong>alb-ap-southeast-gf-1</strong>: Singapore</li>
+         * <li><strong>alb-eu-central-1-gf-1</strong>: Germany (Frankfurt)</li>
+         * <li><strong>alb-eu-central-1-gf-1</strong> or <strong>selb-eu-west-1-gf-1a</strong>: UK (London)</li>
+         * <li><strong>alb-us-east-gf-1</strong>: US (Virginia)</li>
+         * <li><strong>CT-yundi</strong>: China (Hongkong) This value is returned only for Anti-DDoS Premium instances of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634546030</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The type of the DDoS attack event. Valid values:</p>
-         * <br>
-         * <p>*   **web-cc**: resource exhaustion attacks</p>
-         * <p>*   **cc**: connection flood attacks</p>
-         * <p>*   **defense**: DDoS attacks that trigger traffic scrubbing</p>
-         * <p>*   **blackhole**: DDoS attacks that trigger blackhole filtering</p>
+         * <ul>
+         * <li><strong>web-cc</strong>: resource exhaustion attacks</li>
+         * <li><strong>cc</strong>: connection flood attacks</li>
+         * <li><strong>defense</strong>: DDoS attacks that trigger traffic scrubbing</li>
+         * <li><strong>blackhole</strong>: DDoS attacks that trigger blackhole filtering</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cc</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The attacked object. The attacked object varies based on the attack event type. The following list describes different attacked objects of different attack event types:</p>
-         * <br>
-         * <p>*   If **EventType** is set to **web-cc**, the value of this parameter indicates the domain name of the attacked website.</p>
-         * <p>*   If **EventType** is set to **cc**, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
-         * <p>*   If **EventType** is set to **defense** or **blackhole**, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+         * <ul>
+         * <li>If <strong>EventType</strong> is set to <strong>web-cc</strong>, the value of this parameter indicates the domain name of the attacked website.</li>
+         * <li>If <strong>EventType</strong> is set to <strong>cc</strong>, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * <li>If <strong>EventType</strong> is set to <strong>defense</strong> or <strong>blackhole</strong>, the value of this parameter indicates the IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The peak bandwidth of the attack traffic. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101899</p>
          */
         @NameInMap("Mbps")
         public Long mbps;
 
         /**
          * <p>The attacked port.</p>
-         * <br>
-         * <p>> If **EventType** is set to **web-cc**, this parameter is not returned.</p>
+         * <blockquote>
+         * <p>If <strong>EventType</strong> is set to <strong>web-cc</strong>, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The peak packet forwarding rate of attack traffic. Unit: packets per second (pps).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9664270</p>
          */
         @NameInMap("Pps")
         public Long pps;
 
         /**
          * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634543764</p>
          */
         @NameInMap("StartTime")
         public Long startTime;

@@ -12,6 +12,9 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11710C9F-BC5E-481A-BEC5-C6D8FBFCA827</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
 
     public static class DescribeDDosEventAreaResponseBodyAreas extends TeaModel {
         /**
-         * <p>The code or ID of the source region. For more information, see [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html). For example, **110000** indicates Beijing, China, and **us** indicates the United States.</p>
+         * <p>The code or ID of the source region. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The number of request packets that were sent from the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>228</p>
          */
         @NameInMap("InPkts")
         public Long inPkts;

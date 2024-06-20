@@ -7,6 +7,10 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<DescribeInstanceIdsResponseBodyInstanceIds> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>310A41FD-0990-5610-92E0-A6A55D7C6444</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceIdsResponseBodyInstanceIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("Edition")
         public Integer edition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-zvp2eibz****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fnat</p>
+         */
         @NameInMap("IpMode")
         public String ipMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Ipv4</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

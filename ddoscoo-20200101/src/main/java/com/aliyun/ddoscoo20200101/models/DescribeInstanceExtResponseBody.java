@@ -12,12 +12,18 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of queried instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,39 +60,56 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
     public static class DescribeInstanceExtResponseBodyInstanceExtSpecs extends TeaModel {
         /**
          * <p>The function plan. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Standard</p>
-         * <p>*   **1**: Enhanced</p>
+         * <ul>
+         * <li><strong>0</strong>: Standard</li>
+         * <li><strong>1</strong>: Enhanced</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FunctionVersion")
         public Long functionVersion;
 
         /**
          * <p>The instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-i7m25564****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The clean bandwidth. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("NormalBandwidth")
         public Long normalBandwidth;
 
         /**
          * <p>The type of the instance. Valid value:</p>
-         * <br>
-         * <p>*   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan</p>
-         * <p>*   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan</p>
-         * <p>*   **2**: Anti-DDoS Premium instance of the CMA mitigation plan</p>
-         * <p>*   **3**: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) plan</p>
-         * <p>*   **9**: Anti-DDoS Pro instance of the Profession mitigation plan</p>
+         * <ul>
+         * <li><strong>0</strong>: Anti-DDoS Premium instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Premium instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Premium instance of the CMA mitigation plan</li>
+         * <li><strong>3</strong>: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Pro instance of the Profession mitigation plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ProductPlan")
         public Long productPlan;
 
         /**
          * <p>The Internet service provider (ISP) line resource of the Anti-DDoS Pro instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coop-line-001</p>
          */
         @NameInMap("ServicePartner")
         public String servicePartner;

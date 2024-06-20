@@ -12,16 +12,23 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
-     * <br>
-     * <p>*   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</p>
-     * <p>*   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</p>
-     * <p>*   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</p>
+     * <ul>
+     * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
+     * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
+     * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rr</p>
      */
     @NameInMap("ProxyMode")
     public String proxyMode;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E7F6B2C-03F2-462F-9076-B782CF0DD502</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -86,9 +93,11 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         public Integer sendTimeout;
 
         /**
-         * <p>The weight of the origin server. This parameter takes effect only when **ProxyMode** is set to **rr**.</p>
-         * <br>
-         * <p>Valid values: **1** to **100**. Default value: **100**. A server with a higher weight receives more requests.</p>
+         * <p>The weight of the origin server. This parameter takes effect only when <strong>ProxyMode</strong> is set to <strong>rr</strong>.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>. A server with a higher weight receives more requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -165,15 +174,22 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.<em><strong>.</strong></em>.1</p>
          */
         @NameInMap("RealServer")
         public String realServer;
 
         /**
          * <p>The address type of the origin server. Valid values:</p>
-         * <br>
-         * <p>*   **0**: IP address</p>
-         * <p>*   **1**: domain name</p>
+         * <ul>
+         * <li><strong>0</strong>: IP address</li>
+         * <li><strong>1</strong>: domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RsType")
         public Integer rsType;

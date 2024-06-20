@@ -4,33 +4,53 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebReportTopIpRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>app.bmjqxvb.cn</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1687228200</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>block</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1680424200</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Top")
     public Integer top;
 

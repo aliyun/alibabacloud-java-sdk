@@ -5,45 +5,58 @@ import com.aliyun.tea.*;
 
 public class DescribeTagResourcesRequest extends TeaModel {
     /**
-     * <p>The query token. Set the value to the value of **NextToken** that is returned in the last call.</p>
-     * <br>
-     * <p>> You do not need to configure this parameter if you call this operation for the first time.</p>
+     * <p>The query token. Set the value to the value of <strong>NextToken</strong> that is returned in the last call.</p>
+     * <blockquote>
+     * <p>You do not need to configure this parameter if you call this operation for the first time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
-     * <br>
+     * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-     * <br>
      * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>An array consisting of IDs of the Anti-DDoS Pro instances that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The type of the resource to which the tag belongs. Set the value to **INSTANCE**, which indicates an Anti-DDoS Pro instance.</p>
-     * <br>
+     * <p>The type of the resource to which the tag belongs. Set the value to <strong>INSTANCE</strong>, which indicates an Anti-DDoS Pro instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>An array consisting of tags that you want to query. Each tag consists of a tag **key** and a tag **value**.</p>
+     * <p>An array consisting of tags that you want to query. Each tag consists of a tag <strong>key</strong> and a tag <strong>value</strong>.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeTagResourcesRequestTags> tags;
@@ -104,18 +117,26 @@ public class DescribeTagResourcesRequest extends TeaModel {
     public static class DescribeTagResourcesRequestTags extends TeaModel {
         /**
          * <p>The key of the tag that you want to query.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   You must specify at least one of the **ResourceIds.N** and **Tags.N.Key** parameters.</p>
-         * <br>
-         * <p>*   You can call the [DescribeTagKeys](https://help.aliyun.com/document_detail/159785.html) operation to query all tag keys.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You must specify at least one of the <strong>ResourceIds.N</strong> and <strong>Tags.N.Key</strong> parameters.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/159785.html">DescribeTagKeys</a> operation to query all tag keys.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;

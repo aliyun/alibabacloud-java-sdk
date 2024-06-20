@@ -12,12 +12,18 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of asynchronous export tasks that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,72 +60,95 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
     public static class DescribeAsyncTasksResponseBodyAsyncTasks extends TeaModel {
         /**
          * <p>The end time of the task. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>157927362000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The start time of the task. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156927362000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
-         * <p>The task parameter. The value is a JSON string. The returned field in the value varies based on the value of **TaskType**.</p>
-         * <br>
-         * <p>If **TaskType** is set to **1**, **3**, **4**, **5**, or **6**, the following filed is returned:</p>
-         * <br>
-         * <p>*   **instanceId**: the ID of the instance. Data type: string.</p>
-         * <br>
-         * <p>If **TaskType** is set to **2**, the following field is returned:</p>
-         * <br>
-         * <p>*   **domain**: the domain name of the website. Data type: string.</p>
+         * <p>The task parameter. The value is a JSON string. The returned field in the value varies based on the value of <strong>TaskType</strong>.</p>
+         * <p>If <strong>TaskType</strong> is set to <strong>1</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, or <strong>6</strong>, the following filed is returned:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the instance. Data type: string.</li>
+         * </ul>
+         * <p>If <strong>TaskType</strong> is set to <strong>2</strong>, the following field is returned:</p>
+         * <ul>
+         * <li><strong>domain</strong>: the domain name of the website. Data type: string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;instanceId&quot;: &quot;ddoscoo-cn-mp91j1ao****&quot;}</p>
          */
         @NameInMap("TaskParams")
         public String taskParams;
 
         /**
-         * <p>The execution result of the task. The value is a JSON string. The returned fields in the value vary based on the value of **TaskType**.</p>
-         * <br>
-         * <p>If **TaskType** is set to **1**, **3**, **4**, **5**, or **6**, the following fields are returned:</p>
-         * <br>
-         * <p>*   **instanceId**: the ID of the instance. Data type: string.</p>
-         * <p>*   **url**: the URL to download the exported file from Object Storage Service (OSS). Data type: string.</p>
-         * <br>
-         * <p>If **TaskType** is set to **2**, the following fields are returned:</p>
-         * <br>
-         * <p>*   **domain**: the domain name of the website. Data type: string.</p>
-         * <p>*   **url**: the URL to download the exported file from OSS. Data type: string.</p>
+         * <p>The execution result of the task. The value is a JSON string. The returned fields in the value vary based on the value of <strong>TaskType</strong>.</p>
+         * <p>If <strong>TaskType</strong> is set to <strong>1</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, or <strong>6</strong>, the following fields are returned:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the instance. Data type: string.</li>
+         * <li><strong>url</strong>: the URL to download the exported file from Object Storage Service (OSS). Data type: string.</li>
+         * </ul>
+         * <p>If <strong>TaskType</strong> is set to <strong>2</strong>, the following fields are returned:</p>
+         * <ul>
+         * <li><strong>domain</strong>: the domain name of the website. Data type: string.</li>
+         * <li><strong>url</strong>: the URL to download the exported file from OSS. Data type: string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;instanceId&quot;: &quot;ddoscoo-cn-mp91j1ao****&quot;,&quot;url&quot;: &quot;https://<strong><strong>.oss-cn-beijing.aliyuncs.com/heap.bin?Expires=1584785140&amp;OSSAccessKeyId=TMP.3KfzD82FyRJevJdEkRX6JEFHhbvRBBb75PZJnyJmksA2QkMm47xFAFDgMhEV8Nm6Vxr8xExMfiy9LsUFAcLcTBrN3r</strong></strong>&amp;Signature=Sj8BNcsxJLE8l5qm4cjNlDt8gv****&quot;}</p>
          */
         @NameInMap("TaskResult")
         public String taskResult;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **0**: indicates that the task is being initialized.</p>
-         * <p>*   **1**: indicates that the task is in progress.</p>
-         * <p>*   **2**: indicates that the task is successful.</p>
-         * <p>*   **3**: indicates that the task failed.</p>
+         * <ul>
+         * <li><strong>0</strong>: indicates that the task is being initialized.</li>
+         * <li><strong>1</strong>: indicates that the task is in progress.</li>
+         * <li><strong>2</strong>: indicates that the task is successful.</li>
+         * <li><strong>3</strong>: indicates that the task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
         /**
          * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   **1**: the task to export the port forwarding rules of an instance</p>
-         * <p>*   **2**: the task to export the forwarding rules of a website protected by an instance</p>
-         * <p>*   **3**: the task to export the sessions and health check settings of an instance</p>
-         * <p>*   **4**: the task to export the mitigation policies of an instance</p>
-         * <p>*   **5**: the task to download the blacklist for destination IP addresses of an instance</p>
-         * <p>*   **6**: the task to download the whitelist for destination IP addresses of an instance</p>
+         * <ul>
+         * <li><strong>1</strong>: the task to export the port forwarding rules of an instance</li>
+         * <li><strong>2</strong>: the task to export the forwarding rules of a website protected by an instance</li>
+         * <li><strong>3</strong>: the task to export the sessions and health check settings of an instance</li>
+         * <li><strong>4</strong>: the task to export the mitigation policies of an instance</li>
+         * <li><strong>5</strong>: the task to download the blacklist for destination IP addresses of an instance</li>
+         * <li><strong>6</strong>: the task to download the whitelist for destination IP addresses of an instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TaskType")
         public Integer taskType;

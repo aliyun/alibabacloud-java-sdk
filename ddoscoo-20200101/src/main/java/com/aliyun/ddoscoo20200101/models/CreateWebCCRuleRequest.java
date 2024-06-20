@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class CreateWebCCRuleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>close</p>
      */
     @NameInMap("Act")
     public String act;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prefix</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testrule</p>
      */
     @NameInMap("Name")
     public String name;
@@ -51,6 +69,9 @@ public class CreateWebCCRuleRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/abc/a.php</p>
      */
     @NameInMap("Uri")
     public String uri;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDomainOverviewResponseBody extends TeaModel {
     /**
      * <p>The peak queries per second (QPS) during HTTP traffic scrubbing. Unit: QPS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41652</p>
      */
     @NameInMap("MaxHttp")
     public Long maxHttp;
 
     /**
      * <p>The peak QPS during HTTPS traffic scrubbing. Unit: QPS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("MaxHttps")
     public Long maxHttps;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

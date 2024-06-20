@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
     /**
      * <p>The peak bandwidth of attack traffic. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Bps")
     public Long bps;
 
     /**
      * <p>The peak packet rate of attack traffic . Unit: packets per second (pps).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Pps")
     public Long pps;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9173A3CB-C40B-559B-96B7-2373830BD06A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

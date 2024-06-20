@@ -12,15 +12,22 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F65DF043-E0EB-4796-9467-23DDCDF92C1D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,43 +64,53 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
     public static class DescribeSceneDefensePoliciesResponseBodyPoliciesRuntimePolicies extends TeaModel {
         /**
          * <p>The protection rule that is applied when the policy takes effect.</p>
-         * <br>
-         * <p>If you set **PolicyType** to **1**, the value is **{"cc_rule_enable": false }**. The value indicates that the Frequency Control policy is disabled.</p>
-         * <br>
-         * <p>If you set **PolicyType** to **2**, the value is **{"ai_rule_enable": 0}**. The value indicates that the Intelligent Protection policy is disabled.</p>
+         * <p>If you set <strong>PolicyType</strong> to <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: false }</strong>. The value indicates that the Frequency Control policy is disabled.</p>
+         * <p>If you set <strong>PolicyType</strong> to <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 0}</strong>. The value indicates that the Intelligent Protection policy is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cc_rule_enable&quot;: false }</p>
          */
         @NameInMap("NewValue")
         public String newValue;
 
         /**
          * <p>The protection policy whose status is changed when the policy takes effect. Valid values:</p>
-         * <br>
-         * <p>*   **1**: indicates that the Frequency Control policy is changed.</p>
-         * <p>*   **2**: indicates that the Intelligent Protection policy is changed.</p>
+         * <ul>
+         * <li><strong>1</strong>: indicates that the Frequency Control policy is changed.</li>
+         * <li><strong>2</strong>: indicates that the Intelligent Protection policy is changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PolicyType")
         public Integer policyType;
 
         /**
          * <p>The running status of the policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The policy has not been issued or is restored.</p>
-         * <p>*   **1**: The policy is pending.</p>
-         * <p>*   **2**: The policy is being restored.</p>
-         * <p>*   **3**: The policy takes effect.</p>
-         * <p>*   **4**: The policy fails to take effect.</p>
-         * <p>*   **5**:The policy fails to be restored.</p>
-         * <p>*   **6**: The configurations of the protected objects for the policy does not exist because the configurations may be deleted.</p>
+         * <ul>
+         * <li><strong>0</strong>: The policy has not been issued or is restored.</li>
+         * <li><strong>1</strong>: The policy is pending.</li>
+         * <li><strong>2</strong>: The policy is being restored.</li>
+         * <li><strong>3</strong>: The policy takes effect.</li>
+         * <li><strong>4</strong>: The policy fails to take effect.</li>
+         * <li><strong>5</strong>:The policy fails to be restored.</li>
+         * <li><strong>6</strong>: The configurations of the protected objects for the policy does not exist because the configurations may be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The protection rule that is applied before the policy takes effect.</p>
-         * <br>
-         * <p>If you set **PolicyType** to **1**, the value is **{"cc_rule_enable": true}**. The value indicates that the Frequency Control policy is enabled.</p>
-         * <br>
-         * <p>If you set **PolicyType** to **2**, the value is **{"ai_rule_enable": 1}**. The value indicates that the Intelligent Protection policy is enabled.</p>
+         * <p>If you set <strong>PolicyType</strong> to <strong>1</strong>, the value is <strong>{&quot;cc_rule_enable&quot;: true}</strong>. The value indicates that the Frequency Control policy is enabled.</p>
+         * <p>If you set <strong>PolicyType</strong> to <strong>2</strong>, the value is <strong>{&quot;ai_rule_enable&quot;: 1}</strong>. The value indicates that the Intelligent Protection policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cc_rule_enable&quot;: true}</p>
          */
         @NameInMap("oldValue")
         public String oldValue;
@@ -140,34 +157,50 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
     public static class DescribeSceneDefensePoliciesResponseBodyPolicies extends TeaModel {
         /**
          * <p>The execution status of the policy. Valid values:</p>
-         * <br>
-         * <p>*   **1**: not executed or execution completed</p>
-         * <p>*   **0**: being executed</p>
-         * <p>*   **-1**: execution failed</p>
+         * <ul>
+         * <li><strong>1</strong>: not executed or execution completed</li>
+         * <li><strong>0</strong>: being executed</li>
+         * <li><strong>-1</strong>: execution failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Done")
         public Integer done;
 
         /**
          * <p>The time at which the policy expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586016000000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpolicy</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of objects that are protected by the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ObjectCount")
         public Integer objectCount;
 
         /**
          * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321a-fd31-df51-****</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
@@ -180,26 +213,37 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The time at which the policy takes effect. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1585670400000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: pending enabling</p>
-         * <p>*   **2**: enabled</p>
-         * <p>*   **3**: expired</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: pending enabling</li>
+         * <li><strong>2</strong>: enabled</li>
+         * <li><strong>3</strong>: expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The type of the template that is used to create the policy. Valid values:</p>
-         * <br>
-         * <p>*   **promotion**: the Important Activity template</p>
-         * <p>*   **bypass**: the Forward All template</p>
+         * <ul>
+         * <li><strong>promotion</strong>: the Important Activity template</li>
+         * <li><strong>bypass</strong>: the Forward All template</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         @NameInMap("Template")
         public String template;

@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DisableSceneDefensePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the policy that you want to disable.</p>
-     * <br>
-     * <p>> You can call the [DescribeSceneDefensePolicies](https://help.aliyun.com/document_detail/159382.html) operation to query the IDs of all policies.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159382.html">DescribeSceneDefensePolicies</a> operation to query the IDs of all policies.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>321a-fd31-df51-****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

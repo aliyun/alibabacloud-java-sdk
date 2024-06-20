@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeUdpReflectRequest extends TeaModel {
     /**
      * <p>The ID of the instance to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-i7m25564****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: Chinese mainland, which indicates an Anti-DDoS Pro instance. This is the default value.</p>
-     * <p>*   **ap-southeast-1**: outside the Chinese mainland, which indicates an Anti-DDoS Premium instance.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland, which indicates an Anti-DDoS Pro instance. This is the default value.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland, which indicates an Anti-DDoS Premium instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

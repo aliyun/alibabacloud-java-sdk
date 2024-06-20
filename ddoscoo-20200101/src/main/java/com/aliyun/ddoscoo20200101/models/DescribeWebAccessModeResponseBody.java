@@ -12,6 +12,9 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,23 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     public static class DescribeWebAccessModeResponseBodyDomainModes extends TeaModel {
         /**
          * <p>The mode in which the website service is added. Valid values:</p>
-         * <br>
-         * <p>*   **0**: A record</p>
-         * <p>*   **1**: anti-DDoS mode</p>
-         * <p>*   **2**: origin redundancy mode</p>
+         * <ul>
+         * <li><strong>0</strong>: A record</li>
+         * <li><strong>1</strong>: anti-DDoS mode</li>
+         * <li><strong>2</strong>: origin redundancy mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AccessMode")
         public Integer accessMode;
 
         /**
          * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;

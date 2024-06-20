@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The Logstore of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-logstore</p>
      */
     @NameInMap("SlsLogstore")
     public String slsLogstore;
 
     /**
      * <p>The Log Service project of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-project-128965410602****-cn-hangzhou</p>
      */
     @NameInMap("SlsProject")
     public String slsProject;
 
     /**
      * <p>Indicates whether the Log Analysis feature is enabled for the website. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false**: disabled</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SlsStatus")
     public Boolean slsStatus;

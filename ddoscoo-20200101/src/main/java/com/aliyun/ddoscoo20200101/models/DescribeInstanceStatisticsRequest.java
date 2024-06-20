@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeInstanceStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the instance that you want to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;

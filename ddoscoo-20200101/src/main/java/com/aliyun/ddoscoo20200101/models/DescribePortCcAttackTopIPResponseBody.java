@@ -4,6 +4,10 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>24F36D81-5E2D-52E5-9DB6-A3ED23CF271A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
     }
 
     public static class DescribePortCcAttackTopIPResponseBodyTopIp extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("AreaId")
         public String areaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33971</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.18.XX.XX</p>
+         */
         @NameInMap("SrcIp")
         public String srcIp;
 

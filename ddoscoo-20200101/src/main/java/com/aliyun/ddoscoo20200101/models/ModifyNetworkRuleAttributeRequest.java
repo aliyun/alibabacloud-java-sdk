@@ -6,39 +6,50 @@ import com.aliyun.tea.*;
 public class ModifyNetworkRuleAttributeRequest extends TeaModel {
     /**
      * <p>The session persistence settings of the port forwarding rule. This parameter is a JSON string. The string contains the following fields:</p>
-     * <br>
-     * <p>*   **PersistenceTimeout**: The timeout period of session persistence. This field is required and must be of the integer type. Valid values: **30** to **3600**. Unit: seconds. Default value: **0**. A value of 0 indicates that session persistence is disabled.</p>
-     * <br>
+     * <ul>
+     * <li><strong>PersistenceTimeout</strong>: The timeout period of session persistence. This field is required and must be of the integer type. Valid values: <strong>30</strong> to <strong>3600</strong>. Unit: seconds. Default value: <strong>0</strong>. A value of 0 indicates that session persistence is disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;PersistenceTimeout&quot;:900}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The forwarding protocol. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**</p>
-     * <p>*   **udp**</p>
-     * <br>
+     * <ul>
+     * <li><strong>tcp</strong></li>
+     * <li><strong>udp</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
     /**
      * <p>The forwarding port.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

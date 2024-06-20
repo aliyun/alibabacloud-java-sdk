@@ -4,9 +4,17 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebRulesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0F5B72DD-96F4-423A-B12B-A5151DD746B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,12 +51,24 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebRulesResponseBodyWebRulesGmCert extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>725****</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GmEnable")
         public Long gmEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GmOnly")
         public Long gmOnly;
 
@@ -87,6 +107,10 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @NameInMap("ProxyPorts")
         public java.util.List<String> proxyPorts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https</p>
+         */
         @NameInMap("ProxyType")
         public String proxyType;
 
@@ -114,9 +138,17 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeWebRulesResponseBodyWebRulesRealServers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
+         */
         @NameInMap("RealServer")
         public String realServer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RsType")
         public Integer rsType;
 
@@ -147,69 +179,137 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @NameInMap("BlackList")
         public java.util.List<String> blackList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CcEnabled")
         public Boolean ccEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CcRuleEnabled")
         public Boolean ccRuleEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testcert</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
         @NameInMap("CertRegion")
         public String certRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kzmk7b8tt351****.aliyunddos1014****</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
         @NameInMap("GmCert")
         public DescribeWebRulesResponseBodyWebRulesGmCert gmCert;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Http2Enable")
         public Boolean http2Enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Http2HttpsEnable")
         public Boolean http2HttpsEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Https2HttpEnable")
         public Boolean https2HttpEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OcspEnabled")
         public Boolean ocspEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ip_hash</p>
+         */
         @NameInMap("PolicyMode")
         public String policyMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ProxyEnabled")
         public Boolean proxyEnabled;
 
         @NameInMap("ProxyTypes")
         public java.util.List<DescribeWebRulesResponseBodyWebRulesProxyTypes> proxyTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PunishReason")
         public Integer punishReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PunishStatus")
         public Boolean punishStatus;
 
         @NameInMap("RealServers")
         public java.util.List<DescribeWebRulesResponseBodyWebRulesRealServers> realServers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Ssl13Enabled")
         public Boolean ssl13Enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("SslCiphers")
         public String sslCiphers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tls1.1</p>
+         */
         @NameInMap("SslProtocols")
         public String sslProtocols;
 

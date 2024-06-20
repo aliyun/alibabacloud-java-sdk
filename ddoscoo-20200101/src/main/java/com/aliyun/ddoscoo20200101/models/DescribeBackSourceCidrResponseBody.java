@@ -12,6 +12,9 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
      */
     @NameInMap("RequestId")
     public String requestId;

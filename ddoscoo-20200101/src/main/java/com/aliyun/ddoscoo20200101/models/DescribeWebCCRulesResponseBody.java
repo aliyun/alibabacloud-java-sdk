@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeWebCCRulesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EAED912D-909E-45F0-AF74-AC0CCDCAE314</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned custom frequency control rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,48 +60,71 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     public static class DescribeWebCCRulesResponseBodyWebCCRules extends TeaModel {
         /**
          * <p>The blocking type. Valid values:</p>
-         * <br>
-         * <p>*   **close**: blocks requests.</p>
-         * <p>*   **captcha**: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.</p>
+         * <ul>
+         * <li><strong>close</strong>: blocks requests.</li>
+         * <li><strong>captcha</strong>: enables Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         @NameInMap("Act")
         public String act;
 
         /**
-         * <p>The number of requests that are allowed from an individual IP address. Valid values: **2** to **2000**.</p>
+         * <p>The number of requests that are allowed from an individual IP address. Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The check intervals. Valid values: **5** to **10800**. Unit: seconds.</p>
+         * <p>The check intervals. Valid values: <strong>5</strong> to <strong>10800</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
          * <p>The match mode. Valid values:</p>
-         * <br>
-         * <p>*   **prefix**: prefix match</p>
-         * <p>*   **match**: exact match</p>
+         * <ul>
+         * <li><strong>prefix</strong>: prefix match</li>
+         * <li><strong>match</strong>: exact match</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wq</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The blocking duration. Valid values: **1** to **1440**. Unit: minutes.</p>
+         * <p>The blocking duration. Valid values: <strong>1</strong> to <strong>1440</strong>. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Ttl")
         public Integer ttl;
 
         /**
          * <p>The check path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/hello</p>
          */
         @NameInMap("Uri")
         public String uri;

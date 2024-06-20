@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeStsGrantStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class DescribeStsGrantStatusResponseBody extends TeaModel {
     public static class DescribeStsGrantStatusResponseBodyStsGrant extends TeaModel {
         /**
          * <p>The authorization status. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Anti-DDoS Pro or Anti-DDoS Premium is not authorized to access other cloud services.</p>
-         * <p>*   **1**: Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.</p>
+         * <ul>
+         * <li><strong>0</strong>: Anti-DDoS Pro or Anti-DDoS Premium is not authorized to access other cloud services.</li>
+         * <li><strong>1</strong>: Anti-DDoS Pro or Anti-DDoS Premium is authorized to access other cloud services.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

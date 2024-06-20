@@ -5,42 +5,56 @@ import com.aliyun.tea.*;
 
 public class DescribePortRequest extends TeaModel {
     /**
-     * <p>The forwarding port to query. Valid values: **0** to **65535**.</p>
+     * <p>The forwarding port to query. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
      */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
     /**
      * <p>The type of the forwarding protocol to query. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**</p>
-     * <p>*   **udp**</p>
+     * <ul>
+     * <li><strong>tcp</strong></li>
+     * <li><strong>udp</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("FrontendProtocol")
     public String frontendProtocol;
 
     /**
      * <p>The ID of the instance to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-7e225i41****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. For example, if you want to obtain results on the first page, set the value to **1**.</p>
-     * <br>
+     * <p>The number of the page to return. For example, if you want to obtain results on the first page, set the value to <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

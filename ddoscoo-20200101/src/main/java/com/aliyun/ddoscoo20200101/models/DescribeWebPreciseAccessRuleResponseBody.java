@@ -12,6 +12,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>209EEFBF-B0C7-441E-8C28-D0945A57A638</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList extends TeaModel {
         /**
          * <p>The match content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("Content")
         public String content;
@@ -49,20 +55,30 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
         /**
          * <p>The match field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         @NameInMap("Field")
         public String field;
 
         /**
          * <p>The custom HTTP header.</p>
-         * <br>
-         * <p>> This parameter takes effect only when **Field** is set to **header**.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("HeaderName")
         public String headerName;
 
         /**
          * <p>The logical operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>belong</p>
          */
         @NameInMap("MatchMethod")
         public String matchMethod;
@@ -117,10 +133,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList extends TeaModel {
         /**
          * <p>The action triggered if the rule is matched. Valid values:</p>
-         * <br>
-         * <p>*   **accept**: allows the requests that match the rule.</p>
-         * <p>*   **block**: blocks the requests that match the rule.</p>
-         * <p>*   **challenge**: implements Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule.</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the requests that match the rule.</li>
+         * <li><strong>block</strong>: blocks the requests that match the rule.</li>
+         * <li><strong>challenge</strong>: implements Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         @NameInMap("Action")
         public String action;
@@ -132,22 +152,32 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
 
         /**
-         * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when **action** of a rule is **block**. Access requests that match the rule are blocked within the specified validity period of the rule. **0** indicates that the rule takes effect all the time.</p>
+         * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when <strong>action</strong> of a rule is <strong>block</strong>. Access requests that match the rule are blocked within the specified validity period of the rule. <strong>0</strong> indicates that the rule takes effect all the time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Expires")
         public Long expires;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The source of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **manual**: manually created. This is the default value.</p>
-         * <p>*   **auto**: automatically generated.</p>
+         * <ul>
+         * <li><strong>manual</strong>: manually created. This is the default value.</li>
+         * <li><strong>auto</strong>: automatically generated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         @NameInMap("Owner")
         public String owner;
@@ -202,6 +232,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     public static class DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList extends TeaModel {
         /**
          * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;

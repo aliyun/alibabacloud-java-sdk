@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDomainViewSourceProvincesResponseBody extends TeaModel {
     public static class DescribeDomainViewSourceProvincesResponseBodySourceProvinces extends TeaModel {
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3390671</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The ID of the region inside China. For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.</p>
+         * <p>The ID of the region inside China. For more information, see the <strong>Codes of administrative regions in China</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic. For example, <strong>110000</strong> indicates Beijing, and <strong>120000</strong> indicates Tianjin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440000</p>
          */
         @NameInMap("ProvinceId")
         public String provinceId;

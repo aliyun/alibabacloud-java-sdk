@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class AddAutoCcWhitelistRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
-     * <br>
-     * <p>> This parameter indicates the validity period of the IP address blacklist. By default, the traffic from the IP addresses that you add to the whitelist is always allowed. You do not need to set this parameter.</p>
+     * <blockquote>
+     * <p>This parameter indicates the validity period of the IP address blacklist. By default, the traffic from the IP addresses that you add to the whitelist is always allowed. You do not need to set this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The configuration of the IP addresses that you want to add to the whitelist. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
-     * <br>
-     * <p>*   **src**: the IP address that you want to add. This parameter is required. Data type: string.</p>
-     * <br>
+     * <ul>
+     * <li><strong>src</strong>: the IP address that you want to add. This parameter is required. Data type: string.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;src&quot;:&quot;192.XX.XX.1&quot;},{&quot;src&quot;:&quot;192.XX.XX.2&quot;}]</p>
      */
     @NameInMap("Whitelist")
     public String whitelist;

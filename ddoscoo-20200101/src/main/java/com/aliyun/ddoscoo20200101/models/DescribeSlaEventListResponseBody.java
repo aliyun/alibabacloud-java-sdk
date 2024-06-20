@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSlaEventListResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -54,27 +60,40 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
     public static class DescribeSlaEventListResponseBodySlaEvent extends TeaModel {
         /**
          * <p>The end of the time range. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671886740</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The region to which the destination IP address belongs. Valid values:</p>
-         * <br>
-         * <p>*   **cn**: a region in the Chinese mainland</p>
-         * <p>*   **cn-hongkong**: China (Hong Kong)</p>
+         * <ul>
+         * <li><strong>cn</strong>: a region in the Chinese mainland</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The beginning of the time range. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678080840</p>
          */
         @NameInMap("StartTime")
         public Long startTime;

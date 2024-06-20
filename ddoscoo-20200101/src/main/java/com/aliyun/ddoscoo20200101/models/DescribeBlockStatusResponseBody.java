@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeBlockStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,44 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
     public static class DescribeBlockStatusResponseBodyStatusListBlockStatusList extends TeaModel {
         /**
          * <p>The blocking status of the network traffic. Valid values:</p>
-         * <br>
-         * <p>*   **areablock**: Network traffic is blocked.</p>
-         * <p>*   **normal**: Network traffic is not blocked.</p>
+         * <ul>
+         * <li><strong>areablock</strong>: Network traffic is blocked.</li>
+         * <li><strong>normal</strong>: Network traffic is not blocked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>areablock</p>
          */
         @NameInMap("BlockStatus")
         public String blockStatus;
 
         /**
          * <p>The end time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1540196323</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The Internet service provider (ISP) line from which the traffic is blocked. Valid values:</p>
-         * <br>
-         * <p>*   **ct**: China Telecom (International)</p>
-         * <p>*   **cut**: China Unicom (International)</p>
+         * <ul>
+         * <li><strong>ct</strong>: China Telecom (International)</li>
+         * <li><strong>cut</strong>: China Unicom (International)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cut</p>
          */
         @NameInMap("Line")
         public String line;
 
         /**
          * <p>The start time of the blocking. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1540195323</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
@@ -116,6 +133,9 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.XX.XX.88</p>
          */
         @NameInMap("Ip")
         public String ip;

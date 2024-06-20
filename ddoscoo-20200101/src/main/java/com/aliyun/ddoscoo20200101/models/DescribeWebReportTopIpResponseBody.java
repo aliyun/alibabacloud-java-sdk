@@ -7,6 +7,10 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
     @NameInMap("DataList")
     public java.util.List<DescribeWebReportTopIpResponseBodyDataList> dataList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D21BE0C4-8E83-5E32-86C6-AA6BE9B1B5BD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
     }
 
     public static class DescribeWebReportTopIpResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>90998690</p>
+         */
         @NameInMap("AreaId")
         public String areaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100017</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>117.186.XX.XX</p>
+         */
         @NameInMap("SourceIp")
         public String sourceIp;
 

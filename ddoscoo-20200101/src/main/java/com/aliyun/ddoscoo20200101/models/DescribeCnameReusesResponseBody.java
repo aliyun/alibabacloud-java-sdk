@@ -7,6 +7,10 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     @NameInMap("CnameReuses")
     public java.util.List<DescribeCnameReusesResponseBodyCnameReuses> cnameReuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     }
 
     public static class DescribeCnameReusesResponseBodyCnameReuses extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4o6ep6q217k9****.aliyunddos0004.com</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 

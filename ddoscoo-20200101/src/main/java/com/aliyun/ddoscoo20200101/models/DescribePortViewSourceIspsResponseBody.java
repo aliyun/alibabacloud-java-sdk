@@ -12,6 +12,9 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,14 +43,21 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
     public static class DescribePortViewSourceIspsResponseBodyIsps extends TeaModel {
         /**
          * <p>The total number of requests that are sent from the ISP.</p>
-         * <br>
-         * <p>> This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different ISPs.</p>
+         * <blockquote>
+         * <p>This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different ISPs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3390671</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The ID of the ISP. For more information, see the ISP codes table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100017</p>
          */
         @NameInMap("IspId")
         public String ispId;

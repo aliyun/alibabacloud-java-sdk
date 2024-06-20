@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddAutoCcWhitelistResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB5025DA-5C52-5207-B6AC-3F198758B678</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyOcspStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D8DDBA8E-8182-5C85-AA41-F17EACFCAE0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ConfigLayer4RemarkResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6E46CC51-36BE-1100-B14C-DAF8381B8F73</p>
      */
     @NameInMap("RequestId")
     public String requestId;

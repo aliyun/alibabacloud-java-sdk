@@ -4,12 +4,20 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSchedulerRulesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>11C55595-1757-4B17-9ACE-4ACB68C2D989</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SchedulerRules")
     public java.util.List<DescribeSchedulerRulesResponseBodySchedulerRules> schedulerRules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -43,6 +51,10 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeSchedulerRulesResponseBodySchedulerRulesParamParamData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ga-bp1htlajy5509rc99****</p>
+         */
         @NameInMap("CloudInstanceId")
         public String cloudInstanceId;
 
@@ -65,6 +77,10 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         @NameInMap("ParamData")
         public DescribeSchedulerRulesResponseBodySchedulerRulesParamParamData paramData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GA</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 
@@ -95,24 +111,52 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("RestoreDelay")
         public Integer restoreDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>203.<em><strong>.</strong></em>.39</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ValueType")
         public Integer valueType;
 
@@ -188,12 +232,20 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeSchedulerRulesResponseBodySchedulerRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4eru5229a843****.aliyunddos0001.com</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
         @NameInMap("Param")
         public DescribeSchedulerRulesResponseBodySchedulerRulesParam param;
 
+        /**
+         * <strong>example:</strong>
+         * <p>doctest</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

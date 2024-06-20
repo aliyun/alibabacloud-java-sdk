@@ -12,6 +12,9 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ADD9EED-CA4B-488C-BC82-01B0B899363D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,55 +43,79 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     public static class DescribeWebCcProtectSwitchResponseBodyProtectSwitchList extends TeaModel {
         /**
          * <p>The mode of the Intelligent Protection policy. Valid values:</p>
-         * <br>
-         * <p>*   **watch**: the Warning mode</p>
-         * <p>*   **defense**: the Defense mode</p>
+         * <ul>
+         * <li><strong>watch</strong>: the Warning mode</li>
+         * <li><strong>defense</strong>: the Defense mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         @NameInMap("AiMode")
         public String aiMode;
 
         /**
          * <p>The status of the Intelligent Protection policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AiRuleEnable")
         public Integer aiRuleEnable;
 
         /**
          * <p>The level of the Intelligent Protection policy. Valid values:</p>
-         * <br>
-         * <p>*   **level30**: the Low level</p>
-         * <p>*   **level60**: the Normal level</p>
-         * <p>*   **level90**: the Strict level</p>
+         * <ul>
+         * <li><strong>level30</strong>: the Low level</li>
+         * <li><strong>level60</strong>: the Normal level</li>
+         * <li><strong>level90</strong>: the Strict level</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>level60</p>
          */
         @NameInMap("AiTemplate")
         public String aiTemplate;
 
         /**
          * <p>The status of the Black Lists and White Lists (Domain Names) policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BlackWhiteListEnable")
         public Integer blackWhiteListEnable;
 
         /**
          * <p>The status of the Custom Rule switch for the Frequency Control policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CcCustomRuleEnable")
         public Integer ccCustomRuleEnable;
 
         /**
          * <p>The status of the Frequency Control policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CcEnable")
         public Integer ccEnable;
@@ -98,35 +125,50 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
 
         /**
          * <p>The mode of the Frequency Control policy. Valid values:</p>
-         * <br>
-         * <p>*   **default**: Normal</p>
-         * <p>*   **gf_under_attack**: Emergency</p>
-         * <p>*   **gf_sos_verify**: Strict</p>
-         * <p>*   **gf_sos_enhance**: Super Strict</p>
+         * <ul>
+         * <li><strong>default</strong>: Normal</li>
+         * <li><strong>gf_under_attack</strong>: Emergency</li>
+         * <li><strong>gf_sos_verify</strong>: Strict</li>
+         * <li><strong>gf_sos_enhance</strong>: Super Strict</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
         /**
          * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The status of the Accurate Access Control policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreciseRuleEnable")
         public Integer preciseRuleEnable;
 
         /**
          * <p>The status of the Location Blacklist (Domain Names) policy. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RegionBlockEnable")
         public Integer regionBlockEnable;

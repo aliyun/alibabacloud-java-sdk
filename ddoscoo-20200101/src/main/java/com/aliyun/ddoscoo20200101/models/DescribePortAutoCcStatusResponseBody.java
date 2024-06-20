@@ -12,6 +12,9 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC3C6403-F248-4125-B2C9-8733ED94EA85</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,38 +43,54 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
     public static class DescribePortAutoCcStatusResponseBodyPortAutoCcStatus extends TeaModel {
         /**
          * <p>The mode of the Intelligent Protection policy. Valid values:</p>
-         * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **loose**</p>
-         * <p>*   **strict**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>loose</strong></li>
+         * <li><strong>strict</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The status of the Intelligent Protection policy. Valid values:</p>
-         * <br>
-         * <p>*   **on**: enabled</p>
-         * <p>*   **off**: disabled</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Switch")
         public String _switch;
 
         /**
          * <p>The protection mode for ports 80 and 443. Valid values:</p>
-         * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **loose**</p>
-         * <p>*   **strict**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>loose</strong></li>
+         * <li><strong>strict</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("WebMode")
         public String webMode;
 
         /**
          * <p>The status of the Intelligent Protection policy for ports 80 and 443. Valid values:</p>
-         * <br>
-         * <p>*   **on**: enabled</p>
-         * <p>*   **off**: disabled</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("WebSwitch")
         public String webSwitch;

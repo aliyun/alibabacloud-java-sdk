@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteWebCCRuleV2Request extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>manual</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[\&quot;trdsss\&quot;]</p>
+     */
     @NameInMap("RuleNames")
     public String ruleNames;
 

@@ -12,6 +12,9 @@ public class DescribePortFlowListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FFC77501-BDF8-4BC8-9BF5-B295FBC3189B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,57 +43,83 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     public static class DescribePortFlowListResponseBodyPortFlowList extends TeaModel {
         /**
          * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AttackBps")
         public Long attackBps;
 
         /**
          * <p>The packet forwarding rate of attack traffic. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AttackPps")
         public Long attackPps;
 
         /**
          * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2176000</p>
          */
         @NameInMap("InBps")
         public Long inBps;
 
         /**
          * <p>The packet forwarding rate of inbound traffic. Unit: packets per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2934</p>
          */
         @NameInMap("InPps")
         public Long inPps;
 
         /**
          * <p>The index number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Index")
         public Long index;
 
         /**
          * <p>The outbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4389</p>
          */
         @NameInMap("OutBps")
         public Long outBps;
 
         /**
          * <p>The packet forwarding rate of outbound traffic. Unit: packets per second (pps).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("OutPps")
         public Long outPps;
 
         /**
          * <p>The source region of the traffic. Valid values:</p>
-         * <br>
-         * <p>*   **cn**: mainland China</p>
-         * <p>*   **alb-ap-northeast-1-gf-x**: Japan (Tokyo)</p>
-         * <p>*   **alb-ap-southeast-gf-x**: Singapore</p>
-         * <p>*   **alb-cn-hongkong-gf-x**: Hong Kong (China)</p>
-         * <p>*   **alb-eu-central-1-gf-x**: Germany (Frankfurt)</p>
-         * <p>*   **alb-us-west-1-gf-x**: US (Silicon Valley)</p>
-         * <br>
-         * <p>> The values except **cn** are returned only when **RegionId** is set to **ap-southeast-1**.</p>
+         * <ul>
+         * <li><strong>cn</strong>: mainland China</li>
+         * <li><strong>alb-ap-northeast-1-gf-x</strong>: Japan (Tokyo)</li>
+         * <li><strong>alb-ap-southeast-gf-x</strong>: Singapore</li>
+         * <li><strong>alb-cn-hongkong-gf-x</strong>: Hong Kong (China)</li>
+         * <li><strong>alb-eu-central-1-gf-x</strong>: Germany (Frankfurt)</li>
+         * <li><strong>alb-us-west-1-gf-x</strong>: US (Silicon Valley)</li>
+         * </ul>
+         * <blockquote>
+         * <p>The values except <strong>cn</strong> are returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("Region")
         public String region;
@@ -121,6 +150,9 @@ public class DescribePortFlowListResponseBody extends TeaModel {
 
         /**
          * <p>The time when the data was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582992000</p>
          */
         @NameInMap("Time")
         public Long time;

@@ -12,6 +12,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E3A9B5F-5DDB-593D-A1E6-F1F451DB5E0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,59 +43,88 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecs extends TeaModel {
         /**
          * <p>The clean bandwidth of normal services. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("BandwidthMbps")
         public Integer bandwidthMbps;
 
         /**
          * <p>The basic protection bandwidth. Unit: Gbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("BaseBandwidth")
         public Integer baseBandwidth;
 
         /**
          * <p>The specification of concurrent connections of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("ConnLimit")
         public Long connLimit;
 
         /**
          * <p>The specification of new connections of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("CpsLimit")
         public Long cpsLimit;
 
         /**
-         * <p>The number of available advanced mitigation sessions for this month. If **-1** is returned, advanced mitigation capabilities are unlimited.</p>
-         * <br>
-         * <p>> This parameter is returned only when **RegionId** is set to **ap-southeast-1**. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Premium instances are queried.</p>
+         * <p>The number of available advanced mitigation sessions for this month. If <strong>-1</strong> is returned, advanced mitigation capabilities are unlimited.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Premium instances are queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DefenseCount")
         public Integer defenseCount;
 
         /**
          * <p>The number of domain names that can be protected by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("DomainLimit")
         public Integer domainLimit;
 
         /**
          * <p>The burstable protection bandwidth. Unit: Gbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("ElasticBandwidth")
         public Integer elasticBandwidth;
 
         /**
          * <p>The burstable clean bandwidth. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("ElasticBw")
         public Integer elasticBw;
 
         /**
          * <p>The metering method of the burstable clean bandwidth. Valid values:</p>
-         * <br>
-         * <p>*   **day**: the metering method of daily 95th percentile</p>
-         * <p>*   **month**: the metering method of monthly 95th percentile</p>
+         * <ul>
+         * <li><strong>day</strong>: the metering method of daily 95th percentile</li>
+         * <li><strong>month</strong>: the metering method of monthly 95th percentile</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         @NameInMap("ElasticBwModel")
         public String elasticBwModel;
@@ -105,42 +137,61 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
         /**
          * <p>The function plan of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **default**: Standard</p>
-         * <p>*   **enhance**: Enhanced</p>
-         * <p>*   **cnhk**: Chinese Mainland Acceleration (CMA)</p>
-         * <p>*   **cnhk_default**: Secure Chinese Mainland Acceleration (Sec-CMA) standard function plan</p>
-         * <p>*   **cnhk_enhance**: Sec-CMA enhanced function plan</p>
+         * <ul>
+         * <li><strong>default</strong>: Standard</li>
+         * <li><strong>enhance</strong>: Enhanced</li>
+         * <li><strong>cnhk</strong>: Chinese Mainland Acceleration (CMA)</li>
+         * <li><strong>cnhk_default</strong>: Secure Chinese Mainland Acceleration (Sec-CMA) standard function plan</li>
+         * <li><strong>cnhk_enhance</strong>: Sec-CMA enhanced function plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-zvp2eibz****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The number of ports that can be protected by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("PortLimit")
         public Integer portLimit;
 
         /**
          * <p>The clean queries per second (QPS) of normal services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         @NameInMap("QpsLimit")
         public Integer qpsLimit;
 
         /**
          * <p>实例业务带宽限速值。取值：0～15360，0表示不限速。单位：mbps。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RealLimitBw")
         public Long realLimitBw;
 
         /**
          * <p>The number of sites that can be protected by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("SiteLimit")
         public Integer siteLimit;

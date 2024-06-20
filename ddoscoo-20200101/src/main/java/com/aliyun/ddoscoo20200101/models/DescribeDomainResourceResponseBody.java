@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDomainResourceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of forwarding rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -60,11 +66,15 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **http**</p>
-         * <p>*   **https**</p>
-         * <p>*   **websocket**</p>
-         * <p>*   **websockets**</p>
+         * <ul>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * <li><strong>websocket</strong></li>
+         * <li><strong>websockets</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("ProxyType")
         public String proxyType;
@@ -101,41 +111,59 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the Frequency Control policy is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CcEnabled")
         public Boolean ccEnabled;
 
         /**
          * <p>Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CcRuleEnabled")
         public Boolean ccRuleEnabled;
 
         /**
          * <p>The mode of the Frequency Control policy. Valid values:</p>
-         * <br>
-         * <p>*   **default**: the Normal mode</p>
-         * <p>*   **gf_under_attack**: the Emergency mode</p>
-         * <p>*   **gf_sos_verify**: the Strict mode</p>
-         * <p>*   **gf_sos_verify**: the Super Strict mode</p>
+         * <ul>
+         * <li><strong>default</strong>: the Normal mode</li>
+         * <li><strong>gf_under_attack</strong>: the Emergency mode</li>
+         * <li><strong>gf_sos_verify</strong>: the Strict mode</li>
+         * <li><strong>gf_sos_verify</strong>: the Super Strict mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
         /**
          * <p>The name of the SSL certificate used by the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49944XX.pem</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The CNAME provided by the instance to which the domain name is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ekb69x3j9wvXXXX.aliyunddosXXXX.com</p>
          */
         @NameInMap("Cname")
         public String cname;
@@ -148,43 +176,62 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
         /**
          * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>Indicates whether Enable HTTP/2 is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Http2Enable")
         public Boolean http2Enable;
 
         /**
          * <p>Indicates whether Enforce HTTPS Routing is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Http2HttpsEnable")
         public Boolean http2HttpsEnable;
 
         /**
          * <p>Indicates whether Enable HTTP is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Https2HttpEnable")
         public Boolean https2HttpEnable;
 
         /**
-         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the **ProxyType** parameter includes **https**. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
-         * <br>
-         * <p>*   **Http2https**: indicates whether the feature of redirecting HTTP requests to HTTPS requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</p>
-         * <p>*   **Https2http**: indicates whether the feature of redirecting HTTPS requests to HTTP requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</p>
-         * <p>*   **Http2**: indicates whether HTTP/2 is supported. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that HTTP/2 is not supported. The value 1 indicates that HTTP/2 is supported.</p>
+         * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the <strong>ProxyType</strong> parameter includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
+         * <ul>
+         * <li><strong>Http2https</strong>: indicates whether the feature of redirecting HTTP requests to HTTPS requests is enabled. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
+         * <li><strong>Https2http</strong>: indicates whether the feature of redirecting HTTPS requests to HTTP requests is enabled. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
+         * <li><strong>Http2</strong>: indicates whether HTTP/2 is supported. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that HTTP/2 is not supported. The value 1 indicates that HTTP/2 is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Https2http&quot;:0,&quot;Http2&quot;:0,&quot;Http2https&quot;:0}</p>
          */
         @NameInMap("HttpsExt")
         public String httpsExt;
@@ -197,27 +244,40 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:</p>
-         * <p>- **true**: yes</p>
-         * <p>- **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("OcspEnabled")
         public Boolean ocspEnabled;
 
         /**
          * <p>The load balancing algorithm for back-to-origin traffic. Valid values:</p>
-         * <br>
-         * <p>*   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</p>
-         * <p>*   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</p>
-         * <p>*   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</p>
+         * <ul>
+         * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
+         * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
+         * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip_hash</p>
          */
         @NameInMap("PolicyMode")
         public String policyMode;
 
         /**
          * <p>Indicates whether the instance forwards the traffic that is destined for the website. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Anti-DDoS Pro or Anti-DDoS Premium forwards the traffic that is destined for the website.</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: Anti-DDoS Pro or Anti-DDoS Premium forwards the traffic that is destined for the website.</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ProxyEnabled")
         public Boolean proxyEnabled;
@@ -230,20 +290,27 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
         /**
          * <p>The reason why the domain name is invalid. Valid values:</p>
-         * <br>
-         * <p>*   **1**: No Content Provider (ICP) filing is completed for the domain name.</p>
-         * <p>*   **2**: The business for which you registered the domain name does not meet regulatory requirements.</p>
-         * <br>
-         * <p>If the two reasons are both involved, the value **2** is returned.</p>
+         * <ul>
+         * <li><strong>1</strong>: No Content Provider (ICP) filing is completed for the domain name.</li>
+         * <li><strong>2</strong>: The business for which you registered the domain name does not meet regulatory requirements.</li>
+         * </ul>
+         * <p>If the two reasons are both involved, the value <strong>2</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PunishReason")
         public Integer punishReason;
 
         /**
          * <p>Indicates whether the domain name is invalid. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The domain name is invalid. You can view the specific reasons from the **PunishReason** parameter.</p>
-         * <p>*   **false**: The domain name is valid.</p>
+         * <ul>
+         * <li><strong>true</strong>: The domain name is invalid. You can view the specific reasons from the <strong>PunishReason</strong> parameter.</li>
+         * <li><strong>false</strong>: The domain name is valid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PunishStatus")
         public Boolean punishStatus;
@@ -256,38 +323,54 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
         /**
          * <p>The address type of the origin server. Valid values:</p>
-         * <br>
-         * <p>*   **0**: IP address</p>
-         * <p>*   **1**: domain name</p>
+         * <ul>
+         * <li><strong>0</strong>: IP address</li>
+         * <li><strong>1</strong>: domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RsType")
         public Integer rsType;
 
         /**
          * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ssl13Enabled")
         public Boolean ssl13Enabled;
 
         /**
          * <p>The type of the cipher suite. Valid values:</p>
-         * <br>
-         * <p>*   **default**: custom cipher suite</p>
-         * <p>*   **all**: all cipher suites</p>
-         * <p>*   **strong**: strong cipher suites</p>
+         * <ul>
+         * <li><strong>default</strong>: custom cipher suite</li>
+         * <li><strong>all</strong>: all cipher suites</li>
+         * <li><strong>strong</strong>: strong cipher suites</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("SslCiphers")
         public String sslCiphers;
 
         /**
          * <p>The version of the TLS protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tls1.0**: TLS 1.0 or later</p>
-         * <p>*   **tls1.1**: TLS 1.1 or later</p>
-         * <p>*   **tls1.2**: TLS 1.2 or later</p>
+         * <ul>
+         * <li><strong>tls1.0</strong>: TLS 1.0 or later</li>
+         * <li><strong>tls1.1</strong>: TLS 1.1 or later</li>
+         * <li><strong>tls1.2</strong>: TLS 1.2 or later</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tls1.0</p>
          */
         @NameInMap("SslProtocols")
         public String sslProtocols;

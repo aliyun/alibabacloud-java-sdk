@@ -12,12 +12,18 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned DDoS attack events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,24 +60,36 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
     public static class DescribeDomainAttackEventsResponseBodyDomainAttackEvents extends TeaModel {
         /**
          * <p>The attacked domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The time when the DDoS attack stopped. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1560320160</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The peak attack QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxQps")
         public Long maxQps;
 
         /**
          * <p>The time when the DDoS attack started. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1560312900</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
