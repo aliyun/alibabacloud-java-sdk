@@ -6,24 +6,41 @@ import com.aliyun.tea.*;
 public class DescribeElasticQpsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1684339200</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>203.107.XX.XX</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1684252800</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

@@ -7,6 +7,10 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     @NameInMap("ElasticQps")
     public java.util.List<DescribeElasticQpsResponseBodyElasticQps> elasticQps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2E7F7F7B-39A8-5D92-BAB4-D89D9DCE7D4F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +36,66 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticQpsResponseBodyElasticQps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Long index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("MaxNormalQps")
         public Long maxNormalQps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxQps")
         public Long maxQps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15104</p>
+         */
         @NameInMap("Pv")
         public Long pv;
 
+        /**
+         * <strong>example:</strong>
+         * <p>455</p>
+         */
         @NameInMap("Status2")
         public Long status2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Status3")
         public Long status3;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("Status4")
         public Long status4;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status5")
         public Long status5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1223</p>
+         */
         @NameInMap("Ups")
         public Long ups;
 

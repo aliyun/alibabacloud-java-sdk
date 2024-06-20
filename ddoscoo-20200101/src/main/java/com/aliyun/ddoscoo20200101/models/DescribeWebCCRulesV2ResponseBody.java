@@ -4,12 +4,24 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -54,15 +66,31 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailCondition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>belong</p>
+         */
         @NameInMap("MatchMethod")
         public String matchMethod;
 
@@ -106,18 +134,38 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailRateLimit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>action</p>
+         */
         @NameInMap("SubKey")
         public String subKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Threshold")
         public Integer threshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
@@ -169,12 +217,24 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailStatistics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>uri</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>count</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
@@ -210,18 +270,38 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailStatusCode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CountThreshold")
         public Integer countThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RatioThreshold")
         public Integer ratioThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UseRatio")
         public Boolean useRatio;
 
@@ -273,6 +353,10 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Action")
         public String action;
 
@@ -282,12 +366,20 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccauto14</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -300,9 +392,17 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         @NameInMap("StatusCode")
         public DescribeWebCCRulesV2ResponseBodyWebCCRulesRuleDetailStatusCode statusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/p3shijihao</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -402,12 +502,24 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeWebCCRulesV2ResponseBodyWebCCRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Expires")
         public Long expires;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wq</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
         @NameInMap("Owner")
         public String owner;
 

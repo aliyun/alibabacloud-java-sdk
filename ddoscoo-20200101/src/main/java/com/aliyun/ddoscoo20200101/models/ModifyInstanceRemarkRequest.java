@@ -6,20 +6,24 @@ import com.aliyun.tea.*;
 public class ModifyInstanceRemarkRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The description of the instance.</p>
-     * <br>
-     * <p>The value can contain letters, digits, and some special characters, such as`, . + - * / _` The value can be up to 500 characters in length.</p>
-     * <br>
+     * <p>The value can contain letters, digits, and some special characters, such as<code>, . + - * / _</code> The value can be up to 500 characters in length.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new-remark</p>
      */
     @NameInMap("Remark")
     public String remark;

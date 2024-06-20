@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreatePortResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4787A9A6-8230-4B4A-8211-AFBF7C416B4D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

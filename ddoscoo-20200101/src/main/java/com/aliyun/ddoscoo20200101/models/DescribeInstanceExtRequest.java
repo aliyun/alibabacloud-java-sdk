@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeInstanceExtRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-i7m25564****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page. For example, to query the returned results on the first page, set the value to **1**.</p>
+     * <p>The number of the page. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

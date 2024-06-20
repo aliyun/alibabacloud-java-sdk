@@ -6,78 +6,117 @@ import com.aliyun.tea.*;
 public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of 200 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>951159</p>
      */
     @NameInMap("Status200")
     public Long status200;
 
     /**
      * <p>The number of 2xx status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>951472</p>
      */
     @NameInMap("Status2XX")
     public Long status2XX;
 
     /**
      * <p>The number of 3xx status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>133209</p>
      */
     @NameInMap("Status3XX")
     public Long status3XX;
 
     /**
      * <p>The number of 403 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status403")
     public Long status403;
 
     /**
      * <p>The number of 404 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>897</p>
      */
     @NameInMap("Status404")
     public Long status404;
 
     /**
      * <p>The number of 405 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status405")
     public Long status405;
 
     /**
      * <p>The number of 4xx status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5653</p>
      */
     @NameInMap("Status4XX")
     public Long status4XX;
 
     /**
      * <p>The number of 501 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status501")
     public Long status501;
 
     /**
      * <p>The number of 502 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status502")
     public Long status502;
 
     /**
      * <p>The number of 503 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status503")
     public Long status503;
 
     /**
      * <p>The number of 504 status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status504")
     public Long status504;
 
     /**
      * <p>The number of 5xx status codes within the specified period of time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14</p>
      */
     @NameInMap("Status5XX")
     public Long status5XX;

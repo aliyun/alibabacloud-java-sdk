@@ -12,12 +12,18 @@ public class DescribePortResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of port forwarding rules returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,36 +60,53 @@ public class DescribePortResponseBody extends TeaModel {
     public static class DescribePortResponseBodyNetworkRules extends TeaModel {
         /**
          * <p>The port of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("BackendPort")
         public Integer backendPort;
 
         /**
          * <p>The forwarding port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("FrontendProtocol")
         public String frontendProtocol;
 
         /**
          * <p>The ID of the instance to which the port forwarding rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-7e225i41****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether the port forwarding rule is automatically created by the instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsAutoCreate")
         public Boolean isAutoCreate;

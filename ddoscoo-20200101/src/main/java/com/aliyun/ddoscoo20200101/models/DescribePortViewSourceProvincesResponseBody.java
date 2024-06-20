@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,24 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
     public static class DescribePortViewSourceProvincesResponseBodySourceProvinces extends TeaModel {
         /**
          * <p>The total number of requests that are sent from the ISP.</p>
-         * <br>
-         * <p>> This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different administrative regions in China.</p>
+         * <blockquote>
+         * <p>This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different administrative regions in China.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3390671</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The ID of the administrative region in China from which the requests are sent. For example, **110000** indicates Beijing, and **120000** indicates Tianjin.</p>
-         * <br>
-         * <p>> For more information, see [Location parameters](https://help.aliyun.com/document_detail/167926.html).</p>
+         * <p>The ID of the administrative region in China from which the requests are sent. For example, <strong>110000</strong> indicates Beijing, and <strong>120000</strong> indicates Tianjin.</p>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Location parameters</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>440000</p>
          */
         @NameInMap("ProvinceId")
         public String provinceId;

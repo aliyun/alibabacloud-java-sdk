@@ -12,6 +12,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F908E959-ADA8-4D7B-8A05-FF2F67F50964</p>
      */
     @NameInMap("RequestId")
     public String requestId;

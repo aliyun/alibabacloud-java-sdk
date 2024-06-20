@@ -40,19 +40,27 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
     public static class DescribeDomainSecurityProfileResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the global mitigation policy is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("GlobalEnable")
         public Boolean globalEnable;
 
         /**
          * <p>The mode of the global mitigation policy. Valid values:</p>
-         * <br>
-         * <p>*   **weak**: the Low mode</p>
-         * <p>*   **default**: the Normal mode</p>
-         * <p>*   **hard**: the Strict mode</p>
+         * <ul>
+         * <li><strong>weak</strong>: the Low mode</li>
+         * <li><strong>default</strong>: the Normal mode</li>
+         * <li><strong>hard</strong>: the Strict mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("GlobalMode")
         public String globalMode;

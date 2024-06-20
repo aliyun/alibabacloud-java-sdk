@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The query token that is returned in this call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36E698F7-48A4-48D0-9554-0BB4BAAB99B3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
     public static class DescribeTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the Anti-DDoS Pro instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-zz121ogz****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Pro instance.</p>
+         * <p>The type of the resource. The value is fixed as <strong>INSTANCE</strong>, which indicates an Anti-DDoS Pro instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of the tag that is added to the Anti-DDoS Pro instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag that is added to the Anti-DDoS Pro instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

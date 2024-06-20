@@ -4,6 +4,10 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteWebCCRuleV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6D48AED0-41DB-5D9B-B484-3B6AAD312AD1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

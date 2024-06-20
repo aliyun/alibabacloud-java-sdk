@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeAutoCcListCountRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> You can call the **DescribeInstanceIds** operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeInstanceIds</strong> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The mode of how an IP address is added to the whitelist or blacklist. Valid values:</p>
-     * <br>
-     * <p>*   **manual**: manually added</p>
-     * <p>*   **auto**: automatically added</p>
+     * <ul>
+     * <li><strong>manual</strong>: manually added</li>
+     * <li><strong>auto</strong>: automatically added</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>manual</p>
      */
     @NameInMap("QueryType")
     public String queryType;

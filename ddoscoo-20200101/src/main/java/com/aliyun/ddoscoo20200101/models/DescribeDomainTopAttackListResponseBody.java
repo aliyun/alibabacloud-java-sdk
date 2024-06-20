@@ -12,6 +12,9 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     public static class DescribeDomainTopAttackListResponseBodyAttackList extends TeaModel {
         /**
          * <p>The attack QPS. Unit: QPS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Attack")
         public Long attack;
 
         /**
          * <p>The number of all QPS, which includes normal and attack QPS. Unit: QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>294</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;

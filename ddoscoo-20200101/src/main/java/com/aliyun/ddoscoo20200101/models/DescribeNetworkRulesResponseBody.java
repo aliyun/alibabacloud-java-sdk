@@ -12,12 +12,18 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8597F235-FA5E-4FC7-BAD9-E4C0B01BC771</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned port forwarding rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,36 +60,53 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
     public static class DescribeNetworkRulesResponseBodyNetworkRules extends TeaModel {
         /**
          * <p>The port of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("BackendPort")
         public Integer backendPort;
 
         /**
          * <p>The forwarding port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether the port forwarding rule is automatically created. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsAutoCreate")
         public Boolean isAutoCreate;
 
         /**
          * <p>The forwarding protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Protocol")
         public String protocol;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyWebCacheSwitchResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6623EA1F-30FB-5BC8-BEC9-74D55F6F08F1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

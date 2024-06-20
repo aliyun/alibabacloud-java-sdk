@@ -12,6 +12,9 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08F79110-2AF5-4FA7-998E-7C5E75EACF9C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
     public static class DescribePortMaxConnsResponseBodyPortMaxConns extends TeaModel {
         /**
          * <p>The maximum number of connections per second (CPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Cps")
         public Long cps;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.<em><strong>.</strong></em>.117</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The port of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public String port;

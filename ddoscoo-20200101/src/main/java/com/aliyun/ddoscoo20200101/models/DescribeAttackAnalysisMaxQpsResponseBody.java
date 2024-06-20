@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeAttackAnalysisMaxQpsResponseBody extends TeaModel {
     /**
      * <p>The peak queries per second (QPS) of DDoS attacks. Units: QPS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41652</p>
      */
     @NameInMap("Qps")
     public Long qps;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8DFB602D-1AAC-46C4-90F2-C84086E7A6E4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

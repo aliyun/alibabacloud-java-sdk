@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUdpReflectResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F97A8766-FB4D-411A-9CD5-2CFF701B592F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

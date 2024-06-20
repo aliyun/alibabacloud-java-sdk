@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class ModifyElasticBizQpsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>month</p>
      */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300000</p>
+     */
     @NameInMap("OpsElasticQps")
     public Long opsElasticQps;
 

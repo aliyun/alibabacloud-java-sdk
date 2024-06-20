@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AssociateWebCertResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40F11005-A75C-4644-95F2-52A4E7D43E91</p>
      */
     @NameInMap("RequestId")
     public String requestId;

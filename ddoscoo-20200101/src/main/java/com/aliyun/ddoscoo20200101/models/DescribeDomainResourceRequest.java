@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDomainResourceRequest extends TeaModel {
     /**
      * <p>The domain name of the website that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -17,24 +20,33 @@ public class DescribeDomainResourceRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The match mode. Valid values:</p>
-     * <br>
-     * <p>*   **fuzzy**: fuzzy match. This is the default value.</p>
-     * <p>*   **exact**: exact match.</p>
+     * <ul>
+     * <li><strong>fuzzy</strong>: fuzzy match. This is the default value.</li>
+     * <li><strong>exact</strong>: exact match.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>fuzzy</p>
      */
     @NameInMap("QueryDomainPattern")
     public String queryDomainPattern;

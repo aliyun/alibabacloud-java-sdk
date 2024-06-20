@@ -12,12 +12,18 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of advanced mitigation sessions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,39 +60,58 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
     public static class DescribeDefenseRecordsResponseBodyDefenseRecords extends TeaModel {
         /**
          * <p>The peak attack traffic. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6584186000</p>
          */
         @NameInMap("AttackPeak")
         public Long attackPeak;
 
         /**
          * <p>The end time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583683200000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The number of attacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EventCount")
         public Integer eventCount;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The start time of the advanced mitigation session. This value is a UNIX timestamp. Units: miliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582992000000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the advanced mitigation session. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The advanced mitigation session is being used.</p>
-         * <p>*   **1**: The advanced mitigation session is used.</p>
+         * <ul>
+         * <li><strong>0</strong>: The advanced mitigation session is being used.</li>
+         * <li><strong>1</strong>: The advanced mitigation session is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;

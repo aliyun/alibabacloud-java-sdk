@@ -12,6 +12,9 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83B4AF42-E8EE-4DC9-BD73-87B7733A36F9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,55 +43,82 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     public static class DescribeHealthCheckListResponseBodyHealthCheckListHealthCheck extends TeaModel {
         /**
          * <p>The domain name.</p>
-         * <br>
-         * <p>> This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The number of consecutive failed health checks that must occur before a port is declared unhealthy. Valid values: **1** to **10**.</p>
+         * <p>The number of consecutive failed health checks that must occur before a port is declared unhealthy. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Down")
         public Integer down;
 
         /**
-         * <p>The interval at which checks are performed. Valid values: **1** to **30**. Unit: seconds.</p>
+         * <p>The interval at which checks are performed. Valid values: <strong>1</strong> to <strong>30</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
          * <p>The port that was checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The response timeout period. Valid values: **1** to **30**. Unit: seconds.</p>
+         * <p>The response timeout period. Valid values: <strong>1</strong> to <strong>30</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
         /**
          * <p>The type of the protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**: The Layer 4 health check configuration was queried.</p>
-         * <p>*   **http**: The Layer 7 health check configuration was queried.</p>
+         * <ul>
+         * <li><strong>tcp</strong>: The Layer 4 health check configuration was queried.</li>
+         * <li><strong>http</strong>: The Layer 7 health check configuration was queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The number of consecutive successful health checks that must occur before a port is declared healthy. Valid values: **1** to **10**.</p>
+         * <p>The number of consecutive successful health checks that must occur before a port is declared healthy. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Up")
         public Integer up;
 
         /**
          * <p>The check path.</p>
-         * <br>
-         * <p>> This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the Layer 7 health check configuration is queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/abc</p>
          */
         @NameInMap("Uri")
         public String uri;
@@ -167,6 +197,9 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     public static class DescribeHealthCheckListResponseBodyHealthCheckList extends TeaModel {
         /**
          * <p>The forwarding port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
@@ -179,15 +212,22 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-mp91j1ao****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The forwarding protocol. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **udp**</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>udp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("Protocol")
         public String protocol;

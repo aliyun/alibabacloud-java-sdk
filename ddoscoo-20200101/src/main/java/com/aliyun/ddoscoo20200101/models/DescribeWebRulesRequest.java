@@ -4,27 +4,54 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebRulesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>kzmk7b8tt351****.aliyunddos1014****</p>
+     */
     @NameInMap("Cname")
     public String cname;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>exact</p>
+     */
     @NameInMap("QueryDomainPattern")
     public String queryDomainPattern;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

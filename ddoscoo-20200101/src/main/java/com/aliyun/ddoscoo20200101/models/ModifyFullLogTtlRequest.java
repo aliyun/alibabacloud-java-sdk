@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ModifyFullLogTtlRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The log storage duration of a website. Valid values: **30** to **180**. Unit: days.</p>
-     * <br>
+     * <p>The log storage duration of a website. Valid values: <strong>30</strong> to <strong>180</strong>. Unit: days.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;

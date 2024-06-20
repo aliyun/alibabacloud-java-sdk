@@ -5,48 +5,58 @@ import com.aliyun.tea.*;
 
 public class DescribeDDosAllEventListRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The DDoS attack events occur before **EndTime** are queried. This value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
+     * <p>The end of the time range to query. The DDoS attack events occur before <strong>EndTime</strong> are queried. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640966399</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The type of the DDoS attack events you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **web-cc**: resource exhaustion attacks</p>
-     * <p>*   **cc**: connection flood attacks</p>
-     * <p>*   **defense**: DDoS attacks that trigger traffic scrubbing</p>
-     * <p>*   **blackhole**: DDoS attacks that trigger blackhole filtering</p>
-     * <br>
+     * <ul>
+     * <li><strong>web-cc</strong>: resource exhaustion attacks</li>
+     * <li><strong>cc</strong>: connection flood attacks</li>
+     * <li><strong>defense</strong>: DDoS attacks that trigger traffic scrubbing</li>
+     * <li><strong>blackhole</strong>: DDoS attacks that trigger blackhole filtering</li>
+     * </ul>
      * <p>If you want to query multiple types of DDoS attack events, separate them with commas (,).</p>
-     * <br>
      * <p>If you do not configure this parameter, DDoS attack events of all types are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defense</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. The DDoS attack events occur after **StartTime** are queried. This value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
+     * <p>The beginning of the time range to query. The DDoS attack events occur after <strong>StartTime</strong> are queried. This value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1609430400</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

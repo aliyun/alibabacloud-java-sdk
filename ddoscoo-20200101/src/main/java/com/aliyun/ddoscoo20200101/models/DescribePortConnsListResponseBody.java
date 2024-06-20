@@ -12,6 +12,9 @@ public class DescribePortConnsListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D48AED0-41DB-5D9B-B484-3B6AAD312AD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribePortConnsListResponseBody extends TeaModel {
     public static class DescribePortConnsListResponseBodyConnsList extends TeaModel {
         /**
          * <p>The number of active connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ActConns")
         public Long actConns;
 
         /**
          * <p>The number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Conns")
         public Long conns;
 
         /**
          * <p>The new connection creation rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Cps")
         public Long cps;
 
         /**
          * <p>The number of inactive connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InActConns")
         public Long inActConns;
 
         /**
          * <p>The index number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16506</p>
          */
         @NameInMap("Index")
         public Long index;

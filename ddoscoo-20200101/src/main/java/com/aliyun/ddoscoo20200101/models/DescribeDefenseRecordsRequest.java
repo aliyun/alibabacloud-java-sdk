@@ -6,50 +6,67 @@ import com.aliyun.tea.*;
 public class DescribeDefenseRecordsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
-     * <br>
-     * <p>> The time must be in the latest 90 days.</p>
-     * <br>
+     * <blockquote>
+     * <p>The time must be in the latest 90 days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1583683200000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to **1**.</p>
-     * <br>
+     * <p>The number of the page to return. For example, to query the returned results on the first page, set the value to <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**.</p>
-     * <br>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The beginning of the time range to query. This value is a UNIX timestamp. Units: miliseconds.</p>
-     * <br>
-     * <p>> The time must be in the latest 90 days.</p>
-     * <br>
+     * <blockquote>
+     * <p>The time must be in the latest 90 days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582992000000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

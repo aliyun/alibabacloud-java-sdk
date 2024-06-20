@@ -4,12 +4,24 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIdsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("Edition")
     public Integer edition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

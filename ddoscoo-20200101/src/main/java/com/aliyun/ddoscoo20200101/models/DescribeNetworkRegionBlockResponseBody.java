@@ -12,6 +12,9 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,9 +55,13 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
 
         /**
          * <p>The status of the Location Blacklist policy. Valid values:</p>
-         * <br>
-         * <p>*   **on**: enabled</p>
-         * <p>*   **off**: disabled</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled</li>
+         * <li><strong>off</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("RegionBlockSwitch")
         public String regionBlockSwitch;

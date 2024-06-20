@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeAutoCcListCountResponseBody extends TeaModel {
     /**
      * <p>The total number of IP addresses in the blacklist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("BlackCount")
     public Integer blackCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5AC3785F-C789-4622-87A4-F58BE7F6B184</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of IP addresses in the whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("WhiteCount")
     public Integer whiteCount;

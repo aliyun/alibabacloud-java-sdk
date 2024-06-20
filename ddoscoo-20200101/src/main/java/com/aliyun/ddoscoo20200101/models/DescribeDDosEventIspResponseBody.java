@@ -12,6 +12,9 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4A3BCD1-4A32-4342-941A-4745AE69508C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,31 +43,38 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
     public static class DescribeDDosEventIspResponseBodyIsps extends TeaModel {
         /**
          * <p>The number of request packets that were sent from the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>230</p>
          */
         @NameInMap("InPkts")
         public Long inPkts;
 
         /**
          * <p>The code of the ISP. Valid values:</p>
-         * <br>
-         * <p>*   **100017**: China Telecom</p>
-         * <p>*   **100026**: China Unicom</p>
-         * <p>*   **100025**: China Mobile</p>
-         * <p>*   **100027**: China Education and Research Network</p>
-         * <p>*   **100020**: China Mobile Tietong</p>
-         * <p>*   **1000143**: Dr.Peng Telecom & Media Group</p>
-         * <p>*   **100080**: Beijing Gehua CATV Network</p>
-         * <p>*   **1000139**: National Radio and Television Administration</p>
-         * <p>*   **100023**: Oriental Cable Network</p>
-         * <p>*   **100063**: Founder Broadband</p>
-         * <p>*   **1000337**: China Internet Exchange</p>
-         * <p>*   **100021**: 21Vianet Group</p>
-         * <p>*   **1000333**: Wasu Media Holding</p>
-         * <p>*   **100093**: Wangsu Science & Technology</p>
-         * <p>*   **1000401**: Tencent</p>
-         * <p>*   **100099**: Baidu</p>
-         * <p>*   **1000323**: Alibaba Cloud</p>
-         * <p>*   **100098**: Alibaba</p>
+         * <ul>
+         * <li><strong>100017</strong>: China Telecom</li>
+         * <li><strong>100026</strong>: China Unicom</li>
+         * <li><strong>100025</strong>: China Mobile</li>
+         * <li><strong>100027</strong>: China Education and Research Network</li>
+         * <li><strong>100020</strong>: China Mobile Tietong</li>
+         * <li><strong>1000143</strong>: Dr.Peng Telecom &amp; Media Group</li>
+         * <li><strong>100080</strong>: Beijing Gehua CATV Network</li>
+         * <li><strong>1000139</strong>: National Radio and Television Administration</li>
+         * <li><strong>100023</strong>: Oriental Cable Network</li>
+         * <li><strong>100063</strong>: Founder Broadband</li>
+         * <li><strong>1000337</strong>: China Internet Exchange</li>
+         * <li><strong>100021</strong>: 21Vianet Group</li>
+         * <li><strong>1000333</strong>: Wasu Media Holding</li>
+         * <li><strong>100093</strong>: Wangsu Science &amp; Technology</li>
+         * <li><strong>1000401</strong>: Tencent</li>
+         * <li><strong>100099</strong>: Baidu</li>
+         * <li><strong>1000323</strong>: Alibaba Cloud</li>
+         * <li><strong>100098</strong>: Alibaba</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1000323</p>
          */
         @NameInMap("Isp")
         public String isp;

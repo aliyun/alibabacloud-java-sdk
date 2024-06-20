@@ -6,35 +6,44 @@ import com.aliyun.tea.*;
 public class CreateSceneDefensePolicyRequest extends TeaModel {
     /**
      * <p>The end time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1586016000000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The name of the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpolicy</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The start time of the policy. This value is a UNIX timestamp. Units: milliseconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1585670400000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>The template of the policy. Valid values:</p>
-     * <br>
-     * <p>*   **promotion**: important activity</p>
-     * <p>*   **bypass**: all traffic forwarded</p>
-     * <br>
+     * <ul>
+     * <li><strong>promotion</strong>: important activity</li>
+     * <li><strong>bypass</strong>: all traffic forwarded</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>promotion</p>
      */
     @NameInMap("Template")
     public String template;

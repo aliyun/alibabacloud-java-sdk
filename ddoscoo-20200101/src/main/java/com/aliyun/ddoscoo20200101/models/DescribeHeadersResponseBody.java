@@ -12,6 +12,9 @@ public class DescribeHeadersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48BC7BA5-69BE-5C31-A080-AFF2431AE48D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeHeadersResponseBody extends TeaModel {
     public static class DescribeHeadersResponseBodyCustomHeader extends TeaModel {
         /**
          * <p>The domain name of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The header of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;X-Forwarded-ClientSrcPort&quot;:&quot;&quot;,&quot;header1&quot;:&quot;hLeLele&quot;}</p>
          */
         @NameInMap("Headers")
         public String headers;

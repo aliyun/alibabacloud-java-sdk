@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The mitigation plan of the instance to query. Valid values:</p>
-     * <br>
-     * <p>*   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan</p>
-     * <p>*   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan</p>
-     * <p>*   **2**: Anti-DDoS Premium instance of the Mainland China Acceleration (MCA) mitigation plan</p>
-     * <p>*   **9**: Anti-DDoS Pro instance of the Profession mitigation plan</p>
+     * <ul>
+     * <li><strong>0</strong>: Anti-DDoS Premium instance of the Insurance mitigation plan</li>
+     * <li><strong>1</strong>: Anti-DDoS Premium instance of the Unlimited mitigation plan</li>
+     * <li><strong>2</strong>: Anti-DDoS Premium instance of the Mainland China Acceleration (MCA) mitigation plan</li>
+     * <li><strong>9</strong>: Anti-DDoS Pro instance of the Profession mitigation plan</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("Edition")
     public Integer edition;
 
     /**
      * <p>The traffic forwarding status of the instance to query. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The instance no longer forwards service traffic.</p>
-     * <p>*   **1**: The instance forwards service traffic as expected.</p>
+     * <ul>
+     * <li><strong>0</strong>: The instance no longer forwards service traffic.</li>
+     * <li><strong>1</strong>: The instance forwards service traffic as expected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Enabled")
     public Integer enabled;
 
     /**
      * <p>The end of the time range to query. Instances whose expiration time is earlier than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640361700000</p>
      */
     @NameInMap("ExpireEndTime")
     public Long expireEndTime;
 
     /**
      * <p>The beginning of the time range to query. Instances whose expiration time is later than the point in time are queried. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640361500000</p>
      */
     @NameInMap("ExpireStartTime")
     public Long expireStartTime;
@@ -41,36 +55,48 @@ public class DescribeInstancesRequest extends TeaModel {
 
     /**
      * <p>The IP address of the instance to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203.107.XX.XX</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The remarks of the instance to query. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doc-test</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-     * <br>
      * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -185,22 +211,32 @@ public class DescribeInstancesRequest extends TeaModel {
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:</p>
-         * <br>
-         * <p>*   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).</p>
-         * <p>*   Separate multiple tags with commas (,).</p>
-         * <br>
-         * <p>>  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.</p>
+         * <ul>
+         * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated by a comma (,).</li>
+         * <li>Separate multiple tags with commas (,).</li>
+         * </ul>
+         * <blockquote>
+         * <p> The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must be specified in pairs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:</p>
-         * <br>
-         * <p>*   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).</p>
-         * <p>*   Separate multiple tags with commas (,).</p>
-         * <br>
-         * <p>>  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.</p>
+         * <ul>
+         * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated by a comma (,).</li>
+         * <li>Separate multiple tags with commas (,).</li>
+         * </ul>
+         * <blockquote>
+         * <p> The tag key (<strong>Key</strong>) and tag value (<strong>Value</strong>) must be specified in pairs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
          */
         @NameInMap("Value")
         public String value;

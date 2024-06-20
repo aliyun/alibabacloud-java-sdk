@@ -4,6 +4,10 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyQpsModeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>48859E14-A9FB-4100-99FF-AAB75CA46776</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -6,38 +6,40 @@ import com.aliyun.tea.*;
 public class ConfigNetworkRegionBlockRequest extends TeaModel {
     /**
      * <p>The details of the configurations of blocked locations. This parameter is a JSON string. The value consists of the following fields:</p>
-     * <br>
-     * <p>*   **RegionBlockSwitch**: the status of the Location Blacklist policy. This field is required and must be of the string type. Valid values:</p>
-     * <br>
-     * <p>    *   **on**: enables the policy.</p>
-     * <p>    *   **off**: disables the policy.</p>
-     * <br>
-     * <p>*   **Countries**: the codes of the countries or areas from which you want to block requests. This field is optional and must be of the array type.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**For more information, see the **Codes of countries and areas** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic.</p>
-     * <br>
-     * <br>
-     * <p>*   **Provinces**: the codes of the administrative regions in China from which you want to block requests. This field is optional and must be of the array type.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**For more information, see the **Codes of administrative regions in China** section of the [Codes of administrative regions in China and codes of countries and areas](https://help.aliyun.com/document_detail/167926.html) topic.</p>
-     * <br>
-     * <p>    For example, `[11,12]` specifies Beijing and Tianjin.</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>RegionBlockSwitch</strong>: the status of the Location Blacklist policy. This field is required and must be of the string type. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong>: enables the policy.</li>
+     * <li><strong>off</strong>: disables the policy.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>Countries</strong>: the codes of the countries or areas from which you want to block requests. This field is optional and must be of the array type.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong>For more information, see the <strong>Codes of countries and areas</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic.</p>
+     * </li>
+     * <li><p><strong>Provinces</strong>: the codes of the administrative regions in China from which you want to block requests. This field is optional and must be of the array type.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong>For more information, see the <strong>Codes of administrative regions in China</strong> section of the <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a> topic.</p>
+     * <p>For example, <code>[11,12]</code> specifies Beijing and Tianjin.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;RegionBlockSwitch&quot;:&quot;off&quot;,&quot;Countries&quot;:[],&quot;Provinces&quot;:[11,12,13,14,15,21,22,23,31,32,33,34,35,36,37,41,42,43,44,45,46,50,51,52,53,54,61,62,63,64,65,71,81,82]}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstanceIds](https://help.aliyun.com/document_detail/157459.html) operation to query the IDs of all instances.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-mp91j1ao****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

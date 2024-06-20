@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeDomainOverviewRequest extends TeaModel {
     /**
      * <p>The domain name of the website that you want to query. If you leave this parameter unspecified, the statistics on all domain names are queried.</p>
-     * <br>
-     * <p>> The domain name must be added to Anti-DDoS Pro or Anti-DDoS Premium. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <blockquote>
+     * <p>The domain name must be added to Anti-DDoS Pro or Anti-DDoS Premium. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you leave this parameter unspecified, the current system time is used as the end time.</p>
-     * <br>
-     * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * <blockquote>
+     * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1623427200</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-     * <br>
-     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
-     * <p>> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
-     * <br>
+     * <blockquote>
+     * <p>This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1619798400</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

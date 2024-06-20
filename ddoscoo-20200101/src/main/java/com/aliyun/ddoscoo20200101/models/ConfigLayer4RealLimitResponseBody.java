@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ConfigLayer4RealLimitResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFCF71BD-680E-5A20-8847-174CEC62E67D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

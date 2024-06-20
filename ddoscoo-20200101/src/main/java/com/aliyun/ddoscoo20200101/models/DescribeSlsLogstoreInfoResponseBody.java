@@ -6,38 +6,57 @@ import com.aliyun.tea.*;
 public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
     /**
      * <p>The Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-logstore</p>
      */
     @NameInMap("LogStore")
     public String logStore;
 
     /**
      * <p>The Logstore project of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-project-181071506993****-cn-hangzhou</p>
      */
     @NameInMap("Project")
     public String project;
 
     /**
      * <p>The available log storage capacity. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3298534883328</p>
      */
     @NameInMap("Quota")
     public Long quota;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The log storage duration. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;
 
     /**
      * <p>The used log storage capacity. Unit: bytes.</p>
-     * <br>
-     * <p>> The statistics on Log Service are delayed for about two hours.</p>
+     * <blockquote>
+     * <p>The statistics on Log Service are delayed for about two hours.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Used")
     public Long used;

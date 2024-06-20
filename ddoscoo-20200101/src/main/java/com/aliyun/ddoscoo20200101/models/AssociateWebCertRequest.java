@@ -30,6 +30,9 @@ public class AssociateWebCertRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

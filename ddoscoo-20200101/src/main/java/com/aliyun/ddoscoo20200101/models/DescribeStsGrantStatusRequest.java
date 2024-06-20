@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeStsGrantStatusRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-     * <br>
      * <p>If you do not configure this parameter, the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the RAM role to query. Set the value to **AliyunDDoSCOODefaultRole**, which indicates the default role of Anti-DDoS Pro or Anti-DDoS Premium.</p>
-     * <br>
-     * <p>> Anti-DDoS Pro or Anti-DDoS Premium uses the default role to access other cloud services.</p>
-     * <br>
+     * <p>The name of the RAM role to query. Set the value to <strong>AliyunDDoSCOODefaultRole</strong>, which indicates the default role of Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <blockquote>
+     * <p>Anti-DDoS Pro or Anti-DDoS Premium uses the default role to access other cloud services.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunDDoSCOODefaultRole</p>
      */
     @NameInMap("Role")
     public String role;

@@ -6,37 +6,49 @@ import com.aliyun.tea.*;
 public class ModifyTlsConfigRequest extends TeaModel {
     /**
      * <p>The details of the TLS policy. The value is a JSON string that contains the following fields:</p>
-     * <br>
-     * <p>*   **ssl_protocols**: the version of TLS. This field is required. Data type: string. Valid values:</p>
-     * <br>
-     * <p>    *   **tls1.0**: TLS 1.0 and later</p>
-     * <p>    *   **tls1.1**: TLS 1.1 and later</p>
-     * <p>    *   **tls1.2**: TLS 1.2 and later</p>
-     * <br>
-     * <p>*   **ssl_ciphers**: the type of the cipher suite. This field is required. Data type: string. Valid values:</p>
-     * <br>
-     * <p>    *   **all**: all cipher suites, which include strong and weak cipher suites</p>
-     * <p>    *   **improved**: enhanced cipher suites</p>
-     * <p>    *   **strong**: strong cipher suites</p>
-     * <p>    *   **default**: default cipher suites, which include only strong cipher suites</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>ssl_protocols</strong>: the version of TLS. This field is required. Data type: string. Valid values:</p>
+     * <ul>
+     * <li><strong>tls1.0</strong>: TLS 1.0 and later</li>
+     * <li><strong>tls1.1</strong>: TLS 1.1 and later</li>
+     * <li><strong>tls1.2</strong>: TLS 1.2 and later</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>ssl_ciphers</strong>: the type of the cipher suite. This field is required. Data type: string. Valid values:</p>
+     * <ul>
+     * <li><strong>all</strong>: all cipher suites, which include strong and weak cipher suites</li>
+     * <li><strong>improved</strong>: enhanced cipher suites</li>
+     * <li><strong>strong</strong>: strong cipher suites</li>
+     * <li><strong>default</strong>: default cipher suites, which include only strong cipher suites</li>
+     * </ul>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ssl_protocols&quot;:&quot;tls1.0&quot;,&quot;ssl_ciphers&quot;:&quot;all&quot;}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The domain name of the website.</p>
-     * <br>
-     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](https://help.aliyun.com/document_detail/91724.html) operation to query all domain names.</p>
-     * <br>
+     * <blockquote>
+     * <p>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
