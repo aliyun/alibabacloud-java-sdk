@@ -4,12 +4,20 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1e195c5116124202371861018d5bde</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Resources")
     public java.util.List<ListResourcesResponseBodyResources> resources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -133,9 +141,17 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyResourcesQuotasSpecs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cu</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11500</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -163,27 +179,55 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyResourcesQuotas extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cpu</p>
+         */
         @NameInMap("CardType")
         public String cardType;
 
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>develop</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>QuotaName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxCompute_isolate</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
+         */
         @NameInMap("QuotaType")
         public String quotaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;cu\&quot;:\&quot;11500\&quot;,\&quot;minCu\&quot;:\&quot;2300\&quot;,\&quot;parentId\&quot;:\&quot;0\&quot;}</p>
+         */
         @NameInMap("Specs")
         public java.util.List<ListResourcesResponseBodyResourcesQuotasSpecs> specs;
 
@@ -262,30 +306,58 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("Encryption")
         public ListResourcesResponseBodyResourcesEncryption encryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
         @NameInMap("Executor")
         public ListResourcesResponseBodyResourcesExecutor executor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>groupName</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         @NameInMap("Labels")
         public java.util.List<ListResourcesResponseBodyResourcesLabels> labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
@@ -295,9 +367,17 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>对于MaxCompute {&quot;Endpoint&quot;: &quot;odps.alibaba-inc.com&quot;, &quot;Project&quot;: &quot;mignshi&quot;}</p>
+         */
         @NameInMap("Spec")
         public java.util.Map<String, ?> spec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

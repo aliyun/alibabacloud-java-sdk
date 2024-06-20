@@ -4,15 +4,27 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>group-kjds******sd</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
     @NameInMap("Labels")
     public java.util.List<UpdateWorkspaceResourceRequestLabels> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MaxCompute</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

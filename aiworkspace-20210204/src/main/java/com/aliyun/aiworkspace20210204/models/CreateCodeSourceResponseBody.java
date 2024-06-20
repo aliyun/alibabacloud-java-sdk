@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateCodeSourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>code-20********</p>
+     */
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3**********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

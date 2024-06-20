@@ -4,15 +4,31 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS URL</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>COMMON PIC TEXT VIDEO AUDIO</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d-c0h44g3wlwkj8o4348</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
@@ -31,30 +47,58 @@ public class Dataset extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jsonstring</p>
+     */
     @NameInMap("Options")
     public String options;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FILE DIRECTORY TABULAR</p>
+     */
     @NameInMap("Property")
     public String property;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ProviderType")
     public String providerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Source Id</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER ITAG  PAI_PUBLIC_DATASET</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://xxx</p>
+     */
     @NameInMap("Uri")
     public String uri;
 
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Workspace Id</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

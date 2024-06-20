@@ -4,9 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace-example</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 

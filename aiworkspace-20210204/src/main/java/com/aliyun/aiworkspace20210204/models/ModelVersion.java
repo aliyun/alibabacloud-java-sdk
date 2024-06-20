@@ -13,15 +13,31 @@ public class ModelVersion extends TeaModel {
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SavedModel</p>
+     */
     @NameInMap("FormatType")
     public String formatType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TensorFlow</p>
+     */
     @NameInMap("FrameworkType")
     public String frameworkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
@@ -37,6 +53,10 @@ public class ModelVersion extends TeaModel {
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155770209******</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -49,15 +69,27 @@ public class ModelVersion extends TeaModel {
     @NameInMap("TrainingSpec")
     public java.util.Map<String, ?> trainingSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://bucket/path-to-model</p>
+     */
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155770209******</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
     @NameInMap("VersionDescription")
     public String versionDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 

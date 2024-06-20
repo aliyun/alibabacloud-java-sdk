@@ -7,6 +7,10 @@ public class ListProductsResponseBody extends TeaModel {
     @NameInMap("Products")
     public java.util.List<ListProductsResponseBodyProducts> products;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1e195c5116124202371861018d5bde</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,15 +50,27 @@ public class ListProductsResponseBody extends TeaModel {
         @NameInMap("HasPermissionToPurchase")
         public Boolean hasPermissionToPurchase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsPurchased")
         public Boolean isPurchased;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DataWorks_isolate</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
         @NameInMap("ProductInstanceId")
         public String productInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliy">https://common-buy.aliy</a></p>
+         */
         @NameInMap("PurchaseUrl")
         public String purchaseUrl;
 
@@ -106,12 +122,20 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyServices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsOpen")
         public Boolean isOpen;
 
         @NameInMap("OpenUrl")
         public String openUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("ServiceCode")
         public String serviceCode;
 

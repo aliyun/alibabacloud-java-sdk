@@ -4,18 +4,38 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListImageLabelsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>image-4c62******53uor</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system.framework=XGBoost 1.6.0,system.official=true</p>
+     */
     @NameInMap("LabelFilter")
     public String labelFilter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system.framework,system.official</p>
+     */
     @NameInMap("LabelKeys")
     public String labelKeys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

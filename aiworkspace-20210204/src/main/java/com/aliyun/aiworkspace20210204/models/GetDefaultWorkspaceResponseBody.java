@@ -7,36 +7,72 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     @NameInMap("Conditions")
     public java.util.List<GetDefaultWorkspaceResponseBodyConditions> conditions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17915******4216</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace description example</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace-example</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     @NameInMap("Owner")
     public GetDefaultWorkspaceResponseBodyOwner owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ENABLED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace-example</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 
@@ -142,12 +178,24 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     }
 
     public static class GetDefaultWorkspaceResponseBodyConditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public Long code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Create Failed</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATING</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -183,12 +231,24 @@ public class GetDefaultWorkspaceResponseBody extends TeaModel {
     }
 
     public static class GetDefaultWorkspaceResponseBodyOwner extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>17915******4216</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17915******4216</p>
+         */
         @NameInMap("UserKp")
         public String userKp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

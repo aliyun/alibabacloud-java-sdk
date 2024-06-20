@@ -4,6 +4,10 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class AddImageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
@@ -13,18 +17,34 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com/pai-compression/nlp:gpu</p>
+     */
     @NameInMap("ImageUri")
     public String imageUri;
 
     @NameInMap("Labels")
     public java.util.List<AddImageRequestLabels> labels;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nlp-compression</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15******45</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -98,9 +118,17 @@ public class AddImageRequest extends TeaModel {
     }
 
     public static class AddImageRequestLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>system.chipType</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GPU</p>
+         */
         @NameInMap("Value")
         public String value;
 

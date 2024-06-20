@@ -4,15 +4,27 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DeleteWorkspaceResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>group</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DetachAndDelete</p>
+     */
     @NameInMap("Option")
     public String option;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DLC</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

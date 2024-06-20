@@ -4,39 +4,75 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.******ession/nlp:gpu</p>
+     */
     @NameInMap("ImageUri")
     public String imageUri;
 
     @NameInMap("Labels")
     public java.util.List<GetImageResponseBodyLabels> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nlp-compression</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15577******8921</p>
+     */
     @NameInMap("ParentUserId")
     public String parentUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15577******8921</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15945</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -142,9 +178,17 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>system.chipType</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GPU</p>
+         */
         @NameInMap("Value")
         public String value;
 

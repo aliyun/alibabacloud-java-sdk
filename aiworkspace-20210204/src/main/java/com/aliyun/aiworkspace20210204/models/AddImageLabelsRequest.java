@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class AddImageLabelsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<AddImageLabelsRequestLabels> labels;
 
@@ -21,9 +24,17 @@ public class AddImageLabelsRequest extends TeaModel {
     }
 
     public static class AddImageLabelsRequestLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>system.chipType</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GPU</p>
+         */
         @NameInMap("Value")
         public String value;
 

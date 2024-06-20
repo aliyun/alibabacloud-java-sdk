@@ -4,63 +4,133 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetModelVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Approved</p>
+     */
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("EvaluationSpec")
     public java.util.Map<String, ?> evaluationSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SavedModel</p>
+     */
     @NameInMap("FormatType")
     public String formatType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TensorFlow</p>
+     */
     @NameInMap("FrameworkType")
     public String frameworkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-30T12:51:33.028Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;Processor&quot;: &quot;tensorflow_gpu_1.12&quot;
+     * }</p>
+     */
     @NameInMap("InferenceSpec")
     public java.util.Map<String, ?> inferenceSpec;
 
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Metrics")
     public java.util.Map<String, ?> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890******</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PAIFlow</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("TrainingSpec")
     public java.util.Map<String, ?> trainingSpec;
 
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890******</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
     @NameInMap("VersionDescription")
     public String versionDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.1.0</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 

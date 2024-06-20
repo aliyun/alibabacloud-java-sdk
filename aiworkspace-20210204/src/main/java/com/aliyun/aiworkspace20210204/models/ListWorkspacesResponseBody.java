@@ -4,12 +4,28 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *    &quot;MaxCompute_share&quot;: 1,
+     *    &quot;MaxCompute_isolate&quot;: 1,
+     *    &quot;DLC_share&quot;: 1
+     * }</p>
+     */
     @NameInMap("ResourceLimits")
     public java.util.Map<String, ?> resourceLimits;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -57,33 +73,69 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("AdminNames")
         public java.util.List<String> adminNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>122424353535</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace description example</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
+         */
         @NameInMap("ExtraInfos")
         public java.util.Map<String, ?> extraInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace-example</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

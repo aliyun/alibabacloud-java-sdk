@@ -7,9 +7,17 @@ public class ListMembersResponseBody extends TeaModel {
     @NameInMap("Members")
     public java.util.List<ListMembersResponseBodyMembers> members;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,21 +51,41 @@ public class ListMembersResponseBody extends TeaModel {
     }
 
     public static class ListMembersResponseBodyMembers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>myDisplayName</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-21T17:12:35.232Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14588*****51688039</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("MemberName")
         public String memberName;
 
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>215139******88039</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

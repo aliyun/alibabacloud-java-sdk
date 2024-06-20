@@ -4,39 +4,71 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>group</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ListResourceByWorkspace</p>
+     */
     @NameInMap("Option")
     public String option;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MaxCompute</p>
+     */
     @NameInMap("ProductTypes")
     public String productTypes;
 
     @NameInMap("QuotaIds")
     public String quotaIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>resource</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Verbose")
     public Boolean verbose;
 
     @NameInMap("VerboseFields")
     public String verboseFields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -7,42 +7,86 @@ public class GetWorkspaceResponseBody extends TeaModel {
     @NameInMap("AdminNames")
     public java.util.List<String> adminNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1157******94123</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace description example</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace-example</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
+     */
     @NameInMap("ExtraInfos")
     public java.util.Map<String, ?> extraInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-21T17:12:35.232Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
     @NameInMap("Owner")
     public GetWorkspaceResponseBodyOwner owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A0F049F0-8D69-5BAC-8F10-B4DED1B5A34C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ENABLED</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace-example</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 
@@ -164,15 +208,31 @@ public class GetWorkspaceResponseBody extends TeaModel {
     }
 
     public static class GetWorkspaceResponseBodyOwner extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mings****t</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1157******94123</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1157******94123</p>
+         */
         @NameInMap("UserKp")
         public String userKp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mings****t</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

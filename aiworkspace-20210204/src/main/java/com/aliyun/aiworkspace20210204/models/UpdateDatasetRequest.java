@@ -7,9 +7,19 @@ public class UpdateDatasetRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myName</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+     * }</p>
+     */
     @NameInMap("Options")
     public String options;
 

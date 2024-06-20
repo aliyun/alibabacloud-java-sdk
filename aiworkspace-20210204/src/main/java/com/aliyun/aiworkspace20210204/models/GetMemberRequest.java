@@ -7,6 +7,10 @@ public class GetMemberRequest extends TeaModel {
     @NameInMap("MemberId")
     public String memberId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21513926******88039</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,6 +4,10 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateModelLabelsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F81D9EC0-1872-50F5-A96C-A0647D****1D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

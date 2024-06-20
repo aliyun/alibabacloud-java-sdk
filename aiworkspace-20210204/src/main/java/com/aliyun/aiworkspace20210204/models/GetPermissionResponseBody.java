@@ -4,12 +4,20 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetPermissionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PaiDLC:ListJobs</p>
+     */
     @NameInMap("PermissionCode")
     public String permissionCode;
 
     @NameInMap("PermissionRules")
     public java.util.List<GetPermissionResponseBodyPermissionRules> permissionRules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A14FA81-DD4E-******-6343FE44B941</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +51,17 @@ public class GetPermissionResponseBody extends TeaModel {
     }
 
     public static class GetPermissionResponseBodyPermissionRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
         @NameInMap("Accessibility")
         public String accessibility;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATOR</p>
+         */
         @NameInMap("EntityAccessType")
         public String entityAccessType;
 

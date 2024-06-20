@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateMemberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Members")
     public java.util.List<CreateMemberRequestMembers> members;
 
@@ -21,9 +24,18 @@ public class CreateMemberRequest extends TeaModel {
     }
 
     public static class CreateMemberRequestMembers extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21513926******88039</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

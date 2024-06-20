@@ -4,12 +4,20 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListServiceTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>40325405-579C-4D82****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ServiceTemplates")
     public java.util.List<ServiceTemplate> serviceTemplates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

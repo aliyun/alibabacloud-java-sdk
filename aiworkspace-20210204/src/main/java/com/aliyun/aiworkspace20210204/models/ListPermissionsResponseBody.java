@@ -7,9 +7,17 @@ public class ListPermissionsResponseBody extends TeaModel {
     @NameInMap("Permissions")
     public java.util.List<ListPermissionsResponseBodyPermissions> permissions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2AE63638-5420-56DC-B******8174039A0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,9 +51,17 @@ public class ListPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListPermissionsResponseBodyPermissionsPermissionRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
         @NameInMap("Accessibility")
         public String accessibility;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATOR</p>
+         */
         @NameInMap("EntityAccessType")
         public String entityAccessType;
 
@@ -73,6 +89,10 @@ public class ListPermissionsResponseBody extends TeaModel {
     }
 
     public static class ListPermissionsResponseBodyPermissions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PaiDLC:GetTensorboard</p>
+         */
         @NameInMap("PermissionCode")
         public String permissionCode;
 

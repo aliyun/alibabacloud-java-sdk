@@ -4,36 +4,80 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListModelVersionsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Approved</p>
+     */
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SavedModel</p>
+     */
     @NameInMap("FormatType")
     public String formatType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TensorFlow</p>
+     */
     @NameInMap("FrameworkType")
     public String frameworkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PAIFlow</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.1</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
