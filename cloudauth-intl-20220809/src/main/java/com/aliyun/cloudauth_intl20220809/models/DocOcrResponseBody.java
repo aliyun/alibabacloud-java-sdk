@@ -4,14 +4,25 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DocOcrResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -60,12 +71,24 @@ public class DocOcrResponseBody extends TeaModel {
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("Passed")
         public String passed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("SubCode")
         public String subCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>08573be80f944d95ac812e019e3655a8</p>
+         */
         @NameInMap("TransactionId")
         public String transactionId;
 

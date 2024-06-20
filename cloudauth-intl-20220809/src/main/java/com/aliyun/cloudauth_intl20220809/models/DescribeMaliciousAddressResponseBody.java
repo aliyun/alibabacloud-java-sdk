@@ -4,21 +4,36 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DescribeMaliciousAddressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<DescribeMaliciousAddressResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,15 +83,31 @@ public class DescribeMaliciousAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeMaliciousAddressResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2017-07-18 00:00:00</p>
+         */
         @NameInMap("AddTime")
         public String addTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f6d239ff***df816</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ETH</p>
+         */
         @NameInMap("Coin")
         public String coin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FAKE_Coindash_2</p>
+         */
         @NameInMap("Detail")
         public String detail;
 

@@ -4,14 +4,25 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class CheckResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,24 +68,52 @@ public class CheckResultResponseBody extends TeaModel {
     }
 
     public static class CheckResultResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("EkycResult")
         public String ekycResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("ExtBasicInfo")
         public String extBasicInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("ExtFaceInfo")
         public String extFaceInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("ExtRiskInfo")
         public String extRiskInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("Passed")
         public String passed;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("SubCode")
         public String subCode;
 

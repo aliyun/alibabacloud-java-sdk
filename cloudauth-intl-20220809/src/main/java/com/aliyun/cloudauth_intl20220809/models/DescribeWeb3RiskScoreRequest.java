@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class DescribeWeb3RiskScoreRequest extends TeaModel {
     /**
-     * <p>This is the short name of blockchain。</p>
-     * <p>[ ETH, MATIC, BNB ]</p>
+     * <p>This is the short name of blockchain。
+     * [ ETH, MATIC, BNB ]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETH</p>
      */
     @NameInMap("ChainShortName")
     public String chainShortName;
 
     /**
-     * <p>minimum: 1</p>
-     * <p>maximum: 100</p>
-     * <p>the maximum depth for risk analysis. For UTXO-based blockchains, default and maximum is enforced at 100.</p>
-     * <p>For account-based blockchains, default and maximum is enforced at 6</p>
+     * <p>minimum: 1
+     * maximum: 100
+     * the maximum depth for risk analysis. For UTXO-based blockchains, default and maximum is enforced at 100.
+     * For account-based blockchains, default and maximum is enforced at 6</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Depth")
     public Integer depth;
 
     /**
-     * <p>A unique business ID for tracing purpose. For example，the sequence ID from the merchant\"s business-related database.</p>
+     * <p>A unique business ID for tracing purpose. For example，the sequence ID from the merchant\&quot;s business-related database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e0c34a353888</p>
      */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
     /**
-     * <p>For TRANSACTION objects, you need to provide the transaction hash。</p>
-     * <p>For ADDRESS objects, you need to provide the address or reference address hash。</p>
+     * <p>For TRANSACTION objects, you need to provide the transaction hash。
+     * For ADDRESS objects, you need to provide the address or reference address hash。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000980145045a5c5acad3d2df0cf3b2afxxxxxx</p>
      */
     @NameInMap("ObjectId")
     public String objectId;
 
     /**
-     * <p>The object of the analysis.</p>
-     * <p>[ TRANSACTION, ADDRESS ]</p>
+     * <p>The object of the analysis.
+     * [ TRANSACTION, ADDRESS ]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TRANSACTION</p>
      */
     @NameInMap("ObjectType")
     public String objectType;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
     /**
      * <p>Return code. For the full list of codes, see Codes and Messages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>Response detailed message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The unique ID of the request, which can be used to locate issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7A0D192A-CC0C-5DE5-A3B6-A14CF45508F2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,30 +94,45 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
     public static class DescribeWeb3TransactionLabelsResponseBodyDataContractDetails extends TeaModel {
         /**
          * <p>the value of internal transaction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>945.5</p>
          */
         @NameInMap("Amount")
         public String amount;
 
         /**
          * <p>the sender of internal transaction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7019579cB9bdb9204e61C7179ba2F88F9dxxxxxx</p>
          */
         @NameInMap("From")
         public String from;
 
         /**
          * <p>the gaslimit of internal transaction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20712</p>
          */
         @NameInMap("GasLimit")
         public Integer gasLimit;
 
         /**
          * <p>the call layer of internal transaction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public Integer index;
 
         /**
          * <p>the receiver of internal transaction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7019579cB9bdb9204e61C7179ba2F88F9dxxxxxx</p>
          */
         @NameInMap("To")
         public String to;
@@ -160,24 +187,36 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
     public static class DescribeWeb3TransactionLabelsResponseBodyDataInputDetails extends TeaModel {
         /**
          * <p>example: 15. the amount of transation sent by the address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3234</p>
          */
         @NameInMap("Amount")
         public Integer amount;
 
         /**
          * <p>the address hash</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21a31Ee1afC51d94C2eFcCAa2xxxxxx</p>
          */
         @NameInMap("InputHash")
         public String inputHash;
 
         /**
          * <p>example: true. is it a contract</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsContract")
         public String isContract;
 
         /**
          * <p>example: Dex . the tag of the address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contracts:Tether: Tether_USD,token_standard:xxxxxx</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -224,24 +263,36 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
     public static class DescribeWeb3TransactionLabelsResponseBodyDataOutputDetails extends TeaModel {
         /**
          * <p>example: 15. the amount of transation sent by the address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         @NameInMap("Amount")
         public Integer amount;
 
         /**
          * <p>the address hash</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21a31Ee1afC51d94C2eFcCAa2xxxxxx</p>
          */
         @NameInMap("InputHash")
         public String inputHash;
 
         /**
          * <p>example: true. is it a contract</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsContract")
         public String isContract;
 
         /**
          * <p>example: Dex. the tag of the address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contracts:Tether: Tether_USD,token_standard:xxxxxx</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -288,48 +339,72 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
     public static class DescribeWeb3TransactionLabelsResponseBodyDataTokenTransferDetails extends TeaModel {
         /**
          * <p>the token amount</p>
+         * 
+         * <strong>example:</strong>
+         * <p>945.5</p>
          */
         @NameInMap("Amount")
         public String amount;
 
         /**
          * <p>the sender of the token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21a31Ee1afC51d94C2eFcCAa2092aD1028xxxxxx</p>
          */
         @NameInMap("From")
         public String from;
 
         /**
          * <p>the call layer of to token transfer</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Index")
         public Integer index;
 
         /**
          * <p>the token symbol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USDT</p>
          */
         @NameInMap("Symbol")
         public String symbol;
 
         /**
          * <p>the receiver of the token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7019579cB9bdb9204e61C7179ba2F88F9dxxxxxx</p>
          */
         @NameInMap("To")
         public String to;
 
         /**
          * <p>the token name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tether USD</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
          * <p>the token address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dAC17F958D2ee523a2206206994597C13Dxxxxxx</p>
          */
         @NameInMap("TokenContractAddress")
         public String tokenContractAddress;
 
         /**
          * <p>NFT ID, if the token is erc721</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("TokenId")
         public String tokenId;
@@ -408,18 +483,27 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
     public static class DescribeWeb3TransactionLabelsResponseBodyData extends TeaModel {
         /**
          * <p>the amount of native currency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         @NameInMap("Amount")
         public String amount;
 
         /**
          * <p>chainName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETH</p>
          */
         @NameInMap("ChainName")
         public String chainName;
 
         /**
          * <p>short name of blockchain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth</p>
          */
         @NameInMap("ChainShortName")
         public String chainShortName;
@@ -432,42 +516,63 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
         /**
          * <p>error log</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("ErrorLog")
         public String errorLog;
 
         /**
          * <p>gasLimit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232</p>
          */
         @NameInMap("GasLimit")
         public Integer gasLimit;
 
         /**
          * <p>gasPrice</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5034</p>
          */
         @NameInMap("GasPrice")
         public String gasPrice;
 
         /**
          * <p>gasUsed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         @NameInMap("GasUsed")
         public Integer gasUsed;
 
         /**
          * <p>height</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17087552</p>
          */
         @NameInMap("Height")
         public Integer height;
 
         /**
          * <p>the position of the transaction in the block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94</p>
          */
         @NameInMap("Index")
         public Integer index;
 
         /**
          * <p>input data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a9059cbb000000000000000000000000c7019579cb9bdb9204e61c7179ba2f88f9d2990b000000000xxxxxx</p>
          */
         @NameInMap("InputData")
         public String inputData;
@@ -479,13 +584,19 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
         public java.util.List<DescribeWeb3TransactionLabelsResponseBodyDataInputDetails> inputDetails;
 
         /**
-         * <p>the method name of contract call. For external transaction method: [\"CALL\",\"CALLCODE\",\"DELEGATECALL\",\"STATICCALL\"]; for internal transaction method: the first 4 bytes of the hash of the method name</p>
+         * <p>the method name of contract call. For external transaction method: [\&quot;CALL\&quot;,\&quot;CALLCODE\&quot;,\&quot;DELEGATECALL\&quot;,\&quot;STATICCALL\&quot;]; for internal transaction method: the first 4 bytes of the hash of the method name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a9059cbb</p>
          */
         @NameInMap("MethodId")
         public String methodId;
 
         /**
          * <p>nonce</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6242724</p>
          */
         @NameInMap("Nonce")
         public String nonce;
@@ -498,6 +609,9 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
         /**
          * <p>the transaction state. 1: success 0: fail</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("State")
         public Integer state;
@@ -510,30 +624,45 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
         /**
          * <p>the symbol of native currency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETH</p>
          */
         @NameInMap("TransactionSymbol")
         public String transactionSymbol;
 
         /**
          * <p>the block timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681991807</p>
          */
         @NameInMap("TransactionTime")
         public String transactionTime;
 
         /**
          * <p>Integer	0: legacy; 1: eip 2930; 2: eip 1559</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TransactionType")
         public String transactionType;
 
         /**
          * <p>the transaction fee in eth</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.002321489548255059</p>
          */
         @NameInMap("Txfee")
         public String txfee;
 
         /**
          * <p>Txid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c92880148d4896d8a2093a891a8f08916fe141fba474ede410xxxxxx</p>
          */
         @NameInMap("Txid")
         public String txid;

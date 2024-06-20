@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWeb3AddressLabelsResponseBody extends TeaModel {
     /**
      * <p>Return code. For the full list of codes, see Codes and Messages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeWeb3AddressLabelsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>Response detailed message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The unique ID of the request, which can be used to locate issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7F971622-38C0-5F56-B2EC-315367979B4F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,114 +94,171 @@ public class DescribeWeb3AddressLabelsResponseBody extends TeaModel {
     public static class DescribeWeb3AddressLabelsResponseBodyData extends TeaModel {
         /**
          * <p>address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341980145045A5c5acad3d2Df0cF3B2Afxxxxxx</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>amount of native currency</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Balance")
         public String balance;
 
         /**
          * <p>native currency of the chain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETH</p>
          */
         @NameInMap("BalanceSymbol")
         public String balanceSymbol;
 
         /**
          * <p>ChainNameEnumstring name of blockchain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ethereum Mainnet</p>
          */
         @NameInMap("ChainName")
         public String chainName;
 
         /**
          * <p>ChainShortName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth</p>
          */
         @NameInMap("ChainShortName")
         public String chainShortName;
 
         /**
          * <p>0: EOA; 1: Contract</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ContractAddress")
         public String contractAddress;
 
         /**
          * <p>the address of deployer if the current address is a contract, null if the current address is an EOA</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dAC17F958D2ee523a2206206994597C13Dxxxxxx</p>
          */
         @NameInMap("CreateContractAddress")
         public String createContractAddress;
 
         /**
          * <p>contract creation hash if the current address is a contract, null if the current address is an EOA</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dAC17F958D2ee523a2206206994597C13Dxxxxxx</p>
          */
         @NameInMap("CreateContractTransactionHash")
         public String createContractTransactionHash;
 
         /**
          * <p>customized assessment detail</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("CustomRiskAssessment")
         public String customRiskAssessment;
 
         /**
          * <p>the first transaction hash sent by the address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230304</p>
          */
         @NameInMap("FirstTransactionTime")
         public String firstTransactionTime;
 
         /**
          * <p>0: Not validator; 1: validator</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsProducerAddress")
         public String isProducerAddress;
 
         /**
          * <p>the latest transaction hash sent by the address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230304</p>
          */
         @NameInMap("LastTransactionTime")
         public String lastTransactionTime;
 
         /**
          * <p>the amount of native currency received in 180 days</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReceiveAmount")
         public String receiveAmount;
 
         /**
          * <p>the amount of native currency sent in 180 days</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SendAmount")
         public String sendAmount;
 
         /**
          * <p>tag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contracts:Tether: Tether_USD,token_standard:erc20</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>if the address is an erc20 token, returns the token name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tether USD</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
          * <p>the number of erc20 tokens involved with current address in 180 days</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TokenAmount")
         public Integer tokenAmount;
 
         /**
          * <p>address of erc20 tokens involved with current address in 180 days</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;{&quot;ERC721&quot;:[]&quot;]}&quot;]</p>
          */
         @NameInMap("TokenList")
         public String tokenList;
 
         /**
          * <p>the number of transactions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TransactionCount")
         public Integer transactionCount;

@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeWeb3TransactionLabelsRequest extends TeaModel {
     /**
-     * <p>This is the short name of blockchain。</p>
-     * <p>[ ETH, MATIC, BNB ]</p>
+     * <p>This is the short name of blockchain。
+     * [ ETH, MATIC, BNB ]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETH</p>
      */
     @NameInMap("ChainShortName")
     public String chainShortName;
 
     /**
-     * <p>A unique business ID for tracing purpose. For example，the sequence ID from the merchant\"s business-related database.</p>
+     * <p>A unique business ID for tracing purpose. For example，the sequence ID from the merchant\&quot;s business-related database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e0c34a353888</p>
      */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
     /**
      * <p>The Transaction hash.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c92880148d4896d8a2093a891a8f08916fe141fba474ede4101f81fb2bxxxxxx</p>
      */
     @NameInMap("Transaction")
     public String transaction;

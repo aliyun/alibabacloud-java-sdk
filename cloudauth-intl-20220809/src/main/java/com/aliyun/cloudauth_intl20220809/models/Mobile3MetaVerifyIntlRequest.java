@@ -4,15 +4,31 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class Mobile3MetaVerifyIntlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>429001********8211</p>
+     */
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>186****1234</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("ParamType")
     public String paramType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MOBILE_3META</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

@@ -4,21 +4,36 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddressOverviewResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeAddressOverviewResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,27 +83,59 @@ public class DescribeAddressOverviewResponseBody extends TeaModel {
     }
 
     public static class DescribeAddressOverviewResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>54.4216</p>
+         */
         @NameInMap("Balance")
         public Float balance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1441800674</p>
+         */
         @NameInMap("FirstSeen")
         public Long firstSeen;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1682056727</p>
+         */
         @NameInMap("LastSeen")
         public Long lastSeen;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1470</p>
+         */
         @NameInMap("ReceivedTxsCount")
         public Integer receivedTxsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>227</p>
+         */
         @NameInMap("SpentTxsCount")
         public Integer spentTxsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>916263.8</p>
+         */
         @NameInMap("TotalReceived")
         public Float totalReceived;
 
+        /**
+         * <strong>example:</strong>
+         * <p>916205.4</p>
+         */
         @NameInMap("TotalSpent")
         public Float totalSpent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1697</p>
+         */
         @NameInMap("TxsCount")
         public Long txsCount;
 

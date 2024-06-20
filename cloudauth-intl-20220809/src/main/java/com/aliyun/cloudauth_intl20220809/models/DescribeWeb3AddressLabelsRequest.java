@@ -6,19 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeWeb3AddressLabelsRequest extends TeaModel {
     /**
      * <p>The address hash.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000980145045a5c5acad3d2df0cf3b2afxxxxxx</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>This is the short name of blockchain。</p>
-     * <p>[ ETH, MATIC, BNB ]</p>
+     * <p>This is the short name of blockchain。
+     * [ ETH, MATIC, BNB ]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETH</p>
      */
     @NameInMap("ChainShortName")
     public String chainShortName;
 
     /**
-     * <p>A unique business ID for tracing purpose. For example，the sequence ID from the merchant\"s business-related database.</p>
+     * <p>A unique business ID for tracing purpose. For example，the sequence ID from the merchant\&quot;s business-related database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dso932dsjsd22</p>
      */
     @NameInMap("MerchantBizId")
     public String merchantBizId;

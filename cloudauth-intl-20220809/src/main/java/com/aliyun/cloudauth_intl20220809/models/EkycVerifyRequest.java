@@ -4,39 +4,75 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class EkycVerifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>T</p>
+     */
     @NameInMap("Authorize")
     public String authorize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F</p>
+     */
     @NameInMap("Crop")
     public String crop;
 
     @NameInMap("DocName")
     public String docName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>410***************</p>
+     */
     @NameInMap("DocNo")
     public String docNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00000001</p>
+     */
     @NameInMap("DocType")
     public String docType;
 
     @NameInMap("FacePictureBase64")
     public String facePictureBase64;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
+     */
     @NameInMap("FacePictureUrl")
     public String facePictureUrl;
 
     @NameInMap("IdOcrPictureBase64")
     public String idOcrPictureBase64;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
+     */
     @NameInMap("IdOcrPictureUrl")
     public String idOcrPictureUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eKYC_MIN</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

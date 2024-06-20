@@ -4,30 +4,58 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DocOcrRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00000006</p>
+     */
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F</p>
+     */
     @NameInMap("IdFaceQuality")
     public String idFaceQuality;
 
     @NameInMap("IdOcrPictureBase64")
     public String idOcrPictureBase64;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
+     */
     @NameInMap("IdOcrPictureUrl")
     public String idOcrPictureUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dso9322***dsjsd22</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>T</p>
+     */
     @NameInMap("Ocr")
     public String ocr;
 
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F</p>
+     */
     @NameInMap("Spoof")
     public String spoof;
 

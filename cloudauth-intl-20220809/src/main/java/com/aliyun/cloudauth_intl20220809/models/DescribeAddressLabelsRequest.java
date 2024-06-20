@@ -4,12 +4,24 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddressLabelsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0xabds8292***dskkds</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ETH</p>
+     */
     @NameInMap("Coin")
     public String coin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dso9322***dsjsd22</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 

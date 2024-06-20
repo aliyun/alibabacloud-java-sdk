@@ -4,15 +4,27 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class FraudResultCallBackRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>shs2b27333914876c01de4cb22f5841f</p>
+     */
     @NameInMap("CertifyId")
     public String certifyId;
 
     @NameInMap("ExtParams")
     public String extParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PASS</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>production</p>
+     */
     @NameInMap("VerifyDeployEnv")
     public String verifyDeployEnv;
 

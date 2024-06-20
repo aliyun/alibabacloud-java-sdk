@@ -4,14 +4,25 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class EkycVerifyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EB356FE-BB6A-5DCC-B4C5-E8051787EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,18 +68,39 @@ public class EkycVerifyResponseBody extends TeaModel {
     }
 
     public static class EkycVerifyResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;faceAttack&quot;: &quot;N&quot;,
+         * &quot;faceComparisonScore&quot;: 52.57,
+         * &quot;facePassed&quot;: &quot;N&quot;,
+         * &quot;authorityComparisonScore&quot;: 80.39
+         * }</p>
+         */
         @NameInMap("ExtFaceInfo")
         public String extFaceInfo;
 
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("Passed")
         public String passed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>205</p>
+         */
         @NameInMap("SubCode")
         public String subCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4ab0b***cbde97</p>
+         */
         @NameInMap("TransactionId")
         public String transactionId;
 
