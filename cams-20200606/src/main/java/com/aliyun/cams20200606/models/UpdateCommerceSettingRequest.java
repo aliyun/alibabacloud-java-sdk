@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class UpdateCommerceSettingRequest extends TeaModel {
     /**
      * <p>Specifies whether to display the shopping cart button.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CartEnable")
     public Boolean cartEnable;
 
     /**
      * <p>Specifies whether to display the catalog button.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CatalogVisible")
     public Boolean catalogVisible;
 
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

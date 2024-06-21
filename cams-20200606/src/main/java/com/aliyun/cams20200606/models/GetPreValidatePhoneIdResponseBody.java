@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPreValidatePhoneIdResponseBody extends TeaModel {
     /**
      * <p>The response code. The value OK indicates the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,6 +27,9 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +74,18 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
     public static class GetPreValidatePhoneIdResponseBodyData extends TeaModel {
         /**
          * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>929833</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
          * <p>The ID of the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800000000</p>
          */
         @NameInMap("PhoneNumberId")
         public String phoneNumberId;

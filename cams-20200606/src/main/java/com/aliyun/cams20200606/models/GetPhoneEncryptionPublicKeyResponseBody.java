@@ -4,6 +4,10 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -15,6 +19,9 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,12 +64,32 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     }
 
     public static class GetPhoneEncryptionPublicKeyResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-----BEGIN PUBLIC KEY-----
+         * AAA
+         * BBB
+         * CCC
+         * DDD
+         * EEE
+         * FFF
+         * GGG
+         * -----END PUBLIC KEY-----</p>
+         */
         @NameInMap("EncryptionPublicKey")
         public String encryptionPublicKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VALID</p>
+         */
         @NameInMap("EncryptionPublicKeyStatus")
         public String encryptionPublicKeyStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86138000**</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 

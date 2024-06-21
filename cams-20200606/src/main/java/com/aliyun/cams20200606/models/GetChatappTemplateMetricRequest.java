@@ -6,58 +6,81 @@ import com.aliyun.tea.*;
 public class GetChatappTemplateMetricRequest extends TeaModel {
     /**
      * <p>The space ID of the user within the ISV account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1693407714687</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
      * <p>The metric granularity.</p>
-     * <br>
-     * <p>>  Valid values:</p>
-     * <br>
-     * <p>*   DAILY</p>
+     * <blockquote>
+     * <p> Valid values:</p>
+     * </blockquote>
+     * <ul>
+     * <li>DAILY</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DAILY</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
      * <p>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skdi3kksloslikdkkdk</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
      * <p>The template language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1693107714687</p>
      */
     @NameInMap("Start")
     public Long start;
 
     /**
      * <p>The template code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>744c4b5c79c9432497a075bdfca36bf5</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
      * <p>The template type. Valid values: WHATSAPP and VIBER. If you do not specify this parameter, WHATSAPP is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

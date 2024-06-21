@@ -4,6 +4,10 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdateFlowJSONAssetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -15,6 +19,9 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,6 +66,9 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
     public static class UpdateFlowJSONAssetResponseBodyData extends TeaModel {
         /**
          * <p>Flow ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84848847****</p>
          */
         @NameInMap("FlowId")
         public String flowId;

@@ -9,15 +9,22 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
@@ -30,6 +37,9 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,89 +92,127 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbers extends TeaModel {
         /**
          * <p>The verification status of the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VERIFIED</p>
          */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
 
         /**
          * <p>The maximum number of messages that can be sent to users by using the phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TIER_10</p>
          */
         @NameInMap("MessagingLimitTier")
         public String messagingLimitTier;
 
         /**
          * <p>The status of the business name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approval</p>
          */
         @NameInMap("NameStatus")
         public String nameStatus;
 
         /**
          * <p>The review status of the new business name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approval</p>
          */
         @NameInMap("NewNameStatus")
         public String newNameStatus;
 
         /**
          * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613800000</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
          * <p>The quality rating of the phone number. Valid values:</p>
-         * <br>
-         * <p>*   **GREEN**</p>
-         * <p>*   **YELLOW**</p>
-         * <p>*   **RED**</p>
-         * <p>*   **UNKNOWN**</p>
+         * <ul>
+         * <li><strong>GREEN</strong></li>
+         * <li><strong>YELLOW</strong></li>
+         * <li><strong>RED</strong></li>
+         * <li><strong>UNKNOWN</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GREEN</p>
          */
         @NameInMap("QualityRating")
         public String qualityRating;
 
         /**
          * <p>The status of the phone number.</p>
-         * <br>
-         * <p>*   PENDING</p>
-         * <p>*   DELETED</p>
-         * <p>*   MIGRATED</p>
-         * <p>*   BANNED</p>
-         * <p>*   RESTRICTED</p>
-         * <p>*   RATE_LIMITED</p>
-         * <p>*   FLAGGED</p>
-         * <p>*   CONNECTED</p>
-         * <p>*   DISCONNECTED</p>
-         * <p>*   UNKNOWN</p>
-         * <p>*   UNVERIFIED</p>
+         * <ul>
+         * <li>PENDING</li>
+         * <li>DELETED</li>
+         * <li>MIGRATED</li>
+         * <li>BANNED</li>
+         * <li>RESTRICTED</li>
+         * <li>RATE_LIMITED</li>
+         * <li>FLAGGED</li>
+         * <li>CONNECTED</li>
+         * <li>DISCONNECTED</li>
+         * <li>UNKNOWN</li>
+         * <li>UNVERIFIED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONNECTED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ali.com/status">https://ali.com/status</a></p>
          */
         @NameInMap("StatusCallbackUrl")
         public String statusCallbackUrl;
 
         /**
          * <p>The status report notification queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alicom-Queue-****-ChatAppStatus</p>
          */
         @NameInMap("StatusQueue")
         public String statusQueue;
 
         /**
          * <p>The callback URL to which MO messages are sent by using HTTP callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ali.com/inbound">https://ali.com/inbound</a></p>
          */
         @NameInMap("UpCallbackUrl")
         public String upCallbackUrl;
 
         /**
          * <p>The mobile originated (MO) message notification queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alicom-Queue-****-ChatAppInbound</p>
          */
         @NameInMap("UpQueue")
         public String upQueue;
 
         /**
          * <p>The name of the company with which the phone number is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         @NameInMap("VerifiedName")
         public String verifiedName;

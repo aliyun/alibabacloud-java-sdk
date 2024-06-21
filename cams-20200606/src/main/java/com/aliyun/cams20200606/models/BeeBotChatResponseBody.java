@@ -9,6 +9,9 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     /**
      * <p>If OK is returned, the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +24,18 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -79,6 +88,9 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static class BeeBotChatResponseBodyDataMessagesKnowledgeRelatedKnowledges extends TeaModel {
         /**
          * <p>The ID of the related knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>735899</p>
          */
         @NameInMap("KnowledgeId")
         public String knowledgeId;
@@ -115,6 +127,9 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static class BeeBotChatResponseBodyDataMessagesKnowledge extends TeaModel {
         /**
          * <p>The source of the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBase</p>
          */
         @NameInMap("AnswerSource")
         public String answerSource;
@@ -133,6 +148,9 @@ public class BeeBotChatResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the answer is in plain text or rich text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PLAIN_TEXT</p>
          */
         @NameInMap("ContentType")
         public String contentType;
@@ -145,6 +163,9 @@ public class BeeBotChatResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the hit question in the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>735898</p>
          */
         @NameInMap("Id")
         public String id;
@@ -249,12 +270,18 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static class BeeBotChatResponseBodyDataMessagesRecommends extends TeaModel {
         /**
          * <p>The source of the recommended answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KNOWLEDGE</p>
          */
         @NameInMap("AnswerSource")
         public String answerSource;
 
         /**
          * <p>The ID of the recommended knowledge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4548</p>
          */
         @NameInMap("KnowledgeId")
         public String knowledgeId;
@@ -299,6 +326,9 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static class BeeBotChatResponseBodyDataMessagesTextSlots extends TeaModel {
         /**
          * <p>Indicates whether the slot is hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Hit")
         public Boolean hit;
@@ -311,12 +341,18 @@ public class BeeBotChatResponseBody extends TeaModel {
 
         /**
          * <p>The original value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         @NameInMap("Origin")
         public String origin;
 
         /**
          * <p>The specific value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         @NameInMap("Value")
         public String value;
@@ -363,6 +399,9 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static class BeeBotChatResponseBodyDataMessagesText extends TeaModel {
         /**
          * <p>The source of the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BotFramework</p>
          */
         @NameInMap("AnswerSource")
         public String answerSource;
@@ -375,6 +414,9 @@ public class BeeBotChatResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the answer is in plain text or rich text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PLAIN_TEXT</p>
          */
         @NameInMap("ContentType")
         public String contentType;
@@ -417,6 +459,9 @@ public class BeeBotChatResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the node. When the AnswerSource parameter is set to BotFramework, the value of this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1410-c7a72a78.__city</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -553,12 +598,18 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static class BeeBotChatResponseBodyDataMessages extends TeaModel {
         /**
          * <p>When the AnswerType parameter is set to Recommend, this parameter indicates the source of the recommended answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KNOWLEDGE</p>
          */
         @NameInMap("AnswerSource")
         public String answerSource;
 
         /**
          * <p>The type of the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         @NameInMap("AnswerType")
         public String answerType;
@@ -631,6 +682,9 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static class BeeBotChatResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab6be8af-cee4-40c3-9919-2ac7461d7d98</p>
          */
         @NameInMap("MessageId")
         public String messageId;
@@ -643,6 +697,9 @@ public class BeeBotChatResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("SessionId")
         public String sessionId;

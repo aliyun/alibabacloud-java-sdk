@@ -6,60 +6,76 @@ import com.aliyun.tea.*;
 public class SubmitIsvCustomerTermsRequest extends TeaModel {
     /**
      * <p>The use scenario.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Marketing products</p>
      */
     @NameInMap("BusinessDesc")
     public String businessDesc;
 
     /**
      * <p>The email address of your business.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:partner@aliyun.com">partner@aliyun.com</a></p>
      */
     @NameInMap("ContactMail")
     public String contactMail;
 
     /**
      * <p>The country code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CN</p>
      */
     @NameInMap("CountryId")
     public String countryId;
 
     /**
      * <p>The display name of your business.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("CustName")
     public String custName;
 
     /**
      * <p>The space ID of the user under the ISV account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The ISV or Client Agreement.</p>
-     * <br>
-     * <p>> Before you upload files to Object Storage Service (OSS) servers, you must call the GetChatappUploadAuthorization operation to obtain the authentication information required to upload files. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.</p>
-     * <br>
-     * <p>> The value of this parameter is the name of the uploaded file.</p>
-     * <br>
+     * <blockquote>
+     * <p>Before you upload files to Object Storage Service (OSS) servers, you must call the GetChatappUploadAuthorization operation to obtain the authentication information required to upload files. You can use the SDK provided by OSS to upload files. When you upload a file, you must set the key parameter value. To set the value for the key parameter, concatenate the value of the Dir parameter and the file name by using a forward slash (/). You can obtain the value of the Dir parameter by calling the GetChatappUploadAuthorization operation.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>The value of this parameter is the name of the uploaded file.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>isvTerms.pdf</p>
      */
     @NameInMap("IsvTerms")
     public String isvTerms;
 
     /**
      * <p>The address of your business.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hangzhou</p>
      */
     @NameInMap("OfficeAddress")
     public String officeAddress;

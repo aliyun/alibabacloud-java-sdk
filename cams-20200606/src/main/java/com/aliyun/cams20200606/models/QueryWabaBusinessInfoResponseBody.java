@@ -9,9 +9,13 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +28,18 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,24 +92,36 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
     public static class QueryWabaBusinessInfoResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the business platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192882828733</p>
          */
         @NameInMap("BusinessId")
         public String businessId;
 
         /**
          * <p>The name of the business platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         @NameInMap("BusinessName")
         public String businessName;
 
         /**
          * <p>The verification status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verified</p>
          */
         @NameInMap("VerificationStatus")
         public String verificationStatus;
 
         /**
          * <p>The industry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Retail</p>
          */
         @NameInMap("Vertical")
         public String vertical;

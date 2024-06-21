@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetFlowResponseBody extends TeaModel {
     /**
      * <p>If OK is returned, the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,6 +27,9 @@ public class GetFlowResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -74,68 +80,86 @@ public class GetFlowResponseBody extends TeaModel {
 
         /**
          * <p>The API version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.0</p>
          */
         @NameInMap("DataApiVersion")
         public String dataApiVersion;
 
         /**
          * <p>The Flow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_id_arms</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
         /**
          * <p>The name of the Flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dnjn</p>
          */
         @NameInMap("FlowName")
         public String flowName;
 
         /**
          * <p>The JSON version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1</p>
          */
         @NameInMap("JSONVersion")
         public String JSONVersion;
 
         /**
          * <p>The temporary preview URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://pre-url">https://pre-url</a></p>
          */
         @NameInMap("PreviewUrl")
         public String previewUrl;
 
         /**
          * <p>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700617436633</p>
          */
         @NameInMap("PreviewUrlExpires")
         public Long previewUrlExpires;
 
         /**
          * <p>The state of the Flow.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   PUBLISHED</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DRAFT</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DEPRECATED</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>PUBLISHED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DRAFT</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DEPRECATED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DRAFT</p>
          */
         @NameInMap("Status")
         public String status;

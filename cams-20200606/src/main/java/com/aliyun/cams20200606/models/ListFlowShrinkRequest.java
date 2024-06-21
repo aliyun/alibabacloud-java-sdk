@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListFlowShrinkRequest extends TeaModel {
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99948484</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The name of the Flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_001</p>
      */
     @NameInMap("FlowName")
     public String flowName;

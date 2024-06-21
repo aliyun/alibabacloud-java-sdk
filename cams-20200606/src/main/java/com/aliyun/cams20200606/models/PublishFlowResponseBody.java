@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PublishFlowResponseBody extends TeaModel {
     /**
      * <p>If OK is returned, the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,6 +21,9 @@ public class PublishFlowResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

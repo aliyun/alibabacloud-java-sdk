@@ -6,38 +6,49 @@ import com.aliyun.tea.*;
 public class AddChatappPhoneNumberRequest extends TeaModel {
     /**
      * <p>The country code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
      */
     @NameInMap("Cc")
     public String cc;
 
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>939283893939</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The phone number without a country code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13800000000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>The ID of the pre-registered phone number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10202020</p>
      */
     @NameInMap("PreValidateId")
     public String preValidateId;
 
     /**
      * <p>The display name of the phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba</p>
      */
     @NameInMap("VerifiedName")
     public String verifiedName;

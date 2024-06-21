@@ -4,53 +4,77 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyPhoneBusinessProfileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>business profile</p>
+     */
     @NameInMap("About")
     public String about;
 
     /**
      * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The phone number.</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>Modifies the business information of the account to which a specified phone number is bound.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8613800001234</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>The industry.</p>
-     * <br>
-     * <p>> Enum: {OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, RESTAURANT}</p>
+     * <blockquote>
+     * <p>Enum: {OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, RESTAURANT}</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://a.img">http://a.img</a></p>
      */
     @NameInMap("ProfilePictureUrl")
     public String profilePictureUrl;
 
     /**
      * <p>Sichuan</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OTHER</p>
      */
     @NameInMap("Vertical")
     public String vertical;

@@ -9,15 +9,22 @@ public class IsvGetAppIdResponseBody extends TeaModel {
 
     /**
      * <p>The message ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23hr3v</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -27,12 +34,18 @@ public class IsvGetAppIdResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>744c4b5c79c9432497a075bdfca3***</p>
      */
     @NameInMap("RequestId")
     public String requestId;

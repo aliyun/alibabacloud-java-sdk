@@ -7,15 +7,27 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetMigrationVerifyCodeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +77,17 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
     }
 
     public static class GetMigrationVerifyCodeResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>82828893332</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8613800001234</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 

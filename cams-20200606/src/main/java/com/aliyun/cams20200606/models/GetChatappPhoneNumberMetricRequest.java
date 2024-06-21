@@ -6,40 +6,56 @@ import com.aliyun.tea.*;
 public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     /**
      * <p>The space ID of the user within the ISV account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1693407714687</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
      * <p>The metric granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAILY</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
      * <p>The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skdi3kksloslikdkkdk</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
      * <p>The business phone number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>861380000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1693107714687</p>
      */
     @NameInMap("Start")
     public Long start;

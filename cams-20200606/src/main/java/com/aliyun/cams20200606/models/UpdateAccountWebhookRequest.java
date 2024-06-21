@@ -6,32 +6,45 @@ import com.aliyun.tea.*;
 public class UpdateAccountWebhookRequest extends TeaModel {
     /**
      * <p>The space ID of the user under the ISV account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493**</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>Specifies whether to use HTTP callbacks to receive message receipts. Valid values:</p>
-     * <br>
-     * <p>*   Y: indicates that HTTP callbacks are used to receive receipts.</p>
-     * <p>*   N: indicates that HTTP callbacks are not used to receive receipts.</p>
+     * <ul>
+     * <li>Y: indicates that HTTP callbacks are used to receive receipts.</li>
+     * <li>N: indicates that HTTP callbacks are not used to receive receipts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
      */
     @NameInMap("HttpFlag")
     public String httpFlag;
 
     /**
      * <p>Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:</p>
-     * <br>
-     * <p>*   Y: indicates that MNS queues are used to receive receipts.</p>
-     * <p>*   N: indicates that MNS queues are not used to receive receipts.</p>
+     * <ul>
+     * <li>Y: indicates that MNS queues are used to receive receipts.</li>
+     * <li>N: indicates that MNS queues are not used to receive receipts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
      */
     @NameInMap("QueueFlag")
     public String queueFlag;
 
     /**
      * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
      */
     @NameInMap("StatusCallbackUrl")
     public String statusCallbackUrl;

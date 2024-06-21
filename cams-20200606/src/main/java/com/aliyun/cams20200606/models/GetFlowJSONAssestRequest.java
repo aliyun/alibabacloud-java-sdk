@@ -4,13 +4,19 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetFlowJSONAssestRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>83883873</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>Flow ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_001</p>
      */
     @NameInMap("FlowId")
     public String flowId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateChatappMigrationInitiateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
      */
     @NameInMap("CountryCode")
     public String countryCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13900001234</p>
      */
     @NameInMap("MobileNumber")
     public String mobileNumber;

@@ -4,6 +4,10 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListPhoneMessageQrdlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -15,6 +19,9 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,21 +64,45 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     }
 
     public static class ListPhoneMessageQrdlResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://wa.msg/">https://wa.msg/</a></p>
+         */
         @NameInMap("DeepLinkUrl")
         public String deepLinkUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PNG</p>
+         */
         @NameInMap("GenerateQrImage")
         public String generateQrImage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8613800</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Hello</p>
+         */
         @NameInMap("PrefilledMessage")
         public String prefilledMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.png">https://img.png</a></p>
+         */
         @NameInMap("QrImageUrl")
         public String qrImageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IUIED999</p>
+         */
         @NameInMap("QrdlCode")
         public String qrdlCode;
 

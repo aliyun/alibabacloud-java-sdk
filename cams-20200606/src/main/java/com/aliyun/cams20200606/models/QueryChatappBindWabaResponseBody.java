@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class QueryChatappBindWabaResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -27,16 +34,26 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,16 +113,22 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     public static class QueryChatappBindWabaResponseBodyData extends TeaModel {
         /**
          * <p>The review state of the WhatsApp Business account (WABA).</p>
-         * <br>
-         * <p>>  Valid values:</p>
-         * <br>
-         * <p>*   PENDING: The WABA is to be reviewed.</p>
-         * <br>
-         * <p>*   APPROVED: The WABA was approved.</p>
-         * <br>
-         * <p>*   REJECTED: The WABA was rejected.</p>
-         * <br>
-         * <p>*   DISABLED: The WABA was forbidden.</p>
+         * <blockquote>
+         * <p> Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>PENDING: The WABA is to be reviewed.</p>
+         * </li>
+         * <li><p>APPROVED: The WABA was approved.</p>
+         * </li>
+         * <li><p>REJECTED: The WABA was rejected.</p>
+         * </li>
+         * <li><p>DISABLED: The WABA was forbidden.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>APPROVED</p>
          */
         @NameInMap("AccountReviewStatus")
         public String accountReviewStatus;
@@ -115,28 +138,44 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
 
         /**
          * <p>The currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USD</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The ID of the WhatsApp Business account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20393988393993***</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The namespace of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
          */
         @NameInMap("MessageTemplateNamespace")
         public String messageTemplateNamespace;
 
         /**
          * <p>The name of the WhatsApp Business account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("PrimaryBusinessLocation")
         public String primaryBusinessLocation;
 

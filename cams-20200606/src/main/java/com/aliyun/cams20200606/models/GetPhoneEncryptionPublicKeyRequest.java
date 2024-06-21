@@ -4,11 +4,18 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneEncryptionPublicKeyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>393838848</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_001</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

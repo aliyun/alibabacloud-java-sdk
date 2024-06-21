@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListProductCatalogResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
@@ -33,15 +43,22 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -102,12 +119,18 @@ public class ListProductCatalogResponseBody extends TeaModel {
     public static class ListProductCatalogResponseBodyModelPagingCursors extends TeaModel {
         /**
          * <p>The cursor that points to the end of the page of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjsuueu83838</p>
          */
         @NameInMap("After")
         public String after;
 
         /**
          * <p>The cursor that points to the beginning of the page of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjjsjdjjdjd83883</p>
          */
         @NameInMap("Before")
         public String before;

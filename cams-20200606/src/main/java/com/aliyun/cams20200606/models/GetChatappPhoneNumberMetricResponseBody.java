@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NONE</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>The value OK indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +30,18 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1612C226-E271-4CFE-9F18-4066D******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,42 +94,63 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     public static class GetChatappPhoneNumberMetricResponseBodyData extends TeaModel {
         /**
          * <p>The number of delivered messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("DeliveredCount")
         public Integer deliveredCount;
 
         /**
          * <p>The end of the time range that you queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667196043904</p>
          */
         @NameInMap("End")
         public Long end;
 
         /**
          * <p>The metric granularity.</p>
-         * <br>
-         * <p>>  Valid values:</p>
-         * <br>
-         * <p>*   DAILY</p>
-         * <br>
-         * <p>*   HALF_HOUR</p>
+         * <blockquote>
+         * <p> Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>DAILY</p>
+         * </li>
+         * <li><p>HALF_HOUR</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         @NameInMap("Granularity")
         public String granularity;
 
         /**
          * <p>The business phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>861380000</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
          * <p>The number of sent messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SentCount")
         public Integer sentCount;
 
         /**
          * <p>The beginning of the time range that you queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669619491000</p>
          */
         @NameInMap("Start")
         public Long start;
