@@ -6,80 +6,112 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointsRequest extends TeaModel {
     /**
      * <p>The state of the endpoint connection. Valid values:</p>
-     * <br>
-     * <p>*   **Pending**: The endpoint connection is being modified.</p>
-     * <p>*   **Connecting**: The endpoint connection is being established.</p>
-     * <p>*   **Connected**: The endpoint connection is established.</p>
-     * <p>*   **Disconnecting**: The endpoint is being disconnected from the endpoint service.</p>
-     * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
-     * <p>*   **Deleting**: The connection is being deleted.</p>
-     * <p>*   **ServiceDeleted**: The corresponding endpoint service has been deleted.</p>
+     * <ul>
+     * <li><strong>Pending</strong>: The endpoint connection is being modified.</li>
+     * <li><strong>Connecting</strong>: The endpoint connection is being established.</li>
+     * <li><strong>Connected</strong>: The endpoint connection is established.</li>
+     * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
+     * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
+     * <li><strong>Deleting</strong>: The connection is being deleted.</li>
+     * <li><strong>ServiceDeleted</strong>: The corresponding endpoint service has been deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disconnected</p>
      */
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
     /**
      * <p>The ID of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-hp33b2e43fays7s8****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The name of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
      * <p>The state of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Creating**: The endpoint is being created.</p>
-     * <p>*   **Active**: The endpoint is available.</p>
-     * <p>*   **Pending**: The endpoint is being modified.</p>
-     * <p>*   **Deleting**: The endpoint is being deleted.</p>
+     * <ul>
+     * <li><strong>Creating</strong>: The endpoint is being created.</li>
+     * <li><strong>Active</strong>: The endpoint is available.</li>
+     * <li><strong>Pending</strong>: The endpoint is being modified.</li>
+     * <li><strong>Deleting</strong>: The endpoint is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
     /**
      * <p>The type of the endpoint.</p>
-     * <br>
-     * <p>Set the value to **Interface**. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
+     * <p>Set the value to <strong>Interface</strong>. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Interface</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
-     * <p>*   If a next request is to be performed, set the parameter to the value of **NextToken** that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+     * <li>If a next request is to be performed, set the parameter to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID of the endpoint.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The name of the endpoint service with which the endpoint is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -92,6 +124,9 @@ public class ListVpcEndpointsRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC to which the endpoint belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-fdjkf789dfdfdfde****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -200,16 +235,20 @@ public class ListVpcEndpointsRequest extends TeaModel {
     public static class ListVpcEndpointsRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

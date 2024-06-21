@@ -6,74 +6,105 @@ import com.aliyun.tea.*;
 public class UpdateVpcEndpointServiceAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoAcceptEnabled")
     public Boolean autoAcceptEnabled;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Default value: **3072**.</p>
-     * <br>
-     * <p>Valid values: **100** to **10240**.</p>
-     * <br>
-     * <p>>  You can specify this parameter only if you specify Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances as service resources.</p>
+     * <p>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Default value: <strong>3072</strong>.</p>
+     * <p>Valid values: <strong>100</strong> to <strong>10240</strong>.</p>
+     * <blockquote>
+     * <p> You can specify this parameter only if you specify Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances as service resources.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("ConnectBandwidth")
     public Integer connectBandwidth;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The region ID of the endpoint service.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The description of the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my EndpointService.</p>
      */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
     /**
      * <p>The endpoint service ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epsrv-hp3vpx8yqxblby3i****</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>Specifies whether to enable IPv6. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ServiceSupportIPv6")
     public Boolean serviceSupportIPv6;
 
     /**
      * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default)</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;

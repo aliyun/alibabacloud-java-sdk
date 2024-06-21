@@ -12,27 +12,40 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
-     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -85,58 +98,83 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     public static class ListVpcEndpointConnectionsResponseBodyConnectionsZones extends TeaModel {
         /**
          * <p>The endpoint ENI ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-hp32lk0pyv6o94hs****</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
          * <p>The ID of the replaced endpoint ENI in smooth migration scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-hp32lk0pyv6o94hs****</p>
          */
         @NameInMap("ReplacedEniId")
         public String replacedEniId;
 
         /**
          * <p>The ID of the replaced service resource in smooth migration scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         @NameInMap("ReplacedResourceId")
         public String replacedResourceId;
 
         /**
          * <p>The service resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The ID of the vSwitch to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hp3uf6045ljdhd5zr****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The domain name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp34jaz8ykl0exwt****-cn-huhehaote.epsrv-hp3vpx8yqxblby3i****.cn-huhehaote-b.privatelink.aliyuncs.com</p>
          */
         @NameInMap("ZoneDomain")
         public String zoneDomain;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The state of the zone. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The zone is being created.</p>
-         * <p>*   **Wait**: The zone is to be connected.</p>
-         * <p>*   **Connected**: The zone is connected.</p>
-         * <p>*   **Deleting**: The zone is being deleted.</p>
-         * <p>*   **Disconnecting**: The zone is being disconnected.</p>
-         * <p>*   **Disconnected**: The zone is disconnected.</p>
-         * <p>*   **Connecting**: The zone is being connected.</p>
-         * <p>*   **Migrating**: The zone is being migrated.</p>
-         * <p>*   **Migrated**: The zone is migrated.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The zone is being created.</li>
+         * <li><strong>Wait</strong>: The zone is to be connected.</li>
+         * <li><strong>Connected</strong>: The zone is connected.</li>
+         * <li><strong>Deleting</strong>: The zone is being deleted.</li>
+         * <li><strong>Disconnecting</strong>: The zone is being disconnected.</li>
+         * <li><strong>Disconnected</strong>: The zone is disconnected.</li>
+         * <li><strong>Connecting</strong>: The zone is being connected.</li>
+         * <li><strong>Migrating</strong>: The zone is being migrated.</li>
+         * <li><strong>Migrated</strong>: The zone is migrated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         @NameInMap("ZoneStatus")
         public String zoneStatus;
@@ -214,66 +252,95 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
 
     public static class ListVpcEndpointConnectionsResponseBodyConnections extends TeaModel {
         /**
-         * <p>The bandwidth of the endpoint connection. Valid values: **1024 to 10240**. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the endpoint connection. Valid values: <strong>1024 to 10240</strong>. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The state of the endpoint connection. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**: The connection is being modified.</p>
-         * <p>*   **Connecting**: The connection is being established.</p>
-         * <p>*   **Connected**: The connection is established.</p>
-         * <p>*   **Disconnecting**: The endpoint is being disconnected from the endpoint service.</p>
-         * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
-         * <p>*   **Deleting**: The connection is being deleted.</p>
-         * <p>*   **ServiceDeleted**: The corresponding endpoint service has been deleted.</p>
+         * <ul>
+         * <li><strong>Pending</strong>: The connection is being modified.</li>
+         * <li><strong>Connecting</strong>: The connection is being established.</li>
+         * <li><strong>Connected</strong>: The connection is established.</li>
+         * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
+         * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
+         * <li><strong>Deleting</strong>: The connection is being deleted.</li>
+         * <li><strong>ServiceDeleted</strong>: The corresponding endpoint service has been deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
          * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25346073170691****</p>
          */
         @NameInMap("EndpointOwnerId")
         public Long endpointOwnerId;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-hp356stwkxg3fn2xe****</p>
          */
         @NameInMap("EndpointVpcId")
         public String endpointVpcId;
 
         /**
          * <p>The time when the endpoint connection was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-28T10:34:46Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The ID of the resource group to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw353z35v***</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ResourceOwner")
         public Boolean resourceOwner;
 
         /**
          * <p>The endpoint service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;

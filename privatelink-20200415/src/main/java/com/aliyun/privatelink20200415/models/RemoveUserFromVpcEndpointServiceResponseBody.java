@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveUserFromVpcEndpointServiceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

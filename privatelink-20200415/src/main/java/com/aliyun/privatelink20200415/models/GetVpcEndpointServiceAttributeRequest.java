@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class GetVpcEndpointServiceAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the endpoint service.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The endpoint service ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epsrv-hp3vpx8yqxblby3i****</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;

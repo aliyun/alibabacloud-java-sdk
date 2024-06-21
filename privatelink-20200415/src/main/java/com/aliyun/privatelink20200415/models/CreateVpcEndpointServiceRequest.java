@@ -6,45 +6,63 @@ import com.aliyun.tea.*;
 public class CreateVpcEndpointServiceRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoAcceptEnabled")
     public Boolean autoAcceptEnabled;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The payer of the endpoint service. Valid values:</p>
-     * <br>
-     * <p>*   **Endpoint**: the service consumer</p>
-     * <p>*   **EndpointService**: the service provider</p>
-     * <br>
-     * <p>> By default, the feature of allowing the service provider to pay is unavailable. To use this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/privatelink/quotas) and click Privileges in the left-side navigation pane. On the **Privileges** page, enter the quota ID `privatelink_whitelist/epsvc_payer_mode`, and click Apply in the Actions column.</p>
+     * <ul>
+     * <li><strong>Endpoint</strong>: the service consumer</li>
+     * <li><strong>EndpointService</strong>: the service provider</li>
+     * </ul>
+     * <blockquote>
+     * <p>By default, the feature of allowing the service provider to pay is unavailable. To use this feature, log on to the <a href="https://quotas.console.aliyun.com/white-list-products/privatelink/quotas">Quota Center console</a> and click Privileges in the left-side navigation pane. On the <strong>Privileges</strong> page, enter the quota ID <code>privatelink_whitelist/epsvc_payer_mode</code>, and click Apply in the Actions column.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Endpoint</p>
      */
     @NameInMap("Payer")
     public String payer;
 
     /**
      * <p>The region ID of the endpoint service.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -57,31 +75,45 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The description of the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my EndpointService.</p>
      */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
     /**
      * <p>The type of the service resource. Valid values:</p>
-     * <br>
-     * <p>*   **slb**: a Classic Load Balancer (CLB) instance</p>
-     * <p>*   **alb**: an Application Load Balancer (ALB) instance</p>
-     * <p>*   **nlb**: a Network Load Balancer (NLB) instance</p>
+     * <ul>
+     * <li><strong>slb</strong>: a Classic Load Balancer (CLB) instance</li>
+     * <li><strong>alb</strong>: an Application Load Balancer (ALB) instance</li>
+     * <li><strong>nlb</strong>: a Network Load Balancer (NLB) instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>slb</p>
      */
     @NameInMap("ServiceResourceType")
     public String serviceResourceType;
 
     /**
      * <p>Specifies whether to enable IPv6 for the endpoint service. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ServiceSupportIPv6")
     public Boolean serviceSupportIPv6;
@@ -94,9 +126,13 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
@@ -205,24 +241,35 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public static class CreateVpcEndpointServiceRequestResource extends TeaModel {
         /**
          * <p>The ID of the service resource that is added to the endpoint service. You can specify up to 20 service resource IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:</p>
-         * <br>
-         * <p>*   **slb**: Classic Load Balancer (CLB) instance</p>
-         * <p>*   **alb**: Application Load Balancer (ALB) instance</p>
-         * <p>*   **nlb**: Network Load Balancer (NLB) instance</p>
-         * <br>
-         * <p>>  In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service.</p>
+         * <ul>
+         * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
+         * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
+         * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
+         * </ul>
+         * <blockquote>
+         * <p> In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote-a</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -261,16 +308,20 @@ public class CreateVpcEndpointServiceRequest extends TeaModel {
     public static class CreateVpcEndpointServiceRequestTag extends TeaModel {
         /**
          * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("Value")
         public String value;

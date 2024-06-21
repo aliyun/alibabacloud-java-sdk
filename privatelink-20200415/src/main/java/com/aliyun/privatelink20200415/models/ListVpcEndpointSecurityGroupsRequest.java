@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the endpoint that you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-hp33b2e43fays7s8****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:**1** to **50**. Default value: **50**.</p>
+     * <p>The number of entries to return on each page. Valid values:<strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
-     * <p>*   If a next request is to be performed, set the parameter to the value of **NextToken** that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+     * <li>If a next request is to be performed, set the parameter to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID of the endpoint that you want to query.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
