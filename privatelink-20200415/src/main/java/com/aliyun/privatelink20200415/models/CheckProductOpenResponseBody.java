@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class CheckProductOpenResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D8992C1-6712-423C-BAC5-E5E817484C6B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether PrivateLink is activated.</p>
-     * <br>
-     * <p>Only **true** is returned. The value indicates that PrivateLink is activated.</p>
+     * <p>Only <strong>true</strong> is returned. The value indicates that PrivateLink is activated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

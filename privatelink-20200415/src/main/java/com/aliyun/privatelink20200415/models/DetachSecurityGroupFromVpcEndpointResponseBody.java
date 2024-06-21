@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DetachSecurityGroupFromVpcEndpointResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D778FF9-7640-4C13-BCD6-9265CA9A2F81</p>
      */
     @NameInMap("RequestId")
     public String requestId;

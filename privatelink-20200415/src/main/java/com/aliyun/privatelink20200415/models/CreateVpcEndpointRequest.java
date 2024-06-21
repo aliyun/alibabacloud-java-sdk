@@ -6,82 +6,116 @@ import com.aliyun.tea.*;
 public class CreateVpcEndpointRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The description of the endpoint.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my Endpoint.</p>
      */
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
     /**
      * <p>The name of the endpoint.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
      * <p>The type of the endpoint.</p>
-     * <br>
-     * <p>Set the value to **Interface**. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
+     * <p>Set the value to <strong>Interface</strong>. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Interface</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
+    @NameInMap("PolicyDocument")
+    public String policyDocument;
+
     /**
      * <p>Specifies whether to enable user authentication. This parameter is available in Security Token Service (STS) mode. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables user authentication. After user authentication is enabled, only the user who creates the endpoint can modify or delete the endpoint in STS mode.</p>
-     * <p>*   **false** (default): disables user authentication.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables user authentication. After user authentication is enabled, only the user who creates the endpoint can modify or delete the endpoint in STS mode.</li>
+     * <li><strong>false</strong> (default): disables user authentication.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ProtectedEnabled")
     public Boolean protectedEnabled;
 
     /**
      * <p>The region ID of the endpoint.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The IDs of security groups that are associated with the endpoint elastic network interface (ENI).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-hp33bw6ynvm2yb0e****</p>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
     /**
      * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epsrv-hp3xdsq46ael67lo****</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>The name of the endpoint service with which the endpoint is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -94,6 +128,10 @@ public class CreateVpcEndpointRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-hp356stwkxg3fn2xe****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -105,7 +143,10 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public java.util.List<CreateVpcEndpointRequestZone> zone;
 
     /**
-     * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to **1**.</p>
+     * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ZonePrivateIpAddressCount")
     public Long zonePrivateIpAddressCount;
@@ -153,6 +194,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
     public String getEndpointType() {
         return this.endpointType;
+    }
+
+    public CreateVpcEndpointRequest setPolicyDocument(String policyDocument) {
+        this.policyDocument = policyDocument;
+        return this;
+    }
+    public String getPolicyDocument() {
+        return this.policyDocument;
     }
 
     public CreateVpcEndpointRequest setProtectedEnabled(Boolean protectedEnabled) {
@@ -238,12 +287,18 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public static class CreateVpcEndpointRequestTag extends TeaModel {
         /**
          * <p>The key of the tag to add to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag to add to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("Value")
         public String value;
@@ -274,22 +329,29 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public static class CreateVpcEndpointRequestZone extends TeaModel {
         /**
          * <p>The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hp3uf6045ljdhd5zr****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the zone in which the endpoint is deployed.</p>
-         * <br>
          * <p>You can specify up to 10 zone IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The IP address of the zone in which the endpoint is deployed.</p>
-         * <br>
          * <p>You can specify up to 10 IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("ip")
         public String ip;

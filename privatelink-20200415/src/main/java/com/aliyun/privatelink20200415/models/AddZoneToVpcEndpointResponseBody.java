@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddZoneToVpcEndpointResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("RequestId")
     public String requestId;

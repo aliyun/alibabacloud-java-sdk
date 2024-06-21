@@ -6,21 +6,33 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The resource group ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmy*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-hp3i05294c2d2d****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of resource. Valid values:</p>
-     * <br>
-     * <p>*   **vpcendpoint**: endpoint</p>
-     * <p>*   **vpcendpointservice**: endpoint service</p>
+     * <ul>
+     * <li><strong>VpcEndpoint</strong>: endpoint</li>
+     * <li><strong>VpcEndpointService</strong>: endpoint service</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VpcEndpoint</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
-     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -99,6 +112,9 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     public static class ListVpcEndpointServiceUsersResponseBodyUserARNs extends TeaModel {
         /**
          * <p>The whitelist in the format of ARN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:<em>::</em></p>
          */
         @NameInMap("UserARN")
         public String userARN;
@@ -121,6 +137,9 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     public static class ListVpcEndpointServiceUsersResponseBodyUsers extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account in the whitelist of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         @NameInMap("UserId")
         public Long userId;

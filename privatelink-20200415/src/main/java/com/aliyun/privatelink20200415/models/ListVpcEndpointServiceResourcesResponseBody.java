@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
-     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,74 +81,108 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     public static class ListVpcEndpointServiceResourcesResponseBodyResources extends TeaModel {
         /**
          * <p>Indicates whether automatic resource allocation is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoAllocatedEnabled")
         public Boolean autoAllocatedEnabled;
 
         /**
          * <p>The IP address of the service resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.23</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The ID of the region where the service resource is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of endpoints that are associated with the service resource that is smoothly migrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("RelatedDeprecatedEndpointCount")
         public Long relatedDeprecatedEndpointCount;
 
         /**
          * <p>The number of endpoints that are associated with the service resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("RelatedEndpointCount")
         public Long relatedEndpointCount;
 
         /**
          * <p>The service resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ResourceSupportIPv6")
         public Boolean resourceSupportIPv6;
 
         /**
          * <p>The type of the service resource.</p>
-         * <br>
-         * <p>Only **slb** is returned. This value indicates a Classic Load Balancer (CLB) instance.</p>
+         * <p>Only <strong>slb</strong> is returned. This value indicates a Classic Load Balancer (CLB) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The ID of the vSwitch to which the service resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hp3uf6045ljdhd5zr****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the service resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-hp356stwkxg3fn2xe****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the zone to which the service resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,93 +6,135 @@ import com.aliyun.tea.*;
 public class CreateVpcEndpointResponseBody extends TeaModel {
     /**
      * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
      * <p>The state of the endpoint connection. Valid values:</p>
-     * <br>
-     * <p>*   **Pending**: The connection is being modified.</p>
-     * <p>*   **Connecting**: The connection is being established.</p>
-     * <p>*   **Connected**: The connection is established.</p>
-     * <p>*   **Disconnecting**: The endpoint is being disconnected from the endpoint service.</p>
-     * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
-     * <p>*   **Deleting**: The connection is being deleted.</p>
+     * <ul>
+     * <li><strong>Pending</strong>: The connection is being modified.</li>
+     * <li><strong>Connecting</strong>: The connection is being established.</li>
+     * <li><strong>Connected</strong>: The connection is established.</li>
+     * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
+     * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
+     * <li><strong>Deleting</strong>: The connection is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disconnected</p>
      */
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
     /**
      * <p>The time when the endpoint was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-02T19:11:12Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The service state of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: The endpoint runs as expected.</p>
-     * <p>*   **FinancialLocked**: The endpoint is locked due to overdue payments.</p>
+     * <ul>
+     * <li><strong>Normal</strong>: The endpoint runs as expected.</li>
+     * <li><strong>FinancialLocked</strong>: The endpoint is locked due to overdue payments.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("EndpointBusinessStatus")
     public String endpointBusinessStatus;
 
     /**
      * <p>The description of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my Endpoint.</p>
      */
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
     /**
      * <p>The domain name of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-hp33b2e43fays7s8****.epsrv-hp3xdsq46ael67lo****.cn-huhehaote.privatelink.aliyuncs.com</p>
      */
     @NameInMap("EndpointDomain")
     public String endpointDomain;
 
     /**
      * <p>The endpoint ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-hp33b2e43fays7s8****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The name of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
      * <p>The state of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Creating**: The endpoint is being created.</p>
-     * <p>*   **Active**: The endpoint is available.</p>
-     * <p>*   **Pending**: The endpoint is being modified.</p>
-     * <p>*   **Deleting**: The endpoint is being deleted.</p>
+     * <ul>
+     * <li><strong>Creating</strong>: The endpoint is being created.</li>
+     * <li><strong>Active</strong>: The endpoint is available.</li>
+     * <li><strong>Pending</strong>: The endpoint is being modified.</li>
+     * <li><strong>Deleting</strong>: The endpoint is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epsrv-hp3vpx8yqxblby3i****</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>The name of the endpoint service with which the endpoint is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The ID of the VPC to which the endpoint belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-hp356stwkxg3fn2xe****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

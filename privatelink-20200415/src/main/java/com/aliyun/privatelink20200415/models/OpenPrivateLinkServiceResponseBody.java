@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OpenPrivateLinkServiceResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3245****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

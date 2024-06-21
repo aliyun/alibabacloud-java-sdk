@@ -6,24 +6,43 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointZonesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
-     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     /**
      * <p>The information about the zones.</p>
@@ -60,6 +79,14 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListVpcEndpointZonesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public ListVpcEndpointZonesResponseBody setZones(java.util.List<ListVpcEndpointZonesResponseBodyZones> zones) {
         this.zones = zones;
         return this;
@@ -71,61 +98,86 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
     public static class ListVpcEndpointZonesResponseBodyZones extends TeaModel {
         /**
          * <p>The ID of the endpoint ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-hp3c8qj1tyct8aqy****</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
          * <p>The IP address of the endpoint ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.2.23</p>
          */
         @NameInMap("EniIp")
         public String eniIp;
 
         /**
          * <p>The region ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hjkshjvdkdvd****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The domain name of the zone.</p>
-         * <br>
          * <p>After the endpoint in the zone is connected to the endpoint service, you can access the service resources of the endpoint service by using the domain name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp3f033dp24c5yc9****-cn-huhehaote.epsrv-hp3itcpowf37m3d5****.cn-huhehaote-a.privatelink.aliyuncs.com</p>
          */
         @NameInMap("ZoneDomain")
         public String zoneDomain;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote-a</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>Indicates whether the endpoint service supports IPv6. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ZoneIpv6Address")
         public String zoneIpv6Address;
 
         /**
          * <p>The state of the zone. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The zone is being created.</p>
-         * <p>*   **Wait**: The zone is to be connected.</p>
-         * <p>*   **Connected**: The zone is connected.</p>
-         * <p>*   **Deleting**: The zone is being deleted.</p>
-         * <p>*   **Disconnecting**: The zone is being disconnected.</p>
-         * <p>*   **Disconnected**: The zone is disconnected.</p>
-         * <p>*   **Connecting**: The zone is being connected.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The zone is being created.</li>
+         * <li><strong>Wait</strong>: The zone is to be connected.</li>
+         * <li><strong>Connected</strong>: The zone is connected.</li>
+         * <li><strong>Deleting</strong>: The zone is being deleted.</li>
+         * <li><strong>Disconnecting</strong>: The zone is being disconnected.</li>
+         * <li><strong>Disconnected</strong>: The zone is disconnected.</li>
+         * <li><strong>Connecting</strong>: The zone is being connected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Wait</p>
          */
         @NameInMap("ZoneStatus")
         public String zoneStatus;

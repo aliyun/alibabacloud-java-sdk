@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointServicesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
-     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,12 +98,18 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
     public static class ListVpcEndpointServicesResponseBodyServicesTags extends TeaModel {
         /**
          * <p>The key of the tag added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,125 +140,183 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
     public static class ListVpcEndpointServicesResponseBodyServices extends TeaModel {
         /**
          * <p>Indicates whether endpoint connection requests are automatically accepted. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Endpoint connection requests are automatically accepted.</p>
-         * <p>*   **false**: Endpoint connection requests are not automatically accepted.</p>
+         * <ul>
+         * <li><strong>true</strong>: Endpoint connection requests are automatically accepted.</li>
+         * <li><strong>false</strong>: Endpoint connection requests are not automatically accepted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoAcceptEnabled")
         public Boolean autoAcceptEnabled;
 
         /**
          * <p>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("ConnectBandwidth")
         public Integer connectBandwidth;
 
         /**
          * <p>The time when the endpoint service was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-24T17:15:10Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The maximum bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("MaxBandwidth")
         public Integer maxBandwidth;
 
         /**
          * <p>The minimum bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("MinBandwidth")
         public Integer minBandwidth;
 
         /**
          * <p>The payer. Valid values:</p>
-         * <br>
-         * <p>*   **Endpoint**: service consumer</p>
-         * <p>*   **EndpointService**: service provider</p>
+         * <ul>
+         * <li><strong>Endpoint</strong>: service consumer</li>
+         * <li><strong>EndpointService</strong>: service provider</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Endpoint</p>
          */
         @NameInMap("Payer")
         public String payer;
 
         /**
          * <p>The region ID of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The service state of the endpoint service. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The endpoint service runs as expected.</p>
-         * <p>*   **FinancialLocked**: The endpoint service is locked due to overdue payments.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The endpoint service runs as expected.</li>
+         * <li><strong>FinancialLocked</strong>: The endpoint service is locked due to overdue payments.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("ServiceBusinessStatus")
         public String serviceBusinessStatus;
 
         /**
          * <p>The description of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my EndpointService.</p>
          */
         @NameInMap("ServiceDescription")
         public String serviceDescription;
 
         /**
          * <p>The domain name of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</p>
          */
         @NameInMap("ServiceDomain")
         public String serviceDomain;
 
         /**
          * <p>The ID of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <p>The name of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The type of the service resource. Valid values:</p>
-         * <br>
-         * <p>*   **slb**: Classic Load Balancer (CLB) instance</p>
-         * <p>*   **alb**: Application Load Balancer (ALB) instance</p>
-         * <p>*   **nlb**: Network Load Balancer (NLB) instance</p>
+         * <ul>
+         * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
+         * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
+         * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         @NameInMap("ServiceResourceType")
         public String serviceResourceType;
 
         /**
          * <p>The state of the endpoint service. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The endpoint service is being created.</p>
-         * <p>*   **Pending**: The endpoint service is being modified.</p>
-         * <p>*   **Active**: The endpoint service is available.</p>
-         * <p>*   **Deleting**: The endpoint service is being deleted.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The endpoint service is being created.</li>
+         * <li><strong>Pending</strong>: The endpoint service is being modified.</li>
+         * <li><strong>Active</strong>: The endpoint service is available.</li>
+         * <li><strong>Deleting</strong>: The endpoint service is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 
         /**
          * <p>Indicates whether the endpoint service supports IPv6. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ServiceSupportIPv6")
         public Boolean serviceSupportIPv6;
 
         /**
          * <p>The type of the endpoint service.</p>
-         * <br>
-         * <p>*   Only **Interface** may be returned. You can specify CLB, ALB, and NLB instances as the service resources of the endpoint service.</p>
+         * <ul>
+         * <li>Only <strong>Interface</strong> may be returned. You can specify CLB, ALB, and NLB instances as the service resources of the endpoint service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Interface</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;
@@ -252,9 +329,13 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether zone affinity is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ZoneAffinityEnabled")
         public Boolean zoneAffinityEnabled;

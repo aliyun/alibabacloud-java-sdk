@@ -12,27 +12,40 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
-     * <p>*   If a next request is to be performed, set the parameter to the value of **NextToken** that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+     * <li>If a next request is to be performed, set the parameter to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,12 +98,18 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     public static class ListVpcEndpointsResponseBodyEndpointsTags extends TeaModel {
         /**
          * <p>The key of the tag added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,111 +140,162 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     public static class ListVpcEndpointsResponseBodyEndpoints extends TeaModel {
         /**
          * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
          * <p>The state of the endpoint connection. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**: The endpoint connection is being modified.</p>
-         * <p>*   **Connecting**: The endpoint connection is being established.</p>
-         * <p>*   **Connected**: The endpoint connection is established.</p>
-         * <p>*   **Disconnecting**: The endpoint is being disconnected from the endpoint service.</p>
-         * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
-         * <p>*   **Deleting**: The endpoint connection is being deleted.</p>
-         * <p>*   **ServiceDeleted**: The corresponding service is deleted.</p>
+         * <ul>
+         * <li><strong>Pending</strong>: The endpoint connection is being modified.</li>
+         * <li><strong>Connecting</strong>: The endpoint connection is being established.</li>
+         * <li><strong>Connected</strong>: The endpoint connection is established.</li>
+         * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
+         * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
+         * <li><strong>Deleting</strong>: The endpoint connection is being deleted.</li>
+         * <li><strong>ServiceDeleted</strong>: The corresponding service is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
          * <p>The time when the endpoint was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-24T18:00:07Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The service state of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The endpoint runs as expected.</p>
-         * <p>*   **FinancialLocked**: The endpoint is locked due to overdue payments.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The endpoint runs as expected.</li>
+         * <li><strong>FinancialLocked</strong>: The endpoint is locked due to overdue payments.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("EndpointBusinessStatus")
         public String endpointBusinessStatus;
 
         /**
          * <p>The description of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my Endpoint.</p>
          */
         @NameInMap("EndpointDescription")
         public String endpointDescription;
 
         /**
          * <p>The domain name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****.epsrv-hp3xdsq46ael67lo****.cn-huhehaote.privatelink.aliyuncs.com</p>
          */
         @NameInMap("EndpointDomain")
         public String endpointDomain;
 
         /**
          * <p>The ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
          * <p>The name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EndpointName")
         public String endpointName;
 
         /**
          * <p>The state of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The endpoint is being created.</p>
-         * <p>*   **Active**: The endpoint is available.</p>
-         * <p>*   **Pending**: The endpoint is being modified.</p>
-         * <p>*   **Deleting**: The endpoint is being deleted.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The endpoint is being created.</li>
+         * <li><strong>Active</strong>: The endpoint is available.</li>
+         * <li><strong>Pending</strong>: The endpoint is being modified.</li>
+         * <li><strong>Deleting</strong>: The endpoint is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("EndpointStatus")
         public String endpointStatus;
 
         /**
          * <p>The type of the endpoint.</p>
-         * <br>
-         * <p>Only **Interface** may be returned, which indicates an interface endpoint. You can specify Application Load Balancer (ALB) instances, Classic Load Balancer (CLB) instances, and Network Load Balancer (NLB) instances as service resources.</p>
+         * <p>Only <strong>Interface</strong> may be returned, which indicates an interface endpoint. You can specify Application Load Balancer (ALB) instances, Classic Load Balancer (CLB) instances, and Network Load Balancer (NLB) instances as service resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Interface</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        @NameInMap("PolicyDocument")
+        public String policyDocument;
+
         /**
          * <p>The region ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ResourceOwner")
         public Boolean resourceOwner;
 
         /**
          * <p>The ID of the endpoint service that is associated with the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <p>The name of the endpoint service that is associated with the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -238,15 +308,22 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-hp356stwkxg3fn2xe****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ZoneAffinityEnabled")
         public Boolean zoneAffinityEnabled;
@@ -334,6 +411,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
         public String getEndpointType() {
             return this.endpointType;
+        }
+
+        public ListVpcEndpointsResponseBodyEndpoints setPolicyDocument(String policyDocument) {
+            this.policyDocument = policyDocument;
+            return this;
+        }
+        public String getPolicyDocument() {
+            return this.policyDocument;
         }
 
         public ListVpcEndpointsResponseBodyEndpoints setRegionId(String regionId) {

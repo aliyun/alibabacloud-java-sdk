@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The region ID of the zone. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
