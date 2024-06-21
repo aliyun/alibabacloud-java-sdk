@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified Anti-DDoS Origin Enterprise instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The ID of the region where the Anti-DDoS Origin Enterprise instances reside.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddosbgp-cn-v0h1fmwbc024</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the specified resource. Set the value to **INSTANCE**.</p>
-     * <br>
+     * <p>The type of the specified resource. Set the value to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testKey1</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

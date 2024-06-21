@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4DB64811-70A1-41C9-A0CE-CD8B260ED551</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The number of the Anti-DDoS Origin instances for which log analysis was enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,15 +60,22 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     public static class ListOpenedAccessLogInstancesResponseBodySlsConfigStatus extends TeaModel {
         /**
          * <p>Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Log analysis was enabled.</p>
-         * <p>*   **false**: Log analysis was disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: Log analysis was enabled.</li>
+         * <li><strong>false</strong>: Log analysis was disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The ID of the Anti-DDoS Origin instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-m7r1zce2****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

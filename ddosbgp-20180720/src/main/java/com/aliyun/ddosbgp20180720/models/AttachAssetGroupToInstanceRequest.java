@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class AttachAssetGroupToInstanceRequest extends TeaModel {
     /**
      * <p>The information about the asset to be associated.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssetGroupList")
@@ -14,27 +13,28 @@ public class AttachAssetGroupToInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance to query.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddosbgp-cn-n6w1r7nz****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    /**
-     * <p>The source IP address of the request. The system specifies this parameter.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     public static AttachAssetGroupToInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachAssetGroupToInstanceRequest self = new AttachAssetGroupToInstanceRequest();
@@ -65,41 +65,42 @@ public class AttachAssetGroupToInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public AttachAssetGroupToInstanceRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static class AttachAssetGroupToInstanceRequestAssetGroupList extends TeaModel {
         /**
          * <p>The UID of the member to which the asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743970208320***</p>
          */
         @NameInMap("MemberUid")
         public String memberUid;
 
         /**
          * <p>The ID of the asset that you want to add. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf-test-001</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The region ID of the asset.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The type of the asset.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         @NameInMap("Type")
         public String type;

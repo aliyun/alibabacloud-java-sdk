@@ -4,12 +4,24 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdMemberListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rd-x9bLhd</p>
+     */
     @NameInMap("ResourceDirectoryId")
     public String resourceDirectoryId;
 

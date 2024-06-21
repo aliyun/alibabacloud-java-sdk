@@ -4,30 +4,66 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>125085778340****</p>
+     */
     @NameInMap("CurrentUid")
     public String currentUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MemberAccount</p>
+     */
     @NameInMap("CurrentUidType")
     public String currentUidType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("LocalEnable")
     public Boolean localEnable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>125085778340****</p>
+     */
     @NameInMap("MasterUid")
     public String masterUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RemoteEnable")
     public Boolean remoteEnable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B0F7EC6-51D7-4D70-B0EC-CD8A9E998D86</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>125085778340****</p>
+     */
     @NameInMap("RootUid")
     public String rootUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ServicePrincipalEnabled")
     public Boolean servicePrincipalEnabled;
 

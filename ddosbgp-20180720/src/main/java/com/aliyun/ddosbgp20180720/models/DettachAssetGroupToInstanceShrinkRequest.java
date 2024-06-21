@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DettachAssetGroupToInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The information about the asset that you want to dissociate.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssetGroupList")
@@ -14,27 +13,28 @@ public class DettachAssetGroupToInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddosbgp-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    /**
-     * <p>The source IP address of the request. The system specifies this parameter.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     public static DettachAssetGroupToInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DettachAssetGroupToInstanceShrinkRequest self = new DettachAssetGroupToInstanceShrinkRequest();
@@ -63,14 +63,6 @@ public class DettachAssetGroupToInstanceShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DettachAssetGroupToInstanceShrinkRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }

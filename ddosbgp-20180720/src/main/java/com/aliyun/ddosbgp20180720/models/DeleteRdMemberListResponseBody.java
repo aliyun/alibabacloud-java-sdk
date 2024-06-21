@@ -4,6 +4,10 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DeleteRdMemberListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A2D6D5FB-FA07-41A8-B093-A2B7B26E72F2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -12,6 +12,9 @@ public class DescribeTrafficResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A507DC8-F657-4C13-84E2-D1D1B9400753</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,49 +43,73 @@ public class DescribeTrafficResponseBody extends TeaModel {
     public static class DescribeTrafficResponseBodyFlowList extends TeaModel {
         /**
          * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
-         * <br>
-         * <p>>  This parameter is returned only if attack traffic exists.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if attack traffic exists.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AttackBps")
         public Long attackBps;
 
         /**
          * <p>The packet forwarding rate of attack traffic. Unit: packets per second.</p>
-         * <br>
-         * <p>>  This parameter is returned only if attack traffic exists.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if attack traffic exists.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AttackPps")
         public Long attackPps;
 
         /**
          * <p>The type of the traffic statistics. Valid values:</p>
-         * <br>
-         * <p>*   **max**: the peak traffic within the specified interval</p>
-         * <p>*   **avg**: the average traffic within the specified interval</p>
+         * <ul>
+         * <li><strong>max</strong>: the peak traffic within the specified interval</li>
+         * <li><strong>avg</strong>: the average traffic within the specified interval</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>max</p>
          */
         @NameInMap("FlowType")
         public String flowType;
 
         /**
          * <p>The bandwidth of the total traffic. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>417</p>
          */
         @NameInMap("Kbps")
         public Integer kbps;
 
         /**
          * <p>The ID of the traffic statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8e33f19e-5644-11eb-b5c1-d89d67182200</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The packet forwarding rate of the total traffic. Unit: packets per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>274</p>
          */
         @NameInMap("Pps")
         public Integer pps;
 
         /**
          * <p>The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1620951900</p>
          */
         @NameInMap("Time")
         public Integer time;

@@ -5,35 +5,48 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The type of the resource. Valid value: **INSTANCE**.</p>
-     * <br>
+     * <p>The type of the resource. Valid value: <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

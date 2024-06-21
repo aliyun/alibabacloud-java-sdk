@@ -6,29 +6,39 @@ import com.aliyun.tea.*;
 public class SetInstanceModeOnDemandRequest extends TeaModel {
     /**
      * <p>The IDs of on-demand instances.</p>
-     * <br>
-     * <p>>  You can call the [DescribeOnDemandInstance](https://help.aliyun.com/document_detail/152120.html) operation to query the IDs of all on-demand instances.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/152120.html">DescribeOnDemandInstance</a> operation to query the IDs of all on-demand instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddosbgp-cn-z2q1qzxb****</p>
      */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
      * <p>The scheduling mode of the on-demand instance. Valid values:</p>
-     * <br>
-     * <p>*   **manual**: manual scheduling</p>
-     * <p>*   **netflow-auto**: automatic scheduling</p>
-     * <br>
+     * <ul>
+     * <li><strong>manual</strong>: manual scheduling</li>
+     * <li><strong>netflow-auto</strong>: automatic scheduling</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>netflow-auto</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>The region ID of the on-demand instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all regions supported by Anti-DDoS Origin.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

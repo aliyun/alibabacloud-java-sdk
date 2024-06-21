@@ -4,48 +4,96 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DebtStatus")
     public Long debtStatus;
 
     @NameInMap("FlowList")
     public java.util.List<DescribeDdosOriginInstanceBillResponseBodyFlowList> flowList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;cn-hongkong\&quot;: 166491566}</p>
+     */
     @NameInMap("FlowRegion")
     public java.util.Map<String, ?> flowRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddosorigin_cn-u7c3lcr9r02</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("IpCount")
     public Long ipCount;
 
     @NameInMap("IpCountOrFunctionList")
     public java.util.List<DescribeDdosOriginInstanceBillResponseBodyIpCountOrFunctionList> ipCountOrFunctionList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;eipCnIpCount\&quot;:6,\&quot;eipOvIpCount\&quot;:17,\&quot;standardAssetsCnIpCount\&quot;:2,\&quot;standardAssetsOvIpCount\&quot;:0}</p>
+     */
     @NameInMap("IpInfo")
     public String ipInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72155560-F343-55C8-82FE-ED4D7E4AA97E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StandardAssetsFlowList")
     public java.util.List<DescribeDdosOriginInstanceBillResponseBodyStandardAssetsFlowList> standardAssetsFlowList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;cn-hongkong\&quot;: 166491566}</p>
+     */
     @NameInMap("StandardAssetsFlowRegion")
     public java.util.Map<String, ?> standardAssetsFlowRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("StandardAssetsTotalFlowCn")
     public Long standardAssetsTotalFlowCn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("StandardAssetsTotalFlowOv")
     public Long standardAssetsTotalFlowOv;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Long status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6302081067</p>
+     */
     @NameInMap("TotalFlowCn")
     public Long totalFlowCn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6204918019</p>
+     */
     @NameInMap("TotalFlowOv")
     public Long totalFlowOv;
 
@@ -175,15 +223,31 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosOriginInstanceBillResponseBodyFlowList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;bytes\&quot;:79282719,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;regionFlows\&quot;:{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:79282719,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.57\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}}]</p>
+         */
         @NameInMap("MemberFlow")
         public String memberFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:0,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.124\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}</p>
+         */
         @NameInMap("RegionFlow")
         public String regionFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620951900</p>
+         */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6302081067</p>
+         */
         @NameInMap("TotalFlow")
         public Long totalFlow;
 
@@ -227,18 +291,38 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosOriginInstanceBillResponseBodyIpCountOrFunctionList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>global</p>
+         */
         @NameInMap("Coverage")
         public String coverage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("IpCntCn")
         public Long ipCntCn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("IpCntOv")
         public Long ipCntOv;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;eipCnIpCount\&quot;:3,\&quot;eipOvIpCount\&quot;:18,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;standardAssetsCnIpCount\&quot;:2,\&quot;standardAssetsOvIpCount\&quot;:0},{\&quot;eipCnIpCount\&quot;:3,\&quot;eipOvIpCount\&quot;:0,\&quot;memberUid\&quot;:\&quot;1776997906319249\&quot;,\&quot;standardAssetsCnIpCount\&quot;:0,\&quot;standardAssetsOvIpCount\&quot;:0}]</p>
+         */
         @NameInMap("MemberIpCnt")
         public String memberIpCnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1680278400000</p>
+         */
         @NameInMap("Time")
         public Long time;
 
@@ -290,15 +374,31 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosOriginInstanceBillResponseBodyStandardAssetsFlowList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;bytes\&quot;:79282719,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;regionFlows\&quot;:{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:79282719,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.57\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}}]</p>
+         */
         @NameInMap("MemberFlow")
         public String memberFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:0,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.124\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}</p>
+         */
         @NameInMap("RegionFlow")
         public String regionFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1679846400000</p>
+         */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6302081067</p>
+         */
         @NameInMap("TotalFlow")
         public Long totalFlow;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,15 +21,22 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7CA8B4E-FB15-4336-A351-8DC29D66EA82</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -71,12 +81,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
          * <p>The English name of the region where the cloud assets reside.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("RegionEnName")
         public String regionEnName;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
