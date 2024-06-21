@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTemplateScratchResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1B9C6333-5904-5A1E-9845-CB17A369AFDC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

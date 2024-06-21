@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListStackGroupOperationResultsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,47 +94,66 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
     public static class ListStackGroupOperationResultsResponseBodyStackGroupOperationResults extends TeaModel {
         /**
          * <p>The ID of the account to which the stack instance belongs.</p>
-         * <br>
-         * <p>*   If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</p>
-         * <p>*   If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</p>
-         * <br>
-         * <p>>  For more information about the account, see [Overview](https://help.aliyun.com/document_detail/154578.html).</p>
+         * <ul>
+         * <li>If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</li>
+         * <li>If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>175458090349****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The folder ID of the resource directory.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the stack group is granted service-managed permissions.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the stack group is granted service-managed permissions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;fd-4PvlVLOL8v&quot;</p>
          */
         @NameInMap("RdFolderId")
         public String rdFolderId;
 
         /**
          * <p>The region ID of the stack instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the operation.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RUNNING: The operation is being performed.</p>
-         * <p>*   SUCCEEDED: The operation succeeded.</p>
-         * <p>*   FAILED: The operation failed.</p>
-         * <p>*   STOPPING: The operation is being stopped.</p>
-         * <p>*   STOPPED: The operation is stopped.</p>
+         * <ul>
+         * <li>RUNNING: The operation is being performed.</li>
+         * <li>SUCCEEDED: The operation succeeded.</li>
+         * <li>FAILED: The operation failed.</li>
+         * <li>STOPPING: The operation is being stopped.</li>
+         * <li>STOPPED: The operation is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The reason why the operation is in a specific state.</p>
-         * <br>
-         * <p>>  This parameter is returned only when stack instances are in the OUTDATED state.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when stack instances are in the OUTDATED state.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>User initiated operation</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

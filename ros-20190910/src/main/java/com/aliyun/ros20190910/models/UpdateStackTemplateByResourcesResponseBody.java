@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
     /**
      * <p>The template content after correction.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;ROSTemplateFormatVersion\&quot;: \&quot;2015-09-01\&quot;, \&quot;Resources\&quot;: {\&quot;Vpc\&quot;: {\&quot;Type\&quot;: \&quot;ALIYUN::ECS::VPC\&quot;, \&quot;Properties\&quot;: {\&quot;VpcName\&quot;: \&quot;test\&quot;, \&quot;CidrBlock\&quot;: \&quot;192.168.0.0/16\&quot;, \&quot;Description\&quot;: \&quot;test2\&quot;}}}, \&quot;Outputs\&quot;: {\&quot;VpcId\&quot;: {\&quot;Value\&quot;: {\&quot;Fn::GetAtt\&quot;: [\&quot;Vpc\&quot;, \&quot;VpcId\&quot;]}}}}</p>
      */
     @NameInMap("NewTemplateBody")
     public String newTemplateBody;
 
     /**
      * <p>The template content before correction.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;ROSTemplateFormatVersion\&quot;: \&quot;2015-09-01\&quot;, \&quot;Resources\&quot;: {\&quot;Vpc\&quot;: {\&quot;Type\&quot;: \&quot;ALIYUN::ECS::VPC\&quot;, \&quot;Properties\&quot;: {\&quot;VpcName\&quot;: \&quot;test\&quot;, \&quot;CidrBlock\&quot;: \&quot;192.168.0.0/16\&quot;, \&quot;Description\&quot;: \&quot;test1\&quot;}}}, \&quot;Outputs\&quot;: {\&quot;VpcId\&quot;: {\&quot;Value\&quot;: {\&quot;Fn::GetAtt\&quot;: [\&quot;Vpc\&quot;, \&quot;VpcId\&quot;]}}}}</p>
      */
     @NameInMap("OldTemplateBody")
     public String oldTemplateBody;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

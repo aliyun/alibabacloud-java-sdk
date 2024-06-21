@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PreviewStackResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,38 @@ public class PreviewStackResponseBody extends TeaModel {
     public static class PreviewStackResponseBodyStackLogTerraformLogs extends TeaModel {
         /**
          * <p>The name of the Terraform command that is run. Valid values:</p>
-         * <br>
-         * <p>*   apply</p>
-         * <p>*   plan</p>
-         * <p>*   destroy</p>
-         * <p>*   version</p>
-         * <br>
-         * <p>For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).</p>
+         * <ul>
+         * <li>apply</li>
+         * <li>plan</li>
+         * <li>destroy</li>
+         * <li>version</li>
+         * </ul>
+         * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Basic CLI Features</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apply</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The content of the output stream that is returned after the command is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The output stream. Valid values:</p>
-         * <br>
-         * <p>*   stdout: standard output stream</p>
-         * <p>*   stderr: standard error stream</p>
+         * <ul>
+         * <li>stdout: standard output stream</li>
+         * <li>stderr: standard error stream</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>stdout</p>
          */
         @NameInMap("Stream")
         public String stream;
@@ -100,8 +113,9 @@ public class PreviewStackResponseBody extends TeaModel {
     public static class PreviewStackResponseBodyStackLog extends TeaModel {
         /**
          * <p>The Terraform logs. This parameter is returned only if the stack is a Terraform stack.</p>
-         * <br>
-         * <p>> This parameter contains the logs of previewing the stack.</p>
+         * <blockquote>
+         * <p>This parameter contains the logs of previewing the stack.</p>
+         * </blockquote>
          */
         @NameInMap("TerraformLogs")
         public java.util.List<PreviewStackResponseBodyStackLogTerraformLogs> terraformLogs;
@@ -124,12 +138,18 @@ public class PreviewStackResponseBody extends TeaModel {
     public static class PreviewStackResponseBodyStackParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::AccountId</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -160,55 +180,78 @@ public class PreviewStackResponseBody extends TeaModel {
     public static class PreviewStackResponseBodyStackResources extends TeaModel {
         /**
          * <p>The resource type of an Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("AcsResourceType")
         public String acsResourceType;
 
         /**
          * <p>The action that is performed on the resource. Valid values:</p>
-         * <br>
-         * <p>*   Add</p>
-         * <p>*   Modify</p>
-         * <p>*   Remove</p>
-         * <p>*   None</p>
+         * <ul>
+         * <li>Add</li>
+         * <li>Modify</li>
+         * <li>Remove</li>
+         * <li>None</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Add</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The description of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The logical ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebServer</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
         /**
          * <p>The physical ID of the resource.</p>
-         * <br>
          * <p>This parameter is returned only if Action is set to Modify or Remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-a1b2c3***</p>
          */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
         /**
          * <p>The resource properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;DiskMappings&quot;: [     {       &quot;Category&quot;: &quot;cloud_ssd&quot;,       &quot;Size&quot;: &quot;20&quot;     }   ],   &quot;SystemDisk_Category&quot;: &quot;cloud_ssd&quot;,   &quot;InstanceChargeType&quot;: &quot;PostPaid&quot;,   &quot;AutoRenew&quot;: &quot;False&quot;,   &quot;WillReplace&quot;: true,   &quot;ImageId&quot;: &quot;centos_7&quot;,   &quot;InstanceType&quot;: &quot;ecs.g6.large&quot;,   &quot;AllocatePublicIP&quot;: true,   &quot;AutoRenewPeriod&quot;: 1,   &quot;IoOptimized&quot;: &quot;optimized&quot;,   &quot;ZoneId&quot;: &quot;cn-beijing-g&quot;,   &quot;VSwitchId&quot;: &quot;&quot;,   &quot;SecurityGroupId&quot;: &quot;&quot;,   &quot;Period&quot;: 1,   &quot;InternetChargeType&quot;: &quot;PayByTraffic&quot;,   &quot;SystemDiskCategory&quot;: &quot;cloud_efficiency&quot;,   &quot;InternetMaxBandwidthOut&quot;: 1,   &quot;VpcId&quot;: &quot;&quot;,   &quot;InternetMaxBandwidthIn&quot;: 200,   &quot;PeriodUnit&quot;: &quot;Month&quot; }</p>
          */
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
         /**
          * <p>Indicates whether a replacement update is performed on the template. Valid values:</p>
-         * <br>
-         * <p>*   True: A replacement update is performed on the template.</p>
-         * <p>*   False: A change is made on the template.</p>
-         * <p>*   Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</p>
-         * <br>
-         * <p>> This parameter is returned only if Action is set to Modify.</p>
+         * <ul>
+         * <li>True: A replacement update is performed on the template.</li>
+         * <li>False: A change is made on the template.</li>
+         * <li>Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only if Action is set to Modify.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         @NameInMap("Replacement")
         public String replacement;
@@ -221,12 +264,18 @@ public class PreviewStackResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The information about the nested stack. The data structure of the value is the same as the data structure of the entire response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Stack")
         public java.util.Map<String, ?> stack;
@@ -321,12 +370,18 @@ public class PreviewStackResponseBody extends TeaModel {
     public static class PreviewStackResponseBodyStack extends TeaModel {
         /**
          * <p>The description of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>One ECS instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether rollback is disabled for the resources when the stack fails to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DisableRollback")
         public Boolean disableRollback;
@@ -345,6 +400,9 @@ public class PreviewStackResponseBody extends TeaModel {
 
         /**
          * <p>The region where the stack resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -357,26 +415,37 @@ public class PreviewStackResponseBody extends TeaModel {
 
         /**
          * <p>The stack name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStack</p>
          */
         @NameInMap("StackName")
         public String stackName;
 
         /**
          * <p>The structure that contains the stack policy body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;Statement&quot;: [     {       &quot;Action&quot;: &quot;Update:<em>&quot;,       &quot;Resource&quot;: &quot;</em>&quot;,       &quot;Effect&quot;: &quot;Allow&quot;,       &quot;Principal&quot;: &quot;<em>&quot;     },     {       &quot;Action&quot;: &quot;Update:</em>&quot;,       &quot;Resource&quot;: &quot;LogicalResourceId/apple1&quot;,       &quot;Effect&quot;: &quot;Deny&quot;,       &quot;Principal&quot;: &quot;*&quot;     }   ] }</p>
          */
         @NameInMap("StackPolicyBody")
         public java.util.Map<String, ?> stackPolicyBody;
 
         /**
          * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>One ECS instance.</p>
          */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
         /**
          * <p>The timeout period for creating the stack.</p>
-         * <br>
          * <p>Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("TimeoutInMinutes")
         public Integer timeoutInMinutes;

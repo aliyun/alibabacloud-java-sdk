@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetStackGroupResponseBody extends TeaModel {
     /**
      * <p>The details of the stack group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,29 @@ public class GetStackGroupResponseBody extends TeaModel {
     public static class GetStackGroupResponseBodyStackGroupAutoDeployment extends TeaModel {
         /**
          * <p>Indicates whether stacks in the member account are retained when the member account is deleted from the folder.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: The stacks are retained.</p>
-         * <p>*   false: The stacks are deleted.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the Enabled parameter is set to true.</p>
+         * <ul>
+         * <li>true: The stacks are retained.</li>
+         * <li>false: The stacks are deleted.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only when the Enabled parameter is set to true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The folder IDs of the resource directory. This parameter is used to deploy stack instances within all the accounts in the folders.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RetainStacksOnAccountRemoval")
         public Boolean retainStacksOnAccountRemoval;
@@ -85,12 +96,18 @@ public class GetStackGroupResponseBody extends TeaModel {
     public static class GetStackGroupResponseBodyStackGroupParameters extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Amount</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -121,68 +138,95 @@ public class GetStackGroupResponseBody extends TeaModel {
     public static class GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail extends TeaModel {
         /**
          * <p>The number of stack instances that have drifted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CancelledStackInstancesCount")
         public Integer cancelledStackInstancesCount;
 
         /**
          * <p>The drift status of the stack group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   DRIFTED: At least one stack instance in the stack group has drifted.</p>
-         * <p>*   NOT_CHECKED: No drift detection is completed on the stack group.</p>
-         * <p>*   IN_SYNC: All the stack instances in the stack group are being synchronized.</p>
+         * <ul>
+         * <li>DRIFTED: At least one stack instance in the stack group has drifted.</li>
+         * <li>NOT_CHECKED: No drift detection is completed on the stack group.</li>
+         * <li>IN_SYNC: All the stack instances in the stack group are being synchronized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         @NameInMap("DriftDetectionStatus")
         public String driftDetectionStatus;
 
         /**
          * <p>The number of stack instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-27T07:47:47</p>
          */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
         /**
          * <p>The ID of the resource group. This parameter is specified when you create the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DriftedStackInstancesCount")
         public Integer driftedStackInstancesCount;
 
         /**
          * <p>The status of drift detection on the stack group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   COMPLETED: Drift detection is performed and completed on all stack instances.</p>
-         * <p>*   FAILED: Drift detection is performed. The number of stack instances that failed the drift detection exceeds the specified threshold.</p>
-         * <p>*   PARTIAL_SUCCESS: Drift detection is performed. The number of stack instances that failed the drift detection does not exceed the specified threshold.</p>
-         * <p>*   IN_PROGRESS: Drift detection is being performed on the stack group.</p>
-         * <p>*   STOPPED: Drift detection is canceled for the stack group.</p>
+         * <ul>
+         * <li>COMPLETED: Drift detection is performed and completed on all stack instances.</li>
+         * <li>FAILED: Drift detection is performed. The number of stack instances that failed the drift detection exceeds the specified threshold.</li>
+         * <li>PARTIAL_SUCCESS: Drift detection is performed. The number of stack instances that failed the drift detection does not exceed the specified threshold.</li>
+         * <li>IN_PROGRESS: Drift detection is being performed on the stack group.</li>
+         * <li>STOPPED: Drift detection is canceled for the stack group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailedStackInstancesCount")
         public Integer failedStackInstancesCount;
 
         /**
          * <p>The number of stack instances that were being synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InProgressStackInstancesCount")
         public Integer inProgressStackInstancesCount;
 
         /**
          * <p>The number of stack instances for which drift detection was canceled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InSyncStackInstancesCount")
         public Integer inSyncStackInstancesCount;
 
         /**
          * <p>The number of stack instances on which drift detection was being performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DRIFTED</p>
          */
         @NameInMap("StackGroupDriftStatus")
         public String stackGroupDriftStatus;
 
         /**
          * <p>The number of stack instances that failed drift detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalStackInstancesCount")
         public Integer totalStackInstancesCount;
@@ -269,17 +313,20 @@ public class GetStackGroupResponseBody extends TeaModel {
     public static class GetStackGroupResponseBodyStackGroup extends TeaModel {
         /**
          * <p>The parameters of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunROSStackGroupAdministrationRole</p>
          */
         @NameInMap("AdministrationRoleName")
         public String administrationRoleName;
 
         /**
          * <p>Indicates whether automatic deployment is enabled.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: Automatic deployment is enabled. If a member account is added to the folder to which the stack group belongs after automatic deployment is enabled, the stack group deploys its stack instances in the specified region where the added account is deployed. If the account is deleted from the folder, the stack instances in the specified region are deleted from the stack group.</p>
-         * <p>*   false: Automatic deployment is disabled. After automatic deployment is disabled, the stack instances remain unchanged when the member account in the folder is changed.</p>
+         * <ul>
+         * <li>true: Automatic deployment is enabled. If a member account is added to the folder to which the stack group belongs after automatic deployment is enabled, the stack group deploys its stack instances in the specified region where the added account is deployed. If the account is deleted from the folder, the stack instances in the specified region are deleted from the stack group.</li>
+         * <li>false: Automatic deployment is disabled. After automatic deployment is disabled, the stack instances remain unchanged when the member account in the folder is changed.</li>
+         * </ul>
          */
         @NameInMap("AutoDeployment")
         public GetStackGroupResponseBodyStackGroupAutoDeployment autoDeployment;
@@ -289,12 +336,18 @@ public class GetStackGroupResponseBody extends TeaModel {
 
         /**
          * <p>The name of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StackGroup Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The template body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunROSStackGroupExecutionRole</p>
          */
         @NameInMap("ExecutionRoleName")
         public String executionRoleName;
@@ -307,29 +360,38 @@ public class GetStackGroupResponseBody extends TeaModel {
 
         /**
          * <p>The information about automatic deployment settings.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF_MANAGED</p>
          */
         @NameInMap("PermissionModel")
         public String permissionModel;
 
         /**
          * <p>The folder IDs of the resource directory. This parameter is used to deploy stack instances within all the accounts in the folders.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the PermissionModel parameter is set to SERVICE_MANAGED.</p>
+         * </blockquote>
          */
         @NameInMap("RdFolderIds")
         public java.util.List<String> rdFolderIds;
 
         /**
          * <p>The permission model.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SELF_MANAGED: the self-managed permission model</p>
-         * <p>*   SERVICE_MANAGED: the service-managed permission model</p>
-         * <br>
-         * <p>>  For more information about the permission models of stack groups, see [Overview](https://help.aliyun.com/document_detail/154578.html).</p>
+         * <ul>
+         * <li>SELF_MANAGED: the self-managed permission model</li>
+         * <li>SERVICE_MANAGED: the service-managed permission model</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the permission models of stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -342,37 +404,55 @@ public class GetStackGroupResponseBody extends TeaModel {
 
         /**
          * <p>The status of the stack group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   ACTIVE</p>
-         * <p>*   DELETED</p>
+         * <ul>
+         * <li>ACTIVE</li>
+         * <li>DELETED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
          */
         @NameInMap("StackGroupId")
         public String stackGroupId;
 
         /**
          * <p>The name of the RAM role that is specified for the execution account when you create the self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role. If this parameter is not specified, the default value AliyunROSStackGroupExecutionRole is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         @NameInMap("StackGroupName")
         public String stackGroupName;
 
         /**
          * <p>The name of the RAM role that is specified for the administrator account in Resource Orchestration Service (ROS) when you create the self-managed stack group. If this parameter is not specified, the default value AliyunROSStackGroupAdministrationRole is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The structure that contains the template body.</p>
-         * <br>
-         * <p>> We recommend that you use TemplateContent instead of TemplateBody.</p>
+         * <blockquote>
+         * <p>We recommend that you use TemplateContent instead of TemplateBody.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
          */
         @NameInMap("TemplateBody")
         public String templateBody;
 
         /**
-         * <p>The JSON-formatted structure that contains the template body. For more information, see [Template syntax](https://help.aliyun.com/document_detail/28857.html).</p>
+         * <p>The JSON-formatted structure that contains the template body. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;
+         * }</p>
          */
         @NameInMap("TemplateContent")
         public String templateContent;

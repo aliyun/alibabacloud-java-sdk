@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class GetResourceTypeTemplateRequest extends TeaModel {
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::ECS::VPC</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.</p>
-     * <br>
-     * <p>> This parameter is supported only for modules.</p>
+     * <blockquote>
+     * <p>This parameter is supported only for modules.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("VersionId")
     public String versionId;

@@ -6,20 +6,32 @@ import com.aliyun.tea.*;
 public class GetResourceTypeTemplateResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>87F54B2B-AEF0-4C33-A72A-3F8856A575E9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 51,200 bytes in length. For more information, see [Template syntax](https://help.aliyun.com/document_detail/28857.html).</p>
-     * <br>
-     * <p>> We recommend that use TemplateContent instead of TemplateBody.</p>
+     * <p>The structure that contains the template body. The template body must be 1 to 51,200 bytes in length. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</p>
+     * <blockquote>
+     * <p>We recommend that use TemplateContent instead of TemplateBody.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
      */
     @NameInMap("TemplateBody")
     public java.util.Map<String, ?> templateBody;
 
     /**
-     * <p>The JSON-formatted structure of the template body. For more information, see [Template syntax](https://help.aliyun.com/document_detail/28857.html).</p>
+     * <p>The JSON-formatted structure of the template body. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;
+     * }</p>
      */
     @NameInMap("TemplateContent")
     public String templateContent;

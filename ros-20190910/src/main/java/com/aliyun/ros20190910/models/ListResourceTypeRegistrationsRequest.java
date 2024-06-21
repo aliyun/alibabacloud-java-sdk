@@ -6,40 +6,59 @@ import com.aliyun.tea.*;
 public class ListResourceTypeRegistrationsRequest extends TeaModel {
     /**
      * <p>The entity type. Set the value to Module.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Module</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the registration record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
      */
     @NameInMap("RegistrationId")
     public String registrationId;
 
     /**
-     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\\*). You can use an asterisk (\\*) to perform a fuzzy match.</p>
+     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\<em>). You can use an asterisk (\</em>) to perform a fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The registration state. Valid values:</p>
-     * <br>
-     * <p>*   IN_PROGRESS</p>
-     * <p>*   COMPLETE</p>
-     * <p>*   FAILED</p>
+     * <ul>
+     * <li>IN_PROGRESS</li>
+     * <li>COMPLETE</li>
+     * <li>FAILED</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLETE</p>
      */
     @NameInMap("Status")
     public String status;

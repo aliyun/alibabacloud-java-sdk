@@ -5,62 +5,85 @@ import com.aliyun.tea.*;
 
 public class GetStackRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
-     * <p>The token can be up to 64 characters in length.\\</p>
-     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
+     * The token can be up to 64 characters in length.\
+     * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The option for returning logs. Valid values:</p>
-     * <br>
-     * <p>*   None: does not return logs.</p>
-     * <p>*   Stack (default): returns the logs of the stack.</p>
-     * <p>*   Resource: returns the logs of resources in the stack.</p>
-     * <p>*   All: returns all logs.</p>
+     * <ul>
+     * <li>None: does not return logs.</li>
+     * <li>Stack (default): returns the logs of the stack.</li>
+     * <li>Resource: returns the logs of resources in the stack.</li>
+     * <li>All: returns all logs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Stack</p>
      */
     @NameInMap("LogOption")
     public String logOption;
 
     /**
      * <p>Specifies whether to return Outputs. Valid values:</p>
-     * <br>
-     * <p>*   Enabled (default)</p>
-     * <p>*   Disabled</p>
-     * <br>
-     * <p>>  The Outputs parameter requires a long period of time to calculate. If you do not require Outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the GetStack operation.</p>
+     * <ul>
+     * <li>Enabled (default)</li>
+     * <li>Disabled</li>
+     * </ul>
+     * <blockquote>
+     * <p> The Outputs parameter requires a long period of time to calculate. If you do not require Outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the GetStack operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("OutputOption")
     public String outputOption;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to return information about ResourceProgress. Valid values:</p>
-     * <br>
-     * <p>*   Disabled (default): does not return information about ResourceProgress.</p>
-     * <p>*   PercentageOnly: returns StackOperationProgress and StackActionProgress of ResourceProgress.</p>
-     * <br>
-     * <p>>  ROS and Terraform stacks are supported. Creation, resumed creation, update, deletion, import, and rollback operations on stacks are supported.</p>
-     * <br>
-     * <p>*   EnabledIfCreateStack (not recommend): returns \\*Count and InProgressResourceDetails of ResourceProgress only during a stack creation operation.</p>
-     * <br>
-     * <p>>  During a creation operation, a stack is in one of the following states: CREATE_IN_PROGRESS, CREATE_COMPLETE, CREATE_FAILED, CREATE_ROLLBACK_IN_PROGRESS, CREATE_ROLLBACK_COMPLETE, and CREATE_ROLLBACK_FAILED.</p>
+     * <ul>
+     * <li>Disabled (default): does not return information about ResourceProgress.</li>
+     * <li>PercentageOnly: returns StackOperationProgress and StackActionProgress of ResourceProgress.</li>
+     * </ul>
+     * <blockquote>
+     * <p> ROS and Terraform stacks are supported. Creation, resumed creation, update, deletion, import, and rollback operations on stacks are supported.</p>
+     * </blockquote>
+     * <ul>
+     * <li>EnabledIfCreateStack (not recommend): returns \*Count and InProgressResourceDetails of ResourceProgress only during a stack creation operation.</li>
+     * </ul>
+     * <blockquote>
+     * <p> During a creation operation, a stack is in one of the following states: CREATE_IN_PROGRESS, CREATE_COMPLETE, CREATE_FAILED, CREATE_ROLLBACK_IN_PROGRESS, CREATE_ROLLBACK_COMPLETE, and CREATE_ROLLBACK_FAILED.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("ShowResourceProgress")
     public String showResourceProgress;
 
     /**
      * <p>The stack ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c754d2a4-28f1-46df-b557-9586173a****</p>
      */
     @NameInMap("StackId")
     public String stackId;

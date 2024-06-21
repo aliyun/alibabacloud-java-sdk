@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ValidateTemplateRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
      * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
-     * <br>
-     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The region ID of the template. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <p>The region ID of the template. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,10 +29,13 @@ public class ValidateTemplateRequest extends TeaModel {
 
     /**
      * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</p>
-     * <br>
-     * <p>> If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
-     * <br>
-     * <p>You can specify one of TemplateBody and TemplateURL, but not both of them. The URL can be up to 1,024 bytes in length.\\</p>
+     * <blockquote>
+     * <p>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
+     * </blockquote>
+     * <p>You can specify one of TemplateBody and TemplateURL, but not both of them. The URL can be up to 1,024 bytes in length.\</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ros/template/demo</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
@@ -41,12 +48,17 @@ public class ValidateTemplateRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable additional validation for the template. Valid values:</p>
-     * <br>
-     * <p>*   None (default): does not enable additional validation.</p>
-     * <p>*   EnableTerraformValidation: runs the `terraform validate` command in the Terraform CLI to enable additional validation for a Terraform template.</p>
-     * <p>*   EnableFastTerraformValidation: runs a command that is similar to the `terraform validate` command in the Terraform CLI to enable additional validation for a Terraform template.</p>
-     * <br>
-     * <p>> Compared with the EnableTerraformValidation method, the EnableFastTerraformValidation method validates a template at a faster speed but a lower integrity level.</p>
+     * <ul>
+     * <li>None (default): does not enable additional validation.</li>
+     * <li>EnableTerraformValidation: runs the <code>terraform validate</code> command in the Terraform CLI to enable additional validation for a Terraform template.</li>
+     * <li>EnableFastTerraformValidation: runs a command that is similar to the <code>terraform validate</code> command in the Terraform CLI to enable additional validation for a Terraform template.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Compared with the EnableTerraformValidation method, the EnableFastTerraformValidation method validates a template at a faster speed but a lower integrity level.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("ValidationOption")
     public String validationOption;

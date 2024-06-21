@@ -12,12 +12,18 @@ public class UpdateStackResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -60,17 +66,24 @@ public class UpdateStackResponseBody extends TeaModel {
 
         /**
          * <p>The parameters whose changes cause service interruptions.</p>
-         * <p>> - This parameter is supported only for a small number of resource types.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is supported only for a small number of resource types.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersCauseInterruptionIfModified")
         public java.util.List<String> parametersCauseInterruptionIfModified;
 
         /**
          * <p>The parameters whose changes trigger replacement updates for resources.</p>
-         * <br>
-         * <p>> -  This parameter can be returned only if ReplacementOption is set to Enabled.</p>
-         * <p>> -  This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersCauseReplacementIfModified")
         public java.util.List<String> parametersCauseReplacementIfModified;
@@ -83,18 +96,24 @@ public class UpdateStackResponseBody extends TeaModel {
 
         /**
          * <p>The parameters whose changes cause service interruptions under specific conditions.</p>
-         * <br>
-         * <p>> - This parameter is supported only for a small number of resource types.</p>
-         * <p>> -  This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is supported only for a small number of resource types.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         public java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
 
         /**
          * <p>The parameters whose changes trigger replacement updates for resources under specific conditions.</p>
-         * <br>
-         * <p>> - This parameter can be returned only if ReplacementOption is set to Enabled.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersConditionallyCauseReplacementIfModified")
         public java.util.List<String> parametersConditionallyCauseReplacementIfModified;
@@ -113,18 +132,24 @@ public class UpdateStackResponseBody extends TeaModel {
 
         /**
          * <p>The parameters whose changes cause service interruptions under uncertain conditions.</p>
-         * <br>
-         * <p>> - This parameter is supported only for a small number of resource types.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is supported only for a small number of resource types.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         public java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
 
         /**
          * <p>The parameters whose changes trigger replacement updates for resources under uncertain conditions.</p>
-         * <br>
-         * <p>> - This parameter can be returned only if ReplacementOption is set to Enabled.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter can be returned only if ReplacementOption is set to Enabled.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersUncertainlyCauseReplacementIfModified")
         public java.util.List<String> parametersUncertainlyCauseReplacementIfModified;

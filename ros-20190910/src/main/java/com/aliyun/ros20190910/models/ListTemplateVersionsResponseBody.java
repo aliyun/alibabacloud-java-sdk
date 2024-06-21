@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTemplateVersionsResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,40 +60,56 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     public static class ListTemplateVersionsResponseBodyVersions extends TeaModel {
         /**
          * <p>The time when the version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-27T07:47:47</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The template ID. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The template name that corresponds to the specified version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The version number.</p>
-         * <br>
          * <p>For a shared template, this parameter is returned only if VersionOption is set to AllVersions.</p>
-         * <br>
          * <p>Valid values: v1 to v100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
          * <p>The time when the version was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-27T07:47:47</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

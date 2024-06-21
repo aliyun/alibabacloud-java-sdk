@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetTemplateEstimateCostResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6DEA36EF-C97D-5658-A4AC-4F5DB08D1A89</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The resource details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;LogicalResourceIdPattern\&quot;: \&quot;wait1\&quot;, \&quot;ResourceType\&quot;: \&quot;time_sleep\&quot;, \&quot;ResourcePath\&quot;: \&quot;wait1\&quot;}, {\&quot;LogicalResourceIdPattern\&quot;: \&quot;wait2\&quot;, \&quot;ResourceType\&quot;: \&quot;time_sleep\&quot;, \&quot;ResourcePath\&quot;: \&quot;wait2\&quot;}]</p>
      */
     @NameInMap("Resources")
     public java.util.Map<String, ?> resources;

@@ -6,31 +6,42 @@ import com.aliyun.tea.*;
 public class CreateDiagnosticRequest extends TeaModel {
     /**
      * <p>The keyword in the diagnosis.</p>
-     * <br>
      * <p>You can specify the ID of the stack that you want to diagnose.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37A5679B-8488-5A5D-8D5C-90E66A577A5D</p>
      */
     @NameInMap("DiagnosticKey")
     public String diagnosticKey;
 
     /**
      * <p>The type of the item that is diagnosed. Set the value to Stack, which specifies that the stack is diagnosed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Stack</p>
      */
     @NameInMap("DiagnosticType")
     public String diagnosticType;
 
     /**
      * <p>The language of the diagnostic report to be generated. Only Chinese and English are supported.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   zh-cn</p>
-     * <p>*   en</p>
+     * <ul>
+     * <li>zh-cn</li>
+     * <li>en</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the product that is diagonosed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ros</p>
      */
     @NameInMap("Product")
     public String product;

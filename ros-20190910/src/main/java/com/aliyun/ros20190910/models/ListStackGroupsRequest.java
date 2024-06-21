@@ -6,45 +6,62 @@ import com.aliyun.tea.*;
 public class ListStackGroupsRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
-     * <p>*   Pages start from page 1.</p>
-     * <p>*   Default value: 1.</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 50.</p>
-     * <p>*   Default value: 10.</p>
+     * <ul>
+     * <li>Valid values: 1 to 50.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.</p>
-     * <br>
-     * <p>> To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](https://help.aliyun.com/document_detail/151181.html).</p>
+     * <blockquote>
+     * <p>To obtain the resource group ID, go to the <strong>Resource Group</strong> page in the <strong>Resource Management</strong> console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information about a resource group</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxcj****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The state of the stack group. If you do not specify this parameter, the stack groups in all states in the specified region are queried.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   ACTIVE</p>
-     * <p>*   DELETED</p>
+     * <ul>
+     * <li>ACTIVE</li>
+     * <li>DELETED</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
      */
     @NameInMap("Status")
     public String status;
@@ -111,16 +128,22 @@ public class ListStackGroupsRequest extends TeaModel {
     public static class ListStackGroupsRequestTags extends TeaModel {
         /**
          * <p>The key of the tag that is added to the stack group.</p>
-         * <br>
-         * <p>> Tags is optional. If you specify Tags, you must specify Tags.N.Key.</p>
-         * <br>
+         * <blockquote>
+         * <p>Tags is optional. If you specify Tags, you must specify Tags.N.Key.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag that is added to the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetChangeSetResponseBody extends TeaModel {
     /**
      * <p>The ID of the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4c11658d-bd47-4dd0-ba64-727edc62****</p>
      */
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
     /**
      * <p>The name of the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ChangeSet_template</p>
      */
     @NameInMap("ChangeSetName")
     public String changeSetName;
 
     /**
      * <p>The type of the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UPDATE</p>
      */
     @NameInMap("ChangeSetType")
     public String changeSetType;
@@ -30,24 +39,36 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     /**
      * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-01T02:20:56</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The description of the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>It is a demo.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Indicates whether rollback was performed when the stack failed to be created or updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
     /**
      * <p>The execution status of the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
      */
     @NameInMap("ExecutionStatus")
     public String executionStatus;
@@ -66,50 +87,75 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     /**
      * <p>The region ID of the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3766EE04-76DD-50F9-9C23-3AF136CD5708</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the stack with which the change set is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a486fc19-ebb7-4ce9-a70b-554a7c3d****</p>
      */
     @NameInMap("StackId")
     public String stackId;
 
     /**
      * <p>The name of the stack with which the change set is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stack_2021-10-13</p>
      */
     @NameInMap("StackName")
     public String stackName;
 
     /**
      * <p>The status of the change set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATE_COMPLETE</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The reason why the change set is in its current state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>too many changes.</p>
      */
     @NameInMap("StatusReason")
     public String statusReason;
 
     /**
      * <p>The template body of the change set.</p>
-     * <br>
-     * <p>> This parameter takes effect only if you set ShowTemplate to true.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only if you set ShowTemplate to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
      * <p>The timeout period that is specified for the stack creation or update operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("TimeoutInMinutes")
     public Integer timeoutInMinutes;
@@ -266,28 +312,38 @@ public class GetChangeSetResponseBody extends TeaModel {
     public static class GetChangeSetResponseBodyLogTerraformLogs extends TeaModel {
         /**
          * <p>The name of the Terraform command that is run. Valid values:</p>
-         * <br>
-         * <p>*   apply</p>
-         * <p>*   plan</p>
-         * <p>*   destroy</p>
-         * <p>*   version</p>
-         * <br>
-         * <p>For more information about Terraform commands, see [Command](https://www.terraform.io/cli/commands).</p>
+         * <ul>
+         * <li>apply</li>
+         * <li>plan</li>
+         * <li>destroy</li>
+         * <li>version</li>
+         * </ul>
+         * <p>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Command</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apply</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The content of the output stream that is returned after the command is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The output stream. Valid values:</p>
-         * <br>
-         * <p>*   stdout: standard output stream</p>
-         * <p>*   stderr: standard error stream</p>
+         * <ul>
+         * <li>stdout: standard output stream</li>
+         * <li>stderr: standard error stream</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>stdout</p>
          */
         @NameInMap("Stream")
         public String stream;
@@ -326,8 +382,9 @@ public class GetChangeSetResponseBody extends TeaModel {
     public static class GetChangeSetResponseBodyLog extends TeaModel {
         /**
          * <p>The Terraform logs. This parameter is returned only for change sets of Terraform stacks.</p>
-         * <br>
-         * <p>> This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.</p>
+         * <blockquote>
+         * <p>This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.</p>
+         * </blockquote>
          */
         @NameInMap("TerraformLogs")
         public java.util.List<GetChangeSetResponseBodyLogTerraformLogs> terraformLogs;
@@ -350,12 +407,18 @@ public class GetChangeSetResponseBody extends TeaModel {
     public static class GetChangeSetResponseBodyParameters extends TeaModel {
         /**
          * <p>The key of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::Region</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

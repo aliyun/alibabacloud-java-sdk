@@ -12,6 +12,9 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72108E7A-E874-4A5E-B22C-A61E94AD12CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,59 +57,87 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
     public static class ListStackOperationRisksResponseBodyRiskResources extends TeaModel {
         /**
          * <p>The error code that is returned when the risk detection fails.</p>
-         * <br>
-         * <p>>  This parameter is not returned if the risk detection is successful.</p>
+         * <blockquote>
+         * <p> This parameter is not returned if the risk detection is successful.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NoPermission</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySG</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
         /**
          * <p>The error message that is returned when the risk detection fails.</p>
-         * <br>
-         * <p>>  This parameter is not returned if the risk detection is successful.</p>
+         * <blockquote>
+         * <p> This parameter is not returned if the risk detection is successful.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not authorized to complete this action.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The physical ID of the resource. The physical ID is the actual ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1dpioafqphedg9****</p>
          */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
         /**
          * <p>The cause of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>There are some ECS instances (i-bp18el96s4wq635e****) depending on the security group.</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The ID of the request when the risk detection fails.</p>
-         * <br>
-         * <p>>  This parameter is not returned if the risk detection is successful.</p>
+         * <blockquote>
+         * <p> This parameter is not returned if the risk detection is successful.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DF4296CF-F45F-4845-A72B-BE617601DB25</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::SecurityGroup</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The type of the risk. Valid values:</p>
-         * <br>
-         * <p>*   Referenced: The resource is referenced by other resources.</p>
-         * <p>*   MaybeReferenced: The resource may be referenced by other resources.</p>
-         * <p>*   AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</p>
-         * <p>*   OperationIgnored: The operation does not take effect for the resource.</p>
+         * <ul>
+         * <li>Referenced: The resource is referenced by other resources.</li>
+         * <li>MaybeReferenced: The resource may be referenced by other resources.</li>
+         * <li>AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</li>
+         * <li>OperationIgnored: The operation does not take effect for the resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Referenced</p>
          */
         @NameInMap("RiskType")
         public String riskType;

@@ -6,20 +6,22 @@ import com.aliyun.tea.*;
 public class GetStackDriftDetectionStatusRequest extends TeaModel {
     /**
      * <p>The ID of the drift detection operation.</p>
-     * <br>
-     * <p>You can call the [ListStackResourceDrifts](https://help.aliyun.com/document_detail/155098.html) operation to obtain the ID of the drift detection operation.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/155098.html">ListStackResourceDrifts</a> operation to obtain the ID of the drift detection operation.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a7044f0d-6f2e-4128-a307-4524ef88****</p>
      */
     @NameInMap("DriftDetectionId")
     public String driftDetectionId;
 
     /**
      * <p>The region ID of the stack to be detected for drift.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

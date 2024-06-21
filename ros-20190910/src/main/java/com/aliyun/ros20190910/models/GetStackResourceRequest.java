@@ -6,62 +6,77 @@ import com.aliyun.tea.*;
 public class GetStackResourceRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the resource properties. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of resource property N that you want to query.</p>
-     * <br>
-     * <p>>  Maximum value of N: 20.</p>
-     * <br>
+     * <blockquote>
+     * <p> Maximum value of N: 20.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WebServer</p>
      */
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
     /**
      * <p>The logical ID of the resource defined in the template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the resource. Valid values:</p>
-     * <br>
-     * <p>*   CREATE_COMPLETE</p>
-     * <p>*   CREATE_FAILED</p>
-     * <p>*   CREATE_IN_PROGRESS</p>
-     * <p>*   UPDATE_IN_PROGRESS</p>
-     * <p>*   UPDATE_FAILED</p>
-     * <p>*   UPDATE_COMPLETE</p>
-     * <p>*   DELETE_IN_PROGRESS</p>
-     * <p>*   DELETE_FAILED</p>
-     * <p>*   CHECK_IN_PROGRESS</p>
-     * <p>*   CHECK_FAILED</p>
-     * <p>*   CHECK_COMPLETE</p>
-     * <p>*   IMPORT_IN_PROGRESS</p>
-     * <p>*   IMPORT_FAILED</p>
-     * <p>*   IMPORT_COMPLETE</p>
+     * <ul>
+     * <li>CREATE_COMPLETE</li>
+     * <li>CREATE_FAILED</li>
+     * <li>CREATE_IN_PROGRESS</li>
+     * <li>UPDATE_IN_PROGRESS</li>
+     * <li>UPDATE_FAILED</li>
+     * <li>UPDATE_COMPLETE</li>
+     * <li>DELETE_IN_PROGRESS</li>
+     * <li>DELETE_FAILED</li>
+     * <li>CHECK_IN_PROGRESS</li>
+     * <li>CHECK_FAILED</li>
+     * <li>CHECK_COMPLETE</li>
+     * <li>IMPORT_IN_PROGRESS</li>
+     * <li>IMPORT_FAILED</li>
+     * <li>IMPORT_COMPLETE</li>
+     * </ul>
      */
     @NameInMap("ResourceAttributes")
     public java.util.List<String> resourceAttributes;
 
     /**
      * <p>The name of resource property N that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowResourceAttributes")
     public Boolean showResourceAttributes;
 
     /**
-     * <p>The ID of the region to which the stack belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region to which the stack belongs. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
      */
     @NameInMap("StackId")
     public String stackId;

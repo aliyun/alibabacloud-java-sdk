@@ -6,30 +6,43 @@ import com.aliyun.tea.*;
 public class SetResourceTypeRequest extends TeaModel {
     /**
      * <p>The ID of the default version. You can use this parameter to specify the default version of the resource type.</p>
-     * <br>
-     * <p>> You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+     * <blockquote>
+     * <p>You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("DefaultVersionId")
     public String defaultVersionId;
 
     /**
      * <p>The description of the resource type or resource type version. The description can be up to 512 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>It is a demo.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The version ID. If you want to modify a version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is modified.</p>
-     * <br>
-     * <p>> You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+     * <blockquote>
+     * <p>You can specify only one of the VersionId and DefaultVersionId parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("VersionId")
     public String versionId;

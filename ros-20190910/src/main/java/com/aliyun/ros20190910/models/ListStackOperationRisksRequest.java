@@ -5,60 +5,84 @@ import com.aliyun.tea.*;
 
 public class ListStackOperationRisksRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The type of the operation of which you want to detect risks. Valid values:</p>
-     * <br>
-     * <p>*   DeleteStack: detects high risks that may arise in resources when you delete a stack.</p>
-     * <p>*   CreateStack: detects the missing permissions when you fail to create a stack.</p>
+     * <ul>
+     * <li>DeleteStack: detects high risks that may arise in resources when you delete a stack.</li>
+     * <li>CreateStack: detects the missing permissions when you fail to create a stack.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DeleteStack</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
      * <p>The name of the RAM role.</p>
-     * <br>
-     * <p>*   If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.</p>
-     * <p>*   If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.</p>
-     * <br>
+     * <ul>
+     * <li>If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.</li>
+     * <li>If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.</li>
+     * </ul>
      * <p>The name of the RAM role can be up to 64 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-role</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to retain all resources in the stack. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
-     * <br>
-     * <p>> This parameter takes effect only if you set OperationType to DeleteStack.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter takes effect only if you set OperationType to DeleteStack.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RetainAllResources")
     public Boolean retainAllResources;
 
     /**
      * <p>The list of resources to retain.</p>
-     * <br>
-     * <p>> This parameter takes effect only if you set OperationType to DeleteStack.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only if you set OperationType to DeleteStack.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>WebServer</p>
      */
     @NameInMap("RetainResources")
     public java.util.List<String> retainResources;
 
     /**
      * <p>The ID of the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -68,24 +92,36 @@ public class ListStackOperationRisksRequest extends TeaModel {
 
     /**
      * <p>The ID of the template. This parameter applies to shared and private templates.</p>
-     * <br>
-     * <p>> You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <blockquote>
+     * <p>You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.</p>
-     * <br>
-     * <p>> You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <blockquote>
+     * <p>You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ros-template/demo</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
 
     /**
      * <p>The version of the template.</p>
-     * <br>
-     * <p>> This parameter takes effect only if you specify TemplateId.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only if you specify TemplateId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;

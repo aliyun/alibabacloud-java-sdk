@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The registration records.</p>
+     * <p>The registration records of the resource.</p>
      */
     @NameInMap("Registrations")
     public java.util.List<ListResourceTypeRegistrationsResponseBodyRegistrations> registrations;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of registration records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -67,47 +76,69 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
 
     public static class ListResourceTypeRegistrationsResponseBodyRegistrations extends TeaModel {
         /**
-         * <p>The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-02T07:28:35</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The entity type. Only Module may be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Module</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
         /**
          * <p>The ID of the registration record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         @NameInMap("RegistrationId")
         public String registrationId;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The registration state. Valid values:</p>
-         * <br>
-         * <p>*   IN_PROGRESS</p>
-         * <p>*   COMPLETE</p>
-         * <p>*   FAILED</p>
+         * <ul>
+         * <li>IN_PROGRESS: The registration is in progress.</li>
+         * <li>COMPLETE: The registration is successful.</li>
+         * <li>FAILED: The registration failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The reason for the state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Module is created successfully</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;
 
         /**
          * <p>The version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("VersionId")
         public String versionId;

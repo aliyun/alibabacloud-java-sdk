@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class ListDiagnosticsRequest extends TeaModel {
     /**
      * <p>The keyword in the diagnosis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2829A772-B154-5A0A-B61B-DEE8A9EE8A5D</p>
      */
     @NameInMap("DiagnosticKey")
     public String diagnosticKey;
 
     /**
      * <p>The product that is diagnosed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ros</p>
      */
     @NameInMap("DiagnosticProduct")
     public String diagnosticProduct;
 
     /**
      * <p>The maximum number of results to be returned in a single call when NextToken is used for the query.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f01****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The diagnosis status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Complete</p>
      */
     @NameInMap("Status")
     public String status;

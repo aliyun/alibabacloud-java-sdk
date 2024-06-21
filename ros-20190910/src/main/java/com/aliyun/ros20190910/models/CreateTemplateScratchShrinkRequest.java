@@ -6,35 +6,49 @@ import com.aliyun.tea.*;
 public class CreateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Replicate a VPC.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The execution mode. Valid values:</p>
-     * <br>
-     * <p>*   Async (default)</p>
-     * <p>*   Sync</p>
-     * <br>
-     * <p>> If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
+     * <ul>
+     * <li>Async (default)</li>
+     * <li>Sync</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Sync</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
     /**
      * <p>The policy based on which the logical ID is generated. Valid values:</p>
-     * <br>
-     * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
-     * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
-     * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+     * <ul>
+     * <li>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</li>
+     * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
+     * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LongTypePrefixAndIndexSuffix</p>
      */
     @NameInMap("LogicalIdStrategy")
     public String logicalIdStrategy;
@@ -47,16 +61,20 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scenario.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -87,12 +105,15 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
 
     /**
      * <p>The type of the scenario. Valid values:</p>
-     * <br>
-     * <p>*   ResourceImport: resource management</p>
-     * <p>*   ArchitectureReplication: resource replication</p>
-     * <p>*   ResourceMigration: resource migration</p>
-     * <br>
+     * <ul>
+     * <li>ResourceImport: resource management</li>
+     * <li>ArchitectureReplication: resource replication</li>
+     * <li>ResourceMigration: resource migration</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ArchitectureReplication</p>
      */
     @NameInMap("TemplateScratchType")
     public String templateScratchType;
@@ -201,16 +222,22 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     public static class CreateTemplateScratchShrinkRequestTags extends TeaModel {
         /**
          * <p>The tag key of the scenario.</p>
-         * <br>
-         * <p>> Tags is optional. If you want to specify Tags, you must specify Key.</p>
-         * <br>
+         * <blockquote>
+         * <p>Tags is optional. If you want to specify Tags, you must specify Key.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
