@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rtc20180111</artifactId>
-  <version>3.1.0</version>
+  <version>3.2.0</version>
   <packaging>jar</packaging>
   <name>rtc20180111</name>
   <description>Alibaba Cloud Real-Time Communication (20180111) SDK for Java
