@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DeleteEnvServiceMonitorResponseBody extends TeaModel {
     /**
      * <p>The status code or error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

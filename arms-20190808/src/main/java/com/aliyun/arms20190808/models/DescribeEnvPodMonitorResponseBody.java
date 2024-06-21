@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnvPodMonitorResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,36 +77,54 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
     public static class DescribeEnvPodMonitorResponseBodyData extends TeaModel {
         /**
          * <p>The YAML configuration string of the PodMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
          * <p>The ID of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The name of the PodMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>podMonitor1</p>
          */
         @NameInMap("PodMonitorName")
         public String podMonitorName;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the PodMonitor. Valid values: run and stop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;

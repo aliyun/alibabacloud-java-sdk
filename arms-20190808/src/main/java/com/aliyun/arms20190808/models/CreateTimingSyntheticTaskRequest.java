@@ -13,30 +13,70 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     @NameInMap("CustomPeriod")
     public CreateTimingSyntheticTaskRequestCustomPeriod customPeriod;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5m</p>
+     */
     @NameInMap("Frequency")
     public String frequency;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MonitorCategory")
     public Integer monitorCategory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MonitorConf")
     public CreateTimingSyntheticTaskRequestMonitorConf monitorConf;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Monitors")
     public java.util.List<CreateTimingSyntheticTaskRequestMonitors> monitors;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Tags")
     public java.util.List<CreateTimingSyntheticTaskRequestTags> tags;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TaskType")
     public Integer taskType;
 
@@ -142,15 +182,37 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestAvailableAssertions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Expect")
         public String expect;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DnsARecord</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -194,12 +256,27 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IpType")
         public Integer ipType;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
@@ -235,9 +312,18 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestCommonSettingCustomHost extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts> hosts;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SelectType")
         public Integer selectType;
 
@@ -264,16 +350,123 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting extends TeaModel {
+        @NameInMap("PrometheusClusterId")
+        public String prometheusClusterId;
+
+        @NameInMap("PrometheusClusterRegion")
+        public String prometheusClusterRegion;
+
+        @NameInMap("PrometheusLabels")
+        public java.util.Map<String, String> prometheusLabels;
+
+        public static CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting build(java.util.Map<String, ?> map) throws Exception {
+            CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting self = new CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting setPrometheusClusterId(String prometheusClusterId) {
+            this.prometheusClusterId = prometheusClusterId;
+            return this;
+        }
+        public String getPrometheusClusterId() {
+            return this.prometheusClusterId;
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting setPrometheusClusterRegion(String prometheusClusterRegion) {
+            this.prometheusClusterRegion = prometheusClusterRegion;
+            return this;
+        }
+        public String getPrometheusClusterRegion() {
+            return this.prometheusClusterRegion;
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting setPrometheusLabels(java.util.Map<String, String> prometheusLabels) {
+            this.prometheusLabels = prometheusLabels;
+            return this;
+        }
+        public java.util.Map<String, String> getPrometheusLabels() {
+            return this.prometheusLabels;
+        }
+
+    }
+
+    public static class CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SecureGroupId")
+        public String secureGroupId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting build(java.util.Map<String, ?> map) throws Exception {
+            CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting self = new CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting setSecureGroupId(String secureGroupId) {
+            this.secureGroupId = secureGroupId;
+            return this;
+        }
+        public String getSecureGroupId() {
+            return this.secureGroupId;
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class CreateTimingSyntheticTaskRequestCommonSetting extends TeaModel {
         @NameInMap("CustomHost")
         public CreateTimingSyntheticTaskRequestCommonSettingCustomHost customHost;
 
+        @NameInMap("CustomPrometheusSetting")
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting customPrometheusSetting;
+
+        @NameInMap("CustomVPCSetting")
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting customVPCSetting;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IpType")
         public Integer ipType;
 
         @NameInMap("IsOpenTrace")
         public Boolean isOpenTrace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MonitorSamples")
         public Integer monitorSamples;
 
@@ -294,6 +487,22 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         }
         public CreateTimingSyntheticTaskRequestCommonSettingCustomHost getCustomHost() {
             return this.customHost;
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSetting setCustomPrometheusSetting(CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting customPrometheusSetting) {
+            this.customPrometheusSetting = customPrometheusSetting;
+            return this;
+        }
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting getCustomPrometheusSetting() {
+            return this.customPrometheusSetting;
+        }
+
+        public CreateTimingSyntheticTaskRequestCommonSetting setCustomVPCSetting(CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting customVPCSetting) {
+            this.customVPCSetting = customVPCSetting;
+            return this;
+        }
+        public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting getCustomVPCSetting() {
+            return this.customVPCSetting;
         }
 
         public CreateTimingSyntheticTaskRequestCommonSetting setIpType(Integer ipType) {
@@ -339,9 +548,21 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestCustomPeriod extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("EndHour")
         public Integer endHour;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("StartHour")
         public Integer startHour;
 
@@ -369,9 +590,20 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;key1&quot;: &quot;value1&quot;,
+         *   &quot;key2&quot;: &quot;value2&quot;
+         * }</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>application/json</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -399,11 +631,25 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfApiHTTP extends TeaModel {
+        @NameInMap("CheckCert")
+        public Boolean checkCert;
+
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("ConnectTimeout")
         public Long connectTimeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("Method")
         public String method;
+
+        @NameInMap("ProtocolAlpnProtocol")
+        public Integer protocolAlpnProtocol;
 
         @NameInMap("RequestBody")
         public CreateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody requestBody;
@@ -411,15 +657,33 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("RequestHeaders")
         public java.util.Map<String, String> requestHeaders;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.demo.com/api/list">http://www.demo.com/api/list</a></p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("Timeout")
         public Long timeout;
 
         public static CreateTimingSyntheticTaskRequestMonitorConfApiHTTP build(java.util.Map<String, ?> map) throws Exception {
             CreateTimingSyntheticTaskRequestMonitorConfApiHTTP self = new CreateTimingSyntheticTaskRequestMonitorConfApiHTTP();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTimingSyntheticTaskRequestMonitorConfApiHTTP setCheckCert(Boolean checkCert) {
+            this.checkCert = checkCert;
+            return this;
+        }
+        public Boolean getCheckCert() {
+            return this.checkCert;
         }
 
         public CreateTimingSyntheticTaskRequestMonitorConfApiHTTP setConnectTimeout(Long connectTimeout) {
@@ -436,6 +700,14 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         }
         public String getMethod() {
             return this.method;
+        }
+
+        public CreateTimingSyntheticTaskRequestMonitorConfApiHTTP setProtocolAlpnProtocol(Integer protocolAlpnProtocol) {
+            this.protocolAlpnProtocol = protocolAlpnProtocol;
+            return this;
+        }
+        public Integer getProtocolAlpnProtocol() {
+            return this.protocolAlpnProtocol;
         }
 
         public CreateTimingSyntheticTaskRequestMonitorConfApiHTTP setRequestBody(CreateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody requestBody) {
@@ -473,48 +745,106 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfFileDownload extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("ConnectionTimeout")
         public Long connectionTimeout;
 
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DownloadKernel")
         public Integer downloadKernel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreCertificateAuthError")
         public Integer ignoreCertificateAuthError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreCertificateCanceledError")
         public Integer ignoreCertificateCanceledError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreCertificateOutOfDateError")
         public Integer ignoreCertificateOutOfDateError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreCertificateStatusError")
         public Integer ignoreCertificateStatusError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreCertificateUntrustworthyError")
         public Integer ignoreCertificateUntrustworthyError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreCertificateUsingError")
         public Integer ignoreCertificateUsingError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreInvalidHostError")
         public Integer ignoreInvalidHostError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60000</p>
+         */
         @NameInMap("MonitorTimeout")
         public Long monitorTimeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("QuickProtocol")
         public Integer quickProtocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Redirection")
         public Integer redirection;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png">https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png</a></p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("TransmissionSize")
         public Long transmissionSize;
 
@@ -679,18 +1009,40 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfNetDNS extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DnsServerIpType")
         public Integer dnsServerIpType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>114.114.114.114</p>
+         */
         @NameInMap("NsServer")
         public String nsServer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("QueryMethod")
         public Integer queryMethod;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("Timeout")
         public Long timeout;
 
@@ -742,30 +1094,68 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfNetICMP extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Interval")
         public Long interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("PackageNum")
         public Integer packageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("PackageSize")
         public Integer packageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SplitPackage")
         public Boolean splitPackage;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("Timeout")
         public Long timeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TracertEnable")
         public Boolean tracertEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TracertNumMax")
         public Integer tracertNumMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60000</p>
+         */
         @NameInMap("TracertTimeout")
         public Long tracertTimeout;
 
@@ -849,24 +1239,54 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfNetTCP extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ConnectTimes")
         public Integer connectTimes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Interval")
         public Long interval;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("Timeout")
         public Long timeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TracertEnable")
         public Boolean tracertEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TracertNumMax")
         public Integer tracertNumMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60000</p>
+         */
         @NameInMap("TracertTimeout")
         public Long tracertTimeout;
 
@@ -1019,9 +1439,17 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfWebsite extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AutomaticScrolling")
         public Integer automaticScrolling;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CustomHeader")
         public Integer customHeader;
 
@@ -1031,15 +1459,27 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("DNSHijackWhitelist")
         public String DNSHijackWhitelist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DisableCache")
         public Integer disableCache;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DisableCompression")
         public Integer disableCompression;
 
         @NameInMap("ElementBlacklist")
         public String elementBlacklist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FilterInvalidIP")
         public Integer filterInvalidIP;
 
@@ -1049,21 +1489,43 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("FlowHijackLogo")
         public String flowHijackLogo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IgnoreCertificateError")
         public Integer ignoreCertificateError;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("MonitorTimeout")
         public Long monitorTimeout;
 
         @NameInMap("PageTamper")
         public String pageTamper;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Redirection")
         public Integer redirection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("SlowElementThreshold")
         public Long slowElementThreshold;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 
@@ -1073,6 +1535,10 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("VerifyStringWhitelist")
         public String verifyStringWhitelist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("WaitCompletionTime")
         public Long waitCompletionTime;
 
@@ -1321,12 +1787,30 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitors extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100023</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ClientType")
         public Integer clientType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OperatorCode")
         public String operatorCode;
 
@@ -1362,9 +1846,17 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Value")
         public String value;
 

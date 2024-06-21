@@ -6,18 +6,32 @@ import com.aliyun.tea.*;
 public class DeleteEnvironmentRequest extends TeaModel {
     /**
      * <p>cascade delete Prometheus instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeletePromInstance")
     public Boolean deletePromInstance;
 
     /**
      * <p>The ID of the environment instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxxxxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

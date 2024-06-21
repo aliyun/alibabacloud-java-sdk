@@ -5,34 +5,43 @@ import com.aliyun.tea.*;
 
 public class InstallAddonResponseBody extends TeaModel {
     /**
-     * <p>Status code: 200 indicates success.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public InstallAddonResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,37 +93,55 @@ public class InstallAddonResponseBody extends TeaModel {
 
     public static class InstallAddonResponseBodyDataConditions extends TeaModel {
         /**
-         * <p>First transition time.</p>
+         * <p>The first transition time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-31T14:32:19Z</p>
          */
         @NameInMap("FirstTransitionTime")
         public String firstTransitionTime;
 
         /**
-         * <p>Last transition time.</p>
+         * <p>The last transition time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-31T14:32:19Z</p>
          */
         @NameInMap("LastTransitionTime")
         public String lastTransitionTime;
 
         /**
-         * <p>Details.</p>
+         * <p>The detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Reason of failure.</p>
+         * <p>The reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>Condition status.</p>
+         * <p>The status of the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Condition type.</p>
+         * <p>The type of the phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Loaded</p>
          */
         @NameInMap("Type")
         public String type;
@@ -176,112 +203,166 @@ public class InstallAddonResponseBody extends TeaModel {
 
     public static class InstallAddonResponseBodyData extends TeaModel {
         /**
-         * <p>Addon name.</p>
+         * <p>The name of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
-         * <p>Number of alarm groups.</p>
+         * <p>The number of alert rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlertRuleCount")
         public Long alertRuleCount;
 
         /**
-         * <p>Condition list.</p>
+         * <p>The installation phase.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<InstallAddonResponseBodyDataConditions> conditions;
 
         /**
-         * <p>Created time.</p>
+         * <p>The time when the add-on was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-22T16:56:29+08:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>Number of dashboard.</p>
+         * <p>The number of dashboards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DashboardCount")
         public Long dashboardCount;
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
-         * <p>Number of Exporter.</p>
+         * <p>The number of exporters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ExporterCount")
         public Long exporterCount;
 
         /**
-         * <p>Whether there is configuration.</p>
+         * <p>Indicates whether the configuration is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HaveConfig")
         public Boolean haveConfig;
 
         /**
-         * <p>User ID of the installation.</p>
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("InstallUserId")
         public String installUserId;
 
         /**
-         * <p>Language.</p>
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>Whether or not it is a managed component.</p>
+         */
         @NameInMap("Managed")
         public Boolean managed;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>Release ID.</p>
+         * <p>The release ID after installation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be29c093-3fd6-4fb6-9430-797030cc183a</p>
          */
         @NameInMap("ReleaseId")
         public String releaseId;
 
         /**
-         * <p>Name of Release.</p>
+         * <p>The name of the release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql-1695372983039</p>
          */
         @NameInMap("ReleaseName")
         public String releaseName;
 
         /**
-         * <p>Scene.</p>
+         * <p>The scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
-         * <p>Status of Release.</p>
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Update time.</p>
+         * <p>The time when the add-on was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-22T16:56:29+08:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         @NameInMap("Version")
         public String version;

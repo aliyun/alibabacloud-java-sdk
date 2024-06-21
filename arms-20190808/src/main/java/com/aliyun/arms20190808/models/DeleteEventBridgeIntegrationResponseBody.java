@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteEventBridgeIntegrationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the EventBridge integration is deleted.</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2B289756-E791-5842-BCBD-AD414C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

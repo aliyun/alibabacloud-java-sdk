@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteAlertContactGroupRequest extends TeaModel {
     /**
      * <p>The ID of the alert contact group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ContactGroupId")
     public Long contactGroupId;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

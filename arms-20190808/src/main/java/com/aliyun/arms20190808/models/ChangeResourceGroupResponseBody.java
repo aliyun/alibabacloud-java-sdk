@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The status code or error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46355DD8-FC56-40C5-BFC6-269DE4F9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     public static class ChangeResourceGroupResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2vezare****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ggxw4lnjuz@cfd34a78f******</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;

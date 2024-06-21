@@ -4,18 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fc、ansm</p>
+     */
     @NameInMap("fcConfig")
     public String fcConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>配置ID</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Uninitialized</p>
+     */
     @NameInMap("installStatus")
     public String installStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-abc*****</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
@@ -25,6 +45,10 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
     @NameInMap("securityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10988**********</p>
+     */
     @NameInMap("userId")
     public String userId;
 
@@ -34,6 +58,10 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
     @NameInMap("vSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-2ze4siu98**********</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

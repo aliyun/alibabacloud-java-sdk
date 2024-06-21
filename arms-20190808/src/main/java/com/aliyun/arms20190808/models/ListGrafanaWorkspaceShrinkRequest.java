@@ -4,12 +4,26 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListGrafanaWorkspaceShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

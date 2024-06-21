@@ -4,30 +4,66 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticTaskListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>net-test</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://www.example.com">https://www.example.com</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

@@ -6,48 +6,74 @@ import com.aliyun.tea.*;
 public class DescribeContactsRequest extends TeaModel {
     /**
      * <p>The ID of the alert contact that you want to query. Separate multiple contact IDs with spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123,321</p>
      */
     @NameInMap("ContactIds")
     public String contactIds;
 
     /**
      * <p>The name of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>John Doe</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
      * <p>The email address of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
      * <p>The mobile number of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1381111*****</p>
      */
     @NameInMap("Phone")
     public String phone;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The number of alert contacts to return on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Size")
     public Long size;
 
     /**
      * <p>Specifies whether to return redundant information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Verbose")
     public String verbose;

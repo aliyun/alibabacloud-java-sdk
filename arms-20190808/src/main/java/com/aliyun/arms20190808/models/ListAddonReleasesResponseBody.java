@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAddonReleasesResponseBody extends TeaModel {
     /**
      * <p>Status code: 200 indicates success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,36 +98,54 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     public static class ListAddonReleasesResponseBodyDataReleasesConditions extends TeaModel {
         /**
          * <p>First transition time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-31T14:32:19Z</p>
          */
         @NameInMap("FirstTransitionTime")
         public String firstTransitionTime;
 
         /**
          * <p>Last transition time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-31T14:32:19Z</p>
          */
         @NameInMap("LastTransitionTime")
         public String lastTransitionTime;
 
         /**
          * <p>Details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Reason of failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>Condition status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>Condition type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Loaded</p>
          */
         @NameInMap("Type")
         public String type;
@@ -177,12 +208,18 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     public static class ListAddonReleasesResponseBodyDataReleases extends TeaModel {
         /**
          * <p>Name of Addon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
          * <p>Number of alarm groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlertRuleCount")
         public Long alertRuleCount;
@@ -195,42 +232,63 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
         /**
          * <p>Created time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-22T16:56:29+08:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Number of dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DashboardCount")
         public Long dashboardCount;
 
         /**
          * <p>Environment instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>Number of Exporter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ExporterCount")
         public Long exporterCount;
 
         /**
          * <p>Whether there is configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HaveConfig")
         public Boolean haveConfig;
 
         /**
          * <p>User ID of the installation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1268790592387</p>
          */
         @NameInMap("InstallUserId")
         public String installUserId;
 
         /**
          * <p>Language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("Language")
         public String language;
@@ -240,48 +298,72 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Release ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be29c093-3fd6-4fb6-9430-797030cc183a</p>
          */
         @NameInMap("ReleaseId")
         public String releaseId;
 
         /**
          * <p>Name of Release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql-1695372983039</p>
          */
         @NameInMap("ReleaseName")
         public String releaseName;
 
         /**
          * <p>Scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
          * <p>Status of Release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-22T16:56:29+08:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>Version of Addon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -454,6 +536,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Total")
         public Long total;

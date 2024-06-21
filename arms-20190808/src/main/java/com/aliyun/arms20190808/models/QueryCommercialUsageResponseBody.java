@@ -4,18 +4,34 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryCommercialUsageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryCommercialUsageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     }
 
     public static class QueryCommercialUsageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Complete")
         public Boolean complete;
 

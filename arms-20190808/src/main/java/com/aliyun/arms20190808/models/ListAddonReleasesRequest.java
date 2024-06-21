@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class ListAddonReleasesRequest extends TeaModel {
     /**
      * <p>Name of Addon.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("AddonName")
     public String addonName;
 
     /**
      * <p>Environment instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

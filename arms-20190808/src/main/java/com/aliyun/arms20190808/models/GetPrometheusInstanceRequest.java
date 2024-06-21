@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetPrometheusInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the Prometheus instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c77f6f2397ea74672872acf5e31374a27</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

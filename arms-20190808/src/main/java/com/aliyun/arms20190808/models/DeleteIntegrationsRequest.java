@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntegrationsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("IntegrationId")
     public Long integrationId;
 

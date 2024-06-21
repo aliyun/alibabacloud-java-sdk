@@ -5,34 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentsResponseBody extends TeaModel {
     /**
-     * <p>Status code: 200 indicates success.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public ListEnvironmentsResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,25 +93,37 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyDataEnvironmentsAddons extends TeaModel {
         /**
-         * <p>Alias of Addon.</p>
+         * <p>The alias of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL Exporter</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>Description of Addon.</p>
+         * <p>The description of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Collect mysql indicator information</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Icon of Addon.</p>
+         * <p>The URL of the icon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx">http://xxxx</a></p>
          */
         @NameInMap("Icon")
         public String icon;
 
         /**
-         * <p>Name of Addon.</p>
+         * <p>The name of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric-agent</p>
          */
         @NameInMap("Name")
         public String name;
@@ -148,25 +169,37 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyDataEnvironmentsFeatures extends TeaModel {
         /**
-         * <p>Alias of Feature.</p>
+         * <p>The alias of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus Agent</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>Description of Feature.</p>
+         * <p>The description of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Collect Metric data using the Prometheus collection specification</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Icon address.</p>
+         * <p>The URL of the icon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx">http://xxx</a></p>
          */
         @NameInMap("Icon")
         public String icon;
 
         /**
-         * <p>Name of Feature.</p>
+         * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metirc-agent</p>
          */
         @NameInMap("Name")
         public String name;
@@ -212,13 +245,19 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyDataEnvironmentsTags extends TeaModel {
         /**
-         * <p>Tag key.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fpx-tag</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Value")
         public String value;
@@ -248,136 +287,222 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyDataEnvironments extends TeaModel {
         /**
-         * <p>Addon list.</p>
+         * <p>The add-ons.</p>
          */
         @NameInMap("Addons")
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironmentsAddons> addons;
 
         /**
-         * <p>Id of the resource to be bound.</p>
+         * <p>The ID of the resource bound to the environment instance. The resource can be a Kubernetes cluster or a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1bgo8ronn</p>
          */
         @NameInMap("BindResourceId")
         public String bindResourceId;
 
         /**
-         * <p>Profile of the resource to be bound.</p>
+         * <p>The profile that is bound to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("BindResourceProfile")
         public String bindResourceProfile;
 
         /**
-         * <p>Type of the resource to be bound.</p>
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("BindResourceType")
         public String bindResourceType;
 
         /**
-         * <p>Bound Vpc IP Cidr.</p>
+         * <p>The CIDR block that is bound to the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/12</p>
          */
         @NameInMap("BindVpcCidr")
         public String bindVpcCidr;
 
         /**
-         * <p>Create time.</p>
+         * <p>The time when the environment instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-24 11:58:35 +0800</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>Created User ID.</p>
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12378523784982</p>
          */
         @NameInMap("CreatedUserId")
         public String createdUserId;
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The ID of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
-         * <p>Environment name.</p>
+         * <p>The name of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feiliks-biz-prod-edas</p>
          */
         @NameInMap("EnvironmentName")
         public String environmentName;
 
         /**
-         * <p>Environment type.</p>
+         * <p>The type of the environment instance. Valid values:</p>
+         * <ul>
+         * <li>CS: Container Service</li>
+         * <li>ECS: Elastic Compute Service (ECS)</li>
+         * <li>Cloud: cloud service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         @NameInMap("EnvironmentType")
         public String environmentType;
 
         /**
-         * <p>Featyre list.</p>
+         * <p>The parameters of the feature.</p>
          */
         @NameInMap("Features")
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironmentsFeatures> features;
 
         /**
-         * <p>Grafana datasource UID.</p>
+         * <p>The payable resource plan. Valid values:</p>
+         * <ul>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+         * <li>Otherwise, leave the parameter empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CS_Pro</p>
+         */
+        @NameInMap("FeePackage")
+        public String feePackage;
+
+        /**
+         * <p>The unique ID of the Grafana data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12374890</p>
          */
         @NameInMap("GrafanaDatasourceUid")
         public String grafanaDatasourceUid;
 
         /**
-         * <p>Grafana folder title.</p>
+         * <p>The name of the Grafana directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filepath</p>
          */
         @NameInMap("GrafanaFolderTitle")
         public String grafanaFolderTitle;
 
         /**
-         * <p>Grafana folder UID.</p>
+         * <p>The unique ID of the Grafana directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1798319482935</p>
          */
         @NameInMap("GrafanaFolderUid")
         public String grafanaFolderUid;
 
         /**
-         * <p>Latest Release create time.</p>
+         * <p>The time when the last add-on was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-22T16:56:29+08:00</p>
          */
         @NameInMap("LatestReleaseCreateTime")
         public String latestReleaseCreateTime;
 
+        /**
+         * <p>Indicates whether agents or exporters are managed. Valid values:</p>
+         * <ul>
+         * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
+         * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
+         * <li>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agent</p>
+         */
         @NameInMap("ManagedType")
         public String managedType;
 
         /**
-         * <p>Prometheus ID.</p>
+         * <p>The Prometheus ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124769812</p>
          */
         @NameInMap("PrometheusId")
         public Long prometheusId;
 
         /**
-         * <p>Prometheus instance ID.</p>
+         * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5e4alj2i24ndbn</p>
          */
         @NameInMap("PrometheusInstanceId")
         public String prometheusInstanceId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The ID of the region where the Message Queue for RabbitMQ instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>Number of Release.</p>
+         * <p>The number of installed add-ons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         @NameInMap("ReleaseCount")
         public Integer releaseCount;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvt3xpr5aema</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tags of the environment resource.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironmentsTags> tags;
 
         /**
-         * <p>User ID.</p>
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13990957477389</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -473,6 +598,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironmentsFeatures> getFeatures() {
             return this.features;
+        }
+
+        public ListEnvironmentsResponseBodyDataEnvironments setFeePackage(String feePackage) {
+            this.feePackage = feePackage;
+            return this;
+        }
+        public String getFeePackage() {
+            return this.feePackage;
         }
 
         public ListEnvironmentsResponseBodyDataEnvironments setGrafanaDatasourceUid(String grafanaDatasourceUid) {
@@ -575,13 +708,16 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyData extends TeaModel {
         /**
-         * <p>Environment list.</p>
+         * <p>The parameters of the environment instance.</p>
          */
         @NameInMap("Environments")
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironments> environments;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Total")
         public Long total;

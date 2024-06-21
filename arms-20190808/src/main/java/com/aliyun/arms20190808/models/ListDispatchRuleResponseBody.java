@@ -7,6 +7,10 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     @NameInMap("DispatchRules")
     public java.util.List<ListDispatchRuleResponseBodyDispatchRules> dispatchRules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     }
 
     public static class ListDispatchRuleResponseBodyDispatchRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Prod</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10282</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("State")
         public String state;
 

@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateSyntheticTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateSyntheticTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,10 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
     }
 
     public static class CreateSyntheticTaskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 

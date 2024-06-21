@@ -6,27 +6,41 @@ import com.aliyun.tea.*;
 public class ListTraceAppsRequest extends TeaModel {
     /**
      * <p>The type of the application that is associated with the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `TRACE`: Application Monitoring</p>
-     * <p>*   `EBPF`: Application Monitoring eBPF Edition</p>
+     * <ul>
+     * <li><code>TRACE</code>: Application Monitoring</li>
+     * <li><code>EBPF</code>: Application Monitoring eBPF Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TRACE</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -85,12 +99,18 @@ public class ListTraceAppsRequest extends TeaModel {
     public static class ListTraceAppsRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,32 +6,51 @@ import com.aliyun.tea.*;
 public class CreatePrometheusMonitoringRequest extends TeaModel {
     /**
      * <p>The ID of the Prometheus instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The monitoring configuration. Specify a YAML string.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Please refer to the supplementary explanation of the request parameters.</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the monitoring configuration. Valid values: run and stop. Default value: run. This parameter is not available if the Type parameter is set to Probe.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>run</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The type of the monitoring configuration. </p>
-     * <p>Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. </p>
-     * <p>Valid values for a Prometheus instance for ECS: customJob and probe.</p>
+     * <p>The type of the monitoring configuration. 
+     * Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, customJob, and probe. 
+     * Valid values for a Prometheus instance for ECS: customJob and probe.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>serviceMonitor</p>
      */
     @NameInMap("Type")
     public String type;

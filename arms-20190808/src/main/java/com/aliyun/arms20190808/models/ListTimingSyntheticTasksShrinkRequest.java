@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTimingSyntheticTasksShrinkRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

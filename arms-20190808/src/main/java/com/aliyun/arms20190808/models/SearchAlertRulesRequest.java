@@ -6,51 +6,77 @@ import com.aliyun.tea.*;
 public class SearchAlertRulesRequest extends TeaModel {
     /**
      * <p>The id of AlertRule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("AlertRuleId")
     public String alertRuleId;
 
     /**
      * <p>The type of the application that is associated with the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `TRACE`: application</p>
-     * <p>*   `RETCODE`: browser</p>
+     * <ul>
+     * <li><code>TRACE</code>: application</li>
+     * <li><code>RETCODE</code>: browser</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TRACE</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
-     * <p>The page number of the page to return. Default value: `1`.</p>
+     * <p>The page number of the page to return. Default value: <code>1</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return per page. Default value: `10`.</p>
+     * <p>The number of entries to return per page. Default value: <code>10</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The process identifier (PID) of the application that is associated with the alert rule. For more information about how to obtain the PID, see [Obtain the PID of an application](https://help.aliyun.com/document_detail/186100.html?spm=a2c4g.11186623.6.792.1b50654cqcDPyk#title-imy-7gj-qhr).</p>
+     * <p>The process identifier (PID) of the application that is associated with the alert rule. For more information about how to obtain the PID, see <a href="https://help.aliyun.com/document_detail/186100.html?spm=a2c4g.11186623.6.792.1b50654cqcDPyk#title-imy-7gj-qhr">Obtain the PID of an application</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>atc889zkcf@d8deedfa9bf****</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
-     * <p>The region ID of the alert data. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.</p>
+     * <p>The region ID of the alert data. For more information about the mappings between <strong>RegionId</strong> and <strong>SystemRegionId</strong>, see the detailed description below the table.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+     * <p>The ID of the resource group. You can obtain the resource group ID in the <strong>Resource Management</strong> console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The region ID of the alert rule. For more information about the mappings between **RegionId** and **SystemRegionId**, see the detailed description below the table.</p>
+     * <p>The region ID of the alert rule. For more information about the mappings between <strong>RegionId</strong> and <strong>SystemRegionId</strong>, see the detailed description below the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("SystemRegionId")
     public String systemRegionId;
@@ -63,21 +89,28 @@ public class SearchAlertRulesRequest extends TeaModel {
 
     /**
      * <p>The alert rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AlertRuleTitle</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
      * <p>The alert rule type. Valid values:</p>
-     * <br>
-     * <p>*   `1`: custom alert rules that are used to monitor drill-down data sets</p>
-     * <p>*   `3`: custom alert rules that are used to monitor tiled data sets</p>
-     * <p>*   `4`: alert rules that are used to monitor the browser, including the default frontend alert rules</p>
-     * <p>*   `5`: alert rules that are used to monitor applications, including the default application alert rules</p>
-     * <p>*   `6`: the default browser alert rules</p>
-     * <p>*   `7`: the default application alert rules</p>
-     * <p>*   `8`: Tracing Analysis alert rules</p>
-     * <p>*   `101`: Prometheus alert rules</p>
+     * <ul>
+     * <li><code>1</code>: custom alert rules that are used to monitor drill-down data sets</li>
+     * <li><code>3</code>: custom alert rules that are used to monitor tiled data sets</li>
+     * <li><code>4</code>: alert rules that are used to monitor the browser, including the default frontend alert rules</li>
+     * <li><code>5</code>: alert rules that are used to monitor applications, including the default application alert rules</li>
+     * <li><code>6</code>: the default browser alert rules</li>
+     * <li><code>7</code>: the default application alert rules</li>
+     * <li><code>8</code>: Tracing Analysis alert rules</li>
+     * <li><code>101</code>: Prometheus alert rules</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("Type")
     public String type;
@@ -178,23 +211,30 @@ public class SearchAlertRulesRequest extends TeaModel {
     public static class SearchAlertRulesRequestTags extends TeaModel {
         /**
          * <p>The key of the tag. The following system preset fields are provided:</p>
-         * <br>
-         * <p>*   traceId: the ID of the trace.</p>
-         * <p>*   serverApp: the name of the server application.</p>
-         * <p>*   clientApp: the name of the client application.</p>
-         * <p>*   service: the name of the operation.</p>
-         * <p>*   rpc: the type of the call.</p>
-         * <p>*   msOfSpan: the duration exceeds a specific value.</p>
-         * <p>*   clientIp: the IP address of the client.</p>
-         * <p>*   serverIp: the IP address of the server.</p>
-         * <p>*   isError: specifies whether the call is abnormal.</p>
-         * <p>*   hasTprof: contains only thread profiling.</p>
+         * <ul>
+         * <li>traceId: the ID of the trace.</li>
+         * <li>serverApp: the name of the server application.</li>
+         * <li>clientApp: the name of the client application.</li>
+         * <li>service: the name of the operation.</li>
+         * <li>rpc: the type of the call.</li>
+         * <li>msOfSpan: the duration exceeds a specific value.</li>
+         * <li>clientIp: the IP address of the client.</li>
+         * <li>serverIp: the IP address of the server.</li>
+         * <li>isError: specifies whether the call is abnormal.</li>
+         * <li>hasTprof: contains only thread profiling.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

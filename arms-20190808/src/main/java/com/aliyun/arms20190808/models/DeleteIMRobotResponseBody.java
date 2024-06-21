@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteIMRobotResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The request ID. You can use the ID to find logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

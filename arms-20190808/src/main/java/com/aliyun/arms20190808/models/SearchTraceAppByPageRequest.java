@@ -5,25 +5,38 @@ import com.aliyun.tea.*;
 
 public class SearchTraceAppByPageRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: `1`.</p>
+     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -36,6 +49,9 @@ public class SearchTraceAppByPageRequest extends TeaModel {
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-app</p>
      */
     @NameInMap("TraceAppName")
     public String traceAppName;
@@ -96,12 +112,18 @@ public class SearchTraceAppByPageRequest extends TeaModel {
     public static class SearchTraceAppByPageRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

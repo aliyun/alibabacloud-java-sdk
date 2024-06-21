@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>Indicates whether the request was successful.</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

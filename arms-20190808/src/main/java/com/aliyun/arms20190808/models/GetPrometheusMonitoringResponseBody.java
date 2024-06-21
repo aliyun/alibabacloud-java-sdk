@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPrometheusMonitoringResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,6 +77,9 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
     public static class GetPrometheusMonitoringResponseBodyData extends TeaModel {
         /**
          * <p>Prometheus Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -80,18 +92,27 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
 
         /**
          * <p>The name of the monitoring configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customJob1</p>
          */
         @NameInMap("MonitoringName")
         public String monitoringName;
 
         /**
          * <p>The status of the monitoring configuration. Valid values: run and stop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the monitoring configuration. Valid values: serviceMonitor, podMonitor, customJob, and probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serviceMonitor</p>
          */
         @NameInMap("Type")
         public String type;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetSyntheticTaskDetailRequest extends TeaModel {
     /**
      * <p>地域ID。默认为cn-hangzhou。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>云拨测任务ID。</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("TaskId")
     public String taskId;

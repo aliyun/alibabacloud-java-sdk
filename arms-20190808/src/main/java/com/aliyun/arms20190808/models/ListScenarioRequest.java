@@ -6,35 +6,53 @@ import com.aliyun.tea.*;
 public class ListScenarioRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b590lhguqs@28f515462******</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the business monitoring job.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pro-content</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjaikou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The scenario where the business monitoring job is used. Valid values:</p>
-     * <br>
-     * <p>*   `USER-DEFINED`: user-defined. This is the default value.</p>
-     * <p>*   `EDAS-ROLLOUT`: application release in Enterprise Distributed Application Service (EDAS)</p>
-     * <p>*   `OAM-ROLLOUT`: application release based on Open Application Model (OAM)</p>
-     * <p>*   `MSC-CANARY`: canary release based on Microservice Engine (MSE)</p>
+     * <ul>
+     * <li><code>USER-DEFINED</code>: user-defined. This is the default value.</li>
+     * <li><code>EDAS-ROLLOUT</code>: application release in Enterprise Distributed Application Service (EDAS)</li>
+     * <li><code>OAM-ROLLOUT</code>: application release based on Open Application Model (OAM)</li>
+     * <li><code>MSC-CANARY</code>: canary release based on Microservice Engine (MSE)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>USER-DEFINED</p>
      */
     @NameInMap("Scenario")
     public String scenario;
 
     /**
      * <p>The code of the business monitoring job. Set this parameter when you know the code of the business monitoring job you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a9f8****</p>
      */
     @NameInMap("Sign")
     public String sign;

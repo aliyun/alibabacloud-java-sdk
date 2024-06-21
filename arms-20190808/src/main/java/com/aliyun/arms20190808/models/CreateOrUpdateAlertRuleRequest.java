@@ -6,165 +6,224 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     /**
      * <p>The alert check type of the Prometheus alert rule. Valid values:</p>
-     * <br>
-     * <p>*   STATIC: a static threshold value. If you set the parameter to STATIC, you must specify the **MetricsKey** parameter. For more information, see the **Correspondence between AlertGroup and MetricsKey for Prometheus Service** table.</p>
-     * <p>*   CUSTOM: a custom PromQL statement. If you set the parameter to CUSTOM, you must specify the **PromQL**, **Duration**, and **Message** parameters to create a Prometheus alert rule.</p>
+     * <ul>
+     * <li>STATIC: a static threshold value. If you set the parameter to STATIC, you must specify the <strong>MetricsKey</strong> parameter. For more information, see the <strong>Correspondence between AlertGroup and MetricsKey for Prometheus Service</strong> table.</li>
+     * <li>CUSTOM: a custom PromQL statement. If you set the parameter to CUSTOM, you must specify the <strong>PromQL</strong>, <strong>Duration</strong>, and <strong>Message</strong> parameters to create a Prometheus alert rule.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>STATIC</p>
      */
     @NameInMap("AlertCheckType")
     public String alertCheckType;
 
     /**
      * <p>The alert contact group ID of the Prometheus alert rule. Valid values:</p>
-     * <br>
-     * <p>*   \-1: custom PromQL</p>
-     * <p>*   1: Kubernetes load</p>
-     * <p>*   15: Kubernetes node</p>
+     * <ul>
+     * <li>\-1: custom PromQL</li>
+     * <li>1: Kubernetes load</li>
+     * <li>15: Kubernetes node</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("AlertGroup")
     public Long alertGroup;
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, a new alert rule is created.</p>
-     * <p>*   If you specify this parameter, the specified alert rule is modified.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, a new alert rule is created.</li>
+     * <li>If you specify this parameter, the specified alert rule is modified.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>546xxx</p>
      */
     @NameInMap("AlertId")
     public Long alertId;
 
     /**
      * <p>The name of the alert rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alert Rule Demo</p>
      */
     @NameInMap("AlertName")
     public String alertName;
 
     /**
-     * <p>Alarm Notification Channel Configuration. Used for compatibility with legacy rules.</p>
+     * <p>The configuration of the alert sending channel. This parameter is used to be compatible with the old version of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("AlertPiplines")
     public String alertPiplines;
 
     /**
-     * <p>The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the **AlertRuleContent** parameter. For more information about the meaning of each field, see the supplementary description.</p>
-     * <br>
-     * <p>```json</p>
-     * <p>{ </p>
-     * <p>    "Condition": "OR", </p>
-     * <p>     "AlertRuleItems": [ </p>
-     * <p>             { "Operator": "CURRENT_LTE",</p>
-     * <p>                 "MetricKey": "appstat.jvm.threadcount", </p>
-     * <p>                 "Value": 1000, </p>
-     * <p>                 "Aggregate": "AVG",</p>
-     * <p>                  "N": 1</p>
-     * <p>            } </p>
-     * <p>       ]  </p>
-     * <p>  }</p>
-     * <p>```</p>
-     * <br>
-     * <p>> The conditional fields vary depending on the values of the **MetricsType** and **AlertRuleItems.MetricKey** parameters. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.</p>
+     * <p>The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the <strong>AlertRuleContent</strong> parameter. For more information about the meaning of each field, see the supplementary description.</p>
+     * <pre><code class="language-json">{ 
+     *     &quot;Condition&quot;: &quot;OR&quot;,
+     *      &quot;AlertRuleItems&quot;: [
+     *              { &quot;Operator&quot;: &quot;CURRENT_LTE&quot;,
+     *                  &quot;MetricKey&quot;: &quot;appstat.jvm.threadcount&quot;,
+     *                  &quot;Value&quot;: 1000,
+     *                  &quot;Aggregate&quot;: &quot;AVG&quot;,
+     *                   &quot;N&quot;: 10,
+     *                   &quot;Tolerability&quot;: 169
+     *             } 
+     *        ]  
+     *   }
+     * </code></pre>
+     * <blockquote>
+     * <p> The filter conditions specified by the <strong>AlertRuleItems.MetricKey</strong> field depends on the value of the <strong>MetricsType</strong> parameter. For more information about the types of metrics supported by Application Monitoring and Browser Monitoring and the alert rule fields corresponding to each metric, see the supplementary description.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;Condition&quot;: &quot;OR&quot;, &quot;AlertRuleItems&quot;: [ { &quot;Operator&quot;: &quot;CURRENT_LTE&quot;,  &quot;MetricKey&quot;: &quot;appstat.jvm.threadcount&quot;,  &quot;Value&quot;: 1000,  &quot;Aggregate&quot;: &quot;AVG&quot;,   &quot;N&quot;: 1  }  ]  }</p>
      */
     @NameInMap("AlertRuleContent")
     public String alertRuleContent;
 
     /**
      * <p>The status of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   RUNNING (default)</p>
-     * <p>*   STOPPED</p>
+     * <ul>
+     * <li>RUNNING (default)</li>
+     * <li>STOPPED</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("AlertStatus")
     public String alertStatus;
 
     /**
-     * <p>The type of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
-     * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
-     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE</p>
-     * <p>*   APPLICATION_MONITORING_ALERT_RULE</p>
-     * <p>*   BROWSER_MONITORING_ALERT_RULE</p>
-     * <p>*   prometheus monitoring alert</p>
-     * <p>*   application monitoring alert</p>
-     * <p>*   browser monitoring alert</p>
+     * <p>The following alert rule types are available:</p>
+     * <ul>
+     * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
+     * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
+     * <li>RUM_MONITORING_ALERT_RULE: alert rule for RUM Monitoring</li>
+     * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
+     * <li>XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry</li>
+     * <li>EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APPLICATION_MONITORING_ALERT_RULE</p>
      */
     @NameInMap("AlertType")
     public String alertType;
 
     /**
      * <p>The annotations of the Prometheus alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ { &quot;Value&quot;: &quot;PolarDB slow queries&quot;, &quot;Name&quot;: &quot;_aliyun_display_name&quot; }</p>
      */
     @NameInMap("Annotations")
     public String annotations;
 
     /**
      * <p>Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables the health check feature.</p>
-     * <p>*   `false`: disables the automatic backup feature.</p>
+     * <ul>
+     * <li><code>true</code>: enables the health check feature.</li>
+     * <li><code>false</code>: disables the automatic backup feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoAddNewApplication")
     public Boolean autoAddNewApplication;
 
+    @NameInMap("AutoAddTargetConfig")
+    public String autoAddTargetConfig;
+
     /**
      * <p>The ID of the monitored cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ceba9b9ea5b924dd0b6726d2de6******</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Data Configuration. The dataRevision field specifies the data repair method when there is no data for the metric.</p>
-     * <br>
-     * <p>- Fill with zero: 0</p>
-     * <p>- Fill with one: 1</p>
-     * <p>- Fill with null: 2 (default, does not trigger an alarm)</p>
+     * <ul>
+     * <li>Fill with zero: 0</li>
+     * <li>Fill with one: 1</li>
+     * <li>Fill with null: 2 (default, does not trigger an alarm)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;dataRevision&quot;: 2
+     * }</p>
      */
     @NameInMap("DataConfig")
     public String dataConfig;
 
     /**
      * <p>The duration of the Prometheus alert rule. Unit: minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Long duration;
 
     /**
-     * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The following code shows the format of matching rules:</p>
-     * <br>
-     * <p>    "DimFilters": [ </p>
-     * <p>    { </p>
-     * <p>     "FilterOpt": "ALL",</p>
-     * <p>     "FilterValues": [],         // The value of the filter condition. </p>
-     * <p>     "FilterKey": "rootIp"     // The key of the filter condition. </p>
-     * <p>    }</p>
-     * <p>    ]</p>
-     * <br>
-     * <p>Valid values of **FilterOpt**:</p>
-     * <br>
-     * <p>*   STATIC: matches the value of the specified dimension.</p>
-     * <p>*   ALL: matches the values of all dimensions.</p>
-     * <p>*   DISABLE: aggregates the values of all dimensions.</p>
+     * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule. Format:</p>
+     * <pre><code>&quot;DimFilters&quot;: [ 
+     * { 
+     *  &quot;FilterOpt&quot;: &quot;ALL&quot;,
+     * &quot;FilterValues&quot;: [],         //The value of the filter condition.
+     * &quot;FilterKey&quot;: &quot;rootIp&quot;     //The key of the filter condition.
+     * }
+     * ]
+     * </code></pre>
+     * <p>Valid values of <strong>FilterOpt</strong>:</p>
+     * <ul>
+     * <li>STATIC: matches the value of the specified dimension.</li>
+     * <li>ALL: traverses all dimension values. Dynamic thresholds do not support traversal.</li>
+     * <li>DISABLE: aggregates the values of all dimensions.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;DimFilters&quot;: [             {               &quot;FilterOpt&quot;: &quot;ALL&quot;,               &quot;FilterValues&quot;: [],               &quot;FilterKey&quot;: &quot;rootIp&quot;             }           ]         }</p>
      */
     @NameInMap("Filters")
     public String filters;
 
     /**
      * <p>The tags of the Prometheus alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[  { &quot;Value&quot;: &quot;cms_polardb&quot;,             &quot;Name&quot;: &quot;_aliyun_cloud_product&quot;           }         ]</p>
      */
     @NameInMap("Labels")
     public String labels;
 
     /**
      * <p>The severity level of the Prometheus alert rule.</p>
-     * <br>
-     * <p>*   P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</p>
-     * <p>*   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
-     * <p>*   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
-     * <p>*   P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
-     * <p>*   Default: Alert notifications are sent regardless of alert levels.</p>
+     * <ul>
+     * <li>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</li>
+     * <li>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</li>
+     * <li>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</li>
+     * <li>P4: Alert notifications are sent for low-priority issues that do not affect your business.</li>
+     * <li>Default: Alert notifications are sent regardless of alert levels.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>P2</p>
      */
     @NameInMap("Level")
     public String level;
@@ -177,59 +236,100 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
 
     /**
      * <p>The alert message of the Prometheus alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Namespace: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / Container: {{$labels.container}} Memory usage exceeds 80%. Current value: {{ printf \\\\\&quot;%.2f\\\\\&quot; $value }}%</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The alert metrics. If you set the **AlertCheckType** parameter to **STATIC** when you create a Prometheus alert rule, you must specify the **MetricsKey** parameter.</p>
-     * <br>
-     * <p>> Alert metrics vary depending on the value of the **AlertGroup** parameter. For more information about the correspondence between **AlertGroup** and **MetricsKey**, see the supplementary description.</p>
+     * <p>The alert metrics. If you set the <strong>AlertCheckType</strong> parameter to <strong>STATIC</strong> when you create a Prometheus alert rule, you must specify the <strong>MetricsKey</strong> parameter.</p>
+     * <blockquote>
+     * <p>Alert metrics vary depending on the value of the <strong>AlertGroup</strong> parameter. For more information about the correspondence between <strong>AlertGroup</strong> and <strong>MetricsKey</strong>, see the supplementary description.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>pop.status.error</p>
      */
     @NameInMap("MetricsKey")
     public String metricsKey;
 
     /**
      * <p>The metric type of the Application Monitoring or Browser Monitoring alert rule. For more information, see the following table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jvm</p>
      */
     @NameInMap("MetricsType")
     public String metricsType;
 
     /**
-     * <p>Effective Time and Notification Time. Used for compatibility with legacy rules.</p>
+     * <p>The effective time and notification time. This parameter is used to be compatible with the old version of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Notice")
     public String notice;
 
     /**
      * <p>Notification Mode. Normal mode or Simplified mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL_MODE</p>
      */
     @NameInMap("NotifyMode")
     public String notifyMode;
 
     /**
      * <p>The notification policy.</p>
-     * <br>
-     * <p>*   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</p>
-     * <p>*   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.</p>
+     * <ul>
+     * <li>If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</li>
+     * <li>To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>569xxx</p>
      */
     @NameInMap("NotifyStrategy")
     public String notifyStrategy;
 
     /**
      * <p>The process ID (PID) that is associated with the Application Monitoring or Browser Monitoring alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;b590lhguqs@40d8deedfa9******&quot;]</p>
      */
     @NameInMap("Pids")
     public String pids;
 
     /**
+     * <p>It is determined when creating the underlying rules of Prometheus. The background will verify whether the product exists, which is used to distinguish cloud product filtering queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
+    @NameInMap("Product")
+    public String product;
+
+    /**
      * <p>The PromQL statement of the Prometheus alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>node_memory_MemAvailable_bytes{} / node_memory_MemTotal_bytes{} * 100</p>
      */
     @NameInMap("PromQL")
     public String promQL;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -323,6 +423,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public Boolean getAutoAddNewApplication() {
         return this.autoAddNewApplication;
+    }
+
+    public CreateOrUpdateAlertRuleRequest setAutoAddTargetConfig(String autoAddTargetConfig) {
+        this.autoAddTargetConfig = autoAddTargetConfig;
+        return this;
+    }
+    public String getAutoAddTargetConfig() {
+        return this.autoAddTargetConfig;
     }
 
     public CreateOrUpdateAlertRuleRequest setClusterId(String clusterId) {
@@ -437,6 +545,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
         return this.pids;
     }
 
+    public CreateOrUpdateAlertRuleRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
     public CreateOrUpdateAlertRuleRequest setPromQL(String promQL) {
         this.promQL = promQL;
         return this;
@@ -464,12 +580,18 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public static class CreateOrUpdateAlertRuleRequestMarkTags extends TeaModel {
         /**
          * <p>The Tag Key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The Tag Value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proudct</p>
          */
         @NameInMap("Value")
         public String value;
@@ -500,12 +622,18 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public static class CreateOrUpdateAlertRuleRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         @NameInMap("Value")
         public String value;

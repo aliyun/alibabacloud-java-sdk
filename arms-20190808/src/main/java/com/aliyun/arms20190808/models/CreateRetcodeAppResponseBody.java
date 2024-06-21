@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateRetcodeAppResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cs80w0n7u3@6455f403dba2f0a</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C647A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,9 +48,13 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,12 +115,18 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBeanTagsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -154,20 +176,28 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBean extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135143</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>PID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aokcdqn3ly@a195c6d6421****</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The ID of the resource group.</p>
-         * <br>
          * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

@@ -12,6 +12,9 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
     public static class ListOnCallSchedulesResponseBodyPageBeanOnCallSchedules extends TeaModel {
         /**
          * <p>The description of the scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test scheduling policy</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OnCallSchedule_test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -96,18 +108,27 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

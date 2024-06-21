@@ -4,12 +4,26 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListDispatchRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Prod</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("System")
     public Boolean system;
 

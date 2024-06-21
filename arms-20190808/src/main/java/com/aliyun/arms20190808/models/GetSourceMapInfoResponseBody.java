@@ -4,6 +4,10 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSourceMapInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,15 +39,31 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         @NameInMap("Fid")
         public String fid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.sourcemap.js</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>201223</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1590657842000</p>
+         */
         @NameInMap("UploadTime")
         public String uploadTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

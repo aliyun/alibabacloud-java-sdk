@@ -6,42 +6,68 @@ import com.aliyun.tea.*;
 public class UpdateEnvPodMonitorRequest extends TeaModel {
     /**
      * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
      * <p>The YAML configuration string.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Refer to supplementary instructions.</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The environment ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxxxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The namespace where the PodMonitor is located.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-prom</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The name of the PodMonitor.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-admin-pm1</p>
      */
     @NameInMap("PodMonitorName")
     public String podMonitorName;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

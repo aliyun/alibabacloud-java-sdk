@@ -4,39 +4,89 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreatePrometheusAlertRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prometheus_Alert</p>
+     */
     @NameInMap("AlertName")
     public String alertName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;Value&quot;: &quot;xxx&quot;,&quot;Name&quot;: &quot;description&quot;}]</p>
+     */
     @NameInMap("Annotations")
     public String annotations;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c0bad479465464e1d8c1e641b0afb****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10282</p>
+     */
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100 * (sum(rate(container_cpu_usage_seconds_total[1m])) by (pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, \&quot;pod_name\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (pod_name))&gt;75</p>
+     */
     @NameInMap("Expression")
     public String expression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;Value&quot;: &quot;critical&quot;,&quot;Name&quot;: &quot;severity&quot;}]</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALERT_MANAGER</p>
+     */
     @NameInMap("NotifyType")
     public String notifyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Tags")
     public java.util.List<CreatePrometheusAlertRuleRequestTags> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("Type")
     public String type;
 

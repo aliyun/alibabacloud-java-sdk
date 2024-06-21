@@ -6,24 +6,39 @@ import com.aliyun.tea.*;
 public class UpdateAlertContactGroupRequest extends TeaModel {
     /**
      * <p>The ID of the alert contact group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ContactGroupId")
     public Long contactGroupId;
 
     /**
      * <p>The name of the alert contact group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestGroup</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
     /**
      * <p>The ID of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123 234 345</p>
      */
     @NameInMap("ContactIds")
     public String contactIds;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

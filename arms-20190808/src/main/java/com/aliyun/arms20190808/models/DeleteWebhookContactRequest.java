@@ -4,6 +4,13 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteWebhookContactRequest extends TeaModel {
+    /**
+     * <p>The ID of the webhook alert contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("WebhookId")
     public Long webhookId;
 

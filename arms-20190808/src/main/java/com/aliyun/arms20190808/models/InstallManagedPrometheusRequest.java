@@ -6,94 +6,129 @@ import com.aliyun.tea.*;
 public class InstallManagedPrometheusRequest extends TeaModel {
     /**
      * <p>The ID of the ACK cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prd-ecs</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The cluster type.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   ecs</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   one</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   ask</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   pro</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>ecs</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>one</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>ask</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>pro</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ask</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grafana-bp1*****</p>
      */
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
     /**
      * <p>This parameter is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("KubeConfig")
     public String kubeConfig;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The security group of the ASK cluster or ECS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1********</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The vSwitch used by the ASK cluster or ECS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1*********</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxxxxx</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

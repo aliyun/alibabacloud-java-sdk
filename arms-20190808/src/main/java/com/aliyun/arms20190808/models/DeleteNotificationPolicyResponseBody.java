@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteNotificationPolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the notification policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

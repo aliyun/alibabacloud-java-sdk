@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetRetcodeShareUrlResponseBody extends TeaModel {
     /**
-     * <p>Queries the logon-free URL of a Browser Monitoring application.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01FF8DD9-A09C-47A1-895A-B6E321******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The logon-free URL of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&action=RetcodeAction&eventSubmitDoGetData=1">http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&amp;action=RetcodeAction&amp;eventSubmitDoGetData=1</a></p>
      */
     @NameInMap("Url")
     public String url;

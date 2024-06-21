@@ -4,12 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetricDropRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c3ca36c8e2693403d85c0d9f8bb1d7b6c</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apiserver_request_duration_seconds_bucket
+     * etcd_request_duration_seconds_bucket
+     * apiserver_request_total
+     * container_tasks_state</p>
+     */
     @NameInMap("MetricDrop")
     public String metricDrop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

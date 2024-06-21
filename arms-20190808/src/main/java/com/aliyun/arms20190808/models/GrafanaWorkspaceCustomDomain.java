@@ -4,33 +4,73 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceCustomDomain extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>protocol为http时无需填写;</p>
+     */
     @NameInMap("cert")
     public String cert;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1688627798017</p>
+     */
     @NameInMap("date")
     public Long date;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mydomain.com</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>grafana-cn-***********</p>
+     */
     @NameInMap("grafanaWorkspaceId")
     public String grafanaWorkspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>protocol为http时无需填写;</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("privateZone")
     public String privateZone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateSucceed</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("uri")
     public String uri;
 

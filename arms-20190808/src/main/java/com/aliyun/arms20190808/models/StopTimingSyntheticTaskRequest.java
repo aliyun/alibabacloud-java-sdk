@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class StopTimingSyntheticTaskRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The task IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;

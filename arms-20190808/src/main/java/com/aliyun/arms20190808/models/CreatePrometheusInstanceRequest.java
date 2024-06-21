@@ -5,82 +5,189 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):</p>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>Does it require all child instances to be verified successfully before creating a GlobalView instance. The default is false, which means partial success is possible.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AllSubClustersSuccess")
     public Boolean allSubClustersSuccess;
 
     /**
-     * <p>The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs.</p>
+     * <p>The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
+    @NameInMap("ArchiveDuration")
+    public Integer archiveDuration;
+
+    /**
+     * <p>The ID of the ACK cluster. This parameter is required if you set the ClusterType parameter to aliyun-cs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the cluster. This parameter is required if you set ClusterType to remote-write, ecs, or global-view.</p>
+     * <p>The name of the created cluster. This parameter is required if you set the ClusterType parameter to remote-write or ecs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>clusterNameOfTest</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>Types include:</p>
-     * <p>- remote-write: General-purpose Instance</p>
-     * <p>- ecs: Prometheus for ECS</p>
-     * <p>- global-view: Global Aggregation Instance</p>
-     * <p>- aliyun-cs: Prometheus Instance for Container Service</p>
-     * <p>- cloud-product: Prometheus for cloud monitor</p>
-     * <p>- cloud-monitor: Prometheus for enterprise cloud monitor</p>
-     * <p>- flink: Prometheus for Flink</p>
+     * <p>The type of the cluster to which the Prometheus instance belongs. Valid values: </p>
+     * <ul>
+     * <li>remote-write: Prometheus instance for remote write.</li>
+     * <li>ecs(Not supported): Prometheus instance for ECS.</li>
+     * <li>cloud-monitor(Not supported): Prometheus instance for Alibaba Cloud services in China.</li>
+     * <li>cloud-product(Not supported): Prometheus instance for Alibaba Cloud services outside China.</li>
+     * <li>global-view: Prometheus instance for GlobalView.</li>
+     * <li>aliyun-cs(Not supported): Prometheus instance for Container Service for Kubernetes (ACK).</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remote-write</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>The ID of the Grafana dedicated instance. This parameter is available if you set ClusterType to ecs.</p>
+     * <p>Data storage duration (in days).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
+    @NameInMap("Duration")
+    public Integer duration;
+
+    /**
+     * <p>The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grafana-bp1*****</p>
      */
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
     /**
-     * <p>The region ID. If you create a Prometheus instance for a cloud service in China, set this parameter to cn-shanghai.</p>
+     * <p>The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the custom resource group. You can specify this parameter to bind the instance to the resource group.</p>
+     * <p>The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the security group. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.</p>
+     * <p>The ID of the security group. This parameter is required if you set the ClusterType parameter to ecs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1********</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</p>
+     * <p>JSON string for child instances of the globalView instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>When the clusterType is global view, this parameter needs to be passed: a list of information about the clusters that need to be aggregated.
+     * Example:
+     * [
+     *   {
+     *     &quot;Headers&quot;:{</p>
+     * <pre><code>},
+     * &quot;RegionId&quot;: &quot;cn hangzhou&quot;,
+     * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
+     * &quot;Extras&quot;:{
+     * 
+     * },
+     * &quot;ClusterId&quot;: &quot;c39a1048921e04f ****************&quot;,
+     * &quot;SourceName&quot;: &quot;test1&quot;,
+     * &quot;DataSource&quot;: &quot;&quot;,
+     * &quot;UserId&quot;: &quot;1672753 ******************&quot;
+     * </code></pre>
+     * <p>  },
+     *   {
+     *     &quot;Headers&quot;:{</p>
+     * <pre><code>},
+     * &quot;RegionId&quot;: &quot;cn beijing&quot;,
+     * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
+     * &quot;Extras&quot;:{
+     * 
+     * },
+     * &quot;ClusterId&quot;: &quot;c6b6485496d5b40 ****************&quot;,
+     * &quot;SourceName&quot;: &quot;test2&quot;,
+     * &quot;DataSource&quot;: &quot;&quot;,
+     * &quot;UserId&quot;: &quot;1672753 ******************&quot;
+     * </code></pre>
+     * <p>  },
+     *   {
+     *     &quot;Headers&quot;:{</p>
+     * <pre><code>},
+     * &quot;RegionId&quot;: &quot;cn zhangjiakou&quot;,
+     * &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
+     * &quot;Extras&quot;:{
+     * 
+     * },
+     * &quot;ClusterId&quot;: &quot;c261a4f3200c446 ****************&quot;,
+     * &quot;SourceName&quot;: &quot;test3&quot;,
+     * &quot;DataSource&quot;: &quot;&quot;,
+     * &quot;UserId&quot;: &quot;1672753 ******************&quot;
+     * </code></pre>
+     * <p>  }
+     * ]</p>
      */
     @NameInMap("SubClustersJson")
     public String subClustersJson;
 
     /**
-     * <p>The tags of the instance. You can specify this parameter to manage tags for the instance.</p>
+     * <p>The tags of the instance. You can configure this parameter to manage tags for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *     {
+     *         &quot;labelName&quot;:&quot;labelValue&quot;
+     *     },
+     *     {
+     *         &quot;testName&quot;:&quot;clusterA&quot;
+     *     }
+     * ]</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreatePrometheusInstanceRequestTags> tags;
 
     /**
-     * <p>The ID of the vSwitch. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.</p>
+     * <p>The ID of the vSwitch. This parameter is required if you set the ClusterType parameter to ecs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1*********</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC). This parameter is required if you set ClusterType to ecs or create a serverless Kubernetes (ASK) managed cluster.</p>
+     * <p>The ID of virtual private cloud (VPC). This parameter is required if you set the ClusterType parameter to ecs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-rpn**********</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -96,6 +203,14 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     }
     public Boolean getAllSubClustersSuccess() {
         return this.allSubClustersSuccess;
+    }
+
+    public CreatePrometheusInstanceRequest setArchiveDuration(Integer archiveDuration) {
+        this.archiveDuration = archiveDuration;
+        return this;
+    }
+    public Integer getArchiveDuration() {
+        return this.archiveDuration;
     }
 
     public CreatePrometheusInstanceRequest setClusterId(String clusterId) {
@@ -120,6 +235,14 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public CreatePrometheusInstanceRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
     }
 
     public CreatePrometheusInstanceRequest setGrafanaInstanceId(String grafanaInstanceId) {

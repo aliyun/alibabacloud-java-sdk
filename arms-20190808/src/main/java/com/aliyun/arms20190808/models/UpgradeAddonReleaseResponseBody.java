@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class UpgradeAddonReleaseResponseBody extends TeaModel {
     /**
      * <p>The status code. 200 indicates success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>Return a message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The information returned when the request parameter is incorrect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

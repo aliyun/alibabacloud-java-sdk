@@ -5,49 +5,76 @@ import com.aliyun.tea.*;
 
 public class InstallAddonRequest extends TeaModel {
     /**
-     * <p>Version of Addon.</p>
+     * <p>The version of the add-on.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.1</p>
      */
     @NameInMap("AddonVersion")
     public String addonVersion;
 
     /**
-     * <p>Locale, the default is Chinese zh.</p>
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
-     * <p>Whether to test run. The default value is false.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>Name of Addon.</p>
+     * <p>The name of the add-on.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The release name after installation, if not specified, generates the default rule name.</p>
+     * <p>The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql-xxxxx</p>
      */
     @NameInMap("ReleaseName")
     public String releaseName;
 
     /**
-     * <p>Config information.</p>
+     * <p>The metadata.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;host&quot;:&quot;mysql-service.default&quot;,&quot;port&quot;:3306,&quot;username&quot;:&quot;root&quot;,&quot;password&quot;:&quot;roots&quot;}</p>
      */
     @NameInMap("Values")
     public String values;

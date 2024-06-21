@@ -7,6 +7,10 @@ public class ListIntegrationResponseBody extends TeaModel {
     @NameInMap("PageInfo")
     public ListIntegrationResponseBodyPageInfo pageInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LABEL.alertname::LABEL.severity</p>
+         */
         @NameInMap("DuplicateKey")
         public String duplicateKey;
 
@@ -47,12 +63,24 @@ public class ListIntegrationResponseBody extends TeaModel {
         @NameInMap("FieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>$.status</p>
+         */
         @NameInMap("InitiativeRecoverField")
         public String initiativeRecoverField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("InitiativeRecoverValue")
         public String initiativeRecoverValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
@@ -139,30 +167,62 @@ public class ListIntegrationResponseBody extends TeaModel {
     }
 
     public static class ListIntegrationResponseBodyPageInfoIntegrations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN">https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN</a>******</p>
+         */
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-06-18</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("IntegrationDetail")
         public ListIntegrationResponseBodyPageInfoIntegrationsIntegrationDetail integrationDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("IntegrationId")
         public Long integrationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>云监控集成</p>
+         */
         @NameInMap("IntegrationName")
         public String integrationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
+         */
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ready</p>
+         */
         @NameInMap("Liveness")
         public String liveness;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ymQBN******</p>
+         */
         @NameInMap("ShortToken")
         public String shortToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("State")
         public Boolean state;
 
@@ -249,12 +309,24 @@ public class ListIntegrationResponseBody extends TeaModel {
         @NameInMap("Integrations")
         public java.util.List<ListIntegrationResponseBodyPageInfoIntegrations> integrations;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Long page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Long total;
 

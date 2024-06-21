@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSyntheticMonitorsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,12 +21,18 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FD473FF-5398-5A85-9BF6-7AB45561522F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,60 +77,90 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
     public static class GetSyntheticMonitorsResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the monitoring point is available. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Available")
         public String available;
 
         /**
          * <p>Indicates whether the monitoring point is selected. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanBeSelected")
         public Boolean canBeSelected;
 
         /**
          * <p>The city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         @NameInMap("City")
         public String city;
 
         /**
          * <p>The city code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1100101</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
         /**
          * <p>The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ClientType")
         public Integer clientType;
 
         /**
          * <p>The country.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         @NameInMap("Country")
         public String country;
 
         /**
          * <p>Indicates whether IPv6 is supported. Valid values: 0: IPv6 is not supported. 1: IPv6 is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Ipv6")
         public Integer ipv6;
 
         /**
          * <p>The carrier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The carrier code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OperatorCode")
         public String operatorCode;
 
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         @NameInMap("Region")
         public String region;

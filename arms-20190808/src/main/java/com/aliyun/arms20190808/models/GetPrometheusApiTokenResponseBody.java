@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetPrometheusApiTokenResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The token required for integrating Prometheus Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6dcbb77ef4ba6ef5466b5debf9e2****</p>
      */
     @NameInMap("Token")
     public String token;

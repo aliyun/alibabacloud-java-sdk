@@ -4,20 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteGrafanaResourceResponseBody extends TeaModel {
+    /**
+     * <p>Status code. 200 is success, other status codes are exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>delete success.</p>
      */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>Returns a hint message for the result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>771DC66C-C5E0-59BC-A983-DD18FEE9EFFA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,9 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetMultipleTraceResponseBody extends TeaModel {
+    /**
+     * <p>The details of traces.</p>
+     */
     @NameInMap("MultiCallChainInfos")
     public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfos> multiCallChainInfos;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2983BEF7-4A0D-47A2-94A2-8E9C5E63****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventListTagEntryList extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http.status.code</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,9 +83,18 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventList extends TeaModel {
+        /**
+         * <p>The tags of the trace.</p>
+         */
         @NameInMap("TagEntryList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventListTagEntryList> tagEntryList;
 
+        /**
+         * <p>The time when the log was generated. The value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174501747</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -92,9 +122,21 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http.status.code</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -122,45 +164,151 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfosSpans extends TeaModel {
+        /**
+         * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>Indicates whether a method stack was provided.</p>
+         * <ul>
+         * <li><code>true</code>: A method stack was provided.</li>
+         * <li><code>false</code>: No method stack was provided.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HaveStack")
         public Boolean haveStack;
 
+        /**
+         * <p>The log events in the trace.</p>
+         */
         @NameInMap("LogEventList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansLogEventList> logEventList;
 
+        /**
+         * <p>The name of the traced span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/demo/queryNotExistDB/11</p>
+         */
         @NameInMap("OperationName")
         public String operationName;
 
+        /**
+         * <p>The ID of the parent span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("ParentSpanId")
         public String parentSpanId;
 
+        /**
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResultCode")
         public String resultCode;
 
+        /**
+         * <p>RPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("RpcId")
         public String rpcId;
 
+        /**
+         * <p>The type of the remote procedure call (RPC) mode.</p>
+         * <ul>
+         * <li>0: HTTP entry</li>
+         * <li>25: HTTP call</li>
+         * <li>1: High-speed Service Framework (HSF) call</li>
+         * <li>2: HSF provision</li>
+         * <li>40: on-premises API call</li>
+         * <li>60: MySQL call</li>
+         * <li>62: Oracle call</li>
+         * <li>63: PostgreSQL call</li>
+         * <li>70: Redis call</li>
+         * <li>4: Taobao Distributed Data Layer (TDDL) call</li>
+         * <li>5: Tair call</li>
+         * <li>13: MetaQ message sending</li>
+         * <li>252: MetaQ message receiving</li>
+         * <li>3: notification sending</li>
+         * <li>254: notification receiving</li>
+         * <li>7: Apache Dubbo call</li>
+         * <li>8: Apache Dubbo provision</li>
+         * <li>19: SOFARPC call</li>
+         * <li>18: SOFARPC provision</li>
+         * <li>11: Distributed Service Framework (DSF) call</li>
+         * <li>12: DSF provision</li>
+         * <li>\-1: unknown call</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RpcType")
         public Integer rpcType;
 
+        /**
+         * <p>The IP address of the host where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.XX.XX</p>
+         */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        /**
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-k8s-demo-subcomponent</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The span ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("SpanId")
         public String spanId;
 
+        /**
+         * <p>The tags of the trace.</p>
+         */
         @NameInMap("TagEntryList")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpansTagEntryList> tagEntryList;
 
+        /**
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174501747</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1400a115951745017447033d****</p>
+         */
         @NameInMap("TraceID")
         public String traceID;
 
@@ -284,9 +432,18 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static class GetMultipleTraceResponseBodyMultiCallChainInfos extends TeaModel {
+        /**
+         * <p>The details of the trace.</p>
+         */
         @NameInMap("Spans")
         public java.util.List<GetMultipleTraceResponseBodyMultiCallChainInfosSpans> spans;
 
+        /**
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1400a115951745017447033d****</p>
+         */
         @NameInMap("TraceID")
         public String traceID;
 

@@ -12,6 +12,9 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     public static class DescribeWebhookContactsResponseBodyPageBeanWebhookContactsWebhook extends TeaModel {
         /**
          * <p>The header of the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Content-Type&quot;:&quot;application/json&quot;}]</p>
          */
         @NameInMap("BizHeaders")
         public java.util.Map<String, ?> bizHeaders;
 
         /**
          * <p>The parameters in the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content:&quot;mike&quot;}]</p>
          */
         @NameInMap("BizParams")
         public java.util.Map<String, ?> bizParams;
 
         /**
          * <p>The alert notification template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         @NameInMap("Body")
         public String body;
 
         /**
          * <p>The HTTP request method.</p>
-         * <br>
-         * <p>*   Get</p>
-         * <p>*   Post</p>
+         * <ul>
+         * <li>Get</li>
+         * <li>Post</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Post</p>
          */
         @NameInMap("Method")
         public String method;
 
         /**
          * <p>The notification template for clearing alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         @NameInMap("RecoverBody")
         public String recoverBody;
 
         /**
          * <p>The URL of the request method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
          */
         @NameInMap("Url")
         public String url;
@@ -141,12 +163,18 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the webhook alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("WebhookId")
         public Float webhookId;
 
         /**
          * <p>The name of the webhook alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Webhook name</p>
          */
         @NameInMap("WebhookName")
         public String webhookName;
@@ -185,18 +213,27 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     public static class DescribeWebhookContactsResponseBodyPageBean extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of alert contacts displayed on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of alert contacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

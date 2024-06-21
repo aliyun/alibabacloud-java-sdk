@@ -13,6 +13,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
     @NameInMap("PrometheusAlertRule")
     public UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRule prometheusAlertRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,6 +69,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRuleAnnotations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>message</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -95,9 +103,17 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRuleLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>severity</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>critical</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -125,24 +141,48 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static class UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3888704</p>
+         */
         @NameInMap("AlertId")
         public Long alertId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Prometheus_Alert</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
         @NameInMap("Annotations")
         public java.util.List<UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRuleAnnotations> annotations;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c0bad479465464e1d8c1e641b0afb****</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10282</p>
+         */
         @NameInMap("DispatchRuleId")
         public Long dispatchRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100 * (sum(rate(container_cpu_usage_seconds_total[1m])) by (pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, \&quot;pod_name\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (pod_name))&gt;75</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -152,9 +192,17 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALERT_MANAGER</p>
+         */
         @NameInMap("NotifyType")
         public String notifyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel {
+    /**
+     * <p>Status code. 200 is success, other status codes are exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -13,11 +19,20 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
     @NameInMap("Data")
     public AddAliClusterIdsToPrometheusGlobalViewResponseBodyData data;
 
+    /**
+     * <p>Returns a hint message for the result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -62,21 +77,31 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
     public static class AddAliClusterIdsToPrometheusGlobalViewResponseBodyData extends TeaModel {
         /**
          * <p>The Info-level information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance. failedClusterIds: the ID of the cluster that failed to be added. A cluster may fail to be added because the specified cluster ID is invalid or the cluster is added across continents.}</p>
          */
         @NameInMap("Info")
         public String info;
 
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>Indicates whether the request was successful.</p>
-         * <br>
-         * <p>*   `true`: The request was successful.</p>
-         * <p>*   `false`: The request failed.</p>
+         * <ul>
+         * <li><code>true</code>: The request was successful.</li>
+         * <li><code>false</code>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

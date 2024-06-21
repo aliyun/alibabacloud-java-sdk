@@ -9,6 +9,9 @@ public class AddRecordingRuleResponseBody extends TeaModel {
 
     /**
      * <p>The status of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
@@ -18,6 +21,9 @@ public class AddRecordingRuleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

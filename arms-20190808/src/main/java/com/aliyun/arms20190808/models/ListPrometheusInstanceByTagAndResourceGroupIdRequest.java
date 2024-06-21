@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends TeaModel {
     /**
      * <p>The region ID of the Prometheus instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -54,12 +61,18 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends TeaMod
     public static class ListPrometheusInstanceByTagAndResourceGroupIdRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fpx-tag</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fvt-tag-value</p>
          */
         @NameInMap("Value")
         public String value;

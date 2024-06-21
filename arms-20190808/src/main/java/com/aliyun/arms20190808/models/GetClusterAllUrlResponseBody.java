@@ -9,6 +9,11 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
 
     /**
      * <p>The response parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;RequestId&quot;: &quot;41877338-646B-5DD6-BFBE-F89F1E7245AD&quot;,
+     *   &quot;Data&quot;: &quot;{\&quot;clusterType\&quot;:\&quot;ManagedKubernetes\&quot;,\&quot;remoteWriteUrl\&quot;:\&quot;http:/&quot; }</p>
      */
     @NameInMap("Data")
     public String data;
@@ -18,6 +23,9 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

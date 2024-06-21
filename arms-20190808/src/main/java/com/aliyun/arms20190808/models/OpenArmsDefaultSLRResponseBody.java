@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OpenArmsDefaultSLRResponseBody extends TeaModel {
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53CACA70-2CF7-490C-BD06-1A2AE4EB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

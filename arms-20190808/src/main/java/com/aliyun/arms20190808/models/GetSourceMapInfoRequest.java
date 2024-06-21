@@ -4,21 +4,44 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSourceMapInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AscendingSequence")
     public Boolean ascendingSequence;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0.0</p>
+     */
     @NameInMap("Edition")
     public String edition;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ID")
     public String ID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>version</p>
+     */
     @NameInMap("OrderField")
     public String orderField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

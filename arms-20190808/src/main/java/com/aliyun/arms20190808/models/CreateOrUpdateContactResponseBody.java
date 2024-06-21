@@ -12,6 +12,9 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,53 +43,77 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
     public static class CreateOrUpdateContactResponseBodyAlertContact extends TeaModel {
         /**
          * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ContactId")
         public Float contactId;
 
         /**
          * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JohnDoe</p>
          */
         @NameInMap("ContactName")
         public String contactName;
 
         /**
          * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test1.com">https://test1.com</a></p>
          */
         @NameInMap("DingRobotUrl")
         public String dingRobotUrl;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>Indicates whether the mobile number was verified. Valid values:</p>
-         * <br>
-         * <p>*   `false` (default value): No</p>
-         * <p>*   `true`: Yes</p>
-         * <br>
-         * <p>You can call the **SendTTSVerifyLink** operation to verify the mobile number of an alert contact. Only verified mobile numbers can be specified in a notification policy to receive phone calls.</p>
+         * <ul>
+         * <li><code>false</code> (default value): No</li>
+         * <li><code>true</code>: Yes</li>
+         * </ul>
+         * <p>You can call the <strong>SendTTSVerifyLink</strong> operation to verify the mobile number of an alert contact. Only verified mobile numbers can be specified in a notification policy to receive phone calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsVerify")
         public Boolean isVerify;
 
         /**
          * <p>The mobile number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
         /**
          * <p>The operation that you want to perform if phone calls fail to be answered. Valid values: 0: No operation is performed. 1: A phone call is made again. 2: A text message is sent. 3 (default value): The global default value is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReissueSendNotice")
         public Long reissueSendNotice;
 
         /**
          * <p>Indicates whether the email address was verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isEmailVerify")
         public Boolean isEmailVerify;

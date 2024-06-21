@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class OpenXtraceDefaultSLRResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53CACA70-2CF7-490C-BD06-1A2AE4EB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

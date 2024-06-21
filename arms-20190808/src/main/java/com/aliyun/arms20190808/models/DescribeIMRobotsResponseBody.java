@@ -12,6 +12,9 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobotsDispatchRules extends TeaModel {
         /**
          * <p>The ID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("id")
         public Long id;
 
         /**
          * <p>The name of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Notification policy test</p>
          */
         @NameInMap("name")
         public String name;
@@ -76,27 +85,40 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     public static class DescribeIMRobotsResponseBodyPageBeanAlertIMRobots extends TeaModel {
         /**
          * <p>The time when the IM chatbot was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-16 17:21:48</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Indicates whether daily statistics are sent. Valid values:</p>
-         * <br>
-         * <p>*   `false` (default): Daily statistics are not sent.</p>
-         * <p>*   `true`: Daily statistics are sent.</p>
+         * <ul>
+         * <li><code>false</code> (default): Daily statistics are not sent.</li>
+         * <li><code>true</code>: Daily statistics are sent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
         /**
          * <p>The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:30,17:30</p>
          */
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
         /**
-         * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is **Alert**.</p>
+         * <p>The signature key of DingTalk. If you specify a signature key, DingTalk authentication is performed by using the signature key. If you do not specify a signature key, a whitelist is used for authentication by default. The keyword of the whitelist is <strong>Alert</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("DingSignKey")
         public String dingSignKey;
@@ -109,27 +131,40 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
         /**
          * <p>The webhook URL of the IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
          */
         @NameInMap("RobotAddr")
         public String robotAddr;
 
         /**
          * <p>The ID of the IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("RobotId")
         public Float robotId;
 
         /**
          * <p>The name of the IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chatbot name</p>
          */
         @NameInMap("RobotName")
         public String robotName;
 
         /**
          * <p>The type of the IM chatbot. Valid values:</p>
-         * <br>
-         * <p>*   `dingding`: DingTalk chatbot</p>
-         * <p>*   `wechat`: WeCom chatbot</p>
+         * <ul>
+         * <li><code>dingding</code>: DingTalk chatbot</li>
+         * <li><code>wechat</code>: WeCom chatbot</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dingding</p>
          */
         @NameInMap("Type")
         public String type;
@@ -222,18 +257,27 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of IM chatbots returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of queried IM chatbots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

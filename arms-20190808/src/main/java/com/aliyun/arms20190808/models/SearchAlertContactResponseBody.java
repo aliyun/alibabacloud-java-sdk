@@ -12,6 +12,9 @@ public class SearchAlertContactResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,75 +43,112 @@ public class SearchAlertContactResponseBody extends TeaModel {
     public static class SearchAlertContactResponseBodyPageBeanContacts extends TeaModel {
         /**
          * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ContactId")
         public Long contactId;
 
         /**
          * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         @NameInMap("ContactName")
         public String contactName;
 
         /**
          * <p>The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default Group | SRE Group</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The timestamp generated when the alert contact was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572349025000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
          */
         @NameInMap("DingRobot")
         public String dingRobot;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The mobile number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111*****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the alert contact receives system notifications. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The alert contact receives system notifications.</p>
-         * <p>*   `false`: The alert contact does not receive system notifications.</p>
+         * <ul>
+         * <li><code>true</code>: The alert contact receives system notifications.</li>
+         * <li><code>false</code>: The alert contact does not receive system notifications.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SystemNoc")
         public Boolean systemNoc;
 
         /**
          * <p>The timestamp generated when the alert contact was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1580258717000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The information about the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;body\&quot;:\&quot;{   \\\&quot;msg_type\\\&quot;: \\\&quot;text\\\&quot;,   \\\&quot;content\\\&quot;: {     \\\&quot;text\\\&quot;: \\\&quot;$content\\\&quot;   } }\&quot;,\&quot;header\&quot;:{\&quot;Arms-Content-Type\&quot;:\&quot;json\&quot;},\&quot;method\&quot;:\&quot;post\&quot;,\&quot;params\&quot;:{},\&quot;url\&quot;:\&quot;https://<em><strong>&quot;,\&quot;userId\&quot;:\&quot;1131971649</strong></em>\&quot;}&quot;,</p>
          */
         @NameInMap("Webhook")
         public String webhook;
@@ -225,18 +265,27 @@ public class SearchAlertContactResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -5,25 +5,38 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentDashboardsRequest extends TeaModel {
     /**
-     * <p>Name of Addon.AddonName and Scene are required.</p>
+     * <p>Name of Addon,One of AddonName and Scene must be filled in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trace-java</p>
      */
     @NameInMap("AddonName")
     public String addonName;
 
     /**
      * <p>The ID of the environment instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Scene of Addon.AddonName and Scene are required</p>
+     * <p>The scenario of Addon. Either AddonName or Scene is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>database</p>
      */
     @NameInMap("Scene")
     public String scene;

@@ -5,25 +5,52 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvironmentRequest extends TeaModel {
     /**
-     * <p>Locale, the default is Chinese zh | en.</p>
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxxxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>Environment name.</p>
+     * <p>The environment name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env1</p>
      */
     @NameInMap("EnvironmentName")
     public String environmentName;
 
     /**
+     * <p>Fee package.</p>
+     * <ul>
+     * <li>When the EnvironmentType is CS: it can be specified as CS_Basic (default) or CS-Pro.</li>
+     * <li>When the EnvironmentType is a different value, please enter a null value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CS_Basic</p>
+     */
+    @NameInMap("FeePackage")
+    public String feePackage;
+
+    /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,6 +82,14 @@ public class UpdateEnvironmentRequest extends TeaModel {
     }
     public String getEnvironmentName() {
         return this.environmentName;
+    }
+
+    public UpdateEnvironmentRequest setFeePackage(String feePackage) {
+        this.feePackage = feePackage;
+        return this;
+    }
+    public String getFeePackage() {
+        return this.feePackage;
     }
 
     public UpdateEnvironmentRequest setRegionId(String regionId) {

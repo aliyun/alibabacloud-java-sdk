@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ImportAppAlertRulesResponseBody extends TeaModel {
     /**
      * <p>The ID of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[12174**]</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

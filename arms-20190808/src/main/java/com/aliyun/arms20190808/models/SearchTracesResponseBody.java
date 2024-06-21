@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SearchTracesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C518054-852F-4023-ABC1-4AF95FF7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class SearchTracesResponseBody extends TeaModel {
     public static class SearchTracesResponseBodyTraceInfos extends TeaModel {
         /**
          * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
         /**
          * <p>The name of the traced span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>get***</p>
          */
         @NameInMap("OperationName")
         public String operationName;
 
         /**
          * <p>The IP address of the host where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.**.**</p>
          */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-k8s-demo-subcomponent</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174436993</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1400a115951744369937024d****</p>
          */
         @NameInMap("TraceID")
         public String traceID;

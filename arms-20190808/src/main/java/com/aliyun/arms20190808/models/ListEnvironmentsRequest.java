@@ -5,31 +5,94 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentsRequest extends TeaModel {
     /**
-     * <p>Name of Addon.</p>
+     * <p>The add-on name. You must specify at least one of the AddonName and EnvironmentType parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trace-java</p>
      */
     @NameInMap("AddonName")
     public String addonName;
 
     /**
-     * <p>Environment type, AddonName or EnvironmentType must be at least one.</p>
+     * <p>The ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cff30f0d67d7542dfb05bd114b4b1d7af</p>
+     */
+    @NameInMap("BindResourceId")
+    public String bindResourceId;
+
+    /**
+     * <p>The environment type. You must specify at least one of the AddonName and EnvironmentType parameters.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>CS</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>Container Service for Kubernetes (ACK)</p>
+     * <!-- -->
+     * </li>
+     * <li><p>ECS</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>Elastic Compute Service (ECS)</p>
+     * <!-- -->
+     * </li>
+     * <li><p>Cloud</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>cloud service</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CS</p>
      */
     @NameInMap("EnvironmentType")
     public String environmentType;
 
     /**
+     * <p>The payable resource plan. Valid values:</p>
+     * <ul>
+     * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+     * <li>Otherwise, leave the parameter empty.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CS_Pro</p>
+     */
+    @NameInMap("FeePackage")
+    public String feePackage;
+
+    /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzfurdatohtka</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>Resource tag list.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListEnvironmentsRequestTag> tag;
@@ -47,12 +110,28 @@ public class ListEnvironmentsRequest extends TeaModel {
         return this.addonName;
     }
 
+    public ListEnvironmentsRequest setBindResourceId(String bindResourceId) {
+        this.bindResourceId = bindResourceId;
+        return this;
+    }
+    public String getBindResourceId() {
+        return this.bindResourceId;
+    }
+
     public ListEnvironmentsRequest setEnvironmentType(String environmentType) {
         this.environmentType = environmentType;
         return this;
     }
     public String getEnvironmentType() {
         return this.environmentType;
+    }
+
+    public ListEnvironmentsRequest setFeePackage(String feePackage) {
+        this.feePackage = feePackage;
+        return this;
+    }
+    public String getFeePackage() {
+        return this.feePackage;
     }
 
     public ListEnvironmentsRequest setRegionId(String regionId) {
@@ -81,13 +160,19 @@ public class ListEnvironmentsRequest extends TeaModel {
 
     public static class ListEnvironmentsRequestTag extends TeaModel {
         /**
-         * <p>Tag key.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gfn_web_outbound_add</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryMetricByPageRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: `1`.</p>
+     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,12 +21,19 @@ public class QueryMetricByPageRequest extends TeaModel {
 
     /**
      * <p>The dimensions of the metric that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;detector_browser&quot;,&quot;detector_device&quot;]</p>
      */
     @NameInMap("Dimensions")
     public java.util.List<String> dimensions;
 
     /**
      * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1667546895000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -36,47 +46,72 @@ public class QueryMetricByPageRequest extends TeaModel {
 
     /**
      * <p>The time interval at which data entries are aggregated. Unit: milliseconds. Minimum value: 60000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
      */
     @NameInMap("IntervalInSec")
     public Integer intervalInSec;
 
     /**
      * <p>The measures of the metric that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv</p>
      */
     @NameInMap("Measures")
     public java.util.List<String> measures;
 
     /**
-     * <p>The metric that you want to query. You cannot specify a custom metric. For more information, see the "Application monitoring metrics that can be queried" section.</p>
+     * <p>The metric that you want to query. You cannot specify a custom metric. For more information, see the &quot;Application monitoring metrics that can be queried&quot; section.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>appstat.host</p>
      */
     @NameInMap("Metric")
     public String metric;
 
     /**
      * <p>The order in which measures are sorted. Valid values:</p>
-     * <br>
-     * <p>*   `ASC`: ascending order</p>
-     * <p>*   `DESC`: descending order</p>
-     * <br>
-     * <p>> If you do not specify the parameter, data is not sorted.</p>
+     * <ul>
+     * <li><code>ASC</code>: ascending order</li>
+     * <li><code>DESC</code>: descending order</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify the parameter, data is not sorted.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
      */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>The dimension from which metrics are sorted. You can set this parameter to a supported dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pid</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The start of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1667287695000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -184,13 +219,19 @@ public class QueryMetricByPageRequest extends TeaModel {
 
     public static class QueryMetricByPageRequestFilters extends TeaModel {
         /**
-         * <p>The key of the filter condition. You must set the key to `pid` or `regionId`.</p>
+         * <p>The key of the filter condition. You must set the key to <code>pid</code> or <code>regionId</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the filter condition. You must set the value of the `pid` or `regionId` condition. For information about how to obtain the `pid`, see the "Obtain the PID of an application" section.</p>
+         * <p>The value of the filter condition. You must set the value of the <code>pid</code> or <code>regionId</code> condition. For information about how to obtain the <code>pid</code>, see the &quot;Obtain the PID of an application&quot; section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx@74xxx</p>
          */
         @NameInMap("Value")
         public String value;

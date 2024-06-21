@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class AddIntegrationRequest extends TeaModel {
     /**
      * <p>The ID of an Alibaba Cloud Container Service for Kubernetes cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The software abbreviation that is supported by ARMS. Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.</p>
+     * <p>The software abbreviation that is supported by ARMS. Valid values (case-insensitive): <code>ASM</code>, <code>IoT</code>, and <code>Flink</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asm</p>
      */
     @NameInMap("Integration")
     public String integration;
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

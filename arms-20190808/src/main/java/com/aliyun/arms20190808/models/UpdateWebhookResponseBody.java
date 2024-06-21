@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateWebhookResponseBody extends TeaModel {
     /**
      * <p>The result returned. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The modification is successful.</p>
-     * <p>*   `false`: The modification fails.</p>
+     * <ul>
+     * <li><code>true</code>: The modification is successful.</li>
+     * <li><code>false</code>: The modification fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16AF921B-8187-489F-9913-43C808B4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

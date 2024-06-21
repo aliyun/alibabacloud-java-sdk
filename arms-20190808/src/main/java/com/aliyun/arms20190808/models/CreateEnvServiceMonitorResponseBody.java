@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateEnvServiceMonitorResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
     public static class CreateEnvServiceMonitorResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether targets are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Match successful.</p>
          */
         @NameInMap("MatchedMsg")
         public String matchedMsg;
 
         /**
          * <p>The number of matched targets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MatchedTargetCount")
         public Integer matchedTargetCount;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The name of the created ServiceMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-admin1</p>
          */
         @NameInMap("ServiceMonitorName")
         public String serviceMonitorName;

@@ -12,6 +12,9 @@ public class ListAlertsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,52 @@ public class ListAlertsResponseBody extends TeaModel {
     public static class ListAlertsResponseBodyPageBeanListAlertsActivities extends TeaModel {
         /**
          * <p>The content of the alert notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[Notification policy: Send notifications to DingTalk groups] Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The description of the activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[Alert Claimed] The alert is claimed</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>O\&amp;M Engineer A</p>
          */
         @NameInMap("HandlerName")
         public String handlerName;
 
         /**
          * <p>The operation time of the activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20 19:08:57</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The type of the activity. Valid values:</p>
-         * <br>
-         * <p>*   1: The alert is claimed.</p>
-         * <p>*   2: The alert is disclaimed.</p>
-         * <p>*   3: A comment is added for the alert.</p>
-         * <p>*   4: The alert is disabled.</p>
-         * <p>*   5: An alert notification is sent.</p>
+         * <ul>
+         * <li>1: The alert is claimed.</li>
+         * <li>2: The alert is disclaimed.</li>
+         * <li>3: A comment is added for the alert.</li>
+         * <li>4: The alert is disabled.</li>
+         * <li>5: An alert notification is sent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Long type;
@@ -124,101 +143,140 @@ public class ListAlertsResponseBody extends TeaModel {
     public static class ListAlertsResponseBodyPageBeanListAlertsAlertEvents extends TeaModel {
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-triggered alert</p>
          */
         @NameInMap("AlertName")
         public String alertName;
 
         /**
          * <p>The annotations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;_aliyun_arms_alert_value&quot;:&quot;4.0&quot; &quot;_aliyun_arms_alert_traceId&quot;:&quot;ac10c43116421327442277073d5461-105075299&quot;}</p>
          */
         @NameInMap("Annotations")
         public String annotations;
 
         /**
          * <p>The description of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the event ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-19 17:10:31</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The URL of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://arms.console.aliyun.com">http://arms.console.aliyun.com</a></p>
          */
         @NameInMap("GeneratorURL")
         public String generatorURL;
 
         /**
          * <p>The name of the integration that corresponds to the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ARMS</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;
 
         /**
          * <p>The type of the integration that corresponds to the alert event. Valid values:</p>
-         * <br>
-         * <p>*   ARMS</p>
-         * <p>*   CLOUD_MONITOR</p>
-         * <p>*   MSE</p>
-         * <p>*   ARMS_CLOUD_DIALTEST</p>
-         * <p>*   PROMETHEUS</p>
-         * <p>*   LOG_SERVICE</p>
-         * <p>*   CUSTOM</p>
-         * <p>*   ARMS_PROMETHEUS</p>
-         * <p>*   ARMS_APP_MON</p>
-         * <p>*   ARMS_FRONT_MON</p>
-         * <p>*   ARMS_CUSTOM</p>
-         * <p>*   XTRACE</p>
-         * <p>*   GRAFANA</p>
-         * <p>*   ZABBIX</p>
-         * <p>*   SKYWALKING</p>
-         * <p>*   EVENT_BRIDGE</p>
-         * <p>*   NAGIOS</p>
-         * <p>*   OPENFALCON</p>
-         * <p>*   ARMS_INSIGHTS</p>
+         * <ul>
+         * <li>ARMS</li>
+         * <li>CLOUD_MONITOR</li>
+         * <li>MSE</li>
+         * <li>ARMS_CLOUD_DIALTEST</li>
+         * <li>PROMETHEUS</li>
+         * <li>LOG_SERVICE</li>
+         * <li>CUSTOM</li>
+         * <li>ARMS_PROMETHEUS</li>
+         * <li>ARMS_APP_MON</li>
+         * <li>ARMS_FRONT_MON</li>
+         * <li>ARMS_CUSTOM</li>
+         * <li>XTRACE</li>
+         * <li>GRAFANA</li>
+         * <li>ZABBIX</li>
+         * <li>SKYWALKING</li>
+         * <li>EVENT_BRIDGE</li>
+         * <li>NAGIOS</li>
+         * <li>OPENFALCON</li>
+         * <li>ARMS_INSIGHTS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ARMS_APP_MON</p>
          */
         @NameInMap("IntegrationType")
         public String integrationType;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;severity&quot;:&quot;warning&quot; &quot;_aliyun_arms_alert_level&quot;:&quot;ERROR&quot; &quot;_aliyun_arms_entropy&quot;:&quot;0.30170457417889235&quot;}</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
          * <p>The time when the event was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-19 17:05:42</p>
          */
         @NameInMap("ReceiveTime")
         public String receiveTime;
 
         /**
          * <p>The severity level of the event. Valid values:</p>
-         * <br>
-         * <p>*   critical</p>
-         * <p>*   error</p>
-         * <p>*   warning</p>
-         * <p>*   info</p>
+         * <ul>
+         * <li>critical</li>
+         * <li>error</li>
+         * <li>warning</li>
+         * <li>info</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>warning</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The time when the event started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-18 00:14:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the event. Valid values:</p>
-         * <br>
-         * <p>*   Active: The event is not cleared.</p>
-         * <p>*   Silenced: The event is silenced.</p>
-         * <p>*   Resolved: The event is cleared.</p>
+         * <ul>
+         * <li>Active: The event is not cleared.</li>
+         * <li>Silenced: The event is silenced.</li>
+         * <li>Resolved: The event is cleared.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("State")
         public String state;
@@ -344,18 +402,27 @@ public class ListAlertsResponseBody extends TeaModel {
 
         /**
          * <p>The alert ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2279</p>
          */
         @NameInMap("AlertId")
         public Long alertId;
 
         /**
          * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test alert</p>
          */
         @NameInMap("AlertName")
         public String alertName;
 
         /**
          * <p>The time when the alert was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-18 00:21:35</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -365,12 +432,18 @@ public class ListAlertsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("DispatchRuleId")
         public Float dispatchRuleId;
 
         /**
          * <p>The name of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk Notification</p>
          */
         @NameInMap("DispatchRuleName")
         public String dispatchRuleName;
@@ -389,22 +462,32 @@ public class ListAlertsResponseBody extends TeaModel {
 
         /**
          * <p>The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P6</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The Alert solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--</p>
          */
         @NameInMap("Solution")
         public String solution;
 
         /**
          * <p>The status of the alert. Valid values:</p>
-         * <br>
-         * <p>*   0: The alert is pending.</p>
-         * <p>*   1: The alert is being handled.</p>
-         * <p>*   2: The alert is handled.</p>
+         * <ul>
+         * <li>0: The alert is pending.</li>
+         * <li>1: The alert is being handled.</li>
+         * <li>2: The alert is handled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("State")
         public Long state;
@@ -553,18 +636,27 @@ public class ListAlertsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of alerts returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of queried alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class GetPrometheusInstanceResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Data")
     public GetPrometheusInstanceResponseBodyData data;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52C422FD-6B43-524D-B8A1-A4693294318C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,13 +76,19 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The tag key of the instance.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the instance.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagValue1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -103,123 +118,211 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>auth token string.</p>
+         * <p>权限类型：
+         * readWrite、readOnly、httpReadOnly</p>
+         * 
+         * <strong>example:</strong>
+         * <p>readWrite</p>
+         */
+        @NameInMap("AccessType")
+        public String accessType;
+
+        /**
+         * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("ArchiveDuration")
+        public Integer archiveDuration;
+
+        /**
+         * <p>Authorization token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GciOiJIUzI1NiJ9***</p>
          */
         @NameInMap("AuthToken")
         public String authToken;
 
         /**
          * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the monitoring object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prom1</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>*   remote-write: Prometheus instance for Remote Write</p>
-         * <p>*   ecs: Prometheus instances for ECS</p>
-         * <p>*   cloud-monitor: Prometheus instance for cloud services (Chinese mainland)</p>
-         * <p>*   cloud-monitor: Prometheus instance for cloud services (regions outside the Chinese mainland)</p>
-         * <p>*   global-view: Prometheus instance for GlobalView</p>
-         * <p>*   aliyun-cs: Prometheus instance for Container Service</p>
+         * <ul>
+         * <li>remote-write: general-purpose Prometheus instance</li>
+         * <li>ecs: Prometheus instances for ECS</li>
+         * <li>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</li>
+         * <li>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</li>
+         * <li>global-view: global aggregation instance</li>
+         * <li>aliyun-cs: Prometheus instance for Container Service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>remote-write</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The ID of the Grafana workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-rnggfvhlcdl6m71***</p>
          */
         @NameInMap("GrafanaInstanceId")
         public String grafanaInstanceId;
 
         /**
-         * <p>http api internet url.</p>
+         * <p>Http API internet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx">https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx</a></p>
          */
         @NameInMap("HttpApiInterUrl")
         public String httpApiInterUrl;
 
         /**
-         * <p>http api intranet url.</p>
+         * <p>Http API intranet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx</a></p>
          */
         @NameInMap("HttpApiIntraUrl")
         public String httpApiIntraUrl;
 
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   PREPAY: subscription</p>
-         * <p>*   POSTPAY: pay-as-you-go</p>
+         * <ul>
+         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         @NameInMap("PaymentType")
         public String paymentType;
 
         /**
-         * <p>push gateway internet url.</p>
+         * <p>Push gateway internet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
          */
         @NameInMap("PushGatewayInterUrl")
         public String pushGatewayInterUrl;
 
         /**
-         * <p>push gateway intranet url.</p>
+         * <p>Push gateway intranet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
          */
         @NameInMap("PushGatewayIntraUrl")
         public String pushGatewayIntraUrl;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>remote read internet url.</p>
+         * <p>Remote read internet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
          */
         @NameInMap("RemoteReadInterUrl")
         public String remoteReadInterUrl;
 
         /**
-         * <p>remote read intranet url.</p>
+         * <p>Remote read intranet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
          */
         @NameInMap("RemoteReadIntraUrl")
         public String remoteReadIntraUrl;
 
         /**
-         * <p>remote write internet url.</p>
+         * <p>Remote write internet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
          */
         @NameInMap("RemoteWriteInterUrl")
         public String remoteWriteInterUrl;
 
         /**
-         * <p>remote write intranet url.</p>
+         * <p>Remote write intranet address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
          */
         @NameInMap("RemoteWriteIntraUrl")
         public String remoteWriteIntraUrl;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2vezare****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The type of the resource. Set the value to PROMETHEUS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMETHEUS</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The ID of the security group. This parameter is returned only for Prometheus instances for ECS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-8vbdgmf4nraiqa9bx0jo</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
+         * <p>The data storage duration. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
+        @NameInMap("StorageDuration")
+        public Integer storageDuration;
+
+        /**
          * <p>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73\<em>\</em>\<em>&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5\<em>\</em>\<em>\</em>&quot;,&quot;sourceName&quot;:&quot;agent-321-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899\<em>\</em>\<em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;}]</p>
          */
         @NameInMap("SubClustersJson")
         public String subClustersJson;
@@ -232,18 +335,27 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167275301789****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID. This parameter is returned only for Prometheus instances for ECS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-f8z73vcja1tqnw90aav5a</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The virtual private cloud (VPC) where the monitoring object resides.</p>
+         * <p>The VPC ID. This parameter is returned only for Prometheus instances for ECS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vb02uk57qbcktqcvqqqj</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -251,6 +363,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public static GetPrometheusInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetPrometheusInstanceResponseBodyData self = new GetPrometheusInstanceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetPrometheusInstanceResponseBodyData setAccessType(String accessType) {
+            this.accessType = accessType;
+            return this;
+        }
+        public String getAccessType() {
+            return this.accessType;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setArchiveDuration(Integer archiveDuration) {
+            this.archiveDuration = archiveDuration;
+            return this;
+        }
+        public Integer getArchiveDuration() {
+            return this.archiveDuration;
         }
 
         public GetPrometheusInstanceResponseBodyData setAuthToken(String authToken) {
@@ -395,6 +523,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setStorageDuration(Integer storageDuration) {
+            this.storageDuration = storageDuration;
+            return this;
+        }
+        public Integer getStorageDuration() {
+            return this.storageDuration;
         }
 
         public GetPrometheusInstanceResponseBodyData setSubClustersJson(String subClustersJson) {

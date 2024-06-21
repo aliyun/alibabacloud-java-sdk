@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnvironmentResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,13 +76,19 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p_dev</p>
          */
         @NameInMap("Value")
         public String value;
@@ -104,121 +119,263 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
     public static class DescribeEnvironmentResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxx</p>
          */
         @NameInMap("BindResourceId")
         public String bindResourceId;
 
         /**
          * <p>The profile of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("BindResourceProfile")
         public String bindResourceProfile;
 
         /**
          * <p>The status of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("BindResourceStatus")
         public String bindResourceStatus;
 
         /**
          * <p>The retention period of the resource. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("BindResourceStoreDuration")
         public String bindResourceStoreDuration;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("BindResourceType")
         public String bindResourceType;
 
         /**
          * <p>The VPC CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         @NameInMap("BindVpcCidr")
         public String bindVpcCidr;
 
         /**
+         * <p>The status of the database that is bound to the Prometheus instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>UNINSTALLING</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>INSTALLING</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>UNINSTALLED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>RUNNING</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>MODIFYING</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
+        @NameInMap("DbInstanceStatus")
+        public String dbInstanceStatus;
+
+        /**
          * <p>The ID of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>The environment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env1</p>
          */
         @NameInMap("EnvironmentName")
         public String environmentName;
 
         /**
          * <p>Environment subtypes:</p>
-         * <p>- CS: Currently supports ACK.</p>
-         * <p>- ECS: ECS is currently supported.</p>
-         * <p>- Cloud: Currently supports Cloud.</p>
+         * <ul>
+         * <li>CS: Currently supports ACK.</li>
+         * <li>ECS: ECS is currently supported.</li>
+         * <li>Cloud: Currently supports Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         @NameInMap("EnvironmentSubType")
         public String environmentSubType;
 
         /**
          * <p>The type of the environment. Valid values:</p>
-         * <br>
-         * <p>*   CS: Container Service for Kubernetes (ACK)</p>
-         * <p>*   ECS: Elastic Compute Service</p>
-         * <p>*   Cloud: cloud service</p>
+         * <ul>
+         * <li>CS: Container Service for Kubernetes (ACK)</li>
+         * <li>ECS: Elastic Compute Service</li>
+         * <li>Cloud: cloud service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         @NameInMap("EnvironmentType")
         public String environmentType;
 
         /**
+         * <p>The payable resource plan. Valid values:</p>
+         * <ul>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.</li>
+         * <li>Otherwise, leave the parameter empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CS_Basic</p>
+         */
+        @NameInMap("FeePackage")
+        public String feePackage;
+
+        /**
          * <p>The name of the Grafana data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datasource1</p>
          */
         @NameInMap("GrafaDataSourceName")
         public String grafaDataSourceName;
 
         /**
          * <p>The unique ID of the Grafana data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zuvw</p>
          */
         @NameInMap("GrafanaDatasourceUid")
         public String grafanaDatasourceUid;
 
         /**
          * <p>The name of the Grafana directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>folder1</p>
          */
         @NameInMap("GrafanaFolderTitle")
         public String grafanaFolderTitle;
 
         /**
          * <p>The unique ID of the Grafana directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xyz</p>
          */
         @NameInMap("GrafanaFolderUid")
         public String grafanaFolderUid;
 
         /**
          * <p>The URL of the Grafana directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://g.console.aliyun.com/dashboards/f/xxx/yyyy">https://g.console.aliyun.com/dashboards/f/xxx/yyyy</a></p>
          */
         @NameInMap("GrafanaFolderUrl")
         public String grafanaFolderUrl;
 
         /**
+         * <p>grafana工作区id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grafana-cn-27a3m8eem0a</p>
+         */
+        @NameInMap("GrafanaWorkspaceId")
+        public String grafanaWorkspaceId;
+
+        /**
+         * <p>managed type:</p>
+         * <ul>
+         * <li>none: unmanaged. The default value for ACK clusters.</li>
+         * <li>agent: managed agent (including KSM). The default values for ASK, ACS, and AckOne clusters.</li>
+         * <li>agent-exporter: managed agent and exporters. The default value for the cloud service type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("ManagedType")
+        public String managedType;
+
+        /**
          * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxyyyyyzzzzz</p>
          */
         @NameInMap("PrometheusInstanceId")
         public String prometheusInstanceId;
 
         /**
          * <p>The name of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name1</p>
          */
         @NameInMap("PrometheusInstanceName")
         public String prometheusInstanceName;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2vezare****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -231,12 +388,18 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13002222xxxx</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>VPC ID.</p>
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vb02uk57qbcktqcvqqqj</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -294,6 +457,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             return this.bindVpcCidr;
         }
 
+        public DescribeEnvironmentResponseBodyData setDbInstanceStatus(String dbInstanceStatus) {
+            this.dbInstanceStatus = dbInstanceStatus;
+            return this;
+        }
+        public String getDbInstanceStatus() {
+            return this.dbInstanceStatus;
+        }
+
         public DescribeEnvironmentResponseBodyData setEnvironmentId(String environmentId) {
             this.environmentId = environmentId;
             return this;
@@ -324,6 +495,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
         public String getEnvironmentType() {
             return this.environmentType;
+        }
+
+        public DescribeEnvironmentResponseBodyData setFeePackage(String feePackage) {
+            this.feePackage = feePackage;
+            return this;
+        }
+        public String getFeePackage() {
+            return this.feePackage;
         }
 
         public DescribeEnvironmentResponseBodyData setGrafaDataSourceName(String grafaDataSourceName) {
@@ -364,6 +543,22 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
         public String getGrafanaFolderUrl() {
             return this.grafanaFolderUrl;
+        }
+
+        public DescribeEnvironmentResponseBodyData setGrafanaWorkspaceId(String grafanaWorkspaceId) {
+            this.grafanaWorkspaceId = grafanaWorkspaceId;
+            return this;
+        }
+        public String getGrafanaWorkspaceId() {
+            return this.grafanaWorkspaceId;
+        }
+
+        public DescribeEnvironmentResponseBodyData setManagedType(String managedType) {
+            this.managedType = managedType;
+            return this;
+        }
+        public String getManagedType() {
+            return this.managedType;
         }
 
         public DescribeEnvironmentResponseBodyData setPrometheusInstanceId(String prometheusInstanceId) {

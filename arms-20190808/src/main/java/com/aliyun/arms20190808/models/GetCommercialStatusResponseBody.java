@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCommercialStatusResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49C82193-E991-5F6A-AF3E-1664D8D05CA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,24 +38,52 @@ public class GetCommercialStatusResponseBody extends TeaModel {
     }
 
     public static class GetCommercialStatusResponseBodyUserAndCommodityStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Basic")
         public Boolean basic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>usage</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>info</p>
+         */
         @NameInMap("ExtraInfo")
         public java.util.Map<String, ?> extraInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FreeDays")
         public Long freeDays;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NEW</p>
+         */
         @NameInMap("Lable")
         public String lable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteContactRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteContact**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>DeleteContact</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ContactId")
     public Long contactId;

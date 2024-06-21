@@ -12,6 +12,9 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>337B8F7E-0A64-5768-9225-E9B3CF******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,44 +43,61 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesAlertRuleContentAlertRuleItems extends TeaModel {
         /**
          * <p>The aggregation method of the alert condition. Valid values:</p>
-         * <br>
-         * <p>*   AVG: calculates the average value</p>
-         * <p>*   SUM: calculates the total value</p>
-         * <p>*   MAX: selects the maximum value</p>
-         * <p>*   MIN: selects the minimum value</p>
+         * <ul>
+         * <li>AVG: calculates the average value</li>
+         * <li>SUM: calculates the total value</li>
+         * <li>MAX: selects the maximum value</li>
+         * <li>MIN: selects the minimum value</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         @NameInMap("Aggregate")
         public String aggregate;
 
         /**
          * <p>The metric of the alert condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstat.jvm.non_heap_used</p>
          */
         @NameInMap("MetricKey")
         public String metricKey;
 
         /**
          * <p>Indicates the last N minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("N")
-        public Float n;
+        public Long n;
 
         /**
          * <p>The comparison operator that was used to compare the metric value with the threshold. Valid values:</p>
-         * <br>
-         * <p>*   CURRENT_GTE: greater than or equal to</p>
-         * <p>*   CURRENT_LTE: less than or equal to</p>
-         * <p>*   PREVIOUS_UP: the increase percentage compared with the last period</p>
-         * <p>*   PREVIOUS_DOWN: the decrease percentage compared with the last period</p>
-         * <p>*   HOH_UP: the increase percentage compared with the last hour</p>
-         * <p>*   HOH_DOWN: the decrease percentage compared with the last hour</p>
-         * <p>*   DOD_UP: the increase percentage compared with the last day</p>
-         * <p>*   DOD_DOWN: the decrease percentage compared with the last day</p>
+         * <ul>
+         * <li>CURRENT_GTE: greater than or equal to</li>
+         * <li>CURRENT_LTE: less than or equal to</li>
+         * <li>PREVIOUS_UP: the increase percentage compared with the last period</li>
+         * <li>PREVIOUS_DOWN: the decrease percentage compared with the last period</li>
+         * <li>HOH_UP: the increase percentage compared with the last hour</li>
+         * <li>HOH_DOWN: the decrease percentage compared with the last hour</li>
+         * <li>DOD_UP: the increase percentage compared with the last day</li>
+         * <li>DOD_DOWN: the decrease percentage compared with the last day</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CURRENT_GTE</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The threshold of the alert condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -103,11 +123,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             return this.metricKey;
         }
 
-        public GetAlertRulesResponseBodyPageBeanAlertRulesAlertRuleContentAlertRuleItems setN(Float n) {
+        public GetAlertRulesResponseBodyPageBeanAlertRulesAlertRuleContentAlertRuleItems setN(Long n) {
             this.n = n;
             return this;
         }
-        public Float getN() {
+        public Long getN() {
             return this.n;
         }
 
@@ -138,9 +158,13 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
         /**
          * <p>The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:</p>
-         * <br>
-         * <p>*   OR: meets any of the specified conditions.</p>
-         * <p>*   AND: meets all the specified conditions.</p>
+         * <ul>
+         * <li>OR: meets any of the specified conditions.</li>
+         * <li>AND: meets all the specified conditions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         @NameInMap("Condition")
         public String condition;
@@ -171,12 +195,18 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesAnnotations extends TeaModel {
         /**
          * <p>The key of the annotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the annotation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Value")
         public String value;
@@ -207,33 +237,49 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesFiltersCustomSLSFilters extends TeaModel {
         /**
          * <p>The key of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The logical operator of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   \=: equal to</p>
-         * <p>*   not: not equal to</p>
+         * <ul>
+         * <li>\=: equal to</li>
+         * <li>not: not equal to</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         @NameInMap("Opt")
         public String opt;
 
         /**
          * <p>Indicates whether this filter condition was displayed on the frontend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Show")
         public Boolean show;
 
         /**
          * <p>Indicates the log type of Browser Monitoring. This field was not included in other filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("T")
         public String t;
 
         /**
          * <p>The value of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -288,12 +334,18 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesFiltersDimFilters extends TeaModel {
         /**
          * <p>The key of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rootIp</p>
          */
         @NameInMap("FilterKey")
         public String filterKey;
 
         /**
          * <p>The logical operator of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("FilterOpt")
         public String filterOpt;
@@ -402,12 +454,18 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesLabels extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Value")
         public String value;
@@ -438,12 +496,18 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("Value")
         public String value;
@@ -474,31 +538,45 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static class GetAlertRulesResponseBodyPageBeanAlertRules extends TeaModel {
         /**
          * <p>The alert check type of the Prometheus alert rule. Valid values:</p>
-         * <br>
-         * <p>*   STATIC: static threshold value</p>
-         * <p>*   CUSTOM: custom PromQL statement</p>
+         * <ul>
+         * <li>STATIC: static threshold value</li>
+         * <li>CUSTOM: custom PromQL statement</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STATIC</p>
          */
         @NameInMap("AlertCheckType")
         public String alertCheckType;
 
         /**
          * <p>The ID of the alert contact group to which the alert rule belongs. Valid values:</p>
-         * <br>
-         * <p>*   \-1: custom PromQL</p>
-         * <p>*   1: Kubernetes load</p>
-         * <p>*   15: Kubernetes node</p>
+         * <ul>
+         * <li>\-1: custom PromQL</li>
+         * <li>1: Kubernetes load</li>
+         * <li>15: Kubernetes node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AlertGroup")
         public Long alertGroup;
 
         /**
          * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5730***</p>
          */
         @NameInMap("AlertId")
-        public Float alertId;
+        public Long alertId;
 
         /**
          * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-test</p>
          */
         @NameInMap("AlertName")
         public String alertName;
@@ -511,22 +589,31 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
         /**
          * <p>The status of the alert rule. Valid values:</p>
-         * <br>
-         * <p>*   RUNNING</p>
-         * <p>*   STOPPED</p>
-         * <p>*   PAUSED</p>
-         * <br>
-         * <p>> The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>STOPPED</li>
+         * <li>PAUSED</li>
+         * </ul>
+         * <blockquote>
+         * <p>The <strong>PAUSED</strong> status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("AlertStatus")
         public String alertStatus;
 
         /**
          * <p>The type of the alert rule.</p>
-         * <br>
-         * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
-         * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
-         * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</p>
+         * <ul>
+         * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
+         * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
+         * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>APPLICATION_MONITORING_ALERT_RULE</p>
          */
         @NameInMap("AlertType")
         public String alertType;
@@ -539,35 +626,52 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoAddNewApplication")
         public Boolean autoAddNewApplication;
 
         /**
          * <p>The cluster ID of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceba9b9ea5b924dd0b6726d2de6******</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The time when the alert rule was created. The value is a timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640333981000</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
          * <p>The duration of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The extended fields.</p>
-         * <br>
-         * <p>> For existing Application Monitoring alert rules, the fields contained information such as contacts, alert template, and notification content.</p>
+         * <blockquote>
+         * <p>For existing Application Monitoring alert rules, the fields contained information such as contacts, alert template, and notification content.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{\\&quot;alarmContext\\&quot;:\\&quot;{\\\\\&quot;content\\\\\&quot;:\\\\Alert name: $Alert name\\\\\\nFilter condition: $Filter condition\\\\\\nAlert time: $Alert time\\\\\\nAlert content: $Alert content\\\\\\nNote: The alert persists before you receive an email that reminds you to clear the alert. You will be reminded of the alert again 24 hours later. \\\\\&quot;,\\\\\&quot;subTitle\\\\\&quot;:\\\\\&quot;\\\\\&quot;}\\&quot;,\\&quot;alertWays\\&quot;:\\&quot;[0,1]\\&quot;,\\&quot;contactGroupIds\\&quot;:\\&quot;381,5075\\&quot;,\\&quot;notice\\&quot;:\\&quot;{\\\\\&quot;endTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeEndTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeStartTime\\\\\&quot;:1480521600000,\\\\\&quot;startTime\\\\\&quot;:1480521600000}\\&quot;}</p>
          */
         @NameInMap("Extend")
         public String extend;
@@ -586,30 +690,43 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
         /**
          * <p>The severity level of the Prometheus alert rule.</p>
-         * <br>
-         * <p>*   P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</p>
-         * <p>*   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
-         * <p>*   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
-         * <p>*   P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
-         * <p>*   Default: Alert notifications are sent regardless of alert levels.</p>
+         * <ul>
+         * <li>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</li>
+         * <li>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</li>
+         * <li>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</li>
+         * <li>P4: Alert notifications are sent for low-priority issues that do not affect your business.</li>
+         * <li>Default: Alert notifications are sent regardless of alert levels.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>P2</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>The alert message of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Namespace: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / Container: {{$labels.container}} CPU usage: {{$labels.metrics_params_opt_label_value}} {{$labels.metrics_params_value}}%. Current value: {{ printf &quot;%.2f&quot; $value }}%</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The metric type of the Application Monitoring or Browser Monitoring alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JVM</p>
          */
         @NameInMap("MetricsType")
         public String metricsType;
 
         /**
          * <p>The name of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALERT_MANAGER</p>
          */
         @NameInMap("NotifyStrategy")
         public String notifyStrategy;
@@ -622,12 +739,18 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
         /**
          * <p>The PromQL statement of the Prometheus alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_memory_MemAvailable_bytes{} / node_memory_MemTotal_bytes{} * 100</p>
          */
         @NameInMap("PromQL")
         public String promQL;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -640,12 +763,18 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the alert rule was updated. The value is a timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640333981000</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1131971649******</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -671,11 +800,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             return this.alertGroup;
         }
 
-        public GetAlertRulesResponseBodyPageBeanAlertRules setAlertId(Float alertId) {
+        public GetAlertRulesResponseBodyPageBeanAlertRules setAlertId(Long alertId) {
             this.alertId = alertId;
             return this;
         }
-        public Float getAlertId() {
+        public Long getAlertId() {
             return this.alertId;
         }
 
@@ -866,18 +995,27 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
         /**
          * <p>The number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of alert rules returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of queried alert rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16AF921B-8187-489F-9913-43C808B4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     public static class CreateOrUpdateWebhookContactResponseBodyWebhookContactWebhook extends TeaModel {
         /**
          * <p>The HTTP request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Content-Type&quot;:&quot;application/json;charset=utf-8&quot;}]</p>
          */
         @NameInMap("BizHeaders")
         public String bizHeaders;
 
         /**
          * <p>The parameters in the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;content&quot;:&quot;mike&quot;}]</p>
          */
         @NameInMap("BizParams")
         public String bizParams;
 
         /**
          * <p>The alert notification template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         @NameInMap("Body")
         public String body;
 
         /**
          * <p>The HTTP request method.</p>
-         * <br>
-         * <p>*   Post</p>
-         * <p>*   Get</p>
+         * <ul>
+         * <li>Post</li>
+         * <li>Get</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Post</p>
          */
         @NameInMap("Method")
         public String method;
 
         /**
          * <p>The notification template for clearing alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
          */
         @NameInMap("RecoverBody")
         public String recoverBody;
 
         /**
          * <p>The URL of the request method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
          */
         @NameInMap("Url")
         public String url;
@@ -141,12 +163,18 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the webhook alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("WebhookId")
         public Float webhookId;
 
         /**
          * <p>The name of the webhook alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Webhook alert</p>
          */
         @NameInMap("WebhookName")
         public String webhookName;

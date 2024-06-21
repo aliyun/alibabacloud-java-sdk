@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateAlertContactGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9319A57D-2D9E-472A-B69B-CF3CD16D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

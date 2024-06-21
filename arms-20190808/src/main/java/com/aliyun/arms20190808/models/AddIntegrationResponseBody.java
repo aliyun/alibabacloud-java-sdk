@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class AddIntegrationResponseBody extends TeaModel {
     /**
      * <p>状态码。200为成功，其他状态码为异常。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>Indicates whether the integration was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>返回结果的提示信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

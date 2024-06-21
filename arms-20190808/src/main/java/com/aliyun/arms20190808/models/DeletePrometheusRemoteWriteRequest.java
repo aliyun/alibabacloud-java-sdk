@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class DeletePrometheusRemoteWriteRequest extends TeaModel {
     /**
      * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b\<em>\</em>\<em>\</em> or vpc-xxxx</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The names of the remote write configuration items that you want to delete. Separate configuration items with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name1,name2</p>
      */
     @NameInMap("RemoteWriteNames")
     public String remoteWriteNames;

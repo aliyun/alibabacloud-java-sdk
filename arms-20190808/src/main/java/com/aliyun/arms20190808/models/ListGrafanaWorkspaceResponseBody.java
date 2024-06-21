@@ -4,21 +4,41 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListGrafanaWorkspaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public java.util.List<GrafanaWorkspace> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0080BE65-167F-5CB6-A691-14E2EFD474BC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eac0a8048716731735000007137d000b</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 

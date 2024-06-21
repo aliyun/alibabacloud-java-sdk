@@ -4,9 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceUserCert extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8096753</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cert-7700050 [grafana.tongtong-max.cn]</p>
+     */
     @NameInMap("name")
     public String name;
 

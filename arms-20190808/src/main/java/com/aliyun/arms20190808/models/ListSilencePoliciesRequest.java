@@ -5,28 +5,52 @@ import com.aliyun.tea.*;
 
 public class ListSilencePoliciesRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **ListSilencePolicies**.</p>
+     * <p>Specifies whether to query the details of a silence policy. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Details of the silence policy are queried.</li>
+     * <li><code>false</code>: Details about notification policies are not queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
     /**
-     * <p>An array of matching condition objects.</p>
+     * <p>The name of the silence policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>silencepolicy_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the silence policy.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Size")
     public Long size;

@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ListTraceAppsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned for the request. Valid values:</p>
-     * <br>
-     * <p>*   `2XX`: The request is successful.</p>
-     * <p>*   `3XX`: A redirection message is returned.</p>
-     * <p>*   `4XX`: The request is invalid.</p>
-     * <p>*   `5XX`: A server error occurs.</p>
+     * <ul>
+     * <li><code>2XX</code>: The request is successful.</li>
+     * <li><code>3XX</code>: A redirection message is returned.</li>
+     * <li><code>4XX</code>: The request is invalid.</li>
+     * <li><code>5XX</code>: A server error occurs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The error message returned if the request parameters are invalid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Internal error. Please try again. Contact the DingTalk service account if the issue persists after multiple retries.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,12 +104,18 @@ public class ListTraceAppsResponseBody extends TeaModel {
     public static class ListTraceAppsResponseBodyTraceAppsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -126,24 +146,36 @@ public class ListTraceAppsResponseBody extends TeaModel {
     public static class ListTraceAppsResponseBodyTraceApps extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1529667762000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -156,45 +188,67 @@ public class ListTraceAppsResponseBody extends TeaModel {
 
         /**
          * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHP</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The process identifier (PID) of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5f9bdeb-2627-4dbe-9247-****</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource group</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Show")
         public Boolean show;
 
         /**
          * <p>The source of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         @NameInMap("Source")
         public String source;
@@ -207,33 +261,49 @@ public class ListTraceAppsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the monitoring task. Valid values:</p>
-         * <br>
-         * <p>*   `TRACE`: Application Monitoring</p>
-         * <p>*   `RETCODE`: Browser Monitoring</p>
+         * <ul>
+         * <li><code>TRACE</code>: Application Monitoring</li>
+         * <li><code>RETCODE</code>: Browser Monitoring</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The time when the monitoring task was updated. The value is a timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1529667762000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The type of the workload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployment</p>
          */
         @NameInMap("WorkloadKind")
         public String workloadKind;
 
         /**
          * <p>The name of the workload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx-deployment</p>
          */
         @NameInMap("WorkloadName")
         public String workloadName;

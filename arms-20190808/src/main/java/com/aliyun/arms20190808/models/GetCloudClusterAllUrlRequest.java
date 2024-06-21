@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetCloudClusterAllUrlRequest extends TeaModel {
     /**
      * <p>The ID of the CloudMonitor instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca9676014babd4</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;

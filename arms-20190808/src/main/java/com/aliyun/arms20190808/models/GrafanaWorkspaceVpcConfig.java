@@ -4,33 +4,69 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceVpcConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fc、ansm</p>
+     */
     @NameInMap("fcConfig")
     public String fcConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
     @NameInMap("installMsg")
     public String installMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateSucceed</p>
+     */
     @NameInMap("installStatus")
     public String installStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>北京VPC-A通道</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-6we94uvybteyc******</p>
+     */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10983***********</p>
+     */
     @NameInMap("userId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-6we3**********</p>
+     */
     @NameInMap("vSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-6wehr2x**********</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

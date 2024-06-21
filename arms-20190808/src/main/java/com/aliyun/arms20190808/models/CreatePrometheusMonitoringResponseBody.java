@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreatePrometheusMonitoringResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The name of the monitoring configuration that was added, or the exception information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name1</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

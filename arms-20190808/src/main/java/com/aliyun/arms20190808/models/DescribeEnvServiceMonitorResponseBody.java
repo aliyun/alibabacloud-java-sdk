@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,36 +77,54 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
     public static class DescribeEnvServiceMonitorResponseBodyData extends TeaModel {
         /**
          * <p>The YAML configuration string of the ServiceMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
          * <p>The ID of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the ServiceMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serviceMonitor1</p>
          */
         @NameInMap("ServiceMonitorName")
         public String serviceMonitorName;
 
         /**
          * <p>The status of the ServiceMonitor. Valid values: run and stop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;

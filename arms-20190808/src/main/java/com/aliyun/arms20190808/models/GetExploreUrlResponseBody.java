@@ -9,6 +9,11 @@ public class GetExploreUrlResponseBody extends TeaModel {
 
     /**
      * <p>Response parameters</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Data")
     public String data;
@@ -18,6 +23,9 @@ public class GetExploreUrlResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

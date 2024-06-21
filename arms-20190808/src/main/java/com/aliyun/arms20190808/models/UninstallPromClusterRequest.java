@@ -6,20 +6,33 @@ import com.aliyun.tea.*;
 public class UninstallPromClusterRequest extends TeaModel {
     /**
      * <p>Language environment(If left blank, defaults to zh):</p>
-     * <p>- zh</p>
-     * <p>- en</p>
+     * <ul>
+     * <li>zh</li>
+     * <li>en</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c0bad479465464e1d8c1e641b0afb****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The region ID. Default value: cn-hangzhou.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

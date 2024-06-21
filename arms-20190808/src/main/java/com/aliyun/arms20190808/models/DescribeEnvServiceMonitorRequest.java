@@ -6,24 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeEnvServiceMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the environment instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxxxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The namespace where the ServiceMonitor is located.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-prom</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the ServiceMonitor.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-admin1</p>
      */
     @NameInMap("ServiceMonitorName")
     public String serviceMonitorName;

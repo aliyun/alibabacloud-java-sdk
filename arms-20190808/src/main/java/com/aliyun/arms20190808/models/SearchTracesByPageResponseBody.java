@@ -12,6 +12,9 @@ public class SearchTracesByPageResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C518054-852F-4023-ABC1-4AF95FF7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     public static class SearchTracesByPageResponseBodyPageBeanTraceInfos extends TeaModel {
         /**
          * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>679</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
         /**
          * <p>The name of the traced span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/demo/queryException/12</p>
          */
         @NameInMap("OperationName")
         public String operationName;
 
         /**
          * <p>The IP address of the host where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.XX.XX</p>
          */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-k8s-demo-subcomponent</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595174436994</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1400a115951744369947025d****</p>
          */
         @NameInMap("TraceID")
         public String traceID;
@@ -132,18 +153,27 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     public static class SearchTracesByPageResponseBodyPageBean extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1601</p>
          */
         @NameInMap("Total")
         public Integer total;

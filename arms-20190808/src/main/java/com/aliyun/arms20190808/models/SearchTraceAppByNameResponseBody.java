@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SearchTraceAppByNameResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     public static class SearchTraceAppByNameResponseBodyTraceAppsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,18 +85,27 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     public static class SearchTraceAppByNameResponseBodyTraceApps extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The timestamp generated when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593486786000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -100,27 +118,40 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
 
         /**
          * <p>The process identifier (PID) of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5f9bdeb-2627-4dbe-9247-****</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Show")
         public Boolean show;
@@ -133,21 +164,31 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
 
         /**
          * <p>The type of the monitoring task. Valid values:</p>
-         * <br>
-         * <p>*   `TRACE`: Application Monitoring</p>
-         * <p>*   `RETCODE`: Browser Monitoring</p>
+         * <ul>
+         * <li><code>TRACE</code>: Application Monitoring</li>
+         * <li><code>RETCODE</code>: Browser Monitoring</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The timestamp generated when the task information was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593486786000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;

@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class DeleteAlertRuleRequest extends TeaModel {
     /**
      * <p>Indicates whether the alert rule was successfully deleted.</p>
-     * <br>
-     * <p>*   `true`: The specified data is deleted.</p>
-     * <p>*   `false`: The specified data fails to be deleted.</p>
+     * <ul>
+     * <li><code>true</code>: The specified data is deleted.</li>
+     * <li><code>false</code>: The specified data fails to be deleted.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("AlertId")
     public Long alertId;

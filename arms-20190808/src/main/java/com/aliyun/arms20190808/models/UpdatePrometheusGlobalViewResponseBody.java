@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
     /**
      * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
     public static class UpdatePrometheusGlobalViewResponseBodyDataFailedInstances extends TeaModel {
         /**
          * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdb65ed2d527345*********</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sourcename-test</p>
          */
         @NameInMap("SourceName")
         public String sourceName;
 
         /**
          * <p>The type of the data source. AlibabaPrometheus MetricStore CustomPrometheus</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlibabaPrometheus</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23784673825*******</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -138,9 +159,13 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

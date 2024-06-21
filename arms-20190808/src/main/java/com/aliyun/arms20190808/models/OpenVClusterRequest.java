@@ -5,31 +5,48 @@ import com.aliyun.tea.*;
 
 public class OpenVClusterRequest extends TeaModel {
     /**
-     * <p>The type of the cluster. For cloud services, set this parameter to `cloud-product-prometheus`.</p>
+     * <p>The type of the cluster. For cloud services, set this parameter to <code>cloud-product-prometheus</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud-product-prometheus</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The length of the cluster ID. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Length")
     public Integer length;
 
     /**
-     * <p>The name of the cloud service. This parameter is required if you set ClusterType to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.</p>
+     * <p>The name of the cloud service. This parameter is required if you set ClusterType to <code>cloud-product-prometheus</code>. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>influxdb</p>
      */
     @NameInMap("Product")
     public String product;
 
     /**
      * <p>Specifies whether to create or query a virtual cluster. This parameter provides backward compatibility.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RecreateSwitch")
     public Boolean recreateSwitch;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

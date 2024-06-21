@@ -4,6 +4,10 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class StartTimingSyntheticTaskShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

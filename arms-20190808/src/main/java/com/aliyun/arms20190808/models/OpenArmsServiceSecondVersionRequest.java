@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class OpenArmsServiceSecondVersionRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the service. Valid values:</p>
-     * <br>
-     * <p>*   `arms`: ARMS</p>
-     * <p>*   `arms_app`: Application Monitoring</p>
-     * <p>*   `arms_web`: Browser Monitoring</p>
-     * <p>*   `prometheus_monitor`: Managed Service for Prometheus</p>
-     * <p>*   `synthetic_post`: Synthetic Monitoring</p>
+     * <ul>
+     * <li><code>arms</code>: ARMS</li>
+     * <li><code>arms_app</code>: Application Monitoring</li>
+     * <li><code>arms_web</code>: Browser Monitoring</li>
+     * <li><code>prometheus_monitor</code>: Managed Service for Prometheus</li>
+     * <li><code>synthetic_post</code>: Synthetic Monitoring</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms</p>
      */
     @NameInMap("Type")
     public String type;

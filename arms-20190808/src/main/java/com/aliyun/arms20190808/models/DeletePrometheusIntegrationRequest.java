@@ -6,24 +6,39 @@ import com.aliyun.tea.*;
 public class DeletePrometheusIntegrationRequest extends TeaModel {
     /**
      * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the exporter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2875</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
      * <p>The type of the integration.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kafka and mysql.</p>
      */
     @NameInMap("IntegrationType")
     public String integrationType;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

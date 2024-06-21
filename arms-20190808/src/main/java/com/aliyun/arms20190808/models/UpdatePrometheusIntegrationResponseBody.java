@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
     /**
      * <p>The status code or error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2DB771C3-D1BB-5363-8A5F-ADB2AF2948DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
     public static class UpdatePrometheusIntegrationResponseBodyData extends TeaModel {
         /**
          * <p>The exporter ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2866</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The exporter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

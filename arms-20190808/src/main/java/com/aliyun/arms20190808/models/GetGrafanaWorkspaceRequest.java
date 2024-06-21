@@ -4,12 +4,28 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetGrafanaWorkspaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grafana-cn-4xl3g******</p>
+     */
     @NameInMap("GrafanaWorkspaceId")
     public String grafanaWorkspaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

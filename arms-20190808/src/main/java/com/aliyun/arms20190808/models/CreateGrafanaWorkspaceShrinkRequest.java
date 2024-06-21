@@ -4,27 +4,67 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateGrafanaWorkspaceShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.x</p>
+     */
     @NameInMap("GrafanaVersion")
     public String grafanaVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>experts_edition</p>
+     */
     @NameInMap("GrafanaWorkspaceEdition")
     public String grafanaWorkspaceEdition;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testgrafana</p>
+     */
     @NameInMap("GrafanaWorkspaceName")
     public String grafanaWorkspaceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Test123456!</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

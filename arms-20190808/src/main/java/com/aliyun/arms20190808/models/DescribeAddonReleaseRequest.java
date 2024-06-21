@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonReleaseRequest extends TeaModel {
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Name of Release.</p>
+     * <p>The name of the add-on release.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent-822567d4-2449</p>
      */
     @NameInMap("ReleaseName")
     public String releaseName;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteIMRobotRequest extends TeaModel {
     /**
      * <p>The ID of the IM chatbot.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("RobotId")
     public Long robotId;

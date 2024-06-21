@@ -4,6 +4,10 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SwitchSyntheticTaskStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SwitchStatus")
     public Long switchStatus;
 

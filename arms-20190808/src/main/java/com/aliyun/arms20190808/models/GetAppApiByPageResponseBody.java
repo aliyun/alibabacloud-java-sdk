@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class GetAppApiByPageResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned for the request. Valid values:</p>
-     * <br>
-     * <p>*   2XX: The request was successful.</p>
-     * <p>*   3XX: A redirection message was returned.</p>
-     * <p>*   4XX: The request was invalid.</p>
-     * <p>*   5XX: A server error occurred.</p>
+     * <ul>
+     * <li>2XX: The request was successful.</li>
+     * <li>3XX: A redirection message was returned.</li>
+     * <li>4XX: The request was invalid.</li>
+     * <li>5XX: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,21 +27,31 @@ public class GetAppApiByPageResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6A00968-82A8-4F14-9D1B-B53827DB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,6 +104,9 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     public static class GetAppApiByPageResponseBodyData extends TeaModel {
         /**
          * <p>Is completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Completed")
         public Boolean completed;
@@ -102,18 +119,27 @@ public class GetAppApiByPageResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Integer page;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Total")
         public String total;

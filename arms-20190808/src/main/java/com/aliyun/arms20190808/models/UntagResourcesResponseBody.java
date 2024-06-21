@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UntagResourcesResponseBody extends TeaModel {
     /**
      * <p>The returned struct.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC183B5E-C9AD-5E9E-937F-*******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

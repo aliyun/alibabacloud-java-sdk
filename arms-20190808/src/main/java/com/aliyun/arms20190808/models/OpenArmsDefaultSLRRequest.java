@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class OpenArmsDefaultSLRRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

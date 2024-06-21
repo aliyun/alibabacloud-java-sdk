@@ -6,102 +6,144 @@ import com.aliyun.tea.*;
 public class ListAlertsRequest extends TeaModel {
     /**
      * <p>The name of the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test alert</p>
      */
     @NameInMap("AlertName")
     public String alertName;
 
     /**
      * <p>The ID of the notification policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("DispatchRuleId")
     public Long dispatchRuleId;
 
     /**
-     * <p>The end time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.</p>
+     * <p>The end time of the alert sending history that you want to query. Specify the time in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-22 23:59:59</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The integration type.</p>
-     * <br>
-     * <p>*   ARMS</p>
-     * <p>*   CLOUD_MONITOR</p>
-     * <p>*   MSE</p>
-     * <p>*   ARMS_CLOUD_DIALTEST</p>
-     * <p>*   PROMETHEUS</p>
-     * <p>*   LOG_SERVICE</p>
-     * <p>*   CUSTOM</p>
-     * <p>*   ARMS_PROMETHEUS</p>
-     * <p>*   ARMS_APP_MON</p>
-     * <p>*   ARMS_FRONT_MON</p>
-     * <p>*   ARMS_CUSTOM</p>
-     * <p>*   XTRACE</p>
-     * <p>*   GRAFANA</p>
-     * <p>*   ZABBIX</p>
-     * <p>*   SKYWALKING</p>
-     * <p>*   EVENT_BRIDGE</p>
-     * <p>*   NAGIOS</p>
-     * <p>*   OPENFALCON</p>
-     * <p>*   ARMS_INSIGHTS</p>
+     * <ul>
+     * <li>ARMS</li>
+     * <li>CLOUD_MONITOR</li>
+     * <li>MSE</li>
+     * <li>ARMS_CLOUD_DIALTEST</li>
+     * <li>PROMETHEUS</li>
+     * <li>LOG_SERVICE</li>
+     * <li>CUSTOM</li>
+     * <li>ARMS_PROMETHEUS</li>
+     * <li>ARMS_APP_MON</li>
+     * <li>ARMS_FRONT_MON</li>
+     * <li>ARMS_CUSTOM</li>
+     * <li>XTRACE</li>
+     * <li>GRAFANA</li>
+     * <li>ZABBIX</li>
+     * <li>SKYWALKING</li>
+     * <li>EVENT_BRIDGE</li>
+     * <li>NAGIOS</li>
+     * <li>OPENFALCON</li>
+     * <li>ARMS_INSIGHTS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ARMS_APP_MON</p>
      */
     @NameInMap("IntegrationType")
     public String integrationType;
 
     /**
      * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P6</p>
      */
     @NameInMap("Severity")
     public String severity;
 
     /**
      * <p>Specifies whether to query the activities that correspond to alerts. Valid values:</p>
-     * <br>
-     * <p>*   `false` (default value): The activities are not queried.</p>
-     * <p>*   `true`: The activities in the last three days are queried.</p>
+     * <ul>
+     * <li><code>false</code> (default value): The activities are not queried.</li>
+     * <li><code>true</code>: The activities in the last three days are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowActivities")
     public Boolean showActivities;
 
     /**
      * <p>Specifies whether to query the events that correspond to alerts. Valid values:</p>
-     * <br>
-     * <p>*   `false` (default value): The events are not queried.</p>
-     * <p>*   `true`: The events are queried.</p>
+     * <ul>
+     * <li><code>false</code> (default value): The events are not queried.</li>
+     * <li><code>true</code>: The events are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowEvents")
     public Boolean showEvents;
 
     /**
      * <p>The number of alerts to return on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Size")
     public Long size;
 
     /**
-     * <p>The start time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.</p>
+     * <p>The start time of the alert sending history that you want to query. Specify the time in the <code>YYYY-MM-DD HH:mm:ss</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-10 00:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The status of the alert. Valid values:</p>
-     * <br>
-     * <p>*   0: The alert is pending.</p>
-     * <p>*   1: The alert is being handled.</p>
-     * <p>*   2: The alert is handled.</p>
+     * <ul>
+     * <li>0: The alert is pending.</li>
+     * <li>1: The alert is being handled.</li>
+     * <li>2: The alert is handled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("State")
     public Long state;

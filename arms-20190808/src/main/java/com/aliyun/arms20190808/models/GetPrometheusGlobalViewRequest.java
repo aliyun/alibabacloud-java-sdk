@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetPrometheusGlobalViewRequest extends TeaModel {
     /**
      * <p>The ID of the global aggregation instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>global-v2-cn-1478326682034601-vss8pd0i</p>
      */
     @NameInMap("GlobalViewClusterId")
     public String globalViewClusterId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

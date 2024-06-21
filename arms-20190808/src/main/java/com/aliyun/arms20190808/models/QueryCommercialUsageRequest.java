@@ -10,27 +10,63 @@ public class QueryCommercialUsageRequest extends TeaModel {
     @NameInMap("Dimensions")
     public java.util.List<String> dimensions;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1699286400000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("IntervalInSec")
     public Integer intervalInSec;
 
     @NameInMap("Measures")
     public java.util.List<String> measures;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USAGEFEE.STAT</p>
+     */
     @NameInMap("Metric")
     public String metric;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dataType</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instantQuery</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1699200000000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -120,12 +156,24 @@ public class QueryCommercialUsageRequest extends TeaModel {
     }
 
     public static class QueryCommercialUsageRequestAdvancedFilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>regionId</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eq</p>
+         */
         @NameInMap("OpType")
         public String opType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Value")
         public String value;
 

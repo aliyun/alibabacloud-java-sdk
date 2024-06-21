@@ -4,9 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class InstallCmsExporterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7A04B0D-E2CA-59BB-8A9D-D5D349C22BF1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

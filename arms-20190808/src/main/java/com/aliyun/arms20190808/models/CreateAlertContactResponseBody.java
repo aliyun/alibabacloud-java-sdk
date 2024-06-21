@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateAlertContactResponseBody extends TeaModel {
     /**
      * <p>The ID of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102**</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

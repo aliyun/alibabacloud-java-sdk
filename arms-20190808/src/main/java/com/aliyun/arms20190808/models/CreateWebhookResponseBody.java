@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateWebhookResponseBody extends TeaModel {
     /**
      * <p>The ID of the contact for webhook alerts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48716</p>
      */
     @NameInMap("ContactId")
     public String contactId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16AF921B-8187-489F-9913-43C808B4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,25 +43,35 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions extends TeaModel {
         /**
          * <p>The key of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>altertname</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The logical operator of the matching condition. Valid values:</p>
-         * <br>
-         * <p>*   `eq`: equal to</p>
-         * <p>*   `neq`: not equal to</p>
-         * <p>*   `in`: contains</p>
-         * <p>*   `nin`: does not contain</p>
-         * <p>*   `re`: regular expression match</p>
-         * <p>*   `nre`: regular expression mismatch</p>
+         * <ul>
+         * <li><code>eq</code>: equal to</li>
+         * <li><code>neq</code>: not equal to</li>
+         * <li><code>in</code>: contains</li>
+         * <li><code>nin</code>: does not contain</li>
+         * <li><code>re</code>: regular expression match</li>
+         * <li><code>nre</code>: regular expression mismatch</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The value of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -119,6 +132,9 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicy extends TeaModel {
         /**
          * <p>The ID of the silence policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -131,9 +147,19 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
         /**
          * <p>The name of the silence policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>silencepolicy_test</p>
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
+        @NameInMap("State")
+        public String state;
 
         public static CreateOrUpdateSilencePolicyResponseBodySilencePolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateOrUpdateSilencePolicyResponseBodySilencePolicy self = new CreateOrUpdateSilencePolicyResponseBodySilencePolicy();
@@ -162,6 +188,14 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateOrUpdateSilencePolicyResponseBodySilencePolicy setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

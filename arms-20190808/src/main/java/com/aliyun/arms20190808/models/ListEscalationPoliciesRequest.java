@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class ListEscalationPoliciesRequest extends TeaModel {
     /**
      * <p>The name of the escalation policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod escalation policy</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Size")
     public Long size;

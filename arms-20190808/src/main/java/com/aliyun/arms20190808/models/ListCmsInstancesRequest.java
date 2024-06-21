@@ -4,12 +4,28 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListCmsInstancesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n9p9o9o3se</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>direct</p>
+     */
     @NameInMap("TypeFilter")
     public String typeFilter;
 

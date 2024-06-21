@@ -12,6 +12,9 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2B289756-E791-5842-BCBD-AD414C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     public static class ListEventBridgeIntegrationsResponseBodyPageBeanEventBridgeIntegrations extends TeaModel {
         /**
          * <p>The description of the EventBridge integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the EventBridge integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the EventBridge integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventBridge_Test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -96,18 +108,27 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
 
         /**
          * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of EventBridge integrations that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

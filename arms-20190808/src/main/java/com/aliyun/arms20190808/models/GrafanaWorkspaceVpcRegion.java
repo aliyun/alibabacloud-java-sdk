@@ -4,9 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceVpcRegion extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>华北2（北京）</p>
+     */
     @NameInMap("regionName")
     public String regionName;
 

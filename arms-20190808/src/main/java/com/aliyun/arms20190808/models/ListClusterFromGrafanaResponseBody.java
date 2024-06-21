@@ -12,6 +12,9 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6849D41E-EED4-5C00-89F9-6047BBD9DCB4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,115 +43,171 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     public static class ListClusterFromGrafanaResponseBodyPromClusterList extends TeaModel {
         /**
          * <p>The status of the Prometheus agent on the cluster. Valid values:</p>
-         * <br>
-         * <p>*   INSTALL_FAILED: The Prometheus agent failed to be installed.</p>
-         * <p>*   INSTALL_SUCCEED: The Prometheus agent was installed.</p>
-         * <p>*   NOT_REGISTER: You have not registered an Alibaba Cloud account.</p>
+         * <ul>
+         * <li>INSTALL_FAILED: The Prometheus agent failed to be installed.</li>
+         * <li>INSTALL_SUCCEED: The Prometheus agent was installed.</li>
+         * <li>NOT_REGISTER: You have not registered an Alibaba Cloud account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALL_FAILED</p>
          */
         @NameInMap("AgentStatus")
         public String agentStatus;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0df7ad9db0ed43128925ca04774c469e</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ay-ads-hangzhou</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud-product-prometheus</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The controller ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1092</p>
          */
         @NameInMap("ControllerId")
         public String controllerId;
 
         /**
          * <p>The time when the dashboard was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-09T02:05:04Z</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The extended fields. This parameter is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;app_id\&quot;:\&quot;bbd\&quot;,\&quot;task_id\&quot;:\&quot;4305ba5bf14942daa6e553ed91f46988\&quot;}</p>
          */
         @NameInMap("Extra")
         public String extra;
 
         /**
          * <p>The ID of a database in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16136</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The timestamp when the Prometheus agent was installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653532518000</p>
          */
         @NameInMap("InstallTime")
         public Long installTime;
 
         /**
          * <p>Indicates whether the Prometheus agent was installed. Valid values:</p>
-         * <br>
-         * <p>*   true: The Prometheus agent was installed.</p>
-         * <p>*   false: The Prometheus agent was not installed.</p>
+         * <ul>
+         * <li>true: The Prometheus agent was installed.</li>
+         * <li>false: The Prometheus agent was not installed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsControllerInstalled")
         public Boolean isControllerInstalled;
 
         /**
          * <p>The time when the last heartbeat was reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653532518000</p>
          */
         @NameInMap("LastHeartBeatTime")
         public Long lastHeartBeatTime;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
         /**
          * <p>The custom parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Option\&quot;: [\&quot;betaTestApproved\&quot;]}</p>
          */
         @NameInMap("Options")
         public String options;
 
         /**
          * <p>The list of nodejsonar logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("PluginsJsonArray")
         public String pluginsJsonArray;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The information about applications deployed in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("StateJson")
         public String stateJson;
 
         /**
          * <p>The time when the dashboard was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-16T08:49:34Z</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1247285**</p>
          */
         @NameInMap("UserId")
         public String userId;
