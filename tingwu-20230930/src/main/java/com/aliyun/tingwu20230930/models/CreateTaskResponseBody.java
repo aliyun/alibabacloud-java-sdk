@@ -4,15 +4,27 @@ package com.aliyun.tingwu20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,9 +69,17 @@ public class CreateTaskResponseBody extends TeaModel {
         @NameInMap("MeetingJoinUrl")
         public String meetingJoinUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c5394c6ee0fb474899d42215a3925c7e</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task_tingwu_123</p>
+         */
         @NameInMap("TaskKey")
         public String taskKey;
 

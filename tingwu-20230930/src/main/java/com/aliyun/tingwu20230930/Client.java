@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建听悟任务
-     *
+     * <b>summary</b> : 
+     * <p>创建听悟任务</p>
+     * 
      * @param request CreateTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -78,8 +79,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建听悟任务
-     *
+     * <b>summary</b> : 
+     * <p>创建听悟任务</p>
+     * 
      * @param request CreateTaskRequest
      * @return CreateTaskResponse
      */
@@ -90,8 +92,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建热词词表
-     *
+     * <b>summary</b> : 
+     * <p>创建热词词表</p>
+     * 
      * @param request CreateTranscriptionPhrasesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -131,8 +134,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建热词词表
-     *
+     * <b>summary</b> : 
+     * <p>创建热词词表</p>
+     * 
      * @param request CreateTranscriptionPhrasesRequest
      * @return CreateTranscriptionPhrasesResponse
      */
@@ -143,8 +147,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除词表
-     *
+     * <b>summary</b> : 
+     * <p>删除词表</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTranscriptionPhrasesResponse
@@ -168,8 +173,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除词表
-     *
+     * <b>summary</b> : 
+     * <p>删除词表</p>
      * @return DeleteTranscriptionPhrasesResponse
      */
     public DeleteTranscriptionPhrasesResponse deleteTranscriptionPhrases(String PhraseId) throws Exception {
@@ -179,8 +184,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询听悟任务信息
-     *
+     * <b>summary</b> : 
+     * <p>查询听悟任务信息</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskInfoResponse
@@ -204,8 +210,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询听悟任务信息
-     *
+     * <b>summary</b> : 
+     * <p>查询听悟任务信息</p>
      * @return GetTaskInfoResponse
      */
     public GetTaskInfoResponse getTaskInfo(String TaskId) throws Exception {
@@ -215,8 +221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询热词词表信息
-     *
+     * <b>summary</b> : 
+     * <p>查询热词词表信息</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTranscriptionPhrasesResponse
@@ -240,8 +247,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询热词词表信息
-     *
+     * <b>summary</b> : 
+     * <p>查询热词词表信息</p>
      * @return GetTranscriptionPhrasesResponse
      */
     public GetTranscriptionPhrasesResponse getTranscriptionPhrases(String PhraseId) throws Exception {
@@ -251,8 +258,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举用户所有热词词表信息
-     *
+     * <b>summary</b> : 
+     * <p>列举用户所有热词词表信息</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTranscriptionPhrasesResponse
@@ -276,8 +284,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举用户所有热词词表信息
-     *
+     * <b>summary</b> : 
+     * <p>列举用户所有热词词表信息</p>
      * @return ListTranscriptionPhrasesResponse
      */
     public ListTranscriptionPhrasesResponse listTranscriptionPhrases() throws Exception {
@@ -287,8 +295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新热词词表
-     *
+     * <b>summary</b> : 
+     * <p>更新热词词表</p>
+     * 
      * @param request UpdateTranscriptionPhrasesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -328,8 +337,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新热词词表
-     *
+     * <b>summary</b> : 
+     * <p>更新热词词表</p>
+     * 
      * @param request UpdateTranscriptionPhrasesRequest
      * @return UpdateTranscriptionPhrasesResponse
      */
