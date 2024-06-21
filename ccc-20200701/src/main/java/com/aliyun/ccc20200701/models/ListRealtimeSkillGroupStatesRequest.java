@@ -13,6 +13,9 @@ public class ListRealtimeSkillGroupStatesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -49,6 +52,14 @@ public class ListRealtimeSkillGroupStatesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListRealtimeSkillGroupStatesRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public ListRealtimeSkillGroupStatesRequest setPageNumber(Integer pageNumber) {

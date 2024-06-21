@@ -55,6 +55,12 @@ public class LaunchSurveyRequest extends TeaModel {
     @NameInMap("SurveyChannel")
     public String surveyChannel;
 
+    @NameInMap("SurveyTemplateId")
+    public String surveyTemplateId;
+
+    @NameInMap("SurveyTemplateVariables")
+    public String surveyTemplateVariables;
+
     /**
      * <strong>example:</strong>
      * <p>agent@ccc-test</p>
@@ -121,6 +127,22 @@ public class LaunchSurveyRequest extends TeaModel {
     }
     public String getSurveyChannel() {
         return this.surveyChannel;
+    }
+
+    public LaunchSurveyRequest setSurveyTemplateId(String surveyTemplateId) {
+        this.surveyTemplateId = surveyTemplateId;
+        return this;
+    }
+    public String getSurveyTemplateId() {
+        return this.surveyTemplateId;
+    }
+
+    public LaunchSurveyRequest setSurveyTemplateVariables(String surveyTemplateVariables) {
+        this.surveyTemplateVariables = surveyTemplateVariables;
+        return this;
+    }
+    public String getSurveyTemplateVariables() {
+        return this.surveyTemplateVariables;
     }
 
     public LaunchSurveyRequest setUserId(String userId) {
