@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a route for xxx</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination service type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Mock</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -30,18 +41,27 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
 
     /**
      * <p>The associated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[90]</p>
      */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
     /**
      * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
     /**
      * <p>Specifies whether to enable the Fallback service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Fallback")
     public Boolean fallback;
@@ -54,24 +74,36 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>501</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-86575c0bc9f04ecfbacb92b8e392a2c4</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>route-web</p>
      */
     @NameInMap("Name")
     @Deprecated
@@ -91,6 +123,9 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
 
     /**
      * <p>The sequence number of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;

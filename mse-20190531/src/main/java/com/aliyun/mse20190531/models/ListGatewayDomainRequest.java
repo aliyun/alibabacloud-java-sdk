@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class ListGatewayDomainRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-c9bc5afd61014165bd58f621b491****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The type of the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("Type")
     public String type;

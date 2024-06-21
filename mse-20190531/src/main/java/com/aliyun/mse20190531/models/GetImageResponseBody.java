@@ -12,33 +12,49 @@ public class GetImageResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25EA0A83-9007-4E87-808C-637BE1A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,24 +115,36 @@ public class GetImageResponseBody extends TeaModel {
     public static class GetImageResponseBodyData extends TeaModel {
         /**
          * <p>The full version number of the current instance image. The parameter is in the X.X.X.X format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.5.5.0</p>
          */
         @NameInMap("CurrentVersionFullShowName")
         public String currentVersionFullShowName;
 
         /**
          * <p>The URL of the changelog for the maximum version to which the current version can be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx">https://xxxxx</a></p>
          */
         @NameInMap("MaxVersionChangelogUrl")
         public String maxVersionChangelogUrl;
 
         /**
          * <p>The code of the maximum version to which the current version can be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZooKeeper_3_6_3</p>
          */
         @NameInMap("MaxVersionCode")
         public String maxVersionCode;
 
         /**
          * <p>The full number of the maximum version to which the current version can be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.6.3.0</p>
          */
         @NameInMap("MaxVersionFullShowName")
         public String maxVersionFullShowName;

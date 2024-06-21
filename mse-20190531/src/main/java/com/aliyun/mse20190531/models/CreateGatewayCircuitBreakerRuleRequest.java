@@ -4,83 +4,141 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewayCircuitBreakerRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("BehaviorType")
     public Integer behaviorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BodyEncoding")
     public Integer bodyEncoding;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14407</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-c9bc5afd61014165bd58f621b491*****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxAllowedMs")
     public Integer maxAllowedMs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MinRequestAmount")
     public Integer minRequestAmount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("RecoveryTimeoutSec")
     public Integer recoveryTimeoutSec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
     @NameInMap("ResponseContentBody")
     public String responseContentBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>www.******.com</p>
+     */
     @NameInMap("ResponseRedirectUrl")
     public String responseRedirectUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>429</p>
+     */
     @NameInMap("ResponseStatusCode")
     public Integer responseStatusCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>645</p>
      */
     @NameInMap("RouteId")
     public Long routeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>routeName</p>
      */
     @NameInMap("RouteName")
     public String routeName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("StatDurationSec")
     public Integer statDurationSec;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Strategy")
     public Integer strategy;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TriggerRatio")
     public Integer triggerRatio;

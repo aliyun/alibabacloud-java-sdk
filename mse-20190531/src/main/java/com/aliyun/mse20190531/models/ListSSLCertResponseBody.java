@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSSLCertResponseBody extends TeaModel {
     /**
      * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class ListSSLCertResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAA9A229-141D-5FBA-AC5C-516C02026A11</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,60 +115,90 @@ public class ListSSLCertResponseBody extends TeaModel {
     public static class ListSSLCertResponseBodyData extends TeaModel {
         /**
          * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 02:35:12</p>
          */
         @NameInMap("AfterDate")
         public String afterDate;
 
         /**
          * <p>The algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Algorithm")
         public String algorithm;
 
         /**
          * <p>The time when the certificate took effect. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2031-03-30 02:35:12</p>
          */
         @NameInMap("BeforeDate")
         public String beforeDate;
 
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The domain name with which the certificate is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.test.com</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
          * <p>The time when the certificate expires. This value is a GMT timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 02:35:12</p>
          */
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
         /**
          * <p>The time when the certificate took effect. This value is a GMT timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2031-03-30 02:35:12</p>
          */
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
         /**
          * <p>The issuer of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>The SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSL</p>
          */
         @NameInMap("Sans")
         public String sans;

@@ -4,15 +4,31 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayAuthDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2274</p>
+     */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gw-6f0dbd108a0249d2b675b3ef50b*****</p>
+     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1100</p>
+     */
     @NameInMap("Id")
     public Long id;
 

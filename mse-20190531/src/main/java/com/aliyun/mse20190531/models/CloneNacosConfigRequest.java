@@ -6,52 +6,70 @@ import com.aliyun.tea.*;
 public class CloneNacosConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The data structure.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>253661,253662</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
      * <p>The ID of the destination namespace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_prepaid_public_cn-i7m25igg403</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The policy used when a write conflict occurs.</p>
-     * <br>
-     * <p>*   ABORT</p>
-     * <p>*   SKIP</p>
-     * <p>*   OVERWRITE</p>
+     * <ul>
+     * <li>ABORT</li>
+     * <li>SKIP</li>
+     * <li>OVERWRITE</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>be821963-6d48-4ea5-9910-6057d****</p>
      */
     @NameInMap("OriginNamespaceId")
     public String originNamespaceId;
 
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
-     * <br>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OVERWRITE</p>
      */
     @NameInMap("Policy")
     public String policy;
 
     /**
      * <p>The IDs of configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08be4b5d-2d1c-4e6e-aa85-83b9****</p>
      */
     @NameInMap("TargetNamespaceId")
     public String targetNamespaceId;

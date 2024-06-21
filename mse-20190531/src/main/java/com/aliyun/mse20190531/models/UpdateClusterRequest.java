@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class UpdateClusterRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The alias of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster-1</p>
      */
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-78v1l83****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The end time of the O\\&M window.</p>
+     * <p>The end time of the O\&amp;M window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06:00</p>
      */
     @NameInMap("MaintenanceEndTime")
     public String maintenanceEndTime;
 
     /**
-     * <p>The start time of the O\\&M window.</p>
+     * <p>The start time of the O\&amp;M window.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02:00</p>
      */
     @NameInMap("MaintenanceStartTime")
     public String maintenanceStartTime;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSecurityGroupResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class ListSecurityGroupResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,27 +115,40 @@ public class ListSecurityGroupResponseBody extends TeaModel {
     public static class ListSecurityGroupResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-8vb8gsmrqyc35k645rk6</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The name of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg2</p>
          */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 
         /**
          * <p>The type of the security group. Valid values:</p>
-         * <br>
-         * <p>*   normal: basic security group</p>
-         * <p>*   enterprise: advanced security group For more information, see [Advanced security groups](https://help.aliyun.com/document_detail/120621.html).</p>
+         * <ul>
+         * <li>normal: basic security group</li>
+         * <li>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1b</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

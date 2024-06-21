@@ -6,51 +6,76 @@ import com.aliyun.tea.*;
 public class ListNamingTrackResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9916CBED-B2D5-5685-9129-4592FE1*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -141,54 +166,81 @@ public class ListNamingTrackResponseBody extends TeaModel {
     public static class ListNamingTrackResponseBodyTraces extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.40.32.235</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceSize")
         public String instanceSize;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-197*****-167083******-reg-center-0-0</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The push time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-16 11:48:07</p>
          */
         @NameInMap("PushTime")
         public String pushTime;
 
         /**
          * <p>The total push time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>628ms</p>
          */
         @NameInMap("PushTimeAll")
         public String pushTimeAll;
 
         /**
          * <p>The push time for the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37ms</p>
          */
         @NameInMap("PushTimeNetwork")
         public String pushTimeNetwork;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fpx-xms-baseinfo</p>
          */
         @NameInMap("ServerName")
         public String serverName;
 
         /**
          * <p>The duration that is specified in the service-level agreement (SLA).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>628ms</p>
          */
         @NameInMap("SlaTime")
         public String slaTime;

@@ -12,6 +12,9 @@ public class QueryNamespaceResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -19,9 +22,17 @@ public class QueryNamespaceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abcde-fg</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -73,12 +84,18 @@ public class QueryNamespaceResponseBody extends TeaModel {
     public static class QueryNamespaceResponseBodyData extends TeaModel {
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The region to which the namespace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;

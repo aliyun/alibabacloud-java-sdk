@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPluginConfigResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,42 +21,63 @@ public class GetPluginConfigResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -139,6 +163,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-route</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -168,60 +196,84 @@ public class GetPluginConfigResponseBody extends TeaModel {
     public static class GetPluginConfigResponseBodyDataGatewayConfigList extends TeaModel {
         /**
          * <p>The plug-in configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\# Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The application scope of the plug-in. Valid values:</p>
-         * <br>
          * <p>0: global</p>
-         * <br>
          * <p>1: domain names</p>
-         * <br>
          * <p>2: routes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ConfigLevel")
         public Integer configLevel;
 
         /**
          * <p>Indicates whether the plug-in is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-ubuwqygbq4783gqb2y3f87q****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667309705000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667309705000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the plug-in configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The ID of the gateway plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PluginId")
         public Long pluginId;
@@ -319,24 +371,24 @@ public class GetPluginConfigResponseBody extends TeaModel {
     public static class GetPluginConfigResponseBodyData extends TeaModel {
         /**
          * <p>The category of the plug-in. Valid values:</p>
-         * <br>
          * <p>0: user-defined</p>
-         * <br>
          * <p>1: permission authentication</p>
-         * <br>
          * <p>2: security protection</p>
-         * <br>
          * <p>3: transmission protocol</p>
-         * <br>
          * <p>4: traffic control</p>
-         * <br>
          * <p>5: traffic observation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Category")
         public Integer category;
 
         /**
          * <p>The information about the plug-in configuration used for checking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
          */
         @NameInMap("ConfigCheck")
         public String configCheck;
@@ -344,6 +396,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @NameInMap("ConfigExample")
         public String configExample;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("DomainConfigStartIndex")
         public Integer domainConfigStartIndex;
 
@@ -353,104 +409,148 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @NameInMap("GatewayConfigList")
         public java.util.List<GetPluginConfigResponseBodyDataGatewayConfigList> gatewayConfigList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("GatewayConfigStartIndex")
         public Integer gatewayConfigStartIndex;
 
         /**
          * <p>The ID of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Mode")
         public Integer mode;
 
         /**
          * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The execution stage of the plug-in. Valid values:</p>
-         * <br>
          * <p>0: default stage</p>
-         * <br>
          * <p>1: authorization stage</p>
-         * <br>
          * <p>2: authentication stage</p>
-         * <br>
          * <p>3: statistics stage</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Phase")
         public Integer phase;
 
         /**
          * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
         /**
          * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The publish status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PublishState")
         public Integer publishState;
 
         /**
          * <p>The description of the README file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>read me</p>
          */
         @NameInMap("Readme")
         public String readme;
 
         /**
          * <p>The description of the README file that is edited in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>read me</p>
          */
         @NameInMap("ReadmeEn")
         public String readmeEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RouteConfigStartIndex")
         public Integer routeConfigStartIndex;
 
         /**
          * <p>Indicates whether the plug-in is enabled. Valid values:</p>
-         * <br>
          * <p>0: disabled</p>
-         * <br>
          * <p>1: enabled</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The summary of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a plug-in.</p>
          */
         @NameInMap("Summary")
         public String summary;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Type")
         public Integer type;
 
         /**
          * <p>The version of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -460,16 +560,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
 
         /**
          * <p>The WebAssembly language. Valid values:</p>
-         * <br>
          * <p>0: C++</p>
-         * <br>
          * <p>1: TinyGo</p>
-         * <br>
          * <p>2: Rust</p>
-         * <br>
          * <p>3: AssemblyScript</p>
-         * <br>
          * <p>4: Zig</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WasmLang")
         public Integer wasmLang;

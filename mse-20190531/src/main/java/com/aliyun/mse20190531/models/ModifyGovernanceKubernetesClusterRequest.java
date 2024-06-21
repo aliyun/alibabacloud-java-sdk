@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd23228b3c80c4d4f9ad87cc3****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -29,8 +35,10 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -75,12 +83,18 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
     public static class ModifyGovernanceKubernetesClusterRequestNamespaceInfos extends TeaModel {
         /**
          * <p>The microservice namespace. If you do not specify this parameter, Microservice Governance is not enabled for the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("MseNamespace")
         public String mseNamespace;
 
         /**
          * <p>The name of the Kubernetes namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Name")
         public String name;

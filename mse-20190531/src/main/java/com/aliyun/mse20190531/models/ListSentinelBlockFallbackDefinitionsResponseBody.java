@@ -7,15 +7,31 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListSentinelBlockFallbackDefinitionsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     }
 
     public static class ListSentinelBlockFallbackDefinitionsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;webRespStatusCode&quot;:429,&quot;webRespMessage&quot;:&quot;test&quot;,&quot;webFallbackMode&quot;:0,&quot;webRespContentType&quot;:0}</p>
+         */
         @NameInMap("FallbackBehavior")
         public java.util.Map<String, ?> fallbackBehavior;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>defaultFallback</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResourceClassification")
         public String resourceClassification;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;/params/{hot}&quot;:[1]}</p>
+         */
         @NameInMap("TargetMap")
         public java.util.Map<String, ?> targetMap;
 

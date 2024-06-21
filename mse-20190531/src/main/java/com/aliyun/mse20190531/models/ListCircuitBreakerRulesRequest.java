@@ -6,52 +6,74 @@ import com.aliyun.tea.*;
 public class ListCircuitBreakerRulesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522bXXXXX</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The microservice namespace to which the application belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The start page of the returned pages. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     /**
      * <p>The number of entries per page. Default value: 6.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is used for exact match of circuit breaking rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/a</p>
      */
     @NameInMap("Resource")
     public String resource;
 
     /**
      * <p>This parameter is used for fuzzy match of circuit breaking rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a</p>
      */
     @NameInMap("ResourceSearchKey")
     public String resourceSearchKey;

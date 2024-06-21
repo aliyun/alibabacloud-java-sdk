@@ -6,46 +6,69 @@ import com.aliyun.tea.*;
 public class UpdateMessageQueueRouteRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522baa898</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example-app</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>Specifies whether the canary release for messaging feature is enabled for the application. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enabled</p>
-     * <p>*   `false`: disabled</p>
+     * <ul>
+     * <li><code>true</code>: enabled</li>
+     * <li><code>false</code>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Server</p>
      */
     @NameInMap("FilterSide")
     public String filterSide;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;

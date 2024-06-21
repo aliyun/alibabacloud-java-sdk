@@ -6,82 +6,118 @@ import com.aliyun.tea.*;
 public class UpdateGatewayAuthConsumerRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The description of the consumer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The encryption type. Valid values:</p>
-     * <br>
-     * <p>*   RSA</p>
-     * <p>*   OCT</p>
+     * <ul>
+     * <li>RSA</li>
+     * <li>OCT</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA</p>
      */
     @NameInMap("EncodeType")
     public String encodeType;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-90392d768a3847a7b804c505254d****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the consumer.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The JWT public key. The JSON format is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;keys&quot;:[{&quot;e&quot;:&quot;AQAB&quot;,&quot;kid&quot;:&quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,&quot;kty&quot;:&quot;RSA&quot;,&quot;n&quot;:&quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;}]}</p>
      */
     @NameInMap("Jwks")
     public String jwks;
 
     /**
      * <p>The name of the key used for JWT-based identity authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iss</p>
      */
     @NameInMap("KeyName")
     public String keyName;
 
     /**
      * <p>The value of the key used for JWT-based identity authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd</p>
      */
     @NameInMap("KeyValue")
     public String keyValue;
 
     /**
-     * <p>The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+     * <p>The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Authorization</p>
      */
     @NameInMap("TokenName")
     public String tokenName;
 
     /**
      * <p>Specifies whether to enable pass-through.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("TokenPass")
     public Boolean tokenPass;
 
     /**
-     * <p>The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+     * <p>The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HEADER</p>
      */
     @NameInMap("TokenPosition")
     public String tokenPosition;
 
     /**
-     * <p>The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+     * <p>The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Bearer</p>
      */
     @NameInMap("TokenPrefix")
     public String tokenPrefix;

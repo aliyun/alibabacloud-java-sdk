@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class CreateZnodeRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-09k1q11****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The data of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>data</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The path of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/zookeeper</p>
      */
     @NameInMap("Path")
     public String path;

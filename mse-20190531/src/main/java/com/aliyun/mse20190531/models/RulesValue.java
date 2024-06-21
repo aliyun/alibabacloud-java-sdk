@@ -16,6 +16,10 @@ public class RulesValue extends TeaModel {
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gray</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -116,6 +120,10 @@ public class RulesValue extends TeaModel {
         @NameInMap("remainder")
         public Integer remainder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("rate")
         public Integer rate;
 
@@ -465,6 +473,10 @@ public class RulesValue extends TeaModel {
         @NameInMap("paramTypes")
         public java.util.List<String> paramTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("condition")
         public String condition;
 

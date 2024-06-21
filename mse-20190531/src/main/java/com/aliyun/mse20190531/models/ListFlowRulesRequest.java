@@ -6,55 +6,78 @@ import com.aliyun.tea.*;
 public class ListFlowRulesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522******</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx-demo</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The namespace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/a</p>
      */
     @NameInMap("Resource")
     public String resource;
 
     /**
      * <p>The keyword that is used for the search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/a</p>
      */
     @NameInMap("ResourceSearchKey")
     public String resourceSearchKey;

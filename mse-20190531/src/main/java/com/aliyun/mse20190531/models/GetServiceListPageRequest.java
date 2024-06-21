@@ -6,60 +6,90 @@ import com.aliyun.tea.*;
 public class GetServiceListPageRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dez4xxxxx@f3f75ed8ffxxxxx</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The application name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-app</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The IP address from which the query is initiated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>223.5.5.5</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The name of the MSE namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sc-A</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The service type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>springCloud</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

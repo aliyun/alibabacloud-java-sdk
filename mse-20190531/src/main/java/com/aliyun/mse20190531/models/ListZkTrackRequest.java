@@ -6,73 +6,99 @@ import com.aliyun.tea.*;
 public class ListZkTrackRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The end timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1669619383</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-0ju2yq****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Long pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/path</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
      * <p>Specifies whether to enable reverse ordering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
      * <p>The session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0x301fdfbdbf00***</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
      * <p>The start timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1669618483</p>
      */
     @NameInMap("StartTs")
     public Long startTs;

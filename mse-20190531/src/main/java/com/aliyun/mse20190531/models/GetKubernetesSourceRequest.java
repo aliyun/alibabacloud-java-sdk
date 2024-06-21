@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class GetKubernetesSourceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-c5d1aadb7df646cfb7065fbf75c1****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -29,6 +35,9 @@ public class GetKubernetesSourceRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1t50e045b5g7i3p****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

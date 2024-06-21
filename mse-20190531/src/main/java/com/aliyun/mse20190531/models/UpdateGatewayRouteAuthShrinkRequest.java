@@ -6,16 +6,19 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteAuthShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The authentication configurations.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AuthJSON")
@@ -23,22 +26,29 @@ public class UpdateGatewayRouteAuthShrinkRequest extends TeaModel {
 
     /**
      * <p>The gateway ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-0adf3ad751284cc69fcf9669fba*****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The route ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>109</p>
      */
     @NameInMap("Id")
     public Long id;

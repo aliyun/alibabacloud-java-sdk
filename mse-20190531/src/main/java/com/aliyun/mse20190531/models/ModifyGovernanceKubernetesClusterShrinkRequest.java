@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class ModifyGovernanceKubernetesClusterShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd23228b3c80c4d4f9ad87cc3****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -29,8 +35,10 @@ public class ModifyGovernanceKubernetesClusterShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

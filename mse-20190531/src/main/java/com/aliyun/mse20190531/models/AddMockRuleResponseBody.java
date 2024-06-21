@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddMockRuleResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class AddMockRuleResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,90 +115,134 @@ public class AddMockRuleResponseBody extends TeaModel {
     public static class AddMockRuleResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>178432728867xxxx</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The ID of the consumer application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@a000601b265xxxx</p>
          */
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
         /**
          * <p>The name of the consumer application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-xxxx</p>
          */
         @NameInMap("ConsumerAppName")
         public String consumerAppName;
 
         /**
          * <p>Indicates whether the mock rule is enabled.</p>
-         * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <ul>
+         * <li><code>true</code>: enabled</li>
+         * <li><code>false</code>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         @NameInMap("ExtraJson")
         public String extraJson;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>275</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The mock type. Valid values:</p>
-         * <br>
-         * <p>*   \\- `[unk]0[unk]`: desktop client</p>
-         * <p>*   \\- `[unk]1[unk]`: mobile client</p>
+         * <ul>
+         * <li>\- <code>[unk]0[unk]</code>: desktop client</li>
+         * <li>\- <code>[unk]1[unk]</code>: mobile client</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MockType")
         public Long mockType;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-bc1a29b0-160230875****-reg-center-0-1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The ID of the service provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@a000601b265xxxx</p>
          */
         @NameInMap("ProviderAppId")
         public String providerAppId;
 
         /**
          * <p>The name of the service provider application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-xxxx</p>
          */
         @NameInMap("ProviderAppName")
         public String providerAppName;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The HTTP mock rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;oper&quot;:&quot;return+json&quot;,&quot;Path&quot;:&quot;/mock&quot;,&quot;Value&quot;:&quot;{\n \&quot;date\&quot;: \&quot;2021-09-10T07:45:12.357+0000\&quot;,\n \&quot;name\&quot;: \&quot;name\&quot;,\n \&quot;id\&quot;: \&quot;1\&quot;\n}&quot;,&quot;Method&quot;:&quot;GET&quot;,&quot;Condition&quot;:&quot;AND&quot;,&quot;Timeout&quot;:1,&quot;ArgumentMockItems&quot;:[{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;},{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;aliyun&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;}]}]</p>
          */
         @NameInMap("ScMockItemJson")
         public String scMockItemJson;
 
         /**
          * <p>The service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         @NameInMap("Source")
         public String source;

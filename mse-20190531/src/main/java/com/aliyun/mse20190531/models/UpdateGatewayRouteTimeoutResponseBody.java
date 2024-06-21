@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteTimeoutResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5359729E-A059-5942-98AF-E981E89C99FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

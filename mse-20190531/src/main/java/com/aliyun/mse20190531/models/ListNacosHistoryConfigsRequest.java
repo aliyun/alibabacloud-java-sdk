@@ -6,63 +6,88 @@ import com.aliyun.tea.*;
 public class ListNacosHistoryConfigsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-prod.yaml</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
      * <p>The name of the configuration group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc-dev-cluster-1</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-2r42e3bk20n</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc0f6e40-****-946b-45e3af313707</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\\&quot;appGroup\\&quot;:\\&quot;aliyun-phecda-service-staging\\&quot;,\\&quot;appName\\&quot;:\\&quot;aliyun-phecda-service\\&quot;,\\&quot;appStage\\&quot;:\\&quot;DAILY\\&quot;,\\&quot;appUnit\\&quot;:\\&quot;center\\&quot;,\\&quot;bucId\\&quot;:\\&quot;250858\\&quot;,\\&quot;bucName\\&quot;:\\&quot;Alibaba Cloud\\&quot;,\\&quot;provider\\&quot;:\\&quot;aliyun\\&quot;}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

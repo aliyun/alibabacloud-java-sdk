@@ -12,30 +12,44 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
-     * <br>
-     * <p>*   If the request is successful, a success message is returned.</p>
-     * <p>*   If the request fails, an error message is returned.</p>
+     * <ul>
+     * <li>If the request is successful, a success message is returned.</li>
+     * <li>If the request fails, an error message is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>415088B3-A7BE-56F6-9CD9-C42DE895CD41</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,48 +102,72 @@ public class QueryClusterInfoResponseBody extends TeaModel {
     public static class QueryClusterInfoResponseBodyDataInstanceModels extends TeaModel {
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("PodName")
         public String podName;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Zone")
         public String zone;
@@ -207,13 +245,19 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
     public static class QueryClusterInfoResponseBodyDataMaintenancePeriod extends TeaModel {
         /**
-         * <p>The start time of the O\\&M time window.</p>
+         * <p>The start time of the O\&amp;M time window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The end time of the O\\&M time window.</p>
+         * <p>The end time of the O\&amp;M time window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -244,18 +288,27 @@ public class QueryClusterInfoResponseBody extends TeaModel {
     public static class QueryClusterInfoResponseBodyData extends TeaModel {
         /**
          * <p>The public IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;127.0.0.0/32&quot;]</p>
          */
         @NameInMap("AclEntryList")
         public String aclEntryList;
 
         /**
          * <p>The ID of the instance in the public IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp144q24cgqvzckmxxxx</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
          * <p>The version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1.0</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
@@ -265,78 +318,117 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
         /**
          * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The alias of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Development environment</p>
          */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
         /**
          * <p>The full name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-74355150-xxxxxxx</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The engine specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_SC_2_4_60_c</p>
          */
         @NameInMap("ClusterSpecification")
         public String clusterSpecification;
 
         /**
          * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The version of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NACOS_2_0_0</p>
          */
         @NameInMap("ClusterVersion")
         public String clusterVersion;
 
         /**
          * <p>A deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("ConnectionType")
         public String connectionType;
 
         /**
          * <p>A deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-15 10:02:07</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>A deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("DiskCapacity")
         public Long diskCapacity;
 
         /**
          * <p>A deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The ID of the instance that is associated with the Elastic IP Address (EIP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bp1uujshd5funmyy8rcl9</p>
          */
         @NameInMap("EipInstanceId")
         public String eipInstanceId;
 
         /**
          * <p>The time when the subscription instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
          */
         @NameInMap("EndDate")
         public String endDate;
@@ -349,30 +441,45 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
         /**
          * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT_SUCCESS</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
          * <p>The time that is required to initialize the instance. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53353</p>
          */
         @NameInMap("InitCostTime")
         public Long initCostTime;
 
         /**
          * <p>The initial status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT_SUCCESS</p>
          */
         @NameInMap("InitStatus")
         public String initStatus;
 
         /**
          * <p>The number of instance nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -385,91 +492,133 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
         /**
          * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-xxxxxx-p.nacos-ans.mse.aliyuncs.com</p>
          */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
         /**
          * <p>The instance ports that are accessible over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8848,6443,9848,8761</p>
          */
         @NameInMap("InternetPort")
         public String internetPort;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
         /**
          * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-xxxxx-nacos-ans.mse.aliyuncs.com</p>
          */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
         /**
          * <p>The instance ports that are accessible over an internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8848,6443,9848,8761</p>
          */
         @NameInMap("IntranetPort")
         public String intranetPort;
 
         /**
-         * <p>The O\\&M time window.</p>
+         * <p>The O\&amp;M time window.</p>
          */
         @NameInMap("MaintenancePeriod")
         public QueryClusterInfoResponseBodyDataMaintenancePeriod maintenancePeriod;
 
         /**
          * <p>A deprecated parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("MemoryCapacity")
         public Long memoryCapacity;
 
         /**
          * <p>The version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         @NameInMap("MseVersion")
         public String mseVersion;
 
         /**
          * <p>The network connection type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>privatenet</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pay-as-you-go</p>
          */
         @NameInMap("PayInfo")
         public String payInfo;
 
         /**
-         * <p>The public bandwidth. Unit: Mbit/s.\\</p>
-         * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+         * <p>The public bandwidth. Unit: Mbit/s.\
+         * Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PubNetworkFlow")
         public String pubNetworkFlow;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the security group to which the elastic network interface (ENI) is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-uf6hgwe067prhg68agfa</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The type of the security group to which the ENI is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
@@ -482,6 +631,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1egfakxxxxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -491,6 +643,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1v5nbauzh8xxxxxxx</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

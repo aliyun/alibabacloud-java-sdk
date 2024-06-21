@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The token used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kywps2Ezza3n8HAAzCCqsi</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,11 +44,14 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   CLUSTER: MSE instance</p>
-     * <p>*   GATEWAY: cloud-native gateway</p>
-     * <br>
+     * <ul>
+     * <li>CLUSTER: MSE instance</li>
+     * <li>GATEWAY: cloud-native gateway</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -106,12 +118,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prd</p>
          */
         @NameInMap("Value")
         public String value;

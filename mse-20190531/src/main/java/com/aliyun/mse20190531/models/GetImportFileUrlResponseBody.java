@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetImportFileUrlResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,39 +20,59 @@ public class GetImportFileUrlResponseBody extends TeaModel {
     public GetImportFileUrlResponseBodyData data;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \\\\*\\\\*%s\\\\*\\\\* variable in the **ErrMessage** parameter.\\n\\n>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \\<em>\\</em>%s\\<em>\\</em> variable in the <strong>ErrMessage</strong> parameter.\n\n&gt;  If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19488A00-4AF5-55E1-A689-98BA9F5E7441</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>*   `true`: The request was successful. </p>
-     * <p>*  `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful. </li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -126,6 +149,9 @@ public class GetImportFileUrlResponseBody extends TeaModel {
     public static class GetImportFileUrlResponseBodyData extends TeaModel {
         /**
          * <p>The URL that is used to upload the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
          */
         @NameInMap("Url")
         public String url;

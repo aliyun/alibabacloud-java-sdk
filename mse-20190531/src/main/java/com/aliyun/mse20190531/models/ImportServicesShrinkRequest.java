@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ImportServicesShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -24,35 +28,54 @@ public class ImportServicesShrinkRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-77e1153db6e14c0a8b1fae20bcb89ca5</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The information about services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DNS</p>
      */
     @NameInMap("ServiceList")
     public String serviceListShrink;
 
     /**
      * <p>The service source. Valid values:</p>
-     * <br>
-     * <p>*   MSE: MSE Nacos instance</p>
-     * <p>*   K8s: ACK cluster</p>
-     * <p>*   VIP: fixed address</p>
-     * <p>*   DNS: DNS domain</p>
+     * <ul>
+     * <li>MSE: MSE Nacos instance</li>
+     * <li>K8s: ACK cluster</li>
+     * <li>VIP: fixed address</li>
+     * <li>DNS: DNS domain</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DNS</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The Transport Layer Security (TLS) settings. Valid values:</p>
-     * <br>
-     * <p>*   mode: TLS mode</p>
-     * <p>*   certId: certificate ID</p>
-     * <p>*   caCertId: CA certificate ID</p>
-     * <p>*   caCertContent: CA certificate public key</p>
-     * <p>*   sni: service name identification</p>
+     * <ul>
+     * <li>mode: TLS mode</li>
+     * <li>certId: certificate ID</li>
+     * <li>caCertId: CA certificate ID</li>
+     * <li>caCertContent: CA certificate public key</li>
+     * <li>sni: service name identification</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;mode&quot;: &quot;MUTUAL&quot;,
+     *       &quot;certId&quot;: &quot;1*****-cn-hangzhou&quot;,
+     *       &quot;caCertContent&quot;: &quot;123&quot;,
+     *       &quot;sni&quot;: &quot;ceshi&quot;
+     * }</p>
      */
     @NameInMap("TlsSetting")
     public String tlsSetting;

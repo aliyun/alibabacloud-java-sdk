@@ -12,51 +12,76 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>062D13C5-DEA3-4921-8918-C49A0F1B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -141,52 +166,77 @@ public class ListEngineNamespacesResponseBody extends TeaModel {
     public static class ListEngineNamespacesResponseBodyData extends TeaModel {
         /**
          * <p>The quota value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConfigCount")
         public Integer configCount;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest</p>
          */
         @NameInMap("NamespaceDesc")
         public String namespaceDesc;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("NamespaceShowName")
         public String namespaceShowName;
 
         /**
          * <p>The quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Quota")
         public Integer quota;
 
         /**
          * <p>The number of active services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ServiceCount")
         public String serviceCount;
 
         /**
          * <p>The source from which the namespace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The type of the namespace. Valid values:</p>
-         * <br>
-         * <p>*   `0`: global configuration</p>
-         * <p>*   `1`: default namespace</p>
-         * <p>*   `2`: custom namespace</p>
+         * <ul>
+         * <li><code>0</code>: global configuration</li>
+         * <li><code>1</code>: default namespace</li>
+         * <li><code>2</code>: custom namespace</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Type")
         public Integer type;

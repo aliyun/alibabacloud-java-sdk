@@ -4,9 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayIsolationRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94B12406-E44D-57C9-BF93-A8B35BFF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

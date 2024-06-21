@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     /**
      * <p>The details of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{id:102,name:&quot;test&quot;}</p>
      */
     @NameInMap("Data")
     public QuerySwimmingLaneByIdResponseBodyData data;
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

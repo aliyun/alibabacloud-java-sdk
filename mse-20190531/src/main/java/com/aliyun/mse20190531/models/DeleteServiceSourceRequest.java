@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DeleteServiceSourceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-492af9b04bb4474cae9d645be850****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17</p>
      */
     @NameInMap("SourceId")
     public Long sourceId;

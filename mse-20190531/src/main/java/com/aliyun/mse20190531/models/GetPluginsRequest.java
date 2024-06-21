@@ -6,41 +6,55 @@ import com.aliyun.tea.*;
 public class GetPluginsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
      * <p>zh: Chinese en: English</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The type of the plug-in. Valid values:</p>
-     * <br>
-     * <p>*   0: custom</p>
-     * <p>*   1: permission authorization</p>
-     * <p>*   2: security protection</p>
-     * <p>*   3: transmission protocol</p>
-     * <p>*   4: traffic control</p>
-     * <p>*   5: traffic observation</p>
+     * <ul>
+     * <li>0: custom</li>
+     * <li>1: permission authorization</li>
+     * <li>2: security protection</li>
+     * <li>3: transmission protocol</li>
+     * <li>4: traffic control</li>
+     * <li>5: traffic observation</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Category")
     public Integer category;
 
     /**
      * <p>Specifies whether to enable the plug-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableOnly")
     public Boolean enableOnly;
 
     /**
      * <p>The ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-0adf3ad751284cc69fcf9669fba*****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The name of the plug-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-auth</p>
      */
     @NameInMap("Name")
     public String name;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListServiceSourceResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8C4B0D8-EBB9-5F20-8295-04224FBE5529</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,24 +115,36 @@ public class ListServiceSourceResponseBody extends TeaModel {
     public static class ListServiceSourceResponseBodyDataIngressOptions extends TeaModel {
         /**
          * <p>Indicates whether Ingresses are enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
         /**
          * <p>Indicates whether the Ingress status is updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
         /**
          * <p>The Ingress class.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.test.xxx</p>
          */
         @NameInMap("IngressClass")
         public String ingressClass;
 
         /**
          * <p>The namespace that you want to monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("WatchNamespace")
         public String watchNamespace;
@@ -163,36 +191,54 @@ public class ListServiceSourceResponseBody extends TeaModel {
     public static class ListServiceSourceResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BindingWithGateway")
         public Integer bindingWithGateway;
 
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-2u9uhd9283hd92hgd39g239dg2*****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07 18:07:57</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07 18:07:57</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -205,6 +251,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -217,6 +266,9 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -229,18 +281,27 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
         /**
          * <p>The type of the service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The unique ID of the service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-***</p>
          */
         @NameInMap("SourceUniqueId")
         public String sourceUniqueId;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NACOS</p>
          */
         @NameInMap("Type")
         public String type;

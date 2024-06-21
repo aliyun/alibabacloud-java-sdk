@@ -7,12 +7,24 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetServiceMethodPageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2DD5A212-C77B-3XXF-9XXE-XXX9XXXE5XX1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,12 +66,24 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceMethodPageResponseBodyDataResultParameterDefinitions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>参数描述示例</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aParam</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -95,12 +119,24 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceMethodPageResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>com.alibabacloud.mse.demo.a.AController</p>
+         */
         @NameInMap("MethodController")
         public String methodController;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aMethod</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例接口描述信息。</p>
+         */
         @NameInMap("NameDetail")
         public String nameDetail;
 
@@ -119,9 +155,17 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         @NameInMap("RequestMethods")
         public java.util.List<String> requestMethods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
+         */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
+         */
         @NameInMap("ReturnType")
         public String returnType;
 
@@ -213,15 +257,27 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceMethodPageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Result")
         public java.util.List<GetServiceMethodPageResponseBodyDataResult> result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

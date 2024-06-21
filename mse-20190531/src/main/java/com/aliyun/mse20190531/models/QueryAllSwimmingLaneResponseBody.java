@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     /**
      * <p>The details of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{id:100,name:&quot;test&quot;}]</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryAllSwimmingLaneResponseBodyData> data;
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -253,15 +269,31 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PRE</p>
+         */
         @NameInMap("Cond")
         public String cond;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>header</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaoming</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -335,18 +367,34 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRoute extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CanaryModel")
         public Integer canaryModel;
 
         @NameInMap("Conditions")
         public java.util.List<QueryAllSwimmingLaneResponseBodyDataGatewaySwimmingLaneRouteConditions> conditions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-84efde2ee1464260bdb17a5b****</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Percentage")
         public Integer percentage;
 
@@ -440,18 +488,34 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Client</p>
+         */
         @NameInMap("MessageQueueFilterSide")
         public String messageQueueFilterSide;
 
         @NameInMap("MessageQueueGrayEnable")
         public Boolean messageQueueGrayEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>swimmingGroup</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -461,12 +525,20 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

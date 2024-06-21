@@ -4,53 +4,91 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddAuthPolicyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e9clba2xlc@***</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;all&quot;:true,&quot;black&quot;:false,&quot;appIds&quot;:[&quot;dez4qt7weh@***&quot;]}]</p>
      */
     @NameInMap("AuthRule")
     public String authRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AuthType")
     public Integer authType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public String enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c19c6c500e1ff4d7abc7***</p>
+     */
     @NameInMap("K8sNamespace")
     public String k8sNamespace;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SPRING_CLOUD</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edasmsc</p>
      */
     @NameInMap("Source")
     public String source;

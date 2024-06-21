@@ -4,13 +4,19 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayFlowRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>just for POP</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>param</p>
      */
     @NameInMap("FilterParams")
     public String filterParams;

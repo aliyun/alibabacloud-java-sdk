@@ -12,18 +12,27 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE34D413-2B79-5E77-9696-36D875E822AD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -68,36 +77,54 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     public static class QueryGovernanceKubernetesClusterResponseBodyDataResult extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef123456789</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cluster</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.22</p>
          */
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
         /**
          * <p>The information about the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Name&quot;:&quot;ack-onepilot&quot;,&quot;Tags&quot;:{&quot;name&quot;:&quot;ack-onepilot&quot;}}]</p>
          */
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
         /**
          * <p>The time when the pilot component was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-17T05:39:43.000+0000</p>
          */
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
         /**
          * <p>The region where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
@@ -160,12 +187,18 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     public static class QueryGovernanceKubernetesClusterResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -178,6 +211,9 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
 
         /**
          * <p>The total number of clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

@@ -6,72 +6,95 @@ import com.aliyun.tea.*;
 public class DeleteNacosInstanceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The alias of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>Specifies whether the node is an ephemeral node. Valid values:</p>
-     * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
-     * <br>
+     * <ul>
+     * <li><code>true</code>: yes</li>
+     * <li><code>false</code>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
     /**
      * <p>The name of the group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the Nacos instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-st21v5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the Nacos instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.237.1.32</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9e78a671-4b9b-4dd4-99c1-0b9da87****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The port of the Nacos instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The name of the service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hello_service</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

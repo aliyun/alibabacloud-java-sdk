@@ -6,54 +6,80 @@ import com.aliyun.tea.*;
 public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     /**
      * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The details of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{id:100,name:&quot;test&quot;}]</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryAllSwimmingLaneGroupResponseBodyData> data;
 
     /**
      * <p>The dynamic part in the error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   If the request is successful, a success message is returned.</p>
-     * <p>*   If the request fails, an error message is returned.</p>
+     * <ul>
+     * <li>If the request is successful, a success message is returned.</li>
+     * <li>If the request fails, an error message is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -128,27 +154,51 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class QueryAllSwimmingLaneGroupResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abcde@abcde,abcde@abcde</p>
+         */
         @NameInMap("AppIds")
         public String appIds;
 
         @NameInMap("CanaryModel")
         public Integer canaryModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mse:abcde@abcde</p>
+         */
         @NameInMap("EntryApp")
         public String entryApp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Client</p>
+         */
         @NameInMap("MessageQueueFilterSide")
         public String messageQueueFilterSide;
 
         @NameInMap("MessageQueueGrayEnable")
         public Boolean messageQueueGrayEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>swimmingGroup</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -158,9 +208,17 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

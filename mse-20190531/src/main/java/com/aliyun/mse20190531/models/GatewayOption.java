@@ -124,6 +124,10 @@ public class GatewayOption extends TeaModel {
         @NameInMap("TraceEnabled")
         public Boolean traceEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XTRACE</p>
+         */
         @NameInMap("TraceType")
         public String traceType;
 

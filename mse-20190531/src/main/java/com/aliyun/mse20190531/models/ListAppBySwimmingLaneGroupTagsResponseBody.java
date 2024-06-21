@@ -12,24 +12,36 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The additional request information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6832e76b-bb5f-4dea-<strong><strong>-</strong></strong>********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

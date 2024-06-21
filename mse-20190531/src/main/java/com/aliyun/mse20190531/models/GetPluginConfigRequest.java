@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetPluginConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
      * <p>zh: Chinese en: English</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-ubuwqygbq4783gqb2y3f87q****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the gateway plug-in.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("PluginId")
     public Long pluginId;

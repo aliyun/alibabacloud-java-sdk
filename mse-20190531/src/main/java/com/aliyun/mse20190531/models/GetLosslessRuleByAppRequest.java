@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class GetLosslessRuleByAppRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522baa***</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-app</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The name of the MSE namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

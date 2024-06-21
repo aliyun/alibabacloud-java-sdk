@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetKubernetesSourceResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1085A66C-DEF1-58EE-A0A4-31E00C9FC0D5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,12 +115,18 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
     public static class GetKubernetesSourceResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbc1efca895a64af097ff00b26f3f****</p>
          */
         @NameInMap("Cluster")
         public String cluster;
 
         /**
          * <p>The name of the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-demo</p>
          */
         @NameInMap("Name")
         public String name;

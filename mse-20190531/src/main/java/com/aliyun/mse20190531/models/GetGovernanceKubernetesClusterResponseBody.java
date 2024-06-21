@@ -12,21 +12,31 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B170A0D-2C5D-4CF8-B808-03966B86****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -71,12 +81,18 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     public static class GetGovernanceKubernetesClusterResponseBodyDataNamespaces extends TeaModel {
         /**
          * <p>The name of the MSE namespace that you want to access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("MseNamespace")
         public String mseNamespace;
 
         /**
          * <p>The name of the namespace in the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Name")
         public String name;
@@ -107,24 +123,36 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     public static class GetGovernanceKubernetesClusterResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd23228b3c80c4d4f9ad7af1d87cc30d5</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myCluster</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The version of Kubernetes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.20.11-aliyun.1</p>
          */
         @NameInMap("K8sVersion")
         public String k8sVersion;
 
         /**
          * <p>The information of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;Name\&quot;:\&quot;ack-onepilot\&quot;,\&quot;Tags\&quot;:null},{\&quot;Name\&quot;:\&quot;default\&quot;,\&quot;Tags\&quot;:{\&quot;mse-enable\&quot;:\&quot;enabled\&quot;}},{\&quot;Name\&quot;:\&quot;kube-node-lease\&quot;,\&quot;Tags\&quot;:null},{\&quot;Name\&quot;:\&quot;kube-public\&quot;,\&quot;Tags\&quot;:null},{\&quot;Name\&quot;:\&quot;kube-system\&quot;,\&quot;Tags\&quot;:null}]</p>
          */
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
@@ -137,18 +165,27 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
 
         /**
          * <p>The time when the pilot component was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-11T11:50:38.000+0000</p>
          */
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
         /**
          * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The time of the last modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-12T05:24:31.000+0000</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

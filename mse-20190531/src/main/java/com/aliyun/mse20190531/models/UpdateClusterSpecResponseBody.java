@@ -6,48 +6,71 @@ import com.aliyun.tea.*;
 public class UpdateClusterSpecResponseBody extends TeaModel {
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The error code returned if the request failed. Take note of the following rules:</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B170A0D-2C5D-4CF8-B808-03966B86****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

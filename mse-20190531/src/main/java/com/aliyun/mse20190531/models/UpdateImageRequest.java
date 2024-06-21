@@ -6,27 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateImageRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the destination cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-8e8e9060</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The destination version number.</p>
-     * <br>
-     * <p>> You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.</p>
-     * <br>
+     * <blockquote>
+     * <p>You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZooKeeper_3_5_5</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;

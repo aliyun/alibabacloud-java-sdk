@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DeleteGatewayRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to delete the SLB instance purchased for the gateway when you delete the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeleteSlb")
     public Boolean deleteSlb;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-0fe488252dc44d55a9dd57875193a1d7</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;

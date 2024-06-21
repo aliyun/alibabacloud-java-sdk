@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPluginsResponseBody extends TeaModel {
     /**
      * <p>The returned code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,42 +21,63 @@ public class GetPluginsResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic part in the error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -138,95 +162,136 @@ public class GetPluginsResponseBody extends TeaModel {
     public static class GetPluginsResponseBodyData extends TeaModel {
         /**
          * <p>The type of the plug-in. Valid values:</p>
-         * <br>
          * <p>0: custom</p>
-         * <br>
          * <p>1: permission authorization</p>
-         * <br>
          * <p>2: security protection</p>
-         * <br>
          * <p>3: transmission protocol</p>
-         * <br>
          * <p>4: traffic control</p>
-         * <br>
          * <p>5: traffic observation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Category")
         public Integer category;
 
         /**
          * <p>The information about the plug-in configuration used for checking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
          */
         @NameInMap("ConfigCheck")
         public String configCheck;
 
         /**
          * <p>The ID of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("MaxVersion")
         public String maxVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mode")
         public Integer mode;
 
         /**
          * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-auth</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NewVersionPublishingFlag")
         public Boolean newVersionPublishingFlag;
 
         /**
          * <p>The execution stage of the plug-in.</p>
-         * <br>
-         * <p>*   0: default stage</p>
-         * <p>*   1: authorization stage</p>
-         * <p>*   2: authentication stage</p>
-         * <p>*   3: statistics stage</p>
+         * <ul>
+         * <li>0: default stage</li>
+         * <li>1: authorization stage</li>
+         * <li>2: authentication stage</li>
+         * <li>3: statistics stage</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Phase")
         public Integer phase;
 
         /**
          * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
         /**
          * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The publish status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PublishState")
         public Integer publishState;
 
         /**
          * <p>Indicates whether the plug-in is enabled.</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   1: enabled</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The summary of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a plug-in.</p>
          */
         @NameInMap("Summary")
         public String summary;
 
         /**
          * <p>The version of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -239,12 +304,16 @@ public class GetPluginsResponseBody extends TeaModel {
 
         /**
          * <p>The WebAssembly language. Valid values:</p>
-         * <br>
-         * <p>*   0: C++</p>
-         * <p>*   1: TinyGo</p>
-         * <p>*   2: Rust</p>
-         * <p>*   3: AssemblyScript</p>
-         * <p>*   4: Zig</p>
+         * <ul>
+         * <li>0: C++</li>
+         * <li>1: TinyGo</li>
+         * <li>2: Rust</li>
+         * <li>3: AssemblyScript</li>
+         * <li>4: Zig</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WasmLang")
         public Integer wasmLang;

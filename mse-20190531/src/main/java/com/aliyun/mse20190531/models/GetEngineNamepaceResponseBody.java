@@ -6,73 +6,108 @@ import com.aliyun.tea.*;
 public class GetEngineNamepaceResponseBody extends TeaModel {
     /**
      * <p>The number of configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ConfigCount")
     public String configCount;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The description of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mytest</p>
      */
     @NameInMap("NamespaceDesc")
     public String namespaceDesc;
 
     /**
      * <p>The display name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("NamespaceShowName")
     public String namespaceShowName;
 
     /**
      * <p>The quota of configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Quota")
     public String quota;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FA8F966F-420C-52F5-B49E-6ED7CCE02697</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The type of the namespace. Valid values:</p>
-     * <br>
-     * <p>*   0: global configuration</p>
-     * <p>*   1: default namespace</p>
-     * <p>*   2: custom namespace</p>
+     * <ul>
+     * <li>0: global configuration</li>
+     * <li>1: default namespace</li>
+     * <li>2: custom namespace</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Type")
     public String type;

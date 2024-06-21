@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteEngineNamespaceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-0c738****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>678ca857-****-b1bf-d0a98c5ca84b</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-7pp2d1****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

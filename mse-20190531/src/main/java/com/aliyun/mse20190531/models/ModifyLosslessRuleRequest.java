@@ -6,100 +6,133 @@ import com.aliyun.tea.*;
 public class ModifyLosslessRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Aligned")
     public Boolean aligned;
 
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c644n5frmc@3e75f25fd4*****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wx-work-api</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The registration latency.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DelayTime")
     public Integer delayTime;
 
     /**
      * <p>Specifies whether to enable the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables the rule.</p>
-     * <p>*   `false`: disables the rule.</p>
-     * <br>
+     * <ul>
+     * <li><code>true</code>: enables the rule.</li>
+     * <li><code>false</code>: disables the rule.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The slope of the prefetching curve.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FuncType")
     public Integer funcType;
 
     /**
      * <p>Specifies whether to display online and offline processing details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("LossLessDetail")
     public Boolean lossLessDetail;
 
     /**
      * <p>The microservice namespace to which the rule applies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>Specifies whether to enable notification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Notice")
     public Boolean notice;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to associate with service prefetching.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Related")
     public Boolean related;
 
     /**
      * <p>The prefetching duration.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("WarmupTime")
     public Integer warmupTime;

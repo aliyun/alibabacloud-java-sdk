@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListGatewayRouteResponseBody extends TeaModel {
     /**
      * <p>The code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83F02EAB-ECDF-55C6-B332-8649E5E7AF2C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,6 +115,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultComment extends TeaModel {
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
          */
         @NameInMap("Status")
         public String status;
@@ -121,12 +140,18 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultDirectResponse extends TeaModel {
         /**
          * <p>The return value for service mocking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         @NameInMap("Body")
         public String body;
 
         /**
          * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public Integer code;
@@ -157,60 +182,90 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultFallbackServices extends TeaModel {
         /**
          * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUBBO</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
 
         /**
          * <p>The name of the group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Namespace</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The weight in the form of a percentage value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public Integer percent;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>353</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service name</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The service port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8848</p>
          */
         @NameInMap("ServicePort")
         public Integer servicePort;
 
         /**
          * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -305,18 +360,27 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRedirect extends TeaModel {
         /**
          * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The hostname to be redirected to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("Path")
         public String path;
@@ -355,18 +419,27 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRoutePredicatesHeaderPredicates extends TeaModel {
         /**
          * <p>The header key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userid</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -405,18 +478,27 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRoutePredicatesPathPredicates extends TeaModel {
         /**
          * <p>Indicates whether case sensitivity is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
         /**
          * <p>The path of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/getIp</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
@@ -455,18 +537,27 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRoutePredicatesQueryPredicates extends TeaModel {
         /**
          * <p>The key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userid</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -569,28 +660,40 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList extends TeaModel {
         /**
          * <p>The key extracted from the input parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("ExtractKey")
         public String extractKey;
 
         /**
          * <p>The position of the input parameter.</p>
-         * <br>
-         * <p>> Valid values:</p>
-         * <br>
-         * <p>*   `ALL_QUERY_PARAMETER`: request parameter</p>
-         * <br>
-         * <p>*   `ALL_HEADER`: request header</p>
-         * <br>
-         * <p>*   `ALL_PATH`: request path</p>
-         * <br>
-         * <p>*   `ALL_BODY`: request body</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><code>ALL_QUERY_PARAMETER</code>: request parameter</p>
+         * </li>
+         * <li><p><code>ALL_HEADER</code>: request header</p>
+         * </li>
+         * <li><p><code>ALL_PATH</code>: request path</p>
+         * </li>
+         * <li><p><code>ALL_BODY</code>: request body</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_QUERY_PARAMETER</p>
          */
         @NameInMap("ExtractKeySpec")
         public String extractKeySpec;
 
         /**
          * <p>The type of the backend service parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("MappingType")
         public String mappingType;
@@ -629,30 +732,42 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList extends TeaModel {
         /**
          * <p>The method name of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sayHello</p>
          */
         @NameInMap("DubboMothedName")
         public String dubboMothedName;
 
         /**
          * <p>The HTTP method.</p>
-         * <br>
-         * <p>> Valid values:</p>
-         * <br>
-         * <p>*   ALL_GET</p>
-         * <br>
-         * <p>*   ALL_POST</p>
-         * <br>
-         * <p>*   ALL_PUT</p>
-         * <br>
-         * <p>*   ALL_DELETE</p>
-         * <br>
-         * <p>*   ALL_PATCH</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>ALL_GET</p>
+         * </li>
+         * <li><p>ALL_POST</p>
+         * </li>
+         * <li><p>ALL_PUT</p>
+         * </li>
+         * <li><p>ALL_DELETE</p>
+         * </li>
+         * <li><p>ALL_PATCH</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_GET</p>
          */
         @NameInMap("HttpMothed")
         public String httpMothed;
 
         /**
          * <p>The path used for method matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mytestzbk/sayhello</p>
          */
         @NameInMap("Mothedpath")
         public String mothedpath;
@@ -665,14 +780,20 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The pass-through type of the header.</p>
-         * <br>
-         * <p>> Valid values:</p>
-         * <br>
-         * <p>*   PASS_ALL: All headers are passed through.</p>
-         * <br>
-         * <p>*   PASS_NOT: All headers are not passed through.</p>
-         * <br>
-         * <p>*   PASS_ASSIGN: Specified headers are passed through.</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>PASS_ALL: All headers are passed through.</p>
+         * </li>
+         * <li><p>PASS_NOT: All headers are not passed through.</p>
+         * </li>
+         * <li><p>PASS_ASSIGN: Specified headers are passed through.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PASS_NOT</p>
          */
         @NameInMap("PassThroughAllHeaders")
         public String passThroughAllHeaders;
@@ -741,18 +862,27 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder extends TeaModel {
         /**
          * <p>The Dubbo service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service group</p>
          */
         @NameInMap("DubboServiceGroup")
         public String dubboServiceGroup;
 
         /**
          * <p>The name of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.dubbo.samples.basic.api.DemoService</p>
          */
         @NameInMap("DubboServiceName")
         public String dubboServiceName;
 
         /**
          * <p>The version of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0</p>
          */
         @NameInMap("DubboServiceVersion")
         public String dubboServiceVersion;
@@ -805,16 +935,26 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyDataResultRouteServices extends TeaModel {
         /**
          * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUBBO</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
 
         /**
          * <p>The name of the group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Health</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
@@ -826,42 +966,63 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The weight in the form of a percentage value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Percent")
         public Integer percent;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hu</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The Dubbo port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20880</p>
          */
         @NameInMap("ServicePort")
         public Integer servicePort;
 
         /**
          * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -871,6 +1032,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -995,18 +1159,27 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The default service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
 
         /**
          * <p>The default service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DefaultServiceName")
         public String defaultServiceName;
 
         /**
          * <p>The destination service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         @NameInMap("DestinationType")
         public String destinationType;
@@ -1019,6 +1192,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>265</p>
          */
         @NameInMap("DomainId")
         public Long domainId;
@@ -1031,6 +1207,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
@@ -1043,12 +1222,18 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether Web Application Firewall (WAF) is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableWaf")
         public String enableWaf;
 
         /**
          * <p>Indicates whether the Fallback service is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Fallback")
         public Boolean fallback;
@@ -1061,42 +1246,63 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>496</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cf0e7f52ecc7429dbc7ba4d5e3656100</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-25T07:14:01.817+0000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07 18:07:57</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The matching rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;PathPredicates\&quot;:{\&quot;Path\&quot;:\&quot;/rpc/compute \&quot;,\&quot;Type\&quot;:\&quot;PRE\&quot;,\&quot;IgnoreCase\&quot;:true}}</p>
          */
         @NameInMap("Predicates")
         public String predicates;
@@ -1109,6 +1315,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RouteOrder")
         public Integer routeOrder;
@@ -1127,18 +1336,27 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The information about services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("Services")
         public String services;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The route type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Op</p>
          */
         @NameInMap("Type")
         public String type;
@@ -1361,12 +1579,18 @@ public class ListGatewayRouteResponseBody extends TeaModel {
     public static class ListGatewayRouteResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -1379,6 +1603,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

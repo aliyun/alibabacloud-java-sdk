@@ -12,51 +12,76 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -141,86 +166,128 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
     public static class ListEurekaInstancesResponseBodyData extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTACTINFO</p>
          */
         @NameInMap("App")
         public String app;
 
         /**
-         * <p>The timeout period of the instance.\\</p>
-         * <p>After the specified timeout period expires, the service is unavailable by default and is deleted.</p>
+         * <p>The timeout period of the instance.\
+         * After the specified timeout period expires, the service is unavailable by default and is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("DurationInSecs")
         public Integer durationInSecs;
 
         /**
          * <p>The URL of the homepage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://30.5.XX.XX:8091/">http://30.5.XX.XX:8091/</a></p>
          */
         @NameInMap("HomePageUrl")
         public String homePageUrl;
 
         /**
          * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.XX.XX</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L-PC1A6A28-****.hz.ali.com:contactinfo:8091</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.XX.XX</p>
          */
         @NameInMap("IpAddr")
         public String ipAddr;
 
         /**
          * <p>The time when the instance was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201009115543</p>
          */
         @NameInMap("LastDirtyTimestamp")
         public Long lastDirtyTimestamp;
 
         /**
          * <p>The time when the instance heartbeat was last checked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201010071203</p>
          */
         @NameInMap("LastUpdatedTimestamp")
         public Long lastUpdatedTimestamp;
 
         /**
          * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[string]</p>
          */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
         /**
          * <p>The service port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8091</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The maximum interval between two heartbeat checks after a heartbeat check times out.\\</p>
-         * <p>Default value: 10.</p>
+         * <p>The maximum interval between two heartbeat checks after a heartbeat check times out.\
+         * Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("RenewalIntervalInSecs")
         public Integer renewalIntervalInSecs;
 
         /**
          * <p>The security port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("SecurePort")
         public Integer securePort;
 
         /**
          * <p>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/1</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The virtual IP address (VIP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contactinfo</p>
          */
         @NameInMap("VipAddress")
         public String vipAddress;

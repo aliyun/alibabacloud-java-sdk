@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListListenersByIpResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MSE-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
@@ -24,39 +30,58 @@ public class ListListenersByIpResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54973C90-F379-4372-9AA5-053A3F7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -141,18 +166,27 @@ public class ListListenersByIpResponseBody extends TeaModel {
     public static class ListListenersByIpResponseBodyListeners extends TeaModel {
         /**
          * <p>The ID of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>The group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The verification string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23sdfdf</p>
          */
         @NameInMap("Md5")
         public String md5;

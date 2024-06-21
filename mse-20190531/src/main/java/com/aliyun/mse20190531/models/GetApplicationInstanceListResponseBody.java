@@ -26,6 +26,9 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
     public static class GetApplicationInstanceListResponseBodyDataResultTags extends TeaModel {
         /**
          * <p>标签值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -48,12 +51,18 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
     public static class GetApplicationInstanceListResponseBodyDataResult extends TeaModel {
         /**
          * <p>The node IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.2.3</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The application port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public String port;
@@ -98,12 +107,18 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
     public static class GetApplicationInstanceListResponseBodyData extends TeaModel {
         /**
          * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -116,6 +131,9 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
 
         /**
          * <p>The total number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

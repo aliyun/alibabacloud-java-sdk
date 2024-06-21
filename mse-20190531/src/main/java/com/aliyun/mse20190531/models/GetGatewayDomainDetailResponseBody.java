@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetGatewayDomainDetailResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88B83302-CD88-54D3-8DF2-208BFDC73F0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,130 +115,194 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
     public static class GetGatewayDomainDetailResponseBodyData extends TeaModel {
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 02:35:12</p>
          */
         @NameInMap("AfterDate")
         public Long afterDate;
 
         /**
          * <p>The algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         @NameInMap("Algorithm")
         public String algorithm;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 02:35:12</p>
          */
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234-cn-hangzhou</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The public domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 02:35:12</p>
          */
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 02:35:12</p>
          */
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07T10:07:57.000+0000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07T10:07:57.000+0000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>Indicates whether `HTTP/2` is enabled.</p>
-         * <br>
-         * <p>*   `open`: `HTTP/2` is enabled.</p>
-         * <p>*   `close`: `HTTP/2` is disabled.</p>
-         * <p>*   `globalConfig`: Global configurations are used.</p>
+         * <p>Indicates whether <code>HTTP/2</code> is enabled.</p>
+         * <ul>
+         * <li><code>open</code>: <code>HTTP/2</code> is enabled.</li>
+         * <li><code>close</code>: <code>HTTP/2</code> is disabled.</li>
+         * <li><code>globalConfig</code>: Global configurations are used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         @NameInMap("Http2")
         public String http2;
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Istio</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>Indicates whether HTTPS is forcibly used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The protocol of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The name of the extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("Sans")
         public String sans;
 
         /**
          * <p>The maximum version of Transport Layer Security (TLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.3</p>
          */
         @NameInMap("TlsMax")
         public String tlsMax;
 
         /**
          * <p>The minimum version of TLS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.0</p>
          */
         @NameInMap("TlsMin")
         public String tlsMin;

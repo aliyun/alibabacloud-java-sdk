@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     /**
      * <p>The status code. A value of 200 is returned if the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,50 +21,74 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic part in the error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \\*\\*%s\\*\\* variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>> If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p>If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed. Take note of the following rules:</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned if the request is successful.</p>
-     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -146,97 +173,144 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public static class ListClusterHealthCheckTaskResponseBodyDataResultRiskList extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\\&quot;desc\\&quot;:\\&quot;The engine version is outdated and a large number of features are not supported. Upgrade the engine to the latest version at the earliest opportunity. \\&quot;}</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3426</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>A redundant parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Module")
         public String module;
 
         /**
          * <p>Indicates whether the risk item notification feature is disabled.</p>
-         * <br>
-         * <p>*   true: disabled</p>
-         * <p>*   false: enabled</p>
+         * <ul>
+         * <li>true: disabled</li>
+         * <li>false: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Mute")
         public Boolean mute;
 
         /**
          * <p>A redundant parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("NoticeFeature")
         public Boolean noticeFeature;
 
         /**
          * <p>The ID of the user to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
         /**
          * <p>The risk code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22020010001</p>
          */
         @NameInMap("RiskCode")
         public String riskCode;
 
         /**
          * <p>The severity of the risk. Valid values:</p>
-         * <br>
-         * <p>*   HIGH: high risk</p>
-         * <p>*   MID: medium risk</p>
-         * <p>*   LOW: low risk</p>
+         * <ul>
+         * <li>HIGH: high risk</li>
+         * <li>MID: medium risk</li>
+         * <li>LOW: low risk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MID</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The name of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The engine version is outdated.</p>
          */
         @NameInMap("RiskName")
         public String riskName;
 
         /**
          * <p>The type of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Version risk</p>
          */
         @NameInMap("RiskType")
         public String riskType;
 
         /**
          * <p>The situation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\\&quot;desc\\&quot;:\\&quot;The engine version is outdated and a large number of features are not supported.\\&quot;,\\&quot;links\\&quot;:[{\\&quot;type\\&quot;:\\&quot;url\\&quot;,\\&quot;value\\&quot;:\\&quot;<a href="https://xxxx%22%5C%5C%5C%5C%22,%5C%5C%5C%5C%22desc%5C%5C%5C%5C%22:%5C%5C%5C%5C%22Release">https://xxxx&quot;\\\\&quot;,\\\\&quot;desc\\\\&quot;:\\\\&quot;Release</a> notes\\&quot;}]}</p>
          */
         @NameInMap("Situation")
         public String situation;
 
         /**
          * <p>The suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;desc&quot;: &quot;Upgrade to the latest version at the earliest opportunity.&quot;, &quot;links&quot;:[{&quot;type&quot;: &quot;upgrade&quot;, &quot;desc&quot;: &quot;Click to upgrade&quot;}]}</p>
          */
         @NameInMap("Suggestion")
         public String suggestion;
 
         /**
          * <p>The ID of the associated parent task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
          * <p>A redundant parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Type")
         public Integer type;
 
         /**
          * <p>A redundant parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Values")
         public String values;
@@ -371,54 +445,81 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public static class ListClusterHealthCheckTaskResponseBodyDataResult extends TeaModel {
         /**
          * <p>The complete version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.1</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-20T06:51:46Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>A redundant parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_ingresspost-cn-0jbvrcex****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the user to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
         /**
          * <p>The number of nodes in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Replica")
         public String replica;
@@ -431,48 +532,72 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
         /**
          * <p>The total score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Score")
         public Integer score;
 
         /**
          * <p>The specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_SC_2_4_200_c</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISH</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The total number of check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalItem")
         public Integer totalItem;
 
         /**
          * <p>The total number of risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalRisk")
         public Integer totalRisk;
 
         /**
          * <p>A redundant parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The last update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-12 15:07:55</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NACOS_ANS_1_2_1_3</p>
          */
         @NameInMap("VersionCode")
         public String versionCode;
@@ -631,12 +756,18 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     public static class ListClusterHealthCheckTaskResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -649,6 +780,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

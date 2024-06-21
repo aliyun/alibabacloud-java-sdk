@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class AddSSLCertRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5213641-cn-hangzhou</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DomainId")
     public Long domainId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-c70622ff52fe49beb29bea9a6f52****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;

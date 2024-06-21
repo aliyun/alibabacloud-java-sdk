@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ImportNacosConfigResponseBody extends TeaModel {
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,39 +21,61 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     /**
      * <p>The details of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-100</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The request is successfully processed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * </blockquote>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AF21683A-29C7-4853-AC0F-B5ADEE4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The error code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -127,10 +152,17 @@ public class ImportNacosConfigResponseBody extends TeaModel {
     public static class ImportNacosConfigResponseBodyDataFailData extends TeaModel {
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Group")
         public String group;
 
@@ -160,12 +192,18 @@ public class ImportNacosConfigResponseBody extends TeaModel {
     public static class ImportNacosConfigResponseBodyDataSkipData extends TeaModel {
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>The information about configurations that are failed to be imported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Group")
         public String group;
@@ -202,6 +240,9 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
         /**
          * <p>The information about skipped configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SkipCount")
         public Integer skipCount;
@@ -214,6 +255,9 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
         /**
          * <p>The number of configurations that are skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SuccCount")
         public Integer succCount;

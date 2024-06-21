@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteHeaderOpRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-6bdc977deda44bf589c49d063b4c2d1d</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The description of user header settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;status\&quot;:\&quot;on\&quot;,\&quot;headerOpItems\&quot;:[{\&quot;directionType\&quot;:\&quot;Request\&quot;,\&quot;opType\&quot;:\&quot;Update\&quot;,\&quot;key\&quot;:\&quot;hosts\&quot;,\&quot;value\&quot;:\&quot;test.com\&quot;}]}</p>
      */
     @NameInMap("HeaderOpJSON")
     public String headerOpJSON;
 
     /**
      * <p>The ID of the record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>411</p>
      */
     @NameInMap("Id")
     public Long id;

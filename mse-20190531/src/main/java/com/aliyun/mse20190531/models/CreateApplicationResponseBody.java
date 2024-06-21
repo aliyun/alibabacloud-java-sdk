@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class CreateApplicationResponseBody extends TeaModel {
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The data of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>data</p>
      */
     @NameInMap("Data")
     public CreateApplicationResponseBodyData data;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68D91223-CCE9-5F9C-B538-20F617DA48B1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -99,81 +118,121 @@ public class CreateApplicationResponseBody extends TeaModel {
     public static class CreateApplicationResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxx@xxxxxxxxxx</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631001140913</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;rpcTypes\&quot;:[\&quot;dubbo\&quot;,\&quot;springCloud\&quot;]}</p>
          */
         @NameInMap("ExtraInfo")
         public String extraInfo;
 
         /**
          * <p>The programming language of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAVA</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The license key in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxx@xxxxxxxxxx</p>
          */
         @NameInMap("LicenseKey")
         public String licenseKey;
 
         /**
          * <p>MSE命名空间名字。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The service where the application is deployed. Valid values:</p>
-         * <br>
-         * <p>*   \\- ACK: Container Service for Kubernetes</p>
-         * <p>*   \\- Normal: another service</p>
+         * <ul>
+         * <li>\- ACK: Container Service for Kubernetes</li>
+         * <li>\- Normal: another service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status of the application. A value of 1 indicates that the application is in a normal state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632979237663</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1888888888</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>版本号。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("Version")
         public String version;

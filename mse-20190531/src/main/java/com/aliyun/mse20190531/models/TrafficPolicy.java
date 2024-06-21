@@ -38,6 +38,10 @@ public class TrafficPolicy extends TeaModel {
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0s</p>
+         */
         @NameInMap("TTL")
         public String TTL;
 
@@ -117,6 +121,10 @@ public class TrafficPolicy extends TeaModel {
         @NameInMap("ConsistentHashLBConfig")
         public TrafficPolicyLoadBalancerSettingsConsistentHashLBConfig consistentHashLBConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RANDOM</p>
+         */
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
@@ -166,6 +174,9 @@ public class TrafficPolicy extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         @NameInMap("TlsMode")
         public String tlsMode;

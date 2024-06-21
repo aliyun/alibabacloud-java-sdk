@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to enable the lane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableRules")
     public Boolean enableRules;
 
     /**
      * <p>The JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("EntryRule")
     @Deprecated
@@ -40,29 +52,43 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
 
     /**
      * <p>The language of the response. Valid values:****</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese</p>
-     * <p>*   **en-US**: English</p>
-     * <br>
-     * <p>> Default value: **zh-CN**.</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese</li>
+     * <li><strong>en-US</strong>: English</li>
+     * </ul>
+     * <blockquote>
+     * <p>Default value: <strong>zh-CN</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>115</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the lane.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test lane</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
@@ -71,12 +97,18 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gray</p>
      */
     @NameInMap("Tag")
     public String tag;
@@ -309,6 +341,10 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneShrinkRequestEntryRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("Condition")
         public String condition;
 

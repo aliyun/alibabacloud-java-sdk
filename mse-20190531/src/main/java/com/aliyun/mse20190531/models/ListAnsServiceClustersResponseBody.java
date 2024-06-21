@@ -12,33 +12,49 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,58 +115,86 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     public static class ListAnsServiceClustersResponseBodyDataAppDetail extends TeaModel {
         /**
          * <p>The ID of the application for which Microservices Governance is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@904cba2c0xxxxxx</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application for which Microservices Governance is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-b</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The health check interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CheckInternal")
         public Integer checkInternal;
 
         /**
          * <p>The path of the health check. This parameter is required only when the CheckType parameter is set to http.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/health</p>
          */
         @NameInMap("CheckPath")
         public String checkPath;
 
         /**
          * <p>The timeout period of the health check response. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("CheckTimeout")
         public Integer checkTimeout;
 
         /**
          * <p>The type of the health check. Valid values:</p>
-         * <br>
-         * <p>*   connection: connection status check</p>
-         * <p>*   tcp: TCP connection check</p>
-         * <p>*   http: HTTP connection check</p>
+         * <ul>
+         * <li>connection: connection status check</li>
+         * <li>tcp: TCP connection check</li>
+         * <li>http: HTTP connection check</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>connection</p>
          */
         @NameInMap("CheckType")
         public String checkType;
 
         /**
          * <p>The maximum number of health check retries when the instance state changes from unhealthy to healthy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HealthyCheckTimes")
         public Integer healthyCheckTimes;
 
         /**
          * <p>The port number of the application for which Microservices Governance is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6001</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The maximum number of health check retries when the instance state changes from healthy to unhealthy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("UnhealthyCheckTimes")
         public Integer unhealthyCheckTimes;
@@ -237,42 +281,63 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     public static class ListAnsServiceClustersResponseBodyDataClusters extends TeaModel {
         /**
          * <p>The default port used for a health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("DefaultCheckPort")
         public Integer defaultCheckPort;
 
         /**
          * <p>The default port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("DefaultPort")
         public Integer defaultPort;
 
         /**
          * <p>The type of the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Heartbeat Reporting</p>
          */
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
 
         /**
          * <p>The metadata of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The full name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP@@nacos.test.3</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>Indicates whether an end-to-end health check was initiated by the server. This parameter is valid only if the service is not a temporary service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseIPPort4Check")
         public Boolean useIPPort4Check;
@@ -355,49 +420,72 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the service is a temporary service. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
         /**
          * <p>The service group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The metadata of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacos.test.3</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The protection threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ProtectThreshold")
         public Float protectThreshold;
 
         /**
          * <p>The election mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("SelectorType")
         public String selectorType;
 
         /**
          * <p>The source type of the service. Valid values:</p>
-         * <br>
-         * <p>*   console: The service was registered in the console.</p>
-         * <p>*   sdk: The service was registered by using the SDK.</p>
-         * <p>*   governance: The service was registered on Microservices Governance.</p>
+         * <ul>
+         * <li>console: The service was registered in the console.</li>
+         * <li>sdk: The service was registered by using the SDK.</li>
+         * <li>governance: The service was registered on Microservices Governance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         @NameInMap("Source")
         public String source;

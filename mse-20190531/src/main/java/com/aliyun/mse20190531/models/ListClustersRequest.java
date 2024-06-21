@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListClustersRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The alias of the instance. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
@@ -24,36 +31,48 @@ public class ListClustersRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The ID of the resource group. For more information about resource groups, see the topic "View basic information of a resource group."</p>
+     * <p>The ID of the resource group. For more information about resource groups, see the topic &quot;View basic information of a resource group.&quot;</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxbzafebvvfa</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -144,12 +163,18 @@ public class ListClustersRequest extends TeaModel {
     public static class ListClustersRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prd</p>
          */
         @NameInMap("Value")
         public String value;

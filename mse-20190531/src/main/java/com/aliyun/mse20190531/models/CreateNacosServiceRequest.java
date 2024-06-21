@@ -6,60 +6,87 @@ import com.aliyun.tea.*;
 public class CreateNacosServiceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <blockquote>
+     * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-3691a080</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether the instance is marked as a temporary node. Valid values:</p>
-     * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <ul>
+     * <li><code>true</code>: yes</li>
+     * <li><code>false</code>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
     /**
      * <p>The name of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <blockquote>
+     * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-st21ri2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>production</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The protection threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ProtectThreshold")
     public String protectThreshold;
 
     /**
      * <p>The name of the service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibabacloud.hipstershop.cartserviceapi.service.CartService</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

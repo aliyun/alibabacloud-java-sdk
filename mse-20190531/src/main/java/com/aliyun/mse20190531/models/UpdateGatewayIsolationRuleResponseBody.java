@@ -7,6 +7,10 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
     @NameInMap("Data")
     public UpdateGatewayIsolationRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94B12406-E44D-57C9-BF93-A8B35BFF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,48 +36,104 @@ public class UpdateGatewayIsolationRuleResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayIsolationRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BehaviorType")
         public Integer behaviorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BodyEncoding")
         public Integer bodyEncoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14407</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>358</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LimitMode")
         public Integer limitMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxConcurrency")
         public Integer maxConcurrency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key=value</p>
+         */
         @NameInMap("ResponseAdditionalHeaders")
         public String responseAdditionalHeaders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("ResponseContentBody")
         public String responseContentBody;
 
+        /**
+         * <strong>example:</strong>
+         * <p>www.******.com</p>
+         */
         @NameInMap("ResponseRedirectUrl")
         public String responseRedirectUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>429</p>
+         */
         @NameInMap("ResponseStatusCode")
         public Integer responseStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>52853</p>
+         */
         @NameInMap("RouteId")
         public Long routeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>routeName</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 

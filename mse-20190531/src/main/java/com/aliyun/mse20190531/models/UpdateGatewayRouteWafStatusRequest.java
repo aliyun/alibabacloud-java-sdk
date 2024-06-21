@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteWafStatusRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>645</p>
      */
     @NameInMap("RouteId")
     public Long routeId;

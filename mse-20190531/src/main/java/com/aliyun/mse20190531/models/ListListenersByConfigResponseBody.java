@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListListenersByConfigResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
@@ -24,39 +30,58 @@ public class ListListenersByConfigResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75E1442F-11EC-567A-9CF0-5A36F7904F39</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -141,6 +166,9 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     public static class ListListenersByConfigResponseBodyListeners extends TeaModel {
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -150,12 +178,18 @@ public class ListListenersByConfigResponseBody extends TeaModel {
 
         /**
          * <p>The verification string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23sdfdf</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beta</p>
          */
         @NameInMap("Status")
         public String status;

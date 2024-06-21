@@ -6,97 +6,129 @@ import com.aliyun.tea.*;
 public class AddMockRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the custom application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;appName\&quot;:\&quot;provide\&quot;,\&quot;appId\&quot;:\&quot;bst8l6o735@f6d8aaf6e56e67d\&quot;}]</p>
      */
     @NameInMap("ConsumerAppIds")
     public String consumerAppIds;
 
     /**
      * <p>The items in the recycle bin.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("DubboMockItems")
     public String dubboMockItems;
 
     /**
      * <p>Specifies whether to enable the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables the alert rule.</p>
-     * <p>*   `false`: disables the alert rule.</p>
+     * <ul>
+     * <li><code>true</code>: enables the alert rule.</li>
+     * <li><code>false</code>: disables the alert rule.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The description.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("ExtraJson")
     public String extraJson;
 
     /**
      * <p>The response time (RT) threshold of slow calls. Valid values:</p>
-     * <br>
-     * <p>*   \\- 15: 15 ms</p>
-     * <p>*   \\- 30: 30 ms</p>
-     * <p>*   \\- 60: 60 ms</p>
-     * <p>*   \\- 120: 120 ms</p>
+     * <ul>
+     * <li>\- 15: 15 ms</li>
+     * <li>\- 30: 30 ms</li>
+     * <li>\- 60: 60 ms</li>
+     * <li>\- 120: 120 ms</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MockType")
     public Long mockType;
 
     /**
      * <p>The name of the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent-auto-test-sc</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the service provider application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dcqtkuhnc4@66e5235415****</p>
      */
     @NameInMap("ProviderAppId")
     public String providerAppId;
 
     /**
      * <p>The name of the service provider application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-cartservice</p>
      */
     @NameInMap("ProviderAppName")
     public String providerAppName;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The input parameters. The JSON format is supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("ScMockItems")
     public String scMockItems;
 
     /**
      * <p>The rule source.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edasmsc</p>
      */
     @NameInMap("Source")
     public String source;

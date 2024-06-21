@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAuthPolicyResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -30,15 +36,22 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05A5A150-4A5F-5A8C-97D6-710776CC8408</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,12 +112,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     public static class ListAuthPolicyResponseBodyDataResultAuthRuleMethod extends TeaModel {
         /**
          * <p>The group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The method name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         @NameInMap("Name")
         public String name;
@@ -117,18 +136,27 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The type of the return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Boolean</p>
          */
         @NameInMap("ReturnType")
         public String returnType;
 
         /**
          * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The method version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -197,15 +225,22 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The rule type. Valid values:</p>
-         * <br>
-         * <p>*   0: by application</p>
-         * <p>*   1: by namespace</p>
+         * <ul>
+         * <li>0: by application</li>
+         * <li>1: by namespace</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AuthType")
         public Integer authType;
 
         /**
          * <p>Indicates whether the rule is a blacklist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Black")
         public Boolean black;
@@ -224,6 +259,9 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The service path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         @NameInMap("Path")
         public String path;
@@ -286,18 +324,27 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     public static class ListAuthPolicyResponseBodyDataResult extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19039813784***</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@5f1b08becb*****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -310,70 +357,103 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The rule type. Valid values:</p>
-         * <br>
-         * <p>*   0: by application</p>
-         * <p>*   1: by namespace</p>
+         * <ul>
+         * <li>0: by application</li>
+         * <li>1: by namespace</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AuthType")
         public Integer authType;
 
         /**
          * <p>Indicates whether the rule was enabled or disabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <ul>
+         * <li><code>true</code>: enabled</li>
+         * <li><code>false</code>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>204</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c19c6c500e1ff4d7abc7bed9b8236***</p>
          */
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
         /**
          * <p>The name of the authentication rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ced54a95-4e33-4bda-be7e-37e95868***</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The protocol type. Valid values:</p>
-         * <br>
-         * <p>*   **SPRING_CLOUD**</p>
-         * <p>*   **DUBBO**</p>
-         * <p>*   **istio**</p>
+         * <ul>
+         * <li><strong>SPRING_CLOUD</strong></li>
+         * <li><strong>DUBBO</strong></li>
+         * <li><strong>istio</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SPRING_CLOUD</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The source of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edasmsc</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -500,12 +580,18 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     public static class ListAuthPolicyResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -518,6 +604,9 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

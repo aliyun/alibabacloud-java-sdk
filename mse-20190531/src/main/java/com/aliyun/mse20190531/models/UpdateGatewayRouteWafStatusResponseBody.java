@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     /**
      * <p>The status code returned. A value of 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,48 +115,78 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataCors extends TeaModel {
         /**
          * <p>The credentials allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowCredentials")
         public Boolean allowCredentials;
 
         /**
          * <p>The headers allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AllowHeaders")
         public String allowHeaders;
 
         /**
          * <p>The methods allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH</p>
          */
         @NameInMap("AllowMethods")
         public String allowMethods;
 
         /**
          * <p>The origins allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AllowOrigins")
         public String allowOrigins;
 
         /**
          * <p>The response headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("ExposeHeaders")
         public String exposeHeaders;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
         /**
          * <p>The unit number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UnitNum")
         public Long unitNum;
@@ -219,12 +265,18 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataDirectResponse extends TeaModel {
         /**
          * <p>The mock return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;key\&quot;:\&quot;h68d13466.sqa.eu95\&quot;,\&quot;dims\&quot;:\&quot;groupName=All}]</p>
          */
         @NameInMap("Body")
         public String body;
 
         /**
          * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public Integer code;
@@ -255,36 +307,54 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataHTTPRewrite extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyuncs.com</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The HTTP request path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/client</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The path type of the HTTP request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("PathType")
         public String pathType;
 
         /**
          * <p>The matching pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("Pattern")
         public String pattern;
 
         /**
          * <p>The HTTP status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The replacement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Substitution")
         public String substitution;
@@ -347,24 +417,36 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataHeaderOpHeaderOpItems extends TeaModel {
         /**
          * <p>The request or response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Response</p>
          */
         @NameInMap("DirectionType")
         public String directionType;
 
         /**
          * <p>The header key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>debug</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add</p>
          */
         @NameInMap("OpType")
         public String opType;
 
         /**
          * <p>The header value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -417,6 +499,9 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("Status")
         public String status;
@@ -447,18 +532,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRedirect extends TeaModel {
         /**
          * <p>The response code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ww.al.c</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         @NameInMap("Path")
         public String path;
@@ -497,6 +591,9 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRetry extends TeaModel {
         /**
          * <p>The number of retries allowed for a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Attempts")
         public Integer attempts;
@@ -515,6 +612,9 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The retry status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Status")
         public String status;
@@ -561,18 +661,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesHeaderPredicates extends TeaModel {
         /**
          * <p>The key of the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibo</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value of the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Value")
         public String value;
@@ -611,18 +720,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesPathPredicates extends TeaModel {
         /**
          * <p>Indicates whether case sensitivity is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
         /**
          * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/zookeeper/mmgw/unlogined/common.getBu</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
@@ -661,18 +779,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRoutePredicatesQueryPredicates extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -775,48 +902,72 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataRouteServices extends TeaModel {
         /**
          * <p>The name of the group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-aixue-gray</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The weight.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Percent")
         public Integer percent;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>547</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-service</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K8S</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -895,18 +1046,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
     public static class UpdateGatewayRouteWafStatusResponseBodyDataTimeout extends TeaModel {
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
         /**
          * <p>The unit number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UnitNum")
         public Integer unitNum;
@@ -951,18 +1111,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The default service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
 
         /**
          * <p>The default service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DefaultServiceName")
         public String defaultServiceName;
 
         /**
          * <p>The destination service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         @NameInMap("DestinationType")
         public String destinationType;
@@ -975,6 +1144,9 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235</p>
          */
         @NameInMap("DomainId")
         public Long domainId;
@@ -987,6 +1159,9 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nbhamster.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
@@ -999,30 +1174,45 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether WAF is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-26T09:52:41.000+0000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-24T06:08:29.230+0000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -1041,18 +1231,27 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The matching rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;PathPredicates\&quot;:{\&quot;Path\&quot;:\&quot;/metas\&quot;,\&quot;Type\&quot;:\&quot;PRE\&quot;,\&quot;IgnoreCase\&quot;:false}}</p>
          */
         @NameInMap("Predicates")
         public String predicates;
@@ -1071,6 +1270,9 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The sequence number of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RouteOrder")
         public Integer routeOrder;
@@ -1089,12 +1291,18 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         /**
          * <p>The information about services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;Percent\&quot;:100,\&quot;ServiceId\&quot;:126}]</p>
          */
         @NameInMap("Services")
         public String services;
 
         /**
          * <p>The status of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

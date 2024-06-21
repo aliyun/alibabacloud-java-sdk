@@ -12,27 +12,40 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,40 +98,59 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
     public static class UpdateEngineNamespaceResponseBodyData extends TeaModel {
         /**
          * <p>The quota value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConfigCount")
         public Integer configCount;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest</p>
          */
         @NameInMap("NamespaceDesc")
         public String namespaceDesc;
 
         /**
          * <p>The display name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytestshowname</p>
          */
         @NameInMap("NamespaceShowName")
         public String namespaceShowName;
 
         /**
          * <p>The quota of configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Quota")
         public Integer quota;
 
         /**
          * <p>The type of the namespace. Valid values:</p>
-         * <br>
-         * <p>*   `0`: global configuration</p>
-         * <p>*   `1`: default namespace</p>
-         * <p>*   `2`: custom namespace</p>
+         * <ul>
+         * <li><code>0</code>: global configuration</li>
+         * <li><code>1</code>: default namespace</li>
+         * <li><code>2</code>: custom namespace</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Integer type;

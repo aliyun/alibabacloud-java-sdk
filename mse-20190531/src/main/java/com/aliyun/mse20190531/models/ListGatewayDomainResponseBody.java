@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListGatewayDomainResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F5D8E93-CA66-57F1-8BCF-A223E11B6B91</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,6 +115,9 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public static class ListGatewayDomainResponseBodyDataComment extends TeaModel {
         /**
          * <p>The route status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error</p>
          */
         @NameInMap("Status")
         public String status;
@@ -121,12 +140,18 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
         /**
          * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2031-03-30 02:35:12</p>
          */
         @NameInMap("CertBeforeDate")
         public String certBeforeDate;
 
         /**
          * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3452-cn-hangzhou</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
@@ -139,86 +164,125 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
         /**
          * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The time when the domain name was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2031-03-30 02:35:12</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the domain name was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2031-03-30 02:35:12</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>Indicates whether `HTTP/2` is enabled.</p>
-         * <br>
-         * <p>*   `open`: `HTTP/2` is enabled.</p>
-         * <p>*   `close`: `HTTP/2` is disabled.</p>
-         * <p>*   `globalConfig`: Global configurations are used.</p>
+         * <p>Indicates whether <code>HTTP/2</code> is enabled.</p>
+         * <ul>
+         * <li><code>open</code>: <code>HTTP/2</code> is enabled.</li>
+         * <li><code>close</code>: <code>HTTP/2</code> is disabled.</li>
+         * <li><code>globalConfig</code>: Global configurations are used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         @NameInMap("Http2")
         public String http2;
 
         /**
          * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>243</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>Indicates whether HTTPS is forcefully used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MustHttps")
         public Boolean mustHttps;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The state of the domain name. Valid values:</p>
-         * <br>
-         * <p>*   0: unpublished</p>
-         * <p>*   2: publishing</p>
-         * <p>*   3: published</p>
-         * <p>*   4: editing</p>
-         * <p>*   5: unpublishing</p>
-         * <p>*   6: unavailable</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>2: publishing</li>
+         * <li>3: published</li>
+         * <li>4: editing</li>
+         * <li>5: unpublishing</li>
+         * <li>6: unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The maximum version of Transport Layer Security (TLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.3</p>
          */
         @NameInMap("TlsMax")
         public String tlsMax;
 
         /**
          * <p>The minimum version of TLS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS 1.0</p>
          */
         @NameInMap("TlsMin")
         public String tlsMin;
 
         /**
          * <p>The type of the domain name source. Valid values:</p>
-         * <br>
-         * <p>*   Op: console</p>
-         * <p>*   Ingress: MSE Ingress</p>
+         * <ul>
+         * <li>Op: console</li>
+         * <li>Ingress: MSE Ingress</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Op</p>
          */
         @NameInMap("Type")
         public String type;

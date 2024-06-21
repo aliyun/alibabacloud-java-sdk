@@ -4,21 +4,41 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class RemoveAuthPolicyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9515ACA4-E94D-440D-989E-C379FCED****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

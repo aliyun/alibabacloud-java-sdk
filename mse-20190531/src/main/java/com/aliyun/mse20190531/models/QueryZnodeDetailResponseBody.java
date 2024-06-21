@@ -12,27 +12,40 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58E06A0A-BD2C-47A0-99C2-B100F353****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,27 +98,40 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
     public static class QueryZnodeDetailResponseBodyData extends TeaModel {
         /**
          * <p>The data of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("Data")
         public String data;
 
         /**
          * <p>Indicates whether the node information was returned. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The node information was returned.</p>
-         * <p>*   `false`: The node information failed to be returned.</p>
+         * <ul>
+         * <li><code>true</code>: The node information was returned.</li>
+         * <li><code>false</code>: The node information failed to be returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Dir")
         public Boolean dir;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zookeeper</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The path of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/zookeeper</p>
          */
         @NameInMap("Path")
         public String path;

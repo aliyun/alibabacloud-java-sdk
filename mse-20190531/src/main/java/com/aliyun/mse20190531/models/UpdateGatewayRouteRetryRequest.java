@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteRetryRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>501</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-3f97e2989c344f35ab3fd62b19f1d10a</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the associated record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>508</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -85,6 +98,9 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
     public static class UpdateGatewayRouteRetryRequestRetryJSON extends TeaModel {
         /**
          * <p>The number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Attempts")
         public Integer attempts;
@@ -103,6 +119,9 @@ public class UpdateGatewayRouteRetryRequest extends TeaModel {
 
         /**
          * <p>The status of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("Status")
         public String status;

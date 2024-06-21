@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListClusterVersionsResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,39 +21,58 @@ public class ListClusterVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic part in the error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7717BE5B-C958-5F87-BF49-464AA276EDD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -127,18 +149,27 @@ public class ListClusterVersionsResponseBody extends TeaModel {
     public static class ListClusterVersionsResponseBodyData extends TeaModel {
         /**
          * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The code of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NACOS_2_0_0</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1.0</p>
          */
         @NameInMap("ShowName")
         public String showName;

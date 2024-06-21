@@ -6,73 +6,108 @@ import com.aliyun.tea.*;
 public class UpdateMigrationTaskRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Nacos-Ans</p>
-     * <p>*   ZooKeeper</p>
-     * <p>*   Eureka</p>
+     * <ul>
+     * <li>Nacos-Ans</li>
+     * <li>ZooKeeper</li>
+     * <li>Eureka</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Nacos-Ans</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The address of the source instance node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.1:8848</p>
      */
     @NameInMap("OriginInstanceAddress")
     public String originInstanceAddress;
 
     /**
      * <p>The name of the source instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Source instance</p>
      */
     @NameInMap("OriginInstanceName")
     public String originInstanceName;
 
     /**
      * <p>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namesapceId1,namesapceId2</p>
      */
     @NameInMap("OriginInstanceNamespace")
     public String originInstanceNamespace;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description.</p>
      */
     @NameInMap("ProjectDesc")
     public String projectDesc;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
      * <p>The name of the destination instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Destination instance</p>
      */
     @NameInMap("TargetClusterName")
     public String targetClusterName;
 
     /**
      * <p>The URL of the destination instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-66*****-nacos-ans.mse.aliyuncs.com:8848</p>
      */
     @NameInMap("TargetClusterUrl")
     public String targetClusterUrl;
 
     /**
      * <p>The ID of the destination instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-ud82*****</p>
      */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;

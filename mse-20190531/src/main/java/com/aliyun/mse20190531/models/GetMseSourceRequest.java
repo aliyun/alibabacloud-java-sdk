@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class GetMseSourceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The MSE engine type. Valid values:</p>
-     * <br>
-     * <p>*   NACOS</p>
-     * <p>*   ZOOKEEPER</p>
+     * <ul>
+     * <li>NACOS</li>
+     * <li>ZOOKEEPER</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NACOS</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>VPC ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1t50e045b5g7i3p****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

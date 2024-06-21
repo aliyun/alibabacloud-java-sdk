@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -18,45 +21,67 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53338ECA-F880-54D8-A9B3-5606355A1B89</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -141,36 +166,54 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     public static class ListNacosHistoryConfigsResponseBodyHistoryItems extends TeaModel {
         /**
          * <p>The application tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The ID of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23fdsf</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The timestamp when the configuration was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16434400</p>
          */
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
 
         /**
          * <p>The format of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         @NameInMap("OpType")
         public String opType;

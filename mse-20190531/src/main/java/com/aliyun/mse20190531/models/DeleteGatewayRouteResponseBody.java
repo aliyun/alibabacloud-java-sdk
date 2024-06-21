@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteGatewayRouteResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADDD8AB7-8D1C-4697-A83E-410D2607****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,67 +115,98 @@ public class DeleteGatewayRouteResponseBody extends TeaModel {
     public static class DeleteGatewayRouteResponseBodyData extends TeaModel {
         /**
          * <p>The default service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DefaultServiceId")
         public Long defaultServiceId;
 
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-5017305290e14cebbrvec4a5****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07 18:07:57</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-30T06:41:52.000+0000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The matching rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;PathPredicates\&quot;:{\&quot;Path\&quot;:\&quot;/metas\&quot;,\&quot;Type\&quot;:\&quot;PRE\&quot;,\&quot;IgnoreCase\&quot;:false}}</p>
          */
         @NameInMap("Predicates")
         public String predicates;
 
         /**
          * <p>The sequence number of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RouteOrder")
         public Integer routeOrder;
 
         /**
          * <p>The status of the route. Valid values:</p>
-         * <br>
-         * <p>*   0: unpublished</p>
-         * <p>*   2: publishing</p>
-         * <p>*   3: published</p>
-         * <p>*   4: editing (updated but not published)</p>
-         * <p>*   5: unpublishing</p>
-         * <p>*   6: unavailable</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>2: publishing</li>
+         * <li>3: published</li>
+         * <li>4: editing (updated but not published)</li>
+         * <li>5: unpublishing</li>
+         * <li>6: unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;

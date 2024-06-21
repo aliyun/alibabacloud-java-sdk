@@ -6,51 +6,74 @@ import com.aliyun.tea.*;
 public class AddGatewayRouteResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The ID of the created route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>555</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
      * <p>The error code that is returned.</p>
-     * <br>
-     * <p>*   InvalidParameter: The parameter is invalid. For example, the parameter is incomplete or the parameter format is invalid.</p>
-     * <p>*   IllegalRequest: The request is invalid. Unauthorized access to data initiated by parameters is identified.</p>
-     * <p>*   NoPermission: You are not authorized to perform this operation.</p>
-     * <p>*   NotFound: The resource does not exist and error 404 is returned.</p>
-     * <p>*   InternalError: An internal error occurred.</p>
+     * <ul>
+     * <li>InvalidParameter: The parameter is invalid. For example, the parameter is incomplete or the parameter format is invalid.</li>
+     * <li>IllegalRequest: The request is invalid. Unauthorized access to data initiated by parameters is identified.</li>
+     * <li>NoPermission: You are not authorized to perform this operation.</li>
+     * <li>NotFound: The resource does not exist and error 404 is returned.</li>
+     * <li>InternalError: An internal error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03A3E2F4-6804-5663-9D5D-2EC47A1*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

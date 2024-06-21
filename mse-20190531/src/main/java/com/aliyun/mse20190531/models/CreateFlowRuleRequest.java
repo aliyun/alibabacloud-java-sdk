@@ -6,109 +6,125 @@ import com.aliyun.tea.*;
 public class CreateFlowRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ib09eblv6p@c3df23522******</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The application name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The throttling effect.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   0</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    fast failure</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   2</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    in queue</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>0</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>fast failure</p>
+     * <!-- -->
+     * </li>
+     * <li><p>2</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>in queue</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ControlBehavior")
     public Integer controlBehavior;
 
     /**
      * <p>Specifies whether to enable the rule.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The timeout period. Unit: milliseconds. This value is required if the ControlBehavior parameter is set to 2.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxQueueingTimeMs")
     public Integer maxQueueingTimeMs;
 
     /**
      * <p>The namespace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the API resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/b</p>
      */
     @NameInMap("Resource")
     public String resource;
@@ -118,8 +134,10 @@ public class CreateFlowRuleRequest extends TeaModel {
 
     /**
      * <p>The throttling threshold.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Threshold")
     public Integer threshold;

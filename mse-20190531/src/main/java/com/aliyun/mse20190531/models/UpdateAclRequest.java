@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class UpdateAclRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The IP addresses or CIDR blocks in the IP address whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/XX,192.168.0.0/XX</p>
      */
     @NameInMap("AclEntryList")
     public String aclEntryList;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-78v1l83****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -12,51 +12,76 @@ public class ListAnsInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -141,132 +166,196 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     public static class ListAnsInstancesResponseBodyData extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("App")
         public String app;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The reference key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.XX.XX:unknown:DEFAULT</p>
          */
         @NameInMap("DatumKey")
         public String datumKey;
 
         /**
          * <p>The default key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.XX.XX:unknown</p>
          */
         @NameInMap("DefaultKey")
         public String defaultKey;
 
         /**
          * <p>The effective status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The instance takes effect.</p>
-         * <p>*   `false`: The instance does not take effect.</p>
+         * <ul>
+         * <li><code>true</code>: The instance takes effect.</li>
+         * <li><code>false</code>: The instance does not take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>Indicates whether the information about the ephemeral node is obtained. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Ephemeral")
         public Boolean ephemeral;
 
         /**
          * <p>The number of counted failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
 
         /**
          * <p>The health status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The instance is healthy.</p>
-         * <p>*   `false`: The instance is unhealthy.</p>
+         * <ul>
+         * <li><code>true</code>: The instance is healthy.</li>
+         * <li><code>false</code>: The instance is unhealthy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Healthy")
         public Boolean healthy;
 
         /**
          * <p>The heartbeat interval of the instance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("InstanceHeartBeatInterval")
         public Integer instanceHeartBeatInterval;
 
         /**
          * <p>The timeout period of the instance heartbeat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15000</p>
          */
         @NameInMap("InstanceHeartBeatTimeOut")
         public Integer instanceHeartBeatTimeOut;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.XX.XX#0#DEFAULT#DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.5.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The timeout period for removing an IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000</p>
          */
         @NameInMap("IpDeleteTimeout")
         public Integer ipDeleteTimeout;
 
         /**
          * <p>The last heartbeat time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201010</p>
          */
         @NameInMap("LastBeat")
         public Long lastBeat;
 
         /**
          * <p>Indicates whether the instance was marked. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The instance marking was successful.</p>
-         * <p>*   `false`: The instance marking failed.</p>
+         * <ul>
+         * <li><code>true</code>: The instance marking was successful.</li>
+         * <li><code>false</code>: The instance marking failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Marked")
         public Boolean marked;
 
         /**
          * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[int]</p>
          */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
 
         /**
          * <p>The number of counted successes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OkCount")
         public Integer okCount;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService::</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The weight.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Weight")
         public Integer weight;

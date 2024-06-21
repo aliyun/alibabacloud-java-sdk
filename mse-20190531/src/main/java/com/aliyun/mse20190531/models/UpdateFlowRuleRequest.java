@@ -6,107 +6,124 @@ import com.aliyun.tea.*;
 public class UpdateFlowRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522******</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The application name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The throttling effect.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   0</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    fast failure</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   2</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    in queue</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>0</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>fast failure</p>
+     * <!-- -->
+     * </li>
+     * <li><p>2</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>in queue</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ControlBehavior")
     public Integer controlBehavior;
 
     /**
      * <p>Specifies whether to enable the rule.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("MaxQueueingTimeMs")
     public Integer maxQueueingTimeMs;
 
     /**
      * <p>The namespace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The rule ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The throttling threshold.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("Threshold")
     public Integer threshold;

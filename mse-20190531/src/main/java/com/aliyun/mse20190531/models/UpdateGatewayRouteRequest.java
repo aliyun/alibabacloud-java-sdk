@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a route for xxx</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination service type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Mock</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -30,18 +41,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     /**
      * <p>The associated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[90]</p>
      */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;
 
     /**
      * <p>Specifies whether to activate Web Application Firewall (WAF).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableWaf")
     public Boolean enableWaf;
 
     /**
      * <p>Specifies whether to enable the Fallback service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Fallback")
     public Boolean fallback;
@@ -54,24 +74,36 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>501</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-86575c0bc9f04ecfbacb92b8e392a2c4</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The name of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>route-web</p>
      */
     @NameInMap("Name")
     @Deprecated
@@ -91,6 +123,9 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
     /**
      * <p>The sequence number of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RouteOrder")
     public Integer routeOrder;
@@ -237,12 +272,18 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestDirectResponseJSON extends TeaModel {
         /**
          * <p>The mock return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         @NameInMap("Body")
         public String body;
 
         /**
          * <p>The mock return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public Long code;
@@ -273,54 +314,81 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestFallbackServices extends TeaModel {
         /**
          * <p>The type of the protocol. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUBBO</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
 
         /**
          * <p>The name of the group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace in which the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Namespace</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The weight in the form of a percentage value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Percent")
         public Integer percent;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
          * <p>The service port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8848</p>
          */
         @NameInMap("ServicePort")
         public Integer servicePort;
 
         /**
          * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -407,18 +475,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestPredicatesHeaderPredicates extends TeaModel {
         /**
          * <p>The key of the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>debug</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value of the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Value")
         public String value;
@@ -457,18 +534,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestPredicatesPathPredicates extends TeaModel {
         /**
          * <p>Specifies whether to perform case-insensitive matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
         /**
          * <p>The path used for route matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
@@ -507,18 +593,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestPredicatesQueryPredicates extends TeaModel {
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userid</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -621,18 +716,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestRedirectJSON extends TeaModel {
         /**
          * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>302</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The hostname to be redirected to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The path to be redirected to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("Path")
         public String path;
@@ -671,28 +775,40 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapListParamMapsList extends TeaModel {
         /**
          * <p>The key extracted from the input parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("ExtractKey")
         public String extractKey;
 
         /**
          * <p>The position of the input parameter.</p>
-         * <br>
-         * <p>> Valid values:</p>
-         * <br>
-         * <p>*   `ALL_QUERY_PARAMETER`: request parameter</p>
-         * <br>
-         * <p>*   `ALL_HEADER`: request header</p>
-         * <br>
-         * <p>*   `ALL_PATH`: request path</p>
-         * <br>
-         * <p>*   `ALL_BODY`: request body</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><code>ALL_QUERY_PARAMETER</code>: request parameter</p>
+         * </li>
+         * <li><p><code>ALL_HEADER</code>: request header</p>
+         * </li>
+         * <li><p><code>ALL_PATH</code>: request path</p>
+         * </li>
+         * <li><p><code>ALL_BODY</code>: request body</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_QUERY_PARAMETER</p>
          */
         @NameInMap("ExtractKeySpec")
         public String extractKeySpec;
 
         /**
          * <p>The type of the backend service parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("MappingType")
         public String mappingType;
@@ -731,30 +847,42 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoderMothedMapList extends TeaModel {
         /**
          * <p>The method name of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sayHello</p>
          */
         @NameInMap("DubboMothedName")
         public String dubboMothedName;
 
         /**
          * <p>The HTTP method.</p>
-         * <br>
-         * <p>> Valid values:</p>
-         * <br>
-         * <p>*   ALL_GET</p>
-         * <br>
-         * <p>*   ALL_POST</p>
-         * <br>
-         * <p>*   ALL_PUT</p>
-         * <br>
-         * <p>*   ALL_DELETE</p>
-         * <br>
-         * <p>*   ALL_PATCH</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>ALL_GET</p>
+         * </li>
+         * <li><p>ALL_POST</p>
+         * </li>
+         * <li><p>ALL_PUT</p>
+         * </li>
+         * <li><p>ALL_DELETE</p>
+         * </li>
+         * <li><p>ALL_PATCH</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_GET</p>
          */
         @NameInMap("HttpMothed")
         public String httpMothed;
 
         /**
          * <p>The path that is used to match a method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mytestzbk/sayhello</p>
          */
         @NameInMap("Mothedpath")
         public String mothedpath;
@@ -767,14 +895,20 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
         /**
          * <p>The pass-through type of the header.</p>
-         * <br>
-         * <p>> Valid values:</p>
-         * <br>
-         * <p>*   PASS_ALL: All headers are passed through.</p>
-         * <br>
-         * <p>*   PASS_NOT: All headers are not passed through.</p>
-         * <br>
-         * <p>*   PASS_ASSIGN: Specified headers are passed through.</p>
+         * <blockquote>
+         * <p>Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>PASS_ALL: All headers are passed through.</p>
+         * </li>
+         * <li><p>PASS_NOT: All headers are not passed through.</p>
+         * </li>
+         * <li><p>PASS_ASSIGN: Specified headers are passed through.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PASS_NOT</p>
          */
         @NameInMap("PassThroughAllHeaders")
         public String passThroughAllHeaders;
@@ -843,18 +977,27 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestServicesHttpDubboTranscoder extends TeaModel {
         /**
          * <p>The Dubbo service group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service name</p>
          */
         @NameInMap("DubboServiceGroup")
         public String dubboServiceGroup;
 
         /**
          * <p>The name of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>org.apache.dubbo.samples.basic.api.DemoService</p>
          */
         @NameInMap("DubboServiceName")
         public String dubboServiceName;
 
         /**
          * <p>The version of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0</p>
          */
         @NameInMap("DubboServiceVersion")
         public String dubboServiceVersion;
@@ -907,12 +1050,18 @@ public class UpdateGatewayRouteRequest extends TeaModel {
     public static class UpdateGatewayRouteRequestServices extends TeaModel {
         /**
          * <p>The type of the protocol. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUBBO</p>
          */
         @NameInMap("AgreementType")
         public String agreementType;
 
         /**
          * <p>The name of the group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -925,42 +1074,63 @@ public class UpdateGatewayRouteRequest extends TeaModel {
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace in which the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Percent")
         public Integer percent;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
          * <p>The Dubbo port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20880</p>
          */
         @NameInMap("ServicePort")
         public Integer servicePort;
 
         /**
          * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Version")
         public String version;

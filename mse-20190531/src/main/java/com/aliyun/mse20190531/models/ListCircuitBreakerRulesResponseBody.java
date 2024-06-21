@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListCircuitBreakerRulesResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,24 +21,36 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,66 +111,99 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
     public static class ListCircuitBreakerRulesResponseBodyDataResult extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@c3df23522bXXXXX</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>Indicates whether the rule was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The behavior that was bound to the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;appName\&quot;:\&quot;spring-cloud-a\&quot;,\&quot;fallbackBehavior\&quot;:{\&quot;webFallbackMode\&quot;:0,\&quot;webRespContentType\&quot;:0,\&quot;webRespMessage\&quot;:\&quot;Blocked\&quot;,\&quot;webRespStatusCode\&quot;:429},\&quot;id\&quot;:977,\&quot;name\&quot;:\&quot;Fallback\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;,\&quot;resourceClassification\&quot;:1}&quot;</p>
          */
         @NameInMap("FallbackObject")
         public String fallbackObject;
 
         /**
          * <p>The minimum number of requests that can be passed in each step after circuit breaking recovers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("HalfOpenBaseAmountPerStep")
         public Integer halfOpenBaseAmountPerStep;
 
         /**
          * <p>The number of circuit breaking recovery steps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HalfOpenRecoveryStepNum")
         public Integer halfOpenRecoveryStepNum;
 
         /**
          * <p>The maximum RT. Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MaxAllowedRtMs")
         public Integer maxAllowedRtMs;
 
         /**
          * <p>The minimum number of requests to trigger circuit breaking. If the number of requests in the current time window is less than the value of this parameter, circuit breaking is not triggered even if the circuit breaking rule is met.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MinRequestAmount")
         public Integer minRequestAmount;
 
         /**
          * <p>The microservice namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the interface to which the rule is applicable. The interface name must be the same as the name on the interface details page in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/a</p>
          */
         @NameInMap("Resource")
         public String resource;
@@ -165,56 +213,65 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
 
         /**
          * <p>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("RetryTimeoutMs")
         public Integer retryTimeoutMs;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The length of the time window. Unit: milliseconds. The valid range is from 1 second to 120 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000</p>
          */
         @NameInMap("StatIntervalMs")
         public Integer statIntervalMs;
 
         /**
          * <p>The threshold type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    slow call proportion</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    abnormal proportion</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>0</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>slow call proportion</p>
+         * <!-- -->
+         * </li>
+         * <li><p>1</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>abnormal proportion</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Strategy")
         public Integer strategy;
 
         /**
          * <p>A percentage threshold for triggering circuit breaking. Valid values: 0-1. These values represent 0% to 100%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
@@ -365,12 +422,18 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
     public static class ListCircuitBreakerRulesResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -383,6 +446,9 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

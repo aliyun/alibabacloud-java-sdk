@@ -4,48 +4,104 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceMethodPageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hkhonxxxxx@f3f75ed8ffxxxxx</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example-app</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>223.5.5.5</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>com.alibabacloud.mse.demo.a.AController</p>
+     */
     @NameInMap("MethodController")
     public String methodController;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aMethod</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/a</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 
     @NameInMap("ServiceGroup")
     public String serviceGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sc-A</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>springCloud</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 

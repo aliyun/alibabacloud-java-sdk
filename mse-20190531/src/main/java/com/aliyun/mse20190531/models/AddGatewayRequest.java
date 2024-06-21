@@ -6,156 +6,207 @@ import com.aliyun.tea.*;
 public class AddGatewayRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The billing method.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   PREPAY</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the subscription billing method</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   POSTPAY</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the pay-as-you-go billing method</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>PREPAY</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>the subscription billing method</p>
+     * <!-- -->
+     * </li>
+     * <li><p>POSTPAY</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>the pay-as-you-go billing method</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>POSTPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("ClbNetworkType")
+    public String clbNetworkType;
+
     /**
      * <p>Specifies whether to activate Tracing Analysis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableHardwareAcceleration")
     public Boolean enableHardwareAcceleration;
 
     /**
      * <p>The tag of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableSls")
     public Boolean enableSls;
 
     /**
      * <p>The sampling rate of Tracing Analysis. Valid values: [1,100].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableXtrace")
     public Boolean enableXtrace;
 
     /**
      * <p>Specifies whether to enable hardware acceleration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnterpriseSecurityGroup")
     public Boolean enterpriseSecurityGroup;
 
     /**
      * <p>The ID of the secondary vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>slb.s2.small</p>
      */
     @NameInMap("InternetSlbSpec")
     public String internetSlbSpec;
 
     /**
      * <p>The MSE instance type. Valid values:</p>
-     * <br>
-     * <p>*   mse_pro: ordinary instance.</p>
-     * <p>*   mse_serverless: serverless instance.</p>
+     * <ul>
+     * <li>mse_pro: ordinary instance.</li>
+     * <li>mse_serverless: serverless instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_pro</p>
      */
     @NameInMap("MserVersion")
     public String mserVersion;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-ceshi</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The network type of the Network Load Balancer (NLB) instance when the serverless NLB instance is purchased. Valid values:</p>
-     * <br>
-     * <p>*   pubnet</p>
-     * <p>*   privatenet</p>
-     * <p>*   privatepubnet</p>
+     * <ul>
+     * <li>pubnet</li>
+     * <li>privatenet</li>
+     * <li>privatepubnet</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pubnet</p>
      */
     @NameInMap("NlbNetworkType")
     public String nlbNetworkType;
 
     /**
      * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
-     * <br>
-     * <p>*   slb.s1.small</p>
-     * <p>*   slb.s2.small</p>
-     * <p>*   slb.s2.medium</p>
-     * <p>*   slb.s3.small</p>
-     * <p>*   slb.s3.medium</p>
-     * <p>*   slb.s3.large</p>
-     * <br>
+     * <ul>
+     * <li>slb.s1.small</li>
+     * <li>slb.s2.small</li>
+     * <li>slb.s2.medium</li>
+     * <li>slb.s3.small</li>
+     * <li>slb.s3.medium</li>
+     * <li>slb.s3.large</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The number of nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Replica")
     public Integer replica;
 
     /**
      * <p>The extended field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm34x43l*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
-     * <br>
-     * <p>*   slb.s1.small</p>
-     * <p>*   slb.s2.small</p>
-     * <p>*   slb.s2.medium</p>
-     * <p>*   slb.s3.small</p>
-     * <p>*   slb.s3.medium</p>
-     * <p>*   slb.s3.large</p>
+     * <ul>
+     * <li>slb.s1.small</li>
+     * <li>slb.s2.small</li>
+     * <li>slb.s2.medium</li>
+     * <li>slb.s3.small</li>
+     * <li>slb.s3.medium</li>
+     * <li>slb.s3.large</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>slb.s2.small</p>
      */
     @NameInMap("SlbSpec")
     public String slbSpec;
 
     /**
      * <p>The node specifications. Valid values:</p>
-     * <br>
-     * <p>*   MSE_GTW_16_32_200_c(16C32G)</p>
-     * <p>*   MSE_GTW_2_4_200_c(2C4G)</p>
-     * <p>*   MSE_GTW_4_8_200_c(4C8G)</p>
-     * <p>*   MSE_GTW_8_16_200_c(8C16G)</p>
+     * <ul>
+     * <li>MSE_GTW_16_32_200_c(16C32G)</li>
+     * <li>MSE_GTW_2_4_200_c(2C4G)</li>
+     * <li>MSE_GTW_4_8_200_c(4C8G)</li>
+     * <li>MSE_GTW_8_16_200_c(8C16G)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MSE_GTW_2_4_200_c</p>
      */
     @NameInMap("Spec")
     public String spec;
@@ -168,26 +219,37 @@ public class AddGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the primary vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1q8th57frl5khj2li43</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>Specifies whether to use an advanced security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-wz9bu6o5vsvitt5mrxo6s</p>
      */
     @NameInMap("VSwitchId2")
     public String vSwitchId2;
 
     /**
      * <p>The ID of the primary vSwitch.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp15mncnrtm83uauxd1xb</p>
      */
     @NameInMap("Vpc")
     public String vpc;
 
     /**
      * <p>Specifies whether to activate Log Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("XtraceRatio")
     public String xtraceRatio;
@@ -217,6 +279,14 @@ public class AddGatewayRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public AddGatewayRequest setClbNetworkType(String clbNetworkType) {
+        this.clbNetworkType = clbNetworkType;
+        return this;
+    }
+    public String getClbNetworkType() {
+        return this.clbNetworkType;
     }
 
     public AddGatewayRequest setEnableHardwareAcceleration(Boolean enableHardwareAcceleration) {
@@ -382,12 +452,18 @@ public class AddGatewayRequest extends TeaModel {
     public static class AddGatewayRequestTag extends TeaModel {
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -418,12 +494,18 @@ public class AddGatewayRequest extends TeaModel {
     public static class AddGatewayRequestZoneInfo extends TeaModel {
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp*****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

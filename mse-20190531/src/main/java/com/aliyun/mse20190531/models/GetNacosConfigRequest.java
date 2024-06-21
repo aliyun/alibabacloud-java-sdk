@@ -6,48 +6,65 @@ import com.aliyun.tea.*;
 public class GetNacosConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to perform a beta release. Valid values:</p>
-     * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <ul>
+     * <li><code>true</code>: yes</li>
+     * <li><code>false</code>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Beta")
     public Boolean beta;
 
     /**
      * <p>The ID of the data.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>halvie-mp-item****</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
      * <p>The name of the configuration group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>common</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-i7m2h0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddaf8f12-****-b1c1-86e7c72e266b</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

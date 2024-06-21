@@ -4,35 +4,54 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
      */
     @NameInMap("FallbackId")
     public Long fallbackId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/a</p>
      */
     @NameInMap("Resource")
     public String resource;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TargetType")
     public String targetType;

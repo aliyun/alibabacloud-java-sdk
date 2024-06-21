@@ -4,30 +4,62 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayZoneResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public java.util.List<ListGatewayZoneResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>code</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NO_PERMISSION</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,9 +141,17 @@ public class ListGatewayZoneResponseBody extends TeaModel {
     }
 
     public static class ListGatewayZoneResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>I</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -6,36 +6,47 @@ import com.aliyun.tea.*;
 public class UpdateGatewayAuthConsumerStatusRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The status of the consumer. Valid values:</p>
-     * <br>
-     * <p>*   true: The consumer is enabled.</p>
-     * <p>*   false: The consumer is disabled.</p>
-     * <br>
+     * <ul>
+     * <li>true: The consumer is enabled.</li>
+     * <li>false: The consumer is disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ConsumerStatus")
     public Boolean consumerStatus;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-685f661467b54f48b7b7a76605ce****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The consumer ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public Long id;
