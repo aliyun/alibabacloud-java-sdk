@@ -4,12 +4,24 @@ package com.aliyun.tingwu20230930.models;
 import com.aliyun.tea.*;
 
 public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCEEDED</p>
+     */
     @NameInMap("Status")
     public String status;
 

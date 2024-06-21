@@ -4,6 +4,10 @@ package com.aliyun.tingwu20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>JV1sRTisRMi****</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
@@ -13,11 +17,18 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("Parameters")
     public CreateTaskRequestParameters parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>stop</p>
+     */
     @NameInMap("operation")
     public String operation;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>offline</p>
      */
     @NameInMap("type")
     public String type;
@@ -68,9 +79,17 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.com/zzz/1.wav">http://xxx.com/zzz/1.wav</a></p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pcm</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -83,11 +102,18 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("ProgressiveCallbacksEnabled")
         public Boolean progressiveCallbacksEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16000</p>
+         */
         @NameInMap("SampleRate")
         public Integer sampleRate;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("SourceLanguage")
         public String sourceLanguage;
@@ -95,6 +121,10 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task_tingwu_123</p>
+         */
         @NameInMap("TaskKey")
         public String taskKey;
 
@@ -267,6 +297,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("OcrAuxiliaryEnabled")
         public Boolean ocrAuxiliaryEnabled;
 
+        @NameInMap("TranslateLlmSceneEnabled")
+        public Boolean translateLlmSceneEnabled;
+
         public static CreateTaskRequestParametersExtraParams build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersExtraParams self = new CreateTaskRequestParametersExtraParams();
             return TeaModel.build(map, self);
@@ -304,6 +337,14 @@ public class CreateTaskRequest extends TeaModel {
             return this.ocrAuxiliaryEnabled;
         }
 
+        public CreateTaskRequestParametersExtraParams setTranslateLlmSceneEnabled(Boolean translateLlmSceneEnabled) {
+            this.translateLlmSceneEnabled = translateLlmSceneEnabled;
+            return this;
+        }
+        public Boolean getTranslateLlmSceneEnabled() {
+            return this.translateLlmSceneEnabled;
+        }
+
     }
 
     public static class CreateTaskRequestParametersMeetingAssistance extends TeaModel {
@@ -326,6 +367,10 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersSummarization extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Paragraph</p>
+         */
         @NameInMap("Types")
         public java.util.List<String> types;
 
@@ -345,15 +390,31 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersTranscoding extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SpectrumEnabled")
         public Boolean spectrumEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp3</p>
+         */
         @NameInMap("TargetAudioFormat")
         public String targetAudioFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp4</p>
+         */
         @NameInMap("TargetVideoFormat")
         public String targetVideoFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("VideoThumbnailEnabled")
         public Boolean videoThumbnailEnabled;
 
@@ -397,6 +458,10 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParametersTranscriptionDiarization extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("SpeakerCount")
         public Integer speakerCount;
 
@@ -419,12 +484,20 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("AdditionalStreamOutputLevel")
         public Integer additionalStreamOutputLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AudioEventDetectionEnabled")
         public Boolean audioEventDetectionEnabled;
 
         @NameInMap("Diarization")
         public CreateTaskRequestParametersTranscriptionDiarization diarization;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DiarizationEnabled")
         public Boolean diarizationEnabled;
 
@@ -542,6 +615,10 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoChaptersEnabled")
         public Boolean autoChaptersEnabled;
 
@@ -557,6 +634,10 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("MeetingAssistance")
         public CreateTaskRequestParametersMeetingAssistance meetingAssistance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("MeetingAssistanceEnabled")
         public Boolean meetingAssistanceEnabled;
 
@@ -566,6 +647,10 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("Summarization")
         public CreateTaskRequestParametersSummarization summarization;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SummarizationEnabled")
         public Boolean summarizationEnabled;
 
@@ -581,6 +666,10 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("Translation")
         public CreateTaskRequestParametersTranslation translation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("TranslationEnabled")
         public Boolean translationEnabled;
 

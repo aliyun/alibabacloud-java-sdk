@@ -4,17 +4,28 @@ package com.aliyun.tingwu20230930.models;
 import com.aliyun.tea.*;
 
 public class ListTranscriptionPhrasesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListTranscriptionPhrasesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,12 +68,24 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
     }
 
     public static class ListTranscriptionPhrasesResponseBodyDataPhrases extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>custom fruit phrases list</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fruit_phrase</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a93b91141c0f422fa114af203f8b****</p>
+         */
         @NameInMap("PhraseId")
         public String phraseId;
 
@@ -98,15 +121,27 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
     }
 
     public static class ListTranscriptionPhrasesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PHS.Exceed</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The num of the phrase exceeds the upper limit.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         @NameInMap("Phrases")
         public java.util.List<ListTranscriptionPhrasesResponseBodyDataPhrases> phrases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("Status")
         public String status;
 
