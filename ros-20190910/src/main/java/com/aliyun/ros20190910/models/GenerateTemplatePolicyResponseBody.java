@@ -12,6 +12,9 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,21 +49,37 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
         /**
          * <p>The condition that is required for the policy to take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;StringEquals&quot;: {
+         *         &quot;acs:Service&quot;: &quot;fc.aliyuncs.com&quot;
+         *     }
+         * }</p>
          */
         @NameInMap("Condition")
         public java.util.Map<String, ?> condition;
 
         /**
          * <p>The effect of the statement. Valid values:</p>
-         * <br>
-         * <p>*   Allow</p>
-         * <p>*   Deny</p>
+         * <ul>
+         * <li>Allow</li>
+         * <li>Deny</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Allow</p>
          */
         @NameInMap("Effect")
         public String effect;
 
         /**
-         * <p>The objects that the statement covers. An asterisk (\\*) indicates all resources.</p>
+         * <p>The objects that the statement covers. An asterisk (\*) indicates all resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("Resource")
         public String resource;
@@ -113,6 +132,9 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public String version;

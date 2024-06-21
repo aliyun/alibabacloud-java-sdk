@@ -11,9 +11,11 @@ public class GetServiceProvisionsRequest extends TeaModel {
     public java.util.List<GetServiceProvisionsRequestParameters> parameters;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,24 +31,30 @@ public class GetServiceProvisionsRequest extends TeaModel {
 
     /**
      * <p>The template ID. This parameter applies to shared and private templates.</p>
-     * <br>
      * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
-     * <br>
      * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ros-template/demo</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
 
     /**
      * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
-     * <br>
      * <p>This parameter takes effect only when TemplateId is specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -115,20 +123,26 @@ public class GetServiceProvisionsRequest extends TeaModel {
     public static class GetServiceProvisionsRequestParameters extends TeaModel {
         /**
          * <p>The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</p>
-         * <br>
-         * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</p>
-         * <br>
+         * <blockquote>
+         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Amount</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the parameter.</p>
-         * <br>
-         * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
-         * <br>
+         * <blockquote>
+         * <p>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -159,44 +173,47 @@ public class GetServiceProvisionsRequest extends TeaModel {
     public static class GetServiceProvisionsRequestServices extends TeaModel {
         /**
          * <p>The service or feature name. Valid values:</p>
-         * <br>
-         * <p>*   AHAS: Application High Availability Service</p>
-         * <p>*   ARMS: Application Real-Time Monitoring Service (ARMS)</p>
-         * <p>*   ApiGateway: API Gateway</p>
-         * <p>*   BatchCompute: Batch Compute</p>
-         * <p>*   BrainIndustrial: Industrial Brain</p>
-         * <p>*   CloudStorageGateway: Cloud Storage Gateway (CSG)</p>
-         * <p>*   CMS: CloudMonitor</p>
-         * <p>*   CR: Container Registry</p>
-         * <p>*   CS: Container Service for Kubernetes (ACK)</p>
-         * <p>*   DCDN: Dynamic Content Delivery Network (DCDN)</p>
-         * <p>*   DataHub: DataHub</p>
-         * <p>*   DataWorks: DataWorks</p>
-         * <p>*   EDAS: Enterprise Distributed Application Service (EDAS)</p>
-         * <p>*   EHPC: Elastic High Performance Computing (E-HPC)</p>
-         * <p>*   EMAS: Enterprise Mobile Application Studio (EMAS)</p>
-         * <p>*   FC: Function Compute</p>
-         * <p>*   FNF: Serverless Workflow (SWF)</p>
-         * <p>*   MaxCompute: MaxCompute</p>
-         * <p>*   MNS: Message Service (MNS)</p>
-         * <p>*   HBR: Hybrid Backup Recovery (HBR)</p>
-         * <p>*   IMM: Intelligent Media Management</p>
-         * <p>*   IOT: IoT Platform</p>
-         * <p>*   KMS: Key Management Service (KMS)</p>
-         * <p>*   NAS: Apsara File Storage NAS (NAS)</p>
-         * <p>*   NLP: Natural Language Processing (NLP)</p>
-         * <p>*   OSS: OSS</p>
-         * <p>*   OTS: Tablestore</p>
-         * <p>*   PrivateLink: PrivateLink</p>
-         * <p>*   PrivateZone: Alibaba Cloud DNS PrivateZone</p>
-         * <p>*   RocketMQ: ApsaraMQ for RocketMQ</p>
-         * <p>*   SAE: Serverless App Engine (SAE)</p>
-         * <p>*   SLS: Log Service</p>
-         * <p>*   TrafficMirror: the traffic mirroring feature</p>
-         * <p>*   VS: Video Surveillance System</p>
-         * <p>*   Xtrace: Managed Service for OpenTelemetry</p>
-         * <br>
+         * <ul>
+         * <li>AHAS: Application High Availability Service</li>
+         * <li>ARMS: Application Real-Time Monitoring Service (ARMS)</li>
+         * <li>ApiGateway: API Gateway</li>
+         * <li>BatchCompute: Batch Compute</li>
+         * <li>BrainIndustrial: Industrial Brain</li>
+         * <li>CloudStorageGateway: Cloud Storage Gateway (CSG)</li>
+         * <li>CMS: CloudMonitor</li>
+         * <li>CR: Container Registry</li>
+         * <li>CS: Container Service for Kubernetes (ACK)</li>
+         * <li>DCDN: Dynamic Content Delivery Network (DCDN)</li>
+         * <li>DataHub: DataHub</li>
+         * <li>DataWorks: DataWorks</li>
+         * <li>EDAS: Enterprise Distributed Application Service (EDAS)</li>
+         * <li>EHPC: Elastic High Performance Computing (E-HPC)</li>
+         * <li>EMAS: Enterprise Mobile Application Studio (EMAS)</li>
+         * <li>FC: Function Compute</li>
+         * <li>FNF: Serverless Workflow (SWF)</li>
+         * <li>MaxCompute: MaxCompute</li>
+         * <li>MNS: Message Service (MNS)</li>
+         * <li>HBR: Hybrid Backup Recovery (HBR)</li>
+         * <li>IMM: Intelligent Media Management</li>
+         * <li>IOT: IoT Platform</li>
+         * <li>KMS: Key Management Service (KMS)</li>
+         * <li>NAS: Apsara File Storage NAS (NAS)</li>
+         * <li>NLP: Natural Language Processing (NLP)</li>
+         * <li>OSS: OSS</li>
+         * <li>OTS: Tablestore</li>
+         * <li>PrivateLink: PrivateLink</li>
+         * <li>PrivateZone: Alibaba Cloud DNS PrivateZone</li>
+         * <li>RocketMQ: ApsaraMQ for RocketMQ</li>
+         * <li>SAE: Serverless App Engine (SAE)</li>
+         * <li>SLS: Log Service</li>
+         * <li>TrafficMirror: the traffic mirroring feature</li>
+         * <li>VS: Video Surveillance System</li>
+         * <li>Xtrace: Managed Service for OpenTelemetry</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EHPC</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

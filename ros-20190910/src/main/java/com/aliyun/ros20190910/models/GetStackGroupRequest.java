@@ -6,26 +6,35 @@ import com.aliyun.tea.*;
 public class GetStackGroupRequest extends TeaModel {
     /**
      * <p>The name of the stack group. The name must be unique within a region.</p>
-     * <br>
      * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</p>
-     * <br>
-     * <p>>  You must specify one of the StackGroupName and StackGroupId parameters.</p>
-     * <br>
+     * <blockquote>
+     * <p> You must specify one of the StackGroupName and StackGroupId parameters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
      */
     @NameInMap("StackGroupId")
     public String stackGroupId;
 
     /**
      * <p>The ID of the stack group.</p>
-     * <br>
-     * <p>>  You must specify one of the StackGroupName and StackGroupId parameters.</p>
+     * <blockquote>
+     * <p> You must specify one of the StackGroupName and StackGroupId parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>MyStackGroup</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;

@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class ListStackResourceDriftsRequest extends TeaModel {
     /**
      * <p>The time when the resource drift detection operation was initiated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The type of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****w==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The physical ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource properties as defined in the template, in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MODIFIED</p>
      */
     @NameInMap("ResourceDriftStatus")
     public java.util.List<String> resourceDriftStatus;
 
     /**
      * <p>The ID of the stack.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
      */
     @NameInMap("StackId")
     public String stackId;

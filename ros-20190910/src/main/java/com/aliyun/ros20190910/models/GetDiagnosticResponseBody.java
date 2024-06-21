@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetDiagnosticResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Forbidden</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The keyword in the diagnosis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0938F60C-A2CA-5A2E-9983-03EB1E6D7AE2</p>
      */
     @NameInMap("DiagnosticKey")
     public String diagnosticKey;
 
     /**
      * <p>The name of the diagnostic item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ros</p>
      */
     @NameInMap("DiagnosticProduct")
     public String diagnosticProduct;
@@ -30,67 +39,99 @@ public class GetDiagnosticResponseBody extends TeaModel {
 
     /**
      * <p>The time when the diagnosis was performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-03-27T03:32:03Z</p>
      */
     @NameInMap("DiagnosticTime")
     public String diagnosticTime;
 
     /**
      * <p>The HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter ReportId is invalid, Can not find diagnostic report dr-5f6135782f104b0f****.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The suggestion for the diagnosis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;RosActionMessages\&quot;: {\&quot;Reason\&quot;: \&quot;Fail to delete stack (fc966920-450a-456b-983c-deeaec8e****), as deletion protection is enabled.\&quot;, \&quot;Recommend\&quot;: \&quot;\&quot;}}</p>
      */
     @NameInMap("Recommends")
     public java.util.Map<String, ?> recommends;
 
     /**
      * <p>The ID of the diagnostic report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dr-cc80afc48c8741e9****</p>
      */
     @NameInMap("ReportId")
     public String reportId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96A24844-9603-5E79-BDF4-EFD412FC5D4C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The diagnosis status. Valid values:</p>
-     * <br>
-     * <p>*   Running: The diagnosis is in progress.</p>
-     * <p>*   Complete: The diagnosis is complete.</p>
-     * <p>*   Failed: The diagnosis failed.</p>
+     * <ul>
+     * <li>Running: The diagnosis is in progress.</li>
+     * <li>Complete: The diagnosis is complete.</li>
+     * <li>Failed: The diagnosis failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The reason for the diagnosis status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Complete</p>
      */
     @NameInMap("StatusReason")
     public String statusReason;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

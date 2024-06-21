@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDiagnosticRequest extends TeaModel {
     /**
      * <p>The ID of the diagnostic report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dr-d540def087714890****</p>
      */
     @NameInMap("ReportId")
     public String reportId;

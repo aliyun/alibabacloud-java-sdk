@@ -6,10 +6,11 @@ import com.aliyun.tea.*;
 public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
-     * <br>
-     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -28,24 +29,29 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
 
     /**
      * <p>The order in which associated parameters are arranged.</p>
-     * <br>
-     * <p>>  By default, the order of the associated parameters specified in the `Metadata` section of the template is used.</p>
+     * <blockquote>
+     * <p> By default, the order of the associated parameters specified in the <code>Metadata</code> section of the template is used.</p>
+     * </blockquote>
      */
     @NameInMap("ParametersOrder")
     public String parametersOrderShrink;
 
     /**
      * <p>The region ID of the template.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c754d2a4-28f1-46df-b557-9586173a****</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -55,24 +61,36 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the template. This parameter applies to shared and private templates.</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ros-template/demo</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
 
     /**
      * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if the TemplateId parameter is specified.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if the TemplateId parameter is specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -165,20 +183,26 @@ public class GetTemplateParameterConstraintsShrinkRequest extends TeaModel {
     public static class GetTemplateParameterConstraintsShrinkRequestParameters extends TeaModel {
         /**
          * <p>The name of parameter N in the template.</p>
-         * <br>
-         * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</p>
-         * <br>
+         * <blockquote>
+         * <p> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZoneInfo</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of parameter N in the template.</p>
-         * <br>
-         * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</p>
-         * <br>
+         * <blockquote>
+         * <p> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

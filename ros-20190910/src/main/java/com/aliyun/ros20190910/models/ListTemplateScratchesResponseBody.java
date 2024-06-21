@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListTemplateScratchesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D1C09606-C58B-558F-9B4E-5BF263D17D09</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public static class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters extends TeaModel {
         /**
          * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeletionPolicy</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Retain</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -118,6 +136,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup extends TeaModel {
         /**
          * <p>The ID of the source resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -154,12 +175,18 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceResources extends TeaModel {
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5eauuq80anx59v28****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::VPC</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -190,6 +217,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceTag extends TeaModel {
         /**
          * <p>The source tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;a&quot;: &quot;b&quot;}</p>
          */
         @NameInMap("ResourceTags")
         public java.util.Map<String, ?> resourceTags;
@@ -226,12 +256,18 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public static class ListTemplateScratchesResponseBodyTemplateScratchesTags extends TeaModel {
         /**
          * <p>The tag key of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -262,32 +298,45 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public static class ListTemplateScratchesResponseBodyTemplateScratches extends TeaModel {
         /**
          * <p>The time when the resource scenario was created.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-07T08:06:44</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the scenario.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The status code of the resource scenario that failed to be generated.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidZoneId</p>
          */
         @NameInMap("FailedCode")
         public String failedCode;
 
         /**
          * <p>The policy based on which the logical ID is generated. Valid values:</p>
-         * <br>
-         * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
-         * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
-         * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+         * <ul>
+         * <li>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</li>
+         * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
+         * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LongTypePrefixAndIndexSuffix</p>
          */
         @NameInMap("LogicalIdStrategy")
         public String logicalIdStrategy;
@@ -300,6 +349,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4nxcvht4pmi</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -324,14 +376,21 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
         /**
          * <p>The state of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GENERATE_COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The reason why the resource scenario failed to be generated.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of Status is GENERATE_FAILED.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource ALIYUN::ECS::VPC vpc-m5eauuq80anx59v28**** could not be found for template scratch.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;
@@ -344,23 +403,32 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ts-48ad85d66cca4620****</p>
          */
         @NameInMap("TemplateScratchId")
         public String templateScratchId;
 
         /**
          * <p>The type of the resource scenario. Valid values:</p>
-         * <br>
-         * <p>*   ResourceImport: resource management</p>
-         * <p>*   ArchitectureReplication: resource replication</p>
+         * <ul>
+         * <li>ResourceImport: resource management</li>
+         * <li>ArchitectureReplication: resource replication</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceImport</p>
          */
         @NameInMap("TemplateScratchType")
         public String templateScratchType;
 
         /**
          * <p>The time when the resource scenario was updated.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-07T08:06:44</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

@@ -6,20 +6,27 @@ import com.aliyun.tea.*;
 public class GenerateTemplateByScratchResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D22C1D13-D74E-558C-AF68-1B4C05FA6F1A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The resources that you want to import into a stack in the scenario.</p>
-     * <br>
-     * <p>> This parameter is returned only if the scenario is of the Resource Management type.</p>
+     * <p>The resources that you want to import into a stack in the resource management scenario.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for a resource management scenario.</p>
+     * </blockquote>
      */
     @NameInMap("ResourcesToImport")
     public java.util.List<GenerateTemplateByScratchResponseBodyResourcesToImport> resourcesToImport;
 
     /**
-     * <p>The template content of the scenario.</p>
+     * <p>The template content of the resource scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;ROSTemplateFormatVersion\&quot;: \&quot;2015-09-01\&quot;, \&quot;Resources\&quot;: {\&quot;ECSVPC_001\&quot;: {\&quot;DeletionPolicy\&quot;: \&quot;Retain\&quot;, \&quot;Type\&quot;: \&quot;ALIYUN::ECS::VPC\&quot;, \&quot;Properties\&quot;: {\&quot;CidrBlock\&quot;: \&quot;172.16.0.0/12\&quot;, \&quot;VpcName\&quot;: \&quot;MyTestVpc\&quot;, \&quot;EnableIpv6\&quot;: false}}}}</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -56,19 +63,28 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
     public static class GenerateTemplateByScratchResponseBodyResourcesToImport extends TeaModel {
         /**
          * <p>The logical ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECSVPC_001</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
         /**
-         * <p>The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.\\</p>
-         * <p>A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and `vpc-bp1m6fww66xbntjyc****"` is a value that is assigned to VpcId.</p>
+         * <p>The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.\
+         * A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and <code>vpc-bp1m6fww66xbntjyc****&quot;</code> is a value that is assigned to VpcId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;VpcId&quot;: &quot;vpc-bp1m6fww66xbntjyc****&quot; }</p>
          */
         @NameInMap("ResourceIdentifier")
         public java.util.Map<String, ?> resourceIdentifier;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::VPC</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

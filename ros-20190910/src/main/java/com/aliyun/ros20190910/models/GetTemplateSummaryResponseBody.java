@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetTemplateSummaryResponseBody extends TeaModel {
     /**
      * <p>The description of the stack template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>No description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The metadata that is defined in the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
     @NameInMap("Metadata")
     public java.util.Map<String, ?> metadata;
@@ -24,13 +30,16 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The resource identifier summaries.\\</p>
-     * <p>A summary describes the resource that you want to import and the properties that are used to identify the resource during the import. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.</p>
+     * <p>The resource identifier summaries.\
+     * A summary describes the resource that you want to import and the properties that are used to identify the resource during the import. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.</p>
      */
     @NameInMap("ResourceIdentifierSummaries")
     public java.util.List<GetTemplateSummaryResponseBodyResourceIdentifierSummaries> resourceIdentifierSummaries;
@@ -43,6 +52,9 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The version of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-09-01</p>
      */
     @NameInMap("Version")
     public String version;
@@ -123,8 +135,12 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <br>
-         * <p>> The resource import feature is supported for the resource type.</p>
+         * <blockquote>
+         * <p>The resource import feature is supported for the resource type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::VPC</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

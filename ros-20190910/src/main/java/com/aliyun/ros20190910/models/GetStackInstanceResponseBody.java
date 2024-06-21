@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetStackInstanceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8A6B693-82C8-419D-8796-DE99EC33CFF9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetStackInstanceResponseBody extends TeaModel {
     public static class GetStackInstanceResponseBodyStackInstanceParameterOverrides extends TeaModel {
         /**
          * <p>The name of the parameter that is used to override a specific parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Amount</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of the parameter that is used to override a specific parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -76,22 +85,30 @@ public class GetStackInstanceResponseBody extends TeaModel {
     public static class GetStackInstanceResponseBodyStackInstance extends TeaModel {
         /**
          * <p>The ID of the destination account to which the stack belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The time when the most recent successful drift detection was performed on the stack group.</p>
-         * <br>
-         * <p>> This parameter is returned only if drift detection is performed on the stack group.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if drift detection is performed on the stack group.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-27T07:47:47</p>
          */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
         /**
          * <p>The outputs of the stack.</p>
-         * <br>
-         * <p>>  This parameter is returned if OutputOption is set to Enabled.</p>
+         * <blockquote>
+         * <p> This parameter is returned if OutputOption is set to Enabled.</p>
+         * </blockquote>
          */
         @NameInMap("Outputs")
         public java.util.List<java.util.Map<String, ?>> outputs;
@@ -104,72 +121,102 @@ public class GetStackInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the folder in the resource directory.</p>
-         * <br>
-         * <p>> This parameter is returned only if the stack group is granted service-managed permissions.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the stack group is granted service-managed permissions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-4PvlVLOL8v</p>
          */
         @NameInMap("RdFolderId")
         public String rdFolderId;
 
         /**
          * <p>The region ID of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The state of the stack when the most recent successful drift detection was performed on the stack group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   DRIFTED: The stack has drifted.</p>
-         * <p>*   NOT_CHECKED: No successful drift detection is performed on the stack.</p>
-         * <p>*   IN_SYNC: The stack is being synchronized.</p>
-         * <br>
-         * <p>> This parameter is returned only if drift detection is performed on the stack group.</p>
+         * <ul>
+         * <li>DRIFTED: The stack has drifted.</li>
+         * <li>NOT_CHECKED: No successful drift detection is performed on the stack.</li>
+         * <li>IN_SYNC: The stack is being synchronized.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only if drift detection is performed on the stack group.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>IN_SYNC</p>
          */
         @NameInMap("StackDriftStatus")
         public String stackDriftStatus;
 
         /**
          * <p>The ID of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
          */
         @NameInMap("StackGroupId")
         public String stackGroupId;
 
         /**
          * <p>The name of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         @NameInMap("StackGroupName")
         public String stackGroupName;
 
         /**
          * <p>The stack ID.</p>
-         * <br>
-         * <p>> This parameter is returned only if the stack is in the CURRENT state.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the stack is in the CURRENT state.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>35ad60e3-6a92-42d8-8812-f0700d45****</p>
          */
         @NameInMap("StackId")
         public String stackId;
 
         /**
          * <p>The state of the stack.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   CURRENT: The stack is up-to-date with the stack group.</p>
-         * <br>
-         * <p>*   OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:</p>
-         * <br>
-         * <p>    *   When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</p>
-         * <p>    *   When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</p>
-         * <p>    *   The creation or update operation is not complete.</p>
+         * <ul>
+         * <li><p>CURRENT: The stack is up-to-date with the stack group.</p>
+         * </li>
+         * <li><p>OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:</p>
+         * <ul>
+         * <li>When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</li>
+         * <li>When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</li>
+         * <li>The creation or update operation is not complete.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CURRENT</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The reason why the stack instance is in the OUTDATED state.</p>
-         * <br>
-         * <p>> This parameter is returned only if the stack instance is in the OUTDATED state.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the stack instance is in the OUTDATED state.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>User initiated stop</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

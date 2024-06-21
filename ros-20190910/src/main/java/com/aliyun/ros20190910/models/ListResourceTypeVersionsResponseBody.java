@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListResourceTypeVersionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,80 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
     public static class ListResourceTypeVersionsResponseBodyResourceTypeVersions extends TeaModel {
         /**
          * <p>The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-24T08:25:21</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The entity type. Only Module may be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Module</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
         /**
          * <p>Indicates whether the version is the default version. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
         /**
          * <p>The provider of the resource type. Valid values:</p>
-         * <br>
-         * <p>*   ROS: ROS</p>
-         * <p>*   Self: yourself</p>
+         * <ul>
+         * <li>ROS: ROS</li>
+         * <li>Self: yourself</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ROS</p>
          */
         @NameInMap("Provider")
         public String provider;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The time when the version was updated. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-24T08:25:21</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("VersionId")
         public String versionId;

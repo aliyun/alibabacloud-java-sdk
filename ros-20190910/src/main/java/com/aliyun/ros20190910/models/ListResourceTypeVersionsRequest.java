@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListResourceTypeVersionsRequest extends TeaModel {
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

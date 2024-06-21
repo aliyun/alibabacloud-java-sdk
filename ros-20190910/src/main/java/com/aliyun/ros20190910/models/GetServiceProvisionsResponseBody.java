@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceProvisionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9938C04-26AD-5EFA-B394-EA7866842DFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     public static class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation extends TeaModel {
         /**
          * <p>The name of the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateServiceLinkedRole</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The ID of the Alibaba Cloud service to which the API operation belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("ApiProductId")
         public String apiProductId;
 
         /**
          * <p>The type of the API operation. Valid values:</p>
-         * <br>
-         * <p>*   Open: public</p>
-         * <p>*   Inner: private</p>
+         * <ul>
+         * <li>Open: public</li>
+         * <li>Inner: private</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("ApiType")
         public String apiType;
 
         /**
          * <p>The parameters of the API operation. If a parameter is a variable, use the ${Variable name} format. Only the following variable is supported: ${RegionId}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;ServiceLinkedRole&quot;: &quot;AliyunServiceRoleForRdsPgsqlOnEcs&quot;,   &quot;RegionId&quot;: &quot;${RegionId}&quot; }</p>
          */
         @NameInMap("Parameters")
         public java.util.Map<String, ?> parameters;
@@ -113,21 +129,31 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the RAM role is created. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Created")
         public Boolean created;
 
         /**
          * <p>The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
          * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForEHPC</p>
          */
         @NameInMap("RoleName")
         public String roleName;
@@ -174,8 +200,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     public static class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvision extends TeaModel {
         /**
          * <p>The authorization URL of the RAM role.</p>
-         * <br>
-         * <p>> This parameter is returned if Created is set to false.</p>
+         * <blockquote>
+         * <p>This parameter is returned if Created is set to false.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ehpc.console.aliyun.com/">https://ehpc.console.aliyun.com/</a></p>
          */
         @NameInMap("AuthorizationURL")
         public String authorizationURL;
@@ -212,9 +242,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     public static class GetServiceProvisionsResponseBodyServiceProvisions extends TeaModel {
         /**
          * <p>Indicates whether automatic activation for the service is defined in the template. Valid values:</p>
-         * <br>
-         * <p>*   true: Automatic activation for the service is defined in the template.</p>
-         * <p>*   false: Manual activation for the service is defined in the template.</p>
+         * <ul>
+         * <li>true: Automatic activation for the service is defined in the template.</li>
+         * <li>false: Manual activation for the service is defined in the template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoEnableService")
         public Boolean autoEnableService;
@@ -227,8 +261,12 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
         /**
          * <p>The URL that points to the activation page of the service.</p>
-         * <br>
-         * <p>> This parameter is returned if Status is set to Disabled.</p>
+         * <blockquote>
+         * <p>This parameter is returned if Status is set to Disabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliyun.com/?commodityCode=nas">https://common-buy.aliyun.com/?commodityCode=nas</a></p>
          */
         @NameInMap("EnableURL")
         public String enableURL;
@@ -241,24 +279,35 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
         /**
          * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EHPC</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The activation status of the service. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The service is activated.</p>
-         * <p>*   Disabled: The service is not activated.</p>
-         * <p>*   Unknown: The activation status of the service is unknown.</p>
+         * <ul>
+         * <li>Enabled: The service is activated.</li>
+         * <li>Disabled: The service is not activated.</li>
+         * <li>Unknown: The activation status of the service is unknown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The reason why the service is in the Disabled or Unknown state.</p>
-         * <br>
-         * <p>> This parameter is returned if Status is set to Disabled or Unknown.</p>
+         * <blockquote>
+         * <p>This parameter is returned if Status is set to Disabled or Unknown.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>No permission.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

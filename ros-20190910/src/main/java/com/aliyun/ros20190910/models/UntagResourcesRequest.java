@@ -6,46 +6,61 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the resource. This parameter takes effect when TagKey is not specified in the request. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>The region ID of the tag. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the tag. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resource.</p>
-     * <br>
-     * <p>> If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.</p>
-     * <br>
+     * <blockquote>
+     * <p>If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46ec7b78-9d5e-4b21-aefd-448c90aa****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   stack: stack</p>
-     * <p>*   stackgroup: stack group</p>
-     * <p>*   template: template</p>
-     * <p>*   templatescratch: scenario</p>
-     * <br>
+     * <ul>
+     * <li>stack: stack</li>
+     * <li>stackgroup: stack group</li>
+     * <li>template: template</li>
+     * <li>templatescratch: scenario</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stack</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag keys of the resource. You can specify up to 20 tag keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FinanceDept</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

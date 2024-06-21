@@ -5,53 +5,73 @@ import com.aliyun.tea.*;
 
 public class RegisterResourceTypeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).\\</p>
-     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
+     * The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).\
+     * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the resource type. The description can be up to 512 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>It is a demo.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The entity type. Set the value to Module.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Module</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. The template body is used as the module content. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
-     * <br>
-     * <br>
-     * <p>> - This parameter takes effect only when EntityType is set to Module.</p>
-     * <p>> - You can specify only one of the TemplateBody and TemplateURL parameters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter takes effect only when EntityType is set to Module.</li>
+     * <li>You can specify only one of the TemplateBody and TemplateURL parameters.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
      * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. The template body is used as the module content.</p>
-     * <br>
-     * <p>> - If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
-     * <p>> -  This parameter takes effect only when EntityType is set to Module.</p>
-     * <p>> -  You can specify only one of the TemplateBody and TemplateURL parameters.</p>
-     * <br>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</li>
+     * <li>This parameter takes effect only when EntityType is set to Module.</li>
+     * <li>You can specify only one of the TemplateBody and TemplateURL parameters.</li>
+     * </ul>
+     * </blockquote>
      * <p>The URL can be up to 1,024 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ros-template/demo</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;

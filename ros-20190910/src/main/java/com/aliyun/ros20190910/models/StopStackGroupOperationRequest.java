@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class StopStackGroupOperationRequest extends TeaModel {
     /**
      * <p>The ID of the operation.</p>
-     * <br>
-     * <p>You can call the [ListStackGroupOperations](https://help.aliyun.com/document_detail/151342.html) operation to obtain the operation ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to obtain the operation ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

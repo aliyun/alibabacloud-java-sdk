@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class GetStackResourceResponseBody extends TeaModel {
     /**
      * <p>The resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-01T06:01:23</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The reason why the resource is in its current state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>no description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-27T07:47:47</p>
      */
     @NameInMap("DriftDetectionTime")
     public String driftDetectionTime;
 
     /**
      * <p>The time when the resource was updated.</p>
-     * <br>
      * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WebServer</p>
      */
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
     /**
      * <p>The list of the resource properties.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
      */
     @NameInMap("Metadata")
     public java.util.Map<String, ?> metadata;
@@ -44,69 +58,95 @@ public class GetStackResourceResponseBody extends TeaModel {
 
     /**
      * <p>The metadata.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d04af923-e6b7-4272-aeaa-47ec9777****</p>
      */
     @NameInMap("PhysicalResourceId")
     public String physicalResourceId;
 
     /**
      * <p>The physical ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the resource in the last successful drift detection. Valid values:</p>
-     * <br>
-     * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</p>
-     * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
-     * <p>*   NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
-     * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
+     * <ul>
+     * <li>DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</li>
+     * <li>MODIFIED: The actual configuration of the resource differs from its expected template configuration.</li>
+     * <li>NOT_CHECKED: ROS has not checked whether the actual configuration of the resource differs from its expected template configuration.</li>
+     * <li>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</li>
+     * </ul>
      */
     @NameInMap("ResourceAttributes")
     public java.util.List<java.util.Map<String, ?>> resourceAttributes;
 
     /**
      * <p>The time when the last successful drift detection was performed on the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IN_SYNC</p>
      */
     @NameInMap("ResourceDriftStatus")
     public String resourceDriftStatus;
 
     /**
      * <p>The logical ID of the resource defined in the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::ROS::WaitConditionHandle</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The ID of the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>efdf5c10-96a5-4fd7-ab89-68e7baa2****</p>
      */
     @NameInMap("StackId")
     public String stackId;
 
     /**
      * <p>The name of the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-describe-resource</p>
      */
     @NameInMap("StackName")
     public String stackName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATE_COMPLETE</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The time when the resource was created.</p>
-     * <br>
      * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>state changed</p>
      */
     @NameInMap("StatusReason")
     public String statusReason;
 
     /**
      * <p>The name of the stack.</p>
-     * <br>
      * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-01T06:01:29</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -246,21 +286,23 @@ public class GetStackResourceResponseBody extends TeaModel {
 
     public static class GetStackResourceResponseBodyModuleInfo extends TeaModel {
         /**
-         * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (`/`).</p>
-         * <br>
+         * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (<code>/</code>).</p>
          * <p>In the following example, the resource is created from Module B nested within Parent Module A:</p>
-         * <br>
-         * <p>`moduleA/moduleB`</p>
+         * <p><code>moduleA/moduleB</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>moduleA/moduleB</p>
          */
         @NameInMap("LogicalIdHierarchy")
         public String logicalIdHierarchy;
 
         /**
-         * <p>The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (`/`).</p>
-         * <br>
-         * <p>In the following example, the resource is created from a module of the `MODULE::ROS::Child::Example` type that is nested within a parent module of the `MODULE::ROS::Parent::Example` type:</p>
-         * <br>
-         * <p>`MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example`</p>
+         * <p>The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (<code>/</code>).</p>
+         * <p>In the following example, the resource is created from a module of the <code>MODULE::ROS::Child::Example</code> type that is nested within a parent module of the <code>MODULE::ROS::Parent::Example</code> type:</p>
+         * <p><code>MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example</p>
          */
         @NameInMap("TypeHierarchy")
         public String typeHierarchy;

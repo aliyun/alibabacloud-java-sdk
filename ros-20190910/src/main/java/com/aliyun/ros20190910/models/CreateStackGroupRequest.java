@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class CreateStackGroupRequest extends TeaModel {
     /**
      * <p>The name of the RAM role that you specify for the administrator account when you create a self-managed stack group. ROS assumes the administrator role to perform operations. If you do not specify this parameter, AliyunROSStackGroupAdministrationRole is used as the default value. ROS uses the administrator role to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks in the stack group.</p>
-     * <br>
      * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunROSStackGroupAdministrationRole</p>
      */
     @NameInMap("AdministrationRoleName")
     public String administrationRoleName;
 
     /**
      * <p>The information about automatic deployment settings.</p>
-     * <br>
-     * <p>> You must specify this parameter if PermissionModel is set to SERVICE_MANAGED.</p>
+     * <blockquote>
+     * <p>You must specify this parameter if PermissionModel is set to SERVICE_MANAGED.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Enabled&quot;: true, &quot;RetainStacksOnAccountRemoval&quot;: true}</p>
      */
     @NameInMap("AutoDeployment")
     public CreateStackGroupRequestAutoDeployment autoDeployment;
@@ -27,24 +33,32 @@ public class CreateStackGroupRequest extends TeaModel {
     public java.util.List<String> capabilities;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\\</p>
-     * <p>The token can contain letters, digits, underscores (_), and hyphens (-) and cannot exceed 64 characters in length.\\</p>
-     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
+     * The token can contain letters, digits, underscores (_), and hyphens (-) and cannot exceed 64 characters in length.\
+     * For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the stack group.\\</p>
-     * <p>The description must be 1 to 256 characters in length.</p>
+     * <p>The description of the stack group.\
+     * The description must be 1 to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StackGroup Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the RAM role that you specify for the execution account when you create a self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If you do not specify this parameter, AliyunROSStackGroupExecutionRole is used as the default value. ROS assumes the execution role to perform operations on the stacks in the stack group.</p>
-     * <br>
      * <p>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunROSStackGroupExecutionRole</p>
      */
     @NameInMap("ExecutionRoleName")
     public String executionRoleName;
@@ -57,37 +71,48 @@ public class CreateStackGroupRequest extends TeaModel {
 
     /**
      * <p>The permission model of the stack group.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.</p>
-     * <p>*   SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</p>
-     * <br>
-     * <p>> If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Manage a delegated administrator account](https://help.aliyun.com/document_detail/308253.html) and [Enable trusted access](https://help.aliyun.com/document_detail/298229.html).</p>
+     * <ul>
+     * <li>SELF_MANAGED (default): the self-managed permission model. If you create a self-managed stack group, you must create RAM roles within the administrator and execution accounts and establish a trust relationship between the accounts. Then, you can deploy stacks within the execution account.</li>
+     * <li>SERVICE_MANAGED: the service-managed permission model. If you create a service-managed stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see <a href="https://help.aliyun.com/document_detail/308253.html">Manage a delegated administrator account</a> and <a href="https://help.aliyun.com/document_detail/298229.html">Enable trusted access</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>SELF_MANAGED</p>
      */
     @NameInMap("PermissionModel")
     public String permissionModel;
 
     /**
-     * <p>The region ID of the stack group. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\\</p>
-     * <p>For more information about resource groups, see [Resource groups](https://help.aliyun.com/document_detail/94475.html).</p>
+     * <p>The ID of the resource group. If you do not specify this parameter, the stack group is added to the default resource group.\
+     * For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the stack group. The name must be unique within a region.\\</p>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
-     * <br>
+     * <p>The name of the stack group. The name must be unique within a region.\
+     * The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyStackGroup</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -103,24 +128,36 @@ public class CreateStackGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the template. This parameter applies to shared and private templates.</p>
-     * <br>
-     * <p>> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <blockquote>
+     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
-     * <br>
-     * <p>> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * <blockquote>
+     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ros-template/demo</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
 
     /**
      * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
-     * <br>
-     * <p>> TemplateVersion takes effect only if you specify TemplateId.</p>
+     * <blockquote>
+     * <p>TemplateVersion takes effect only if you specify TemplateId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -261,24 +298,31 @@ public class CreateStackGroupRequest extends TeaModel {
     public static class CreateStackGroupRequestAutoDeployment extends TeaModel {
         /**
          * <p>Indicates whether automatic deployment is enabled.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: Automatic deployment is enabled. If you add a member account to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the member account. If you remove a member account from the folder, ROS automatically deletes the stacks from the member account.</p>
-         * <p>*   false: Automatic deployment is disabled. After you disable automatic deployment, the stacks remain unchanged when you add member accounts to or remove member accounts from the folder.</p>
+         * <ul>
+         * <li>true: Automatic deployment is enabled. If you add a member account to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the member account. If you remove a member account from the folder, ROS automatically deletes the stacks from the member account.</li>
+         * <li>false: Automatic deployment is disabled. After you disable automatic deployment, the stacks remain unchanged when you add member accounts to or remove member accounts from the folder.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>Indicates whether the stacks within a member account are retained when you remove the member account from the folder.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
-         * <p>> You must specify RetainStacksOnAccountRemoval if Enabled is set to true.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify RetainStacksOnAccountRemoval if Enabled is set to true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RetainStacksOnAccountRemoval")
         public Boolean retainStacksOnAccountRemoval;
@@ -309,24 +353,28 @@ public class CreateStackGroupRequest extends TeaModel {
     public static class CreateStackGroupRequestParameters extends TeaModel {
         /**
          * <p>The key of parameter N. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template.</p>
-         * <br>
          * <p>Maximum value of N: 200.</p>
-         * <br>
-         * <p>> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</p>
-         * <br>
+         * <blockquote>
+         * <p>Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Amount</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>The value of parameter N.</p>
-         * <br>
          * <p>Maximum value of N: 200.</p>
-         * <br>
-         * <p>> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</p>
-         * <br>
+         * <blockquote>
+         * <p>Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -357,16 +405,22 @@ public class CreateStackGroupRequest extends TeaModel {
     public static class CreateStackGroupRequestTags extends TeaModel {
         /**
          * <p>The tag key of the stack group.</p>
-         * <br>
-         * <p>> Tags is optional. If you want to specify Tags, you must also specify Tags.N.Key.</p>
-         * <br>
+         * <blockquote>
+         * <p>Tags is optional. If you want to specify Tags, you must also specify Tags.N.Key.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

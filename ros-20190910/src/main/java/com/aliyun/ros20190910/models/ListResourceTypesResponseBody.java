@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListResourceTypesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA00860C-ECAF-5253-A1F9-8198695A7157</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,61 +57,90 @@ public class ListResourceTypesResponseBody extends TeaModel {
     public static class ListResourceTypesResponseBodyResourceTypeSummaries extends TeaModel {
         /**
          * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-24T08:25:21</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the default version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("DefaultVersionId")
         public String defaultVersionId;
 
         /**
          * <p>The description of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The entity type. Valid values:</p>
-         * <br>
-         * <p>*   Resource: regular resources.</p>
-         * <p>*   DataSource: DataSource resources.</p>
-         * <p>*   Module: modules.</p>
+         * <ul>
+         * <li>Resource: regular resources.</li>
+         * <li>DataSource: DataSource resources.</li>
+         * <li>Module: modules.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Module</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
         /**
          * <p>The ID of the latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v10</p>
          */
         @NameInMap("LatestVersionId")
         public String latestVersionId;
 
         /**
          * <p>The provider of the resource type. Valid values:</p>
-         * <br>
-         * <p>*   ROS: The resource type is provided by ROS.</p>
-         * <p>*   Self: The resource type is provided by you.</p>
+         * <ul>
+         * <li>ROS: The resource type is provided by ROS.</li>
+         * <li>Self: The resource type is provided by you.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ROS</p>
          */
         @NameInMap("Provider")
         public String provider;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODULE::MyOrganization::MyService::MyUsecase</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The number of versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalVersionCount")
         public Integer totalVersionCount;
 
         /**
          * <p>The update time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-24T08:25:21</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

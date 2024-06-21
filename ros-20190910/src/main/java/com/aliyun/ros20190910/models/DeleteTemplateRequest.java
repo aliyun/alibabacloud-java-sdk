@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the template. This parameter applies to only private templates.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

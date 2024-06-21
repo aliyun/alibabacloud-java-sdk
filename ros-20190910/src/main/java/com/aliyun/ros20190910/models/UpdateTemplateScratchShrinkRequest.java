@@ -6,13 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The description of the scenario.</p>
+     * 
+     * <strong>example:</strong>
      * <p>The description of the scenario.</p>
      */
     @NameInMap("Description")
@@ -20,23 +25,33 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
 
     /**
      * <p>The execution mode. Valid values:</p>
-     * <br>
-     * <p>*   Async (default)</p>
-     * <p>*   Sync</p>
-     * <br>
-     * <p>> If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
+     * <ul>
+     * <li>Async (default)</li>
+     * <li>Sync</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Sync</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
     /**
      * <p>The policy based on which the logical ID is generated. Valid values:</p>
-     * <br>
-     * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
-     * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
-     * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
-     * <br>
-     * <p>>  If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</p>
+     * <ul>
+     * <li>LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</li>
+     * <li>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</li>
+     * <li>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>LongTypePrefixAndIndexSuffix</p>
      */
     @NameInMap("LogicalIdStrategy")
     public String logicalIdStrategy;
@@ -49,46 +64,61 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scenario.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The source resource group.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
+     * </blockquote>
      */
     @NameInMap("SourceResourceGroup")
     public String sourceResourceGroupShrink;
 
     /**
      * <p>The source resources.</p>
-     * <br>
-     * <p>If you specify SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the architecture of all resources that are associated with the specified source resources. For example, if you set the value of SourceResources to an ID of a Classic Load Balancer (CLB) instance, the system detects the architecture of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and virtual private clouds (VPCs), that are associated with the CLB instance.</p>
-     * <br>
-     * <p>If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
+     * </blockquote>
      */
     @NameInMap("SourceResources")
     public String sourceResourcesShrink;
 
     /**
      * <p>The source tag.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</p>
+     * </blockquote>
      */
     @NameInMap("SourceTag")
     public String sourceTagShrink;
 
     /**
-     * <p>The ID of the scenario.</p>
-     * <br>
+     * <p>The ID of the resource scenario.</p>
+     * <p>The valid values of the ParameterKey and ParameterValue request parameters vary based on the IDs of different types of resource scenarios. For more information, see the &quot;Additional information about request parameters&quot; section of this topic.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> operation to query the ID of a resource scenario.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ts-7f7a704cf71c49a6****</p>
      */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;

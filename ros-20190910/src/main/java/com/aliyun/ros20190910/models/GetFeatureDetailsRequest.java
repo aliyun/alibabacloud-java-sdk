@@ -6,21 +6,26 @@ import com.aliyun.tea.*;
 public class GetFeatureDetailsRequest extends TeaModel {
     /**
      * <p>The one or more features that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   Terraform: the Terraform hosting feature.</p>
-     * <p>*   ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</p>
-     * <p>*   TemplateScratch: the scenario feature.</p>
-     * <p>*   All: all features that are supported by ROS.</p>
-     * <br>
+     * <ul>
+     * <li>Terraform: the Terraform hosting feature.</li>
+     * <li>ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</li>
+     * <li>TemplateScratch: the scenario feature.</li>
+     * <li>All: all features that are supported by ROS.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Terraform</p>
      */
     @NameInMap("Feature")
     public String feature;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

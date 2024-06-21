@@ -12,6 +12,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9816785B-BCF8-514D-8B76-C1EC2BC954FC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources extends TeaModel {
         /**
          * <p>The name of the resource property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceName</p>
          */
         @NameInMap("PropertyName")
         public String propertyName;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::InstanceGroup</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -82,18 +91,27 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZoneId</p>
          */
         @NameInMap("PropertyName")
         public String propertyName;
 
         /**
          * <p>The name of the resource that is defined in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyECS</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::InstanceGroup</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -140,18 +158,27 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors extends TeaModel {
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::InstanceGroup</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyECS</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceType is needed while query DataDisk</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -202,34 +229,44 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         /**
          * <p>The behavior of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   NoLimit: No limit is imposed on the value of this parameter.</p>
-         * <p>*   NotSupport: The value of this parameter cannot be queried.</p>
-         * <p>*   QueryError: This parameter failed to be queried.</p>
-         * <br>
-         * <p>> If AllowedValues is not returned, Behavior and BehaviorReason are returned.</p>
+         * <ul>
+         * <li>NoLimit: No limit is imposed on the value of this parameter.</li>
+         * <li>NotSupport: The value of this parameter cannot be queried.</li>
+         * <li>QueryError: This parameter failed to be queried.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If AllowedValues is not returned, Behavior and BehaviorReason are returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NoLimit</p>
          */
         @NameInMap("Behavior")
         public String behavior;
 
         /**
          * <p>The reason why the behavior of the parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No resource property refer to the parameter</p>
          */
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
         /**
          * <p>The values that do not conform to the parameter constraints.</p>
-         * <br>
-         * <p>> If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
+         * <blockquote>
+         * <p>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
+         * </blockquote>
          */
         @NameInMap("IllegalValueByParameterConstraints")
         public java.util.List<?> illegalValueByParameterConstraints;
 
         /**
          * <p>The values that do not match the rules in the template.</p>
-         * <br>
-         * <p>> If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
+         * <blockquote>
+         * <p>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
+         * </blockquote>
          */
         @NameInMap("IllegalValueByRules")
         public java.util.List<?> illegalValueByRules;
@@ -248,6 +285,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZoneInfo</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -260,6 +300,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         /**
          * <p>The data type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         @NameInMap("Type")
         public String type;

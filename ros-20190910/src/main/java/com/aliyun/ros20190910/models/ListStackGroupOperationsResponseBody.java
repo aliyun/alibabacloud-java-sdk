@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListStackGroupOperationsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of stack group operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,63 +94,87 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
     public static class ListStackGroupOperationsResponseBodyStackGroupOperations extends TeaModel {
         /**
          * <p>The operation type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   CREATE</p>
-         * <p>*   UPDATE</p>
-         * <p>*   DELETE</p>
-         * <p>*   DETECT_DRIFT</p>
+         * <ul>
+         * <li>CREATE</li>
+         * <li>UPDATE</li>
+         * <li>DELETE</li>
+         * <li>DETECT_DRIFT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The time when the operation was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-20T09:22:36.000000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the operation ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-20T09:22:41.000000</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The description of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create stack instance in hangzhou</p>
          */
         @NameInMap("OperationDescription")
         public String operationDescription;
 
         /**
          * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14A07460-EBE7-47CA-9757-12CC4761****</p>
          */
         @NameInMap("OperationId")
         public String operationId;
 
         /**
          * <p>The ID of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd0ddef9-9540-4b42-a464-94f77835****</p>
          */
         @NameInMap("StackGroupId")
         public String stackGroupId;
 
         /**
          * <p>The name of the stack group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStackGroup</p>
          */
         @NameInMap("StackGroupName")
         public String stackGroupName;
 
         /**
          * <p>The state of the operation.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RUNNING</p>
-         * <p>*   SUCCEEDED</p>
-         * <p>*   FAILED</p>
-         * <p>*   STOPPING</p>
-         * <p>*   STOPPED</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>SUCCEEDED</li>
+         * <li>FAILED</li>
+         * <li>STOPPING</li>
+         * <li>STOPPED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
          */
         @NameInMap("Status")
         public String status;

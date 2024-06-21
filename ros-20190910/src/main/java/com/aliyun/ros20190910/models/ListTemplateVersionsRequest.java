@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ListTemplateVersionsRequest extends TeaModel {
     /**
      * <p>The maximum number of results to be returned in a single call when NextToken is used for the query.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The template ID. This parameter applies to shared and private templates.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

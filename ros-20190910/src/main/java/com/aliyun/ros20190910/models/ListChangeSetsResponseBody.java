@@ -12,24 +12,36 @@ public class ListChangeSetsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of change sets returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,66 +94,99 @@ public class ListChangeSetsResponseBody extends TeaModel {
     public static class ListChangeSetsResponseBodyChangeSets extends TeaModel {
         /**
          * <p>The ID of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1f6521a4-05af-4975-afe9-bc4b45ad****</p>
          */
         @NameInMap("ChangeSetId")
         public String changeSetId;
 
         /**
          * <p>The name of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyChangeSet</p>
          */
         @NameInMap("ChangeSetName")
         public String changeSetName;
 
         /**
          * <p>The type of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE</p>
          */
         @NameInMap("ChangeSetType")
         public String changeSetType;
 
         /**
          * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-01T05:16:31</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>It is a demo.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The execution status of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         @NameInMap("ExecutionStatus")
         public String executionStatus;
 
         /**
          * <p>The region ID of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the stack with which the change set is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
          */
         @NameInMap("StackId")
         public String stackId;
 
         /**
          * <p>The name of the stack with which the change set is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyStack</p>
          */
         @NameInMap("StackName")
         public String stackName;
 
         /**
          * <p>The status of the change set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The reason why the change set is in its current state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>too many changes</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

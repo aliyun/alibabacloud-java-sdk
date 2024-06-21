@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteChangeSetResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

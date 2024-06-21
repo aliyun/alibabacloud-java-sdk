@@ -6,38 +6,48 @@ import com.aliyun.tea.*;
 public class ListStackGroupOperationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the operation.</p>
-     * <br>
-     * <p>You can call the [ListStackGroupOperations](https://help.aliyun.com/document_detail/151342.html) operation to query the operation ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to query the operation ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6da106ca-1784-4a6f-a7e1-e723863d****</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
-     * <p>*   Pages start from page 1.</p>
-     * <p>*   Default value: 1.</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 50.</p>
-     * <p>*   Default value: 10.</p>
+     * <ul>
+     * <li>Valid values: 1 to 50.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The region ID of the stack group.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,43 +6,49 @@ import com.aliyun.tea.*;
 public class GetTemplateEstimateCostRequest extends TeaModel {
     /**
      * <p>The name of parameter N. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template.</p>
-     * <br>
      * <p>Maximum value of N: 200.</p>
-     * <br>
      * <p>Examples:</p>
-     * <br>
-     * <p>*   Parameters.1.ParameterKey: `Name`</p>
-     * <p>*   Parameters.2.ParameterKey: `Netmode`</p>
-     * <br>
-     * <p>>  The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+     * <ul>
+     * <li>Parameters.1.ParameterKey: <code>Name</code></li>
+     * <li>Parameters.2.ParameterKey: <code>Netmode</code></li>
+     * </ul>
+     * <blockquote>
+     * <p> The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The region ID of the scenario. The default value is the same as the value of the RegionId parameter.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetTemplateEstimateCostRequestParameters> parameters;
 
     /**
      * <p>The ID of the template. This parameter applies to shared and private templates.</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
-     * <br>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The stack ID.</p>
-     * <br>
      * <p>This parameter is used to query the estimated price in a configuration change scenario.</p>
-     * <br>
      * <p>Assume that the specified stack contains only one Elastic Compute Service (ECS) instance and the instance type is ecs.s6-c1m2.large. You downgrade the instance type to ecs.s6-c1m1.small and specify a new ApsaraDB RDS instance in the template that is used for the price inquiry. The queried result is the sum of the downgrade refund of the ECS instance and the price of the new ApsaraDB RDS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c754d2a4-28f1-46df-b557-9586173a****</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -52,49 +58,61 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
 
     /**
      * <p>The value of parameter N.</p>
-     * <br>
      * <p>Maximum value of N: 200.</p>
-     * <br>
      * <p>Examples:</p>
-     * <br>
-     * <p>*   Parameters.1.ParameterValue: `DemoEip`</p>
-     * <p>*   Parameters.2.ParameterValue: `public`</p>
-     * <br>
-     * <p>>  The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+     * <ul>
+     * <li>Parameters.1.ParameterValue: <code>DemoEip</code></li>
+     * <li>Parameters.2.ParameterValue: <code>public</code></li>
+     * </ul>
+     * <blockquote>
+     * <p> The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>The ID of the scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ts-aa9c62feab844a6b****</p>
      */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
     /**
      * <p>The region ID of the scenario. The default value is the same as the value of the RegionId parameter.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("TemplateScratchRegionId")
     public String templateScratchRegionId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
-     * <br>
      * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</p>
-     * <br>
-     * <p>For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/134212.html).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ros-template/demo</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
 
     /**
      * <p>The ID of the scenario.</p>
-     * <br>
-     * <p>For more information about how to query the IDs of scenarios, see [ListTemplateScratches](https://help.aliyun.com/document_detail/363050.html).</p>
-     * <br>
-     * <p>>  You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * <p>For more information about how to query the IDs of scenarios, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</p>
+     * <blockquote>
+     * <p> You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -187,16 +205,20 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     public static class GetTemplateEstimateCostRequestParameters extends TeaModel {
         /**
          * <p>The ID of the request.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
          * <p>Details of the resource.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoEip</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

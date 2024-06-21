@@ -5,65 +5,86 @@ import com.aliyun.tea.*;
 
 public class ListStacksRequest extends TeaModel {
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-01T15:16:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the parent stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
      */
     @NameInMap("ParentStackId")
     public String parentStackId;
 
     /**
-     * <p>The region ID of the stack. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.\\</p>
-     * <p>For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html) topic.</p>
+     * <p>The ID of the resource group.\
+     * For more information about resource groups, see the &quot;Resource Group&quot; section of the <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a> topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Specifies whether to return nested stacks. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
-     * <br>
-     * <p>> If you specify ParentStackId, you must set ShowNestedStack to true.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you specify ParentStackId, you must set ShowNestedStack to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowNestedStack")
     public Boolean showNestedStack;
 
     /**
      * <p>The stack ID. You can specify this parameter to query only the stack ID. If you want to query the detailed information about the stack, call the GetStack operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -76,18 +97,27 @@ public class ListStacksRequest extends TeaModel {
 
     /**
      * <p>The names of the stacks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyStack</p>
      */
     @NameInMap("StackName")
     public java.util.List<String> stackName;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-01T15:10:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The status of the stack.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATE_COMPLETE</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
@@ -209,15 +239,21 @@ public class ListStacksRequest extends TeaModel {
 
     public static class ListStacksRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.\\</p>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N.\
+         * Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.\\</p>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N.\
+         * Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

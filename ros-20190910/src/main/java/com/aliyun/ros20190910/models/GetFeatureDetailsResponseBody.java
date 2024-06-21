@@ -12,6 +12,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EBF833DA-D0E2-52BE-92E2-59CA56BE834E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -132,6 +135,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     public static class GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes extends TeaModel {
         /**
          * <p>The resource type that supports the resource cleaner feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS:Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -210,6 +216,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::Disk</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -268,6 +277,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::Disk</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -320,42 +332,61 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     public static class GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes extends TeaModel {
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::Disk</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>Indicates whether the resource scope can be specified by source resource group. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SourceResourceGroupSupported")
         public Boolean sourceResourceGroupSupported;
 
         /**
          * <p>Indicates whether the resource scope can be specified by source resource. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SourceResourcesSupported")
         public Boolean sourceResourcesSupported;
 
         /**
          * <p>Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SourceSupported")
         public Boolean sourceSupported;
 
         /**
          * <p>Indicates whether the resource scope can be specified by source tag. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SourceTagSupported")
         public Boolean sourceTagSupported;
@@ -491,7 +522,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypesStackOperationRisk stackOperationRisk;
 
         /**
-         * <p>The resource types that support the system tag `acs:ros:stackId`.</p>
+         * <p>The resource types that support the system tag <code>acs:ros:stackId</code>.</p>
          */
         @NameInMap("SystemTag")
         public java.util.List<String> systemTag;
@@ -546,6 +577,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     public static class GetFeatureDetailsResponseBodyTerraformSupportedVersionsProviderVersions extends TeaModel {
         /**
          * <p>The name of the provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud</p>
          */
         @NameInMap("ProviderName")
         public String providerName;
@@ -588,12 +622,18 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The Terraform version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.11</p>
          */
         @NameInMap("TerraformVersion")
         public String terraformVersion;
 
         /**
          * <p>The Terraform version that is supported by ROS. The parameter value is the same as the value of the Transform parameter in a Terraform template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun::Terraform-v1.0</p>
          */
         @NameInMap("Transform")
         public String transform;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ValidateTemplateResponseBody extends TeaModel {
     /**
      * <p>The description of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>No description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,6 +27,9 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,9 +42,12 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The regular resources that are defined in the template.</p>
-     * <br>
-     * <p>> - For a Resource Orchestration Service (ROS) template, the resource whose definition contains `Count` is not displayed as a list.</p>
-     * <p>> -  For a Terraform template, the resource whose definition contains `count` or `for_each` is not displayed as a list.</p>
+     * <blockquote>
+     * <ul>
+     * <li>For a Resource Orchestration Service (ROS) template, the resource whose definition contains <code>Count</code> is not displayed as a list.</li>
+     * <li>For a Terraform template, the resource whose definition contains <code>count</code> or <code>for_each</code> is not displayed as a list.</li>
+     * </ul>
+     * </blockquote>
      */
     @NameInMap("Resources")
     public java.util.List<ValidateTemplateResponseBodyResources> resources;
@@ -113,18 +122,27 @@ public class ValidateTemplateResponseBody extends TeaModel {
     public static class ValidateTemplateResponseBodyOutputs extends TeaModel {
         /**
          * <p>The description of the template output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance ID of my ECS.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The alias of the template output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance ID</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The name of the template output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_id</p>
          */
         @NameInMap("OutputKey")
         public String outputKey;
@@ -199,43 +217,55 @@ public class ValidateTemplateResponseBody extends TeaModel {
     public static class ValidateTemplateResponseBodyResources extends TeaModel {
         /**
          * <p>The pattern in which the logical IDs of regular resources are formed.</p>
-         * <br>
          * <p>If resources are defined in a ROS template, the following rules apply:</p>
-         * <br>
-         * <p>*   Resource whose definition does not contain `Count`: If the resource name defined in the template is `server`, the values of LogicalResourceIdPattern and `ResourcePath` are both `server`.``</p>
-         * <p>*   Resource whose definition contains `Count`: If the resource name defined in the template is `server`, the value of LogicalResourceIdPattern is `server[*]`, and the value of `ResourcePath` is `server`.</p>
-         * <br>
-         * <p>If resources and [modules](https://www.terraform.io/language/modules) are defined in a Terraform template, the following rules apply:</p>
-         * <br>
-         * <p>*   Resource and module whose definitions do not contain [`count`](https://www.terraform.io/language/meta-arguments/count) or [`for_each`](https://www.terraform.io/language/meta-arguments/for_each): If the resource name defined in the template is `server`, the values of LogicalResourceIdPattern and `ResourcePath` are both `server`.``</p>
-         * <p>*   Resource and module whose definitions contain [`count`](https://www.terraform.io/language/meta-arguments/count) or [`for_each`](https://www.terraform.io/language/meta-arguments/for_each): If the resource name defined in the template is `server`, the value of LogicalResourceIdPattern is `server[*]`, and the value of `ResourcePath` is `server`.</p>
-         * <br>
+         * <ul>
+         * <li>Resource whose definition does not contain <code>Count</code>: If the resource name defined in the template is <code>server</code>, the values of LogicalResourceIdPattern and <code>ResourcePath</code> are both <code>server</code>.``</li>
+         * <li>Resource whose definition contains <code>Count</code>: If the resource name defined in the template is <code>server</code>, the value of LogicalResourceIdPattern is <code>server[*]</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</li>
+         * </ul>
+         * <p>If resources and <a href="https://www.terraform.io/language/modules">modules</a> are defined in a Terraform template, the following rules apply:</p>
+         * <ul>
+         * <li>Resource and module whose definitions do not contain <a href="https://www.terraform.io/language/meta-arguments/count"><code>count</code></a> or <a href="https://www.terraform.io/language/meta-arguments/for_each"><code>for_each</code></a>: If the resource name defined in the template is <code>server</code>, the values of LogicalResourceIdPattern and <code>ResourcePath</code> are both <code>server</code>.``</li>
+         * <li>Resource and module whose definitions contain <a href="https://www.terraform.io/language/meta-arguments/count"><code>count</code></a> or <a href="https://www.terraform.io/language/meta-arguments/for_each"><code>for_each</code></a>: If the resource name defined in the template is <code>server</code>, the value of LogicalResourceIdPattern is <code>server[*]</code>, and the value of <code>ResourcePath</code> is <code>server</code>.</li>
+         * </ul>
          * <p>Examples of LogicalResourceIdPattern for resources in a Terraform template:</p>
-         * <br>
-         * <p>*   Valid values of LogicalResourceIdPattern if a resource belongs to the root module:</p>
-         * <br>
-         * <p>    *   `server`: In this case, `count` and `for_each` are not contained in the resource. The value of `ResourcePath` is `server`.</p>
-         * <p>    *   `server[*]`: In this case, `count` or `for_each` is contained in the resource. The value of `ResourcePath` is `server`.</p>
-         * <br>
-         * <p>*   Valid values of LogicalResourceIdPattern if a resource belongs to a child module:</p>
-         * <br>
-         * <p>    *   `app.server`: In this case, `count` and `for_each` are not contained in the `app` module and the `server` resource. The value of `ResourcePath` is `app.server`.````</p>
-         * <p>    *   `app.server[*]`: In this case, `count` or `for_each` is contained in the `server` resource, but `count` and `for_each` are not contained in the `app` module. The value of `ResourcePath` is `app.server`.</p>
-         * <p>    *   `app[*].server`: In this case, `count` or `for_each` is contained in the `app` module, but `count` and `for_each` are not contained in the `server` resource. The value of `ResourcePath` is `app.server`.</p>
-         * <p>    *   `app[*].server[*]`: In this case, `count` or `for_each` is contained in the `app` module and the `server` resource. The value of `ResourcePath` is `app.server`.````</p>
-         * <p>    *   `app.app_group[*].server`: In this case, `count` or `for_each` is contained in the `app_group` module, but `count` and `for_each` are not contained in the `app` module and the `server` resource. The value of `ResourcePath` is `app.app_group.server`. The `app_group` module is a child module of the `app` module.````</p>
+         * <ul>
+         * <li><p>Valid values of LogicalResourceIdPattern if a resource belongs to the root module:</p>
+         * <ul>
+         * <li><code>server</code>: In this case, <code>count</code> and <code>for_each</code> are not contained in the resource. The value of <code>ResourcePath</code> is <code>server</code>.</li>
+         * <li><code>server[*]</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the resource. The value of <code>ResourcePath</code> is <code>server</code>.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values of LogicalResourceIdPattern if a resource belongs to a child module:</p>
+         * <ul>
+         * <li><code>app.server</code>: In this case, <code>count</code> and <code>for_each</code> are not contained in the <code>app</code> module and the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.server</code>.````</li>
+         * <li><code>app.server[*]</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>server</code> resource, but <code>count</code> and <code>for_each</code> are not contained in the <code>app</code> module. The value of <code>ResourcePath</code> is <code>app.server</code>.</li>
+         * <li><code>app[*].server</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>app</code> module, but <code>count</code> and <code>for_each</code> are not contained in the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.server</code>.</li>
+         * <li><code>app[*].server[*]</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>app</code> module and the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.server</code>.````</li>
+         * <li><code>app.app_group[*].server</code>: In this case, <code>count</code> or <code>for_each</code> is contained in the <code>app_group</code> module, but <code>count</code> and <code>for_each</code> are not contained in the <code>app</code> module and the <code>server</code> resource. The value of <code>ResourcePath</code> is <code>app.app_group.server</code>. The <code>app_group</code> module is a child module of the <code>app</code> module.````</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>server</p>
          */
         @NameInMap("LogicalResourceIdPattern")
         public String logicalResourceIdPattern;
 
         /**
          * <p>The path of the regular resource. In most cases, the path of a regular resource is the same as the resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>server</p>
          */
         @NameInMap("ResourcePath")
         public String resourcePath;
 
         /**
          * <p>The regular resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::InstanceGroup</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -280,18 +310,24 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The parameters whose changes cause service interruptions.</p>
-         * <br>
-         * <p>> - This parameter is supported only for a small number of resource types.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is supported only for a small number of resource types.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersCauseInterruptionIfModified")
         public java.util.List<String> parametersCauseInterruptionIfModified;
 
         /**
          * <p>The parameters whose changes trigger replacement updates for resources.</p>
-         * <br>
-         * <p>> -  This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</p>
-         * <p>> -  This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersCauseReplacementIfModified")
         public java.util.List<String> parametersCauseReplacementIfModified;
@@ -304,18 +340,24 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The parameters whose changes cause service interruptions under specific conditions.</p>
-         * <br>
-         * <p>> - This parameter is supported only for a small number of resource types.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is supported only for a small number of resource types.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         public java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
 
         /**
          * <p>The parameters whose changes trigger replacement updates for resources under specific conditions.</p>
-         * <br>
-         * <p>> - This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersConditionallyCauseReplacementIfModified")
         public java.util.List<String> parametersConditionallyCauseReplacementIfModified;
@@ -334,18 +376,24 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The parameters whose changes cause service interruptions under uncertain conditions.</p>
-         * <br>
-         * <p>> - This parameter is supported only for a small number of resource types.</p>
-         * <p>> - This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is supported only for a small number of resource types.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         public java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
 
         /**
          * <p>The parameters whose changes trigger replacement updates for resources under uncertain conditions.</p>
-         * <br>
-         * <p>> -  This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</p>
-         * <p>> -  This parameter is valid only for updates on ROS stacks.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter can be returned only if the value of UpdateInfoOptions contains EnableReplacement.</li>
+         * <li>This parameter is valid only for updates on ROS stacks.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ParametersUncertainlyCauseReplacementIfModified")
         public java.util.List<String> parametersUncertainlyCauseReplacementIfModified;

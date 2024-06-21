@@ -12,12 +12,18 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0*****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C429473A-5C66-4661-B5F8-4F900CD4330A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

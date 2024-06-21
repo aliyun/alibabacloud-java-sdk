@@ -12,33 +12,49 @@ public class ListDiagnosticsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned. The value 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to complete this action.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f01****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1983D1C4-88EA-5D7D-90AB-467D01867A5D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -99,30 +115,45 @@ public class ListDiagnosticsResponseBody extends TeaModel {
     public static class ListDiagnosticsResponseBodyDiagnostics extends TeaModel {
         /**
          * <p>The time when the diagnostic report was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01T02:23:55</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The keyword in the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>047D84D9-D3EB-5DA8-87F1-9A7DD5598A5D</p>
          */
         @NameInMap("DiagnosticKey")
         public String diagnosticKey;
 
         /**
          * <p>The product that is diagnosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ros</p>
          */
         @NameInMap("DiagnosticProduct")
         public String diagnosticProduct;
 
         /**
          * <p>The ID of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-2963bfbcac834f1a****</p>
          */
         @NameInMap("ReportId")
         public String reportId;
 
         /**
          * <p>The diagnosis status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

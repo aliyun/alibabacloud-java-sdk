@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The page number.\\</p>
-     * <p>Pages start from page 1.</p>
+     * <p>The page number.\
+     * Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C3A8413B-1F16-4DED-AC3E-61A00718DE8A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -31,6 +40,9 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -83,12 +95,18 @@ public class ListTemplatesResponseBody extends TeaModel {
     public static class ListTemplatesResponseBodyTemplatesTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -119,35 +137,50 @@ public class ListTemplatesResponseBody extends TeaModel {
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
         /**
          * <p>The time when the template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-15T08:17:14.000000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The sharing type of the template.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Private: The template belongs to the template owner.</p>
-         * <p>*   Shared: The template is shared with other users.</p>
+         * <ul>
+         * <li>Private: The template belongs to the template owner.</li>
+         * <li>Shared: The template is shared with other users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
@@ -160,30 +193,45 @@ public class ListTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ros:<em>:151266687691</em><em><strong>:template/a52f81be-496f-4e1c-a286-8852ab54</strong></em>*</p>
          */
         @NameInMap("TemplateARN")
         public String templateARN;
 
         /**
          * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4d4f5aa2-3260-4e47-863b-763fbb12****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The latest version of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
          * <p>The time when the template was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-15T08:17:14.000000</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

@@ -6,46 +6,56 @@ import com.aliyun.tea.*;
 public class ListTemplateScratchesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the scenario.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/131035.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The status of the scenario. Valid values:</p>
-     * <br>
-     * <p>*   GENERATE_IN_PROGRESS: The scenario is being created.</p>
-     * <p>*   GENERATE_COMPLETE: The scenario is created.</p>
-     * <p>*   GENERATE_FAILED: The scenario fails to be created.</p>
+     * <ul>
+     * <li>GENERATE_IN_PROGRESS: The scenario is being created.</li>
+     * <li>GENERATE_COMPLETE: The scenario is created.</li>
+     * <li>GENERATE_FAILED: The scenario fails to be created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;GENERATE_COMPLETE&quot;]</p>
      */
     @NameInMap("Status")
     public String status;
@@ -58,17 +68,24 @@ public class ListTemplateScratchesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ts-7f7a704cf71c49a6****</p>
      */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
     /**
      * <p>The type of the resource scenario. Valid values:</p>
-     * <br>
-     * <p>*   ArchitectureReplication: resource replication</p>
-     * <p>*   ArchitectureDetection: resource detection</p>
-     * <p>*   ResourceImport: resource management</p>
-     * <p>*   ResourceMigration: resource migration</p>
+     * <ul>
+     * <li>ArchitectureReplication: resource replication</li>
+     * <li>ArchitectureDetection: resource detection</li>
+     * <li>ResourceImport: resource management</li>
+     * <li>ResourceMigration: resource migration</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ArchitectureReplication</p>
      */
     @NameInMap("TemplateScratchType")
     public String templateScratchType;
@@ -145,16 +162,22 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public static class ListTemplateScratchesRequestTags extends TeaModel {
         /**
          * <p>The tag key of the scenario.</p>
-         * <br>
-         * <p>> Tags is optional. If you want to specify Tags, you must specify Key.</p>
-         * <br>
+         * <blockquote>
+         * <p>Tags is optional. If you want to specify Tags, you must specify Key.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usage</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
