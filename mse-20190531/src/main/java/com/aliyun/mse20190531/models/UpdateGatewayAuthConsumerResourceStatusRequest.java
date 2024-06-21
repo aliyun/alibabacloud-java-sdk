@@ -6,44 +6,57 @@ import com.aliyun.tea.*;
 public class UpdateGatewayAuthConsumerResourceStatusRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the consumer.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ConsumerId")
     public Long consumerId;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-2a99625886d54722be94d92e9a69****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The list of IDs of the authorized resources that a user wants to update.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3,4</p>
      */
     @NameInMap("IdList")
     public String idList;
 
     /**
      * <p>The resource authorization status. Valid values:</p>
-     * <br>
-     * <p>*   true: enabled</p>
-     * <p>*   false: disabled</p>
-     * <br>
+     * <ul>
+     * <li>true: enabled</li>
+     * <li>false: disabled</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ResourceStatus")
     public Boolean resourceStatus;

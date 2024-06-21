@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Data")
     public CreateOrUpdateSwimmingLaneGroupResponseBodyData data;
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
      * <p>true: The request was successful. false: The request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,30 +96,54 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneGroupResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abcd1@abcde123,abcd1@abcde124</p>
+         */
         @NameInMap("AppIds")
         public String appIds;
 
         @NameInMap("CanaryModel")
         public Integer canaryModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DbGrayEnable")
         public String dbGrayEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mse:abcd1@a2345</p>
+         */
         @NameInMap("EntryApp")
         public String entryApp;
 
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Client</p>
+         */
         @NameInMap("MessageQueueFilterSide")
         public String messageQueueFilterSide;
 
         @NameInMap("MessageQueueGrayEnable")
         public Boolean messageQueueGrayEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example-app</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prod</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -115,9 +153,17 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("RecordCanaryDetail")
         public Boolean recordCanaryDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

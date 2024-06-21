@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>85</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-533290d279c1405f9628c64f7c8272ee</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the associated record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>567</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -85,18 +98,27 @@ public class UpdateGatewayRouteTimeoutRequest extends TeaModel {
     public static class UpdateGatewayRouteTimeoutRequestTimeoutJSON extends TeaModel {
         /**
          * <p>The status of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The unit of time. A value of s indicates seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
         /**
          * <p>The value of the timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UnitNum")
         public Integer unitNum;

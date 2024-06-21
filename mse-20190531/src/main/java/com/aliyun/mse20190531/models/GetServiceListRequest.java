@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class GetServiceListRequest extends TeaModel {
     /**
      * <p>The language of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx@xxx</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibaba.xxx</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The type of the framework.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dubbo</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

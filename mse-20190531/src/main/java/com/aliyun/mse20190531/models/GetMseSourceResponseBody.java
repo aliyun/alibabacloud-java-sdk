@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMseSourceResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,30 +21,44 @@ public class GetMseSourceResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
-     * <br>
-     * <p>*   If the request is successful, a success message is returned.</p>
-     * <p>*   If the request fails, an error message is returned, such as the "TaskId not found" message.</p>
+     * <ul>
+     * <li>If the request is successful, a success message is returned.</li>
+     * <li>If the request fails, an error message is returned, such as the &quot;TaskId not found&quot; message.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5EB2D865-B43F-5526-8F92-857718CF73A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -102,30 +119,45 @@ public class GetMseSourceResponseBody extends TeaModel {
     public static class GetMseSourceResponseBodyData extends TeaModel {
         /**
          * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-af1****-nacos-ans.mse.aliyuncs.com:8848</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The ID of cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_prepaid_public_cn-7pp2eec****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos</p>
          */
         @NameInMap("Type")
         public String type;

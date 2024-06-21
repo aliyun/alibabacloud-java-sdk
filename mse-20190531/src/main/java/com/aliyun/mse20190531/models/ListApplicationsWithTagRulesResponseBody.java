@@ -12,30 +12,44 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   If the request is successful, a success message is returned.</p>
-     * <p>*   If the request fails, an error message is returned.</p>
+     * <ul>
+     * <li>If the request is successful, a success message is returned.</li>
+     * <li>If the request fails, an error message is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -579,51 +593,91 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
         /**
          * <p>Indicates whether the alert rule is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>653</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
         /**
          * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Rate")
         public Integer rate;
 
         /**
          * <p>The details of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;dubbo&quot;: [{
+         *     &quot;serviceName&quot;: &quot;com.taobao.hsf.common.DemoService&quot;,
+         *     &quot;group&quot;: &quot;&quot;,
+         *     &quot;version&quot;: &quot;&quot;,
+         *     &quot;methodName&quot;: &quot;sayHello&quot;,
+         *     &quot;condition&quot;: &quot;AND&quot;,
+         *     &quot;argumentItems&quot;: [{
+         *         &quot;index&quot;: 0,
+         *         &quot;expr&quot;: &quot;&quot;,
+         *         &quot;operator&quot;: &quot;rawvalue&quot;,
+         *         &quot;value&quot;: &quot;jim&quot;,
+         *         &quot;cond&quot;: &quot;==&quot;
+         *     }]
+         *       }]
+         *   }</p>
          */
         @NameInMap("Rules")
         public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules rules;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -702,18 +756,27 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public static class ListApplicationsWithTagRulesResponseBodyDataResult extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daqijp6c31@xxx</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-lottery-core</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The MSE namespace to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -726,9 +789,13 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
         /**
          * <p>The route state. Valid values:</p>
-         * <br>
-         * <p>*   0: disabled</p>
-         * <p>*   1: enabled</p>
+         * <ul>
+         * <li>0: disabled</li>
+         * <li>1: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RouteStatus")
         public Long routeStatus;
@@ -783,12 +850,18 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     public static class ListApplicationsWithTagRulesResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -801,6 +874,9 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class QueryMonitorResponseBody extends TeaModel {
     /**
      * <p>The details of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryMonitorResponseBodyData> data;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADDD8AB7-8D1C-4697-A83E-410D2607****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +101,18 @@ public class QueryMonitorResponseBody extends TeaModel {
     public static class QueryMonitorResponseBodyData extends TeaModel {
         /**
          * <p>The prefix of the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-xxxx-xxxxxx</p>
          */
         @NameInMap("clusterNamePrefix")
         public String clusterNamePrefix;
 
         /**
          * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-xxxxxx-xxxxxx-reg-center-0-0</p>
          */
         @NameInMap("podName")
         public String podName;

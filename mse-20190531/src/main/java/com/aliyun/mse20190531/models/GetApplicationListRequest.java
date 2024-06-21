@@ -6,75 +6,106 @@ import com.aliyun.tea.*;
 public class GetApplicationListRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of an application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522b*****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of an application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rest-container</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The programming language of the application, such as Java and Go.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Java</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The microservice namespace to which the application belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SentinelEnable")
     public Boolean sentinelEnable;
 
     /**
      * <p>The source of the application. The value is fixed as edasmsc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edasmsc</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>Specifies whether to enable switching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SwitchEnable")
     public Boolean switchEnable;

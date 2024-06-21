@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
     /**
      * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,47 +21,70 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic part in the error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>code</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \\*\\*%s\\*\\* variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -143,51 +169,76 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
     public static class GetGatewayAuthConsumerDetailResponseBodyDataResourceList extends TeaModel {
         /**
          * <p>The consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ConsumerId")
         public Long consumerId;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-4822033a8513496fa10f05c934f*****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The time when the resource associated with the consumer authentication record was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-06 01:38:03</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the resource associated with the consumer authentication record was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-06 01:38:03</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the authorized resource for the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The resource authorization state. Valid values:</p>
-         * <br>
-         * <p>*   true: Resource authorization is enabled.</p>
-         * <p>*   false: Resource authorization is disabled.</p>
+         * <ul>
+         * <li>true: Resource authorization is enabled.</li>
+         * <li>false: Resource authorization is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ResourceStatus")
         public Boolean resourceStatus;
 
         /**
          * <p>The ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3458</p>
          */
         @NameInMap("RouteId")
         public Long routeId;
 
         /**
          * <p>The name of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("RouteName")
         public String routeName;
@@ -266,78 +317,125 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
     public static class GetGatewayAuthConsumerDetailResponseBodyData extends TeaModel {
         /**
          * <p>The status of the consumer. Valid values:</p>
-         * <br>
-         * <p>*   true: enabled</p>
-         * <p>*   false: disabled</p>
+         * <ul>
+         * <li>true: enabled</li>
+         * <li>false: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConsumerStatus")
         public Boolean consumerStatus;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The encryption type. Valid values:</p>
-         * <br>
-         * <p>*   RSA</p>
-         * <p>*   OCT</p>
+         * <ul>
+         * <li>RSA</li>
+         * <li>OCT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         @NameInMap("EncodeType")
         public String encodeType;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-7ea3da97b96543e19f6c597cd4a9****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The time when the consumer authentication record was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2031-03-30 02:35:12</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the consumer authentication record was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-01 14:17:57</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The JWT public key. The JSON format is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;keys&quot;: [
+         *             {
+         *                   &quot;e&quot;: &quot;AQAB&quot;,
+         *                   &quot;kid&quot;: &quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,
+         *                   &quot;kty&quot;: &quot;RSA&quot;,
+         *                   &quot;n&quot;: &quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;
+         *             }
+         *       ]
+         * }</p>
          */
         @NameInMap("Jwks")
         public String jwks;
 
         /**
          * <p>The name of the key used for JWT-based identity authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iss</p>
          */
         @NameInMap("KeyName")
         public String keyName;
 
         /**
          * <p>The value of the key used for JWT-based identity authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd</p>
          */
         @NameInMap("KeyValue")
         public String keyValue;
 
         /**
          * <p>The name of the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
@@ -349,33 +447,49 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         public java.util.List<GetGatewayAuthConsumerDetailResponseBodyDataResourceList> resourceList;
 
         /**
-         * <p>The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+         * <p>The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization</p>
          */
         @NameInMap("TokenName")
         public String tokenName;
 
         /**
          * <p>Specifies whether to enable pass-through.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TokenPass")
         public Boolean tokenPass;
 
         /**
-         * <p>The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+         * <p>The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HEADER</p>
          */
         @NameInMap("TokenPosition")
         public String tokenPosition;
 
         /**
-         * <p>The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.</p>
+         * <p>The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as <code>Authorization: Bearer &lt;Content of a token&gt;</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer</p>
          */
         @NameInMap("TokenPrefix")
         public String tokenPrefix;
 
         /**
          * <p>The authentication type. Valid values:</p>
-         * <br>
-         * <p>*   JWT</p>
+         * <ul>
+         * <li>JWT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>JWT</p>
          */
         @NameInMap("Type")
         public String type;

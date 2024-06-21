@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class UpdateGatewayServiceTrafficPolicyResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The details of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;GatewayUniqueId\&quot;: \&quot;gw-2b8ebd75dc554c37a4279ba9917379f2\&quot;, \&quot;Id\&quot;: 417, \&quot;GatewayTrafficPolicy\&quot;: {\&quot;LoadBalancerSettings\&quot;: {\&quot;LoadbalancerType\&quot;: \&quot;ROUND_ROBIN\&quot;}, \&quot;TlsSetting\&quot;: {\&quot;TlsMode\&quot;: \&quot;DISABLE\&quot;}}}</p>
      */
     @NameInMap("Data")
     public GatewayService data;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11A61389-F896-5231-A4FB-074D9E2E0055</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

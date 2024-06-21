@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class UpdateGatewayAuthConsumerResourceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The gateway authentication consumer ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ConsumerId")
     public Long consumerId;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-3f97e2989c344f35ab3fd62b19f1****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -75,12 +83,18 @@ public class UpdateGatewayAuthConsumerResourceRequest extends TeaModel {
     public static class UpdateGatewayAuthConsumerResourceRequestResourceList extends TeaModel {
         /**
          * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7816</p>
          */
         @NameInMap("RouteId")
         public Long routeId;
 
         /**
          * <p>The name of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helo</p>
          */
         @NameInMap("RouteName")
         public String routeName;

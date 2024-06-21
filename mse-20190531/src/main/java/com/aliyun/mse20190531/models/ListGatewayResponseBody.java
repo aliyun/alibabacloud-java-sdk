@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListGatewayResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class ListGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation. Action: mse:ListGateway, Resource: acs:mse:cn-hangzhou:102123:*</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34300B3-52EC-5049-8C96-914098CF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,18 +115,27 @@ public class ListGatewayResponseBody extends TeaModel {
     public static class ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList extends TeaModel {
         /**
          * <p>The expected number of replicas for auto scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("DesiredReplica")
         public Integer desiredReplica;
 
         /**
          * <p>The end time of auto scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The start time of auto scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -149,20 +174,30 @@ public class ListGatewayResponseBody extends TeaModel {
     public static class ListGatewayResponseBodyDataResultElasticPolicy extends TeaModel {
         /**
          * <p>Indicates whether auto scale-out is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Elastic")
         public Boolean elastic;
 
         /**
          * <p>The type of auto scale-out. Valid value:</p>
-         * <br>
-         * <p>*   CronHPA: scale-out by time</p>
+         * <ul>
+         * <li>CronHPA: scale-out by time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CronHPA</p>
          */
         @NameInMap("ElasticType")
         public String elasticType;
 
         /**
          * <p>The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxReplica")
         public Integer maxReplica;
@@ -215,12 +250,18 @@ public class ListGatewayResponseBody extends TeaModel {
     public static class ListGatewayResponseBodyDataResultInitConfig extends TeaModel {
         /**
          * <p>Indicates whether Web Application Firewall (WAF) is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
 
         /**
          * <p>Indicates whether WAF is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportWaf")
         public Boolean supportWaf;
@@ -251,54 +292,81 @@ public class ListGatewayResponseBody extends TeaModel {
     public static class ListGatewayResponseBodyDataResultInternetSlb extends TeaModel {
         /**
          * <p>The mode of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserHost</p>
          */
         @NameInMap("GatewaySlbMode")
         public String gatewaySlbMode;
 
         /**
          * <p>The state of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
 
         /**
          * <p>The traffic of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("InternetNetworkFlow")
         public String internetNetworkFlow;
 
         /**
          * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1ut8asdfgucjk****</p>
          */
         @NameInMap("SlbId")
         public String slbId;
 
         /**
          * <p>The IP address of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153.12.XX.XX</p>
          */
         @NameInMap("SlbIp")
         public String slbIp;
 
         /**
          * <p>The port number of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         @NameInMap("SlbPort")
         public String slbPort;
 
         /**
          * <p>The specifications of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         @NameInMap("SlbSpec")
         public String slbSpec;
 
         /**
          * <p>The description of the state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The type of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUB_NET</p>
          */
         @NameInMap("Type")
         public String type;
@@ -426,51 +494,76 @@ public class ListGatewayResponseBody extends TeaModel {
     public static class ListGatewayResponseBodyDataResultSlb extends TeaModel {
         /**
          * <p>The mode of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserHost</p>
          */
         @NameInMap("GatewaySlbMode")
         public String gatewaySlbMode;
 
         /**
          * <p>The state of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
 
         /**
          * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1ut8asdfgucjk****</p>
          */
         @NameInMap("SlbId")
         public String slbId;
 
         /**
          * <p>The IP address of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153.12.XX.XX</p>
          */
         @NameInMap("SlbIp")
         public String slbIp;
 
         /**
          * <p>The port number of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("SlbPort")
         public String slbPort;
 
         /**
          * <p>The specifications of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         @NameInMap("SlbSpec")
         public String slbSpec;
 
         /**
          * <p>The description of the state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   PUB_NET</p>
-         * <p>*   PRIVATE_NET</p>
+         * <ul>
+         * <li>PUB_NET</li>
+         * <li>PRIVATE_NET</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUB_NET</p>
          */
         @NameInMap("Type")
         public String type;
@@ -549,42 +642,63 @@ public class ListGatewayResponseBody extends TeaModel {
     public static class ListGatewayResponseBodyDataResult extends TeaModel {
         /**
          * <p>Indicates whether Application High Availability Service (AHAS) is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AhasOn")
         public Boolean ahasOn;
 
         /**
          * <p>The version of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.1.0</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
         /**
          * <p>Indicates whether Application Real-Time Monitoring Service (ARMS) is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ArmsOn")
         public Boolean armsOn;
 
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The current version of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0-mse-gw</p>
          */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
         /**
          * <p>Indicates whether auto scale-out is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Elastic")
         public Boolean elastic;
 
         /**
          * <p>The ID of the elastic gateway. This parameter is returned if auto scale-out is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_ingresselastic_public_cn-uqm3d0*****</p>
          */
         @NameInMap("ElasticInstanceId")
         public String elasticInstanceId;
@@ -597,56 +711,84 @@ public class ListGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The number of replicas that are automatically scaled out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ElasticReplica")
         public Integer elasticReplica;
 
         /**
          * <p>The type of auto scale-out. Valid value:</p>
-         * <br>
-         * <p>*   CronHPA: scale-out by time</p>
+         * <ul>
+         * <li>CronHPA: scale-out by time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CronHPA</p>
          */
         @NameInMap("ElasticType")
         public String elasticType;
 
         /**
          * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4792060800000</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
          * <p>The gateway type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ingress</p>
          */
         @NameInMap("GatewayType")
         public String gatewayType;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-5017305290e14cebb8ce5cb6a4****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The version of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.9</p>
          */
         @NameInMap("GatewayVersion")
         public String gatewayVersion;
 
         /**
          * <p>The time when the gateway was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-13 19:24:23</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the gateway was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-13 19:24:23</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -659,6 +801,9 @@ public class ListGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_ingresspost-cn-0jbvrcex****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -671,6 +816,9 @@ public class ListGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The latest version of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0-mse-gw</p>
          */
         @NameInMap("LatestVersion")
         public String latestVersion;
@@ -680,6 +828,9 @@ public class ListGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The resource tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tagKey&quot;:&quot;tagValue&quot;}</p>
          */
         @NameInMap("MseTag")
         public String mseTag;
@@ -689,42 +840,63 @@ public class ListGatewayResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the instance was forcefully upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("MustUpgrade")
         public Boolean mustUpgrade;
 
         /**
          * <p>The gateway name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tesa-test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The user information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18278117654342</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The number of replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Replica")
         public Integer replica;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-97hg87vi****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether rollbacks are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RollBack")
         public Boolean rollBack;
@@ -737,67 +909,95 @@ public class ListGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The specifications of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_GTW_1_2_200_c</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
          * <p>The gateway state. Valid values:</p>
-         * <br>
-         * <p>*   0: The gateway is being created.</p>
-         * <p>*   1: The gateway failed to be created.</p>
-         * <p>*   2: The gateway is running.</p>
-         * <p>*   3: The gateway is being changed.</p>
-         * <p>*   4: The gateway is scaling in.</p>
-         * <p>*   6: The gateway is scaling out.</p>
-         * <p>*   8: The gateway is being deleted.</p>
-         * <p>*   9: The gateway is suspended and is to be released.</p>
-         * <p>*   10: The gateway is restarting.</p>
-         * <p>*   11: The gateway is being rebuilt.</p>
-         * <p>*   12: The gateway is being upgraded.</p>
-         * <p>*   13: The gateway failed to be upgraded.</p>
+         * <ul>
+         * <li>0: The gateway is being created.</li>
+         * <li>1: The gateway failed to be created.</li>
+         * <li>2: The gateway is running.</li>
+         * <li>3: The gateway is being changed.</li>
+         * <li>4: The gateway is scaling in.</li>
+         * <li>6: The gateway is scaling out.</li>
+         * <li>8: The gateway is being deleted.</li>
+         * <li>9: The gateway is suspended and is to be released.</li>
+         * <li>10: The gateway is restarting.</li>
+         * <li>11: The gateway is being rebuilt.</li>
+         * <li>12: The gateway is being upgraded.</li>
+         * <li>13: The gateway failed to be upgraded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The description of the gateway state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restarting</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>Indicates whether WebAssembly (Wasm) is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportWasm")
         public Boolean supportWasm;
 
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The total number of replicas, including the number of replicas that are automatically scaled out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TotalReplica")
         public Integer totalReplica;
 
         /**
          * <p>Indicates whether the instance was upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6heojei217tv14*****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the secondary vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bpbrveck45nf****</p>
          */
         @NameInMap("Vswitch2")
         public String vswitch2;
@@ -1140,12 +1340,18 @@ public class ListGatewayResponseBody extends TeaModel {
     public static class ListGatewayResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -1158,6 +1364,9 @@ public class ListGatewayResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

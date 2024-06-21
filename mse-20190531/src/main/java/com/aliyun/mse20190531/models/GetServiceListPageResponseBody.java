@@ -12,18 +12,27 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
     /**
      * <p>The request information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2F946FB-F2E3-5BF4-8CBE-xxxxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -68,42 +77,63 @@ public class GetServiceListPageResponseBody extends TeaModel {
     public static class GetServiceListPageResponseBodyDataResult extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dez4xxxxx@f3f75ed8ffxxxxx</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The time when the service was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("GmtModifyTime")
         public String gmtModifyTime;
 
         /**
          * <p>The group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The number of service nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
         /**
          * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-A</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -174,12 +204,18 @@ public class GetServiceListPageResponseBody extends TeaModel {
     public static class GetServiceListPageResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public String pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public String pageSize;
@@ -192,6 +228,9 @@ public class GetServiceListPageResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalSize")
         public String totalSize;

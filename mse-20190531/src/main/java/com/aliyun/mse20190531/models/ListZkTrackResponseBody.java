@@ -6,51 +6,76 @@ import com.aliyun.tea.*;
 public class ListZkTrackResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -141,108 +166,154 @@ public class ListZkTrackResponseBody extends TeaModel {
     public static class ListZkTrackResponseBodyTraces extends TeaModel {
         /**
          * <p>The access control list (ACL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>world:anyone:cdrwa</p>
          */
         @NameInMap("Acl")
         public String acl;
 
         /**
          * <p>The data type. Valid values:</p>
-         * <br>
-         * <p>*   persist</p>
-         * <p>*   ephemeral</p>
+         * <ul>
+         * <li>persist</li>
+         * <li>ephemeral</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>persist</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The type of the event. For trajectory of the Notify type:</p>
-         * <br>
-         * <p>*   NodeCreated</p>
-         * <p>*   NodeDeleted</p>
-         * <p>*   NodeDataChanged</p>
-         * <p>*   NodeChildrenChanged</p>
+         * <ul>
+         * <li>NodeCreated</li>
+         * <li>NodeDeleted</li>
+         * <li>NodeDataChanged</li>
+         * <li>NodeChildrenChanged</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NodeCreated</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>Indicates whether the transaction ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Finished")
         public Boolean finished;
 
         /**
          * <p>The logging time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28 15:09:15,606</p>
          */
         @NameInMap("LogDate")
         public String logDate;
 
         /**
          * <p>The transaction size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("MultiSize")
         public Long multiSize;
 
         /**
          * <p>The type of the operation. For trajectory of the Push type:</p>
-         * <br>
-         * <p>*   Create</p>
-         * <p>*   Update</p>
-         * <p>*   Delete</p>
-         * <p>*   SetAcl</p>
-         * <p>*   Multi</p>
-         * <br>
+         * <ul>
+         * <li>Create</li>
+         * <li>Update</li>
+         * <li>Delete</li>
+         * <li>SetAcl</li>
+         * <li>Multi</li>
+         * </ul>
          * <p>For trajectory of the Pull type:</p>
-         * <br>
-         * <p>*   GetData</p>
-         * <p>*   GetChild</p>
-         * <p>*   GetStat</p>
+         * <ul>
+         * <li>GetData</li>
+         * <li>GetChild</li>
+         * <li>GetStat</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         @NameInMap("OpType")
         public String opType;
 
         /**
          * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x301fdfbdbf00***</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
 
         /**
          * <p>The timestamp. It is not available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669619383000</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
 
         /**
          * <p>The type of the trajectory. Valid values:</p>
-         * <br>
-         * <p>*   Push</p>
-         * <p>*   Pull</p>
-         * <p>*   Notify</p>
+         * <ul>
+         * <li>Push</li>
+         * <li>Pull</li>
+         * <li>Notify</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Push</p>
          */
         @NameInMap("TraceType")
         public String traceType;
 
         /**
          * <p>The time to live (TTL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Ttl")
         public Long ttl;
 
         /**
          * <p>Indicates whether the monitoring feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Watch")
         public Boolean watch;

@@ -6,64 +6,91 @@ import com.aliyun.tea.*;
 public class AddGatewaySlbRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-9cdcf8e4f58144059e73ff4c5ef9****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The HTTP port number (virtual service group).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("HttpPort")
     public Integer httpPort;
 
     /**
      * <p>The HTTPS port number (virtual service group).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>443</p>
      */
     @NameInMap("HttpsPort")
     public Integer httpsPort;
 
     /**
      * <p>The ID of the HTTPS virtual service group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>353</p>
      */
     @NameInMap("HttpsVServerGroupId")
     public String httpsVServerGroupId;
 
     /**
      * <p>The service weight.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ServiceWeight")
     public Integer serviceWeight;
 
     /**
      * <p>The ID of the SLB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp18t6jjskwxh6wy1****</p>
      */
     @NameInMap("SlbId")
     public String slbId;
 
     /**
      * <p>The type of the service source. Valid values:</p>
-     * <br>
-     * <p>*   PUB_NET: Internet</p>
-     * <p>*   PRIVATE_NET: VPC</p>
+     * <ul>
+     * <li>PUB_NET: Internet</li>
+     * <li>PRIVATE_NET: VPC</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUB_NET</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The ID of the HTTP virtual service group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>353</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -162,21 +189,31 @@ public class AddGatewaySlbRequest extends TeaModel {
     public static class AddGatewaySlbRequestVServiceList extends TeaModel {
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The protocol type. Valid values:</p>
-         * <br>
-         * <p>*   HTTP</p>
-         * <p>*   HTTPS</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The ID of the virtual server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-bp1j<strong>t0fyl</strong></p>
          */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteCircuitBreakerRulesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -26,8 +31,10 @@ public class DeleteCircuitBreakerRulesRequest extends TeaModel {
 
     /**
      * <p>The microservice namespace to which the application belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;

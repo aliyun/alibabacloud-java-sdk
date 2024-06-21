@@ -12,27 +12,40 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,42 +98,63 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
     public static class GetNacosHistoryConfigResponseBodyConfiguration extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The content of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>The encryption key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23fds****</p>
          */
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
         /**
          * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The MD5 value of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23sdf32f****</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
          * <p>The configuration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("OpType")
         public String opType;

@@ -4,6 +4,10 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class AddGatewayAuthRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -16,23 +20,36 @@ public class AddGatewayAuthRequest extends TeaModel {
     @NameInMap("AuthResourceList")
     public java.util.List<AddGatewayAuthRequestAuthResourceList> authResourceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AuthResourceMode")
     public Integer authResourceMode;
 
     /**
      * <p>The application ID registered with the OIDC authentication service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23460e2fdd9bf9ad106****</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
      * <p>The application secret registered with the OIDC authentication service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123****</p>
      */
     @NameInMap("ClientSecret")
     public String clientSecret;
 
     /**
-     * <p>The domain name of the cookie. After the authentication is passed, the cookie is sent to the specified domain name to maintain the logon status. For example, if you set `Cookie-domain` to a.example.com, the cookie is sent to the domain name `a.example.com`. If you set `Cookie-domain` to .example.com, the cookie is sent to all subdomains of `example.com`.</p>
+     * <p>The domain name of the cookie. After the authentication is passed, the cookie is sent to the specified domain name to maintain the logon status. For example, if you set <code>Cookie-domain</code> to a.example.com, the cookie is sent to the domain name <code>a.example.com</code>. If you set <code>Cookie-domain</code> to .example.com, the cookie is sent to all subdomains of <code>example.com</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.com</p>
      */
     @NameInMap("CookieDomain")
     public String cookieDomain;
@@ -45,42 +62,63 @@ public class AddGatewayAuthRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-492af9b04bb4474cae9d645be850e3d7</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>Specifies whether to enable the whitelist feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
     /**
      * <p>The iss value of JWT claims, which indicates the issuer. You must make sure that the value of this parameter is the same as the iss value in the payload of JWT claims.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:testing@secure.istio.io">testing@secure.istio.io</a></p>
      */
     @NameInMap("Issuer")
     public String issuer;
 
     /**
      * <p>The JWT public key. The JSON format is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;keys&quot;:[{&quot;e&quot;:&quot;AQAB&quot;,&quot;kid&quot;:&quot;DHFbpoIUqrY8t2zpA2qXfCmr5VO5ZEr4RzHU_-envvQ&quot;,&quot;kty&quot;:&quot;RSA&quot;,&quot;n&quot;:&quot;xAE7eB6qugXyCAG3yhh7pkDkT65pHymX-P7KfIupjf59vsdo91bSP9C8H07pSAGQO1MV_xFj9VswgsCg4R6otmg5PV2He95lZdHtOcU5DXIg_pbhLdKXbi66GlVeK6ABZOUW3WYtnNHD-91gVuoeJT_DwtGGcp4ignkgXfkiEm4sw-4sfb4qdt5oLbyVpmW6x9cfa7vs2WTfURiCrBoUqgBo_-4WTiULmmHSGZHOjzwa8WtrtOQGsAFjIbno85jp6MnGGGZPYZbDAa_b3y5u-YpW7ypZrvD8BgtKVjgtQgZhLAGezMt0ua3DRrWnKqTZ0BJ_EyxOGuHJrLsn00fnMQ&quot;}]}</p>
      */
     @NameInMap("Jwks")
     public String jwks;
 
     /**
      * <p>The URL that is used to log on to the IDaaS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("LoginUrl")
     public String loginUrl;
 
     /**
      * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jwt</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The redirect URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://test-.com/oauth2/callback">https://test-.com/oauth2/callback</a></p>
      */
     @NameInMap("RedirectUrl")
     public String redirectUrl;
@@ -93,42 +131,63 @@ public class AddGatewayAuthRequest extends TeaModel {
 
     /**
      * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Status")
     public Boolean status;
 
     /**
      * <p>The sub value of JWT claims, which indicates the subject. You must make sure that the value of this parameter is the same as the sub value in the payload of JWT claims. If you do not set this parameter or leave it empty, the default value, which is the value of the Issuer parameter, is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:testing@secure.istio.io">testing@secure.istio.io</a></p>
      */
     @NameInMap("Sub")
     public String sub;
 
     /**
-     * <p>The name of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: `Authorization: Bearer token`.</p>
+     * <p>The name of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: <code>Authorization: Bearer token</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Authorization</p>
      */
     @NameInMap("TokenName")
     public String tokenName;
 
     /**
-     * <p>The name prefix of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: `Authorization: Bearer token`</p>
+     * <p>The name prefix of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: <code>Authorization: Bearer token</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>Bearer</p>
      */
     @NameInMap("TokenNamePrefix")
     public String tokenNamePrefix;
 
     /**
      * <p>Specifies whether to enable pass-through.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("TokenPass")
     public Boolean tokenPass;
 
     /**
-     * <p>The position of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: `Authorization: Bearer token`.</p>
+     * <p>The position of the parameter that is required to verify a token. By default, a token is prefixed with Bearer and stored in the authorization header. Example: <code>Authorization: Bearer token</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HEADER</p>
      */
     @NameInMap("TokenPosition")
     public String tokenPosition;
 
     /**
      * <p>The authentication type. JSON Web Token (JWT) authentication, OpenID Connect (OIDC) authentication, Identity as a Service (IDaaS) authentication, or custom authentication are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JWT</p>
      */
     @NameInMap("Type")
     public String type;
@@ -323,12 +382,24 @@ public class AddGatewayAuthRequest extends TeaModel {
     }
 
     public static class AddGatewayAuthRequestAuthResourceListAuthResourceHeaderList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>x-req</p>
+         */
         @NameInMap("HeaderKey")
         public String headerKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("HeaderMethod")
         public String headerMethod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -369,18 +440,32 @@ public class AddGatewayAuthRequest extends TeaModel {
 
         /**
          * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DomainId")
         public Long domainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
         /**
          * <p>The request path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("Path")
         public String path;
@@ -445,39 +530,62 @@ public class AddGatewayAuthRequest extends TeaModel {
         @NameInMap("AllowUpstreamHeaders")
         public java.util.List<String> allowUpstreamHeaders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000000</p>
+         */
         @NameInMap("BodyMaxBytes")
         public Integer bodyMaxBytes;
 
         /**
          * <p>Specifies whether the gateway allows a client request when the authentication server is unavailable. If a connection to the authentication server fails to be established or a 5xx error code is returned, the authentication server is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsRestrict")
         public Boolean isRestrict;
 
         /**
          * <p>The path of the authentication API provided by the authentication service. The path supports the prefix match method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/auth</p>
          */
         @NameInMap("PrefixPath")
         public String prefixPath;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
          * <p>The timeout period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
         /**
          * <p>The header that stores a token in an authentication request. In most cases, a token is stored in the Authorization or Cookie header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization</p>
          */
         @NameInMap("TokenKey")
         public String tokenKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("WithRequestBody")
         public Boolean withRequestBody;
 

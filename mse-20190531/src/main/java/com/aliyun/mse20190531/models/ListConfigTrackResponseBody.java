@@ -6,51 +6,76 @@ import com.aliyun.tea.*;
 public class ListConfigTrackResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0CE3ABD2-1E04-561F-A9B4-0423D50****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -141,93 +166,135 @@ public class ListConfigTrackResponseBody extends TeaModel {
     public static class ListConfigTrackResponseBodyTraces extends TeaModel {
         /**
          * <p>Indicates whether the request is sent from the client. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Client")
         public Boolean client;
 
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eir-server.properties</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>The response latency. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public String delay;
 
         /**
          * <p>The event. Valid values:</p>
-         * <br>
-         * <p>*   pull: configuration acquisition events</p>
-         * <p>*   persist: persistence events</p>
+         * <ul>
+         * <li>pull: configuration acquisition events</li>
+         * <li>persist: persistence events</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pull</p>
          */
         @NameInMap("Event")
         public String event;
 
         /**
          * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_GROUP</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The logging time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28 15:09:15</p>
          */
         @NameInMap("LogDate")
         public String logDate;
 
         /**
          * <p>The MD5 value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d21c9091c60daa0ff7ee2f420141e5a0</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
          * <p>Indicates whether messages are pushed by a server. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Push")
         public Boolean push;
 
         /**
          * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.2</p>
          */
         @NameInMap("RequestIp")
         public String requestIp;
 
         /**
          * <p>The response node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-1973b9a0-1670834*****-reg-center-0-2</p>
          */
         @NameInMap("ResponseIp")
         public String responseIp;
 
         /**
          * <p>The result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The timestamp that indicates the time when the metric value is collected.</p>
-         * <br>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659666529</p>
          */
         @NameInMap("Ts")
         public String ts;
 
         /**
          * <p>The release type. Valid values:</p>
-         * <br>
-         * <p>*   beta: beta release</p>
-         * <p>*   tag: canary release</p>
-         * <p>*   batch: batch release</p>
+         * <ul>
+         * <li>beta: beta release</li>
+         * <li>tag: canary release</li>
+         * <li>batch: batch release</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>beta</p>
          */
         @NameInMap("Type")
         public String type;

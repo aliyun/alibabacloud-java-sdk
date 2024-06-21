@@ -12,24 +12,36 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The parameter is invalid.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3369AD10-F1A6-4E6F-B99E-20F51826****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -82,78 +94,117 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
     public static class QueryBusinessLocationsResponseBodyData extends TeaModel {
         /**
          * <p>The Chinese name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Shanghai)</p>
          */
         @NameInMap("CnName")
         public String cnName;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Shanghai)</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The Chinese name of the district.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia Pacific</p>
          */
         @NameInMap("DistrictCnName")
         public String districtCnName;
 
         /**
          * <p>The English name of the district.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia Pacific</p>
          */
         @NameInMap("DistrictEnName")
         public String districtEnName;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asia-pacific</p>
          */
         @NameInMap("DistrictId")
         public String districtId;
 
         /**
          * <p>The ordering information of the district.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         @NameInMap("DistrictOrdering")
         public Integer districtOrdering;
 
         /**
          * <p>The display name of the district.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia Pacific</p>
          */
         @NameInMap("DistrictShowName")
         public String districtShowName;
 
         /**
          * <p>The complete description of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China East 2 (Shanghai)</p>
          */
         @NameInMap("EnDescription")
         public String enDescription;
 
         /**
          * <p>The English name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Shanghai)</p>
          */
         @NameInMap("EnName")
         public String enName;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ordering information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Ordering")
         public Integer ordering;
 
         /**
          * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Shanghai)</p>
          */
         @NameInMap("ShowName")
         public String showName;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         @NameInMap("Type")
         public String type;

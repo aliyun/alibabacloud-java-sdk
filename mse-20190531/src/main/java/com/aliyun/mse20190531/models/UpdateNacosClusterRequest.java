@@ -6,65 +6,89 @@ import com.aliyun.tea.*;
 public class UpdateNacosClusterRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The port used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("CheckPort")
     public Integer checkPort;
 
     /**
      * <p>The name of the Nacos cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The name of the group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The type of the health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;type&quot;:&quot;none&quot;}</p>
      */
     @NameInMap("HealthChecker")
     public String healthChecker;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-123456</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9e78a671-4b9b-4dd4-99c1-0b9da87d3dec</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The name of the service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hello_service</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>Specifies whether to use the port of the instance for a health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("UseInstancePortForCheck")
     public Boolean useInstancePortForCheck;

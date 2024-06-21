@@ -6,70 +6,103 @@ import com.aliyun.tea.*;
 public class AddBlackWhiteListRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The content of the blacklist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.117.115.51</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-0fe488252dc44d55a9dd57875193****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The whitelist. Default value: No.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsWhite")
     public Boolean isWhite;
 
     /**
      * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a note</p>
      */
     @NameInMap("Note")
     public String note;
 
     /**
      * <p>The resource IDs in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[123]</p>
      */
     @NameInMap("ResourceIdJsonList")
     public String resourceIdJsonList;
 
     /**
      * <p>The effective scope of the blacklist or whitelist. Valid values:</p>
-     * <br>
-     * <p>*   GATEWAY</p>
-     * <p>*   DOMAIN</p>
-     * <p>*   ROUTE</p>
+     * <ul>
+     * <li>GATEWAY</li>
+     * <li>DOMAIN</li>
+     * <li>ROUTE</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>GATEWAY</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The status of the blacklist.</p>
-     * <br>
-     * <p>*   on: enabled</p>
-     * <p>*   off: disabled</p>
+     * <ul>
+     * <li>on: enabled</li>
+     * <li>off: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The type of object in the blacklist or whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IP</p>
      */
     @NameInMap("Type")
     public String type;

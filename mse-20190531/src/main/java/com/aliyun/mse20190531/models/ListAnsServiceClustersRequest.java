@@ -6,63 +6,90 @@ import com.aliyun.tea.*;
 public class ListAnsServiceClustersRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the MSE cluster.</p>
-     * <br>
-     * <p>> The MSE cluster is different from the cluster of the Nacos service.</p>
+     * <blockquote>
+     * <p>The MSE cluster is different from the cluster of the Nacos service.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-09k1q110q01</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The alias of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-7413****</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The name of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_prepaid_public_cn-tl32a6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12233****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacos.test.3</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

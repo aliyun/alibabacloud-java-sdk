@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class UpdateGatewayServiceVersionRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-eccf313e2224438ba53d95d039e5****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>575</p>
      */
     @NameInMap("ServiceId")
     public Long serviceId;
 
     /**
      * <p>The version of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;name\&quot;:\&quot;v3\&quot;,\&quot;labels\&quot;:[{\&quot;key\&quot;:\&quot;version\&quot;,\&quot;value\&quot;:\&quot;v3\&quot;}]}</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;

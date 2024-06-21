@@ -4,9 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("Data")
     public Long data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

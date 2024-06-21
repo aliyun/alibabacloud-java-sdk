@@ -28,8 +28,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 新增服务鉴权规则
-     *
+     * <b>summary</b> : 
+     * <p>新增服务鉴权规则</p>
+     * 
      * @param request AddAuthPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddAuthPolicyResponse
@@ -99,8 +100,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 新增服务鉴权规则
-     *
+     * <b>summary</b> : 
+     * <p>新增服务鉴权规则</p>
+     * 
      * @param request AddAuthPolicyRequest
      * @return AddAuthPolicyResponse
      */
@@ -110,8 +112,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates authorization information for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Creates authorization information for a gateway.</p>
+     * 
      * @param tmpReq AddAuthResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddAuthResourceResponse
@@ -175,8 +178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates authorization information for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Creates authorization information for a gateway.</p>
+     * 
      * @param request AddAuthResourceRequest
      * @return AddAuthResourceResponse
      */
@@ -186,8 +190,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a blacklist or a whitelist.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a blacklist or a whitelist.</p>
+     * 
      * @param request AddBlackWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddBlackWhiteListResponse
@@ -253,8 +258,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a blacklist or a whitelist.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a blacklist or a whitelist.</p>
+     * 
      * @param request AddBlackWhiteListRequest
      * @return AddBlackWhiteListResponse
      */
@@ -264,8 +270,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a gateway.</p>
+     * 
      * @param tmpReq AddGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewayResponse
@@ -285,6 +292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clbNetworkType)) {
+            query.put("ClbNetworkType", request.clbNetworkType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableHardwareAcceleration)) {
@@ -385,8 +396,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a gateway.</p>
+     * 
      * @param request AddGatewayRequest
      * @return AddGatewayResponse
      */
@@ -396,8 +408,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds an authentication configuration for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Adds an authentication configuration for a gateway.</p>
+     * 
      * @param tmpReq AddGatewayAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewayAuthResponse
@@ -529,8 +542,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds an authentication configuration for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Adds an authentication configuration for a gateway.</p>
+     * 
      * @param request AddGatewayAuthRequest
      * @return AddGatewayAuthResponse
      */
@@ -540,8 +554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request AddGatewayAuthConsumerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewayAuthConsumerResponse
@@ -619,8 +634,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request AddGatewayAuthConsumerRequest
      * @return AddGatewayAuthConsumerResponse
      */
@@ -630,8 +646,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a domain name with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Associates a domain name with a gateway.</p>
+     * 
      * @param request AddGatewayDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewayDomainResponse
@@ -693,8 +710,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a domain name with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Associates a domain name with a gateway.</p>
+     * 
      * @param request AddGatewayDomainRequest
      * @return AddGatewayDomainResponse
      */
@@ -704,8 +722,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a gateway route.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a gateway route.</p>
+     * 
      * @param tmpReq AddGatewayRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewayRouteResponse
@@ -825,8 +844,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a gateway route.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a gateway route.</p>
+     * 
      * @param request AddGatewayRouteRequest
      * @return AddGatewayRouteResponse
      */
@@ -836,8 +856,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a service version.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a service version.</p>
+     * 
      * @param request AddGatewayServiceVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewayServiceVersionResponse
@@ -879,8 +900,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a service version.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a service version.</p>
+     * 
      * @param request AddGatewayServiceVersionRequest
      * @return AddGatewayServiceVersionResponse
      */
@@ -890,8 +912,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a Server Load Balancer (SLB) instance with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Associates a Server Load Balancer (SLB) instance with a gateway.</p>
+     * 
      * @param tmpReq AddGatewaySlbRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewaySlbResponse
@@ -963,8 +986,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a Server Load Balancer (SLB) instance with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Associates a Server Load Balancer (SLB) instance with a gateway.</p>
+     * 
      * @param request AddGatewaySlbRequest
      * @return AddGatewaySlbResponse
      */
@@ -974,8 +998,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a migration task.</p>
+     * 
      * @param request AddMigrationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddMigrationTaskResponse
@@ -1041,8 +1066,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a migration task.</p>
+     * 
      * @param request AddMigrationTaskRequest
      * @return AddMigrationTaskResponse
      */
@@ -1052,8 +1078,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a mock rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a mock rule.</p>
+     * 
      * @param request AddMockRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddMockRuleResponse
@@ -1127,8 +1154,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a mock rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a mock rule.</p>
+     * 
      * @param request AddMockRuleRequest
      * @return AddMockRuleResponse
      */
@@ -1138,8 +1166,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a certificate with a domain name of a gateway. You can specify a certificate that is hosted in Alibaba Cloud Security.
-     *
+     * <b>summary</b> : 
+     * <p>Associates a certificate with a domain name of a gateway. You can specify a certificate that is hosted in Alibaba Cloud Security.</p>
+     * 
      * @param request AddSSLCertRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddSSLCertResponse
@@ -1181,8 +1210,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates a certificate with a domain name of a gateway. You can specify a certificate that is hosted in Alibaba Cloud Security.
-     *
+     * <b>summary</b> : 
+     * <p>Associates a certificate with a domain name of a gateway. You can specify a certificate that is hosted in Alibaba Cloud Security.</p>
+     * 
      * @param request AddSSLCertRequest
      * @return AddSSLCertResponse
      */
@@ -1192,8 +1222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a security group rule for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a security group rule for a gateway.</p>
+     * 
      * @param request AddSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddSecurityGroupRuleResponse
@@ -1239,8 +1270,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a security group rule for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a security group rule for a gateway.</p>
+     * 
      * @param request AddSecurityGroupRuleRequest
      * @return AddSecurityGroupRuleResponse
      */
@@ -1250,8 +1282,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a Nacos service source.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a Nacos service source.</p>
+     * 
      * @param tmpReq AddServiceSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddServiceSourceResponse
@@ -1335,8 +1368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a Nacos service source.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a Nacos service source.</p>
+     * 
      * @param request AddServiceSourceRequest
      * @return AddServiceSourceResponse
      */
@@ -1346,8 +1380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Publishes a route for a gateway.</p>
+     * 
      * @param request ApplyGatewayRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApplyGatewayRouteResponse
@@ -1385,8 +1420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Publishes a route for a gateway.</p>
+     * 
      * @param request ApplyGatewayRouteRequest
      * @return ApplyGatewayRouteResponse
      */
@@ -1396,8 +1432,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a tag-based routing rule.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a tag-based routing rule.</p>
+     * 
      * @param tmpReq ApplyTagPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApplyTagPoliciesResponse
@@ -1461,8 +1498,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a tag-based routing rule.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a tag-based routing rule.</p>
+     * 
      * @param request ApplyTagPoliciesRequest
      * @return ApplyTagPoliciesResponse
      */
@@ -1472,8 +1510,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 绑定流量防护行为
-     *
+     * <b>summary</b> : 
+     * <p>绑定流量防护行为</p>
+     * 
      * @param request BindSentinelBlockFallbackDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindSentinelBlockFallbackDefinitionResponse
@@ -1523,8 +1562,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 绑定流量防护行为
-     *
+     * <b>summary</b> : 
+     * <p>绑定流量防护行为</p>
+     * 
      * @param request BindSentinelBlockFallbackDefinitionRequest
      * @return BindSentinelBlockFallbackDefinitionResponse
      */
@@ -1534,10 +1574,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clones an existing Nacos configuration from a namespace to another namespace.
-     *
-     * @description mse-200-105
-     *
+     * <b>description</b> :
+     * <p>mse-200-105</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Clones an existing Nacos configuration from a namespace to another namespace.</p>
+     * 
      * @param request CloneNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloneNacosConfigResponse
@@ -1587,10 +1629,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Clones an existing Nacos configuration from a namespace to another namespace.
-     *
-     * @description mse-200-105
-     *
+     * <b>description</b> :
+     * <p>mse-200-105</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Clones an existing Nacos configuration from a namespace to another namespace.</p>
+     * 
      * @param request CloneNacosConfigRequest
      * @return CloneNacosConfigResponse
      */
@@ -1600,8 +1644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 从AHAS侧复制规则
-     *
+     * <b>summary</b> : 
+     * <p>从AHAS侧复制规则</p>
+     * 
      * @param request CloneSentinelRuleFromAhasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloneSentinelRuleFromAhasResponse
@@ -1647,8 +1692,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 从AHAS侧复制规则
-     *
+     * <b>summary</b> : 
+     * <p>从AHAS侧复制规则</p>
+     * 
      * @param request CloneSentinelRuleFromAhasRequest
      * @return CloneSentinelRuleFromAhasResponse
      */
@@ -1658,8 +1704,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application.</p>
+     * 
      * @param request CreateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateApplicationResponse
@@ -1717,8 +1764,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application.</p>
+     * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
      */
@@ -1728,8 +1776,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a circuit breaking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a circuit breaking rule.</p>
+     * 
      * @param request CreateCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCircuitBreakerRuleResponse
@@ -1819,8 +1868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a circuit breaking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a circuit breaking rule.</p>
+     * 
      * @param request CreateCircuitBreakerRuleRequest
      * @return CreateCircuitBreakerRuleResponse
      */
@@ -1830,10 +1880,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Microservices Engine (MSE) instance, such as an MSE ZooKeeper instance or an MSE Nacos instance.
-     *
-     * @description Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.
-     *
+     * <b>description</b> :
+     * <p>Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Microservices Engine (MSE) instance, such as an MSE ZooKeeper instance or an MSE Nacos instance.</p>
+     * 
      * @param request CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateClusterResponse
@@ -1947,10 +1999,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Microservices Engine (MSE) instance, such as an MSE ZooKeeper instance or an MSE Nacos instance.
-     *
-     * @description Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.
-     *
+     * <b>description</b> :
+     * <p>Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Microservices Engine (MSE) instance, such as an MSE ZooKeeper instance or an MSE Nacos instance.</p>
+     * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -1960,8 +2014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a namespace in a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a namespace in a Nacos instance.</p>
+     * 
      * @param request CreateEngineNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEngineNamespaceResponse
@@ -2015,8 +2070,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a namespace in a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a namespace in a Nacos instance.</p>
+     * 
      * @param request CreateEngineNamespaceRequest
      * @return CreateEngineNamespaceResponse
      */
@@ -2026,8 +2082,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a throttling rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a throttling rule.</p>
+     * 
      * @param request CreateFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateFlowRuleResponse
@@ -2097,8 +2154,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a throttling rule.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a throttling rule.</p>
+     * 
      * @param request CreateFlowRuleRequest
      * @return CreateFlowRuleResponse
      */
@@ -2108,8 +2166,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>创建网关路由熔断规则</p>
+     * 
      * @param request CreateGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGatewayCircuitBreakerRuleResponse
@@ -2203,8 +2262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>创建网关路由熔断规则</p>
+     * 
      * @param request CreateGatewayCircuitBreakerRuleRequest
      * @return CreateGatewayCircuitBreakerRuleResponse
      */
@@ -2214,8 +2274,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>创建网关路由流控规则</p>
+     * 
      * @param request CreateGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGatewayFlowRuleResponse
@@ -2289,8 +2350,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>创建网关路由流控规则</p>
+     * 
      * @param request CreateGatewayFlowRuleRequest
      * @return CreateGatewayFlowRuleResponse
      */
@@ -2300,8 +2362,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>创建网关路由隔离规则</p>
+     * 
      * @param request CreateGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGatewayIsolationRuleResponse
@@ -2375,8 +2438,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>创建网关路由隔离规则</p>
+     * 
      * @param request CreateGatewayIsolationRuleRequest
      * @return CreateGatewayIsolationRuleResponse
      */
@@ -2386,8 +2450,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>创建隔离规则</p>
+     * 
      * @param request CreateIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateIsolationRuleResponse
@@ -2445,8 +2510,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>创建隔离规则</p>
+     * 
      * @param request CreateIsolationRuleRequest
      * @return CreateIsolationRuleResponse
      */
@@ -2456,14 +2522,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an application.</p>
+     * 
      * @deprecated OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
-     *
-     * @summary Creates an application.
-     *
+     * 
      * @param request CreateMseServiceApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMseServiceApplicationResponse
      */
+    @Deprecated
     // Deprecated
     public CreateMseServiceApplicationResponse createMseServiceApplicationWithOptions(CreateMseServiceApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2522,13 +2590,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an application.</p>
+     * 
      * @deprecated OpenAPI CreateMseServiceApplication is deprecated, please use mse::2019-05-31::CreateApplication instead.
-     *
-     * @summary Creates an application.
-     *
+     * 
      * @param request CreateMseServiceApplicationRequest
      * @return CreateMseServiceApplicationResponse
      */
+    @Deprecated
     // Deprecated
     public CreateMseServiceApplicationResponse createMseServiceApplication(CreateMseServiceApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2536,10 +2606,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Nacos configuration.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Nacos configuration.</p>
+     * 
      * @param request CreateNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNacosConfigResponse
@@ -2609,10 +2683,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Nacos configuration.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Nacos configuration.</p>
+     * 
      * @param request CreateNacosConfigRequest
      * @return CreateNacosConfigResponse
      */
@@ -2622,10 +2700,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Nacos instance.</p>
+     * 
      * @param request CreateNacosInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNacosInstanceResponse
@@ -2701,10 +2783,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Nacos instance.</p>
+     * 
      * @param request CreateNacosInstanceRequest
      * @return CreateNacosInstanceResponse
      */
@@ -2714,10 +2800,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Nacos service.</p>
+     * 
      * @param request CreateNacosServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNacosServiceResponse
@@ -2775,10 +2865,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Nacos service.</p>
+     * 
      * @param request CreateNacosServiceRequest
      * @return CreateNacosServiceResponse
      */
@@ -2788,8 +2882,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or updates a lane for end-to-end canary release.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or updates a lane for end-to-end canary release.</p>
+     * 
      * @param tmpReq CreateOrUpdateSwimmingLaneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOrUpdateSwimmingLaneResponse
@@ -2875,8 +2970,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or updates a lane for end-to-end canary release.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or updates a lane for end-to-end canary release.</p>
+     * 
      * @param request CreateOrUpdateSwimmingLaneRequest
      * @return CreateOrUpdateSwimmingLaneResponse
      */
@@ -2886,8 +2982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or updates a lane group for end-to-end canary release.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or updates a lane group for end-to-end canary release.</p>
+     * 
      * @param tmpReq CreateOrUpdateSwimmingLaneGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOrUpdateSwimmingLaneGroupResponse
@@ -2983,8 +3080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or updates a lane group for end-to-end canary release.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or updates a lane group for end-to-end canary release.</p>
+     * 
      * @param request CreateOrUpdateSwimmingLaneGroupRequest
      * @return CreateOrUpdateSwimmingLaneGroupResponse
      */
@@ -2994,8 +3092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a znode.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a znode.</p>
+     * 
      * @param request CreateZnodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateZnodeResponse
@@ -3037,8 +3136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a znode.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a znode.</p>
+     * 
      * @param request CreateZnodeRequest
      * @return CreateZnodeResponse
      */
@@ -3048,8 +3148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an authorized resource.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an authorized resource.</p>
+     * 
      * @param request DeleteAuthResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAuthResourceResponse
@@ -3087,8 +3188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an authorized resource.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an authorized resource.</p>
+     * 
      * @param request DeleteAuthResourceRequest
      * @return DeleteAuthResourceResponse
      */
@@ -3098,8 +3200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes circuit breaking rules.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes circuit breaking rules.</p>
+     * 
      * @param tmpReq DeleteCircuitBreakerRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCircuitBreakerRulesResponse
@@ -3147,8 +3250,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes circuit breaking rules.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes circuit breaking rules.</p>
+     * 
      * @param request DeleteCircuitBreakerRulesRequest
      * @return DeleteCircuitBreakerRulesResponse
      */
@@ -3158,8 +3262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Microservices Engine (MSE) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Microservices Engine (MSE) instance.</p>
+     * 
      * @param request DeleteClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteClusterResponse
@@ -3193,8 +3298,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Microservices Engine (MSE) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Microservices Engine (MSE) instance.</p>
+     * 
      * @param request DeleteClusterRequest
      * @return DeleteClusterResponse
      */
@@ -3204,8 +3310,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a namespace from a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a namespace from a Nacos instance.</p>
+     * 
      * @param request DeleteEngineNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEngineNamespaceResponse
@@ -3247,8 +3354,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a namespace from a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a namespace from a Nacos instance.</p>
+     * 
      * @param request DeleteEngineNamespaceRequest
      * @return DeleteEngineNamespaceResponse
      */
@@ -3258,8 +3366,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes throttling rules.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes throttling rules.</p>
+     * 
      * @param tmpReq DeleteFlowRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFlowRulesResponse
@@ -3307,8 +3416,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes throttling rules.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes throttling rules.</p>
+     * 
      * @param request DeleteFlowRulesRequest
      * @return DeleteFlowRulesResponse
      */
@@ -3318,8 +3428,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a gateway.</p>
+     * 
      * @param request DeleteGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayResponse
@@ -3357,8 +3468,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a gateway.</p>
+     * 
      * @param request DeleteGatewayRequest
      * @return DeleteGatewayResponse
      */
@@ -3368,8 +3480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request DeleteGatewayAuthConsumerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayAuthConsumerResponse
@@ -3407,8 +3520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request DeleteGatewayAuthConsumerRequest
      * @return DeleteGatewayAuthConsumerResponse
      */
@@ -3418,8 +3532,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes resource permissions from the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes resource permissions from the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request DeleteGatewayAuthConsumerResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayAuthConsumerResourceResponse
@@ -3461,8 +3576,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes resource permissions from the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes resource permissions from the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request DeleteGatewayAuthConsumerResourceRequest
      * @return DeleteGatewayAuthConsumerResourceResponse
      */
@@ -3472,8 +3588,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>删除网关路由熔断规则</p>
+     * 
      * @param request DeleteGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayCircuitBreakerRuleResponse
@@ -3515,8 +3632,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>删除网关路由熔断规则</p>
+     * 
      * @param request DeleteGatewayCircuitBreakerRuleRequest
      * @return DeleteGatewayCircuitBreakerRuleResponse
      */
@@ -3526,8 +3644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disassociates a domain name from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Disassociates a domain name from a gateway.</p>
+     * 
      * @param request DeleteGatewayDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayDomainResponse
@@ -3565,8 +3684,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disassociates a domain name from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Disassociates a domain name from a gateway.</p>
+     * 
      * @param request DeleteGatewayDomainRequest
      * @return DeleteGatewayDomainResponse
      */
@@ -3576,8 +3696,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>删除网关路由流控规则</p>
+     * 
      * @param request DeleteGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayFlowRuleResponse
@@ -3619,8 +3740,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>删除网关路由流控规则</p>
+     * 
      * @param request DeleteGatewayFlowRuleRequest
      * @return DeleteGatewayFlowRuleResponse
      */
@@ -3630,8 +3752,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>删除网关路由隔离规则</p>
+     * 
      * @param request DeleteGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayIsolationRuleResponse
@@ -3673,8 +3796,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>删除网关路由隔离规则</p>
+     * 
      * @param request DeleteGatewayIsolationRuleRequest
      * @return DeleteGatewayIsolationRuleResponse
      */
@@ -3684,8 +3808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a route from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a route from a gateway.</p>
+     * 
      * @param request DeleteGatewayRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayRouteResponse
@@ -3723,8 +3848,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a route from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a route from a gateway.</p>
+     * 
      * @param request DeleteGatewayRouteRequest
      * @return DeleteGatewayRouteResponse
      */
@@ -3734,8 +3860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a service from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a service from a gateway.</p>
+     * 
      * @param request DeleteGatewayServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayServiceResponse
@@ -3777,8 +3904,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a service from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a service from a gateway.</p>
+     * 
      * @param request DeleteGatewayServiceRequest
      * @return DeleteGatewayServiceResponse
      */
@@ -3788,8 +3916,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a service version from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a service version from a gateway.</p>
+     * 
      * @param request DeleteGatewayServiceVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewayServiceVersionResponse
@@ -3831,8 +3960,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a service version from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a service version from a gateway.</p>
+     * 
      * @param request DeleteGatewayServiceVersionRequest
      * @return DeleteGatewayServiceVersionResponse
      */
@@ -3842,8 +3972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the Server Load Balancer (SLB) instance that is associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the Server Load Balancer (SLB) instance that is associated with a gateway.</p>
+     * 
      * @param request DeleteGatewaySlbRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGatewaySlbResponse
@@ -3889,8 +4020,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the Server Load Balancer (SLB) instance that is associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the Server Load Balancer (SLB) instance that is associated with a gateway.</p>
+     * 
      * @param request DeleteGatewaySlbRequest
      * @return DeleteGatewaySlbResponse
      */
@@ -3900,8 +4032,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>删除隔离规则</p>
+     * 
      * @param tmpReq DeleteIsolationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIsolationRulesResponse
@@ -3949,8 +4082,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>删除隔离规则</p>
+     * 
      * @param request DeleteIsolationRulesRequest
      * @return DeleteIsolationRulesResponse
      */
@@ -3960,8 +4094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a migration task.</p>
+     * 
      * @param request DeleteMigrationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMigrationTaskResponse
@@ -3999,8 +4134,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a migration task.</p>
+     * 
      * @param request DeleteMigrationTaskRequest
      * @return DeleteMigrationTaskResponse
      */
@@ -4010,8 +4146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除nacos指定配置
-     *
+     * <b>summary</b> : 
+     * <p>删除nacos指定配置</p>
+     * 
      * @param request DeleteNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteNacosConfigResponse
@@ -4061,8 +4198,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除nacos指定配置
-     *
+     * <b>summary</b> : 
+     * <p>删除nacos指定配置</p>
+     * 
      * @param request DeleteNacosConfigRequest
      * @return DeleteNacosConfigResponse
      */
@@ -4072,10 +4210,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes multiple Nacos configurations at a time.
-     *
-     * @description >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes multiple Nacos configurations at a time.</p>
+     * 
      * @param request DeleteNacosConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteNacosConfigsResponse
@@ -4117,10 +4259,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes multiple Nacos configurations at a time.
-     *
-     * @description >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes multiple Nacos configurations at a time.</p>
+     * 
      * @param request DeleteNacosConfigsRequest
      * @return DeleteNacosConfigsResponse
      */
@@ -4130,10 +4276,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a persistent application instance from a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a persistent application instance from a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request DeleteNacosInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteNacosInstanceResponse
@@ -4195,10 +4345,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a persistent application instance from a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a persistent application instance from a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request DeleteNacosInstanceRequest
      * @return DeleteNacosInstanceResponse
      */
@@ -4208,10 +4362,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Nacos service.</p>
+     * 
      * @param request DeleteNacosServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteNacosServiceResponse
@@ -4257,10 +4415,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Nacos service.</p>
+     * 
      * @param request DeleteNacosServiceRequest
      * @return DeleteNacosServiceResponse
      */
@@ -4270,8 +4432,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除MSE命名空间
-     *
+     * <b>summary</b> : 
+     * <p>删除MSE命名空间</p>
+     * 
      * @param request DeleteNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteNamespaceResponse
@@ -4309,8 +4472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除MSE命名空间
-     *
+     * <b>summary</b> : 
+     * <p>删除MSE命名空间</p>
+     * 
      * @param request DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
      */
@@ -4320,8 +4484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a security group rule from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a security group rule from a gateway.</p>
+     * 
      * @param request DeleteSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSecurityGroupRuleResponse
@@ -4363,8 +4528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a security group rule from a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a security group rule from a gateway.</p>
+     * 
      * @param request DeleteSecurityGroupRuleRequest
      * @return DeleteSecurityGroupRuleResponse
      */
@@ -4374,8 +4540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a gateway service source.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a gateway service source.</p>
+     * 
      * @param request DeleteServiceSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteServiceSourceResponse
@@ -4413,8 +4580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a gateway service source.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a gateway service source.</p>
+     * 
      * @param request DeleteServiceSourceRequest
      * @return DeleteServiceSourceResponse
      */
@@ -4424,8 +4592,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a lane.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a lane.</p>
+     * 
      * @param request DeleteSwimmingLaneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSwimmingLaneResponse
@@ -4463,8 +4632,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a lane.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a lane.</p>
+     * 
      * @param request DeleteSwimmingLaneRequest
      * @return DeleteSwimmingLaneResponse
      */
@@ -4474,8 +4644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a lane group.</p>
+     * 
      * @param request DeleteSwimmingLaneGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSwimmingLaneGroupResponse
@@ -4517,8 +4688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a lane group.</p>
+     * 
      * @param request DeleteSwimmingLaneGroupRequest
      * @return DeleteSwimmingLaneGroupResponse
      */
@@ -4528,8 +4700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a ZooKeeper node.</p>
+     * 
      * @param request DeleteZnodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteZnodeResponse
@@ -4571,8 +4744,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a ZooKeeper node.</p>
+     * 
      * @param request DeleteZnodeRequest
      * @return DeleteZnodeResponse
      */
@@ -4582,10 +4756,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Exports specified Nacos configurations.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>summary</b> : 
+     * <p>Proxy Protocol开关</p>
+     * 
+     * @param request EnableProxyProtocolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableProxyProtocolResponse
+     */
+    public EnableProxyProtocolResponse enableProxyProtocolWithOptions(EnableProxyProtocolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableProxyProtocol)) {
+            query.put("EnableProxyProtocol", request.enableProxyProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableProxyProtocol"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableProxyProtocolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Proxy Protocol开关</p>
+     * 
+     * @param request EnableProxyProtocolRequest
+     * @return EnableProxyProtocolResponse
+     */
+    public EnableProxyProtocolResponse enableProxyProtocol(EnableProxyProtocolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableProxyProtocolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Exports specified Nacos configurations.</p>
+     * 
      * @param request ExportNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportNacosConfigResponse
@@ -4643,10 +4873,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Exports specified Nacos configurations.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Exports specified Nacos configurations.</p>
+     * 
      * @param request ExportNacosConfigRequest
      * @return ExportNacosConfigResponse
      */
@@ -4656,10 +4890,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to export ZooKeeper data.
-     *
-     * @description Only one task can run at a time.
-     *
+     * <b>description</b> :
+     * <p>Only one task can run at a time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task to export ZooKeeper data.</p>
+     * 
      * @param request ExportZookeeperDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportZookeeperDataResponse
@@ -4705,10 +4941,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to export ZooKeeper data.
-     *
-     * @description Only one task can run at a time.
-     *
+     * <b>description</b> :
+     * <p>Only one task can run at a time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task to export ZooKeeper data.</p>
+     * 
      * @param request ExportZookeeperDataRequest
      * @return ExportZookeeperDataResponse
      */
@@ -4718,10 +4956,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the rules for graceful start and shutdown.
-     *
-     * @description You can call this operation to query the rules for graceful start and shutdown.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the rules for graceful start and shutdown.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the rules for graceful start and shutdown.</p>
+     * 
      * @param request FetchLosslessRuleListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FetchLosslessRuleListResponse
@@ -4775,10 +5015,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the rules for graceful start and shutdown.
-     *
-     * @description You can call this operation to query the rules for graceful start and shutdown.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the rules for graceful start and shutdown.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the rules for graceful start and shutdown.</p>
+     * 
      * @param request FetchLosslessRuleListRequest
      * @return FetchLosslessRuleListResponse
      */
@@ -4788,8 +5030,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about canary release for messaging of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about canary release for messaging of an application.</p>
+     * 
      * @param request GetAppMessageQueueRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppMessageQueueRouteResponse
@@ -4835,8 +5078,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about canary release for messaging of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about canary release for messaging of an application.</p>
+     * 
      * @param request GetAppMessageQueueRouteRequest
      * @return GetAppMessageQueueRouteResponse
      */
@@ -4846,8 +5090,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of microservice application instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of microservice application instances.</p>
+     * 
      * @param request GetApplicationInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApplicationInstanceListResponse
@@ -4905,8 +5150,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of microservice application instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of microservice application instances.</p>
+     * 
      * @param request GetApplicationInstanceListRequest
      * @return GetApplicationInstanceListResponse
      */
@@ -4916,8 +5162,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the list of applications.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the list of applications.</p>
+     * 
      * @param request GetApplicationListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApplicationListResponse
@@ -4987,8 +5234,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the list of applications.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the list of applications.</p>
+     * 
      * @param request GetApplicationListRequest
      * @return GetApplicationListResponse
      */
@@ -4998,8 +5246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the blacklist or whitelist of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the blacklist or whitelist of a gateway.</p>
+     * 
      * @param request GetBlackWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBlackWhiteListResponse
@@ -5045,8 +5294,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the blacklist or whitelist of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the blacklist or whitelist of a gateway.</p>
+     * 
      * @param request GetBlackWhiteListRequest
      * @return GetBlackWhiteListResponse
      */
@@ -5056,8 +5306,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the namespaces of a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the namespaces of a Nacos instance.</p>
+     * 
      * @param request GetEngineNamepaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEngineNamepaceResponse
@@ -5099,8 +5350,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the namespaces of a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the namespaces of a Nacos instance.</p>
+     * 
      * @param request GetEngineNamepaceRequest
      * @return GetEngineNamepaceResponse
      */
@@ -5110,8 +5362,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the basic information about a gateway, such as the virtual private cloud (VPC) and vSwitch to which the gateway belongs.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the basic information about a gateway, such as the virtual private cloud (VPC) and vSwitch to which the gateway belongs.</p>
+     * 
      * @param request GetGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayResponse
@@ -5145,8 +5398,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the basic information about a gateway, such as the virtual private cloud (VPC) and vSwitch to which the gateway belongs.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the basic information about a gateway, such as the virtual private cloud (VPC) and vSwitch to which the gateway belongs.</p>
+     * 
      * @param request GetGatewayRequest
      * @return GetGatewayResponse
      */
@@ -5156,8 +5410,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request GetGatewayAuthConsumerDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayAuthConsumerDetailResponse
@@ -5195,8 +5450,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request GetGatewayAuthConsumerDetailRequest
      * @return GetGatewayAuthConsumerDetailResponse
      */
@@ -5206,8 +5462,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询网关认证详情
-     *
+     * <b>summary</b> : 
+     * <p>查询网关认证详情</p>
+     * 
      * @param request GetGatewayAuthDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayAuthDetailResponse
@@ -5249,8 +5506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询网关认证详情
-     *
+     * <b>summary</b> : 
+     * <p>查询网关认证详情</p>
+     * 
      * @param request GetGatewayAuthDetailRequest
      * @return GetGatewayAuthDetailResponse
      */
@@ -5260,8 +5518,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a domain name associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a domain name associated with a gateway.</p>
+     * 
      * @param request GetGatewayDomainDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayDomainDetailResponse
@@ -5299,8 +5558,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a domain name associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a domain name associated with a gateway.</p>
+     * 
      * @param request GetGatewayDomainDetailRequest
      * @return GetGatewayDomainDetailResponse
      */
@@ -5310,8 +5570,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the global parameters of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the global parameters of a gateway.</p>
+     * 
      * @param request GetGatewayOptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayOptionResponse
@@ -5349,8 +5610,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the global parameters of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the global parameters of a gateway.</p>
+     * 
      * @param request GetGatewayOptionRequest
      * @return GetGatewayOptionResponse
      */
@@ -5360,8 +5622,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a route for a gateway.</p>
+     * 
      * @param request GetGatewayRouteDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayRouteDetailResponse
@@ -5399,8 +5662,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a route for a gateway.</p>
+     * 
      * @param request GetGatewayRouteDetailRequest
      * @return GetGatewayRouteDetailResponse
      */
@@ -5410,8 +5674,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a service.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a service.</p>
+     * 
      * @param request GetGatewayServiceDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGatewayServiceDetailResponse
@@ -5449,8 +5714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a service.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a service.</p>
+     * 
      * @param request GetGatewayServiceDetailRequest
      * @return GetGatewayServiceDetailResponse
      */
@@ -5460,8 +5726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a Container Service for Kubernetes (ACK) cluster for which Microservices Governance is enabled.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a Container Service for Kubernetes (ACK) cluster for which Microservices Governance is enabled.</p>
+     * 
      * @param request GetGovernanceKubernetesClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGovernanceKubernetesClusterResponse
@@ -5499,8 +5766,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a Container Service for Kubernetes (ACK) cluster for which Microservices Governance is enabled.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a Container Service for Kubernetes (ACK) cluster for which Microservices Governance is enabled.</p>
+     * 
      * @param request GetGovernanceKubernetesClusterRequest
      * @return GetGovernanceKubernetesClusterResponse
      */
@@ -5510,8 +5778,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the maximum version number to which the current version can be upgraded.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the maximum version number to which the current version can be upgraded.</p>
+     * 
      * @param request GetImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetImageResponse
@@ -5545,8 +5814,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the maximum version number to which the current version can be upgraded.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the maximum version number to which the current version can be upgraded.</p>
+     * 
      * @param request GetImageRequest
      * @return GetImageResponse
      */
@@ -5556,10 +5826,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the URL that is used to upload a configuration file when you import the configuration file into a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).\\n
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.\n</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the URL that is used to upload a configuration file when you import the configuration file into a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request GetImportFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetImportFileUrlResponse
@@ -5601,10 +5875,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the URL that is used to upload a configuration file when you import the configuration file into a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).\\n
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.\n</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the URL that is used to upload a configuration file when you import the configuration file into a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request GetImportFileUrlRequest
      * @return GetImportFileUrlResponse
      */
@@ -5614,8 +5892,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains sources of all Container Service for Kubernetes (ACK) services in a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains sources of all Container Service for Kubernetes (ACK) services in a gateway.</p>
+     * 
      * @param request GetKubernetesSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetKubernetesSourceResponse
@@ -5657,8 +5936,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains sources of all Container Service for Kubernetes (ACK) services in a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains sources of all Container Service for Kubernetes (ACK) services in a gateway.</p>
+     * 
      * @param request GetKubernetesSourceRequest
      * @return GetKubernetesSourceResponse
      */
@@ -5668,12 +5948,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the rules for graceful start and shutdown of an application.
-     *
-     * @description You can call this operation to query the rules for graceful start and shutdown of an application.
+     * <b>description</b> :
+     * <p>You can call this operation to query the rules for graceful start and shutdown of an application.
      * You can query the rules for graceful start and shutdown of an application preferentially by using the AppId parameter.
-     * If the AppId parameter is left empty, you can use the RegionId, Namespace, and AppName parameters to query the rules for graceful start and shutdown of an application.
-     *
+     * If the AppId parameter is left empty, you can use the RegionId, Namespace, and AppName parameters to query the rules for graceful start and shutdown of an application.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the rules for graceful start and shutdown of an application.</p>
+     * 
      * @param request GetLosslessRuleByAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLosslessRuleByAppResponse
@@ -5719,12 +6001,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the rules for graceful start and shutdown of an application.
-     *
-     * @description You can call this operation to query the rules for graceful start and shutdown of an application.
+     * <b>description</b> :
+     * <p>You can call this operation to query the rules for graceful start and shutdown of an application.
      * You can query the rules for graceful start and shutdown of an application preferentially by using the AppId parameter.
-     * If the AppId parameter is left empty, you can use the RegionId, Namespace, and AppName parameters to query the rules for graceful start and shutdown of an application.
-     *
+     * If the AppId parameter is left empty, you can use the RegionId, Namespace, and AppName parameters to query the rules for graceful start and shutdown of an application.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the rules for graceful start and shutdown of an application.</p>
+     * 
      * @param request GetLosslessRuleByAppRequest
      * @return GetLosslessRuleByAppResponse
      */
@@ -5734,8 +6018,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the MSE feature switch.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the MSE feature switch.</p>
+     * 
      * @param request GetMseFeatureSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMseFeatureSwitchResponse
@@ -5765,8 +6050,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the MSE feature switch.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the MSE feature switch.</p>
+     * 
      * @param request GetMseFeatureSwitchRequest
      * @return GetMseFeatureSwitchResponse
      */
@@ -5776,8 +6062,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the existing Microservices Engine (MSE) Nacos instances that are service sources of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the existing Microservices Engine (MSE) Nacos instances that are service sources of a gateway.</p>
+     * 
      * @param request GetMseSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMseSourceResponse
@@ -5819,8 +6106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the existing Microservices Engine (MSE) Nacos instances that are service sources of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the existing Microservices Engine (MSE) Nacos instances that are service sources of a gateway.</p>
+     * 
      * @param request GetMseSourceRequest
      * @return GetMseSourceResponse
      */
@@ -5830,10 +6118,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Nacos configurations.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Nacos configurations.</p>
+     * 
      * @param request GetNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNacosConfigResponse
@@ -5883,10 +6175,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Nacos configurations.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Nacos configurations.</p>
+     * 
      * @param request GetNacosConfigRequest
      * @return GetNacosConfigResponse
      */
@@ -5896,10 +6192,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical details of Nacos configuration changes.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical details of Nacos configuration changes.</p>
+     * 
      * @param request GetNacosHistoryConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNacosHistoryConfigResponse
@@ -5949,10 +6249,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the historical details of Nacos configuration changes.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the historical details of Nacos configuration changes.</p>
+     * 
      * @param request GetNacosHistoryConfigRequest
      * @return GetNacosHistoryConfigResponse
      */
@@ -5962,10 +6266,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about service governance.
-     *
-     * @description You can call this operation to query overview information about service governance.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query overview information about service governance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about service governance.</p>
+     * 
      * @param request GetOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOverviewResponse
@@ -6003,10 +6309,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about service governance.
-     *
-     * @description You can call this operation to query overview information about service governance.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query overview information about service governance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about service governance.</p>
+     * 
      * @param request GetOverviewRequest
      * @return GetOverviewResponse
      */
@@ -6016,8 +6324,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains plug-in configurations.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains plug-in configurations.</p>
+     * 
      * @param request GetPluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPluginConfigResponse
@@ -6055,8 +6364,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains plug-in configurations.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains plug-in configurations.</p>
+     * 
      * @param request GetPluginConfigRequest
      * @return GetPluginConfigResponse
      */
@@ -6066,8 +6376,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains plug-ins.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains plug-ins.</p>
+     * 
      * @param request GetPluginsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPluginsResponse
@@ -6113,8 +6424,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains plug-ins.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains plug-ins.</p>
+     * 
      * @param request GetPluginsRequest
      * @return GetPluginsResponse
      */
@@ -6124,8 +6436,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the services of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the services of an application.</p>
+     * 
      * @param request GetServiceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceListResponse
@@ -6175,8 +6488,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the services of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the services of an application.</p>
+     * 
      * @param request GetServiceListRequest
      * @return GetServiceListResponse
      */
@@ -6186,8 +6500,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the version of a microservices application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the version of a microservices application.</p>
+     * 
      * @param request GetServiceListPageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceListPageResponse
@@ -6253,8 +6568,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the version of a microservices application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the version of a microservices application.</p>
+     * 
      * @param request GetServiceListPageRequest
      * @return GetServiceListPageResponse
      */
@@ -6264,8 +6580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of listeners for the destination service.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of listeners for the destination service.</p>
+     * 
      * @param request GetServiceListenersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceListenersResponse
@@ -6339,8 +6656,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of listeners for the destination service.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of listeners for the destination service.</p>
+     * 
      * @param request GetServiceListenersRequest
      * @return GetServiceListenersResponse
      */
@@ -6350,8 +6668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取服务接口列表
-     *
+     * <b>summary</b> : 
+     * <p>获取服务接口列表</p>
+     * 
      * @param request GetServiceMethodPageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceMethodPageResponse
@@ -6437,8 +6756,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取服务接口列表
-     *
+     * <b>summary</b> : 
+     * <p>获取服务接口列表</p>
+     * 
      * @param request GetServiceMethodPageRequest
      * @return GetServiceMethodPageResponse
      */
@@ -6448,8 +6768,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains all tags in the current lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains all tags in the current lane group.</p>
+     * 
      * @param request GetTagsBySwimmingLaneGroupIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTagsBySwimmingLaneGroupIdResponse
@@ -6487,8 +6808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains all tags in the current lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains all tags in the current lane group.</p>
+     * 
      * @param request GetTagsBySwimmingLaneGroupIdRequest
      * @return GetTagsBySwimmingLaneGroupIdResponse
      */
@@ -6498,8 +6820,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary mse-200-105
-     *
+     * <b>summary</b> : 
+     * <p>mse-200-105</p>
+     * 
      * @param request GetZookeeperDataImportUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetZookeeperDataImportUrlResponse
@@ -6537,8 +6860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary mse-200-105
-     *
+     * <b>summary</b> : 
+     * <p>mse-200-105</p>
+     * 
      * @param request GetZookeeperDataImportUrlRequest
      * @return GetZookeeperDataImportUrlResponse
      */
@@ -6548,10 +6872,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports Nacos configurations as a file.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports Nacos configurations as a file.</p>
+     * 
      * @param request ImportNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportNacosConfigResponse
@@ -6597,10 +6925,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports Nacos configurations as a file.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports Nacos configurations as a file.</p>
+     * 
      * @param request ImportNacosConfigRequest
      * @return ImportNacosConfigResponse
      */
@@ -6610,8 +6942,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports services to a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Imports services to a gateway.</p>
+     * 
      * @param tmpReq ImportServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportServicesResponse
@@ -6675,8 +7008,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports services to a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Imports services to a gateway.</p>
+     * 
      * @param request ImportServicesRequest
      * @return ImportServicesResponse
      */
@@ -6686,10 +7020,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to import data from a destination URL to a Microservices Engine (MSE) ZooKeeper instance.
-     *
-     * @description **Danger** This operation clears existing data. Exercise caution when you call this API operation.
-     *
+     * <b>description</b> :
+     * <p><em>Danger</em>* This operation clears existing data. Exercise caution when you call this API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task to import data from a destination URL to a Microservices Engine (MSE) ZooKeeper instance.</p>
+     * 
      * @param request ImportZookeeperDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImportZookeeperDataResponse
@@ -6739,10 +7075,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to import data from a destination URL to a Microservices Engine (MSE) ZooKeeper instance.
-     *
-     * @description **Danger** This operation clears existing data. Exercise caution when you call this API operation.
-     *
+     * <b>description</b> :
+     * <p><em>Danger</em>* This operation clears existing data. Exercise caution when you call this API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task to import data from a destination URL to a Microservices Engine (MSE) ZooKeeper instance.</p>
+     * 
      * @param request ImportZookeeperDataRequest
      * @return ImportZookeeperDataResponse
      */
@@ -6752,10 +7090,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries application instances that are registered with a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries application instances that are registered with a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request ListAnsInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAnsInstancesResponse
@@ -6781,10 +7123,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries application instances that are registered with a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries application instances that are registered with a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request ListAnsInstancesRequest
      * @return ListAnsInstancesResponse
      */
@@ -6794,10 +7140,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the clusters of a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the clusters of a Nacos service.</p>
+     * 
      * @param request ListAnsServiceClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAnsServiceClustersResponse
@@ -6859,10 +7209,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the clusters of a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the clusters of a Nacos service.</p>
+     * 
      * @param request ListAnsServiceClustersRequest
      * @return ListAnsServiceClustersResponse
      */
@@ -6872,10 +7226,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Nacos services.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Nacos services.</p>
+     * 
      * @param request ListAnsServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAnsServicesResponse
@@ -6949,10 +7307,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Nacos services.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Nacos services.</p>
+     * 
      * @param request ListAnsServicesRequest
      * @return ListAnsServicesResponse
      */
@@ -6962,14 +7324,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the applications in a lane group by tag.</p>
+     * 
      * @deprecated OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.
-     *
-     * @summary Queries the applications in a lane group by tag.
-     *
+     * 
      * @param request ListAppBySwimmingLaneGroupTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAppBySwimmingLaneGroupTagResponse
      */
+    @Deprecated
     // Deprecated
     public ListAppBySwimmingLaneGroupTagResponse listAppBySwimmingLaneGroupTagWithOptions(ListAppBySwimmingLaneGroupTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7008,13 +7372,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the applications in a lane group by tag.</p>
+     * 
      * @deprecated OpenAPI ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.
-     *
-     * @summary Queries the applications in a lane group by tag.
-     *
+     * 
      * @param request ListAppBySwimmingLaneGroupTagRequest
      * @return ListAppBySwimmingLaneGroupTagResponse
      */
+    @Deprecated
     // Deprecated
     public ListAppBySwimmingLaneGroupTagResponse listAppBySwimmingLaneGroupTag(ListAppBySwimmingLaneGroupTagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7022,8 +7388,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Lists applications by tag in a specified lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Lists applications by tag in a specified lane group.</p>
+     * 
      * @param tmpReq ListAppBySwimmingLaneGroupTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAppBySwimmingLaneGroupTagsResponse
@@ -7071,8 +7438,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Lists applications by tag in a specified lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Lists applications by tag in a specified lane group.</p>
+     * 
      * @param request ListAppBySwimmingLaneGroupTagsRequest
      * @return ListAppBySwimmingLaneGroupTagsResponse
      */
@@ -7082,8 +7450,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routing rules of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routing rules of an application.</p>
+     * 
      * @param request ListApplicationsWithTagRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApplicationsWithTagRulesResponse
@@ -7109,8 +7478,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routing rules of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routing rules of an application.</p>
+     * 
      * @param request ListApplicationsWithTagRulesRequest
      * @return ListApplicationsWithTagRulesResponse
      */
@@ -7120,8 +7490,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of service authentication rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of service authentication rules.</p>
+     * 
      * @param request ListAuthPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAuthPolicyResponse
@@ -7183,8 +7554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of service authentication rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of service authentication rules.</p>
+     * 
      * @param request ListAuthPolicyRequest
      * @return ListAuthPolicyResponse
      */
@@ -7194,8 +7566,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of circuit breaking rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of circuit breaking rules.</p>
+     * 
      * @param request ListCircuitBreakerRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCircuitBreakerRulesResponse
@@ -7253,8 +7626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of circuit breaking rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of circuit breaking rules.</p>
+     * 
      * @param request ListCircuitBreakerRulesRequest
      * @return ListCircuitBreakerRulesResponse
      */
@@ -7264,8 +7638,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available cluster connection types.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available cluster connection types.</p>
+     * 
      * @param request ListClusterConnectionTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClusterConnectionTypesResponse
@@ -7295,8 +7670,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available cluster connection types.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available cluster connection types.</p>
+     * 
      * @param request ListClusterConnectionTypesRequest
      * @return ListClusterConnectionTypesResponse
      */
@@ -7306,8 +7682,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains information about historical health check tasks.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains information about historical health check tasks.</p>
+     * 
      * @param request ListClusterHealthCheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClusterHealthCheckTaskResponse
@@ -7357,8 +7734,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains information about historical health check tasks.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains information about historical health check tasks.</p>
+     * 
      * @param request ListClusterHealthCheckTaskRequest
      * @return ListClusterHealthCheckTaskResponse
      */
@@ -7368,8 +7746,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the engine types that can be activated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the engine types that can be activated.</p>
+     * 
      * @param request ListClusterTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClusterTypesResponse
@@ -7411,8 +7790,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the engine types that can be activated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the engine types that can be activated.</p>
+     * 
      * @param request ListClusterTypesRequest
      * @return ListClusterTypesResponse
      */
@@ -7422,8 +7802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about supported instance versions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about supported instance versions.</p>
+     * 
      * @param request ListClusterVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClusterVersionsResponse
@@ -7461,8 +7842,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about supported instance versions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about supported instance versions.</p>
+     * 
      * @param request ListClusterVersionsRequest
      * @return ListClusterVersionsResponse
      */
@@ -7472,8 +7854,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Microservices Engine (MSE) instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Microservices Engine (MSE) instances.</p>
+     * 
      * @param request ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClustersResponse
@@ -7535,8 +7918,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Microservices Engine (MSE) instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Microservices Engine (MSE) instances.</p>
+     * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
      */
@@ -7546,8 +7930,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the track data of a Nacos configuration center.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the track data of a Nacos configuration center.</p>
+     * 
      * @param request ListConfigTrackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConfigTrackResponse
@@ -7621,8 +8006,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the track data of a Nacos configuration center.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the track data of a Nacos configuration center.</p>
+     * 
      * @param request ListConfigTrackRequest
      * @return ListConfigTrackResponse
      */
@@ -7632,8 +8018,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the namespaces of a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the namespaces of a Nacos instance.</p>
+     * 
      * @param request ListEngineNamespacesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEngineNamespacesResponse
@@ -7667,8 +8054,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the namespaces of a Nacos instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the namespaces of a Nacos instance.</p>
+     * 
      * @param request ListEngineNamespacesRequest
      * @return ListEngineNamespacesResponse
      */
@@ -7678,8 +8066,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Eureka instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Eureka instances.</p>
+     * 
      * @param request ListEurekaInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEurekaInstancesResponse
@@ -7705,8 +8094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Eureka instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Eureka instances.</p>
+     * 
      * @param request ListEurekaInstancesRequest
      * @return ListEurekaInstancesResponse
      */
@@ -7716,8 +8106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Eureka services.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Eureka services.</p>
+     * 
      * @param request ListEurekaServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEurekaServicesResponse
@@ -7743,8 +8134,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Eureka services.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Eureka services.</p>
+     * 
      * @param request ListEurekaServicesRequest
      * @return ListEurekaServicesResponse
      */
@@ -7754,8 +8146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Lists historical data export tasks of a Microservices Engine (MSE) Zookeeper instance.
-     *
+     * <b>summary</b> : 
+     * <p>Lists historical data export tasks of a Microservices Engine (MSE) Zookeeper instance.</p>
+     * 
      * @param request ListExportZookeeperDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListExportZookeeperDataResponse
@@ -7797,8 +8190,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Lists historical data export tasks of a Microservices Engine (MSE) Zookeeper instance.
-     *
+     * <b>summary</b> : 
+     * <p>Lists historical data export tasks of a Microservices Engine (MSE) Zookeeper instance.</p>
+     * 
      * @param request ListExportZookeeperDataRequest
      * @return ListExportZookeeperDataResponse
      */
@@ -7808,8 +8202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of throttling rules.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of throttling rules.</p>
+     * 
      * @param request ListFlowRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFlowRulesResponse
@@ -7867,8 +8262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of throttling rules.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of throttling rules.</p>
+     * 
      * @param request ListFlowRulesRequest
      * @return ListFlowRulesResponse
      */
@@ -7878,8 +8274,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of gateways.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of gateways.</p>
+     * 
      * @param tmpReq ListGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayResponse
@@ -7935,8 +8332,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of gateways.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of gateways.</p>
+     * 
      * @param request ListGatewayRequest
      * @return ListGatewayResponse
      */
@@ -7946,8 +8344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of consumers on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of consumers on which a gateway performs authentication operations.</p>
+     * 
      * @param request ListGatewayAuthConsumerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayAuthConsumerResponse
@@ -8001,8 +8400,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of consumers on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of consumers on which a gateway performs authentication operations.</p>
+     * 
      * @param request ListGatewayAuthConsumerRequest
      * @return ListGatewayAuthConsumerResponse
      */
@@ -8012,8 +8412,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of authorized resources for the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of authorized resources for the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request ListGatewayAuthConsumerResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayAuthConsumerResourceResponse
@@ -8067,8 +8468,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of authorized resources for the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of authorized resources for the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request ListGatewayAuthConsumerResourceRequest
      * @return ListGatewayAuthConsumerResourceResponse
      */
@@ -8078,8 +8480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>查看网关路由熔断规则</p>
+     * 
      * @param request ListGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayCircuitBreakerRuleResponse
@@ -8113,8 +8516,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>查看网关路由熔断规则</p>
+     * 
      * @param request ListGatewayCircuitBreakerRuleRequest
      * @return ListGatewayCircuitBreakerRuleResponse
      */
@@ -8124,8 +8528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are associated with a gateway.</p>
+     * 
      * @param request ListGatewayDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayDomainResponse
@@ -8167,8 +8572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are associated with a gateway.</p>
+     * 
      * @param request ListGatewayDomainRequest
      * @return ListGatewayDomainResponse
      */
@@ -8178,8 +8584,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>查看网关路由流控规则</p>
+     * 
      * @param request ListGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayFlowRuleResponse
@@ -8213,8 +8620,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>查看网关路由流控规则</p>
+     * 
      * @param request ListGatewayFlowRuleRequest
      * @return ListGatewayFlowRuleResponse
      */
@@ -8224,8 +8632,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>查看网关路由隔离规则</p>
+     * 
      * @param request ListGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayIsolationRuleResponse
@@ -8259,8 +8668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>查看网关路由隔离规则</p>
+     * 
      * @param request ListGatewayIsolationRuleRequest
      * @return ListGatewayIsolationRuleResponse
      */
@@ -8270,8 +8680,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routes of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routes of a gateway.</p>
+     * 
      * @param tmpReq ListGatewayRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayRouteResponse
@@ -8327,8 +8738,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routes of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routes of a gateway.</p>
+     * 
      * @param request ListGatewayRouteRequest
      * @return ListGatewayRouteResponse
      */
@@ -8338,8 +8750,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of routes for which authentication is enabled.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of routes for which authentication is enabled.</p>
+     * 
      * @param request ListGatewayRouteOnAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayRouteOnAuthResponse
@@ -8377,8 +8790,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of routes for which authentication is enabled.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of routes for which authentication is enabled.</p>
+     * 
      * @param request ListGatewayRouteOnAuthRequest
      * @return ListGatewayRouteOnAuthResponse
      */
@@ -8388,8 +8802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of services that are subscribed with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of services that are subscribed with a gateway.</p>
+     * 
      * @param tmpReq ListGatewayServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayServiceResponse
@@ -8445,8 +8860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of services that are subscribed with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of services that are subscribed with a gateway.</p>
+     * 
      * @param request ListGatewayServiceRequest
      * @return ListGatewayServiceResponse
      */
@@ -8456,8 +8872,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Server Load Balancer (SLB) instances that are associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Server Load Balancer (SLB) instances that are associated with a gateway.</p>
+     * 
      * @param request ListGatewaySlbRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewaySlbResponse
@@ -8491,8 +8908,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Server Load Balancer (SLB) instances that are associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Server Load Balancer (SLB) instances that are associated with a gateway.</p>
+     * 
      * @param request ListGatewaySlbRequest
      * @return ListGatewaySlbResponse
      */
@@ -8502,8 +8920,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取网关可用区列表
-     *
+     * <b>summary</b> : 
+     * <p>获取网关可用区列表</p>
+     * 
      * @param request ListGatewayZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGatewayZoneResponse
@@ -8533,8 +8952,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取网关可用区列表
-     *
+     * <b>summary</b> : 
+     * <p>获取网关可用区列表</p>
+     * 
      * @param request ListGatewayZoneRequest
      * @return ListGatewayZoneResponse
      */
@@ -8544,8 +8964,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays the number of nodes that can be deployed for an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Displays the number of nodes that can be deployed for an instance.</p>
+     * 
      * @param request ListInstanceCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstanceCountResponse
@@ -8591,8 +9012,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Displays the number of nodes that can be deployed for an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Displays the number of nodes that can be deployed for an instance.</p>
+     * 
      * @param request ListInstanceCountRequest
      * @return ListInstanceCountResponse
      */
@@ -8602,8 +9024,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>查询隔离规则</p>
+     * 
      * @param request ListIsolationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIsolationRulesResponse
@@ -8661,8 +9084,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>查询隔离规则</p>
+     * 
      * @param request ListIsolationRulesRequest
      * @return ListIsolationRulesResponse
      */
@@ -8672,10 +9096,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries listeners based on configuration information.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries listeners based on configuration information.</p>
+     * 
      * @param request ListListenersByConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListListenersByConfigResponse
@@ -8725,10 +9153,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries listeners based on configuration information.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries listeners based on configuration information.</p>
+     * 
      * @param request ListListenersByConfigRequest
      * @return ListListenersByConfigResponse
      */
@@ -8738,10 +9170,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about listeners based on IP addresses.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about listeners based on IP addresses.</p>
+     * 
      * @param request ListListenersByIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListListenersByIpResponse
@@ -8787,10 +9223,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about listeners based on IP addresses.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about listeners based on IP addresses.</p>
+     * 
      * @param request ListListenersByIpRequest
      * @return ListListenersByIpResponse
      */
@@ -8800,8 +9240,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a migration task.</p>
+     * 
      * @param request ListMigrationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMigrationTaskResponse
@@ -8847,8 +9288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a migration task.</p>
+     * 
      * @param request ListMigrationTaskRequest
      * @return ListMigrationTaskResponse
      */
@@ -8858,10 +9300,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Nacos configurations.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Nacos configurations.</p>
+     * 
      * @param request ListNacosConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNacosConfigsResponse
@@ -8931,10 +9377,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Nacos configurations.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Nacos configurations.</p>
+     * 
      * @param request ListNacosConfigsRequest
      * @return ListNacosConfigsResponse
      */
@@ -8944,10 +9394,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration history of a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration history of a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request ListNacosHistoryConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNacosHistoryConfigsResponse
@@ -9009,10 +9463,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configuration history of a Microservices Engine (MSE) Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configuration history of a Microservices Engine (MSE) Nacos instance.</p>
+     * 
      * @param request ListNacosHistoryConfigsRequest
      * @return ListNacosHistoryConfigsResponse
      */
@@ -9022,8 +9480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the trajectory data of a Nacos registry.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the trajectory data of a Nacos registry.</p>
+     * 
      * @param request ListNamingTrackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNamingTrackResponse
@@ -9049,8 +9508,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the trajectory data of a Nacos registry.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the trajectory data of a Nacos registry.</p>
+     * 
      * @param request ListNamingTrackRequest
      * @return ListNamingTrackResponse
      */
@@ -9060,8 +9520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of gateway certificates.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of gateway certificates.</p>
+     * 
      * @param request ListSSLCertRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSSLCertResponse
@@ -9099,8 +9560,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains a list of gateway certificates.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of gateway certificates.</p>
+     * 
      * @param request ListSSLCertRequest
      * @return ListSSLCertResponse
      */
@@ -9110,8 +9572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about security groups.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the information about security groups.</p>
+     * 
      * @param request ListSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSecurityGroupResponse
@@ -9145,8 +9608,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about security groups.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the information about security groups.</p>
+     * 
      * @param request ListSecurityGroupRequest
      * @return ListSecurityGroupResponse
      */
@@ -9156,8 +9620,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the security group rules of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the security group rules of a gateway.</p>
+     * 
      * @param request ListSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSecurityGroupRuleResponse
@@ -9191,8 +9656,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the security group rules of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the security group rules of a gateway.</p>
+     * 
      * @param request ListSecurityGroupRuleRequest
      * @return ListSecurityGroupRuleResponse
      */
@@ -9202,8 +9668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询流量防护行为
-     *
+     * <b>summary</b> : 
+     * <p>查询流量防护行为</p>
+     * 
      * @param tmpReq ListSentinelBlockFallbackDefinitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSentinelBlockFallbackDefinitionsResponse
@@ -9251,8 +9718,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询流量防护行为
-     *
+     * <b>summary</b> : 
+     * <p>查询流量防护行为</p>
+     * 
      * @param request ListSentinelBlockFallbackDefinitionsRequest
      * @return ListSentinelBlockFallbackDefinitionsResponse
      */
@@ -9262,8 +9730,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of associated sources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of associated sources.</p>
+     * 
      * @param request ListServiceSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListServiceSourceResponse
@@ -9301,8 +9770,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of associated sources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of associated sources.</p>
+     * 
      * @param request ListServiceSourceRequest
      * @return ListServiceSourceResponse
      */
@@ -9312,8 +9782,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tagged resources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries tagged resources.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -9363,8 +9834,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tagged resources.
-     *
+     * <b>summary</b> : 
+     * <p>Queries tagged resources.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -9374,8 +9846,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the track data of a ZooKeeper instance.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the track data of a ZooKeeper instance.</p>
+     * 
      * @param request ListZkTrackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListZkTrackResponse
@@ -9441,8 +9914,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the track data of a ZooKeeper instance.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the track data of a ZooKeeper instance.</p>
+     * 
      * @param request ListZkTrackRequest
      * @return ListZkTrackResponse
      */
@@ -9452,8 +9926,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the child nodes of a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the child nodes of a ZooKeeper node.</p>
+     * 
      * @param request ListZnodeChildrenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListZnodeChildrenResponse
@@ -9491,8 +9966,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the child nodes of a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the child nodes of a ZooKeeper node.</p>
+     * 
      * @param request ListZnodeChildrenRequest
      * @return ListZnodeChildrenResponse
      */
@@ -9502,8 +9978,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a cluster for which Microservice Governance is enabled.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a cluster for which Microservice Governance is enabled.</p>
+     * 
      * @param tmpReq ModifyGovernanceKubernetesClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyGovernanceKubernetesClusterResponse
@@ -9553,8 +10030,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a cluster for which Microservice Governance is enabled.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a cluster for which Microservice Governance is enabled.</p>
+     * 
      * @param request ModifyGovernanceKubernetesClusterRequest
      * @return ModifyGovernanceKubernetesClusterResponse
      */
@@ -9564,8 +10042,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies configurations of the lossless online and offline feature.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies configurations of the lossless online and offline feature.</p>
+     * 
      * @param request ModifyLosslessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyLosslessRuleResponse
@@ -9643,8 +10122,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies configurations of the lossless online and offline feature.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies configurations of the lossless online and offline feature.</p>
+     * 
      * @param request ModifyLosslessRuleRequest
      * @return ModifyLosslessRuleResponse
      */
@@ -9654,8 +10134,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Unpublishes a route for a gateway.</p>
+     * 
      * @param request OfflineGatewayRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OfflineGatewayRouteResponse
@@ -9693,8 +10174,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Unpublishes a route for a gateway.</p>
+     * 
      * @param request OfflineGatewayRouteRequest
      * @return OfflineGatewayRouteResponse
      */
@@ -9704,8 +10186,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Subscribes to the notification feature if a risk is detected during a health check.
-     *
+     * <b>summary</b> : 
+     * <p>Subscribes to the notification feature if a risk is detected during a health check.</p>
+     * 
      * @param request OrderClusterHealthCheckRiskNoticeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OrderClusterHealthCheckRiskNoticeResponse
@@ -9759,8 +10242,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Subscribes to the notification feature if a risk is detected during a health check.
-     *
+     * <b>summary</b> : 
+     * <p>Subscribes to the notification feature if a risk is detected during a health check.</p>
+     * 
      * @param request OrderClusterHealthCheckRiskNoticeRequest
      * @return OrderClusterHealthCheckRiskNoticeResponse
      */
@@ -9770,8 +10254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all the microservices of a service source.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all the microservices of a service source.</p>
+     * 
      * @param request PullServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PullServicesResponse
@@ -9813,8 +10298,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all the microservices of a service source.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all the microservices of a service source.</p>
+     * 
      * @param request PullServicesRequest
      * @return PullServicesResponse
      */
@@ -9824,8 +10310,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to check risk evaluation for an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Initiates a task to check risk evaluation for an instance.</p>
+     * 
      * @param request PutClusterHealthCheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutClusterHealthCheckTaskResponse
@@ -9859,8 +10346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Initiates a task to check risk evaluation for an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Initiates a task to check risk evaluation for an instance.</p>
+     * 
      * @param request PutClusterHealthCheckTaskRequest
      * @return PutClusterHealthCheckTaskResponse
      */
@@ -9870,8 +10358,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all the lanes in a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all the lanes in a lane group.</p>
+     * 
      * @param request QueryAllSwimmingLaneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryAllSwimmingLaneResponse
@@ -9909,8 +10398,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all the lanes in a lane group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all the lanes in a lane group.</p>
+     * 
      * @param request QueryAllSwimmingLaneRequest
      * @return QueryAllSwimmingLaneResponse
      */
@@ -9920,8 +10410,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all lane groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all lane groups.</p>
+     * 
      * @param request QueryAllSwimmingLaneGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryAllSwimmingLaneGroupResponse
@@ -9955,8 +10446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all lane groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all lane groups.</p>
+     * 
      * @param request QueryAllSwimmingLaneGroupRequest
      * @return QueryAllSwimmingLaneGroupResponse
      */
@@ -9966,8 +10458,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about regions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about regions.</p>
+     * 
      * @param request QueryBusinessLocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryBusinessLocationsResponse
@@ -9993,8 +10486,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about regions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about regions.</p>
+     * 
      * @param request QueryBusinessLocationsRequest
      * @return QueryBusinessLocationsResponse
      */
@@ -10004,8 +10498,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of an instance.</p>
+     * 
      * @param request QueryClusterDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryClusterDetailResponse
@@ -10047,8 +10542,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of an instance.</p>
+     * 
      * @param request QueryClusterDetailRequest
      * @return QueryClusterDetailResponse
      */
@@ -10058,8 +10554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries disk specifications that are supported by an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries disk specifications that are supported by an instance.</p>
+     * 
      * @param request QueryClusterDiskSpecificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryClusterDiskSpecificationResponse
@@ -10093,8 +10590,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries disk specifications that are supported by an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries disk specifications that are supported by an instance.</p>
+     * 
      * @param request QueryClusterDiskSpecificationRequest
      * @return QueryClusterDiskSpecificationResponse
      */
@@ -10104,8 +10602,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the static information of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the static information of an instance.</p>
+     * 
      * @param request QueryClusterInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryClusterInfoResponse
@@ -10159,8 +10658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the static information of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the static information of an instance.</p>
+     * 
      * @param request QueryClusterInfoRequest
      * @return QueryClusterInfoResponse
      */
@@ -10170,8 +10670,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of supported instance specifications.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information of supported instance specifications.</p>
+     * 
      * @param request QueryClusterSpecificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryClusterSpecificationResponse
@@ -10209,8 +10710,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of supported instance specifications.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information of supported instance specifications.</p>
+     * 
      * @param request QueryClusterSpecificationRequest
      * @return QueryClusterSpecificationResponse
      */
@@ -10220,8 +10722,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries configuration information of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries configuration information of an instance.</p>
+     * 
      * @param request QueryConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryConfigResponse
@@ -10271,8 +10774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries configuration information of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries configuration information of an instance.</p>
+     * 
      * @param request QueryConfigRequest
      * @return QueryConfigResponse
      */
@@ -10282,8 +10786,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the regions supported by a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the regions supported by a gateway.</p>
+     * 
      * @param request QueryGatewayRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryGatewayRegionResponse
@@ -10313,8 +10818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the regions supported by a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the regions supported by a gateway.</p>
+     * 
      * @param request QueryGatewayRegionRequest
      * @return QueryGatewayRegionResponse
      */
@@ -10324,8 +10830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available gateway types.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available gateway types.</p>
+     * 
      * @param request QueryGatewayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryGatewayTypeResponse
@@ -10355,8 +10862,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available gateway types.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available gateway types.</p>
+     * 
      * @param request QueryGatewayTypeRequest
      * @return QueryGatewayTypeResponse
      */
@@ -10366,8 +10874,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Kubernetes clusters for which Microservices Governance is activated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Kubernetes clusters for which Microservices Governance is activated.</p>
+     * 
      * @param request QueryGovernanceKubernetesClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryGovernanceKubernetesClusterResponse
@@ -10393,8 +10902,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Kubernetes clusters for which Microservices Governance is activated.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Kubernetes clusters for which Microservices Governance is activated.</p>
+     * 
      * @param request QueryGovernanceKubernetesClusterRequest
      * @return QueryGovernanceKubernetesClusterResponse
      */
@@ -10404,8 +10914,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the runtime data of a specified cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the runtime data of a specified cluster.</p>
+     * 
      * @param request QueryInstancesInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryInstancesInfoResponse
@@ -10455,8 +10966,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the runtime data of a specified cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the runtime data of a specified cluster.</p>
+     * 
      * @param request QueryInstancesInfoRequest
      * @return QueryInstancesInfoResponse
      */
@@ -10466,8 +10978,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries monitoring information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries monitoring information.</p>
+     * 
      * @param request QueryMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryMonitorResponse
@@ -10521,8 +11034,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries monitoring information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries monitoring information.</p>
+     * 
      * @param request QueryMonitorRequest
      * @return QueryMonitorResponse
      */
@@ -10532,8 +11046,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询MSE命名空间
-     *
+     * <b>summary</b> : 
+     * <p>查询MSE命名空间</p>
+     * 
      * @param request QueryNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryNamespaceResponse
@@ -10571,8 +11086,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询MSE命名空间
-     *
+     * <b>summary</b> : 
+     * <p>查询MSE命名空间</p>
+     * 
      * @param request QueryNamespaceRequest
      * @return QueryNamespaceResponse
      */
@@ -10582,8 +11098,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the type of a Server Load Balancer (SLB) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the type of a Server Load Balancer (SLB) instance.</p>
+     * 
      * @param request QuerySlbSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySlbSpecResponse
@@ -10609,8 +11126,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the type of a Server Load Balancer (SLB) instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the type of a Server Load Balancer (SLB) instance.</p>
+     * 
      * @param request QuerySlbSpecRequest
      * @return QuerySlbSpecResponse
      */
@@ -10620,8 +11138,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a lane based on the lane ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a lane based on the lane ID.</p>
+     * 
      * @param request QuerySwimmingLaneByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySwimmingLaneByIdResponse
@@ -10659,8 +11178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a lane based on the lane ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a lane based on the lane ID.</p>
+     * 
      * @param request QuerySwimmingLaneByIdRequest
      * @return QuerySwimmingLaneByIdResponse
      */
@@ -10670,8 +11190,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a ZooKeeper node.</p>
+     * 
      * @param request QueryZnodeDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryZnodeDetailResponse
@@ -10697,8 +11218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a ZooKeeper node.</p>
+     * 
      * @param request QueryZnodeDetailRequest
      * @return QueryZnodeDetailResponse
      */
@@ -10708,8 +11230,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除单个应用
-     *
+     * <b>summary</b> : 
+     * <p>删除单个应用</p>
+     * 
      * @param request RemoveApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveApplicationResponse
@@ -10755,8 +11278,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除单个应用
-     *
+     * <b>summary</b> : 
+     * <p>删除单个应用</p>
+     * 
      * @param request RemoveApplicationRequest
      * @return RemoveApplicationResponse
      */
@@ -10808,8 +11332,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts a registry.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts a registry.</p>
+     * 
      * @param request RestartClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartClusterResponse
@@ -10855,8 +11380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts a registry.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts a registry.</p>
+     * 
      * @param request RestartClusterRequest
      * @return RestartClusterResponse
      */
@@ -10866,8 +11392,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Retries a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Retries a cluster.</p>
+     * 
      * @param request RetryClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RetryClusterResponse
@@ -10905,8 +11432,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Retries a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Retries a cluster.</p>
+     * 
      * @param request RetryClusterRequest
      * @return RetryClusterResponse
      */
@@ -10916,8 +11444,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries an idle Server Load Balancer (SLB) instance that is associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries an idle Server Load Balancer (SLB) instance that is associated with a gateway.</p>
+     * 
      * @param request SelectGatewaySlbRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SelectGatewaySlbResponse
@@ -10959,8 +11488,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries an idle Server Load Balancer (SLB) instance that is associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Queries an idle Server Load Balancer (SLB) instance that is associated with a gateway.</p>
+     * 
      * @param request SelectGatewaySlbRequest
      * @return SelectGatewaySlbResponse
      */
@@ -10970,8 +11500,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Tags a specified resource.
-     *
+     * <b>summary</b> : 
+     * <p>Tags a specified resource.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -11017,8 +11548,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Tags a specified resource.
-     *
+     * <b>summary</b> : 
+     * <p>Tags a specified resource.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -11028,8 +11560,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Untags resources.
-     *
+     * <b>summary</b> : 
+     * <p>Untags resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -11079,8 +11612,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Untags resources.
-     *
+     * <b>summary</b> : 
+     * <p>Untags resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -11090,8 +11624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an IP address whitelist.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an IP address whitelist.</p>
+     * 
      * @param request UpdateAclRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAclResponse
@@ -11129,8 +11664,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an IP address whitelist.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an IP address whitelist.</p>
+     * 
      * @param request UpdateAclRequest
      * @return UpdateAclResponse
      */
@@ -11140,8 +11676,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a service authentication rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a service authentication rule.</p>
+     * 
      * @param request UpdateAuthPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAuthPolicyResponse
@@ -11207,8 +11744,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a service authentication rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a service authentication rule.</p>
+     * 
      * @param request UpdateAuthPolicyRequest
      * @return UpdateAuthPolicyResponse
      */
@@ -11218,8 +11756,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the blacklist or whitelist of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the blacklist or whitelist of a gateway.</p>
+     * 
      * @param request UpdateBlackWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateBlackWhiteListResponse
@@ -11289,8 +11828,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the blacklist or whitelist of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the blacklist or whitelist of a gateway.</p>
+     * 
      * @param request UpdateBlackWhiteListRequest
      * @return UpdateBlackWhiteListResponse
      */
@@ -11300,8 +11840,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a circuit breaking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a circuit breaking rule.</p>
+     * 
      * @param request UpdateCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCircuitBreakerRuleResponse
@@ -11383,8 +11924,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a circuit breaking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a circuit breaking rule.</p>
+     * 
      * @param request UpdateCircuitBreakerRuleRequest
      * @return UpdateCircuitBreakerRuleResponse
      */
@@ -11394,8 +11936,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about an instance.</p>
+     * 
      * @param request UpdateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateClusterResponse
@@ -11445,8 +11988,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about an instance.</p>
+     * 
      * @param request UpdateClusterRequest
      * @return UpdateClusterResponse
      */
@@ -11456,10 +12000,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the number or specifications of nodes in a pay-as-you-go Microservices Engine (MSE) instance.
-     *
-     * @description You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing] (`~~1806469~~`).
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing] (<code>~~1806469~~</code>).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the number or specifications of nodes in a pay-as-you-go Microservices Engine (MSE) instance.</p>
+     * 
      * @param request UpdateClusterSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateClusterSpecResponse
@@ -11517,10 +12063,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the number or specifications of nodes in a pay-as-you-go Microservices Engine (MSE) instance.
-     *
-     * @description You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing] (`~~1806469~~`).
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing] (<code>~~1806469~~</code>).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the number or specifications of nodes in a pay-as-you-go Microservices Engine (MSE) instance.</p>
+     * 
      * @param request UpdateClusterSpecRequest
      * @return UpdateClusterSpecResponse
      */
@@ -11530,8 +12078,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configurations of an instance.</p>
+     * 
      * @param request UpdateConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConfigResponse
@@ -11541,6 +12090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authEnabled)) {
+            query.put("AuthEnabled", request.authEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autopurgePurgeInterval)) {
@@ -11569,6 +12122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.consoleUIEnabled)) {
             query.put("ConsoleUIEnabled", request.consoleUIEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable4lw)) {
+            query.put("Enable4lw", request.enable4lw);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eurekaSupported)) {
@@ -11663,8 +12220,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configurations of an instance.</p>
+     * 
      * @param request UpdateConfigRequest
      * @return UpdateConfigResponse
      */
@@ -11674,8 +12232,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a namespace for the Nacos engine.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a namespace for the Nacos engine.</p>
+     * 
      * @param request UpdateEngineNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateEngineNamespaceResponse
@@ -11729,8 +12288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a namespace for the Nacos engine.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a namespace for the Nacos engine.</p>
+     * 
      * @param request UpdateEngineNamespaceRequest
      * @return UpdateEngineNamespaceResponse
      */
@@ -11740,8 +12300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a throttling rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a throttling rule.</p>
+     * 
      * @param request UpdateFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateFlowRuleResponse
@@ -11803,8 +12364,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a throttling rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a throttling rule.</p>
+     * 
      * @param request UpdateFlowRuleRequest
      * @return UpdateFlowRuleResponse
      */
@@ -11814,8 +12376,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request UpdateGatewayAuthConsumerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayAuthConsumerResponse
@@ -11889,8 +12452,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request UpdateGatewayAuthConsumerRequest
      * @return UpdateGatewayAuthConsumerResponse
      */
@@ -11900,8 +12464,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a list of resources on which permissions are granted to a gateway authentication consumer.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a list of resources on which permissions are granted to a gateway authentication consumer.</p>
+     * 
      * @param tmpReq UpdateGatewayAuthConsumerResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayAuthConsumerResourceResponse
@@ -11949,8 +12514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a list of resources on which permissions are granted to a gateway authentication consumer.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a list of resources on which permissions are granted to a gateway authentication consumer.</p>
+     * 
      * @param request UpdateGatewayAuthConsumerResourceRequest
      * @return UpdateGatewayAuthConsumerResourceResponse
      */
@@ -11960,8 +12526,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the resource authorization status for the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the resource authorization status for the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request UpdateGatewayAuthConsumerResourceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayAuthConsumerResourceStatusResponse
@@ -12007,8 +12574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the resource authorization status for the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the resource authorization status for the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request UpdateGatewayAuthConsumerResourceStatusRequest
      * @return UpdateGatewayAuthConsumerResourceStatusResponse
      */
@@ -12018,8 +12586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the status of the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the status of the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request UpdateGatewayAuthConsumerStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayAuthConsumerStatusResponse
@@ -12061,8 +12630,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the status of the consumer on which a gateway performs authentication operations.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the status of the consumer on which a gateway performs authentication operations.</p>
+     * 
      * @param request UpdateGatewayAuthConsumerStatusRequest
      * @return UpdateGatewayAuthConsumerStatusResponse
      */
@@ -12072,8 +12642,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>更新网关路由熔断规则</p>
+     * 
      * @param request UpdateGatewayCircuitBreakerRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayCircuitBreakerRuleResponse
@@ -12171,8 +12742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新网关路由熔断规则
-     *
+     * <b>summary</b> : 
+     * <p>更新网关路由熔断规则</p>
+     * 
      * @param request UpdateGatewayCircuitBreakerRuleRequest
      * @return UpdateGatewayCircuitBreakerRuleResponse
      */
@@ -12182,8 +12754,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about the domain name associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about the domain name associated with a gateway.</p>
+     * 
      * @param request UpdateGatewayDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayDomainResponse
@@ -12245,8 +12818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about the domain name associated with a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about the domain name associated with a gateway.</p>
+     * 
      * @param request UpdateGatewayDomainRequest
      * @return UpdateGatewayDomainResponse
      */
@@ -12256,8 +12830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>更新网关路由流控规则</p>
+     * 
      * @param request UpdateGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayFlowRuleResponse
@@ -12335,8 +12910,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新网关路由流控规则
-     *
+     * <b>summary</b> : 
+     * <p>更新网关路由流控规则</p>
+     * 
      * @param request UpdateGatewayFlowRuleRequest
      * @return UpdateGatewayFlowRuleResponse
      */
@@ -12346,8 +12922,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>更新网关路由隔离规则</p>
+     * 
      * @param request UpdateGatewayIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayIsolationRuleResponse
@@ -12425,8 +13002,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新网关路由隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>更新网关路由隔离规则</p>
+     * 
      * @param request UpdateGatewayIsolationRuleRequest
      * @return UpdateGatewayIsolationRuleResponse
      */
@@ -12436,8 +13014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Renames a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Renames a gateway.</p>
+     * 
      * @param request UpdateGatewayNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayNameResponse
@@ -12475,8 +13054,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Renames a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Renames a gateway.</p>
+     * 
      * @param request UpdateGatewayNameRequest
      * @return UpdateGatewayNameResponse
      */
@@ -12486,8 +13066,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configurations of a gateway.</p>
+     * 
      * @param tmpReq UpdateGatewayOptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayOptionResponse
@@ -12535,8 +13116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configurations of a gateway.</p>
+     * 
      * @param request UpdateGatewayOptionRequest
      * @return UpdateGatewayOptionResponse
      */
@@ -12546,8 +13128,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a route for a gateway.</p>
+     * 
      * @param tmpReq UpdateGatewayRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteResponse
@@ -12659,8 +13242,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a route for a gateway.</p>
+     * 
      * @param request UpdateGatewayRouteRequest
      * @return UpdateGatewayRouteResponse
      */
@@ -12670,8 +13254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the authentication configurations of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the authentication configurations of a route.</p>
+     * 
      * @param tmpReq UpdateGatewayRouteAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteAuthResponse
@@ -12723,8 +13308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the authentication configurations of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the authentication configurations of a route.</p>
+     * 
      * @param request UpdateGatewayRouteAuthRequest
      * @return UpdateGatewayRouteAuthResponse
      */
@@ -12734,8 +13320,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the cross-origin resource sharing (CORS) policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the cross-origin resource sharing (CORS) policy of a route.</p>
+     * 
      * @param tmpReq UpdateGatewayRouteCORSRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteCORSResponse
@@ -12787,8 +13374,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the cross-origin resource sharing (CORS) policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the cross-origin resource sharing (CORS) policy of a route.</p>
+     * 
      * @param request UpdateGatewayRouteCORSRequest
      * @return UpdateGatewayRouteCORSResponse
      */
@@ -12798,8 +13386,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the rewrite policy of a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the rewrite policy of a route for a gateway.</p>
+     * 
      * @param request UpdateGatewayRouteHTTPRewriteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteHTTPRewriteResponse
@@ -12845,8 +13434,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the rewrite policy of a route for a gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the rewrite policy of a route for a gateway.</p>
+     * 
      * @param request UpdateGatewayRouteHTTPRewriteRequest
      * @return UpdateGatewayRouteHTTPRewriteResponse
      */
@@ -12856,8 +13446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the header configuration policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the header configuration policy of a route.</p>
+     * 
      * @param request UpdateGatewayRouteHeaderOpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteHeaderOpResponse
@@ -12903,8 +13494,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the header configuration policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the header configuration policy of a route.</p>
+     * 
      * @param request UpdateGatewayRouteHeaderOpRequest
      * @return UpdateGatewayRouteHeaderOpResponse
      */
@@ -12914,8 +13506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the retry policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the retry policy of a route.</p>
+     * 
      * @param tmpReq UpdateGatewayRouteRetryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteRetryResponse
@@ -12967,8 +13560,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the retry policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the retry policy of a route.</p>
+     * 
      * @param request UpdateGatewayRouteRetryRequest
      * @return UpdateGatewayRouteRetryResponse
      */
@@ -12978,8 +13572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the timeout policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the timeout policy of a route.</p>
+     * 
      * @param tmpReq UpdateGatewayRouteTimeoutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteTimeoutResponse
@@ -13031,8 +13626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the timeout policy of a route.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the timeout policy of a route.</p>
+     * 
      * @param request UpdateGatewayRouteTimeoutRequest
      * @return UpdateGatewayRouteTimeoutResponse
      */
@@ -13042,8 +13638,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新路由waf状态
-     *
+     * <b>summary</b> : 
+     * <p>更新路由waf状态</p>
+     * 
      * @param request UpdateGatewayRouteWafStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayRouteWafStatusResponse
@@ -13085,8 +13682,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新路由waf状态
-     *
+     * <b>summary</b> : 
+     * <p>更新路由waf状态</p>
+     * 
      * @param request UpdateGatewayRouteWafStatusRequest
      * @return UpdateGatewayRouteWafStatusResponse
      */
@@ -13096,8 +13694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the health check policy of a specified service in a cloud-native gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the health check policy of a specified service in a cloud-native gateway.</p>
+     * 
      * @param tmpReq UpdateGatewayServiceCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayServiceCheckResponse
@@ -13177,8 +13776,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the health check policy of a specified service in a cloud-native gateway.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the health check policy of a specified service in a cloud-native gateway.</p>
+     * 
      * @param request UpdateGatewayServiceCheckRequest
      * @return UpdateGatewayServiceCheckResponse
      */
@@ -13188,8 +13788,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the traffic policy of a service.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the traffic policy of a service.</p>
+     * 
      * @param tmpReq UpdateGatewayServiceTrafficPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayServiceTrafficPolicyResponse
@@ -13241,8 +13842,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the traffic policy of a service.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the traffic policy of a service.</p>
+     * 
      * @param request UpdateGatewayServiceTrafficPolicyRequest
      * @return UpdateGatewayServiceTrafficPolicyResponse
      */
@@ -13252,8 +13854,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the version of a service.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the version of a service.</p>
+     * 
      * @param request UpdateGatewayServiceVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayServiceVersionResponse
@@ -13295,8 +13898,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the version of a service.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the version of a service.</p>
+     * 
      * @param request UpdateGatewayServiceVersionRequest
      * @return UpdateGatewayServiceVersionResponse
      */
@@ -13306,10 +13910,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway.
-     *
-     * @description You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](https://help.aliyun.com/document_detail/250950.html).
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see <a href="https://help.aliyun.com/document_detail/250950.html">Pricing</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway.</p>
+     * 
      * @param request UpdateGatewaySpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewaySpecResponse
@@ -13351,10 +13957,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway.
-     *
-     * @description You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](https://help.aliyun.com/document_detail/250950.html).
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see <a href="https://help.aliyun.com/document_detail/250950.html">Pricing</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway.</p>
+     * 
      * @param request UpdateGatewaySpecRequest
      * @return UpdateGatewaySpecResponse
      */
@@ -13364,8 +13972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version number of the destination cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the version number of the destination cluster.</p>
+     * 
      * @param request UpdateImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateImageResponse
@@ -13403,8 +14012,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version number of the destination cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the version number of the destination cluster.</p>
+     * 
      * @param request UpdateImageRequest
      * @return UpdateImageResponse
      */
@@ -13414,8 +14024,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>更新隔离规则</p>
+     * 
      * @param request UpdateIsolationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateIsolationRuleResponse
@@ -13469,8 +14080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新隔离规则
-     *
+     * <b>summary</b> : 
+     * <p>更新隔离规则</p>
+     * 
      * @param request UpdateIsolationRuleRequest
      * @return UpdateIsolationRuleResponse
      */
@@ -13480,8 +14092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration of a canary release for messaging of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a canary release for messaging of an application.</p>
+     * 
      * @param tmpReq UpdateMessageQueueRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMessageQueueRouteResponse
@@ -13545,8 +14158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration of a canary release for messaging of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a canary release for messaging of an application.</p>
+     * 
      * @param request UpdateMessageQueueRouteRequest
      * @return UpdateMessageQueueRouteResponse
      */
@@ -13556,8 +14170,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a migration task.</p>
+     * 
      * @param request UpdateMigrationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMigrationTaskResponse
@@ -13627,8 +14242,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a migration task.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a migration task.</p>
+     * 
      * @param request UpdateMigrationTaskRequest
      * @return UpdateMigrationTaskResponse
      */
@@ -13638,8 +14254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a Nacos cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the information about a Nacos cluster.</p>
+     * 
      * @param request UpdateNacosClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateNacosClusterResponse
@@ -13701,8 +14318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a Nacos cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the information about a Nacos cluster.</p>
+     * 
      * @param request UpdateNacosClusterRequest
      * @return UpdateNacosClusterResponse
      */
@@ -13712,10 +14330,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a Nacos configuration.
-     *
-     * @description >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a Nacos configuration.</p>
+     * 
      * @param request UpdateNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateNacosConfigResponse
@@ -13793,10 +14415,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a Nacos configuration.
-     *
-     * @description >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a Nacos configuration.</p>
+     * 
      * @param request UpdateNacosConfigRequest
      * @return UpdateNacosConfigResponse
      */
@@ -13806,10 +14432,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about application instances that are registered with a Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about application instances that are registered with a Nacos instance.</p>
+     * 
      * @param request UpdateNacosInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateNacosInstanceResponse
@@ -13885,10 +14515,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about application instances that are registered with a Nacos instance.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about application instances that are registered with a Nacos instance.</p>
+     * 
      * @param request UpdateNacosInstanceRequest
      * @return UpdateNacosInstanceResponse
      */
@@ -13898,10 +14532,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about a Nacos service.</p>
+     * 
      * @param request UpdateNacosServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateNacosServiceResponse
@@ -13955,10 +14593,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a Nacos service.
-     *
-     * @description > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about a Nacos service.</p>
+     * 
      * @param request UpdateNacosServiceRequest
      * @return UpdateNacosServiceResponse
      */
@@ -13968,8 +14610,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration of a plug-in.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a plug-in.</p>
+     * 
      * @param tmpReq UpdatePluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePluginConfigResponse
@@ -14045,8 +14688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration of a plug-in.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration of a plug-in.</p>
+     * 
      * @param request UpdatePluginConfigRequest
      * @return UpdatePluginConfigResponse
      */
@@ -14056,8 +14700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a certificate.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a certificate.</p>
+     * 
      * @param request UpdateSSLCertRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateSSLCertResponse
@@ -14099,8 +14744,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a certificate.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a certificate.</p>
+     * 
      * @param request UpdateSSLCertRequest
      * @return UpdateSSLCertResponse
      */
@@ -14110,8 +14756,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies service sources of a cloud-native gateway. You can modify only Container Service for Kubernetes (ACK) service sources that contain configurations related to Ingress resource monitoring.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies service sources of a cloud-native gateway. You can modify only Container Service for Kubernetes (ACK) service sources that contain configurations related to Ingress resource monitoring.</p>
+     * 
      * @param tmpReq UpdateServiceSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateServiceSourceResponse
@@ -14187,8 +14834,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies service sources of a cloud-native gateway. You can modify only Container Service for Kubernetes (ACK) service sources that contain configurations related to Ingress resource monitoring.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies service sources of a cloud-native gateway. You can modify only Container Service for Kubernetes (ACK) service sources that contain configurations related to Ingress resource monitoring.</p>
+     * 
      * @param request UpdateServiceSourceRequest
      * @return UpdateServiceSourceResponse
      */
@@ -14198,8 +14846,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the information about a ZooKeeper node.</p>
+     * 
      * @param request UpdateZnodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateZnodeResponse
@@ -14245,8 +14894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a ZooKeeper node.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the information about a ZooKeeper node.</p>
+     * 
      * @param request UpdateZnodeRequest
      * @return UpdateZnodeResponse
      */
@@ -14256,8 +14906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the version of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Upgrades the version of a cluster.</p>
+     * 
      * @param request UpgradeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeClusterResponse
@@ -14299,8 +14950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the version of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Upgrades the version of a cluster.</p>
+     * 
      * @param request UpgradeClusterRequest
      * @return UpgradeClusterResponse
      */

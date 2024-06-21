@@ -6,87 +6,124 @@ import com.aliyun.tea.*;
 public class UpdateNacosConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>postoffice</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>196.168.XX.XX</p>
      */
     @NameInMap("BetaIps")
     public String betaIps;
 
     /**
      * <p>The content of the configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>attribute1=1221111\r\nattribute2=Chinese\r\nattribute3=abc11\r\nattribute4=1.00111</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The ID of the configuration.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ky-check-****.yml</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
      * <p>The description of the configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic configurations</p>
      */
     @NameInMap("Desc")
     public String desc;
 
     /**
      * <p>The encryption key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>122wdwe****</p>
      */
     @NameInMap("EncryptedDataKey")
     public String encryptedDataKey;
 
     /**
      * <p>The name of the group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>resource</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-7pp2a****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The MD5 value of the configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>045439703a273a94306422b****</p>
      */
     @NameInMap("Md5")
     public String md5;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78b7af66-d15f-4541-b886-11ed81ecb6c0</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The list of tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-20</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("Type")
     public String type;

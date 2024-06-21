@@ -6,22 +6,32 @@ import com.aliyun.tea.*;
 public class AddServiceSourceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh-CN (default): Chinese</p>
-     * <p>*   en-US: English</p>
-     * <p>*   ja: Japanese</p>
+     * <ul>
+     * <li>zh-CN (default): Chinese</li>
+     * <li>en-US: English</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to monitor Ingress classes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9ad2a0717032427e920754e25b49e3b5</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>Specifies whether to update the Ingress status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-c70622ff52fe49beb29bea9a6f52****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
@@ -40,6 +50,9 @@ public class AddServiceSourceRequest extends TeaModel {
 
     /**
      * <p>The namespace whose resources you want to monitor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>istio</p>
      */
     @NameInMap("Name")
     public String name;
@@ -52,9 +65,13 @@ public class AddServiceSourceRequest extends TeaModel {
 
     /**
      * <p>The service source.</p>
-     * <br>
-     * <p>*   K8s: ACK cluster</p>
-     * <p>*   NACOS: MSE Nacos instance</p>
+     * <ul>
+     * <li>K8s: ACK cluster</li>
+     * <li>NACOS: MSE Nacos instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>K8s,MSE</p>
      */
     @NameInMap("Source")
     public String source;
@@ -67,9 +84,13 @@ public class AddServiceSourceRequest extends TeaModel {
 
     /**
      * <p>The type of the service source.</p>
-     * <br>
-     * <p>*   K8s: Container Service for Kubernetes (ACK) cluster</p>
-     * <p>*   NACOS: Nacos instance</p>
+     * <ul>
+     * <li>K8s: Container Service for Kubernetes (ACK) cluster</li>
+     * <li>NACOS: Nacos instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>The Ingress configuration.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -162,28 +183,41 @@ public class AddServiceSourceRequest extends TeaModel {
     public static class AddServiceSourceRequestIngressOptionsRequest extends TeaModel {
         /**
          * <p>The group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableIngress")
         public Boolean enableIngress;
 
         /**
          * <p>The language of the response. Valid values:</p>
-         * <br>
-         * <p>*   zh-CN: Chinese. This is the default value.</p>
-         * <p>*   en-US: English.</p>
-         * <p>*   ja: Japanese.</p>
+         * <ul>
+         * <li>zh-CN: Chinese. This is the default value.</li>
+         * <li>en-US: English.</li>
+         * <li>ja: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
         /**
          * <p>An array of service root paths.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.test.xxx</p>
          */
         @NameInMap("IngressClass")
         public String ingressClass;
 
         /**
          * <p>The root path of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("WatchNamespace")
         public String watchNamespace;
@@ -230,18 +264,27 @@ public class AddServiceSourceRequest extends TeaModel {
     public static class AddServiceSourceRequestToAuthorizeSecurityGroups extends TeaModel {
         /**
          * <p>The description of the authorization record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule for xxx</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The authorized port range of the security group. You can select multiple port ranges. Separate each port range with a comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080/8080,9000/10000</p>
          */
         @NameInMap("PortRange")
         public String portRange;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1acepclex0vmi1****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;

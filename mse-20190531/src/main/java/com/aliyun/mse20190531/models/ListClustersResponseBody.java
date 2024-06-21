@@ -12,51 +12,76 @@ public class ListClustersResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69AD2AA7-DB47-449B-941B-B14409DF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -171,90 +196,135 @@ public class ListClustersResponseBody extends TeaModel {
     public static class ListClustersResponseBodyData extends TeaModel {
         /**
          * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.9.3</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
         /**
          * <p>Indicates whether the instance can be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanUpdate")
         public Boolean canUpdate;
 
         /**
          * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pay-as-you-go</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The alias of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-7413****</p>
          */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Eureka</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-31 11:36:08</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the cluster expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-01 00:00:00</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
          * <p>The initialization status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RESTART_SUCCESS</p>
          */
         @NameInMap("InitStatus")
         public String initStatus;
 
         /**
          * <p>The number of clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.98.XX.XX</p>
          */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
         /**
          * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-7413****-p.eureka.mse.aliyuncs.com</p>
          */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
         /**
          * <p>The internal IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
         /**
          * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-7413****-eureka.mse.aliyuncs.com</p>
          */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
@@ -264,12 +334,18 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The edition of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_pro</p>
          */
         @NameInMap("MseVersion")
         public String mseVersion;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv7jiavm4uxa</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -282,10 +358,17 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EUREKA_1_9_3</p>
          */
         @NameInMap("VersionCode")
         public String versionCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1hcg467ekqsv0zr****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

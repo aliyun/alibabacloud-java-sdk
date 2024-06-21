@@ -6,45 +6,67 @@ import com.aliyun.tea.*;
 public class UpdateServiceSourceShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese.</p>
-     * <p>*   en: English.</p>
+     * <ul>
+     * <li>zh: Chinese.</li>
+     * <li>en: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9ad2a0717032427e920754e25b49e3b5</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>429</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-cdd1bb9bfb8341e9805f931a3ba1f4c6</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the service source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The configurations of Ingress resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("IngressOptionsRequest")
     public String ingressOptionsRequestShrink;
 
     /**
      * <p>The name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>istio</p>
      */
     @NameInMap("Name")
     public String name;
@@ -57,18 +79,26 @@ public class UpdateServiceSourceShrinkRequest extends TeaModel {
 
     /**
      * <p>The service source. Valid values:</p>
-     * <br>
-     * <p>*   K8s: ACK cluster.</p>
-     * <p>*   MSE: Nacos instance.</p>
+     * <ul>
+     * <li>K8s: ACK cluster.</li>
+     * <li>MSE: Nacos instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>K8s</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The type of the service source. Valid values:</p>
-     * <br>
-     * <p>*   K8s: ACK cluster.</p>
-     * <p>*   NACOS: Nacos instance.</p>
+     * <ul>
+     * <li>K8s: ACK cluster.</li>
+     * <li>NACOS: Nacos instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>K8s</p>
      */
     @NameInMap("Type")
     public String type;

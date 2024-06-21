@@ -7,6 +7,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListGatewayFlowRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0951EBF0-798E-5E0B-8D38-460A14AD****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +36,87 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFlowRuleResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BehaviorType")
         public Integer behaviorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BodyEncoding")
         public Integer bodyEncoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14407</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>549</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("ResponseContentBody")
         public String responseContentBody;
 
+        /**
+         * <strong>example:</strong>
+         * <p>www.******.com</p>
+         */
         @NameInMap("ResponseRedirectUrl")
         public String responseRedirectUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>429</p>
+         */
         @NameInMap("ResponseStatusCode")
         public Integer responseStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>48811</p>
+         */
         @NameInMap("RouteId")
         public Long routeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>routeA</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Threshold")
         public Integer threshold;
 
@@ -172,51 +224,111 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFlowRuleResponseBodyDataResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BehaviorType")
         public Integer behaviorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BodyEncoding")
         public Integer bodyEncoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14407</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-e2d226bba4b2445c9e29fa7f8216****</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>549</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LimitMode")
         public Integer limitMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key=value</p>
+         */
         @NameInMap("ResponseAdditionalHeaders")
         public String responseAdditionalHeaders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("ResponseContentBody")
         public String responseContentBody;
 
+        /**
+         * <strong>example:</strong>
+         * <p>www.******.com</p>
+         */
         @NameInMap("ResponseRedirectUrl")
         public String responseRedirectUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>429</p>
+         */
         @NameInMap("ResponseStatusCode")
         public Integer responseStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>48811</p>
+         */
         @NameInMap("RouteId")
         public Long routeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>routeA</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("StatDurationMs")
         public Integer statDurationMs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Threshold")
         public Integer threshold;
 
@@ -356,9 +468,17 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
     }
 
     public static class ListGatewayFlowRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -368,6 +488,10 @@ public class ListGatewayFlowRuleResponseBody extends TeaModel {
         @NameInMap("Results")
         public java.util.List<ListGatewayFlowRuleResponseBodyDataResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

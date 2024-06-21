@@ -4,21 +4,41 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayAuthDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public GetGatewayAuthDetailResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9C96CDF8-9E6C-XXXX-XXXX-8F87A10117E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,31 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayAuthDetailResponseBodyDataExternalAuthZService extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>httpbin-auth-service</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>K8S</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -134,27 +170,55 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         @NameInMap("AllowUpstreamHeaders")
         public java.util.List<String> allowUpstreamHeaders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000000</p>
+         */
         @NameInMap("BodyMaxBytes")
         public Integer bodyMaxBytes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsRestrict")
         public Boolean isRestrict;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/auth</p>
+         */
         @NameInMap("PrefixPath")
         public String prefixPath;
 
         @NameInMap("Service")
         public GetGatewayAuthDetailResponseBodyDataExternalAuthZService service;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15300</p>
+         */
         @NameInMap("ServiceId")
         public Long serviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Authorization</p>
+         */
         @NameInMap("TokenKey")
         public String tokenKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("WithRequestBody")
         public Boolean withRequestBody;
 
@@ -246,12 +310,24 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayAuthDetailResponseBodyDataResourceListAuthResourceHeaderList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>x-req</p>
+         */
         @NameInMap("HeaderKey")
         public String headerKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("HeaderMethod")
         public String headerMethod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -287,42 +363,90 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
     }
 
     public static class GetGatewayAuthDetailResponseBodyDataResourceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2274</p>
+         */
         @NameInMap("AuthId")
         public Long authId;
 
         @NameInMap("AuthResourceHeaderList")
         public java.util.List<GetGatewayAuthDetailResponseBodyDataResourceListAuthResourceHeaderList> authResourceHeaderList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1765</p>
+         */
         @NameInMap("DomainId")
         public Long domainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2274</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-6f0dbd108a0249d2b675b3ef50b*****</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-19T03:32:38.000+0000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-19T03:32:38.000+0000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1303</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IgnoreCase")
         public Boolean ignoreCase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsWhite")
         public Boolean isWhite;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/test</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -441,78 +565,170 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         @NameInMap("AuthResourceConfig")
         public String authResourceConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AuthResourceMode")
         public Integer authResourceMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example-app</p>
+         */
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hello.com</p>
+         */
         @NameInMap("CookieDomain")
         public String cookieDomain;
 
         @NameInMap("ExternalAuthZ")
         public GetGatewayAuthDetailResponseBodyDataExternalAuthZ externalAuthZ;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2274</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-6f0dbd108a0249d2b675b3ef50b*****</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-19T02:41:03.000+0000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-19T02:41:03.000+0000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1100</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsWhite")
         public Boolean isWhite;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/auth">https://example.com/auth</a></p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\n  \&quot;keys\&quot;:[\n    {\n      \&quot;kty\&quot;: \&quot;RSA\&quot;,\n      \&quot;e\&quot;: \&quot;AQAB\&quot;,\n      \&quot;use\&quot;: \&quot;sig\&quot;,\n      \&quot;kid\&quot;: \&quot;1rGufmH1YN8rqM9ZOLgo7eEST3AnL89Y-m-XGFioLoA\&quot;,\n      \&quot;alg\&quot;: \&quot;RS256\&quot;,\n      \&quot;n\&quot;: \&quot;rM2GIc0YTMqwNCwXnjKbW5QndkCEZgyLu3uQUnyZF7HvMTekiTvQg_39mg3dV1eaYYkYfZBogyroJBqAQXhk6VVCxlBjFVp2xstJPVWngMOOlcafwN_BKdN-EQ06O_Uu__e7gNKI3DunkNk0cNaFETE7d4meRYyTlgEzYgsrW05_ufR0BKoddL3E5JsCpUxRjH9ICbodBx0U74W6Dcci-R2EA1DBrEcboE6n90uoJs6UJNriAK_71nAsYonihU5aQFFnyPTkJHfRwHK6JlME6rn-b-rpLSpdyc6U1nOFZP2DEpz8U5FrYoLYSZIU-MQGxDhCnGc_rxl2IyP9B2qcCQ\&quot;\n    }\n  ]\n}\n</p>
+         */
         @NameInMap("Jwks")
         public String jwks;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://daxxxxcn.aliyunidaas.com/">https://daxxxxcn.aliyunidaas.com/</a></p>
+         */
         @NameInMap("LoginUrl")
         public String loginUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://yourdomain/path">https://yourdomain/path</a></p>
+         */
         @NameInMap("RedirectUrl")
         public String redirectUrl;
 
         @NameInMap("ResourceList")
         public java.util.List<GetGatewayAuthDetailResponseBodyDataResourceList> resourceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;openid&quot;,&quot;email&quot;]</p>
+         */
         @NameInMap("ScopesList")
         public String scopesList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/auth">https://example.com/auth</a></p>
+         */
         @NameInMap("Sub")
         public String sub;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Authorization</p>
+         */
         @NameInMap("TokenName")
         public String tokenName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Bearer</p>
+         */
         @NameInMap("TokenNamePrefix")
         public String tokenNamePrefix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TokenPass")
         public Boolean tokenPass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HEADER</p>
+         */
         @NameInMap("TokenPosition")
         public String tokenPosition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JWT</p>
+         */
         @NameInMap("Type")
         public String type;
 

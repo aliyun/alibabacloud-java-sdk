@@ -6,39 +6,55 @@ import com.aliyun.tea.*;
 public class ListGatewayServiceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to enable sorting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DescSort")
     public Boolean descSort;
 
     /**
-     * <p>The parameters that are used to specify filter conditions. The values of the parameters are in the format of {"key1":"value1"}.</p>
+     * <p>The parameters that are used to specify filter conditions. The values of the parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
      */
     @NameInMap("FilterParams")
     public ListGatewayServiceRequestFilterParams filterParams;
 
     /**
      * <p>The item based on which entries are sorted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GmtCreate</p>
      */
     @NameInMap("OrderItem")
     public String orderItem;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -99,42 +115,61 @@ public class ListGatewayServiceRequest extends TeaModel {
     public static class ListGatewayServiceRequestFilterParams extends TeaModel {
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-5017305290e14centbrveca****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The protocol of the service.</p>
-         * <br>
-         * <p>*   HTTP</p>
-         * <p>*   HTTPS</p>
-         * <p>*   HTTP2</p>
-         * <p>*   GRPC</p>
-         * <p>*   DUBBO</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * <li>HTTP2</li>
+         * <li>GRPC</li>
+         * <li>DUBBO</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
         /**
          * <p>The type of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

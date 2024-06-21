@@ -6,45 +6,61 @@ import com.aliyun.tea.*;
 public class DeleteNacosConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Beta")
     public Boolean beta;
 
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user-ds.yml</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
      * <p>The message returned.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HALVIE_MICRO_GROUP</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>The HTTP status code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_prepaid_public_cn-tl32epfyu18</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The request is successfully processed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0e9d849b-****-8435da6c21ad</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

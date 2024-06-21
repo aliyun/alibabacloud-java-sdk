@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryClusterSpecificationResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,33 +21,49 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -113,18 +132,27 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     public static class QueryClusterSpecificationResponseBodyData extends TeaModel {
         /**
          * <p>The engine specifications that can be used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_SC_1_2_200_c</p>
          */
         @NameInMap("ClusterSpecificationName")
         public String clusterSpecificationName;
 
         /**
          * <p>The number of vCPUs in the specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CpuCapacity")
         public String cpuCapacity;
 
         /**
          * <p>The memory size in the specifications. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MemoryCapacity")
         public String memoryCapacity;

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteSecurityGroupRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -18,12 +22,18 @@ public class DeleteSecurityGroupRuleRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-83b0ddb569434f82b9fe8e4c60c40f7c</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The destination ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93</p>
      */
     @NameInMap("Id")
     public Long id;

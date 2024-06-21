@@ -1,3 +1,12 @@
+2024-06-21 Version: 7.8.0
+- Support API EnableProxyProtocol.
+- Update API AddGateway: add param ClbNetworkType.
+- Update API AddGateway: update param NlbNetworkType.
+- Update API QueryConfig: update response param.
+- Update API UpdateConfig: add param AuthEnabled.
+- Update API UpdateConfig: add param Enable4lw.
+
+
 2024-06-12 Version: 7.7.0
 - Support API ListGatewayZone.
 - Update API GetPluginConfig: update response param.

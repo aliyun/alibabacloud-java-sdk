@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class UpdatePluginConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
      * <p>zh: Chinese en: English</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\# Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The application scope of the plug-in.</p>
-     * <br>
-     * <p>*   0: global</p>
-     * <p>*   1: route</p>
-     * <p>*   2: domain name</p>
+     * <ul>
+     * <li>0: global</li>
+     * <li>1: route</li>
+     * <li>2: domain name</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ConfigLevel")
     public Integer configLevel;
 
     /**
      * <p>Specifies whether to enable the plug-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("GatewayId")
     @Deprecated
@@ -43,12 +58,18 @@ public class UpdatePluginConfigRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-ubuwqygbq4783gqb2y3f87q****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1667309705000</p>
      */
     @NameInMap("GmtCreate")
     @Deprecated
@@ -56,6 +77,9 @@ public class UpdatePluginConfigRequest extends TeaModel {
 
     /**
      * <p>The update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1667309705000</p>
      */
     @NameInMap("GmtModified")
     @Deprecated
@@ -63,12 +87,18 @@ public class UpdatePluginConfigRequest extends TeaModel {
 
     /**
      * <p>The ID of the plug-in configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The ID of the gateway plug-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PluginId")
     public Long pluginId;

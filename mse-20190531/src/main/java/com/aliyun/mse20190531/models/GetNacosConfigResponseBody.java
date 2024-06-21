@@ -12,27 +12,40 @@ public class GetNacosConfigResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4EAB48C-BB4B-5B8D-B33B-35D69606C5AD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,60 +98,90 @@ public class GetNacosConfigResponseBody extends TeaModel {
     public static class GetNacosConfigResponseBodyConfiguration extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX,2.2.XX.XX</p>
          */
         @NameInMap("BetaIps")
         public String betaIps;
 
         /**
          * <p>The content of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log.level=error</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>The description of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For testing</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>The encryption key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
         /**
          * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The message digest of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123rfsdf3</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
          * <p>The tags of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>context</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The format of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Type")
         public String type;

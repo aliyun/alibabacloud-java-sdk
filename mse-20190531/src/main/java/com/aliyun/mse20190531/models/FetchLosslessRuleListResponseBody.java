@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class FetchLosslessRuleListResponseBody extends TeaModel {
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -16,29 +19,47 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     @NameInMap("Data")
     public FetchLosslessRuleListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56D9E600-6348-4260-B35F-583413F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,69 +128,103 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     public static class FetchLosslessRuleListResponseBodyDataResults extends TeaModel {
         /**
          * <p>Indicates whether service registration is complete before readiness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Aligned")
         public Boolean aligned;
 
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hkhon1po62@24810bf4364aea1</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo-demo</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The registration latency. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("DelayTime")
         public Integer delayTime;
 
         /**
          * <p>Indicates whether graceful start is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <ul>
+         * <li><code>true</code>: enabled</li>
+         * <li><code>false</code>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The slope of the prefetching curve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FuncType")
         public Integer funcType;
 
         /**
          * <p>Indicates whether online and offline processing details are displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("LossLessDetail")
         public Boolean lossLessDetail;
 
         /**
          * <p>Indicates whether notification is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Notice")
         public Boolean notice;
 
         /**
          * <p>Indicates whether service prefetching is complete before readiness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Related")
         public Boolean related;
 
         /**
          * <p>The prefetching duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("WarmupTime")
         public Integer warmupTime;
@@ -272,12 +327,18 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     public static class FetchLosslessRuleListResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -290,6 +351,9 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

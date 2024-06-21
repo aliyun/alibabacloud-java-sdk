@@ -6,70 +6,98 @@ import com.aliyun.tea.*;
 public class CreateMseServiceApplicationRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bsd-xxyp-open-goods-server</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The additional information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
     /**
      * <p>The programming language of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JAVA</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The edition of the MSE instance that you want to purchase.</p>
-     * <br>
-     * <p>*   mse_pro: Professional Edition.</p>
-     * <p>*   mse_dev: Developer Edition.</p>
+     * <ul>
+     * <li>mse_pro: Professional Edition.</li>
+     * <li>mse_dev: Developer Edition.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_pro</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;
 
     /**
      * <p>The ID of the region where the instance resides. Examples:</p>
-     * <br>
-     * <p>*   cn-hangzhou: China (Hangzhou)</p>
-     * <p>*   cn-beijing: China (Beijing)</p>
-     * <p>*   cn-shanghai: China (Shanghai)</p>
-     * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
-     * <p>*   cn-shenzhen: China (Shenzhen)</p>
-     * <br>
+     * <ul>
+     * <li>cn-hangzhou: China (Hangzhou)</li>
+     * <li>cn-beijing: China (Beijing)</li>
+     * <li>cn-shanghai: China (Shanghai)</li>
+     * <li>cn-zhangjiakou: China (Zhangjiakou)</li>
+     * <li>cn-shenzhen: China (Shenzhen)</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>Specifies whether to enable the Sentinel-compatible mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SentinelEnable")
     public String sentinelEnable;
 
     /**
      * <p>The service source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edasmsc</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>Specifies whether to enable switching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SwitchEnable")
     public String switchEnable;

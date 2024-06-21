@@ -7,6 +7,10 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
     @NameInMap("Data")
     public UpdateGatewayCircuitBreakerRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,63 +36,139 @@ public class UpdateGatewayCircuitBreakerRuleResponseBody extends TeaModel {
     }
 
     public static class UpdateGatewayCircuitBreakerRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BehaviorType")
         public Integer behaviorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BodyEncoding")
         public Integer bodyEncoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14407</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-c9bc5afd61014165bd58f621b491****</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>369</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("IdList")
         public java.util.List<Long> idList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("LimitMode")
         public Integer limitMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxAllowedMs")
         public Integer maxAllowedMs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MinRequestAmount")
         public Integer minRequestAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("RecoveryTimeoutSec")
         public Integer recoveryTimeoutSec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>key=value</p>
+         */
         @NameInMap("ResponseAdditionalHeaders")
         public String responseAdditionalHeaders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("ResponseContentBody")
         public String responseContentBody;
 
+        /**
+         * <strong>example:</strong>
+         * <p>www.******.com</p>
+         */
         @NameInMap("ResponseRedirectUrl")
         public String responseRedirectUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>201</p>
+         */
         @NameInMap("ResponseStatusCode")
         public Integer responseStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>645</p>
+         */
         @NameInMap("RouteId")
         public Long routeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>routeName</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("StatDurationSec")
         public Integer statDurationSec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Strategy")
         public Integer strategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TriggerRatio")
         public Integer triggerRatio;
 

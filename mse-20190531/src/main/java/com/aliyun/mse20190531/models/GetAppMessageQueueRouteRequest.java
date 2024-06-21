@@ -6,43 +6,58 @@ import com.aliyun.tea.*;
 public class GetAppMessageQueueRouteRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522baa898</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-app</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region where the instance resides. Examples:</p>
-     * <br>
-     * <p>*   `cn-hangzhou`: China (Hangzhou)</p>
-     * <p>*   `cn-beijing`: China (Beijing)</p>
-     * <p>*   `cn-shanghai`: China (Shanghai)</p>
-     * <p>*   `cn-zhangjiakou`: China (Zhangjiakou)</p>
-     * <p>*   `cn-shenzhen`: China (Shenzhen)</p>
-     * <br>
+     * <ul>
+     * <li><code>cn-hangzhou</code>: China (Hangzhou)</li>
+     * <li><code>cn-beijing</code>: China (Beijing)</li>
+     * <li><code>cn-shanghai</code>: China (Shanghai)</li>
+     * <li><code>cn-zhangjiakou</code>: China (Zhangjiakou)</li>
+     * <li><code>cn-shenzhen</code>: China (Shenzhen)</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;

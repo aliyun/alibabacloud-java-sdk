@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuerySlbSpecResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class QuerySlbSpecResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,36 +115,54 @@ public class QuerySlbSpecResponseBody extends TeaModel {
     public static class QuerySlbSpecResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The maximum number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50,000</p>
          */
         @NameInMap("MaxConnection")
         public String maxConnection;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard I</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The number of connections per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50,000</p>
          */
         @NameInMap("NewConnectionPerSecond")
         public String newConnectionPerSecond;
 
         /**
          * <p>The number of queries per second (QPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50,000</p>
          */
         @NameInMap("Qps")
         public String qps;
 
         /**
          * <p>The specification of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slb.s2.small</p>
          */
         @NameInMap("Spec")
         public String spec;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceListResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,24 +21,36 @@ public class GetServiceListResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx-xxx-xxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,12 +111,18 @@ public class GetServiceListResponseBody extends TeaModel {
     public static class GetServiceListResponseBodyDataMethods extends TeaModel {
         /**
          * <p>The controller of the method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibaba.SayHelloController</p>
          */
         @NameInMap("MethodController")
         public String methodController;
 
         /**
          * <p>The name of the method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sayHello</p>
          */
         @NameInMap("Name")
         public String name;
@@ -126,6 +147,9 @@ public class GetServiceListResponseBody extends TeaModel {
 
         /**
          * <p>The type of the return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>int</p>
          */
         @NameInMap("ReturnType")
         public String returnType;
@@ -188,24 +212,36 @@ public class GetServiceListResponseBody extends TeaModel {
     public static class GetServiceListResponseBodyData extends TeaModel {
         /**
          * <p>The name of the Dubbo application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo-application</p>
          */
         @NameInMap("DubboApplicationName")
         public String dubboApplicationName;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
         /**
          * <p>The group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
@@ -218,30 +254,45 @@ public class GetServiceListResponseBody extends TeaModel {
 
         /**
          * <p>The type of the service registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacos</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibaba.xxx</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dubbo</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;
 
         /**
          * <p>The name of the Spring application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-application</p>
          */
         @NameInMap("SpringApplicationName")
         public String springApplicationName;
 
         /**
          * <p>The version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("Version")
         public String version;

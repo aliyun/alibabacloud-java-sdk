@@ -6,88 +6,121 @@ import com.aliyun.tea.*;
 public class ListNamingTrackRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The end timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1665299698</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
     /**
      * <p>The group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_prepaid_public_cn-tl32d*****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.183.232</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd4d3703-e2a6-46b5-85c6-4447e4f****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Long pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.</p>
-     * <br>
-     * <p>*   `true`: sorts the query results in reverse chronological order.</p>
-     * <p>*   `false`: sorts the query results in chronological order.</p>
+     * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: <code>false</code>.</p>
+     * <ul>
+     * <li><code>true</code>: sorts the query results in reverse chronological order.</li>
+     * <li><code>false</code>: sorts the query results in chronological order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fpx-xms-baseinfo</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The start timestamp. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1660238450</p>
      */
     @NameInMap("StartTs")
     public Long startTs;

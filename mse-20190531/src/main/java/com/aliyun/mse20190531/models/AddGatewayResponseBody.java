@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class AddGatewayResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -21,27 +25,40 @@ public class AddGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
-     * <br>
-     * <p>*   If the request is successful, a success message is returned.</p>
-     * <p>*   If the request fails, an error message is returned.</p>
+     * <ul>
+     * <li>If the request is successful, a success message is returned.</li>
+     * <li>If the request fails, an error message is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The request is successfully processed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The return value.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -102,6 +119,9 @@ public class AddGatewayResponseBody extends TeaModel {
     public static class AddGatewayResponseBodyData extends TeaModel {
         /**
          * <p>code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-5017305290e14cebbrvec4a5****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;

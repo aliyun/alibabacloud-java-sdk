@@ -6,29 +6,41 @@ import com.aliyun.tea.*;
 public class GetImportFileUrlRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The file type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application/zip</p>
      */
     @NameInMap("ContentType")
     public String contentType;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_prepaid_public_cn-7pp2b****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12788f73-9848-4388-98f1-507778f2****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

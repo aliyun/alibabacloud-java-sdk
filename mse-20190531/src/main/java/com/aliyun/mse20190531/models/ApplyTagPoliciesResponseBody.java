@@ -12,18 +12,27 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -68,39 +77,58 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     public static class ApplyTagPoliciesResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the field is the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CarryData")
         public Boolean carryData;
 
         /**
          * <p>Indicates whether the rule is enabled. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The rule is enabled.</p>
-         * <p>*   `false`: The rule is disabled.</p>
+         * <ul>
+         * <li><code>true</code>: The rule is enabled.</li>
+         * <li><code>false</code>: The rule is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The ID of the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
         /**
          * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Rate")
         public Integer rate;
@@ -113,18 +141,27 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The details of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;_base\&quot;: {\&quot;rate\&quot;: 100, \&quot;remove\&quot;: true}, \&quot;blue\&quot;: {\&quot;rate\&quot;: 0}}</p>
          */
         @NameInMap("Rules")
         public String rules;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         @NameInMap("Tag")
         public String tag;

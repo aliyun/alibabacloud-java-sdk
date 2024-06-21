@@ -6,17 +6,25 @@ import com.aliyun.tea.*;
 public class ListAnsServicesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <blockquote>
+     * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-09k1q11****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -29,42 +37,59 @@ public class ListAnsServicesRequest extends TeaModel {
 
     /**
      * <p>The name of the contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>Specifies whether to query the number of instances that are used for the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * <blockquote>
+     * <p>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-st21v5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12233****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries returned per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -74,12 +99,18 @@ public class ListAnsServicesRequest extends TeaModel {
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
      * <p>The name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

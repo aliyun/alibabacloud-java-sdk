@@ -6,48 +6,71 @@ import com.aliyun.tea.*;
 public class OrderClusterHealthCheckRiskNoticeRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-st21ri2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Specifies whether to disable the notification feature if the risk item occurs.</p>
-     * <br>
-     * <p>*   true: disabled</p>
-     * <p>*   false: enabled</p>
+     * <ul>
+     * <li>true: disabled</li>
+     * <li>false: enabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Mute")
     public Boolean mute;
 
     /**
      * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("NoticeType")
     public String noticeType;
 
     /**
      * <p>The region in which the cluster resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
      * <p>The ID of the risk item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30010010001</p>
      */
     @NameInMap("RiskCode")
     public String riskCode;

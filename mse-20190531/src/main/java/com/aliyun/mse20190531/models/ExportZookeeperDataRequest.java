@@ -6,36 +6,53 @@ import com.aliyun.tea.*;
 public class ExportZookeeperDataRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The type of the object that is exported. Valid values:</p>
-     * <br>
-     * <p>*   transactionLog: transaction logs</p>
-     * <p>*   snapshot: snapshots</p>
+     * <ul>
+     * <li>transactionLog: transaction logs</li>
+     * <li>snapshot: snapshots</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>snapshot</p>
      */
     @NameInMap("ExportType")
     public String exportType;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-78v1l83****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

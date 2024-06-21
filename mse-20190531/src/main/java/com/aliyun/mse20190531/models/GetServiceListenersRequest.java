@@ -6,81 +6,121 @@ import com.aliyun.tea.*;
 public class GetServiceListenersRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the MSE instance to which the service belongs.</p>
-     * <br>
-     * <p>> You must specify InstanceId or ClusterId.</p>
+     * <blockquote>
+     * <p>You must specify InstanceId or ClusterId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-09k1q11****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the cluster to which the service belongs.</p>
-     * <br>
-     * <p>> The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.</p>
+     * <blockquote>
+     * <p>The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The group to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEB_GROUP</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
      */
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
     /**
      * <p>The ID of the instance to which the service belongs.</p>
-     * <br>
-     * <p>> You must specify InstanceId or ClusterId.</p>
+     * <blockquote>
+     * <p>You must specify InstanceId or ClusterId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_prepaid_public_cn-tl32odtt20j</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The namespace to which the service belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddaf8f12-****-b1c1-86e7c72e266b</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
      * <p>The name of the service whose listeners you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zeekr-orderboss</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

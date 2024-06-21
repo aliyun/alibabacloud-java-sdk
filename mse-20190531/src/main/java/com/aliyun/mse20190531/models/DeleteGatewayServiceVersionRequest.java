@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteGatewayServiceVersionRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-b6988bd16920479d9104e1729f97****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>777</p>
      */
     @NameInMap("ServiceId")
     public Long serviceId;
 
     /**
      * <p>The version of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;name\&quot;:\&quot;app\&quot;,\&quot;labels\&quot;:[{\&quot;key\&quot;:\&quot;app\&quot;,\&quot;value\&quot;:\&quot;demo-server\&quot;}]}</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;

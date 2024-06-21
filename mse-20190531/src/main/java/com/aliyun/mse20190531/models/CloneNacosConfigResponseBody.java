@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class CloneNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \\*\\*%s\\*\\* variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -20,39 +24,58 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
     /**
      * <p>The number of successful operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The details of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Clone Completed Successfully</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6678DBA9-5600-5948-ACF8-ED3105B288A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -129,12 +152,18 @@ public class CloneNacosConfigResponseBody extends TeaModel {
     public static class CloneNacosConfigResponseBodyDataFailData extends TeaModel {
         /**
          * <p>mse-200-105</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>duplicatedClusterAliasName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Group")
         public String group;
@@ -165,12 +194,18 @@ public class CloneNacosConfigResponseBody extends TeaModel {
     public static class CloneNacosConfigResponseBodyDataSkipData extends TeaModel {
         /**
          * <p>The details of the failed configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.yaml</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
          * <p>The data structure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Group")
         public String group;
@@ -207,6 +242,9 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
         /**
          * <p>The data structure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SkipCount")
         public Integer skipCount;
@@ -219,6 +257,9 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
         /**
          * <p>The details of the skipped configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SuccCount")
         public Integer succCount;

@@ -12,27 +12,40 @@ public class AddMigrationTaskResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is processed successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7466566F-F30F-4A29-965D-3E0AF21D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,64 +98,95 @@ public class AddMigrationTaskResponseBody extends TeaModel {
     public static class AddMigrationTaskResponseBodyData extends TeaModel {
         /**
          * <p>The type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   Nacos-Ans</p>
-         * <p>*   ZooKeeper</p>
-         * <p>*   Eureka</p>
+         * <ul>
+         * <li>Nacos-Ans</li>
+         * <li>ZooKeeper</li>
+         * <li>Eureka</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The endpoint of the source instance node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1:8848</p>
          */
         @NameInMap("OriginInstanceAddress")
         public String originInstanceAddress;
 
         /**
          * <p>The name of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Source instance</p>
          */
         @NameInMap("OriginInstanceName")
         public String originInstanceName;
 
         /**
          * <p>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namesapceId1,namesapceId2</p>
          */
         @NameInMap("OriginInstanceNamespace")
         public String originInstanceNamespace;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testsdfsdfsd</p>
          */
         @NameInMap("ProjectDesc")
         public String projectDesc;
 
         /**
          * <p>The name of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Destination instance</p>
          */
         @NameInMap("TargetClusterName")
         public String targetClusterName;
 
         /**
          * <p>The URL of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-94d****-nacos-ans.mse.aliyuncs.com:8848</p>
          */
         @NameInMap("TargetClusterUrl")
         public String targetClusterUrl;
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-7pp2w*****</p>
          */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183876217*****</p>
          */
         @NameInMap("UserId")
         public String userId;

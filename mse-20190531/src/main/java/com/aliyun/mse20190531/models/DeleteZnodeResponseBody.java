@@ -12,33 +12,49 @@ public class DeleteZnodeResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC34E4A3-5F1C-4E40-86EA-02EDF967****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,27 +115,40 @@ public class DeleteZnodeResponseBody extends TeaModel {
     public static class DeleteZnodeResponseBodyData extends TeaModel {
         /**
          * <p>The data of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("Data")
         public String data;
 
         /**
          * <p>Indicates whether the node information was returned. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The node information was returned.</p>
-         * <p>*   `false`: The node information failed to be returned.</p>
+         * <ul>
+         * <li><code>true</code>: The node information was returned.</li>
+         * <li><code>false</code>: The node information failed to be returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Dir")
         public Boolean dir;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-bc1a29b0-160230875****-reg-center-0-1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The path of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         @NameInMap("Path")
         public String path;

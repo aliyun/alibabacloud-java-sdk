@@ -12,27 +12,40 @@ public class QueryClusterDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-100-000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9515ACA4-E94D-440D-989E-C379FCED****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,48 +98,72 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     public static class QueryClusterDetailResponseBodyDataInstanceModels extends TeaModel {
         /**
          * <p>The timestamp when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578575377732</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
          * <p>The health status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.98.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.12.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-7413****-159616656****-reg-center-0-0</p>
          */
         @NameInMap("PodName")
         public String podName;
 
         /**
          * <p>The role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Peer</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The single-thread IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("SingleTunnelVip")
         public String singleTunnelVip;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-f</p>
          */
         @NameInMap("Zone")
         public String zone;
@@ -205,117 +242,175 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     public static class QueryClusterDetailResponseBodyData extends TeaModel {
         /**
          * <p>The whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("AclEntryList")
         public String aclEntryList;
 
         /**
          * <p>The ID of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp17020kiqvzutwwj****</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
          * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.1</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
         /**
          * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pay-as-you-go</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The alias of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-7413****</p>
          */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-bc1a29b0-160230875****</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>The engine specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE_SC_1_2_200_c</p>
          */
         @NameInMap("ClusterSpecification")
         public String clusterSpecification;
 
         /**
          * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nacos-Ans</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
          * <p>The version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.1</p>
          */
         @NameInMap("ClusterVersion")
         public String clusterVersion;
 
         /**
          * <p>The network connection type. Valid values:</p>
-         * <br>
-         * <p>*   slb</p>
-         * <p>*   eni</p>
+         * <ul>
+         * <li>slb</li>
+         * <li>eni</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         @NameInMap("ConnectionType")
         public String connectionType;
 
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-31 11:36:08</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The capacity of the disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("DiskCapacity")
         public Long diskCapacity;
 
         /**
          * <p>The type of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud-disk-ssd-multi-zone</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The health status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RESTART_SUCCESS</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
          * <p>The amount of time taken to create the instance. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98408</p>
          */
         @NameInMap("InitCostTime")
         public Long initCostTime;
 
         /**
          * <p>The creation status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RESTART_SUCCESS</p>
          */
         @NameInMap("InitStatus")
         public String initStatus;
 
         /**
          * <p>The number of instance nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-cn-st21ri2****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -328,88 +423,131 @@ public class QueryClusterDetailResponseBody extends TeaModel {
 
         /**
          * <p>The public IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.98.XX.XX</p>
          */
         @NameInMap("InternetAddress")
         public String internetAddress;
 
         /**
          * <p>The public endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-7413****-p.eureka.mse.aliyuncs.com</p>
          */
         @NameInMap("InternetDomain")
         public String internetDomain;
 
         /**
          * <p>The private port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8761</p>
          */
         @NameInMap("InternetPort")
         public String internetPort;
 
         /**
          * <p>The internal IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
         /**
          * <p>The internal endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse-7413****-eureka.mse.aliyuncs.com</p>
          */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
         /**
          * <p>The private port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8761</p>
          */
         @NameInMap("IntranetPort")
         public String intranetPort;
 
         /**
          * <p>The size of the memory. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MemoryCapacity")
         public Long memoryCapacity;
 
         /**
          * <p>The edition of Microservices Engine (MSE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mse_basic</p>
          */
         @NameInMap("MseVersion")
         public String mseVersion;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   `privatenet`: VPC</p>
-         * <p>*   `pubnet`: Internet</p>
+         * <ul>
+         * <li><code>privatenet</code>: VPC</li>
+         * <li><code>pubnet</code>: Internet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>privatenet</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The version number of the original order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.0</p>
          */
         @NameInMap("OrderClusterVersion")
         public String orderClusterVersion;
 
         /**
          * <p>The billing method, such as subscription or pay-as-you-go.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pay-as-you-go</p>
          */
         @NameInMap("PayInfo")
         public String payInfo;
 
         /**
-         * <p>The public bandwidth. Unit: Mbit/s.\\</p>
-         * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+         * <p>The public bandwidth. Unit: Mbit/s.\
+         * Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PubNetworkFlow")
         public String pubNetworkFlow;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2dhgysj*****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -422,12 +560,18 @@ public class QueryClusterDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxx-xxxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1hcg467ekqsv0zr****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

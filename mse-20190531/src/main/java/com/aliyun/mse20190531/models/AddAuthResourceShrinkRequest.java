@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class AddAuthResourceShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the authorization record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
      */
     @NameInMap("AuthId")
     public Long authId;
@@ -27,34 +34,50 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
 
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>128</p>
      */
     @NameInMap("DomainId")
     public Long domainId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>Specifies whether the matching is not case-sensitive. Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IgnoreCase")
     public Boolean ignoreCase;
 
     /**
      * <p>The matching type. Valid values:</p>
-     * <br>
-     * <p>*   EQUAL</p>
-     * <p>*   PRE</p>
-     * <p>*   ERGULAR</p>
+     * <ul>
+     * <li>EQUAL</li>
+     * <li>PRE</li>
+     * <li>ERGULAR</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>exact</p>
      */
     @NameInMap("MatchType")
     public String matchType;
 
     /**
      * <p>The path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/abc</p>
      */
     @NameInMap("Path")
     public String path;

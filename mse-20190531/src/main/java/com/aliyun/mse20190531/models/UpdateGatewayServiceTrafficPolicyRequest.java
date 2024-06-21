@@ -6,22 +6,28 @@ import com.aliyun.tea.*;
 public class UpdateGatewayServiceTrafficPolicyRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN** (default): Chinese</p>
-     * <p>*   **en-US**: English</p>
+     * <ul>
+     * <li><strong>zh-CN</strong> (default): Chinese</li>
+     * <li><strong>en-US</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>429</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The traffic policy of the gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("GatewayTrafficPolicy")
@@ -29,12 +35,18 @@ public class UpdateGatewayServiceTrafficPolicyRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-75c5036c083e4f89ba8ef9fafff2e902</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>411</p>
      */
     @NameInMap("ServiceId")
     public Long serviceId;

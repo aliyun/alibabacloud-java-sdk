@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class AddAuthResourceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the authorization record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
      */
     @NameInMap("AuthId")
     public Long authId;
@@ -27,34 +34,50 @@ public class AddAuthResourceRequest extends TeaModel {
 
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>128</p>
      */
     @NameInMap("DomainId")
     public Long domainId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>Specifies whether the matching is not case-sensitive. Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IgnoreCase")
     public Boolean ignoreCase;
 
     /**
      * <p>The matching type. Valid values:</p>
-     * <br>
-     * <p>*   EQUAL</p>
-     * <p>*   PRE</p>
-     * <p>*   ERGULAR</p>
+     * <ul>
+     * <li>EQUAL</li>
+     * <li>PRE</li>
+     * <li>ERGULAR</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>exact</p>
      */
     @NameInMap("MatchType")
     public String matchType;
 
     /**
      * <p>The path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/abc</p>
      */
     @NameInMap("Path")
     public String path;
@@ -131,92 +154,94 @@ public class AddAuthResourceRequest extends TeaModel {
     public static class AddAuthResourceRequestAuthResourceHeaderList extends TeaModel {
         /**
          * <p>The parameter of the HTTP header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Access-Control-Allow-Origin</p>
          */
         @NameInMap("HeaderKey")
         public String headerKey;
 
         /**
          * <p>The header matching mode.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SUFFIX</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   EXIST</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   PREFIX</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   EQUAL</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   EXCLUDE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NOT_EQUAL</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NOT_EXIST</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   REGREX</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   INCLUDE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SUFFIX</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>EXIST</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PREFIX</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>EQUAL</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>EXCLUDE</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NOT_EQUAL</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NOT_EXIST</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>REGREX</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>INCLUDE</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
          */
         @NameInMap("HeaderMethod")
         public String headerMethod;
 
         /**
          * <p>The parameter value of the HTTP header.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("HeaderValue")
         public String headerValue;

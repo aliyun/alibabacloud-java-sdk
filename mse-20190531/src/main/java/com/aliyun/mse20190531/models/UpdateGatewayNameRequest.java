@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class UpdateGatewayNameRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-1cef54brvecdb419fb264d4f9b8c</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The name of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-test</p>
      */
     @NameInMap("Name")
     public String name;

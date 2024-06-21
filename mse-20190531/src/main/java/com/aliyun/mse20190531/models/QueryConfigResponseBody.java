@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryConfigResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class QueryConfigResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8BD1E58D-0755-42AC-A599-E6B55112EC53</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,6 +115,9 @@ public class QueryConfigResponseBody extends TeaModel {
     public static class QueryConfigResponseBodyDataNacosRunningEnv extends TeaModel {
         /**
          * <p>Indicates whether empty list protection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("emptyProtect")
         public Boolean emptyProtect;
@@ -119,135 +138,204 @@ public class QueryConfigResponseBody extends TeaModel {
     }
 
     public static class QueryConfigResponseBodyData extends TeaModel {
+        @NameInMap("AuthEnabled")
+        public Boolean authEnabled;
+
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("AutopurgePurgeInterval")
         public String autopurgePurgeInterval;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("AutopurgeSnapRetainCount")
         public String autopurgeSnapRetainCount;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
          * <p>Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: enabled.</p>
-         * <p>*   `false`: disabled.</p>
+         * <ul>
+         * <li><code>true</code>: enabled.</li>
+         * <li><code>false</code>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConfigAuthEnabled")
         public Boolean configAuthEnabled;
 
         /**
          * <p>Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: supported.</p>
-         * <p>*   `false`: not supported.</p>
+         * <ul>
+         * <li><code>true</code>: supported.</li>
+         * <li><code>false</code>: not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConfigAuthSupported")
         public Boolean configAuthSupported;
 
         /**
          * <p>The maximum size of contents in a configuration. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ConfigContentLimit")
         public Long configContentLimit;
 
         /**
          * <p>Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: enabled.</p>
-         * <p>*   `false`: disabled.</p>
+         * <ul>
+         * <li><code>true</code>: enabled.</li>
+         * <li><code>false</code>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConfigSecretEnabled")
         public Boolean configSecretEnabled;
 
         /**
          * <p>Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: supported.</p>
-         * <p>*   `false`: not supported.</p>
+         * <ul>
+         * <li><code>true</code>: supported.</li>
+         * <li><code>false</code>: not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
         /**
          * <p>Indicates whether the Nacos open source console is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConsoleUIEnabled")
         public Boolean consoleUIEnabled;
 
+        @NameInMap("Enable4lw")
+        public Boolean enable4lw;
+
         /**
          * <p>Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EurekaSupported")
         public Boolean eurekaSupported;
 
         /**
          * <p>Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ExtendedTypesEnable")
         public Boolean extendedTypesEnable;
 
         /**
          * <p>The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InitLimit")
         public String initLimit;
 
         /**
          * <p>The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("JuteMaxbuffer")
         public String juteMaxbuffer;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("JvmFlagsCustom")
         public String jvmFlagsCustom;
 
         /**
          * <p>Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: enabled.</p>
-         * <p>*   `false`: disabled.</p>
+         * <ul>
+         * <li><code>true</code>: enabled.</li>
+         * <li><code>false</code>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MCPEnabled")
         public Boolean MCPEnabled;
 
         /**
          * <p>Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: supported.</p>
-         * <p>*   `false`: not supported.</p>
+         * <ul>
+         * <li><code>true</code>: supported.</li>
+         * <li><code>false</code>: not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MCPSupported")
         public Boolean MCPSupported;
 
         /**
-         * <p>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\\</p>
-         * <p>If this parameter is set to 0, no limits are imposed on the number of connections.</p>
+         * <p>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
+         * If this parameter is set to 0, no limits are imposed on the number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MaxClientCnxns")
         public String maxClientCnxns;
 
         /**
          * <p>The maximum timeout period. This parameter is valid for ZooKeeper instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("MaxSessionTimeout")
         public String maxSessionTimeout;
 
         /**
          * <p>The minimum timeout period. This parameter is valid for ZooKeeper instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("MinSessionTimeout")
         public String minSessionTimeout;
@@ -260,81 +348,119 @@ public class QueryConfigResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: enabled.</p>
-         * <p>*   `false`: disabled.</p>
+         * <ul>
+         * <li><code>true</code>: enabled.</li>
+         * <li><code>false</code>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("NamingAuthEnabled")
         public Boolean namingAuthEnabled;
 
         /**
          * <p>Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: supported.</p>
-         * <p>*   `false`: not supported.</p>
+         * <ul>
+         * <li><code>true</code>: supported.</li>
+         * <li><code>false</code>: not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NamingAuthSupported")
         public Boolean namingAuthSupported;
 
         /**
          * <p>Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: supported.</p>
-         * <p>*   `false`: not supported.</p>
+         * <ul>
+         * <li><code>true</code>: supported.</li>
+         * <li><code>false</code>: not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NamingCreateServiceSupported")
         public Boolean namingCreateServiceSupported;
 
         /**
          * <p>Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:</p>
-         * <br>
-         * <p>*   `true`: enabled.</p>
-         * <p>*   `false`: disabled.</p>
+         * <ul>
+         * <li><code>true</code>: enabled.</li>
+         * <li><code>false</code>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("OpenSuperAcl")
         public Boolean openSuperAcl;
 
         /**
          * <p>The password that corresponds to the username. This parameter is valid only if OpenSuperAcl is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
          */
         @NameInMap("PassWord")
         public String passWord;
 
         /**
          * <p>Indicates whether the instance was restarted and new configurations have taken effect. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The restart was successful.</p>
-         * <p>*   `false`: The restart failed.</p>
+         * <ul>
+         * <li><code>true</code>: The restart was successful.</li>
+         * <li><code>false</code>: The restart failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RestartFlag")
         public Boolean restartFlag;
 
         /**
          * <p>The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("SnapshotCount")
         public String snapshotCount;
 
         /**
          * <p>The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SyncLimit")
         public String syncLimit;
 
         /**
          * <p>MSE Nacos supports TLS transmission link encryption since version 2.1.2.1. Nacos clients must be upgraded to version 2.2.1 or later. After TLS is enabled, the system performance will decrease by about 10%. You must evaluate the system capacity. For more information about the relevant operations, see Nacos TLS transmission encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TLSEnabled")
         public Boolean TLSEnabled;
 
         /**
          * <p>The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("TickTime")
         public String tickTime;
 
         /**
          * <p>The username of the user. This parameter is valid only if OpenSuperAcl is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -342,6 +468,14 @@ public class QueryConfigResponseBody extends TeaModel {
         public static QueryConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryConfigResponseBodyData self = new QueryConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryConfigResponseBodyData setAuthEnabled(Boolean authEnabled) {
+            this.authEnabled = authEnabled;
+            return this;
+        }
+        public Boolean getAuthEnabled() {
+            return this.authEnabled;
         }
 
         public QueryConfigResponseBodyData setAutopurgePurgeInterval(String autopurgePurgeInterval) {
@@ -414,6 +548,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getConsoleUIEnabled() {
             return this.consoleUIEnabled;
+        }
+
+        public QueryConfigResponseBodyData setEnable4lw(Boolean enable4lw) {
+            this.enable4lw = enable4lw;
+            return this;
+        }
+        public Boolean getEnable4lw() {
+            return this.enable4lw;
         }
 
         public QueryConfigResponseBodyData setEurekaSupported(Boolean eurekaSupported) {

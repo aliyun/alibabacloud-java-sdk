@@ -6,39 +6,55 @@ import com.aliyun.tea.*;
 public class ListGatewayRouteRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>Specifies whether to enable sorting. This parameter is unavailable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DescSort")
     public Boolean descSort;
 
     /**
-     * <p>The parameters that specify filter conditions. The parameters are in the format of {"key1":"value1"}.</p>
+     * <p>The parameters that specify filter conditions. The parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</p>
      */
     @NameInMap("FilterParams")
     public ListGatewayRouteRequestFilterParams filterParams;
 
     /**
      * <p>The item based on which entries are sorted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GmtCreate</p>
      */
     @NameInMap("OrderItem")
     public String orderItem;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -99,6 +115,9 @@ public class ListGatewayRouteRequest extends TeaModel {
     public static class ListGatewayRouteRequestFilterParams extends TeaModel {
         /**
          * <p>The default service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DefaultServiceId")
         @Deprecated
@@ -106,47 +125,71 @@ public class ListGatewayRouteRequest extends TeaModel {
 
         /**
          * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>284</p>
          */
         @NameInMap("DomainId")
         public Long domainId;
 
         /**
          * <p>The associated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.alites.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The unique ID of the gateway.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-30a0106924c94bca8712ec4e79fc5acc</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The name of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/test</p>
+         */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RouteOrder")
         public Integer routeOrder;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

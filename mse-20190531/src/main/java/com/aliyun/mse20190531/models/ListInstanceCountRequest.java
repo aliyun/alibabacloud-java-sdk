@@ -6,42 +6,60 @@ import com.aliyun.tea.*;
 public class ListInstanceCountRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The type of the instance. Valid values: ZooKeeper and Nacos-Ans.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Nacos-Ans</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The edition type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   `mse_dev`: Developer Edition</p>
-     * <p>*   `mse_pro`: Professional Edition</p>
+     * <ul>
+     * <li><code>mse_dev</code>: Developer Edition</li>
+     * <li><code>mse_pro</code>: Professional Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mse_pro</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;
 
     /**
      * <p>The ID of the region where the instance resides. Examples:</p>
-     * <br>
-     * <p>*   cn-hangzhou: China (Hangzhou)</p>
-     * <p>*   cn-beijing: China (Beijing)</p>
-     * <p>*   cn-shanghai: China (Shanghai)</p>
-     * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
-     * <p>*   cn-shenzhen: China (Shenzhen)</p>
+     * <ul>
+     * <li>cn-hangzhou: China (Hangzhou)</li>
+     * <li>cn-beijing: China (Beijing)</li>
+     * <li>cn-shanghai: China (Shanghai)</li>
+     * <li>cn-zhangjiakou: China (Zhangjiakou)</li>
+     * <li>cn-shenzhen: China (Shenzhen)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The extended request parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;

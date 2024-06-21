@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteHTTPRewriteRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>430</p>
      */
     @NameInMap("GatewayId")
     public Long gatewayId;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-90392d768a3847a7b804c505254da96d</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
      * <p>The information about the rewrite policy. The JSON format is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;pathType&quot;:&quot;PRE&quot;,&quot;path&quot;:&quot;/&quot;,&quot;status&quot;:&quot;off&quot;}</p>
      */
     @NameInMap("HttpRewriteJSON")
     public String httpRewriteJSON;
 
     /**
      * <p>The ID of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>238</p>
      */
     @NameInMap("Id")
     public Long id;

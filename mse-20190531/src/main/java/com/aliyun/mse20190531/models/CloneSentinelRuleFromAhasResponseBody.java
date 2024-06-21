@@ -12,6 +12,9 @@ public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE5C32A1-BC0E-4B79-817C-103E4EDF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

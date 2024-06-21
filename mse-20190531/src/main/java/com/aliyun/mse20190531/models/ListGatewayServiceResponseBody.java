@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListGatewayServiceResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F46CDBA4-B1EE-5C94-8A48-51C10177****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,18 +115,27 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie extends TeaModel {
         /**
          * <p>The name of the cookie.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The path of the cookie.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The lifecycle of the cookie.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
          */
         @NameInMap("Ttl")
         public String ttl;
@@ -149,11 +174,15 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig extends TeaModel {
         /**
          * <p>The type based on which consistent hashing load balancing is performed.</p>
-         * <br>
-         * <p>*   HEADER</p>
-         * <p>*   COOKIE</p>
-         * <p>*   SOURCE_IP</p>
-         * <p>*   QUERY_PARAMETER</p>
+         * <ul>
+         * <li>HEADER</li>
+         * <li>COOKIE</li>
+         * <li>SOURCE_IP</li>
+         * <li>QUERY_PARAMETER</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HEADER</p>
          */
         @NameInMap("ConsistentHashLBType")
         public String consistentHashLBType;
@@ -166,12 +195,18 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The minimum value of the hash ring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("MinimumRingSize")
         public Long minimumRingSize;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -224,17 +259,24 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The load balancing type.</p>
-         * <br>
-         * <p>*   ROUND_ROBIN</p>
-         * <p>*   LEAST_CONN</p>
-         * <p>*   RANDOM</p>
-         * <p>*   CONSISTENT_HASH</p>
+         * <ul>
+         * <li>ROUND_ROBIN</li>
+         * <li>LEAST_CONN</li>
+         * <li>RANDOM</li>
+         * <li>CONSISTENT_HASH</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RANDOM</p>
          */
         @NameInMap("LoadbalancerType")
         public String loadbalancerType;
 
         /**
          * <p>The prefetch time of the least connection load balancing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("WarmupDuration")
         public Integer warmupDuration;
@@ -273,35 +315,51 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public static class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls extends TeaModel {
         /**
          * <p>The public key of the CA certificate .</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content</p>
          */
         @NameInMap("CaCertContent")
         public String caCertContent;
 
         /**
          * <p>The ID of the certification authority (CA) certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5******-cn-hangzhou</p>
          */
         @NameInMap("CaCertId")
         public String caCertId;
 
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5******-cn-hangzhou</p>
          */
         @NameInMap("CertId")
         public String certId;
 
         /**
          * <p>The TLS mode.</p>
-         * <br>
-         * <p>*   DISABLE</p>
-         * <p>*   SIMPLE</p>
-         * <p>*   MUTUAL</p>
-         * <p>*   ISTIO_MUTUAL</p>
+         * <ul>
+         * <li>DISABLE</li>
+         * <li>SIMPLE</li>
+         * <li>MUTUAL</li>
+         * <li>ISTIO_MUTUAL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The Server Name Indication (SNI) value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-sni</p>
          */
         @NameInMap("Sni")
         public String sni;
@@ -406,6 +464,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public static class ListGatewayServiceResponseBodyDataResultHealthCheckInfo extends TeaModel {
         /**
          * <p>Indicates whether checks are performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Check")
         public Boolean check;
@@ -418,42 +479,63 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The threshold for healthy instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
         /**
          * <p>The endpoint of the HTTP request for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://172.168.0.1">http://172.168.0.1</a></p>
          */
         @NameInMap("HttpHost")
         public String httpHost;
 
         /**
          * <p>The path to which the HTTP request for the health check is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/health</p>
          */
         @NameInMap("HttpPath")
         public String httpPath;
 
         /**
          * <p>The health check interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
          * <p>The network protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
         /**
          * <p>The threshold for unhealthy instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
@@ -540,6 +622,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public static class ListGatewayServiceResponseBodyDataResultVersions extends TeaModel {
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -562,6 +647,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public static class ListGatewayServiceResponseBodyDataResult extends TeaModel {
         /**
          * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
@@ -574,40 +662,59 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-5017305290e14centbrveca****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07 18:07:57</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07 18:07:57</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The health status.</p>
-         * <br>
-         * <p>*   Health</p>
-         * <p>*   Unhealthy</p>
-         * <p>*   Unknown</p>
+         * <ul>
+         * <li>Health</li>
+         * <li>Unhealthy</li>
+         * <li>Unknown</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unhealthy</p>
          */
         @NameInMap("HealehStatus")
         public String healehStatus;
 
         /**
          * <p>Indicates whether health checks are performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HealthCheck")
         public Boolean healthCheck;
@@ -620,16 +727,23 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The health status.</p>
-         * <br>
-         * <p>*   Health</p>
-         * <p>*   Unhealthy</p>
-         * <p>*   Unknown</p>
+         * <ul>
+         * <li>Health</li>
+         * <li>Unhealthy</li>
+         * <li>Unknown</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unhealthy</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -642,18 +756,27 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The metadata or IP addresses of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("MetaInfo")
         public String metaInfo;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -669,30 +792,45 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the service that is registered with the service registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
         /**
          * <p>The service port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ServicePort")
         public Long servicePort;
 
         /**
          * <p>The protocol of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
         /**
          * <p>The ID of the service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SourceId")
         public Long sourceId;
 
         /**
          * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -911,12 +1049,18 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     public static class ListGatewayServiceResponseBodyData extends TeaModel {
         /**
          * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -929,6 +1073,9 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

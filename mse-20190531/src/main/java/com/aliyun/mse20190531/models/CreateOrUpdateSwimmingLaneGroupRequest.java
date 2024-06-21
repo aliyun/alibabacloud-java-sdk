@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The IDs of applications. Separate application IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hkhon1po62@c3df23522baa898,hkhon1po62@66e5235415730a5,hkhon1po62@958bba95910341f</p>
      */
     @NameInMap("AppIds")
     public String appIds;
@@ -24,44 +31,67 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable database canary release.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DbGrayEnable")
     public Boolean dbGrayEnable;
 
     /**
      * <p>The ingress application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ingress</p>
      */
     @NameInMap("EntryApp")
     public String entryApp;
 
     /**
      * <p>The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The side for message filtering when the canary release for messaging feature is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Server</p>
      */
     @NameInMap("MessageQueueFilterSide")
     public String messageQueueFilterSide;
 
     /**
      * <p>Specifies whether to enable canary release for messaging.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("MessageQueueGrayEnable")
     public Boolean messageQueueGrayEnable;
 
     /**
      * <p>The name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -77,6 +107,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Region")
     public String region;
@@ -86,6 +119,9 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
 
     /**
      * <p>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;

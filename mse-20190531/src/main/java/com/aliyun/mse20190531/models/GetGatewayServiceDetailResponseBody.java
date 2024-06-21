@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetGatewayServiceDetailResponseBody extends TeaModel {
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,27 +21,40 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9802C54E-5CC5-5706-927B-993DBB6DCF2F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,6 +115,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public static class GetGatewayServiceDetailResponseBodyDataLabelDetails extends TeaModel {
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>label</p>
          */
         @NameInMap("Key")
         public String key;
@@ -135,36 +154,54 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public static class GetGatewayServiceDetailResponseBodyDataPortTrafficPolicyList extends TeaModel {
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-2837hfd91h34dbg87364g*****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667460287386</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667460287386</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The port ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
 
         /**
          * <p>The service port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ServicePort")
         public Integer servicePort;
@@ -241,12 +278,18 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels extends TeaModel {
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         @NameInMap("Value")
         public String value;
@@ -283,6 +326,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         @NameInMap("Name")
         public String name;
@@ -313,12 +359,18 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetails extends TeaModel {
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EndpointNum")
         public Integer endpointNum;
 
         /**
          * <p>The percentage of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20%</p>
          */
         @NameInMap("EndpointNumPercent")
         public String endpointNumPercent;
@@ -363,18 +415,27 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public static class GetGatewayServiceDetailResponseBodyDataVersions extends TeaModel {
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -413,54 +474,81 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     public static class GetGatewayServiceDetailResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
          * <p>The traffic policy of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("GatewayTrafficPolicy")
         public TrafficPolicy gatewayTrafficPolicy;
 
         /**
          * <p>The unique ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-7ea3da97b96543e19f6c597c****</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07 18:07:57</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The last modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-07T10:07:57.000+0000</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>Indicates whether the health check is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HealthCheck")
         public String healthCheck;
 
         /**
          * <p>The status of the health check. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -479,18 +567,27 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The basic information about the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("MetaInfo")
         public String metaInfo;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -512,24 +609,36 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the service registered with the service registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ServiceNameInRegistry")
         public String serviceNameInRegistry;
 
         /**
          * <p>The protocol of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
         /**
          * <p>The ID of the service source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SourceId")
         public Long sourceId;
 
         /**
          * <p>The source type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MSE</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

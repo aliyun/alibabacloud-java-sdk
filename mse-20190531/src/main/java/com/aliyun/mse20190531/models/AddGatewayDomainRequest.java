@@ -6,64 +6,94 @@ import com.aliyun.tea.*;
 public class AddGatewayDomainRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The ID of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6828169-cn-hangzhou</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
     /**
      * <p>The unique ID of the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-86575c0bc9f04ecfbacb92b8e392****</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>Specifies whether to enable `HTTP/2`.</p>
-     * <br>
-     * <p>*   `open`: enables `HTTP/2`</p>
-     * <p>*   `close`: disables `HTTP/2`</p>
-     * <p>*   `globalConfig`: uses global configurations</p>
+     * <p>Specifies whether to enable <code>HTTP/2</code>.</p>
+     * <ul>
+     * <li><code>open</code>: enables <code>HTTP/2</code></li>
+     * <li><code>close</code>: disables <code>HTTP/2</code></li>
+     * <li><code>globalConfig</code>: uses global configurations</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>close</p>
      */
     @NameInMap("Http2")
     public String http2;
 
     /**
      * <p>Specifies whether to enable HTTPS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MustHttps")
     public Boolean mustHttps;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.com</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The type of the protocol. Valid values:</p>
-     * <br>
-     * <p>*   `HTTP`</p>
-     * <p>*   `HTTPS`</p>
+     * <ul>
+     * <li><code>HTTP</code></li>
+     * <li><code>HTTPS</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>The maximum version of Transport Layer Security (TLS).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLS 1.3</p>
      */
     @NameInMap("TlsMax")
     public String tlsMax;
 
     /**
      * <p>The minimum version of TLS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLS 1.0</p>
      */
     @NameInMap("TlsMin")
     public String tlsMin;

@@ -6,55 +6,78 @@ import com.aliyun.tea.*;
 public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The programming language of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JAVA</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>MSE命名空间名字。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region to which the application belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>Specifies whether to start the switch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SentinelEnable")
     public String sentinelEnable;
 
     /**
      * <p>The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACK</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SwitchEnable")
     public String switchEnable;

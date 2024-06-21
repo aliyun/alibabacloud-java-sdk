@@ -4,9 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewayFlowRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>608</p>
+     */
     @NameInMap("Data")
     public Long data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72FC625E-9629-591B-9C01-3F0BFDAB****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
