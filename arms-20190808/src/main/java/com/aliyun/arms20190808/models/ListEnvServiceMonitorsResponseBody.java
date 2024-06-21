@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,30 +77,45 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     public static class ListEnvServiceMonitorsResponseBodyDataEndpoints extends TeaModel {
         /**
          * <p>The collection interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30s</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
          * <p>The number of pods that match the ServiceMonitor endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MatchedTargetCount")
         public Integer matchedTargetCount;
 
         /**
          * <p>The collection path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/metrics</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The external port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9101</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -146,30 +170,45 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     public static class ListEnvServiceMonitorsResponseBodyData extends TeaModel {
         /**
          * <p>The name of the component to which the ServiceMonitor belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
          * <p>The instance name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql1</p>
          */
         @NameInMap("AddonReleaseName")
         public String addonReleaseName;
 
         /**
          * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.0</p>
          */
         @NameInMap("AddonVersion")
         public String addonVersion;
 
         /**
          * <p>The YAML configuration string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
          * <p>The time when the ServiceMonitor was created. The value of this parameter is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-10-11T22:32:11Z</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
@@ -182,36 +221,54 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
         /**
          * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>The number of matched services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MatchedServiceCount")
         public Integer matchedServiceCount;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the ServiceMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sm1</p>
          */
         @NameInMap("ServiceMonitorName")
         public String serviceMonitorName;
 
         /**
          * <p>The status of the ServiceMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;

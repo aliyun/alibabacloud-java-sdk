@@ -12,6 +12,9 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16AF921B-8187-489F-9913-43C808B4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,60 +43,89 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
     public static class CreateOrUpdateIMRobotResponseBodyAlertRobot extends TeaModel {
         /**
          * <p>The configurations of the alert card template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;button&quot;: [         &quot;claim&quot;,         &quot;close&quot;,         &quot;follow&quot;,         &quot;send_itsm&quot;,         &quot;block&quot;,         &quot;unResolvedIncident&quot;     ],     &quot;field&quot;: [         {             &quot;fieldName&quot;: &quot;alarmName&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;notificationPolicy&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;alarmContent&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;alarmTime&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;seriesChart&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;includeEvent&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;assigned&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;similarAlarm&quot;,             &quot;visible&quot;: true         },         {             &quot;fieldName&quot;: &quot;operator&quot;,             &quot;visible&quot;: true         }     ] }</p>
          */
         @NameInMap("CardTemplate")
         public String cardTemplate;
 
         /**
          * <p>Indicates whether daily statistics are sent. Valid values:</p>
-         * <br>
-         * <p>*   `false` (default): Daily statistics are not sent.</p>
-         * <p>*   `true`: Daily statistics are sent.</p>
+         * <ul>
+         * <li><code>false</code> (default): Daily statistics are not sent.</li>
+         * <li><code>true</code>: Daily statistics are sent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DailyNoc")
         public Boolean dailyNoc;
 
         /**
          * <p>The point in time at which the daily statistics are sent. The information that ARMS sends at the specified points in time includes the total number of alerts generated on the current day, the number of cleared alerts, and the number of alerts to be cleared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:30,17:00</p>
          */
         @NameInMap("DailyNocTime")
         public String dailyNocTime;
 
         /**
          * <p>Indicates whether the Outgoing feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableOutgoing")
         public Boolean enableOutgoing;
 
         /**
          * <p>The webhook URL of the IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
          */
         @NameInMap("RobotAddress")
         public String robotAddress;
 
         /**
          * <p>The ID of the IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("RobotId")
         public Float robotId;
 
         /**
          * <p>The name of the IM chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chatbot name</p>
          */
         @NameInMap("RobotName")
         public String robotName;
 
         /**
          * <p>The token required to enable the Outgoing feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656558719183be1245ab44********</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
          * <p>The type of the IM chatbot. Valid values:</p>
-         * <br>
-         * <p>*   `dingding`: DingTalk chatbot</p>
-         * <p>*   `wechat`: WeCom chatbot</p>
+         * <ul>
+         * <li><code>dingding</code>: DingTalk chatbot</li>
+         * <li><code>wechat</code>: WeCom chatbot</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dingding</p>
          */
         @NameInMap("Type")
         public String type;

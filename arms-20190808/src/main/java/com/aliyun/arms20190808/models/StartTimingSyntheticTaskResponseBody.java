@@ -4,15 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class StartTimingSyntheticTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

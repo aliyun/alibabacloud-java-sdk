@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListEnvPodMonitorsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C518054-852F-4023-ABC1-4AF95FF7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,30 +77,45 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
     public static class ListEnvPodMonitorsResponseBodyDataEndpoints extends TeaModel {
         /**
          * <p>The collection interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30s</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
          * <p>The number of pods that match the PodMonitor endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MatchedTargetCount")
         public Integer matchedTargetCount;
 
         /**
          * <p>The collection path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/metrics</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The external port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9182</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The destination port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -146,30 +170,45 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
     public static class ListEnvPodMonitorsResponseBodyData extends TeaModel {
         /**
          * <p>The name of the component to which the PodMonitor belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
          * <p>The instance name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql1</p>
          */
         @NameInMap("AddonReleaseName")
         public String addonReleaseName;
 
         /**
          * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.5</p>
          */
         @NameInMap("AddonVersion")
         public String addonVersion;
 
         /**
          * <p>The YAML configuration string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
          * <p>The time when the PodMonitor was created. The value of this parameter is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-01-02T11:34:22Z</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
@@ -182,30 +221,45 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
 
         /**
          * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The name of the PodMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm1</p>
          */
         @NameInMap("PodMonitorName")
         public String podMonitorName;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the PodMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;

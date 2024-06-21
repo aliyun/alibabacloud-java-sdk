@@ -4,21 +4,36 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentFeaturesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public java.util.List<ListEnvironmentFeaturesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -77,27 +92,55 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
+         */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx">http://xxx</a></p>
+         */
         @NameInMap("Icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.17</p>
+         */
         @NameInMap("LatestVersion")
         public String latestVersion;
 
         @NameInMap("Managed")
         public Boolean managed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>metric-agent</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.17</p>
+         */
         @NameInMap("Version")
         public String version;
 

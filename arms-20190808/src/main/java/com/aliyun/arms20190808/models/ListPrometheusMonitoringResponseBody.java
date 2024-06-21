@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPrometheusMonitoringResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D80ADAAC-8C32-5479-BD14-C28CF832****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,6 +77,9 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
     public static class ListPrometheusMonitoringResponseBodyData extends TeaModel {
         /**
          * <p>Prometheus Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -80,18 +92,27 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
 
         /**
          * <p>The name of the monitoring configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>podMonitor1</p>
          */
         @NameInMap("MonitoringName")
         public String monitoringName;
 
         /**
          * <p>The status of the monitoring configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the monitoring configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>podMonitor</p>
          */
         @NameInMap("Type")
         public String type;

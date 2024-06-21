@@ -12,6 +12,9 @@ public class UpdateIntegrationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class UpdateIntegrationResponseBody extends TeaModel {
     public static class UpdateIntegrationResponseBodyIntegration extends TeaModel {
         /**
          * <p>The endpoint of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN">https://alerts.aliyuncs.com/api/v1/integrations/custom/ymQBN</a>******</p>
          */
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
         /**
          * <p>Indicates whether alert events are automatically cleared. Valid values:</p>
-         * <br>
-         * <p>*   true (default)</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
         /**
          * <p>The description of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The fields whose values are deduplicated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LABEL.dimensions::LABEL.ruleId</p>
          */
         @NameInMap("DuplicateKey")
         public String duplicateKey;
@@ -79,55 +95,82 @@ public class UpdateIntegrationResponseBody extends TeaModel {
 
         /**
          * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
-         * <br>
-         * <p>> Only Log Service supports this parameter.</p>
+         * <blockquote>
+         * <p>Only Log Service supports this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>$.status</p>
          */
         @NameInMap("InitiativeRecoverField")
         public String initiativeRecoverField;
 
         /**
          * <p>The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
-         * <br>
-         * <p>> Only Log Service supports this parameter.</p>
+         * <blockquote>
+         * <p>Only Log Service supports this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         @NameInMap("InitiativeRecoverValue")
         public String initiativeRecoverValue;
 
         /**
          * <p>The ID of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("IntegrationId")
         public Long integrationId;
 
         /**
          * <p>The name of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor integration</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;
 
         /**
          * <p>The service of the alert integration. Valid values:</p>
-         * <br>
-         * <p>*   CLOUD_MONITOR: CloudMonitor</p>
-         * <p>*   LOG_SERVICE: Log Service</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
          */
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
         /**
          * <p>The activity of the alert integration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         @NameInMap("Liveness")
         public String liveness;
 
         /**
          * <p>The time when alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
         /**
          * <p>The authentication token of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ymQBN******</p>
          */
         @NameInMap("ShortToken")
         public String shortToken;
@@ -140,9 +183,13 @@ public class UpdateIntegrationResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the alert integration is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("State")
         public Boolean state;

@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class DeleteRetcodeAppRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1231</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-app</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The process identifier (PID) of the application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aokcdqn3ly@741623b4e91****</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

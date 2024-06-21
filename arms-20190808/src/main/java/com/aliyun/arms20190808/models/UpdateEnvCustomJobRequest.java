@@ -6,36 +6,57 @@ import com.aliyun.tea.*;
 public class UpdateEnvCustomJobRequest extends TeaModel {
     /**
      * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
      * <p>The YAML configuration string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Refer to supplementary instructions.</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
     /**
      * <p>The name of the custom job.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>customJob1</p>
      */
     @NameInMap("CustomJobName")
     public String customJobName;
 
     /**
      * <p>The environment ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxxxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the custom job. Valid values: run and stop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>run</p>
      */
     @NameInMap("Status")
     public String status;

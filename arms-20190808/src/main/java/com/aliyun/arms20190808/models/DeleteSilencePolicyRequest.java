@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteSilencePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("Id")
     public Long id;

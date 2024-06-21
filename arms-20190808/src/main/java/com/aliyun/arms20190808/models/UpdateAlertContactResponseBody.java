@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateAlertContactResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the alert contact was updated. Valid values:</p>
-     * <br>
-     * <p>*   true: The alert contact was updated.</p>
-     * <p>*   false: The alert contact failed to be updated.</p>
+     * <ul>
+     * <li>true: The alert contact was updated.</li>
+     * <li>false: The alert contact failed to be updated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

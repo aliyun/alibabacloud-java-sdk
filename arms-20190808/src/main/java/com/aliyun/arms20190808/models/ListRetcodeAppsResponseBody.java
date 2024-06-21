@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListRetcodeAppsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
     public static class ListRetcodeAppsResponseBodyRetcodeAppsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,43 +85,62 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
     public static class ListRetcodeAppsResponseBodyRetcodeApps extends TeaModel {
         /**
          * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16064</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The alias of the application monitored by Browser Monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B1</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
          * <p>The PID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atc889zkcf@d8deedfa9bf****</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   `web`: web application</p>
-         * <p>*   `weex`: Weex mobile app</p>
-         * <p>*   `mini_dd`: DingTalk mini program</p>
-         * <p>*   `mini_alipay`: Alipay mini program</p>
-         * <p>*   `mini_wx`: WeChat mini program</p>
-         * <p>*   `mini_common`: mini program on other platforms</p>
+         * <ul>
+         * <li><code>web</code>: web application</li>
+         * <li><code>weex</code>: Weex mobile app</li>
+         * <li><code>mini_dd</code>: DingTalk mini program</li>
+         * <li><code>mini_alipay</code>: Alipay mini program</li>
+         * <li><code>mini_wx</code>: WeChat mini program</li>
+         * <li><code>mini_common</code>: mini program on other platforms</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         @NameInMap("RetcodeAppType")
         public String retcodeAppType;

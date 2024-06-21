@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class SearchTracesByPageRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1595210400000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -18,72 +22,109 @@ public class SearchTracesByPageRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to include the traces of abnormal calls.</p>
-     * <br>
-     * <p>*   `true`: No</p>
-     * <p>*   `false` (default): Yes</p>
+     * <ul>
+     * <li><code>true</code>: No</li>
+     * <li><code>false</code> (default): Yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsError")
     public Boolean isError;
 
     /**
      * <p>The minimum amount of time consumed by traces. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("MinDuration")
     public Long minDuration;
 
     /**
      * <p>The name of the traced span.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/demo/queryNotExistDB/11</p>
      */
     @NameInMap("OperationName")
     public String operationName;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b590lhguqs@9781be0f44dXXXX</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.</p>
-     * <br>
-     * <p>*   `true`: sorts the query results in reverse chronological order.</p>
-     * <p>*   `false`: sorts the query results in chronological order.</p>
+     * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: <code>false</code>.</p>
+     * <ul>
+     * <li><code>true</code>: sorts the query results in reverse chronological order.</li>
+     * <li><code>false</code>: sorts the query results in chronological order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
      * <p>The IP address of the host where the application resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.20.XX.XX</p>
      */
     @NameInMap("ServiceIp")
     public String serviceIp;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-k8s-demo-subcomponent</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1595174400000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -214,12 +255,18 @@ public class SearchTracesByPageRequest extends TeaModel {
     public static class SearchTracesByPageRequestExclusionFilters extends TeaModel {
         /**
          * <p>The key that is used to filter the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http.status_code</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the key that is used to filter the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>404</p>
          */
         @NameInMap("Value")
         public String value;
@@ -250,23 +297,30 @@ public class SearchTracesByPageRequest extends TeaModel {
     public static class SearchTracesByPageRequestTags extends TeaModel {
         /**
          * <p>The key of the tag. The following system preset fields are provided:</p>
-         * <br>
-         * <p>*   traceId: the ID of the trace.</p>
-         * <p>*   serverApp: the name of the server application.</p>
-         * <p>*   clientApp: the name of the client application.</p>
-         * <p>*   service: the name of the API operation.</p>
-         * <p>*   rpc: the type of the call.</p>
-         * <p>*   msOfSpan: the duration exceeds a specific value.</p>
-         * <p>*   clientIp: the IP address of the client.</p>
-         * <p>*   serverIp: the IP address of the server.</p>
-         * <p>*   isError: specifies whether the call is abnormal.</p>
-         * <p>*   hasTprof: contains only thread profiling.</p>
+         * <ul>
+         * <li>traceId: the ID of the trace.</li>
+         * <li>serverApp: the name of the server application.</li>
+         * <li>clientApp: the name of the client application.</li>
+         * <li>service: the name of the API operation.</li>
+         * <li>rpc: the type of the call.</li>
+         * <li>msOfSpan: the duration exceeds a specific value.</li>
+         * <li>clientIp: the IP address of the client.</li>
+         * <li>serverIp: the IP address of the server.</li>
+         * <li>isError: specifies whether the call is abnormal.</li>
+         * <li>hasTprof: contains only thread profiling.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http.status_code</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Value")
         public String value;

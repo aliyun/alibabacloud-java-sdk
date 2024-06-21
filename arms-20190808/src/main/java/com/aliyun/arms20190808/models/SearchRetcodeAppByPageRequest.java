@@ -6,38 +6,56 @@ import com.aliyun.tea.*;
 public class SearchRetcodeAppByPageRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+     * <p>The ID of the resource group. You can obtain the resource group ID in the <strong>Resource Management</strong> console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the application.</p>
-     * <br>
-     * <p>Log on to the **ARMS console**. In the left-side navigation pane, choose **Browser Monitoring** > **Browser Monitoring**. On the Browser Monitoring page, click the name of an application. The URL in the browser address bar contains the pid of this application in the format of `pid=xxx`. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is `xxx%4074xxx`, you must replace **%40** with the at sign (@). The actual PID is `xxx@74xxx`.</p>
+     * <p>Log on to the <strong>ARMS console</strong>. In the left-side navigation pane, choose <strong>Browser Monitoring</strong> &gt; <strong>Browser Monitoring</strong>. On the Browser Monitoring page, click the name of an application. The URL in the browser address bar contains the pid of this application in the format of <code>pid=xxx</code>. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is <code>xxx%4074xxx</code>, you must replace <strong>%40</strong> with the at sign (@). The actual PID is <code>xxx@74xxx</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eb4zdose6v@9781be0f44d****</p>
      */
     @NameInMap("RetcodeAppId")
     public String retcodeAppId;
 
     /**
      * <p>The name of the application that is monitored by Browser Monitoring.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>App1</p>
      */
     @NameInMap("RetcodeAppName")
     public String retcodeAppName;
@@ -112,12 +130,18 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     public static class SearchRetcodeAppByPageRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

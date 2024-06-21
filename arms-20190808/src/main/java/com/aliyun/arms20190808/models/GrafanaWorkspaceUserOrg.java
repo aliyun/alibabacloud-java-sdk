@@ -4,12 +4,24 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceUserOrg extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("orgId")
     public Long orgId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>main org</p>
+     */
     @NameInMap("orgName")
     public String orgName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("role")
     public String role;
 

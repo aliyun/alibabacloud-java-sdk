@@ -10,11 +10,18 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

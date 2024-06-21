@@ -4,18 +4,42 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class InstallCmsExporterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hologres#cen</p>
+     */
     @NameInMap("CmsArgs")
     public String cmsArgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hologres#cen</p>
+     */
     @NameInMap("DirectArgs")
     public String directArgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableTag")
     public Boolean enableTag;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

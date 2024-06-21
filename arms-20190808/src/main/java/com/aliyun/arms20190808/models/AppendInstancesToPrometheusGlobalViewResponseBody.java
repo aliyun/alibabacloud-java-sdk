@@ -18,6 +18,9 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -62,21 +65,31 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
     public static class AppendInstancesToPrometheusGlobalViewResponseBodyData extends TeaModel {
         /**
          * <p>The Info-level information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance. failedInstances: the ID of the object that failed to be added.}</p>
          */
         @NameInMap("Info")
         public String info;
 
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>Indicates whether the call was successful. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The call was successful.</p>
-         * <p>*   `false`: The call failed.</p>
+         * <ul>
+         * <li><code>true</code>: The call was successful.</li>
+         * <li><code>false</code>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("Success")
         public Boolean success;

@@ -6,33 +6,57 @@ import com.aliyun.tea.*;
 public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The details of the remote write configuration item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name: rw1
+     * url: &quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com/prometheus/uid/xx/cn-hangzhou/api/v3/write">http://cn-hangzhou-intranet.arms.aliyuncs.com/prometheus/uid/xx/cn-hangzhou/api/v3/write</a>&quot;
+     * basic_auth: username: xxx
+     * password: xxx
+     * write_relabel_configs: - source_labels: [instance_id]
+     * separator: ;
+     * regex: si
+     * replacement: $1
+     * action: keep</p>
      */
     @NameInMap("Data")
     public GetPrometheusRemoteWriteResponseBodyData data;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +109,42 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
     public static class GetPrometheusRemoteWriteResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Prometheus instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The name of the remote write configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc123</p>
          */
         @NameInMap("RemoteWriteName")
         public String remoteWriteName;
 
         /**
          * <p>The details of the remote write configuration item. The value is in the YAML format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remote_write:</p>
+         * <ul>
+         * <li>name: rw1
+         * url: &quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com/prometheus/uid/xx/cn-hangzhou/api/v3/write">http://cn-hangzhou-intranet.arms.aliyuncs.com/prometheus/uid/xx/cn-hangzhou/api/v3/write</a>&quot;
+         * basic_auth:
+         *   username: xxx
+         *   password: xxx
+         * write_relabel_configs:<ul>
+         * <li>source_labels: [ instance_id ]
+         * separator: ;
+         * regex: si
+         * replacement: $1
+         * action: keep</li>
+         * </ul>
+         * </li>
+         * </ul>
          */
         @NameInMap("RemoteWriteYaml")
         public String remoteWriteYaml;

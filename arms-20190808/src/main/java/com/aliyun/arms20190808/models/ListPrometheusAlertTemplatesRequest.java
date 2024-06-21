@@ -4,9 +4,19 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusAlertTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c0bad479465464e1d8c1e641b0afb****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

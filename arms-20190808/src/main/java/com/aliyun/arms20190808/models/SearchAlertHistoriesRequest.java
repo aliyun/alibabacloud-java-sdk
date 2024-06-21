@@ -5,52 +5,75 @@ import com.aliyun.tea.*;
 
 public class SearchAlertHistoriesRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).</p>
+     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("AlertId")
     public Long alertId;
 
     /**
      * <p>The type of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `1`: a custom alert rule that is used to monitor drill-down data sets</p>
-     * <p>*   `3`: a custom alert rule that is used to monitor tiled data sets</p>
-     * <p>*   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</p>
-     * <p>*   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</p>
-     * <p>*   `6`: the default alert rule for browser monitoring</p>
-     * <p>*   `7`: the default alert rule for application monitoring</p>
-     * <p>*   `8`: a Tracing Analysis alert rule</p>
-     * <p>*   `101`: a Prometheus alert rule</p>
+     * <ul>
+     * <li><code>1</code>: a custom alert rule that is used to monitor drill-down data sets</li>
+     * <li><code>3</code>: a custom alert rule that is used to monitor tiled data sets</li>
+     * <li><code>4</code>: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</li>
+     * <li><code>5</code>: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</li>
+     * <li><code>6</code>: the default alert rule for browser monitoring</li>
+     * <li><code>7</code>: the default alert rule for application monitoring</li>
+     * <li><code>8</code>: a Tracing Analysis alert rule</li>
+     * <li><code>101</code>: a Prometheus alert rule</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("AlertType")
     public Integer alertType;
 
     /**
-     * <p>The number of the page to return. Default value: `1`.</p>
+     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is the current time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1579499626000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region. Default value: `cn-hangzhou`.</p>
+     * <p>The ID of the region. Default value: <code>cn-hangzhou</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp of the LONG data type. Unit: milliseconds. The default value is 10 minutes before the current time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1595568910000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class OpenXtraceDefaultSLRRequest extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

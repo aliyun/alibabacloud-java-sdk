@@ -6,16 +6,25 @@ import com.aliyun.tea.*;
 public class CheckCommercialStatusRequest extends TeaModel {
     /**
      * <p>The region ID. Default value: cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Sub-services:</p>
-     * <p>- apm: Application Monitoring</p>
-     * <p>- rum: Real User Monitoring</p>
-     * <p>- prometheus: Managed Service for Prometheus</p>
-     * <p>- xtrace: Managed Service for OpenTelemetry</p>
+     * <ul>
+     * <li>apm: Application Monitoring</li>
+     * <li>rum: Real User Monitoring</li>
+     * <li>prometheus: Managed Service for Prometheus</li>
+     * <li>xtrace: Managed Service for OpenTelemetry</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apm</p>
      */
     @NameInMap("Service")
     public String service;

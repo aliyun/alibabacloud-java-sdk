@@ -12,6 +12,9 @@ public class DescribeContactsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,56 +43,82 @@ public class DescribeContactsResponseBody extends TeaModel {
     public static class DescribeContactsResponseBodyPageBeanAlertContacts extends TeaModel {
         /**
          * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100147</p>
          */
         @NameInMap("ArmsContactId")
         public Long armsContactId;
 
         /**
          * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ContactId")
         public Float contactId;
 
         /**
          * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         @NameInMap("ContactName")
         public String contactName;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>Indicates whether the email address was verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsEmailVerify")
         public Boolean isEmailVerify;
 
         /**
          * <p>Indicates whether the mobile number was verified. Valid values:</p>
-         * <br>
-         * <p>*   `false`: no</p>
-         * <p>*   `true`: yes</p>
+         * <ul>
+         * <li><code>false</code>: no</li>
+         * <li><code>true</code>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsVerify")
         public Boolean isVerify;
 
         /**
          * <p>The mobile number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
         /**
          * <p>The operation that you want to perform if phone calls fail to be answered. Valid values:</p>
-         * <br>
-         * <p>*   0: No operation is performed.</p>
-         * <p>*   1: A phone call is made again.</p>
-         * <p>*   2: A text message is sent.</p>
-         * <p>*   3 (default value): The global default value is used.</p>
+         * <ul>
+         * <li>0: No operation is performed.</li>
+         * <li>1: A phone call is made again.</li>
+         * <li>2: A text message is sent.</li>
+         * <li>3 (default value): The global default value is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReissueSendNotice")
         public Long reissueSendNotice;
@@ -174,18 +203,27 @@ public class DescribeContactsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of alert contacts returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of alert contacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

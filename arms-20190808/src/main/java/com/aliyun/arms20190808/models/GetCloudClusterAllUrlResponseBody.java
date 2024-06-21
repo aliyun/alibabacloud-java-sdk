@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     /**
      * <p>状态码。200为成功，其他状态码为异常。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,18 +21,27 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
 
     /**
      * <p>详细信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>操作是否成功：true：操作成功                                 false：操作失败</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,60 +94,90 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     public static class GetCloudClusterAllUrlResponseBodyDataRemoteUrl extends TeaModel {
         /**
          * <p>Indicates whether authentication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AuthToken")
         public Boolean authToken;
 
         /**
          * <p>The internal URL for Grafana.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("GrafanaUrl")
         public String grafanaUrl;
 
         /**
          * <p>The public URL for Grafana.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("InternetGrafanaUrl")
         public String internetGrafanaUrl;
 
         /**
          * <p>The public URL for Pushgateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("InternetPushGatewayUrl")
         public String internetPushGatewayUrl;
 
         /**
          * <p>The public URL for remote read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("InternetRemoteReadUrl")
         public String internetRemoteReadUrl;
 
         /**
          * <p>The public URL for remote write.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("InternetRemoteWriteUrl")
         public String internetRemoteWriteUrl;
 
         /**
          * <p>The internal URL for Pushgateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("PushGatewayUrl")
         public String pushGatewayUrl;
 
         /**
          * <p>The internal URL for remote read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("RemoteReadUrl")
         public String remoteReadUrl;
 
         /**
          * <p>The internal URL for remote write.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX">http://cn-hangzhou-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/XXXXXXXXXXXXXXXXX</a>&quot;</p>
          */
         @NameInMap("RemoteWriteUrl")
         public String remoteWriteUrl;
 
         /**
          * <p>The token value used for authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;eyJhbGciOiJIUzI1NiJ9.DKEIFJSL.KYK6uOtNVxTVHXJbH5MNqlsAuUtKzNlUvmAIiKc-QXw&quot;</p>
          */
         @NameInMap("Token")
         public String token;
@@ -230,12 +272,18 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     public static class GetCloudClusterAllUrlResponseBodyData extends TeaModel {
         /**
          * <p>The identifier of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amp</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;

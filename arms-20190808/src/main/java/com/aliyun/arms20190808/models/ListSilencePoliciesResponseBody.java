@@ -5,20 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListSilencePoliciesResponseBody extends TeaModel {
     /**
-     * <p>The value of the matching condition.</p>
+     * <p>The objects that were returned.</p>
      */
     @NameInMap("PageBean")
     public ListSilencePoliciesResponseBodyPageBean pageBean;
 
     /**
-     * <p>The logical operator of the matching condition. Valid values:</p>
-     * <br>
-     * <p>*   `eq`: equal to.</p>
-     * <p>*   `neq`: not equal to.</p>
-     * <p>*   `in`: contains.</p>
-     * <p>*   `nin`: does not contain.</p>
-     * <p>*   `re`: regular expression match.</p>
-     * <p>*   `nre`: regular expression mismatch.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,12 +41,38 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions extends TeaModel {
+        /**
+         * <p>The key of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>altertname</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The logical operator of the matching condition. Valid values:</p>
+         * <ul>
+         * <li><code>eq</code>: equal to</li>
+         * <li><code>neq</code>: not equal to</li>
+         * <li><code>in</code>: contains</li>
+         * <li><code>nin</code>: does not contain</li>
+         * <li><code>re</code>: regular expression match</li>
+         * <li><code>nre</code>: regular expression mismatch</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The value of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -87,7 +109,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>An array of matching condition objects.</p>
          */
         @NameInMap("MatchingConditions")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions> matchingConditions;
@@ -109,25 +131,31 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePolicies extends TeaModel {
         /**
-         * <p>The name of the silence policy.</p>
+         * <p>The ID of the silence policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>Specifies whether to query the details of a silence policy. Valid values:</p>
-         * <br>
-         * <p>*   `true`: Details of the silence policy are queried.</p>
-         * <p>*   `false`: Details of the silence policy are not queried.</p>
+         * <p>An array of matching rule objects.</p>
          */
         @NameInMap("MatchingRules")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules> matchingRules;
 
         /**
-         * <p>An array of returned objects.</p>
+         * <p>The name of the silence policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>silencepolicy_test</p>
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("State")
+        public String state;
 
         public static ListSilencePoliciesResponseBodyPageBeanSilencePolicies build(java.util.Map<String, ?> map) throws Exception {
             ListSilencePoliciesResponseBodyPageBeanSilencePolicies self = new ListSilencePoliciesResponseBodyPageBeanSilencePolicies();
@@ -158,29 +186,46 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListSilencePoliciesResponseBodyPageBeanSilencePolicies setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
     }
 
     public static class ListSilencePoliciesResponseBodyPageBean extends TeaModel {
         /**
-         * <p>The name of the silence policy.</p>
+         * <p>The number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
-         * <p>The number of silence policies that were returned.</p>
+         * <p>An array of silence policy objects.</p>
          */
         @NameInMap("SilencePolicies")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePolicies> silencePolicies;
 
         /**
-         * <p>The number of entries that were returned on each page.</p>
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>An array of matching rule objects.</p>
+         * <p>The number of silence policies that were returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

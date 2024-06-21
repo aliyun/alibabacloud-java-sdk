@@ -5,60 +5,155 @@ import com.aliyun.tea.*;
 
 public class CreateEnvironmentRequest extends TeaModel {
     /**
-     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * <p>The language. Default value: zh.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p>en</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>English</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>zh</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>Chinese</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
      * <p>The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c6e9dec475dca4a50a188411d8cbxxx</p>
      */
     @NameInMap("BindResourceId")
     public String bindResourceId;
 
     /**
      * <p>The name of the environment.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env1</p>
      */
     @NameInMap("EnvironmentName")
     public String environmentName;
 
     /**
      * <p>The subtype of the environment. Valid values:</p>
-     * <br>
-     * <p>*   CS: Container Service for Kubernetes (ACK)</p>
-     * <p>*   ECS: Elastic Compute Service (ECS)</p>
-     * <p>*   Cloud: cloud service</p>
+     * <ul>
+     * <li>CS: ACK</li>
+     * <li>ECS: ECS</li>
+     * <li>Cloud: cloud service</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS, ACK, etc.</p>
      */
     @NameInMap("EnvironmentSubType")
     public String environmentSubType;
 
     /**
      * <p>The type of the environment. Valid values:</p>
-     * <br>
-     * <p>*   CS: Container Service</p>
-     * <p>*   ECS: Elastic Compute Service</p>
-     * <p>*   Cloud: cloud service</p>
+     * <ul>
+     * <li>CS: ACK</li>
+     * <li>ECS: ECS</li>
+     * <li>Cloud: cloud service</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CS</p>
      */
     @NameInMap("EnvironmentType")
     public String environmentType;
 
     /**
-     * <p>type of managed: </p>
-     * <p>- none: not managed. default value of prometheus for ACK.</p>
-     * <p>- agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.</p>
-     * <p>- agent-exproter: maanged agent and exporter. default of prometheus for Cloud.</p>
+     * <p>The payable resource plan. Valid values:</p>
+     * <ul>
+     * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+     * <li>Otherwise, leave the parameter empty.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CS_Basic</p>
+     */
+    @NameInMap("FeePackage")
+    public String feePackage;
+
+    /**
+     * <p>环境绑定的grafana工作区id。传空时，表示使用默认的共享grafana。</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("GrafanaWorkspaceId")
+    public String grafanaWorkspaceId;
+
+    @NameInMap("InitEnvironment")
+    public Boolean initEnvironment;
+
+    /**
+     * <p>Specifies whether agents or exporters are managed. Valid values:</p>
+     * <ul>
+     * <li>none: No. By default, no managed agents or exporters are provided for ACK clusters.</li>
+     * <li>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</li>
+     * <li>agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
      */
     @NameInMap("ManagedType")
     public String managedType;
 
     /**
+     * <p>The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c6e9dec475dca4a50a188411d8cbxxx</p>
+     */
+    @NameInMap("PrometheusInstanceId")
+    public String prometheusInstanceId;
+
+    /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -114,12 +209,44 @@ public class CreateEnvironmentRequest extends TeaModel {
         return this.environmentType;
     }
 
+    public CreateEnvironmentRequest setFeePackage(String feePackage) {
+        this.feePackage = feePackage;
+        return this;
+    }
+    public String getFeePackage() {
+        return this.feePackage;
+    }
+
+    public CreateEnvironmentRequest setGrafanaWorkspaceId(String grafanaWorkspaceId) {
+        this.grafanaWorkspaceId = grafanaWorkspaceId;
+        return this;
+    }
+    public String getGrafanaWorkspaceId() {
+        return this.grafanaWorkspaceId;
+    }
+
+    public CreateEnvironmentRequest setInitEnvironment(Boolean initEnvironment) {
+        this.initEnvironment = initEnvironment;
+        return this;
+    }
+    public Boolean getInitEnvironment() {
+        return this.initEnvironment;
+    }
+
     public CreateEnvironmentRequest setManagedType(String managedType) {
         this.managedType = managedType;
         return this;
     }
     public String getManagedType() {
         return this.managedType;
+    }
+
+    public CreateEnvironmentRequest setPrometheusInstanceId(String prometheusInstanceId) {
+        this.prometheusInstanceId = prometheusInstanceId;
+        return this;
+    }
+    public String getPrometheusInstanceId() {
+        return this.prometheusInstanceId;
     }
 
     public CreateEnvironmentRequest setRegionId(String regionId) {
@@ -149,12 +276,18 @@ public class CreateEnvironmentRequest extends TeaModel {
     public static class CreateEnvironmentRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

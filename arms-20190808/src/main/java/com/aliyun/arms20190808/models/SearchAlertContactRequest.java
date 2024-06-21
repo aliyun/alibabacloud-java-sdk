@@ -6,42 +6,64 @@ import com.aliyun.tea.*;
 public class SearchAlertContactRequest extends TeaModel {
     /**
      * <p>The ID of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[12345]</p>
      */
     @NameInMap("ContactIds")
     public String contactIds;
 
     /**
      * <p>The name of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>John Doe</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
      * <p>The email address of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The mobile number of the alert contact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1381111*****</p>
      */
     @NameInMap("Phone")
     public String phone;
 
     /**
-     * <p>The ID of the region. Set the value to `cn-hangzhou`.</p>
+     * <p>The ID of the region. Set the value to <code>cn-hangzhou</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

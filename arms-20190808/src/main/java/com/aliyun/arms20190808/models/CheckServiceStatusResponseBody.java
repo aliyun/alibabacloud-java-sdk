@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CheckServiceStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true.</p>
-     * <p>*   false.</p>
+     * <ul>
+     * <li>true.</li>
+     * <li>false.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The request ID. You can use the ID to find logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5710C923-AD09-4293-9E11-DCBE3D15F8D4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

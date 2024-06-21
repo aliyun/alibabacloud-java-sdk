@@ -4,6 +4,10 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceArmsAlertConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("armsAlertsEnable")
     public String armsAlertsEnable;
 

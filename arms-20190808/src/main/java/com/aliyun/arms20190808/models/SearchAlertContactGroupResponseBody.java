@@ -12,6 +12,9 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4D6C358A-A58B-4F4B-94CE-F5AAF023****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,57 +43,85 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     public static class SearchAlertContactGroupResponseBodyContactGroupsContacts extends TeaModel {
         /**
          * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ContactId")
         public Long contactId;
 
         /**
          * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Doe</p>
          */
         @NameInMap("ContactName")
         public String contactName;
 
         /**
          * <p>The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572349025000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f6">https://oapi.dingtalk.com/robot/send?access_token=91f2f6</a>****</p>
          */
         @NameInMap("DingRobot")
         public String dingRobot;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The mobile number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111*****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
         /**
          * <p>Indicates whether the alert contact receives system notifications. Valid values:</p>
-         * <br>
-         * <p>*   true: receives system notifications.</p>
-         * <p>*   false: does not receive system notifications.</p>
+         * <ul>
+         * <li>true: receives system notifications.</li>
+         * <li>false: does not receive system notifications.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SystemNoc")
         public Boolean systemNoc;
 
         /**
          * <p>The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1580258717000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -177,12 +208,18 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     public static class SearchAlertContactGroupResponseBodyContactGroups extends TeaModel {
         /**
          * <p>The ID of the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>746</p>
          */
         @NameInMap("ContactGroupId")
         public Long contactGroupId;
 
         /**
          * <p>The name of the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
@@ -195,18 +232,27 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
 
         /**
          * <p>The time when the alert contact group list was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1529668855000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The time when the alert contact group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1529668855000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetAgentDownloadUrlResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The download URL of the ARMS agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://arms-apm-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/2.7.1.1/">http://arms-apm-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/2.7.1.1/</a></p>
      */
     @NameInMap("ArmsAgentDownloadUrl")
     public String armsAgentDownloadUrl;
 
     /**
-     * <p>Obtains the download URL of the Application Real-Time Monitoring Service (ARMS) agent.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14043452-D486-4EA1-80C9-BA73FB81****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

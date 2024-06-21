@@ -6,36 +6,57 @@ import com.aliyun.tea.*;
 public class GetStackRequest extends TeaModel {
     /**
      * <p>The end time of the call method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1653641800</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
+     * <p>The process identifier (PID) of the application. For more information about how to obtain the PID, see <a href="https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr">Obtain the PID of an application</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eb4zdose6v@36bab313a******</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the remote procedure call (RPC) mode. You can obtain the ID by calling the **GetTrace** operation.</p>
+     * <p>The ID of the remote procedure call (RPC) mode. You can obtain the ID by calling the <strong>GetTrace</strong> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
      */
     @NameInMap("RpcID")
     public String rpcID;
 
     /**
      * <p>The start time of the call method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1653555396</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>The trace ID. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the **Trace Query** page.</p>
+     * <p>The trace ID. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the <strong>Trace Query</strong> page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a5800611641470044457853******</p>
      */
     @NameInMap("TraceID")
     public String traceID;

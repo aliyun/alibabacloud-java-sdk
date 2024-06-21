@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListEnvCustomJobsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
     public static class ListEnvCustomJobsResponseBodyDataScrapeConfigs extends TeaModel {
         /**
          * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-sd-demo</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
         /**
          * <p>The path of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/metrics</p>
          */
         @NameInMap("MetricsPath")
         public String metricsPath;
@@ -86,6 +101,9 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
         /**
          * <p>The capture interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30s</p>
          */
         @NameInMap("ScrapeInterval")
         public String scrapeInterval;
@@ -132,48 +150,72 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
     public static class ListEnvCustomJobsResponseBodyData extends TeaModel {
         /**
          * <p>The name of the component to which the custom job belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
          * <p>The instance name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql1</p>
          */
         @NameInMap("AddonReleaseName")
         public String addonReleaseName;
 
         /**
          * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.0</p>
          */
         @NameInMap("AddonVersion")
         public String addonVersion;
 
         /**
          * <p>If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
          * <p>The time when the custom job was created. The value of this parameter is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-01T10:11:34Z</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
          * <p>The name of the custom job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job1</p>
          */
         @NameInMap("CustomJobName")
         public String customJobName;
 
         /**
          * <p>The ID of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -186,6 +228,9 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the custom job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;

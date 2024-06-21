@@ -4,21 +4,49 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpgradeEnvironmentFeatureRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxx</p>
+     */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>metric-agent</p>
+     */
     @NameInMap("FeatureName")
     public String featureName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.17</p>
+     */
     @NameInMap("FeatureVersion")
     public String featureVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;PodAnnotation&quot;:&quot;run&quot;}</p>
+     */
     @NameInMap("Values")
     public String values;
 

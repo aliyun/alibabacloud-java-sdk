@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteSilencePolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the silence policy was deleted successfully. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The silence policy was deleted successfully.</p>
-     * <p>*   `false`: The silence policy failed to be deleted.</p>
+     * <ul>
+     * <li><code>true</code>: The silence policy was deleted successfully.</li>
+     * <li><code>false</code>: The silence policy failed to be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteSilencePolicy**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>DeleteSilencePolicy</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

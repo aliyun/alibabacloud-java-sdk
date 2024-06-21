@@ -4,15 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceDashboardReport extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1680861352600</p>
+     */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>grafana-cn-**********</p>
+     */
     @NameInMap("grafanaWorkspaceId")
     public String grafanaWorkspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1680861352600</p>
+     */
     @NameInMap("lastSendTime")
     public Long lastSendTime;
 
@@ -22,30 +38,62 @@ public class GrafanaWorkspaceDashboardReport extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>******@aliyun.com</p>
+     */
     @NameInMap("reportChannelTarget")
     public String reportChannelTarget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Email</p>
+     */
     @NameInMap("reportChannelType")
     public String reportChannelType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Grid,Simple</p>
+     */
     @NameInMap("reportStyle")
     public String reportStyle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Image</p>
+     */
     @NameInMap("reportType")
     public String reportType;
 
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("triggerDay")
     public String triggerDay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12:25</p>
+     */
     @NameInMap("triggerTime")
     public String triggerTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ByWeek</p>
+     */
     @NameInMap("triggerType")
     public String triggerType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Dashboard URL</p>
+     */
     @NameInMap("url")
     public String url;
 

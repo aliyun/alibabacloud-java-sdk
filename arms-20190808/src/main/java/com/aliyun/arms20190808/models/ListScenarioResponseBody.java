@@ -12,6 +12,9 @@ public class ListScenarioResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98027D1F-3AEB-492C-A4AA-E9217992****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,81 @@ public class ListScenarioResponseBody extends TeaModel {
     public static class ListScenarioResponseBodyArmsScenarios extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@28f515462******</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The time when the business monitoring job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1585214916000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The extended information. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;_MODE&quot;: &quot;CUSTOM-TRANSACTION&quot;,&quot;_SCENARIO&quot;: &quot;USER-DEFINED&quot;}</p>
          */
         @NameInMap("Extensions")
         public String extensions;
 
         /**
          * <p>The ID of the business monitoring job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the business monitoring job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s_deployment_css-guns-vip-main-prod_silence</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The code of the business monitoring job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a9f8****</p>
          */
         @NameInMap("Sign")
         public String sign;
 
         /**
          * <p>The time when the business monitoring job was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1585214916000</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;

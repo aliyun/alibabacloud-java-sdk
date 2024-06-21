@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class CheckServiceStatusRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The service code of an Alibaba Cloud service. The service code of Managed Service for Prometheus is prometheus.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prometheus</p>
      */
     @NameInMap("SvcCode")
     public String svcCode;

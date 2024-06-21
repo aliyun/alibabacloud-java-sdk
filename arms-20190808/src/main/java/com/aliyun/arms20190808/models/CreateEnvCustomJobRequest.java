@@ -6,30 +6,49 @@ import com.aliyun.tea.*;
 public class CreateEnvCustomJobRequest extends TeaModel {
     /**
      * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
      * <p>The YAML configuration string of the custom job.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Refer to supplementary instructions.</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
     /**
      * <p>The name of the custom job.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>customJob1</p>
      */
     @NameInMap("CustomJobName")
     public String customJobName;
 
     /**
      * <p>The ID of the environment instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxxxxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

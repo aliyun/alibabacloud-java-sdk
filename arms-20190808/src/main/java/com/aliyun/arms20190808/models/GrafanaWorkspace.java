@@ -13,9 +13,17 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1652803200000</p>
+     */
     @NameInMap("endTime")
     public Float endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>创建时间</p>
+     */
     @NameInMap("gmtCreate")
     public Float gmtCreate;
 
@@ -25,18 +33,41 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("grafanaWorkspaceDomain")
     public String grafanaWorkspaceDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
+    @NameInMap("grafanaWorkspaceDomainStatus")
+    public String grafanaWorkspaceDomainStatus;
+
+    /**
+     * <strong>example:</strong>
+     * <p>experts_edition/advanced_edition/standard</p>
+     */
     @NameInMap("grafanaWorkspaceEdition")
     public String grafanaWorkspaceEdition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>g-thisisademo666</p>
+     */
     @NameInMap("grafanaWorkspaceId")
     public String grafanaWorkspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1:3000</p>
+     */
     @NameInMap("grafanaWorkspaceIp")
     public String grafanaWorkspaceIp;
 
     @NameInMap("grafanaWorkspaceName")
     public String grafanaWorkspaceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxAccount")
     public String maxAccount;
 
@@ -55,9 +86,17 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("privateIp")
     public String privateIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http/https</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
@@ -67,9 +106,17 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("shareSynced")
     public Boolean shareSynced;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("snatIp")
     public String snatIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Starting/Running/Stop/DeleteSucceed</p>
+     */
     @NameInMap("status")
     public String status;
 
@@ -79,6 +126,10 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("upgradeVersion")
     public java.util.List<String> upgradeVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66666666</p>
+     */
     @NameInMap("userId")
     public String userId;
 
@@ -141,6 +192,14 @@ public class GrafanaWorkspace extends TeaModel {
     }
     public String getGrafanaWorkspaceDomain() {
         return this.grafanaWorkspaceDomain;
+    }
+
+    public GrafanaWorkspace setGrafanaWorkspaceDomainStatus(String grafanaWorkspaceDomainStatus) {
+        this.grafanaWorkspaceDomainStatus = grafanaWorkspaceDomainStatus;
+        return this;
+    }
+    public String getGrafanaWorkspaceDomainStatus() {
+        return this.grafanaWorkspaceDomainStatus;
     }
 
     public GrafanaWorkspace setGrafanaWorkspaceEdition(String grafanaWorkspaceEdition) {

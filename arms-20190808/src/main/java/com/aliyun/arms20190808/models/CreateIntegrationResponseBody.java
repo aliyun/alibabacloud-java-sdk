@@ -4,9 +4,18 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateIntegrationResponseBody extends TeaModel {
+    /**
+     * <p>The returned information about the alert integration.</p>
+     */
     @NameInMap("Integration")
     public CreateIntegrationResponseBodyIntegration integration;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,65 @@ public class CreateIntegrationResponseBody extends TeaModel {
     }
 
     public static class CreateIntegrationResponseBodyIntegration extends TeaModel {
+        /**
+         * <p>Indicates whether alert events are automatically cleared. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
+        /**
+         * <p>The description of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("IntegrationId")
         public Long integrationId;
 
+        /**
+         * <p>The name of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudMonitor integration</p>
+         */
         @NameInMap("IntegrationName")
         public String integrationName;
 
+        /**
+         * <p>The service of the alert integration. Valid values:</p>
+         * <ul>
+         * <li>CLOUD_MONITOR: CloudMonitor</li>
+         * <li>LOG_SERVICE: Log Service</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_MONITOR</p>
+         */
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
+        /**
+         * <p>The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("RecoverTime")
         public Long recoverTime;
 

@@ -5,30 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code that is returned. Valid values:</p>
-     * <br>
-     * <p>*   `2XX: The request is successful.`</p>
-     * <p>*   `3XX: A redirection message is returned.`</p>
-     * <p>*   `4XX: The request is invalid.`</p>
-     * <p>*   `5XX: A server error occurred.`</p>
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The ID of the created Prometheus instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qduukd****</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The error message that is returned if the request failed.</p>
+     * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,33 +4,73 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceDashboardSync extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>testTitle</p>
+     */
     @NameInMap("dashboardTitle")
     public String dashboardTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://g.console.aliyun.com/d/1098370038733503-14960236-422-3/ack-pro-apiserver">https://g.console.aliyun.com/d/1098370038733503-14960236-422-3/ack-pro-apiserver</a></p>
+     */
     @NameInMap("dashboardURL")
     public String dashboardURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxdvxsea</p>
+     */
     @NameInMap("dashboardUid")
     public String dashboardUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("folderId")
     public String folderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("folderTitle")
     public String folderTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://g.console.aliyun.com/d/1098370038733503-14960236-422-3/ack-pro-apiserver">https://g.console.aliyun.com/d/1098370038733503-14960236-422-3/ack-pro-apiserver</a></p>
+     */
     @NameInMap("folderURL")
     public String folderURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vxeupqn</p>
+     */
     @NameInMap("folderUid")
     public String folderUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("orgId")
     public String orgId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user123</p>
+     */
     @NameInMap("orgName")
     public String orgName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("type")
     public String type;
 

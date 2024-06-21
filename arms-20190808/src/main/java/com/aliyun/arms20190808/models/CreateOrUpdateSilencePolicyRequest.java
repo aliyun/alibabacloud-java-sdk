@@ -6,39 +6,63 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     /**
      * <p>The ID of the silence policy.</p>
-     * <br>
-     * <p>*   If you do not configure this parameter, a new silence policy is created.</p>
-     * <p>*   If you configure this parameter, the specified silence policy is modified.</p>
+     * <ul>
+     * <li>If you do not configure this parameter, a new silence policy is created.</li>
+     * <li>If you configure this parameter, the specified silence policy is modified.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The matching rules. The following code shows the format of matching rules:</p>
-     * <br>
-     * <p>    [</p>
-     * <p>         {</p>
-     * <p>    	 "matchingConditions": [</p>
-     * <p>    	 {</p>
-     * <p>    	 "value": "test", // The value of the matching condition. </p>
-     * <p>    	 "key": "altertname", // The key of the matching condition. </p>
-     * <p>    	 "operator": "eq" // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   </p>
-     * <p>    	 }</p>
-     * <p>    	 ]</p>
-     * <p>         }</p>
-     * <p>    	 ]</p>
+     * <pre><code>[
+     *      {
+     *      &quot;matchingConditions&quot;: [
+     *      {
+     *      &quot;value&quot;: &quot;test&quot;, // The value of the matching condition. 
+     *      &quot;key&quot;: &quot;altertname&quot;, // The key of the matching condition. 
+     *      &quot;operator&quot;: &quot;eq&quot; // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
+     *      }
+     *      ]
+     *      }
+     *      ]
+     * </code></pre>
+     * 
+     * <strong>example:</strong>
+     * <p>[ 	 { 	 &quot;matchingConditions&quot;: [ 	 { 	 &quot;value&quot;: &quot;test&quot;, 	 &quot;key&quot;: &quot;altertname&quot;, 	 &quot;operator&quot;: &quot;eq&quot; 	 } 	 ]      } 	 ]</p>
      */
     @NameInMap("MatchingRules")
     public String matchingRules;
 
     /**
      * <p>The name of the silence policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>silencepolicy_test</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>enable</p>
+     */
+    @NameInMap("State")
+    public String state;
 
     public static CreateOrUpdateSilencePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateSilencePolicyRequest self = new CreateOrUpdateSilencePolicyRequest();
@@ -75,6 +99,14 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateOrUpdateSilencePolicyRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
 }

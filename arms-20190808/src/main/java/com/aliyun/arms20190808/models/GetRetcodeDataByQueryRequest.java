@@ -4,18 +4,48 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetRetcodeDataByQueryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1668687302</p>
+     */
     @NameInMap("From")
     public Long from;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>atc889zkcf@d8deedfa9bf****</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t : pv|select sum(times) as pv , approx_distinct(uid) as uv , (date-date%3600000) as date  group by date</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1668688000</p>
+     */
     @NameInMap("To")
     public Long to;
 

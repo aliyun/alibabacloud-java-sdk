@@ -7,6 +7,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
     @NameInMap("PageInfo")
     public GetSyntheticTaskListResponseBodyPageInfo pageInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +36,62 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskListResponseBodyPageInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1634005438000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MonitorNumber")
         public Long monitorNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2118709</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>net-test</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TaskType")
         public Long taskType;
 
         @NameInMap("TaskTypeName")
         public String taskTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.80</p>
+         */
         @NameInMap("Usable")
         public Float usable;
 
@@ -139,42 +175,90 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskListResponseBodyPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasNextPage")
         public String hasNextPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasPreviousPage")
         public Boolean hasPreviousPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsFirstPage")
         public Boolean isFirstPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsLastPage")
         public Boolean isLastPage;
 
         @NameInMap("List")
         public java.util.List<GetSyntheticTaskListResponseBodyPageInfoList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NavigateFirstPage")
         public String navigateFirstPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("NavigateLastPage")
         public String navigateLastPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
+         */
         @NameInMap("NavigatePageNums")
         public String navigatePageNums;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("NextPage")
         public String nextPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Pages")
         public String pages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Prepage")
         public String prepage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Total")
         public Long total;
 

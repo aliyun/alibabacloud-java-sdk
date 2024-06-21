@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAppJVMConfigResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,36 +98,54 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
     public static class GetAppJVMConfigResponseBodyJvmInfoList extends TeaModel {
         /**
          * <p>Agent version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.7.0-SNAPSHOT_3.0.3_3756244</p>
          */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
         /**
          * <p>The name of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host_name</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>Ip address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.91.59.244</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The PID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsv9zcel92@1455182510c5369</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>Process Id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProcId")
         public String procId;
 
         /**
          * <p>Java VM config.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[-javaagent:/home/admin/.opt/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar, -Doneagent.plugin.arms-agent.enabled=true, -Darms.licenseKey=[******], -Darms.agent.env=K8s, -Darms.agent.podinfo.path=/etc/podinfo, -Darms.appName=productservice, -Doneagent.region=cn-hangzhou, -Dproject.name=Product]</p>
          */
         @NameInMap("VmArgs")
         public String vmArgs;

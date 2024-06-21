@@ -6,23 +6,40 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The resource IDs. You can specify a maximum of 50 resource IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the ARMS resources for which you want to modify tags.</p>
+     * <p>The type of the ARMS resources for which you want to modify tags. Valid values:</p>
+     * <ul>
+     * <li>WEB: Browser Monitoring</li>
+     * <li>APPLICATION: Application Monitoring</li>
+     * <li>PROMETHEUS: Managed Service for Prometheus</li>
+     * <li>SYNTHETICTASK: Synthetic Monitoring</li>
+     * <li>ALERTRULE: Application Monitoring alert rule</li>
+     * <li>PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule</li>
+     * <li>XTRACEAPP: Managed Service for OpenTelemetry</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROMETHEUS</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -87,12 +104,18 @@ public class UntagResourcesRequest extends TeaModel {
     public static class UntagResourcesRequestTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

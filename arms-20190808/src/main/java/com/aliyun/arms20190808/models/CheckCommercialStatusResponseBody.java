@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CheckCommercialStatusResponseBody extends TeaModel {
     /**
      * <p>The returned struct.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A474FF8-7861-4D00-81B5-5BC3DA4E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class DeleteAddonReleaseResponseBody extends TeaModel {
     /**
      * <p>Status code: 200 indicates success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>Return a message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the alert rule was deleted. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The alert rule was deleted.</p>
-     * <p>*   `false`: The alert rule failed to be deleted.</p>
+     * <ul>
+     * <li><code>true</code>: The alert rule was deleted.</li>
+     * <li><code>false</code>: The alert rule failed to be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

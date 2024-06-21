@@ -4,21 +4,36 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public java.util.Map<String, String> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01FF8DD9-A09C-47A1-895A-B6E321BE77B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

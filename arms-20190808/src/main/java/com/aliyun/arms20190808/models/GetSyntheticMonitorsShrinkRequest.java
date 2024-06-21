@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetSyntheticMonitorsShrinkRequest extends TeaModel {
     /**
      * <p>The query conditions.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
     public String filterShrink;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

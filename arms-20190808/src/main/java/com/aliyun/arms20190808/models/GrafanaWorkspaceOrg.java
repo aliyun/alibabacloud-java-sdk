@@ -4,9 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceOrg extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>main org</p>
+     */
     @NameInMap("name")
     public String name;
 

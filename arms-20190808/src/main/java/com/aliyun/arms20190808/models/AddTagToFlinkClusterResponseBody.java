@@ -4,18 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddTagToFlinkClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

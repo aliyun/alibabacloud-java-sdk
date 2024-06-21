@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class GetSyntheticMonitorsRequest extends TeaModel {
     /**
      * <p>The query conditions.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
     public GetSyntheticMonitorsRequestFilter filter;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -40,20 +44,31 @@ public class GetSyntheticMonitorsRequest extends TeaModel {
     public static class GetSyntheticMonitorsRequestFilter extends TeaModel {
         /**
          * <p>The type of the monitoring point. Valid values: 1: PC. 2: mobile device.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MonitorCategory")
         public Integer monitorCategory;
 
         /**
          * <p>The network type. Valid values: 1: private network. 2: Internet.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Network")
         public Integer network;
 
         /**
          * <p>The type of the monitoring task. Valid values:</p>
-         * <br>
          * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TaskType")
         public Integer taskType;

@@ -6,39 +6,60 @@ import com.aliyun.tea.*;
 public class DescribeContactGroupsRequest extends TeaModel {
     /**
      * <p>The name of the alert contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestGroup</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
     /**
      * <p>The ID of the alert contact group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("GroupIds")
     public String groupIds;
 
     /**
      * <p>Specifies whether to return all the alert contacts in the queried alert contact group. Valid values:</p>
-     * <br>
-     * <p>*   `false`</p>
-     * <p>*   `true`</p>
+     * <ul>
+     * <li><code>false</code></li>
+     * <li><code>true</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
     /**
      * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The number of alert contact groups displayed on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Size")
     public Long size;

@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class SendTTSVerifyLinkRequest extends TeaModel {
     /**
      * <p>The ID of the alert contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ContactId")
     public Long contactId;
 
     /**
      * <p>The mobile number of the alert contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1381111****</p>
      */
     @NameInMap("Phone")
     public String phone;

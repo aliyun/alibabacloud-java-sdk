@@ -12,6 +12,9 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDB74B8F-4123-482A-ABB7-7F440349****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     public static class ListActivatedAlertsResponseBodyPageAlertsDispatchRules extends TeaModel {
         /**
          * <p>The ID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7021</p>
          */
         @NameInMap("RuleId")
         public Integer ruleId;
 
         /**
          * <p>The name of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NotificationPolicy1</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -76,30 +85,45 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     public static class ListActivatedAlertsResponseBodyPageAlerts extends TeaModel {
         /**
          * <p>The ID of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3888704</p>
          */
         @NameInMap("AlertId")
         public String alertId;
 
         /**
          * <p>The name of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Container CPU usage is greater than 80%</p>
          */
         @NameInMap("AlertName")
         public String alertName;
 
         /**
          * <p>The type of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMETHEUS_MONITORING_ALERT_RULE</p>
          */
         @NameInMap("AlertType")
         public String alertType;
 
         /**
          * <p>The number of times that the alert event was received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>598</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The timestamp when the alert rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616466300000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -112,74 +136,104 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the alert was ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616502540000</p>
          */
         @NameInMap("EndsAt")
         public Long endsAt;
 
         /**
          * <p>The extended fields that indicate the following tags:</p>
-         * <br>
-         * <p>*   The tags that are carried in the metrics of the alert rule expression.</p>
-         * <p>*   The tags that are created based on the alert rule.</p>
-         * <p>*   The default tags of Application Real-Time Monitoring Service (ARMS).</p>
+         * <ul>
+         * <li>The tags that are carried in the metrics of the alert rule expression.</li>
+         * <li>The tags that are created based on the alert rule.</li>
+         * <li>The default tags of Application Real-Time Monitoring Service (ARMS).</li>
+         * </ul>
          */
         @NameInMap("ExpandFields")
         public java.util.Map<String, ?> expandFields;
 
         /**
          * <p>The name of the object that is associated with the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testphp2</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;
 
         /**
          * <p>The type of the service integration that generated the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMETHEUS</p>
          */
         @NameInMap("IntegrationType")
         public String integrationType;
 
         /**
          * <p>The type of the object that is associated with the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("InvolvedObjectKind")
         public String involvedObjectKind;
 
         /**
          * <p>The name of the service integration that generated the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test integration-prometheus</p>
          */
         @NameInMap("InvolvedObjectName")
         public String involvedObjectName;
 
         /**
          * <p>The description of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alarm name: PodRestart_testphp2,\n Pod night-test-group-1-1-5f5d6f4d84-pszns is restart, Value: 133.33%, 1.33%</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The level of the alert. Valid values:</p>
-         * <br>
-         * <p>*   `critical`</p>
-         * <p>*   `error`</p>
-         * <p>*   `warn`</p>
-         * <p>*   `page`</p>
+         * <ul>
+         * <li><code>critical</code></li>
+         * <li><code>error</code></li>
+         * <li><code>warn</code></li>
+         * <li><code>page</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>critical</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The timestamp when the alert was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616466300000</p>
          */
         @NameInMap("StartsAt")
         public Long startsAt;
 
         /**
          * <p>The status of the alert. Valid values:</p>
-         * <br>
-         * <p>*   `Active`</p>
-         * <p>*   `Inhibited`</p>
-         * <p>*   `Silenced`</p>
-         * <p>*   `Resolved`</p>
+         * <ul>
+         * <li><code>Active</code></li>
+         * <li><code>Inhibited</code></li>
+         * <li><code>Silenced</code></li>
+         * <li><code>Resolved</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -328,18 +382,27 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Integer page;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Total")
         public Integer total;

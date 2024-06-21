@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class StopAlertResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class EnableMetricResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned for the request. Valid values:</p>
-     * <br>
-     * <p>*   2XX: The request is successful.</p>
-     * <p>*   3XX: A redirection message is returned.</p>
-     * <p>*   4XX: The request is invalid.</p>
-     * <p>*   5XX: A server error occurs.</p>
+     * <ul>
+     * <li>2XX: The request is successful.</li>
+     * <li>3XX: A redirection message is returned.</li>
+     * <li>4XX: The request is invalid.</li>
+     * <li>5XX: A server error occurs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
     /**
      * <p>The returned struct.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0231DA4B-3D11-5433-9376-3B5B46C7228D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class DeleteEnvCustomJobRequest extends TeaModel {
     /**
      * <p>Custom job name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job1</p>
      */
     @NameInMap("CustomJobName")
     public String customJobName;
 
     /**
      * <p>Environment ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

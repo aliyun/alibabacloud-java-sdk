@@ -6,31 +6,45 @@ import com.aliyun.tea.*;
 public class ListPrometheusInstancesRequest extends TeaModel {
     /**
      * <p>Optional instance types (if left blank, all types of instances will be queried):</p>
-     * <p>- cloud-product-prometheus </p>
-     * <p>- ManagedKubernetes</p>
-     * <p>- satellite</p>
-     * <p>- Ask</p>
-     * <p>- remote-write-prometheus</p>
-     * <p>- cloud-monitor-cmee</p>
-     * <p>- ExternalKubernetes</p>
-     * <p>- vpc-prometheus</p>
-     * <p>- cloud-monitor-direct</p>
-     * <p>- Edge Kubernetes</p>
+     * <ul>
+     * <li>cloud-product-prometheus </li>
+     * <li>ManagedKubernetes</li>
+     * <li>satellite</li>
+     * <li>Ask</li>
+     * <li>remote-write-prometheus</li>
+     * <li>cloud-monitor-cmee</li>
+     * <li>ExternalKubernetes</li>
+     * <li>vpc-prometheus</li>
+     * <li>cloud-monitor-direct</li>
+     * <li>Edge Kubernetes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud-product-prometheus</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to query global aggregation instances. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowGlobalView")
     public Boolean showGlobalView;

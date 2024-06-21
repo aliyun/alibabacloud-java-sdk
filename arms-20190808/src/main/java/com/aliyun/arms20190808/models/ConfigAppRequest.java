@@ -6,27 +6,42 @@ import com.aliyun.tea.*;
 public class ConfigAppRequest extends TeaModel {
     /**
      * <p>The process identifier (PID) of the application. Separate multiple PIDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iioe7jcnuk@582846f37******,atc889zkcf@d8deedfa9bf******</p>
      */
     @NameInMap("AppIds")
     public String appIds;
 
     /**
      * <p>Specifies whether to turn on or off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.</p>
-     * <br>
-     * <p>*   `true`: turns on the switch</p>
-     * <p>*   `false`: turns off the switch</p>
+     * <ul>
+     * <li><code>true</code>: turns on the switch</li>
+     * <li><code>false</code>: turns off the switch</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public String enable;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the application. Set the value to **TRACE**.</p>
+     * <p>The type of the application. Set the value to <strong>TRACE</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TRACE</p>
      */
     @NameInMap("Type")
     public String type;

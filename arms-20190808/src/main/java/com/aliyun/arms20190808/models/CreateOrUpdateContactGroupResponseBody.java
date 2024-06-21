@@ -12,6 +12,9 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9319A57D-2D9E-472A-B69B-CF3CD16D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
     public static class CreateOrUpdateContactGroupResponseBodyAlertContactGroup extends TeaModel {
         /**
          * <p>The ID of the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ContactGroupId")
         public Float contactGroupId;
 
         /**
          * <p>The name of the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
         /**
          * <p>The IDs of the contacts that are included in the alert contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3]</p>
          */
         @NameInMap("ContactIds")
         public String contactIds;

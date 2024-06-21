@@ -12,6 +12,9 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,8 +43,10 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
     public static class QueryPromInstallStatusResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the call was successful. Valid values:</p>
-         * <br>
          * <p>true: The call was successful. false: The call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isControllerInstalled")
         public Boolean isControllerInstalled;

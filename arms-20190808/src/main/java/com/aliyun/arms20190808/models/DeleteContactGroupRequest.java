@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteContactGroupRequest extends TeaModel {
     /**
      * <p>The ID of the alert contact group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ContactGroupId")
     public Long contactGroupId;

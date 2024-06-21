@@ -4,27 +4,59 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceAlertNotification extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isArms")
     public Boolean isArms;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isDefault")
     public Boolean isDefault;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("sendReminder")
     public Boolean sendReminder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("settings")
     public String settings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Email</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Xfdf******</p>
+     */
     @NameInMap("uid")
     public String uid;
 

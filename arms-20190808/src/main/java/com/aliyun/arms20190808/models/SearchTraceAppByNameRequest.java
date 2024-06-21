@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SearchTraceAppByNameRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -18,8 +21,12 @@ public class SearchTraceAppByNameRequest extends TeaModel {
 
     /**
      * <p>The name of the application.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, all application monitoring tasks in the specified region are queried.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, all application monitoring tasks in the specified region are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test-app</p>
      */
     @NameInMap("TraceAppName")
     public String traceAppName;
@@ -56,12 +63,18 @@ public class SearchTraceAppByNameRequest extends TeaModel {
     public static class SearchTraceAppByNameRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

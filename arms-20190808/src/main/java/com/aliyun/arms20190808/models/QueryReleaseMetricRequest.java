@@ -4,27 +4,67 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryReleaseMetricRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a341a2f2-ed07-4257-aae9-dfb1be******</p>
+     */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1634005438000</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SystemContrast</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8b46d03f-5947-449d-90fd-3a96c2******</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1632798718632</p>
+     */
     @NameInMap("ReleaseEndTime")
     public Long releaseEndTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1632798686692</p>
+     */
     @NameInMap("ReleaseStartTime")
     public Long releaseStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>clothservice</p>
+     */
     @NameInMap("Service")
     public String service;
 

@@ -5,25 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListActivatedAlertsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: `1`.</p>
+     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The filter condition in the `{"key":"value"}`format. You must specify the `key` and `value` of the filter condition.</p>
+     * <p>The filter condition in the <code>{&quot;key&quot;:&quot;value&quot;}</code>format. You must specify the <code>key</code> and <code>value</code> of the filter condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;alertname&quot;:&quot;Container CPU usage is greater than 80%&quot;}</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
-     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

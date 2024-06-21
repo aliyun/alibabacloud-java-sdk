@@ -6,24 +6,39 @@ import com.aliyun.tea.*;
 public class BindPrometheusGrafanaInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the Prometheus instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the Grafana workspace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>grafana-bp1*****</p>
      */
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

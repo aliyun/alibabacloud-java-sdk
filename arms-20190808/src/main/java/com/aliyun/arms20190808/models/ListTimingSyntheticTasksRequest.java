@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTimingSyntheticTasksRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -68,36 +74,54 @@ public class ListTimingSyntheticTasksRequest extends TeaModel {
     public static class ListTimingSyntheticTasksRequestSearch extends TeaModel {
         /**
          * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlibabaCloud DNS Task</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The order by which tasks are sorted. 1: ascending order. -1: descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Order")
         public Integer order;
 
         /**
          * <p>The condition by which tasks are sorted. You can sort tasks by gmtCreate, gmtModified, status, or monitorCount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status</p>
          */
         @NameInMap("OrderField")
         public String orderField;
 
         /**
          * <p>The page number. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Integer page;
 
         /**
          * <p>The number of entries per page. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         @NameInMap("Status")
         public String status;
@@ -188,12 +212,18 @@ public class ListTimingSyntheticTasksRequest extends TeaModel {
     public static class ListTimingSyntheticTasksRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mark</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1111</p>
          */
         @NameInMap("Value")
         public String value;

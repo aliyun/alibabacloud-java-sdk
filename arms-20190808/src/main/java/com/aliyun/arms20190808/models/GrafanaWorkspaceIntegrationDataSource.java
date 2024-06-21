@@ -22,6 +22,9 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
     @NameInMap("exploreUrl")
     public String exploreUrl;
 
+    @NameInMap("extra")
+    public java.util.Map<String, String> extra;
+
     @NameInMap("folderUrl")
     public String folderUrl;
 
@@ -85,6 +88,14 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
     }
     public String getExploreUrl() {
         return this.exploreUrl;
+    }
+
+    public GrafanaWorkspaceIntegrationDataSource setExtra(java.util.Map<String, String> extra) {
+        this.extra = extra;
+        return this;
+    }
+    public java.util.Map<String, String> getExtra() {
+        return this.extra;
     }
 
     public GrafanaWorkspaceIntegrationDataSource setFolderUrl(String folderUrl) {

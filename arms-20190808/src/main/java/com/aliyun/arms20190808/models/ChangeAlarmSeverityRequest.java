@@ -4,15 +4,37 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ChangeAlarmSeverityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>155</p>
+     */
     @NameInMap("AlarmId")
     public Long alarmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2046076</p>
+     */
     @NameInMap("HandlerId")
     public Long handlerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P1</p>
+     */
     @NameInMap("Severity")
     public String severity;
 

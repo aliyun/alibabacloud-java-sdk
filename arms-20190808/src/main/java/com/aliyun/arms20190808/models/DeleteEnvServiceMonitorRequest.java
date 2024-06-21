@@ -6,24 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteEnvServiceMonitorRequest extends TeaModel {
     /**
      * <p>Environment instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env-xxxxxx</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-prom</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>ServiceMonitor name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arms-admin1</p>
      */
     @NameInMap("ServiceMonitorName")
     public String serviceMonitorName;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteScenarioRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjaikou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the business monitoring job. You can obtain the ID by calling the ListScenario operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>132</p>
      */
     @NameInMap("ScenarioId")
     public Long scenarioId;

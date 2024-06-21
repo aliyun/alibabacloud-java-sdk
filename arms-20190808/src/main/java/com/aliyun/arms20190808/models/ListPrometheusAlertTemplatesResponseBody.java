@@ -7,6 +7,10 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
     @NameInMap("PrometheusAlertTemplates")
     public java.util.List<ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplates> prometheusAlertTemplates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplatesAnnotations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>message</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -62,9 +70,17 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListPrometheusAlertTemplatesResponseBodyPrometheusAlertTemplatesLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>severity</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warning</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -101,9 +117,17 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1m</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 &lt; 10</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
@@ -113,6 +137,10 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

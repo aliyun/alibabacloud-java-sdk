@@ -6,54 +6,83 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateWebhookContactRequest extends TeaModel {
     /**
      * <p>The HTTP request headers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Content-Type&quot;:&quot;application/json;charset=utf-8&quot;}]</p>
      */
     @NameInMap("BizHeaders")
     public String bizHeaders;
 
     /**
      * <p>The parameters in the HTTP request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;content&quot;:&quot;mike&quot;}]</p>
      */
     @NameInMap("BizParams")
     public String bizParams;
 
     /**
-     * <p>The notification template that is sent when an alert is triggered. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).\\</p>
+     * <p>The notification template that is sent when an alert is triggered. This parameter is required if the <strong>Method</strong> parameter is set to <strong>Post</strong>. You can use the <code>$content</code> placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/251834.html">Variable description of a notification template</a>.\\</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
      */
     @NameInMap("Body")
     public String body;
 
     /**
      * <p>The HTTP request method.</p>
-     * <br>
-     * <p>*   Post</p>
-     * <p>*   Get</p>
+     * <ul>
+     * <li>Post</li>
+     * <li>Get</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Post</p>
      */
     @NameInMap("Method")
     public String method;
 
     /**
-     * <p>The notification template that is sent when an alert is resolved. This parameter is required if the **Method** parameter is set to **Post**. You can use the `$content` placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see [Variable description of a notification template](~~251834~~).</p>
+     * <p>The notification template that is sent when an alert is resolved. This parameter is required if the <strong>Method</strong> parameter is set to <strong>Post</strong>. You can use the <code>$content</code> placeholder to specify the notification content. The content cannot exceed 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/251834.html">Variable description of a notification template</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</p>
      */
     @NameInMap("RecoverBody")
     public String recoverBody;
 
     /**
-     * <p>The URL of the HTTP request **method**.</p>
+     * <p>The URL of the HTTP request <strong>method</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=e1a049121">https://oapi.dingtalk.com/robot/send?access_token=e1a049121</a>******</p>
      */
     @NameInMap("Url")
     public String url;
 
     /**
      * <p>The ID of the webhook alert contact.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, a new webhook alert contact is created.</p>
-     * <p>* If you specify this parameter, the specified webhook alert contact is modified.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, a new webhook alert contact is created.</li>
+     * <li>If you specify this parameter, the specified webhook alert contact is modified.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("WebhookId")
     public Long webhookId;
 
     /**
      * <p>The name of the webhook alert contact.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Webhook alert</p>
      */
     @NameInMap("WebhookName")
     public String webhookName;

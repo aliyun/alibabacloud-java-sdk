@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribePrometheusAlertRuleRequest extends TeaModel {
     /**
      * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3888704</p>
      */
     @NameInMap("AlertId")
     public Long alertId;

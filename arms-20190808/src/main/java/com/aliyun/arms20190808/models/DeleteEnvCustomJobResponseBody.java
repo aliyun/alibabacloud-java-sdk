@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DeleteEnvCustomJobResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

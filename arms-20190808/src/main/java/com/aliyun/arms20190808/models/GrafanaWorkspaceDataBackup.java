@@ -4,15 +4,31 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceDataBackup extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1680861352600</p>
+     */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1680861352600</p>
+     */
     @NameInMap("gmtModified")
     public Long gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>grafana-cn-**********</p>
+     */
     @NameInMap("grafanaWorkspaceId")
     public String grafanaWorkspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public Long id;
 
@@ -25,6 +41,10 @@ public class GrafanaWorkspaceDataBackup extends TeaModel {
     @NameInMap("processStatus")
     public String processStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>User</p>
+     */
     @NameInMap("subType")
     public String subType;
 

@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddPrometheusGlobalViewResponseBody extends TeaModel {
+    /**
+     * <p>状态码。说明 200表示成功。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -13,11 +19,20 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
     @NameInMap("Data")
     public AddPrometheusGlobalViewResponseBodyData data;
 
+    /**
+     * <p>返回结果的提示信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -62,18 +77,27 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
     public static class AddPrometheusGlobalViewResponseBodyDataInfo extends TeaModel {
         /**
          * <p>The list of instances that failed to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;sourceName&quot;: &quot;Data source name- ArmsPrometheus&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;userId&quot;:&quot;UserID&quot;,&quot;clusterId&quot;:&quot;ClusterId&quot;,}]</p>
          */
         @NameInMap("FailedInstances")
         public String failedInstances;
 
         /**
          * <p>The ID of the global aggregation instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global-v2-cn-1483223059272121-jmjjfznz</p>
          */
         @NameInMap("GlobalViewClusterId")
         public String globalViewClusterId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -118,15 +142,22 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
 
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

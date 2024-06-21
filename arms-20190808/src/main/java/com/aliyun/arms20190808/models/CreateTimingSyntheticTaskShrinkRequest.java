@@ -13,30 +13,70 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("CustomPeriod")
     public String customPeriodShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5m</p>
+     */
     @NameInMap("Frequency")
     public String frequency;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MonitorCategory")
     public Integer monitorCategory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MonitorConf")
     public String monitorConfShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Monitors")
     public String monitorsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TaskType")
     public Integer taskType;
 

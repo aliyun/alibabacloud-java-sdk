@@ -5,36 +5,55 @@ import com.aliyun.tea.*;
 
 public class ListInsightsEventsRequest extends TeaModel {
     /**
-     * <p>The details of the event.</p>
+     * <p>The end of the time range to query. The value is a timestamp.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1480607940000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>Average response-time spikes of application services.</p>
+     * <p>The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.</p>
+     * <ul>
+     * <li>errorIncrease: API error-rate spike events. Examples: HTTP API error-rate spike events and Dubbo API error-rate spike events.</li>
+     * <li>topErrorIncrease: the top five API error-rate spike events with the highest traffic.</li>
+     * <li>topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.</li>
+     * <li>rtIncrease: the top five API response-time spike events with the highest traffic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>errorIncrease,topErrorIncrease,topExceptionIncrease,topRtIncrease,rtIncrease</p>
      */
     @NameInMap("InsightsTypes")
     public String insightsTypes;
 
     /**
-     * <p>The types of the events that you want to query. Separate multiple event types with commas (,). If you do not specify this parameter, all events are queried.</p>
-     * <br>
-     * <p>*   errorIncrease: API error-rate spike events. Examples: HTTP API error-rate spike events and Dubbo API error-rate spike events.</p>
-     * <p>*   topErrorIncrease: the top five API error-rate spike events with the highest traffic.</p>
-     * <p>*   topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.</p>
-     * <p>*   rtIncrease: the top five API response-time spike events with the highest traffic.</p>
+     * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aokcdqn3ly@a195c6d6421****</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
-     * <p>The end of the time range to query. The value is a timestamp.</p>
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The start of the time range to query. The value is a timestamp.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1595174400000</p>
      */
     @NameInMap("StartTime")
     public String startTime;

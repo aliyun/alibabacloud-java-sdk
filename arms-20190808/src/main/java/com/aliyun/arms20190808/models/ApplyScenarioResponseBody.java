@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ApplyScenarioResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA24D522-AD35-47B8-8CB2-ADBC38******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The code of the business monitoring job, which is the coloring sign.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2b97****</p>
      */
     @NameInMap("Result")
     public String result;

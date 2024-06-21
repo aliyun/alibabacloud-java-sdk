@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvironmentResponseBody extends TeaModel {
     /**
-     * <p>The status code or error code.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The result of the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

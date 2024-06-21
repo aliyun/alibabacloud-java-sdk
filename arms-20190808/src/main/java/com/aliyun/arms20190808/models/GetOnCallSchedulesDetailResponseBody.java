@@ -12,6 +12,9 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntriesSimpleContact extends TeaModel {
         /**
          * <p>The ID of the user on duty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the user on duty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Employee 1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -76,6 +85,9 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntries extends TeaModel {
         /**
          * <p>The date on which the user completed shift work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-30</p>
          */
         @NameInMap("End")
         public String end;
@@ -88,6 +100,9 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
         /**
          * <p>The date from which the user started shift work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-01</p>
          */
         @NameInMap("Start")
         public String start;
@@ -126,12 +141,18 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntriesSimpleContact extends TeaModel {
         /**
          * <p>The ID of the scheduled user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the scheduled user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Employee 1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -162,12 +183,18 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntries extends TeaModel {
         /**
          * <p>The date from which the scheduled user was supposed to start shift work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-01</p>
          */
         @NameInMap("Start")
         public String start;
 
         /**
          * <p>The date on which the scheduled user was supposed to complete shift work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-30</p>
          */
         @NameInMap("End")
         public String end;
@@ -212,12 +239,18 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntriesSimpleContact extends TeaModel {
         /**
          * <p>The ID of the substitute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the substitute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Employee 2</p>
          */
         @NameInMap("Name")
         public String name;
@@ -248,6 +281,9 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntries extends TeaModel {
         /**
          * <p>The date on which the substitute was supposed to complete shift work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-30</p>
          */
         @NameInMap("End")
         public String end;
@@ -260,6 +296,9 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
         /**
          * <p>The date from which the substitute was supposed to start shift work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-01</p>
          */
         @NameInMap("Start")
         public String start;
@@ -298,21 +337,31 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyDataScheduleLayersRestrictions extends TeaModel {
         /**
          * <p>The end time of the shift per day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00</p>
          */
         @NameInMap("EndTimeOfDay")
         public String endTimeOfDay;
 
         /**
          * <p>The type of the limit. Valid values:</p>
-         * <br>
-         * <p>*   daily_restriction</p>
-         * <p>*   weekly_restriction</p>
+         * <ul>
+         * <li>daily_restriction</li>
+         * <li>weekly_restriction</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>daily_restriction</p>
          */
         @NameInMap("RestrictionType")
         public String restrictionType;
 
         /**
          * <p>The start time of the shift per day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00</p>
          */
         @NameInMap("StartTimeOfDay")
         public String startTimeOfDay;
@@ -363,22 +412,32 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
         /**
          * <p>The type of the shift. Valid values:</p>
-         * <br>
-         * <p>*   DAY</p>
-         * <p>*   WEEK</p>
-         * <p>*   CUSTOM</p>
+         * <ul>
+         * <li>DAY</li>
+         * <li>WEEK</li>
+         * <li>CUSTOM</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         @NameInMap("RotationType")
         public String rotationType;
 
         /**
          * <p>The shift cycle. Unit: hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("ShiftLength")
         public Long shiftLength;
 
         /**
          * <p>The date on which the shift change took effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-01</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -433,24 +492,36 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static class GetOnCallSchedulesDetailResponseBodyData extends TeaModel {
         /**
          * <p>The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=69d4e009547e11069c6513309414937b7bf0482fb9284125b5">https://oapi.dingtalk.com/robot/send?access_token=69d4e009547e11069c6513309414937b7bf0482fb9284125b5</a>******</p>
          */
         @NameInMap("AlertRobotId")
         public Long alertRobotId;
 
         /**
          * <p>The description of the scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the scheduling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduling policy test</p>
          */
         @NameInMap("Name")
         public String name;

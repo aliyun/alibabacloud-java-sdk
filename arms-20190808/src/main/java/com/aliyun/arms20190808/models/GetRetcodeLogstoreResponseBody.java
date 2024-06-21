@@ -7,6 +7,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetRetcodeLogstoreResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
     }
 
     public static class GetRetcodeLogstoreResponseBodyDataRetcodeSLSConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>log-test-220431</p>
+         */
         @NameInMap("Logstore")
         public String logstore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-project</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -73,12 +89,20 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
     }
 
     public static class GetRetcodeLogstoreResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>retcode app or task can not be found!</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("RetcodeSLSConfig")
         public GetRetcodeLogstoreResponseBodyDataRetcodeSLSConfig retcodeSLSConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Status")
         public String status;
 

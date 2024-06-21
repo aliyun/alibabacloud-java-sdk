@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
     /**
      * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,21 +21,31 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,6 +98,9 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
     public static class UpdateTimingSyntheticTaskResponseBodyData extends TeaModel {
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1eeb351722c84e05b52c82fd0dc9953e</p>
          */
         @NameInMap("TaskId")
         public String taskId;

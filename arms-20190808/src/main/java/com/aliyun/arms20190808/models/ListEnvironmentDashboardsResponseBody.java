@@ -5,34 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListEnvironmentDashboardsResponseBody extends TeaModel {
     /**
-     * <p>Status code: 200 indicates success.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The result of the operation.</p>
      */
     @NameInMap("Data")
     public ListEnvironmentDashboardsResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C647A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,37 +97,52 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
 
     public static class ListEnvironmentDashboardsResponseBodyDataDashboards extends TeaModel {
         /**
-         * <p>Dashboard folder UID.</p>
+         * <p>The UID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1374923841627893</p>
          */
         @NameInMap("FolderUid")
         public String folderUid;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>List of tabs on the dashboard.</p>
+         * <p>The keyword.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
 
         /**
-         * <p>The title on the dashboard.</p>
+         * <p>The title of the Grafana dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka-instance</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The UID on the dashboard.</p>
+         * <p>The unique identifier of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1537863211936042</p>
          */
         @NameInMap("Uid")
         public String uid;
 
         /**
-         * <p>The URL on the dashboard.</p>
+         * <p>The complete URL of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx">http://xxx</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -176,13 +204,16 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
 
     public static class ListEnvironmentDashboardsResponseBodyData extends TeaModel {
         /**
-         * <p>List of dashboard.</p>
+         * <p>The dashboards.</p>
          */
         @NameInMap("Dashboards")
         public java.util.List<ListEnvironmentDashboardsResponseBodyDataDashboards> dashboards;
 
         /**
-         * <p>Totle of the dashboards.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

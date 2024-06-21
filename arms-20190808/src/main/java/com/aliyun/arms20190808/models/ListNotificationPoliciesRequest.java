@@ -12,39 +12,60 @@ public class ListNotificationPoliciesRequest extends TeaModel {
 
     /**
      * <p>The ID of the notification policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
      * <p>Specifies whether to query the details about notification policies. Valid values:</p>
-     * <br>
-     * <p>*   `true`: Details about notification policies are queried.</p>
-     * <p>*   `false`: Details about notification policies are not queried.</p>
+     * <ul>
+     * <li><code>true</code>: Details about notification policies are queried.</li>
+     * <li><code>false</code>: Details about notification policies are not queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
     /**
      * <p>The name of the notification policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>notificationpolicy_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Size")
     public Long size;

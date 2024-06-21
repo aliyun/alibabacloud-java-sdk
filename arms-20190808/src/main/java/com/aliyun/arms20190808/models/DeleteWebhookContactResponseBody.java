@@ -4,9 +4,25 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteWebhookContactResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the webhook alert contact was deleted.</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

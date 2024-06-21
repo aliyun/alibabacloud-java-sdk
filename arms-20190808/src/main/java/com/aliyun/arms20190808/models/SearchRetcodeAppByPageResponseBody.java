@@ -12,6 +12,9 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>626037F5-FDEB-45B0-804C-B3C92797A64E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     public static class SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,55 +85,80 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     public static class SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps extends TeaModel {
         /**
          * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16064</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545363321000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The alias of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
          * <p>The PID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb4zdose6v@9781be0f44d****</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   `web`: web application</p>
-         * <p>*   `weex`: Weex mobile app</p>
-         * <p>*   `mini_dd`: DingTalk mini program</p>
-         * <p>*   `mini_alipay`: Alipay mini program</p>
-         * <p>*   `mini_wx`: WeChat mini program</p>
-         * <p>*   `mini_common`: mini program on other platforms</p>
+         * <ul>
+         * <li><code>web</code>: web application</li>
+         * <li><code>weex</code>: Weex mobile app</li>
+         * <li><code>mini_dd</code>: DingTalk mini program</li>
+         * <li><code>mini_alipay</code>: Alipay mini program</li>
+         * <li><code>mini_wx</code>: WeChat mini program</li>
+         * <li><code>mini_common</code>: mini program on other platforms</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         @NameInMap("RetcodeAppType")
         public String retcodeAppType;
@@ -137,21 +171,31 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
 
         /**
          * <p>The type of the monitoring task. Valid values:</p>
-         * <br>
-         * <p>*   `TRACE`: Application Monitoring</p>
-         * <p>*   `RETCODE`: Browser Monitoring</p>
+         * <ul>
+         * <li><code>TRACE</code>: Application Monitoring</li>
+         * <li><code>RETCODE</code>: Browser Monitoring</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RETCODE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545363321000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12341234</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -262,12 +306,18 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     public static class SearchRetcodeAppByPageResponseBodyPageBean extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -280,6 +330,9 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

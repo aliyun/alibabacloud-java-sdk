@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<GetSyntheticTaskMonitorsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,44 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticTaskMonitorsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Busy")
         public Long busy;
 
         @NameInMap("City")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1100101</p>
+         */
         @NameInMap("CityCode")
         public Long cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ClientType")
         public Long clientType;
 
         @NameInMap("District")
         public String district;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("NetServiceId")
         public Long netServiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("NetServiceName")
         public String netServiceName;
 

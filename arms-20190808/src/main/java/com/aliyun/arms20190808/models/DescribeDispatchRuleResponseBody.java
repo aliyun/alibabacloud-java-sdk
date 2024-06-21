@@ -12,6 +12,9 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34ED024E-9E31-434A-9E4E-D9D15C3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     public static class DescribeDispatchRuleResponseBodyDispatchRuleGroupRules extends TeaModel {
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The grouping interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("GroupInterval")
         public Long groupInterval;
 
         /**
          * <p>The waiting time for grouping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("GroupWaitTime")
         public Long groupWaitTime;
@@ -64,6 +76,9 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
         /**
          * <p>The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
@@ -118,30 +133,41 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     public static class DescribeDispatchRuleResponseBodyDispatchRuleLabelMatchExpressionGridLabelMatchExpressionGroupsLabelMatchExpressions extends TeaModel {
         /**
          * <p>The key of the tag of the dispatch rule. Valid values:</p>
-         * <br>
-         * <p>*   `_aliyun_arms_userid`: user ID</p>
-         * <p>*   `_aliyun_arms_involvedObject_kind`: type of the associated object</p>
-         * <p>*   `_aliyun_arms_involvedObject_id`: ID of the associated object</p>
-         * <p>*   `_aliyun_arms_involvedObject_name`: name of the associated object</p>
-         * <p>*   `_aliyun_arms_alert_name`: alert name</p>
-         * <p>*   `_aliyun_arms_alert_rule_id`: alert rule ID</p>
-         * <p>*   `_aliyun_arms_alert_type`: alert type</p>
-         * <p>*   `_aliyun_arms_alert_level`: alert severity</p>
+         * <ul>
+         * <li><code>_aliyun_arms_userid</code>: user ID</li>
+         * <li><code>_aliyun_arms_involvedObject_kind</code>: type of the associated object</li>
+         * <li><code>_aliyun_arms_involvedObject_id</code>: ID of the associated object</li>
+         * <li><code>_aliyun_arms_involvedObject_name</code>: name of the associated object</li>
+         * <li><code>_aliyun_arms_alert_name</code>: alert name</li>
+         * <li><code>_aliyun_arms_alert_rule_id</code>: alert rule ID</li>
+         * <li><code>_aliyun_arms_alert_type</code>: alert type</li>
+         * <li><code>_aliyun_arms_alert_level</code>: alert severity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>_aliyun_arms_involvedObject_kind</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The operator used in the dispatch rule. Valid values:</p>
-         * <br>
-         * <p>*   `eq`: equals to.</p>
-         * <p>*   `re`: matches a regular expression.</p>
+         * <ul>
+         * <li><code>eq</code>: equals to.</li>
+         * <li><code>re</code>: matches a regular expression.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("Value")
         public String value;
@@ -224,21 +250,31 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     public static class DescribeDispatchRuleResponseBodyDispatchRuleNotifyRulesNotifyObjects extends TeaModel {
         /**
          * <p>The name of the contact or contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JohnDoe</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the contact or contact group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotifyObjectId")
         public String notifyObjectId;
 
         /**
          * <p>The type of the alert contact. Valid values:</p>
-         * <br>
-         * <p>- `CONTACT`: contact</p>
-         * <p>- `CONTACT_GROUP`: contact group</p>
+         * <ul>
+         * <li><code>CONTACT</code>: contact</li>
+         * <li><code>CONTACT_GROUP</code>: contact group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTACT</p>
          */
         @NameInMap("NotifyType")
         public String notifyType;
@@ -313,10 +349,11 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     public static class DescribeDispatchRuleResponseBodyDispatchRule extends TeaModel {
         /**
          * <p>Alarm handling method.</p>
-         * <br>
          * <p>CREATE_ALERT: Generate an alert.</p>
-         * <br>
          * <p>DISCARD_ALERT: Discard the alarm event, that is, no alarm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_ALERT</p>
          */
         @NameInMap("DispatchType")
         public String dispatchType;
@@ -328,9 +365,12 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         public java.util.List<DescribeDispatchRuleResponseBodyDispatchRuleGroupRules> groupRules;
 
         /**
-         * <p>Whether to send recovered alerts.</p>
-         * <p>true: send.</p>
-         * <p>false: do not send.</p>
+         * <p>Whether to send recovered alerts.
+         * true: send.
+         * false: do not send.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsRecover")
         public Boolean isRecover;
@@ -343,6 +383,9 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the dispatch policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus Alert</p>
          */
         @NameInMap("Name")
         public String name;
@@ -355,15 +398,22 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the dispatch rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10282</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>Indicates whether the dispatch policy is enabled. Valid values: </p>
-         * <br>
-         * <p>- `true`: enabled</p>
-         * <p>- `false`: disabled</p>
+         * <ul>
+         * <li><code>true</code>: enabled</li>
+         * <li><code>false</code>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("State")
         public String state;

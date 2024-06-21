@@ -4,18 +4,44 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>云监控集成</p>
+     */
     @NameInMap("IntegrationName")
     public String integrationName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLOUD_MONITOR</p>
+     */
     @NameInMap("IntegrationProductType")
     public String integrationProductType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDetail")
     public Boolean isDetail;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Long size;
 

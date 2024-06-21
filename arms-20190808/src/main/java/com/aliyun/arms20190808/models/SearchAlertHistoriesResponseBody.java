@@ -12,6 +12,9 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,75 +43,109 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     public static class SearchAlertHistoriesResponseBodyPageBeanAlarmHistories extends TeaModel {
         /**
          * <p>The content of the alert notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Alert name: Alert1\nAlert time: 2020-07-24 12:14:00\nAlert content: A total of four alerts are triggered: \<em>\</em>\<em>\</em>&quot;</p>
          */
         @NameInMap("AlarmContent")
         public String alarmContent;
 
         /**
          * <p>The response code returned after the alert notification was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("AlarmResponseCode")
         public Integer alarmResponseCode;
 
         /**
          * <p>The webhook URL, such as the webhook URL of a DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=91f2f65002fefe0ab9b71e6590c5ca504348cad742ff01e9c8ab204439ca">https://oapi.dingtalk.com/robot/send?access_token=91f2f65002fefe0ab9b71e6590c5ca504348cad742ff01e9c8ab204439ca</a>****</p>
          */
         @NameInMap("AlarmSources")
         public String alarmSources;
 
         /**
          * <p>The time when the alert notification was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1595564179000</p>
          */
         @NameInMap("AlarmTime")
         public Long alarmTime;
 
         /**
          * <p>The type of the alert rule. Default value: 4. Valid values:</p>
-         * <br>
-         * <p>*   `1`: a custom alert rule that is used to monitor drill-down data sets</p>
-         * <p>*   `3`: a custom alert rule that is used to monitor tiled data sets</p>
-         * <p>*   `4`: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</p>
-         * <p>*   `5`: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</p>
-         * <p>*   `6`: the default alert rule for browser monitoring</p>
-         * <p>*   `7`: the default alert rule for application monitoring</p>
-         * <p>*   `8`: a Tracing Analysis alert rule</p>
-         * <p>*   `101`: a Prometheus alert rule</p>
+         * <ul>
+         * <li><code>1</code>: a custom alert rule that is used to monitor drill-down data sets</li>
+         * <li><code>3</code>: a custom alert rule that is used to monitor tiled data sets</li>
+         * <li><code>4</code>: an alert rule that is used to monitor web pages, including the default alert rule for browser monitoring</li>
+         * <li><code>5</code>: an alert rule that is used to monitor applications, including the default alert rule for application monitoring</li>
+         * <li><code>6</code>: the default alert rule for browser monitoring</li>
+         * <li><code>7</code>: the default alert rule for application monitoring</li>
+         * <li><code>8</code>: a Tracing Analysis alert rule</li>
+         * <li><code>101</code>: a Prometheus alert rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("AlarmType")
         public Integer alarmType;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         @NameInMap("Emails")
         public String emails;
 
         /**
          * <p>The ID of the alert notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The mobile phone number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("Phones")
         public String phones;
 
         /**
          * <p>The internal fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("StrategyId")
         public String strategyId;
 
         /**
          * <p>The internal fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -217,18 +254,27 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

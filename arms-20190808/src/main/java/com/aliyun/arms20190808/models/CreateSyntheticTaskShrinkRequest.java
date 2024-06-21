@@ -13,15 +13,36 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("ExtendInterval")
     public String extendIntervalShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("IntervalTime")
     public String intervalTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("IntervalType")
     public String intervalType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("IpType")
     public Long ipType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MonitorList")
     public String monitorListShrink;
 
@@ -34,18 +55,43 @@ public class CreateSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocolShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("TaskType")
     public Long taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UpdateTask")
     public Boolean updateTask;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.example.com">https://www.example.com</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

@@ -4,20 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
+    /**
+     * <p>Status code. 200 is success, other status codes are exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The response parameters in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Success&quot;:true,&quot;Msg&quot;:&quot;OK&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>Additional Message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>337B8F7E-0A64-5768-9225-E9B3CF******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,34 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
     /**
-     * <p>Status code: 200 indicates success.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The return data.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public DescribeEnvironmentFeatureResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01FF8DD9-A09C-47A1-895A-B6E321BE77B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
-     * <br>
-     * <p>*   `true`: successful</p>
-     * <p>*   `false`: failed</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,64 +93,94 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentFeatureResponseBodyDataFeature extends TeaModel {
         /**
-         * <p>Alias of Feature.</p>
+         * <p>The alias of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus agent.</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>Config of Feature.</p>
+         * <p>The configuration of the feature.</p>
          */
         @NameInMap("Config")
         public java.util.Map<String, String> config;
 
         /**
-         * <p>Description of Feature.</p>
+         * <p>The description of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Collect Metric data using the Prometheus collection specification.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
-         * <p>Icon address.</p>
+         * <p>The URL of the icon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx">http://xxx</a></p>
          */
         @NameInMap("Icon")
         public String icon;
 
         /**
-         * <p>Lanuage.</p>
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
-         * <p>This is the latest version of Feature.</p>
+         * <p>The latest version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.17</p>
          */
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        /**
+         * <p>Whether or not it is a managed component.</p>
+         */
         @NameInMap("Managed")
         public Boolean managed;
 
         /**
-         * <p>Name of Feature.</p>
+         * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metric-agent</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Installation status of Feature.</p>
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Version of Feature.</p>
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.17</p>
          */
         @NameInMap("Version")
         public String version;
@@ -243,19 +282,25 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers extends TeaModel {
         /**
-         * <p>Container parameters.</p>
+         * <p>The container parameters.</p>
          */
         @NameInMap("Args")
         public java.util.List<String> args;
 
         /**
-         * <p>Container image.</p>
+         * <p>The image of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-cn-hangzhou-vpc.ack.aliyuncs.com/acs/arms-prometheus-agent:v4.0.0</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
-         * <p>Name of the container.</p>
+         * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prometheus-operator</p>
          */
         @NameInMap("Name")
         public String name;
@@ -292,36 +337,67 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
     }
 
     public static class DescribeEnvironmentFeatureResponseBodyDataFeatureStatus extends TeaModel {
+        @NameInMap("BindResourceId")
+        public String bindResourceId;
+
         /**
-         * <p>Feature container list.</p>
+         * <p>The containers of the feature.</p>
          */
         @NameInMap("FeatureContainers")
         public java.util.List<DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers> featureContainers;
 
+        @NameInMap("Ips")
+        public java.util.List<String> ips;
+
         /**
-         * <p>K8s resource name of the Feature.</p>
+         * <p>The Kubernetes resource name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prometheus-ack-arms-prometheus</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Namespace.</p>
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         /**
-         * <p>Running status.</p>
-         * <p>- Success: Running normal</p>
-         * <p>- Failed: Running exception</p>
-         * <p>- Not Found: Not installed</p>
+         * <p>The status of the agent. Valid values:</p>
+         * <ul>
+         * <li>Success: The agent is running.</li>
+         * <li>Failed: The agent failed to run.</li>
+         * <li>Not Found: The agent is not installed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
         public static DescribeEnvironmentFeatureResponseBodyDataFeatureStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeEnvironmentFeatureResponseBodyDataFeatureStatus self = new DescribeEnvironmentFeatureResponseBodyDataFeatureStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus setBindResourceId(String bindResourceId) {
+            this.bindResourceId = bindResourceId;
+            return this;
+        }
+        public String getBindResourceId() {
+            return this.bindResourceId;
         }
 
         public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus setFeatureContainers(java.util.List<DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers> featureContainers) {
@@ -330,6 +406,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
         public java.util.List<DescribeEnvironmentFeatureResponseBodyDataFeatureStatusFeatureContainers> getFeatureContainers() {
             return this.featureContainers;
+        }
+
+        public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus setIps(java.util.List<String> ips) {
+            this.ips = ips;
+            return this;
+        }
+        public java.util.List<String> getIps() {
+            return this.ips;
         }
 
         public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus setName(String name) {
@@ -348,6 +432,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             return this.namespace;
         }
 
+        public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus setStatus(String status) {
             this.status = status;
             return this;
@@ -356,17 +448,25 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
     }
 
     public static class DescribeEnvironmentFeatureResponseBodyData extends TeaModel {
         /**
-         * <p>Feature Installation information.</p>
+         * <p>The installation information of the feature.</p>
          */
         @NameInMap("Feature")
         public DescribeEnvironmentFeatureResponseBodyDataFeature feature;
 
         /**
-         * <p>Running status of the Feature.</p>
+         * <p>The status of the feature.</p>
          */
         @NameInMap("FeatureStatus")
         public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus featureStatus;

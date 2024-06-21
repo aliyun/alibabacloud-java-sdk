@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class DeletePrometheusAlertRuleRequest extends TeaModel {
     /**
      * <p>Indicates whether the alert rule was deleted. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The alert rule was deleted.</p>
-     * <p>*   `false`: The alert rule failed to be deleted.</p>
+     * <ul>
+     * <li><code>true</code>: The alert rule was deleted.</li>
+     * <li><code>false</code>: The alert rule failed to be deleted.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3888704</p>
      */
     @NameInMap("AlertId")
     public Long alertId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTraceAppResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D80ADAAC-8C32-5479-BD14-C28CF832****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetTraceAppResponseBody extends TeaModel {
     public static class GetTraceAppResponseBodyTraceAppTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,18 +85,30 @@ public class GetTraceAppResponseBody extends TeaModel {
     public static class GetTraceAppResponseBodyTraceApp extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-k8s-demo</p>
          */
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("ClusterId")
+        public String clusterId;
+
         /**
          * <p>The timestamp generated when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1576599253000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -98,35 +119,54 @@ public class GetTraceAppResponseBody extends TeaModel {
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        @NameInMap("Language")
+        public String language;
+
         /**
          * <p>The process identifier (PID) of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b590lhguqs@d8deedfa9bf****</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxyexli2****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</p>
-         * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <ul>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Show")
         public Boolean show;
 
         /**
          * <p>The source of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACSK8S</p>
          */
         @NameInMap("Source")
         public String source;
@@ -139,21 +179,31 @@ public class GetTraceAppResponseBody extends TeaModel {
 
         /**
          * <p>The type of the monitoring task. Valid values:</p>
-         * <br>
-         * <p>*   `TRACE`: Application Monitoring</p>
-         * <p>*   `RETCODE`: Browser Monitoring</p>
+         * <ul>
+         * <li><code>TRACE</code>: Application Monitoring</li>
+         * <li><code>RETCODE</code>: Browser Monitoring</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TRACE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The timestamp generated when the task information was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635700348000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113197164949****</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -179,6 +229,14 @@ public class GetTraceAppResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public GetTraceAppResponseBodyTraceApp setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
         public GetTraceAppResponseBodyTraceApp setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -193,6 +251,14 @@ public class GetTraceAppResponseBody extends TeaModel {
         }
         public java.util.List<String> getLabels() {
             return this.labels;
+        }
+
+        public GetTraceAppResponseBodyTraceApp setLanguage(String language) {
+            this.language = language;
+            return this;
+        }
+        public String getLanguage() {
+            return this.language;
         }
 
         public GetTraceAppResponseBodyTraceApp setPid(String pid) {

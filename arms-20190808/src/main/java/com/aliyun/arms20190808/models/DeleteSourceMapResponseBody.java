@@ -4,9 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteSourceMapResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

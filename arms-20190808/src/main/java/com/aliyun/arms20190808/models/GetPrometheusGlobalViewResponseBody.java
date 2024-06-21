@@ -4,20 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetPrometheusGlobalViewResponseBody extends TeaModel {
+    /**
+     * <p>Status code. 200 is success, other status codes are exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The struct returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;clusterId&quot;:&quot;The ID of the global aggregation instance.&quot;, &quot;groupName&quot;:&quot;The name of the global aggregation instance.&quot;, &quot;dataSources&quot;:[ { &quot;sourceName&quot;:&quot;The name of the data source.- ArmsPrometheus No.1&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;userId&quot;:&quot;UserID&quot;, &quot;clusterId&quot;:&quot;ClusterId&quot; }, // more datasources ] }</p>
      */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>Returns a hint message for the result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>743AD493-D006-53BD-AAEC-DDCE7FB68EA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

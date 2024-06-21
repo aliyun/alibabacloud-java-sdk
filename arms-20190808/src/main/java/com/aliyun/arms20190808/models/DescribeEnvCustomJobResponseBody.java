@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnvCustomJobResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,30 +77,45 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
     public static class DescribeEnvCustomJobResponseBodyData extends TeaModel {
         /**
          * <p>If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refer to supplementary instructions.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
          * <p>The name of the custom job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customJob1</p>
          */
         @NameInMap("CustomJobName")
         public String customJobName;
 
         /**
          * <p>The ID of the environment instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-xxxxx</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the custom job. Valid values: run and stop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;

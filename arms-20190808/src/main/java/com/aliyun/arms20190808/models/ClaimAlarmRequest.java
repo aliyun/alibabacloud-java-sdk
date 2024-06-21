@@ -4,12 +4,28 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ClaimAlarmRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("AlarmId")
     public Long alarmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2046076</p>
+     */
     @NameInMap("HandlerId")
     public Long handlerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

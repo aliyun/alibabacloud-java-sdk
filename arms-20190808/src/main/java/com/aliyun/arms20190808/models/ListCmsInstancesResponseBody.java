@@ -7,6 +7,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListCmsInstancesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7A04B0D-E2CA-59BB-8A9D-D5D349C22BF1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +36,75 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCmsInstancesResponseBodyDataProducts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Descr")
         public String descr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20210</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloudserver</p>
+         */
         @NameInMap("Instance")
         public String instance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hologres</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>face</p>
+         */
         @NameInMap("Prod")
         public String prod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>arms</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1647852021000</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HOLOGRES</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://g.console.aliyun.com/d/1098370038733503-35894-565/cms-hologres?orgId%5C%5Cu003d9%5C%5Cu0026refresh%5C%5Cu003d60s">https://g.console.aliyun.com/d/1098370038733503-35894-565/cms-hologres?orgId\\u003d9\\u0026refresh\\u003d60s</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -150,6 +196,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListCmsInstancesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableTag")
         public Boolean enableTag;
 

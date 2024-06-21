@@ -1,3 +1,72 @@
+2024-06-21 Version: 6.3.0
+- Support API CreateRumApp.
+- Support API CreateRumUploadFileUrl.
+- Support API DeleteRumApp.
+- Support API DeleteRumUploadFile.
+- Support API GetRumAppInfo.
+- Support API GetRumApps.
+- Support API GetRumDataForPage.
+- Support API GetRumExceptionStack.
+- Support API GetRumUploadFiles.
+- Support API GetTraceAppConfig.
+- Support API ListAddons.
+- Support API ListEnvironmentDashboards.
+- Support API ListSyntheticDetail.
+- Support API UpdatePrometheusInstance.
+- Support API UpdateRumApp.
+- Support API UpdateRumFileStatus.
+- Update API CheckCommercialStatus: update param Service.
+- Update API CreateEnvironment: add param FeePackage.
+- Update API CreateEnvironment: add param GrafanaWorkspaceId.
+- Update API CreateEnvironment: add param InitEnvironment.
+- Update API CreateEnvironment: add param PrometheusInstanceId.
+- Update API CreateEnvironment: update param EnvironmentSubType.
+- Update API CreateIntegration: add param RegionId.
+- Update API CreateOrUpdateAlertRule: add param AutoAddTargetConfig.
+- Update API CreateOrUpdateAlertRule: add param Product.
+- Update API CreateOrUpdateContact: add param CorpUserId.
+- Update API CreateOrUpdateContact: update response param.
+- Update API CreateOrUpdateNotificationPolicy: add param State.
+- Update API CreateOrUpdateNotificationPolicy: update response param.
+- Update API CreateOrUpdateSilencePolicy: add param State.
+- Update API CreateOrUpdateSilencePolicy: update response param.
+- Update API CreatePrometheusInstance: add param ArchiveDuration.
+- Update API CreatePrometheusInstance: add param Duration.
+- Update API CreateTimingSyntheticTask: update param CommonSetting.
+- Update API CreateTimingSyntheticTask: update param MonitorConf.
+- Update API DeleteAddonRelease: add param AddonName.
+- Update API DeleteAppList: update param Pids.
+- Update API DescribeEnvironment: update response param.
+- Update API DescribeEnvironmentFeature: add param AliyunLang.
+- Update API DescribeEnvironmentFeature: update response param.
+- Update API DescribeIMRobots: update response param.
+- Update API GetAlertRules: update response param.
+- Update API GetCommercialStatus: update param CommodityCode.
+- Update API GetPrometheusInstance: update response param.
+- Update API GetRetcodeAppByPid: update param Pid.
+- Update API GetTimingSyntheticTask: update response param.
+- Update API GetTraceApp: update response param.
+- Update API InitEnvironment: add param CreateAuthToken.
+- Update API ListAlertEvents: add param ShowNotificationPolicies.
+- Update API ListAlertEvents: update response param.
+- Update API ListDashboards: update response param.
+- Update API ListEnvironmentFeatures: add param AliyunLang.
+- Update API ListEnvironments: add param BindResourceId.
+- Update API ListEnvironments: add param FeePackage.
+- Update API ListEnvironments: update response param.
+- Update API ListNotificationPolicies: update response param.
+- Update API ListSilencePolicies: update response param.
+- Update API ListTimingSyntheticTasks: update response param.
+- Update API TagResources: update param ResourceId.
+- Update API UpdateEnvironment: add param EnvironmentName.
+- Update API UpdateEnvironment: add param FeePackage.
+- Update API UpdateEnvironment: update param EnvironmentName.
+- Update API UpdateTimingSyntheticTask: update param CommonSetting.
+- Update API UpdateTimingSyntheticTask: update param MonitorConf.
+- Update API Upload: update param File.
+- Update API Upload: update response param.
+
+
 2024-01-26 Version: 6.2.0
 - Generated java 2019-08-08 for ARMS.
 

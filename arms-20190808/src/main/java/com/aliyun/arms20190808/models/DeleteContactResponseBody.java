@@ -4,9 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

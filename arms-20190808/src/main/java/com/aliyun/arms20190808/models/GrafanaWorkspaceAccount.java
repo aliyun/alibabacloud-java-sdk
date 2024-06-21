@@ -4,24 +4,44 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GrafanaWorkspaceAccount extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("accountId")
     public Long accountId;
 
     @NameInMap("accountNotes")
     public String accountNotes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>131243781293</p>
+     */
     @NameInMap("aliyunUid")
     public String aliyunUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("aliyunUserName")
     public String aliyunUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>创建时间</p>
+     */
     @NameInMap("gmtCreate")
     public Float gmtCreate;
 
     @NameInMap("orgs")
     public java.util.List<GrafanaWorkspaceUserOrg> orgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aliyun</p>
+     */
     @NameInMap("type")
     public String type;
 

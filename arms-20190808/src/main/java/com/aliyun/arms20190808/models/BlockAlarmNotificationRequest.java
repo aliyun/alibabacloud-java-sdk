@@ -4,15 +4,37 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class BlockAlarmNotificationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>133</p>
+     */
     @NameInMap("AlarmId")
     public Long alarmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2044049</p>
+     */
     @NameInMap("HandlerId")
     public Long handlerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 

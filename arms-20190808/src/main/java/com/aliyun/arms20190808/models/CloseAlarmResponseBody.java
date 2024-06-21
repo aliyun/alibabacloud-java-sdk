@@ -4,18 +4,38 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CloseAlarmResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46355DD8-FC56-40C5-BFC6-269DE4F9****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

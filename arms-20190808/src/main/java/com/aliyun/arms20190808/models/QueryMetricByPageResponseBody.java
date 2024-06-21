@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class QueryMetricByPageResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned for the request. Valid values:</p>
-     * <br>
-     * <p>*   2XX: The request was successful.</p>
-     * <p>*   3XX: A redirection message was returned.</p>
-     * <p>*   4XX: The request was invalid.</p>
-     * <p>*   5XX: A server error occurred.</p>
+     * <ul>
+     * <li>2XX: The request was successful.</li>
+     * <li>3XX: A redirection message was returned.</li>
+     * <li>4XX: The request was invalid.</li>
+     * <li>5XX: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,21 +27,31 @@ public class QueryMetricByPageResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StartTime is mandatory for this action.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>687F9CB7-4798-57BF-A6EE-E6CC76******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The call was successful.</p>
-     * <p>*   `false`: The call failed.</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,9 +104,11 @@ public class QueryMetricByPageResponseBody extends TeaModel {
     public static class QueryMetricByPageResponseBodyData extends TeaModel {
         /**
          * <p>Whether the paging query ends.</p>
-         * <br>
-         * <p>true: end.</p>
-         * <p>false: Need to continue pagination (continue to query after CurrentPage+1).</p>
+         * <p>true: end.
+         * false: Need to continue pagination (continue to query after CurrentPage+1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Completed")
         public Boolean completed;
@@ -105,18 +121,27 @@ public class QueryMetricByPageResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Integer page;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public Integer total;

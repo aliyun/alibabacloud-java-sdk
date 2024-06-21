@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class SendTTSVerifyLinkResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the text message was sent.</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21E85B16-75A6-429A-9F65-8AAC9A54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

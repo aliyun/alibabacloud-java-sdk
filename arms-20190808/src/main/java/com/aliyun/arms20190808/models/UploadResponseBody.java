@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UploadResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class UploadResponseBody extends TeaModel {
     public static class UploadResponseBodyUploadResult extends TeaModel {
         /**
          * <p>The ID of the SourceMap file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Fid")
         public String fid;
 
         /**
          * <p>The name of the SourceMap file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.js.map</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The time when the file was uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650272251</p>
          */
         @NameInMap("UploadTime")
         public String uploadTime;

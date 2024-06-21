@@ -4,21 +4,55 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddTagToFlinkClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c5defa51f******c92bd2ef5fb093269</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ab18f***93744d</p>
+     */
     @NameInMap("FlinkWorkSpaceId")
     public String flinkWorkSpaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flink-demo</p>
+     */
     @NameInMap("FlinkWorkSpaceName")
     public String flinkWorkSpaceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmxyexli2****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>198608******7619</p>
+     */
     @NameInMap("TargetUserId")
     public String targetUserId;
 

@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class GetExploreUrlRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9cc4c5e220f8461f9d71b6ec6e******</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The query statement that corresponds to the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{app=&quot;buy2&quot;}</p>
      */
     @NameInMap("Expression")
     public String expression;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the Grafana data source.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prometheus</p>
      */
     @NameInMap("Type")
     public String type;

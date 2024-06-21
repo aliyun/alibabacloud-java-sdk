@@ -12,6 +12,9 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,41 @@ public class ListAlertEventsResponseBody extends TeaModel {
     public static class ListAlertEventsResponseBodyPageBeanEventsAlarms extends TeaModel {
         /**
          * <p>The ID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77444</p>
          */
         @NameInMap("AlarmId")
         public Long alarmId;
 
         /**
          * <p>The name of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-triggered alert</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
          * <p>The time when the alert was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20 07:10:18</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The status of the alert. Valid values:</p>
-         * <br>
-         * <p>*   0: The alert is pending.</p>
-         * <p>*   1: The alert is being handled.</p>
-         * <p>*   2: The alert is cleared.</p>
+         * <ul>
+         * <li>0: The alert is pending.</li>
+         * <li>1: The alert is being handled.</li>
+         * <li>2: The alert is cleared.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("State")
         public Integer state;
@@ -105,6 +121,36 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
     }
 
+    public static class ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies self = new ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ListAlertEventsResponseBodyPageBeanEvents extends TeaModel {
         /**
          * <p>The list of associated alerts.</p>
@@ -114,91 +160,138 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test-triggered alert</p>
          */
         @NameInMap("AlertName")
         public String alertName;
 
         /**
          * <p>The list of annotations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;Name\&quot;:\&quot;annotation-a\&quot;,\&quot;Value\&quot;:\&quot;annotation a value\&quot;}]</p>
          */
         @NameInMap("Annotations")
         public String annotations;
 
         /**
          * <p>The description of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The end time of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20 17:42:16</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The URL of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.xx/">https://xxx.xx/</a></p>
          */
         @NameInMap("GeneratorURL")
         public String generatorURL;
 
         /**
          * <p>The user who handled the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
          */
         @NameInMap("HandlerName")
         public String handlerName;
 
         /**
          * <p>The name of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom integration</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;
 
         /**
          * <p>The type of the alert integration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
          */
         @NameInMap("IntegrationType")
         public String integrationType;
 
         /**
          * <p>The list of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;severity\&quot;,\&quot;value\&quot;:\&quot;error\&quot;}]</p>
          */
         @NameInMap("Labels")
         public String labels;
 
+        @NameInMap("NotificationPolicies")
+        public java.util.List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> notificationPolicies;
+
         /**
          * <p>The time when the alert event was received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20 17:42:16</p>
          */
         @NameInMap("ReceiveTime")
         public String receiveTime;
 
         /**
          * <p>The severity level of the alert. Valid value:</p>
-         * <br>
-         * <p>*   critical: P1</p>
-         * <p>*   error: P2</p>
-         * <p>*   warning: P3</p>
-         * <p>*   page: P4</p>
-         * <p>*   default: P6</p>
+         * <ul>
+         * <li>critical: P1</li>
+         * <li>error: P2</li>
+         * <li>warning: P3</li>
+         * <li>page: P4</li>
+         * <li>default: P6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>critical</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The start time of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20 17:42:16</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the alert event. Valid values:</p>
-         * <br>
-         * <p>*   Active</p>
-         * <p>*   Silenced</p>
-         * <p>*   Resolved</p>
+         * <ul>
+         * <li>Active</li>
+         * <li>Silenced</li>
+         * <li>Resolved</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TriggerCount")
+        public Long triggerCount;
 
         public static ListAlertEventsResponseBodyPageBeanEvents build(java.util.Map<String, ?> map) throws Exception {
             ListAlertEventsResponseBodyPageBeanEvents self = new ListAlertEventsResponseBodyPageBeanEvents();
@@ -285,6 +378,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
             return this.labels;
         }
 
+        public ListAlertEventsResponseBodyPageBeanEvents setNotificationPolicies(java.util.List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> notificationPolicies) {
+            this.notificationPolicies = notificationPolicies;
+            return this;
+        }
+        public java.util.List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> getNotificationPolicies() {
+            return this.notificationPolicies;
+        }
+
         public ListAlertEventsResponseBodyPageBeanEvents setReceiveTime(String receiveTime) {
             this.receiveTime = receiveTime;
             return this;
@@ -317,6 +418,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
             return this.status;
         }
 
+        public ListAlertEventsResponseBodyPageBeanEvents setTriggerCount(Long triggerCount) {
+            this.triggerCount = triggerCount;
+            return this;
+        }
+        public Long getTriggerCount() {
+            return this.triggerCount;
+        }
+
     }
 
     public static class ListAlertEventsResponseBodyPageBean extends TeaModel {
@@ -328,18 +437,27 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
         /**
          * <p>The number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Page")
         public Long page;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("Total")
         public Long total;

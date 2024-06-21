@@ -5,76 +5,110 @@ import com.aliyun.tea.*;
 
 public class SearchEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).</p>
+     * <p>The ID of the alert rule. You can call the SearchAlertRules operation and view the <code>Id</code> parameter in the response. For more information, see <a href="https://help.aliyun.com/document_detail/175825.html">SearchAlertRules</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("AlertId")
     public Long alertId;
 
     /**
      * <p>The type of the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
-     * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
-     * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
-     * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
-     * <p>*   `6`: the default frontend alert rules</p>
-     * <p>*   `7`: the default application alert rules</p>
-     * <p>*   `8`: Tracing Analysis alert rules</p>
-     * <p>*   `101`: Prometheus alert rules</p>
+     * <ul>
+     * <li><code>1</code>: custom alert rules to monitor drill-down data sets</li>
+     * <li><code>3</code>: custom alert rules to monitor tiled data sets</li>
+     * <li><code>4</code>: alert rules to monitor the frontend, including the default frontend alert rules</li>
+     * <li><code>5</code>: alert rules to monitor applications, including the default application alert rules</li>
+     * <li><code>6</code>: the default frontend alert rules</li>
+     * <li><code>7</code>: the default application alert rules</li>
+     * <li><code>8</code>: Tracing Analysis alert rules</li>
+     * <li><code>101</code>: Prometheus alert rules</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("AlertType")
     public Integer alertType;
 
     /**
      * <p>The type of the application that is associated with the alert rule. Valid values:</p>
-     * <br>
-     * <p>*   `TRACE`: application monitoring</p>
-     * <p>*   `RETCODE`: frontend monitoring</p>
+     * <ul>
+     * <li><code>TRACE</code>: application monitoring</li>
+     * <li><code>RETCODE</code>: frontend monitoring</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TRACE</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
-     * <p>The number of the page to return. Default value: `1`.</p>
+     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The end of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is the current time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1595568970000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:</p>
-     * <br>
-     * <p>*   `1`: The event is triggered.</p>
-     * <p>*   `0`: The event is not triggered.</p>
+     * <ul>
+     * <li><code>1</code>: The event is triggered.</li>
+     * <li><code>0</code>: The event is not triggered.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsTrigger")
     public Integer isTrigger;
 
     /**
-     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     * <p>The number of entries to return on each page. Default value: <code>10</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The process identifier (PID) of the application that is associated with the alert rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>atc889zkcf@d8deedfa9bf****</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1595565300000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
