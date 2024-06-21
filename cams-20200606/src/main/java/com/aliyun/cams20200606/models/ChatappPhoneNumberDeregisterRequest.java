@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ChatappPhoneNumberDeregisterRequest extends TeaModel {
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>939283893939</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8613800000000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

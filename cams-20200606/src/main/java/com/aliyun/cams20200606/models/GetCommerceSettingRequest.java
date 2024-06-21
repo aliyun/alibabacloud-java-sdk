@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetCommerceSettingRequest extends TeaModel {
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1380000****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

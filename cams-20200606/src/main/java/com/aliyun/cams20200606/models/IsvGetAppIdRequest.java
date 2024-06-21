@@ -12,8 +12,10 @@ public class IsvGetAppIdRequest extends TeaModel {
 
     /**
      * <p>The type of the application. Set the value to WHATSAPP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("Type")
     public String type;

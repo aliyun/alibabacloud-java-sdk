@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ChatappEmbedSignUpRequest extends TeaModel {
     /**
      * <p>The InputToken returned after the embedded signup flow is complete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wlelkelwidilwloe-ewlwols0lwsllsld</p>
      */
     @NameInMap("InputToken")
     public String inputToken;

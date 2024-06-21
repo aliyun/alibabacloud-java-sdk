@@ -6,39 +6,56 @@ import com.aliyun.tea.*;
 public class ListProductCatalogRequest extends TeaModel {
     /**
      * <p>The cursor that points to the end of the page of the returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kdkii48jfjjei3</p>
      */
     @NameInMap("After")
     public String after;
 
     /**
      * <p>The cursor that points to the beginning of the page of the returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wiidkd939kek93</p>
      */
     @NameInMap("Before")
     public String before;
 
     /**
      * <p>The Business Manager ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
      */
     @NameInMap("BusinessId")
     public Long businessId;
 
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The fields. Separate multiple fields with commas (,).</p>
-     * <p>see  [catalog fields](https://help.aliyun.com/document_detail/2579419.html)</p>
+     * <p>The fields. Separate multiple fields with commas (,).
+     * see  <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>id,name</p>
      */
     @NameInMap("Fields")
     public String fields;
 
     /**
      * <p>The number of catalogs to be queried. Valid values: 1 to 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73</p>
      */
     @NameInMap("Limit")
     public Long limit;

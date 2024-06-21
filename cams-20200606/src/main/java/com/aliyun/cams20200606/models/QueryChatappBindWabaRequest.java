@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class QueryChatappBindWabaRequest extends TeaModel {
     /**
      * <p>The space ID of the user under the ISV account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aksik93kdkkxmwol93939</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;

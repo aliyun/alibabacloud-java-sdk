@@ -6,25 +6,47 @@ import com.aliyun.tea.*;
 public class UpdatePhoneWebhookRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293483938849493****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("HttpFlag")
     public String httpFlag;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8613800001234</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>N</p>
+     */
     @NameInMap("QueueFlag")
     public String queueFlag;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
+     */
     @NameInMap("StatusCallbackUrl")
     public String statusCallbackUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://aliyun.com">http://aliyun.com</a></p>
+     */
     @NameInMap("UpCallbackUrl")
     public String upCallbackUrl;
 

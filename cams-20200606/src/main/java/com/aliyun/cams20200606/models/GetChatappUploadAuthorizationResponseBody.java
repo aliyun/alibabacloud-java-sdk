@@ -9,9 +9,13 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +28,18 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,42 +92,63 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
     public static class GetChatappUploadAuthorizationResponseBodyData extends TeaModel {
         /**
          * <p>The AccessKey ID that is used to authorize a user to upload a file to Object Storage Service (OSS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2skeuurfj****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The AccessKey secret that is used to authorize a user to upload a file to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skdkdukeuuuu****</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
         /**
          * <p>The name of the bucket to which a file is uploaded in OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The directory to which a file is uploaded in OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000102939</p>
          */
         @NameInMap("Dir")
         public String dir;
 
         /**
          * <p>The address of the OSS server to which a file is uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss.com">https://oss.com</a></p>
          */
         @NameInMap("EndPoint")
         public String endPoint;
 
         /**
          * <p>The timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("Expire")
         public Integer expire;
 
         /**
          * <p>The security token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dkdieiii**</p>
          */
         @NameInMap("SecurityToken")
         public String securityToken;

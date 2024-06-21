@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,18 +81,27 @@ public class GetPhoneNumberVerificationStatusResponseBody extends TeaModel {
     public static class GetPhoneNumberVerificationStatusResponseBodyData extends TeaModel {
         /**
          * <p>The verification status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VERIFIED</p>
          */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
 
         /**
          * <p>The ID of the number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2224342624</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8613900001234</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;

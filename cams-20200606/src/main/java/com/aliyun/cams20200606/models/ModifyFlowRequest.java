@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class ModifyFlowRequest extends TeaModel {
     /**
      * <p>The categories of the Flow.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Categories")
@@ -14,20 +13,28 @@ public class ModifyFlowRequest extends TeaModel {
 
     /**
      * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9493884</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The Flow ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2938838</p>
      */
     @NameInMap("FlowId")
     public String flowId;
 
     /**
      * <p>The name of the Flow.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_001</p>
      */
     @NameInMap("FlowName")
     public String flowName;

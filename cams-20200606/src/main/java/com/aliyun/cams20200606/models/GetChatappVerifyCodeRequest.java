@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class GetChatappVerifyCodeRequest extends TeaModel {
     /**
      * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>229393838*****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The language.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
      */
     @NameInMap("Locale")
     public String locale;
 
     /**
      * <p>The method to obtain the verification code. Valid values: SMS and VOICE.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMS</p>
      */
     @NameInMap("Method")
     public String method;
 
     /**
      * <p>The phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8613800001234</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

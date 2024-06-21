@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetPermissionByCodeShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flow_001</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>393847477</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 

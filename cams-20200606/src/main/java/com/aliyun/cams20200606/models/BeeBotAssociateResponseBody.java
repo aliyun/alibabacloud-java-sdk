@@ -9,6 +9,9 @@ public class BeeBotAssociateResponseBody extends TeaModel {
 
     /**
      * <p>If OK is returned, the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +24,18 @@ public class BeeBotAssociateResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -79,6 +88,9 @@ public class BeeBotAssociateResponseBody extends TeaModel {
     public static class BeeBotAssociateResponseBodyDataAssociate extends TeaModel {
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Meta")
         public String meta;
@@ -121,12 +133,18 @@ public class BeeBotAssociateResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1eb47d7a1706429081e90c83c62c2f00</p>
          */
         @NameInMap("MessageId")
         public String messageId;
 
         /**
          * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93f11165a2a24289a6f869760e8cb3f3</p>
          */
         @NameInMap("SessionId")
         public String sessionId;

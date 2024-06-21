@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetChatappTemplateMetricResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>The value OK indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +30,18 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,26 +94,38 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     public static class GetChatappTemplateMetricResponseBodyDataCliented extends TeaModel {
         /**
          * <p>The text on the button.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open url</p>
          */
         @NameInMap("ButtonContent")
         public String buttonContent;
 
         /**
          * <p>The number of clicks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The button type.</p>
-         * <br>
-         * <p>>  Valid values:</p>
-         * <br>
-         * <p>*   url_button</p>
-         * <br>
-         * <p>*   quick_relpy_button</p>
-         * <br>
-         * <p>*   phone_number_button</p>
+         * <blockquote>
+         * <p> Valid values:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>url_button</p>
+         * </li>
+         * <li><p>quick_relpy_button</p>
+         * </li>
+         * <li><p>phone_number_button</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>quick_reply_button</p>
          */
         @NameInMap("Type")
         public String type;
@@ -146,42 +170,63 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
         /**
          * <p>The number of delivered messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("DeliveredCount")
         public Integer deliveredCount;
 
         /**
          * <p>The end of the time range you queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668138331485</p>
          */
         @NameInMap("End")
         public Long end;
 
         /**
          * <p>The template language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The number of read messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReadCount")
         public Integer readCount;
 
         /**
          * <p>The number of sent messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SentCount")
         public Integer sentCount;
 
         /**
          * <p>The beginning of the time range you queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1673919240001</p>
          */
         @NameInMap("Start")
         public Long start;
 
         /**
          * <p>The template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83837774838*****</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;

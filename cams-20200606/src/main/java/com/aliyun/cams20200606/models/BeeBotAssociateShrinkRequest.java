@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class BeeBotAssociateShrinkRequest extends TeaModel {
     /**
      * <p>The ID of a bot instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The ISV verification code, which is used to verify whether the user is authorized by ISV.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ksiekdki39ksks93939</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
@@ -29,18 +38,27 @@ public class BeeBotAssociateShrinkRequest extends TeaModel {
 
     /**
      * <p>The number of recommended questions. The value ranges from 1 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("RecommendNum")
     public Integer recommendNum;
 
     /**
      * <p>The ID of the session, which is used to identify the session and store context information in the session.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2334324234</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
      * <p>The input of the visitor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>你好</p>
      */
     @NameInMap("Utterance")
     public String utterance;

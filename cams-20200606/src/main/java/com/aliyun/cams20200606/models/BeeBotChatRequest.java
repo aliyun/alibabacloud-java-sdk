@@ -6,29 +6,44 @@ import com.aliyun.tea.*;
 public class BeeBotChatRequest extends TeaModel {
     /**
      * <p>The ID of the bot instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ChatBotInstanceId")
     public String chatBotInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>293483938849493</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\\&A based on the intent.</p>
+     * <p>The name of the intent in the dialog flow. When this parameter is specified, the bot conducts a Q\&amp;A based on the intent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>intent</p>
      */
     @NameInMap("IntentName")
     public String intentName;
 
     /**
      * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ksiekdki39ksks93939</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
      * <p>The ID of the knowledge title in the knowledge base.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("KnowledgeId")
     public String knowledgeId;
@@ -41,26 +56,37 @@ public class BeeBotChatRequest extends TeaModel {
 
     /**
      * <p>The ID of the visitor, which is used to identify users in the current session.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>861500000000</p>
      */
     @NameInMap("SenderId")
     public String senderId;
 
     /**
      * <p>The nickname of the visitor in the current session.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nick</p>
      */
     @NameInMap("SenderNick")
     public String senderNick;
 
     /**
      * <p>The ID of the session, which is used to identify the session and store context information of the session.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
     /**
      * <p>The input of the visitor.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>659216218162179</p>
      */
     @NameInMap("Utterance")
     public String utterance;

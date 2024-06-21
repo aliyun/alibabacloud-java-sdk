@@ -4,6 +4,10 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetFlowJSONAssestResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -15,6 +19,9 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,11 +64,18 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
     }
 
     public static class GetFlowJSONAssestResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://url.com/json.json">https://url.com/json.json</a></p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
         /**
          * <p>flow ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flow_id_arms</p>
          */
         @NameInMap("FlowId")
         public String flowId;

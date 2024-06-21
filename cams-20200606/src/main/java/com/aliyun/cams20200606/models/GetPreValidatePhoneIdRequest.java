@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetPreValidatePhoneIdRequest extends TeaModel {
     /**
      * <p>The phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>861380000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>The verification code provided when you purchased the pre-registered phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>208393</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;

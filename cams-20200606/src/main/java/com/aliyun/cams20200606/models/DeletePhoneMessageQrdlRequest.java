@@ -4,17 +4,27 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeletePhoneMessageQrdlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>883873773</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>861380000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29338838</p>
      */
     @NameInMap("QrdlCode")
     public String qrdlCode;

@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
      * <p>The space ID of the user within the ISV account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28251486512358****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
      * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
-     * <br>
-     * <p>>  CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * <blockquote>
+     * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>65921621816****</p>
      */
     @NameInMap("CustWabaId")
     @Deprecated
@@ -21,33 +28,49 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
 
     /**
      * <p>The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>skdi3kksloslikdkkdk</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
-     * <br>
+     * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en_US</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The code of the message template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>****4b5c79c9432497a075bdfca36bf5</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_name</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
      * <p>The type of the message template. Valid values:</p>
-     * <br>
-     * <p>*   **WHATSAPP**</p>
-     * <p>*   **VIBER**</p>
-     * <p>*   LINE (developing)</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong></li>
+     * <li><strong>VIBER</strong></li>
+     * <li>LINE (developing)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

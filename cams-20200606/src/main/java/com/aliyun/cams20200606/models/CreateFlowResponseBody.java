@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateFlowResponseBody extends TeaModel {
     /**
      * <p>If OK is returned, the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,6 +27,9 @@ public class CreateFlowResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -74,12 +80,18 @@ public class CreateFlowResponseBody extends TeaModel {
 
         /**
          * <p>The Flow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>333993838***</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
         /**
          * <p>The name of the Flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("FlowName")
         public String flowName;

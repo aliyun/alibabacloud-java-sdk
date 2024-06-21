@@ -9,9 +9,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](https://help.aliyun.com/document_detail/196974.html).</p>
+     * <ul>
+     * <li>A value of OK indicates that the call is successful.</li>
+     * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,18 +28,27 @@ public class ListChatappTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User not authorized to operate on the specified resource.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -96,63 +109,86 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public static class ListChatappTemplateResponseBodyListTemplate extends TeaModel {
         /**
          * <p>The review state of the message template. Valid values:</p>
-         * <br>
-         * <p>*   **pass**: The message template is approved.</p>
-         * <p>*   **fail**: The message template is rejected.</p>
-         * <p>*   **auditing**: The message template is being reviewed.</p>
-         * <p>*   **unaudit**: The review is suspended.</p>
+         * <ul>
+         * <li><strong>pass</strong>: The message template is approved.</li>
+         * <li><strong>fail</strong>: The message template is rejected.</li>
+         * <li><strong>auditing</strong>: The message template is being reviewed.</li>
+         * <li><strong>unaudit</strong>: The review is suspended.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
         /**
          * <p>The category of the WhatsApp template. Valid values:</p>
-         * <br>
-         * <p>*   **UTILITY**: utility template</p>
-         * <p>*   **MARKETING**: marketing template</p>
-         * <p>*   **AUTHENTICATION**: authentication template</p>
-         * <br>
+         * <ul>
+         * <li><strong>UTILITY</strong>: utility template</li>
+         * <li><strong>MARKETING</strong>: marketing template</li>
+         * <li><strong>AUTHENTICATION</strong>: authentication template</li>
+         * </ul>
          * <p>The category of the Viber template. Valid values:</p>
-         * <br>
-         * <p>*   **text**: template that contains only text</p>
-         * <p>*   **image**: template that contains only an image</p>
-         * <p>*   **text_image_button**: template that contains text, an image, and a button</p>
-         * <p>*   **text_button**: template that contains text and a button</p>
-         * <p>*   **document**: template that contains only a document</p>
-         * <p>*   **video**: template that contains only a video</p>
-         * <p>*   **text_video**: template that contains text and a video</p>
-         * <p>*   **text_video_button**: template that contains text, a video, and a button</p>
-         * <p>*   **text_image**: template that contains text and an image</p>
+         * <ul>
+         * <li><strong>text</strong>: template that contains only text</li>
+         * <li><strong>image</strong>: template that contains only an image</li>
+         * <li><strong>text_image_button</strong>: template that contains text, an image, and a button</li>
+         * <li><strong>text_button</strong>: template that contains text and a button</li>
+         * <li><strong>document</strong>: template that contains only a document</li>
+         * <li><strong>video</strong>: template that contains only a video</li>
+         * <li><strong>text_video</strong>: template that contains text and a video</li>
+         * <li><strong>text_video_button</strong>: template that contains text, a video, and a button</li>
+         * <li><strong>text_image</strong>: template that contains text and an image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TRANSACTIONAL</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The language that is used in the message template. For more information, see [Language codes](https://help.aliyun.com/document_detail/463420.html).</p>
+         * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The reason for the review failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The code of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>744c4b5c79c9432497a075bdfca3****</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;
 
         /**
          * <p>The name of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello_whatsapp</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The type of the template. Valid values: WHATSAPP and VIBER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
         @NameInMap("TemplateType")
         public String templateType;
