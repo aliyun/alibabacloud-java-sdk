@@ -12,6 +12,9 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC49FF51-612F-429B-AB1E-374B3F115396</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,52 +43,77 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
     public static class DescribeOnDemandInstanceStatusResponseBodyInstances extends TeaModel {
         /**
          * <p>The details of route advertisement for data centers outside the Chinese mainland. This parameter is a JSON string. The following fields are included in the value:</p>
-         * <br>
-         * <p>*   **region**: The code of the data center outside the Chinese mainland. The value is of the STRING type. For more information, see **Codes of data centers outside the Chinese mainland**.</p>
-         * <p>*   **declared**: indicates whether the data center advertised the route. The value is of the STRING type. Valid values: **0** and **1**. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.</p>
+         * <ul>
+         * <li><strong>region</strong>: The code of the data center outside the Chinese mainland. The value is of the STRING type. For more information, see <strong>Codes of data centers outside the Chinese mainland</strong>.</li>
+         * <li><strong>declared</strong>: indicates whether the data center advertised the route. The value is of the STRING type. Valid values: <strong>0</strong> and <strong>1</strong>. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;region\&quot;:\&quot;oe24\&quot;,\&quot;declared\&quot;:0},{\&quot;region\&quot;:\&quot;oe26\&quot;,\&quot;declared\&quot;:0},{\&quot;region\&quot;:\&quot;oe28\&quot;,\&quot;declared\&quot;:0},{\&quot;region\&quot;:\&quot;oi39\&quot;,\&quot;declared\&quot;:0},{\&quot;region\&quot;:\&quot;us50\&quot;,\&quot;declared\&quot;:0},{\&quot;region\&quot;:\&quot;jp141\&quot;,\&quot;declared\&quot;:0}]</p>
          */
         @NameInMap("Declared")
         public String declared;
 
         /**
          * <p>The description of the on-demand instance.</p>
-         * <br>
-         * <p>>  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
+         * <blockquote>
+         * <p> The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>The ID of the on-demand instance.</p>
-         * <br>
-         * <p>>  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
+         * <blockquote>
+         * <p> The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-z2q1qzxb****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The mode used to start the on-demand instance. Valid values:</p>
-         * <br>
-         * <p>*   **manual**: The instance is manually started.</p>
-         * <p>*   **netflow-auto**: The instance is automatically started by using NetFlow that monitors network traffic.</p>
+         * <ul>
+         * <li><strong>manual</strong>: The instance is manually started.</li>
+         * <li><strong>netflow-auto</strong>: The instance is automatically started by using NetFlow that monitors network traffic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>netflow-auto</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The CIDR block of the on-demand instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.<em><strong>.</strong></em>.0/24</p>
          */
         @NameInMap("Net")
         public String net;
 
         /**
-         * <p>The number of the autonomous system (AS). Set the value to **0**, which indicates that AS is disabled.</p>
+         * <p>The number of the autonomous system (AS). Set the value to <strong>0</strong>, which indicates that AS is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RegistedAs")
         public String registedAs;
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>171986973287****</p>
          */
         @NameInMap("UserId")
         public String userId;

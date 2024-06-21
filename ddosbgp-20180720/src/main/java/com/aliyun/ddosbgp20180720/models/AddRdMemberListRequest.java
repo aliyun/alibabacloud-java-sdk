@@ -24,6 +24,10 @@ public class AddRdMemberListRequest extends TeaModel {
     }
 
     public static class AddRdMemberListRequestMemberList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>19510843762****</p>
+         */
         @NameInMap("Uid")
         public String uid;
 

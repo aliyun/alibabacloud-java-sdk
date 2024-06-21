@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The region ID to query. The default value is **cn-hangzhou**, which indicates that the regions of cloud assets that are supported by an Anti-DDoS Origin instance in the China (Hangzhou) region are queried.</p>
-     * <br>
-     * <p>For more information about the IDs of other regions, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
+     * <p>The region ID to query. The default value is <strong>cn-hangzhou</strong>, which indicates that the regions of cloud assets that are supported by an Anti-DDoS Origin instance in the China (Hangzhou) region are queried.</p>
+     * <p>For more information about the IDs of other regions, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-     * <br>
-     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CheckAccessLogAuthResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Anti-DDoS Origin was authorized to access Log Service. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Anti-DDoS Origin was authorized.</p>
-     * <p>*   **false**: Anti-DDoS Origin was not authorized.</p>
+     * <ul>
+     * <li><strong>true</strong>: Anti-DDoS Origin was authorized.</li>
+     * <li><strong>false</strong>: Anti-DDoS Origin was not authorized.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AccessLogAuth")
     public Boolean accessLogAuth;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>864FE2F4-CB2E-4024-B9EF-D59FD08ABD41</p>
      */
     @NameInMap("RequestId")
     public String requestId;

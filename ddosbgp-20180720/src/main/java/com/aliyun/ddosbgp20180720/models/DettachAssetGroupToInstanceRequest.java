@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DettachAssetGroupToInstanceRequest extends TeaModel {
     /**
      * <p>The information about the asset that you want to dissociate.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AssetGroupList")
@@ -14,27 +13,28 @@ public class DettachAssetGroupToInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddosbgp-xxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    /**
-     * <p>The source IP address of the request. The system specifies this parameter.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
 
     public static DettachAssetGroupToInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DettachAssetGroupToInstanceRequest self = new DettachAssetGroupToInstanceRequest();
@@ -65,38 +65,37 @@ public class DettachAssetGroupToInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DettachAssetGroupToInstanceRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static class DettachAssetGroupToInstanceRequestAssetGroupList extends TeaModel {
         /**
          * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-lbj382l****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The region ID of the asset.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **waf**: WAF instance</p>
-         * <p>*   **ga**: Global Accelerator (GA) instance</p>
-         * <br>
+         * <ul>
+         * <li><strong>waf</strong>: WAF instance</li>
+         * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         @NameInMap("Type")
         public String type;

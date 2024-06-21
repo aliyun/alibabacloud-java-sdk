@@ -6,39 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeAssetGroupRequest extends TeaModel {
     /**
      * <p>The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf_v2_public_cn-lbj382l****</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID of the asset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the most recent region list.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The source IP address of the request. The system specifies this parameter.</p>
-     */
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    /**
      * <p>The type of the asset. Valid values:</p>
-     * <br>
-     * <p>*   **waf**: WAF instance</p>
-     * <p>*   **ga**: Global Accelerator (GA) instance</p>
-     * <br>
+     * <ul>
+     * <li><strong>waf</strong>: WAF instance</li>
+     * <li><strong>ga</strong>: Global Accelerator (GA) instance</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf</p>
      */
     @NameInMap("Type")
     public String type;
@@ -70,14 +76,6 @@ public class DescribeAssetGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DescribeAssetGroupRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeAssetGroupRequest setType(String type) {

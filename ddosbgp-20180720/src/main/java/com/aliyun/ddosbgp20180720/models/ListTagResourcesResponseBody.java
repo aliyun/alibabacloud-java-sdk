@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The query token that is returned in this call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C3F7E6AE-43B2-4730-B6A3-FD17552B8F65</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the Anti-DDoS Origin instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The value is fixed as **INSTANCE**, which indicates instances.</p>
+         * <p>The type of the resource. The value is fixed as <strong>INSTANCE</strong>, which indicates instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of the tag that is added to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag that is added to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

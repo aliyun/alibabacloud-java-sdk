@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class GetSlsOpenStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D01666F5-541B-4C78-98A6-D29E02DAAC7C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether Log Service was activated. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Log Service was activated.</p>
-     * <p>*   **false**: Log Service was not activated.</p>
+     * <ul>
+     * <li><strong>true</strong>: Log Service was activated.</li>
+     * <li><strong>false</strong>: Log Service was not activated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SlsOpenStatus")
     public Boolean slsOpenStatus;

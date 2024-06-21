@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ConfigSchedruleOnDemandResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD06F539-2FBE-450D-9391-7EFF787128F5</p>
      */
     @NameInMap("RequestId")
     public String requestId;

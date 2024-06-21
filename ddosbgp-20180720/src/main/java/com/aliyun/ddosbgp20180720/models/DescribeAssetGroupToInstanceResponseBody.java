@@ -12,12 +12,18 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C73C59B9-9F5C-57FF-A394-13EC8FC3B2FF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -54,30 +60,45 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
     public static class DescribeAssetGroupToInstanceResponseBodyDataList extends TeaModel {
         /**
          * <p>The ID of the Anti-DDoS Origin instance of a paid edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-7212zaa5v***</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The UID of the member to which the asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170858869679****</p>
          */
         @NameInMap("MemberUid")
         public String memberUid;
 
         /**
          * <p>The ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_v2_public_cn-lbj382l****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The region ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The type of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         @NameInMap("Type")
         public String type;

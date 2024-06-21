@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribePackIpListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code of the request.</p>
-     * <br>
-     * <p>For more information about status codes, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).</p>
+     * <p>For more information about status codes, see <a href="https://help.aliyun.com/document_detail/118841.html">Common parameters</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,21 +22,31 @@ public class DescribePackIpListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FD1578A-BD77-50B7-A969-45A374A7ED22</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call is successful.</p>
-     * <p>*   **false**: The call fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of protected IP addresses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -87,12 +99,18 @@ public class DescribePackIpListResponseBody extends TeaModel {
     public static class DescribePackIpListResponseBodyIpList extends TeaModel {
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.98.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170858869679****</p>
          */
         @NameInMap("MemberUid")
         public String memberUid;
@@ -108,36 +126,52 @@ public class DescribePackIpListResponseBody extends TeaModel {
 
         /**
          * <p>The type of the cloud asset to which the IP address belongs. Valid values:</p>
-         * <br>
-         * <p>*   **ECS**: an ECS instance.</p>
-         * <p>*   **SLB**: a CLB instance, originally called an SLB instance.</p>
-         * <p>*   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.</p>
-         * <p>*   **WAF**: a WAF instance.</p>
+         * <ul>
+         * <li><strong>ECS</strong>: an ECS instance.</li>
+         * <li><strong>SLB</strong>: a CLB instance, originally called an SLB instance.</li>
+         * <li><strong>EIP</strong>: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.</li>
+         * <li><strong>WAF</strong>: a WAF instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The region to which the protected IP address belongs.</p>
-         * <br>
-         * <p>>  If the protected IP address is in the same region as the instance, this parameter is not returned.</p>
+         * <blockquote>
+         * <p> If the protected IP address is in the same region as the instance, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The description of the cloud asset to which the IP address belongs. The asset can be an ECS instance or an SLB instance.</p>
-         * <br>
-         * <p>>  If no descriptions are provided for the asset, this parameter is not returned.</p>
+         * <blockquote>
+         * <p> If no descriptions are provided for the asset, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The status of the IP address. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: The IP address is in the normal state, which indicates that the IP address is not under attack.</p>
-         * <p>*   **hole_begin**: Blackhole filtering is triggered for the IP address.</p>
+         * <ul>
+         * <li><strong>normal</strong>: The IP address is in the normal state, which indicates that the IP address is not under attack.</li>
+         * <li><strong>hole_begin</strong>: Blackhole filtering is triggered for the IP address.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Status")
         public String status;

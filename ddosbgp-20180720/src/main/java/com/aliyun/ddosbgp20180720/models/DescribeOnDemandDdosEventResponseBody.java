@@ -12,12 +12,18 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A507DC8-F657-4C13-84E2-D1D1B9400753</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of DDoS events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -54,41 +60,60 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
     public static class DescribeOnDemandDdosEventResponseBodyEvents extends TeaModel {
         /**
          * <p>The timestamp that indicates the end time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557891306</p>
          */
         @NameInMap("EndTime")
         public Integer endTime;
 
         /**
          * <p>The IP address of the protection target that encounters the DDoS attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.XX.XX.1</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The throughput of the DDoS attack. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110000</p>
          */
         @NameInMap("Mbps")
         public Integer mbps;
 
         /**
          * <p>The packet forwarding rate of the DDoS attack. Unit: packets per second (PPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Pps")
         public Integer pps;
 
         /**
          * <p>The timestamp that indicates the start time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557889506</p>
          */
         @NameInMap("StartTime")
         public Integer startTime;
 
         /**
          * <p>The status of the event. Valid values:</p>
-         * <br>
-         * <p>*   **hole_begin **: indicates that the event is in the blackhole state.</p>
-         * <p>*   **hole_end **: indicates that blackhole ends.</p>
-         * <p>*   **defense_begin **: indicates that the event is in the cleaning state.</p>
-         * <p>*   **defense_end **: indicates that cleaning ends.</p>
+         * <ul>
+         * <li>**hole_begin **: indicates that the event is in the blackhole state.</li>
+         * <li>**hole_end **: indicates that blackhole ends.</li>
+         * <li>**defense_begin **: indicates that the event is in the cleaning state.</li>
+         * <li>**defense_end **: indicates that cleaning ends.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>defense_end</p>
          */
         @NameInMap("Status")
         public String status;

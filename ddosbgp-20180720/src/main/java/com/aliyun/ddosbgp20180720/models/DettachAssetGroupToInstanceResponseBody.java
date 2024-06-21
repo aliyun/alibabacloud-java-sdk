@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DettachAssetGroupToInstanceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E54BA258-9DE8-59BE-B7A8-DAD28E6E8DAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -24,6 +24,10 @@ public class DeleteRdMemberListRequest extends TeaModel {
     }
 
     public static class DeleteRdMemberListRequestMemberList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>136548010379****</p>
+         */
         @NameInMap("Uid")
         public String uid;
 

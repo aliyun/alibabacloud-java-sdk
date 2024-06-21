@@ -12,12 +12,18 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>381D5D33-BB8F-395F-8EE4-AE3BB4B523C4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of Anti-DDoS Origin instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -76,17 +82,25 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
 
         /**
          * <p>The number of protected public IP addresses for which blackhole filtering is triggered.</p>
-         * <br>
-         * <p>>  You can call the [DeleteBlackhole](https://help.aliyun.com/document_detail/118692.html) operation to deactivate blackhole filtering for a protected IP address.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BlackholdingCount")
         public String blackholdingCount;
@@ -99,63 +113,90 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640275200000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592886047000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-oew1pjrk****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The mitigation plan of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: the Professional mitigation plan</p>
-         * <p>*   **1**: the Enterprise mitigation plan</p>
+         * <ul>
+         * <li><strong>0</strong>: the Professional mitigation plan</li>
+         * <li><strong>1</strong>: the Enterprise mitigation plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The protocol type of the IP address asset that is protected by the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Ipv4**: IPv4</p>
-         * <p>*   **Ipv6**: IPv6</p>
+         * <ul>
+         * <li><strong>Ipv4</strong>: IPv4</li>
+         * <li><strong>Ipv6</strong>: IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         @NameInMap("IpType")
         public String ipType;
 
         /**
          * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   **gamebox**: The Anti-DDoS Origin instance is created by using Game Security Box.</p>
-         * <p>*   **eip**: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</p>
+         * <ul>
+         * <li><strong>gamebox</strong>: The Anti-DDoS Origin instance is created by using Game Security Box.</li>
+         * <li><strong>eip</strong>: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gamebox</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The remarks of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **1**: normal</p>
-         * <p>*   **2**: expired</p>
-         * <p>*   **3**: released</p>
+         * <ul>
+         * <li><strong>1</strong>: normal</li>
+         * <li><strong>2</strong>: expired</li>
+         * <li><strong>3</strong>: released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public String status;

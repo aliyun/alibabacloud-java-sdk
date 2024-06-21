@@ -6,26 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSpecsRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin Enterprise instance. This parameter value is a string consisting of JSON arrays. Each element in a JSON array indicates an instance ID. If you want to query more than one instance, separate instance IDs with commas (,).</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstanceList](https://help.aliyun.com/document_detail/118698.html) operation to query the IDs of all Anti-DDoS Origin Enterprise instances in a specific region.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin Enterprise instances in a specific region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;ddosbgp-cn-n6w1r7nz****&quot;]</p>
      */
     @NameInMap("InstanceIdList")
     public String instanceIdList;
 
     /**
-     * <p>The region ID of the Anti-DDoS Origin Enterprise instance. Default value: **cn-hangzhou**, which indicates the China (Hangzhou) region.</p>
-     * <br>
-     * <p>>  If your instance does not reside in the China (Hangzhou) region, you must specify this parameter to the region ID of your instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/118703.html) operation to query the regions of cloud assets that are supported by an Anti-DDoS Origin instance.</p>
+     * <p>The region ID of the Anti-DDoS Origin Enterprise instance. Default value: <strong>cn-hangzhou</strong>, which indicates the China (Hangzhou) region.</p>
+     * <blockquote>
+     * <p> If your instance does not reside in the China (Hangzhou) region, you must specify this parameter to the region ID of your instance. You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the regions of cloud assets that are supported by an Anti-DDoS Origin instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin Enterprise instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin Enterprise instance belongs to the default resource group.</p>
-     * <br>
-     * <p>For more information about resource groups, see [Create a resource group](https://help.aliyun.com/document_detail/94485.html).</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm2pz25js****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -7,9 +7,17 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
     @NameInMap("MemberList")
     public java.util.List<DescribeRdMemberListResponseBodyMemberList> memberList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DC245DEE-9800-5579-BF99-189D6A5BA9FE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,12 +51,24 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
     }
 
     public static class DescribeRdMemberListResponseBodyMemberList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1624954942000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1960279802016267</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
