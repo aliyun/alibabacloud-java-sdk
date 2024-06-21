@@ -4726,6 +4726,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SurveyChannel", request.surveyChannel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.surveyTemplateId)) {
+            query.put("SurveyTemplateId", request.surveyTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.surveyTemplateVariables)) {
+            query.put("SurveyTemplateVariables", request.surveyTemplateVariables);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             query.put("UserId", request.userId);
         }
@@ -7072,6 +7080,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outboundScenario)) {
             query.put("OutboundScenario", request.outboundScenario);
         }
@@ -7142,6 +7154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

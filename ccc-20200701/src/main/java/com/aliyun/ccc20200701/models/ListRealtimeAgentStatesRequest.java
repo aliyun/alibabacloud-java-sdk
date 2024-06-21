@@ -34,6 +34,9 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -122,6 +125,14 @@ public class ListRealtimeAgentStatesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListRealtimeAgentStatesRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public ListRealtimeAgentStatesRequest setOutboundScenario(Boolean outboundScenario) {
