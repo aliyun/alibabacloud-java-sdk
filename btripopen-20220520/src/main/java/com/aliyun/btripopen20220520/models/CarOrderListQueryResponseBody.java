@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarOrderListQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     @NameInMap("page_info")
     public CarOrderListQueryResponseBodyPageInfo pageInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -90,30 +105,62 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderListQueryResponseBodyModulePriceInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("category_code")
         public Integer categoryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("category_type")
         public Integer categoryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pay_type")
         public Integer payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("person_price")
         public Double personPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("price")
         public Double price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8908076767</p>
+         */
         @NameInMap("trade_id")
         public String tradeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 
@@ -197,6 +244,10 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderListQueryResponseBodyModuleUserAffiliateList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11342</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -227,24 +278,44 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderListQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>117429516</p>
+         */
         @NameInMap("apply_id")
         public Long applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>201802031353000525653</p>
+         */
         @NameInMap("apply_show_id")
         public String applyShowId;
 
         @NameInMap("btrip_title")
         public String btripTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TRAVEL</p>
+         */
         @NameInMap("business_category")
         public String businessCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("cancel_time")
         public String cancelTime;
 
         @NameInMap("car_info")
         public String carInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("car_level")
         public Integer carLevel;
 
@@ -254,12 +325,20 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("corp_name")
         public String corpName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11376</p>
+         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CT-134JHK</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
@@ -269,9 +348,17 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("dept_name")
         public String deptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("driver_confirm_time")
         public String driverConfirmTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("estimate_price")
         public Double estimatePrice;
 
@@ -284,21 +371,41 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("from_city_name")
         public String fromCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("gmt_modified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3615085</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11876</p>
+         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_special")
         public Boolean isSpecial;
 
@@ -311,24 +418,44 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("pay_time")
         public String payTime;
 
         @NameInMap("price_info_list")
         public java.util.List<CarOrderListQueryResponseBodyModulePriceInfoList> priceInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P- JI87KK</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11546</p>
+         */
         @NameInMap("project_id")
         public Long projectId;
 
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("provider")
         public Integer provider;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("publish_time")
         public String publishTime;
 
@@ -350,18 +477,34 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("real_to_city_name")
         public String realToCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("service_type")
         public Integer serviceType;
 
         @NameInMap("special_types")
         public java.util.List<String> specialTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("taken_time")
         public String takenTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS-OIPK34H</p>
+         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS-112JKDF</p>
+         */
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
@@ -374,12 +517,20 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @NameInMap("to_city_name")
         public String toCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.2</p>
+         */
         @NameInMap("travel_distance")
         public Double travelDistance;
 
         @NameInMap("user_affiliate_list")
         public java.util.List<CarOrderListQueryResponseBodyModuleUserAffiliateList> userAffiliateList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("user_confirm")
         public Integer userConfirm;
 
@@ -829,12 +980,24 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderListQueryResponseBodyPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("total_number")
         public Integer totalNumber;
 

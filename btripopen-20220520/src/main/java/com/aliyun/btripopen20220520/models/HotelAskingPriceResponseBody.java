@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelAskingPriceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelAskingPriceResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bcc3a16583004579056128d33d7</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,24 +96,44 @@ public class HotelAskingPriceResponseBody extends TeaModel {
     }
 
     public static class HotelAskingPriceResponseBodyModuleHotelAskingPriceDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>652302</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("hotel_address")
         public String hotelAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>55335212</p>
+         */
         @NameInMap("hotel_code")
         public String hotelCode;
 
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_protocol")
         public Boolean isProtocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("min_price")
         public Double minPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("original_min_price")
         public Double originalMinPrice;
 

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainApplyChangeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TrainApplyChangeResponseBody extends TeaModel {
     @NameInMap("module")
     public TrainApplyChangeResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2103ad0216854277618591626db2b6</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,15 +97,31 @@ public class TrainApplyChangeResponseBody extends TeaModel {
     }
 
     public static class TrainApplyChangeResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("change_order_id")
         public String changeOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>116019444</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1017124195788186048</p>
+         */
         @NameInMap("out_order_id")
         public String outOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pay_status")
         public String payStatus;
 

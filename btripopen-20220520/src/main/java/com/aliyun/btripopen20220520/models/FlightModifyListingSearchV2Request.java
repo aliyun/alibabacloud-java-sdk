@@ -13,18 +13,34 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
     @NameInMap("interface_caller_is_support_retry")
     public Boolean interfaceCallerIsSupportRetry;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467138</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467137</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     @NameInMap("passenger_segment_relations")
     public java.util.List<FlightModifyListingSearchV2RequestPassengerSegmentRelations> passengerSegmentRelations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
@@ -34,9 +50,17 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
     @NameInMap("selected_segments")
     public java.util.List<FlightModifyListingSearchV2RequestSelectedSegments> selectedSegments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a2ffebfe733742aab5c491d960ba3d59</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("voluntary")
     public Boolean voluntary;
 
@@ -142,6 +166,10 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2RequestPassengerSegmentRelations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3243028</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
@@ -172,24 +200,52 @@ public class FlightModifyListingSearchV2Request extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2RequestSelectedSegments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-17 18:15:00</p>
+         */
         @NameInMap("dep_date_time")
         public String depDateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_seq")
         public Integer journeySeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA8625</p>
+         */
         @NameInMap("marketing_flight_no")
         public String marketingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU8625</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_seq")
         public Integer segmentSeq;
 

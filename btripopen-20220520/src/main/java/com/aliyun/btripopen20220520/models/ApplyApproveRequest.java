@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ApplyApproveRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdfg</p>
      */
     @NameInMap("apply_id")
     public String applyId;
@@ -15,21 +18,34 @@ public class ApplyApproveRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-12 16:12:53</p>
      */
     @NameInMap("operate_time")
     public String operateTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>btrip123</p>
+     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>thirdpart12138</p>
      */
     @NameInMap("user_id")
     public String userId;

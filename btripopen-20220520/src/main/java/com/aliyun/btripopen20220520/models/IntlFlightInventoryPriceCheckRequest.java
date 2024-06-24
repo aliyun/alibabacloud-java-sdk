@@ -4,17 +4,32 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ZJTD</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chinese</p>
+     */
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>102000</p>
+     */
     @NameInMap("order_price")
     public Long orderPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22111acaf9ea47c09ed0db6abc45be2d_0</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
@@ -25,6 +40,10 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     @NameInMap("passenger_list")
     public java.util.List<IntlFlightInventoryPriceCheckRequestPassengerList> passengerList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12412341234</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
@@ -93,26 +112,43 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     }
 
     public static class IntlFlightInventoryPriceCheckRequestPassengerListCertInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_nation")
         public String certNation;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H123456</p>
          */
         @NameInMap("cert_no")
         public String certNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2033-01-09</p>
+         */
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHANG/SAN</p>
          */
         @NameInMap("name")
         public String name;
@@ -165,18 +201,38 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     }
 
     public static class IntlFlightInventoryPriceCheckRequestPassengerListSubsidiaryCertInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H123456</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2033-01-09</p>
+         */
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZHANG/SAN</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -230,10 +286,17 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     public static class IntlFlightInventoryPriceCheckRequestPassengerList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01</p>
          */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100/1001</p>
+         */
         @NameInMap("cascade_dept_mask")
         public String cascadeDeptMask;
 
@@ -249,48 +312,86 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100231</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("dept_id")
         public String deptId;
 
         @NameInMap("dept_name")
         public String deptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("gender")
         public Integer gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10001313</p>
+         */
         @NameInMap("invoice_id")
         public String invoiceId;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>L5000924</p>
+         */
         @NameInMap("job_no")
         public String jobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>086</p>
+         */
         @NameInMap("mobile_country_code")
         public String mobileCountryCode;
 
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality_code")
         public String nationalityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18012341234</p>
          */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10123143</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
@@ -302,10 +403,17 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 

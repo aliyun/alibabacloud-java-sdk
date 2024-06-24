@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderPreValidateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -15,13 +19,24 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -79,24 +94,48 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
     }
 
     public static class HotelOrderPreValidateResponseBodyModulePromotionInfoPromotionDetailInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("check_status")
         public Boolean checkStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("need_check")
         public Boolean needCheck;
 
         @NameInMap("promotion_code")
         public String promotionCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12893</p>
+         */
         @NameInMap("promotion_id")
         public String promotionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("promotion_name")
         public String promotionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("promotion_price")
         public Long promotionPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("promotion_type")
         public String promotionType;
 
@@ -170,6 +209,10 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("promotion_detail_info_list")
         public java.util.List<HotelOrderPreValidateResponseBodyModulePromotionInfoPromotionDetailInfoList> promotionDetailInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("promotion_total_price")
         public Long promotionTotalPrice;
 
@@ -214,12 +257,24 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("max_booking_num")
         public Integer maxBookingNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-19</p>
+         */
         @NameInMap("rate_start_time")
         public String rateStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("room_count")
         public Integer roomCount;
 
@@ -229,6 +284,10 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("rounding_price")
         public String roundingPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("service_fee")
         public Long serviceFee;
 
@@ -312,9 +371,17 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
     }
 
     public static class HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("hour")
         public Long hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("value")
         public Long value;
 
@@ -378,30 +445,62 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("btrip_hotel_cancel_policy_d_t_o")
         public HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00</p>
+         */
         @NameInMap("earliest_check_in_time")
         public String earliestCheckInTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17:00</p>
+         */
         @NameInMap("latest_check_out_time")
         public String latestCheckOutTime;
 
         @NameInMap("max_booking_num")
         public Integer maxBookingNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("max_occupancy_num")
         public Integer maxOccupancyNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("need_certificate")
         public Boolean needCertificate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("need_email")
         public Boolean needEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("need_english_name")
         public Boolean needEnglishName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_order_price")
         public Long totalOrderPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_room_price")
         public Long totalRoomPrice;
 
@@ -501,9 +600,17 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
     }
 
     public static class HotelOrderPreValidateResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("extend_info")
         public String extendInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fb5e1abf33924b6c912bd6d80deec0eb-4</p>
+         */
         @NameInMap("itinerary_no")
         public String itineraryNo;
 
@@ -513,12 +620,20 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("rate_plan_daily")
         public java.util.List<HotelOrderPreValidateResponseBodyModuleRatePlanDaily> ratePlanDaily;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5314280514218</p>
+         */
         @NameInMap("rate_plan_id")
         public Long ratePlanId;
 
         @NameInMap("rate_plan_info")
         public HotelOrderPreValidateResponseBodyModuleRatePlanInfo ratePlanInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nonUltron_1673575241156_d91ea8ad16735752359161037bf6cf_c54d3768312a4b249b719f126377bf82</p>
+         */
         @NameInMap("validate_res_key")
         public String validateResKey;
 

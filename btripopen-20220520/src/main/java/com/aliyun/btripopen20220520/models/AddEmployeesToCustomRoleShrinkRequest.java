@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddEmployeesToCustomRoleShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("role_id")
     public String roleId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("user_id_list")
     public String userIdListShrink;

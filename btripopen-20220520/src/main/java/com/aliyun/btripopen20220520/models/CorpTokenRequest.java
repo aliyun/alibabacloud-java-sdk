@@ -4,17 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CorpTokenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Z2FyYmE1YTZjMDAwTixJU1M5LnZlLXtMO3FKbiYqJSM</p>
+     */
     @NameInMap("app_secret")
     public String appSecret;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open324dfsdafsgcxvxv</p>
      */
     @NameInMap("corp_id")
     public String corpId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("type")
     public Integer type;

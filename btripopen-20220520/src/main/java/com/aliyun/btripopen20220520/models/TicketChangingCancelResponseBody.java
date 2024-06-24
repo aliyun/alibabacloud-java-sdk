@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingCancelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class TicketChangingCancelResponseBody extends TeaModel {
     @NameInMap("module")
     public TicketChangingCancelResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +92,17 @@ public class TicketChangingCancelResponseBody extends TeaModel {
     }
 
     public static class TicketChangingCancelResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0000-00-00 00:00:00</p>
+         */
         @NameInMap("cancel_time")
         public String cancelTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mid1243</p>
+         */
         @NameInMap("dis_sub_order_id")
         public String disSubOrderId;
 

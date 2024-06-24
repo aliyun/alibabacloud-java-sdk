@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TicketChangingApplyShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis1234</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mid1243</p>
      */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
@@ -27,6 +33,9 @@ public class TicketChangingApplyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1s8837sh991hsj92h</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
@@ -36,10 +45,17 @@ public class TicketChangingApplyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>us88s2bsbin22hjusd8i</p>
      */
     @NameInMap("session_id")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("whether_retry")
     public Boolean whetherRetry;
 

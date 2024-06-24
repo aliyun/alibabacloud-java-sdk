@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureRefundDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class InsureRefundDetailResponseBody extends TeaModel {
     @NameInMap("module")
     public InsureRefundDetailResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2103a75b16843756660655464d56a9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bc44e16818128994413918de6c1</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -79,12 +95,24 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         @NameInMap("cert_name")
         public String certName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300000000000000001</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>102</p>
+         */
         @NameInMap("cert_type")
         public String certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000000</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -131,30 +159,66 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         @NameInMap("applicant")
         public InsureRefundDetailResponseBodyModuleInsureOrderApplicant applicant;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5142701029379</p>
+         */
         @NameInMap("biz_order_id")
         public String bizOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("biz_type")
         public Integer bizType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-11T21:21Z</p>
+         */
         @NameInMap("close_time")
         public String closeTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100000000001</p>
+         */
         @NameInMap("ins_order_id")
         public String insOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200300333333</p>
+         */
         @NameInMap("out_ins_order_id")
         public String outInsOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-11T21:21Z</p>
+         */
         @NameInMap("pay_time")
         public String payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>83000</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("settle_type")
         public Integer settleType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PAID</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -246,30 +310,58 @@ public class InsureRefundDetailResponseBody extends TeaModel {
     }
 
     public static class InsureRefundDetailResponseBodyModuleSubOrderRefundListInsureSegment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>WHA</p>
+         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YTY</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-27 23:00:00</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NGB</p>
+         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
         @NameInMap("dep_city")
         public String depCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NGB</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-27 20:30:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CZ3501</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -353,24 +445,48 @@ public class InsureRefundDetailResponseBody extends TeaModel {
     }
 
     public static class InsureRefundDetailResponseBodyModuleSubOrderRefundListInsured extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1996-07-25</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000001</p>
+         */
         @NameInMap("btrip_user_id")
         public String btripUserId;
 
         @NameInMap("cert_name")
         public String certName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300000000000000000</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>102</p>
+         */
         @NameInMap("cert_type")
         public String certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -438,48 +554,96 @@ public class InsureRefundDetailResponseBody extends TeaModel {
     }
 
     public static class InsureRefundDetailResponseBodyModuleSubOrderRefundList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-17T20:25Z</p>
+         */
         @NameInMap("effective_end_time")
         public String effectiveEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-17T20:25Z</p>
+         */
         @NameInMap("effective_start_time")
         public String effectiveStartTime;
 
         @NameInMap("insure_segment")
         public InsureRefundDetailResponseBodyModuleSubOrderRefundListInsureSegment insureSegment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-17T20:07Z</p>
+         */
         @NameInMap("insure_time")
         public String insureTime;
 
         @NameInMap("insured")
         public InsureRefundDetailResponseBodyModuleSubOrderRefundListInsured insured;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OUT123333444</p>
+         */
         @NameInMap("out_sub_ins_order_id")
         public String outSubInsOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T230411000000140183629</p>
+         */
         @NameInMap("policy_no")
         public String policyNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024194640018002</p>
+         */
         @NameInMap("policy_refund_no")
         public String policyRefundNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>73000</p>
+         */
         @NameInMap("price")
         public Long price;
 
         @NameInMap("product_name")
         public String productName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>008801.accident.flight.104000</p>
+         */
         @NameInMap("product_no")
         public String productNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>REFUND_SUCCESS</p>
+         */
         @NameInMap("refund_status")
         public String refundStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-17T20:25Z</p>
+         */
         @NameInMap("refund_time")
         public String refundTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>REFUND_SUCCESS</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>s1231231344</p>
+         */
         @NameInMap("sub_ins_order_id")
         public String subInsOrderId;
 
@@ -611,21 +775,41 @@ public class InsureRefundDetailResponseBody extends TeaModel {
     }
 
     public static class InsureRefundDetailResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1423050918202760437</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("gmt_modified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100000000001</p>
+         */
         @NameInMap("ins_order_id")
         public String insOrderId;
 
         @NameInMap("insure_order")
         public InsureRefundDetailResponseBodyModuleInsureOrder insureOrder;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23102301010</p>
+         */
         @NameInMap("out_apply_id")
         public String outApplyId;
 

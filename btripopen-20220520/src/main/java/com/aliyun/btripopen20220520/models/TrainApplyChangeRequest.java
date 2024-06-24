@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainApplyChangeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("accept_no_seat")
     public String acceptNoSeat;
 
@@ -13,26 +17,43 @@ public class TrainApplyChangeRequest extends TeaModel {
     @NameInMap("change_train_info_s")
     public java.util.List<TrainApplyChangeRequestChangeTrainInfoS> changeTrainInfoS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("force_match")
     public String forceMatch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("is_pay_now")
     public Boolean isPayNow;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1017028198411054446</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("out_change_apply_id")
     public String outChangeApplyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;
@@ -101,24 +122,36 @@ public class TrainApplyChangeRequest extends TeaModel {
     public static class TrainApplyChangeRequestChangeTrainInfoSChangeTicketInfoSPassengerInfo extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
          */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
          */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("passenger_id")
         public String passengerId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
          */
         @NameInMap("passenger_name")
         public String passengerName;
@@ -171,18 +204,27 @@ public class TrainApplyChangeRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("seat_type")
         public String seatType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ticket_price")
         public String ticketPrice;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ticket_type")
         public String ticketType;
@@ -229,6 +271,9 @@ public class TrainApplyChangeRequest extends TeaModel {
     public static class TrainApplyChangeRequestChangeTrainInfoS extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BTC</p>
          */
         @NameInMap("arr_station_code")
         public String arrStationCode;
@@ -239,38 +284,61 @@ public class TrainApplyChangeRequest extends TeaModel {
         @NameInMap("change_ticket_info_s")
         public java.util.List<TrainApplyChangeRequestChangeTrainInfoSChangeTicketInfoS> changeTicketInfoS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("choose_bed_s")
         public String chooseBedS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1T</p>
+         */
         @NameInMap("choose_seat_s")
         public String chooseSeatS;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDC</p>
          */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
          */
         @NameInMap("dep_time")
         public String depTime;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
          */
         @NameInMap("original_dep_time")
         public String originalDepTime;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K234</p>
          */
         @NameInMap("original_train_no")
         public String originalTrainNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K2345</p>
          */
         @NameInMap("train_no")
         public String trainNo;

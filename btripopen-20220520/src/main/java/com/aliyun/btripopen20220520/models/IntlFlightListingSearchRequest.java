@@ -4,23 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightListingSearchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ZHANGSAN</p>
+     */
     @NameInMap("buyer_name")
     public String buyerName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("direct_only")
     public Boolean directOnly;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
      */
     @NameInMap("isv_name")
     public String isvName;
@@ -28,15 +46,26 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("out_wheel_search")
     public Boolean outWheelSearch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60b412-cc05-4d10-b570-</p>
+     */
     @NameInMap("query_record_id")
     public String queryRecordId;
 
@@ -48,6 +77,9 @@ public class IntlFlightListingSearchRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("search_mode")
     public Integer searchMode;
@@ -55,14 +87,25 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     @NameInMap("search_passenger_list")
     public java.util.List<IntlFlightListingSearchRequestSearchPassengerList> searchPassengerList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JIANHANG</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9960b412-cc05-4d10-b570-93372d816807</p>
+     */
     @NameInMap("token")
     public String token;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;
@@ -193,39 +236,67 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     }
 
     public static class IntlFlightListingSearchRequestSearchJourneysSelectedFlights extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HNY</p>
+         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MEL</p>
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("cabin_type")
         public Integer cabinType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SZX</p>
+         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HKG</p>
          */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-28 12:00:00</p>
          */
         @NameInMap("flight_time")
         public String flightTime;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KA5809</p>
          */
         @NameInMap("market_flight_no")
         public String marketFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CX601</p>
+         */
         @NameInMap("operate_flight_no")
         public String operateFlightNo;
 
@@ -303,18 +374,27 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     public static class IntlFlightListingSearchRequestSearchJourneys extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MEL</p>
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HKG</p>
          */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-28</p>
          */
         @NameInMap("dep_date")
         public String depDate;
@@ -364,24 +444,36 @@ public class IntlFlightListingSearchRequest extends TeaModel {
     public static class IntlFlightListingSearchRequestSearchPassengerList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10012301201</p>
          */
         @NameInMap("cert_no")
         public String certNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("cert_type")
         public Integer certType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHANGSAN</p>
          */
         @NameInMap("full_name")
         public String fullName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("type")
         public Integer type;

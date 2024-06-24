@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class FlightRefundDetailResponseBody extends TeaModel {
     @NameInMap("module")
     public FlightRefundDetailResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,12 +92,24 @@ public class FlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class FlightRefundDetailResponseBodyModuleRefundFeeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>293982882881999</p>
+         */
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_fee")
         public Long refundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
@@ -128,33 +156,65 @@ public class FlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class FlightRefundDetailResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("btrip_order_id")
         public Long btripOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("btrip_sub_order_id")
         public Long btripSubOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dis1234</p>
+         */
         @NameInMap("dis_order_id")
         public String disOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>refun123</p>
+         */
         @NameInMap("dis_sub_order_id")
         public String disSubOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("is_voluntary")
         public Integer isVoluntary;
 
         @NameInMap("reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_fee")
         public Long refundFee;
 
         @NameInMap("refund_fee_list")
         public java.util.List<FlightRefundDetailResponseBodyModuleRefundFeeList> refundFeeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public String status;
 

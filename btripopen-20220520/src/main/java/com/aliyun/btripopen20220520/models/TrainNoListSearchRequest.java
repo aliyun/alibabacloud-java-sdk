@@ -12,6 +12,9 @@ public class TrainNoListSearchRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-05-16</p>
      */
     @NameInMap("dep_date")
     public String depDate;
@@ -28,6 +31,10 @@ public class TrainNoListSearchRequest extends TeaModel {
     @NameInMap("option")
     public TrainNoListSearchRequestOption option;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
@@ -77,6 +84,10 @@ public class TrainNoListSearchRequest extends TeaModel {
     }
 
     public static class TrainNoListSearchRequestOption extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("need_transfer")
         public Boolean needTransfer;
 

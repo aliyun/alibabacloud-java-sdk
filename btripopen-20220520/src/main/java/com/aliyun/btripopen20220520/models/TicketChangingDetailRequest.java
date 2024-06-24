@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dis123</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chang123</p>
+     */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 

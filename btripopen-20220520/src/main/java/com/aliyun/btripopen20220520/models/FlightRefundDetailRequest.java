@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class FlightRefundDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>refun123</p>
      */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;

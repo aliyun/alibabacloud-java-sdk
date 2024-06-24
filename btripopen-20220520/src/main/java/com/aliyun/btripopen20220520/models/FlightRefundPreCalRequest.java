@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class FlightRefundPreCalRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("is_voluntary")
     public String isVoluntary;
 
@@ -51,6 +58,9 @@ public class FlightRefundPreCalRequest extends TeaModel {
     public static class FlightRefundPreCalRequestPassengerSegmentInfoList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA1982</p>
          */
         @NameInMap("flight_no")
         public String flightNo;
@@ -63,6 +73,9 @@ public class FlightRefundPreCalRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23112</p>
          */
         @NameInMap("user_id")
         public String userId;

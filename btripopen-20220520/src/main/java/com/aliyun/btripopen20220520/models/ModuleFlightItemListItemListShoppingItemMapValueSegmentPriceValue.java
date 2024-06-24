@@ -4,36 +4,72 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleFlightItemListItemListShoppingItemMapValueSegmentPriceValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>17400</p>
+     */
     @NameInMap("floor_price")
     public Integer floorPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>121000</p>
+     */
     @NameInMap("ticket_price")
     public Integer ticketPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17400</p>
+     */
     @NameInMap("sell_price")
     public Integer sellPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17400</p>
+     */
     @NameInMap("original_sell_price")
     public Integer originalSellPrice;
 
     @NameInMap("base_total_price")
     public Integer baseTotalPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17400</p>
+     */
     @NameInMap("before_control_price")
     public Integer beforeControlPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11000</p>
+     */
     @NameInMap("tax")
     public Integer tax;
 
     @NameInMap("supply_price")
     public Integer supplyPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>242000</p>
+     */
     @NameInMap("basic_cabin_price")
     public Integer basicCabinPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5000</p>
+     */
     @NameInMap("build_price")
     public Integer buildPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6000</p>
+     */
     @NameInMap("oil_price")
     public Integer oilPrice;
 
@@ -43,10 +79,17 @@ public class ModuleFlightItemListItemListShoppingItemMapValueSegmentPriceValue e
     @NameInMap("business_standard_price")
     public Integer businessStandardPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>242000</p>
+     */
     @NameInMap("common_standard_price")
     public Integer commonStandardPrice;
 
     /**
+     * <p>fdPrice</p>
+     * 
+     * <strong>example:</strong>
      * <p>fdPrice</p>
      */
     @NameInMap("inter_ticket_price")
@@ -280,9 +323,17 @@ public class ModuleFlightItemListItemListShoppingItemMapValueSegmentPriceValue e
         @NameInMap("discount_info")
         public String discountInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
         @NameInMap("discount_num")
         public Double discountNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("show_ticket_price")
         public Boolean showTicketPrice;
 

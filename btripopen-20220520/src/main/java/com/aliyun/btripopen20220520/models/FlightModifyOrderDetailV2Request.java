@@ -4,15 +4,31 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightModifyOrderDetailV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1019195786853020</p>
+     */
     @NameInMap("modify_apply_id")
     public String modifyApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_query_service_fee")
     public Boolean needQueryServiceFee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467200</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 

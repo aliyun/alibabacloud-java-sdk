@@ -4,15 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureOrderRefundRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000001</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostalSavingsBank</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1021000196440356908</p>
+     */
     @NameInMap("out_apply_id")
     public String outApplyId;
 
@@ -22,6 +34,10 @@ public class InsureOrderRefundRequest extends TeaModel {
     @NameInMap("sub_ins_order_ids")
     public java.util.List<String> subInsOrderIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fliggy</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 

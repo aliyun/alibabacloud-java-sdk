@@ -4,72 +4,136 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelSearchShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("adult_num")
     public String adultNum;
 
     @NameInMap("brand_code")
     public String brandCodeShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-22</p>
      */
     @NameInMap("check_in_date")
     public String checkInDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-22</p>
      */
     @NameInMap("check_out_date")
     public String checkOutDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>330100</p>
+     */
     @NameInMap("city_code")
     public String cityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("dir")
     public Integer dir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("distance")
     public Integer distance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>330000</p>
+     */
     @NameInMap("district_code")
     public String districtCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("hotel_star")
     public String hotelStar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("is_protocol")
     public Boolean isProtocol;
 
     @NameInMap("key_words")
     public String keyWords;
 
+    /**
+     * <strong>example:</strong>
+     * <p>120.010059, 30.284666</p>
+     */
     @NameInMap("location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("max_price")
     public Double maxPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("min_price")
     public Double minPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page_no")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pay_over_type")
     public Integer payOverType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("payment_type")
     public Integer paymentType;
 
@@ -78,10 +142,17 @@ public class HotelSearchShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("sort_code")
     public Integer sortCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("super_man")
     public Integer superMan;
 

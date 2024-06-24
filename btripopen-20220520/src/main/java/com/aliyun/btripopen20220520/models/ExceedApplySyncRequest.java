@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class ExceedApplySyncRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>823744</p>
      */
     @NameInMap("apply_id")
     public Long applyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("biz_category")
     public Integer bizCategory;
 
@@ -18,15 +25,25 @@ public class ExceedApplySyncRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123421</p>
+     */
     @NameInMap("thirdparty_flow_id")
     public String thirdpartyFlowId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open5145141</p>
      */
     @NameInMap("user_id")
     public String userId;

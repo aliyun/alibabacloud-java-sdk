@@ -4,18 +4,38 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightPayOrderV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cheshiapi002kwl</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195798359400</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5100</p>
+     */
     @NameInMap("total_price")
     public Long totalPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("total_service_fee_price")
     public Long totalServiceFeePrice;
 

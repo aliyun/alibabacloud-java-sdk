@@ -4,33 +4,69 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightOrderListQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("all_apply")
     public Boolean allApply;
 
+    /**
+     * <strong>example:</strong>
+     * <p>175634</p>
+     */
     @NameInMap("apply_id")
     public Long applyId;
 
     @NameInMap("depart_id")
     public String departId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("end_time")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("start_time")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CS-FLIGHT</p>
+     */
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("update_end_time")
     public String updateEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("update_start_time")
     public String updateStartTime;
 

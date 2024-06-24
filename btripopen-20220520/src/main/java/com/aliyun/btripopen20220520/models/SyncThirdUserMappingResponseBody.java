@@ -4,18 +4,34 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class SyncThirdUserMappingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8465F68D-BC97-5C0F-9161-3E65919D9135</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 

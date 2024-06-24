@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainNoListSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TrainNoListSearchResponseBody extends TeaModel {
     @NameInMap("module")
     public TrainNoListSearchResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bc81a17090871660176894d008c</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,12 +97,20 @@ public class TrainNoListSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoListSearchResponseBodyModuleTrainStationSearchVOSSeatInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40900</p>
+         */
         @NameInMap("price")
         public Long price;
 
         @NameInMap("seat_name")
         public String seatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
@@ -134,54 +157,106 @@ public class TrainNoListSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoListSearchResponseBodyModuleTrainStationSearchVOS extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("arr_day_tag")
         public String arrDayTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDC</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
         @NameInMap("arr_station_name")
         public String arrStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-07 14:46:06</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("cost_time")
         public String costTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
         @NameInMap("dep_station_name")
         public String depStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 14:46:06</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("is_end_station")
         public Integer isEndStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("is_start_station")
         public Integer isStartStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>54000</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("sale_flag")
         public String saleFlag;
 
         @NameInMap("sale_flag_msg")
         public String saleFlagMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("seagment_index")
         public String seagmentIndex;
 
         @NameInMap("seat_infos")
         public java.util.List<TrainNoListSearchResponseBodyModuleTrainStationSearchVOSSeatInfos> seatInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>D2345</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("train_type")
         public String trainType;
 
@@ -329,15 +404,27 @@ public class TrainNoListSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailListSeatInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40900</p>
+         */
         @NameInMap("price")
         public Long price;
 
         @NameInMap("seat_name")
         public String seatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33</p>
+         */
         @NameInMap("stock")
         public String stock;
 
@@ -381,39 +468,79 @@ public class TrainNoListSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("arr_day_tag")
         public String arrDayTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123344</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
         @NameInMap("arr_station_name")
         public String arrStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-07 14:46:06</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>234567</p>
+         */
         @NameInMap("cost_time")
         public String costTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12334</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
         @NameInMap("dep_station_name")
         public String depStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 14:46:06</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("is_end_station")
         public Integer isEndStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("is_start_station")
         public Integer isStartStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>105000</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("sale_flag")
         public String saleFlag;
 
@@ -423,12 +550,24 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         @NameInMap("seat_infos")
         public java.util.List<TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailListSeatInfos> seatInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public String segmentIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>K2345</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("train_type")
         public String trainType;
 
@@ -591,6 +730,10 @@ public class TrainNoListSearchResponseBody extends TeaModel {
         @NameInMap("transfer_detail_list")
         public java.util.List<TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailList> transferDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("transfer_type")
         public String transferType;
 

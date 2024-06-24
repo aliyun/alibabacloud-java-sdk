@@ -4,20 +4,34 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainOrderCancelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1234223</p>
+     */
     @NameInMap("change_order_id")
     public String changeOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1002145190081005400</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123321245534</p>
+     */
     @NameInMap("out_change_order_id")
     public String outChangeOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;

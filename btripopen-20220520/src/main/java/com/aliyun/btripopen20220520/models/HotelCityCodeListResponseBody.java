@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelCityCodeListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>response is empty.</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public java.util.List<HotelCityCodeListResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +96,10 @@ public class HotelCityCodeListResponseBody extends TeaModel {
     }
 
     public static class HotelCityCodeListResponseBodyModuleCitysDistricts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>330000</p>
+         */
         @NameInMap("district_code")
         public String districtCode;
 
@@ -106,6 +130,10 @@ public class HotelCityCodeListResponseBody extends TeaModel {
     }
 
     public static class HotelCityCodeListResponseBodyModuleCitys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>445222</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
@@ -150,6 +178,10 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         @NameInMap("citys")
         public java.util.List<HotelCityCodeListResponseBodyModuleCitys> citys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>108800</p>
+         */
         @NameInMap("provice_code")
         public String proviceCode;
 

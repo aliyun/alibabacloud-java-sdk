@@ -12,6 +12,9 @@ public class TrainNoInfoSearchRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-08-15</p>
      */
     @NameInMap("dep_date")
     public String depDate;
@@ -22,18 +25,34 @@ public class TrainNoInfoSearchRequest extends TeaModel {
     @NameInMap("dep_location")
     public String depLocation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qwwweqswxxa</p>
+     */
     @NameInMap("line_key")
     public String lineKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-15</p>
+     */
     @NameInMap("middle_date")
     public String middleDate;
 
     @NameInMap("middle_station")
     public String middleStation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12342123212</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>K2345</p>
+     */
     @NameInMap("train_no")
     public String trainNo;
 

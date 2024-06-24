@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InsureOrderDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000001</p>
      */
     @NameInMap("btrip_user_id")
     public String btripUserId;
@@ -15,13 +18,24 @@ public class InsureOrderDetailRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1021000196440356901</p>
      */
     @NameInMap("ins_order_id")
     public String insOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostalSavingsBank</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fliggy</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 

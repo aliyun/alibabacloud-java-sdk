@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class DeleteInvoiceEntityShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("del_all")
     public Boolean delAll;
 
@@ -12,6 +16,9 @@ public class DeleteInvoiceEntityShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340049</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;

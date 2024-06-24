@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class UserQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,14 +17,25 @@ public class UserQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public UserQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2f624a6316366024344424669e3279</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,12 +97,24 @@ public class UserQueryResponseBody extends TeaModel {
         @NameInMap("employee_nick")
         public String employeeNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("leave_status")
         public Integer leaveStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("third_part_employee_id")
         public String thirdPartEmployeeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>001</p>
+         */
         @NameInMap("third_part_job_no")
         public String thirdPartJobNo;
 
@@ -131,15 +158,27 @@ public class UserQueryResponseBody extends TeaModel {
     }
 
     public static class UserQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("has_more")
         public Boolean hasMore;
 
         @NameInMap("items")
         public java.util.List<UserQueryResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9YN+jxa7PcxbNUTISeKjEw==</p>
+         */
         @NameInMap("page_token")
         public String pageToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("total")
         public Long total;
 

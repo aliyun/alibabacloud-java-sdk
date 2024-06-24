@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class CommonApplySyncRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1003366164</p>
      */
     @NameInMap("apply_id")
     public Long applyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("biz_category")
     public Integer bizCategory;
 
@@ -18,10 +25,17 @@ public class CommonApplySyncRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asfa</p>
+     */
     @NameInMap("thirdparty_flow_id")
     public String thirdpartyFlowId;
 

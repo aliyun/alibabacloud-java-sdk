@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyAddRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4000</p>
+     */
     @NameInMap("budget")
     public Long budget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("budget_merge")
     public Integer budgetMerge;
 
@@ -16,6 +24,10 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("corp_name")
     public String corpName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>departId01</p>
+     */
     @NameInMap("depart_id")
     public String departId;
 
@@ -24,6 +36,9 @@ public class ApplyAddRequest extends TeaModel {
 
     /**
      * <p>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;cost_center&quot;:&quot;成本中心&quot;}</p>
      */
     @NameInMap("extend_field")
     public String extendField;
@@ -34,9 +49,17 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("external_traveler_standard")
     public ApplyAddRequestExternalTravelerStandard externalTravelerStandard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("flight_budget")
     public Long flightBudget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("hotel_budget")
     public Long hotelBudget;
 
@@ -49,12 +72,20 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("itinerary_list")
     public java.util.List<ApplyAddRequestItineraryList> itineraryList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("itinerary_rule")
     public Integer itineraryRule;
 
     @NameInMap("itinerary_set_list")
     public java.util.List<ApplyAddRequestItinerarySetList> itinerarySetList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
 
@@ -64,6 +95,10 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("payment_department_name")
     public String paymentDepartmentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("status")
     public Integer status;
 
@@ -72,19 +107,34 @@ public class ApplyAddRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00714131</p>
+     */
     @NameInMap("thirdpart_business_id")
     public String thirdpartBusinessId;
 
     @NameInMap("thirdpart_depart_id")
     public String thirdpartDepartId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("together_book_rule")
     public Integer togetherBookRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("train_budget")
     public Long trainBudget;
 
@@ -100,6 +150,10 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("trip_cause")
     public String tripCause;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("trip_day")
     public Integer tripDay;
 
@@ -109,14 +163,25 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("trip_title")
     public String tripTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("type")
     public Integer type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>union001</p>
+     */
     @NameInMap("union_no")
     public String unionNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>thridpart12138</p>
      */
     @NameInMap("user_id")
     public String userId;
@@ -124,6 +189,10 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("user_name")
     public String userName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("vehicle_budget")
     public Long vehicleBudget;
 
@@ -591,12 +660,20 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestExternalTravelerStandardHotelCitys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1009</p>
+         */
         @NameInMap("fee")
         public Long fee;
 
@@ -673,15 +750,31 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestExternalTravelerStandard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("first_discount")
         public Integer firstDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("flight_cabins")
         public String flightCabins;
 
@@ -703,18 +796,34 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("hotel_rule_code")
         public Long hotelRuleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("international_flight_cabins")
         public String internationalFlightCabins;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("reserve_type")
         public Integer reserveType;
 
         @NameInMap("train_rule_code")
         public Long trainRuleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("train_seats")
         public String trainSeats;
 
@@ -846,9 +955,17 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestHotelShare extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>70</p>
+         */
         @NameInMap("param")
         public String param;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -901,6 +1018,10 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
@@ -913,6 +1034,10 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("attribute")
         public String attribute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12138</p>
+         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
@@ -922,20 +1047,34 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("dep_city")
         public String depCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-01 00:00:00</p>
          */
         @NameInMap("dep_date")
         public String depDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34711</p>
+         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("itinerary_id")
         public String itineraryId;
@@ -943,32 +1082,58 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("itinerary_travel_standard")
         public ApplyAddRequestItineraryListItineraryTravelStandard itineraryTravelStandard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("need_hotel")
         public Boolean needHotel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("need_traffic")
         public Boolean needTraffic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projecttow</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thirdpart34711</p>
+         */
         @NameInMap("third_part_invoice_id")
         public String thirdPartInvoiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thridpart12138</p>
+         */
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("trip_way")
         public Integer tripWay;
@@ -1154,6 +1319,9 @@ public class ApplyAddRequest extends TeaModel {
     public static class ApplyAddRequestItinerarySetList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-01 00:00:00</p>
          */
         @NameInMap("arr_date")
         public String arrDate;
@@ -1163,6 +1331,9 @@ public class ApplyAddRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS,HGH</p>
          */
         @NameInMap("city_code_set")
         public String cityCodeSet;
@@ -1173,20 +1344,34 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("city_set")
         public String citySet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-01 00:00:00</p>
          */
         @NameInMap("dep_date")
         public String depDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("itinerary_id")
         public String itineraryId;
@@ -1194,20 +1379,35 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("itinerary_travel_standard")
         public ApplyAddRequestItinerarySetListItineraryTravelStandard itineraryTravelStandard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projecttow</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thridpart12138</p>
+         */
         @NameInMap("third_part_invoice_id")
         public String thirdPartInvoiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thridpart12138</p>
+         */
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("traffic_type")
         public Integer trafficType;
@@ -1362,6 +1562,10 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("thirdpart_depart_id")
         public String thirdpartDepartId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wu51531</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -1508,12 +1712,20 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestTravelerStandardHotelCitys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1009</p>
+         */
         @NameInMap("fee")
         public Long fee;
 
@@ -1590,18 +1802,34 @@ public class ApplyAddRequest extends TeaModel {
     }
 
     public static class ApplyAddRequestTravelerStandard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
         @NameInMap("car_city_set")
         public java.util.List<ApplyAddRequestTravelerStandardCarCitySet> carCitySet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("first_discount")
         public Integer firstDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("flight_cabins")
         public String flightCabins;
 
@@ -1623,21 +1851,41 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("hotel_rule_code")
         public Long hotelRuleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("international_flight_cabins")
         public String internationalFlightCabins;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("reserve_type")
         public Integer reserveType;
 
         @NameInMap("train_rule_code")
         public Long trainRuleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("train_seats")
         public String trainSeats;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wfffeng</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

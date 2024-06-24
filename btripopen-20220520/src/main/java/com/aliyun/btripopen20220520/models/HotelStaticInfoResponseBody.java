@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelStaticInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("message")
     public String message;
 
@@ -16,12 +24,24 @@ public class HotelStaticInfoResponseBody extends TeaModel {
     @NameInMap("module")
     public HotelStaticInfoResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -79,12 +99,24 @@ public class HotelStaticInfoResponseBody extends TeaModel {
     }
 
     public static class HotelStaticInfoResponseBodyModuleHotelStaticInfosExpandInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>17:00</p>
+         */
         @NameInMap("check_in")
         public String checkIn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00</p>
+         */
         @NameInMap("check_out")
         public String checkOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020</p>
+         */
         @NameInMap("decorate_time")
         public String decorateTime;
 
@@ -94,21 +126,37 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("hotel_facilities")
         public java.util.List<String> hotelFacilities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("hotel_type")
         public Integer hotelType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020</p>
+         */
         @NameInMap("opening_time")
         public String openingTime;
 
         @NameInMap("room_facilities")
         public java.util.List<String> roomFacilities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("rooms")
         public Integer rooms;
 
         @NameInMap("service")
         public java.util.List<String> service;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("theme_tag")
         public String themeTag;
 
@@ -214,6 +262,10 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("tag")
         public Integer tag;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i3/6000000000003/O1CN01xkZQR41BtPxK1PQCb_!!6000000000003-0-hotel.jpg">https://img.alicdn.com/imgextra/i3/6000000000003/O1CN01xkZQR41BtPxK1PQCb_!!6000000000003-0-hotel.jpg</a></p>
+         */
         @NameInMap("url")
         public String url;
 
@@ -345,12 +397,24 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("bed_desc")
         public String bedDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("bed_num")
         public Integer bedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.8m</p>
+         */
         @NameInMap("bed_size")
         public String bedSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("bed_type")
         public String bedType;
 
@@ -422,18 +486,38 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("bed_infos")
         public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfosBedInfos> bedInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("extra_bed")
         public Integer extraBed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("extra_bed_desc")
         public String extraBedDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,6</p>
+         */
         @NameInMap("floor")
         public String floor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("internet_way")
         public String internetWay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("max_occupancy")
         public Integer maxOccupancy;
 
@@ -443,9 +527,17 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("room_facility_list")
         public java.util.List<String> roomFacilityList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71652158</p>
+         */
         @NameInMap("room_id")
         public String roomId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>//img.alicdn.com/imgextra/i3/6000000000003/O1CN01xkZQR41BtPxK1PQCb_!!6000000000003-0-hotel.jpg</p>
+         */
         @NameInMap("room_image")
         public String roomImage;
 
@@ -461,9 +553,17 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("roomarea")
         public String roomarea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("rooms")
         public Integer rooms;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("window")
         public String window;
 
@@ -636,27 +736,47 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("block_room_type_information")
         public java.util.Map<String, String> blockRoomTypeInformation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19039</p>
+         */
         @NameInMap("brand")
         public String brand;
 
         @NameInMap("brand_name")
         public String brandName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("country_code")
         public String countryCode;
 
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330183</p>
+         */
         @NameInMap("district")
         public String district;
 
@@ -669,27 +789,55 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("hotel_address")
         public String hotelAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Building 5, Haichuang Building, 998 Wenyi West Road</p>
+         */
         @NameInMap("hotel_en_address")
         public String hotelEnAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Business travel hotel</p>
+         */
         @NameInMap("hotel_en_name")
         public String hotelEnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>55335212</p>
+         */
         @NameInMap("hotel_id")
         public String hotelId;
 
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020</p>
+         */
         @NameInMap("hotel_open_time")
         public String hotelOpenTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0086#0571#28350117</p>
+         */
         @NameInMap("hotel_phones")
         public String hotelPhones;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("hotel_policies")
         public String hotelPolicies;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0086#0571#28350117</p>
+         */
         @NameInMap("hotelfax")
         public String hotelfax;
 
@@ -699,39 +847,75 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("imageinfos")
         public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosImageinfos> imageinfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("invoice_provider_method")
         public String invoiceProviderMethod;
 
         @NameInMap("invoice_types")
         public java.util.List<Integer> invoiceTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>119.844005,30.054384</p>
+         */
         @NameInMap("location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330000</p>
+         */
         @NameInMap("province")
         public String province;
 
         @NameInMap("province_name")
         public String provinceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("rating_average")
         public String ratingAverage;
 
         @NameInMap("room_infos")
         public java.util.List<HotelStaticInfoResponseBodyModuleHotelStaticInfosRoomInfos> roomInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("star")
         public String star;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("star_rate")
         public String starRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("themes")
         public String themes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("visa_reminding")
         public Boolean visaReminding;
 

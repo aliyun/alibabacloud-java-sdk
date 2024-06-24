@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainStopoverSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TrainStopoverSearchResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<TrainStopoverSearchResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,21 +97,41 @@ public class TrainStopoverSearchResponseBody extends TeaModel {
     }
 
     public static class TrainStopoverSearchResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
         @NameInMap("station_name")
         public String stationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("station_no")
         public String stationNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("station_type")
         public String stationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("stop_over_time")
         public String stopOverTime;
 

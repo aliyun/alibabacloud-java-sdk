@@ -7,6 +7,10 @@ public class HotelOrderCancelRequest extends TeaModel {
     @NameInMap("btrip_order_id")
     public String btripOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dis123</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class FlightOtaItemDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68cdc6b37c87484c98b479b49306ffbb_0</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;

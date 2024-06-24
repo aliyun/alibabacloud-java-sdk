@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateCustomRoleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("role_id")
     public String roleId;

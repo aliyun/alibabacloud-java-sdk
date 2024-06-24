@@ -7,6 +7,10 @@ public class FlightCreateOrderV2ShrinkRequest extends TeaModel {
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
 
@@ -24,12 +28,18 @@ public class FlightCreateOrderV2ShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;

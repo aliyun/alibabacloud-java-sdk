@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightOrderListQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,12 +20,24 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     @NameInMap("page_info")
     public FlightOrderListQueryResponseBodyPageInfo pageInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -90,12 +106,20 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44632</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NM98767</p>
+         */
         @NameInMap("number")
         public String number;
 
@@ -139,12 +163,20 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class FlightOrderListQueryResponseBodyModuleInsureInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>KJ-879657</p>
+         */
         @NameInMap("insure_no")
         public String insureNo;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
@@ -180,6 +212,10 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class FlightOrderListQueryResponseBodyModuleInvoice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7304</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -210,45 +246,97 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class FlightOrderListQueryResponseBodyModulePriceInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("category_code")
         public Integer categoryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("category_type")
         public Integer categoryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU5354</p>
+         */
         @NameInMap("change_flight_no")
         public String changeFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12%</p>
+         */
         @NameInMap("discount")
         public String discount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("end_time")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00-7687</p>
+         */
         @NameInMap("original_ticket_no")
         public String originalTicketNo;
 
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pay_type")
         public Integer payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("price")
         public Double price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("start_time")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A-135767</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f98236773</p>
+         */
         @NameInMap("trade_id")
         public String tradeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 
@@ -402,6 +490,10 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class FlightOrderListQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11774</p>
+         */
         @NameInMap("apply_id")
         public Long applyId;
 
@@ -417,6 +509,10 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("btrip_title")
         public String btripTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
@@ -441,6 +537,10 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("dep_city_ad_code")
         public String depCityAdCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
@@ -450,18 +550,38 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30.12%</p>
+         */
         @NameInMap("discount")
         public String discount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU7854</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("gmt_modified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200042</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -471,6 +591,10 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("invoice")
         public FlightOrderListQueryResponseBodyModuleInvoice invoice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("passenger_count")
         public Integer passengerCount;
 
@@ -480,30 +604,62 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("price_info_list")
         public java.util.List<FlightOrderListQueryResponseBodyModulePriceInfoList> priceInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS-PROJECT</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS-PROJECT</p>
+         */
         @NameInMap("project_id")
         public Long projectId;
 
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T10:40Z</p>
+         */
         @NameInMap("ret_date")
         public String retDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS-PROJECT</p>
+         */
         @NameInMap("third_part_project_id")
         public String thirdPartProjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS-UMN98989</p>
+         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cs9897766</p>
+         */
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("trip_type")
         public Integer tripType;
 
@@ -828,12 +984,24 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class FlightOrderListQueryResponseBodyPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page")
         public Integer page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_number")
         public Integer totalNumber;
 

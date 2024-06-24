@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CommonApplyQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class CommonApplyQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public CommonApplyQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,36 +92,68 @@ public class CommonApplyQueryResponseBody extends TeaModel {
     }
 
     public static class CommonApplyQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("apply_id")
         public Long applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("biz_category")
         public Integer bizCategory;
 
         @NameInMap("cause")
         public String cause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0001A1100000007EX08O</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
         @NameInMap("extend_value")
         public String extendValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-18T20:26Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1233</p>
+         */
         @NameInMap("thirdpart_corp_id")
         public String thirdpartCorpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12344</p>
+         */
         @NameInMap("thirdpart_id")
         public String thirdpartId;
 
         @NameInMap("trip_cause")
         public String tripCause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

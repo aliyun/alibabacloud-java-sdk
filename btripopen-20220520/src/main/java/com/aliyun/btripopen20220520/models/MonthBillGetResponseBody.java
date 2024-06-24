@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MonthBillGetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class MonthBillGetResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<MonthBillGetResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -81,36 +97,54 @@ public class MonthBillGetResponseBody extends TeaModel {
 
         /**
          * <p>用车金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("carAmount")
         public Double carAmount;
 
         /**
          * <p>违约金金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("damageAmount")
         public Double damageAmount;
 
         /**
          * <p>机票金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("flightAmount")
         public Double flightAmount;
 
         /**
          * <p>福豆金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("fuPoint")
         public Double fuPoint;
 
         /**
          * <p>酒店金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("hotelAmount")
         public Double hotelAmount;
 
         /**
          * <p>国际机票金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("ieFlightAmount")
         public Double ieFlightAmount;
@@ -120,18 +154,27 @@ public class MonthBillGetResponseBody extends TeaModel {
 
         /**
          * <p>账期日：YYYYMMDD</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20200501</p>
          */
         @NameInMap("mailBillDate")
         public Long mailBillDate;
 
         /**
          * <p>服务费金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("serviceAmount")
         public Double serviceAmount;
 
         /**
          * <p>火车票金额（单位：元）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx.xx</p>
          */
         @NameInMap("trainAmount")
         public Double trainAmount;
@@ -244,6 +287,10 @@ public class MonthBillGetResponseBody extends TeaModel {
         @NameInMap("start_date")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx">https://xxx</a></p>
+         */
         @NameInMap("url")
         public String url;
 

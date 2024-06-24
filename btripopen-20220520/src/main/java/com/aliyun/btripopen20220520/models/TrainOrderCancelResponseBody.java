@@ -16,14 +16,25 @@ public class TrainOrderCancelResponseBody extends TeaModel {
     @NameInMap("module")
     public TrainOrderCancelResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,18 +93,38 @@ public class TrainOrderCancelResponseBody extends TeaModel {
     }
 
     public static class TrainOrderCancelResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11127278782</p>
+         */
         @NameInMap("change_order_id")
         public String changeOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>116019444</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>43534345</p>
+         */
         @NameInMap("out_change_order_id")
         public String outChangeOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3702553342926024704</p>
+         */
         @NameInMap("out_order_id")
         public String outOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("status")
         public Boolean status;
 

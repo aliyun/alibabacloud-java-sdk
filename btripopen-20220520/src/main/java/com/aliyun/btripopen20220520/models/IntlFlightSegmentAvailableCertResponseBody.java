@@ -7,18 +7,34 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
     @NameInMap("module")
     public IntlFlightSegmentAvailableCertResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bc81a17090871660176894d008c</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("result_code")
     public String resultCode;
 
     @NameInMap("result_msg")
     public String resultMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>213e1ea516895592036143147e5864</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +92,17 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
     }
 
     public static class IntlFlightSegmentAvailableCertResponseBodyModuleSegmentAvailableCertListSegmentPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 

@@ -4,23 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightListingSearchShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ZHANGSAN</p>
+     */
     @NameInMap("buyer_name")
     public String buyerName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("direct_only")
     public Boolean directOnly;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
      */
     @NameInMap("isv_name")
     public String isvName;
@@ -28,15 +46,26 @@ public class IntlFlightListingSearchShrinkRequest extends TeaModel {
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("out_wheel_search")
     public Boolean outWheelSearch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60b412-cc05-4d10-b570-</p>
+     */
     @NameInMap("query_record_id")
     public String queryRecordId;
 
@@ -48,6 +77,9 @@ public class IntlFlightListingSearchShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("search_mode")
     public Integer searchMode;
@@ -55,14 +87,25 @@ public class IntlFlightListingSearchShrinkRequest extends TeaModel {
     @NameInMap("search_passenger_list")
     public String searchPassengerListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JIANHANG</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9960b412-cc05-4d10-b570-93372d816807</p>
+     */
     @NameInMap("token")
     public String token;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;

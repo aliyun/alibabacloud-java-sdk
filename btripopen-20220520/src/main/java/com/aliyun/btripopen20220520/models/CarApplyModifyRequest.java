@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarApplyModifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-12 16:12:53</p>
+     */
     @NameInMap("operate_time")
     public String operateTime;
 
@@ -12,18 +16,27 @@ public class CarApplyModifyRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("status")
     public Integer status;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IRGS1413</p>
      */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open62141</p>
      */
     @NameInMap("user_id")
     public String userId;

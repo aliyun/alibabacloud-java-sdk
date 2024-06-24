@@ -10,6 +10,10 @@ public class AirportSearchRequest extends TeaModel {
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("type")
     public Integer type;
 

@@ -10,12 +10,24 @@ public class FlightModifyOtaSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("dep_date")
     public String depDateShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467200</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467200</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
@@ -25,9 +37,17 @@ public class FlightModifyOtaSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("selected_segments")
     public String selectedSegmentsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>590f17eca9374f20ac7e8ed8a7db2f35</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("voluntary")
     public Boolean voluntary;
 

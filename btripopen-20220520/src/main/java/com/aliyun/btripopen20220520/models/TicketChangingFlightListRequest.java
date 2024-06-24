@@ -4,20 +4,34 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingFlightListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BJS</p>
+     */
     @NameInMap("arr_city")
     public String arrCity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HGH</p>
+     */
     @NameInMap("dep_city")
     public String depCity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000-00-00 00:00:00</p>
      */
     @NameInMap("dep_date")
     public String depDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
@@ -84,12 +98,18 @@ public class TicketChangingFlightListRequest extends TeaModel {
     public static class TicketChangingFlightListRequestTravelerInfoList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         @NameInMap("arr_city")
         public String arrCity;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         @NameInMap("dep_city")
         public String depCity;
@@ -97,11 +117,18 @@ public class TicketChangingFlightListRequest extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ADULT</p>
+         */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23231</p>
          */
         @NameInMap("user_id")
         public String userId;

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundApplyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class FlightRefundApplyResponseBody extends TeaModel {
     @NameInMap("module")
     public FlightRefundApplyResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +92,38 @@ public class FlightRefundApplyResponseBody extends TeaModel {
     }
 
     public static class FlightRefundApplyResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dis123</p>
+         */
         @NameInMap("dis_order_id")
         public String disOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>refun1234</p>
+         */
         @NameInMap("dis_sub_order_id")
         public String disSubOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1231231</p>
+         */
         @NameInMap("refund_apply_id")
         public Long refundApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("refund_fee")
         public Long refundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_money")
         public Long refundMoney;
 

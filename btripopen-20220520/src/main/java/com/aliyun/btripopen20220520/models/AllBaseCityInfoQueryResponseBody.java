@@ -4,23 +4,42 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AllBaseCityInfoQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public AllBaseCityInfoQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -79,21 +98,45 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
     }
 
     public static class AllBaseCityInfoQueryResponseBodyModuleAllCityBaseInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>330122</p>
+         */
         @NameInMap("adcode")
         public String adcode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("city_level")
         public String cityLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>桐庐</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国，浙江省，杭州市，桐庐</p>
+         */
         @NameInMap("cn_name_tree")
         public String cnNameTree;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 

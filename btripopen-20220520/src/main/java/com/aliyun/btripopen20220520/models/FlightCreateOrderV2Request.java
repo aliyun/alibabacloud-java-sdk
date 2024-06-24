@@ -7,6 +7,10 @@ public class FlightCreateOrderV2Request extends TeaModel {
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
 
@@ -24,12 +28,18 @@ public class FlightCreateOrderV2Request extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
@@ -189,6 +199,9 @@ public class FlightCreateOrderV2Request extends TeaModel {
     public static class FlightCreateOrderV2RequestTravelers extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1991-01-22</p>
          */
         @NameInMap("birthday")
         public String birthday;
@@ -204,6 +217,9 @@ public class FlightCreateOrderV2Request extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("cert_type")
         public Integer certType;
@@ -246,6 +262,9 @@ public class FlightCreateOrderV2Request extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("passenger_type")
         public Integer passengerType;
@@ -264,6 +283,9 @@ public class FlightCreateOrderV2Request extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18155711459129970552412</p>
          */
         @NameInMap("user_id")
         public String userId;

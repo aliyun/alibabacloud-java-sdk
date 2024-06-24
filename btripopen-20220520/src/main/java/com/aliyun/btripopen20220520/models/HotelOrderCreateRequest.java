@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class HotelOrderCreateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123122</p>
      */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-20</p>
      */
     @NameInMap("check_in")
     public String checkIn;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-20</p>
      */
     @NameInMap("check_out")
     public String checkOut;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("contract_email")
     public String contractEmail;
 
@@ -30,18 +43,27 @@ public class HotelOrderCreateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19281772123</p>
      */
     @NameInMap("contract_phone")
     public String contractPhone;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("corp_pay_price")
     public Long corpPayPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
@@ -54,12 +76,18 @@ public class HotelOrderCreateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>671570615157</p>
      */
     @NameInMap("item_id")
     public Long itemId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb5e1abf33924b6c912bd6d80deec0eb-1</p>
      */
     @NameInMap("itinerary_no")
     public String itineraryNo;
@@ -72,6 +100,9 @@ public class HotelOrderCreateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("person_pay_price")
     public Long personPayPrice;
@@ -81,42 +112,63 @@ public class HotelOrderCreateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1399417428510</p>
      */
     @NameInMap("rate_plan_id")
     public Long ratePlanId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>187211</p>
      */
     @NameInMap("room_id")
     public Long roomId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("room_num")
     public Integer roomNum;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2088441675613762</p>
      */
     @NameInMap("seller_id")
     public Long sellerId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2198781</p>
      */
     @NameInMap("shid")
     public Long shid;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("total_order_price")
     public Long totalOrderPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nonUltron_1673575241156_d91ea8ad16735752359161037bf6cf_c54d3768312a4b249b719f126377bf82</p>
      */
     @NameInMap("validate_res_key")
     public String validateResKey;
@@ -303,18 +355,38 @@ public class HotelOrderCreateRequest extends TeaModel {
     }
 
     public static class HotelOrderCreateRequestInvoiceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("buyer_add")
         public String buyerAdd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("buyer_bank_acc")
         public String buyerBankAcc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("buyer_bank_add")
         public String buyerBankAdd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-82321777</p>
+         */
         @NameInMap("buyer_phone")
         public String buyerPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("buyer_tax_num")
         public String buyerTaxNum;
 
@@ -333,24 +405,48 @@ public class HotelOrderCreateRequest extends TeaModel {
         @NameInMap("delivery_street")
         public String deliveryStreet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("invoice_material")
         public Integer invoiceMaterial;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("invoice_type")
         public Integer invoiceType;
 
         @NameInMap("receiver_name")
         public String receiverName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-82321777</p>
+         */
         @NameInMap("receiver_phone")
         public String receiverPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("remark")
         public String remark;
 
@@ -498,30 +594,62 @@ public class HotelOrderCreateRequest extends TeaModel {
     }
 
     public static class HotelOrderCreateRequestOccupantInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>124231213</p>
+         */
         @NameInMap("card_no")
         public String cardNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("card_type")
         public Integer cardType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("customer_type")
         public Integer customerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123112</p>
+         */
         @NameInMap("department_id")
         public String departmentId;
 
         @NameInMap("department_name")
         public String departmentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("employee_type")
         public Integer employeeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>san</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhang</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
@@ -533,6 +661,9 @@ public class HotelOrderCreateRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18277123451</p>
          */
         @NameInMap("phone")
         public String phone;
@@ -540,9 +671,17 @@ public class HotelOrderCreateRequest extends TeaModel {
         @NameInMap("room_no")
         public Integer roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87817182</p>
+         */
         @NameInMap("staff_no")
         public String staffNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -666,24 +805,44 @@ public class HotelOrderCreateRequest extends TeaModel {
     }
 
     public static class HotelOrderCreateRequestPromotionInfoPromotionDetailInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("check_status")
         public Boolean checkStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("need_check")
         public Boolean needCheck;
 
         @NameInMap("promotion_code")
         public String promotionCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23778127</p>
+         */
         @NameInMap("promotion_id")
         public String promotionId;
 
         @NameInMap("promotion_name")
         public String promotionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("promotion_price")
         public Long promotionPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("promotion_type")
         public String promotionType;
 
@@ -754,6 +913,10 @@ public class HotelOrderCreateRequest extends TeaModel {
         @NameInMap("promotion_detail_info_list")
         public java.util.List<HotelOrderCreateRequestPromotionInfoPromotionDetailInfoList> promotionDetailInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("promotion_total_price")
         public Long promotionTotalPrice;
 

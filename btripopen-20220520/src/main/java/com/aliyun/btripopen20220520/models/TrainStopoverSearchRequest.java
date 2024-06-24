@@ -18,12 +18,18 @@ public class TrainStopoverSearchRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-05-08</p>
      */
     @NameInMap("train_date")
     public String trainDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k2345</p>
      */
     @NameInMap("train_no")
     public String trainNo;

@@ -4,23 +4,42 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelPricePullResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelPricePullResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9BCDD5DE-E6CB-5C25-93B9-9BE178A0AA56</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -79,9 +98,17 @@ public class HotelPricePullResponseBody extends TeaModel {
     }
 
     public static class HotelPricePullResponseBodyModuleHotelPriceInfosRoomsRatesBtripHotelCancelPolicyBtripHotelCancelPolicyInfoDTOList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("hour")
         public Long hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("value")
         public Long value;
 
@@ -112,6 +139,10 @@ public class HotelPricePullResponseBody extends TeaModel {
         @NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
         public java.util.List<HotelPricePullResponseBodyModuleHotelPriceInfosRoomsRatesBtripHotelCancelPolicyBtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cancel_policy_type")
         public Integer cancelPolicyType;
 
@@ -139,15 +170,31 @@ public class HotelPricePullResponseBody extends TeaModel {
     }
 
     public static class HotelPricePullResponseBodyModuleHotelPriceInfosRoomsRatesRateDailys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30000</p>
+         */
         @NameInMap("discount_price")
         public Long discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62800</p>
+         */
         @NameInMap("last_discounts_price")
         public Long lastDiscountsPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62800</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-10-17</p>
+         */
         @NameInMap("start_date")
         public String startDate;
 
@@ -191,9 +238,17 @@ public class HotelPricePullResponseBody extends TeaModel {
     }
 
     public static class HotelPricePullResponseBodyModuleHotelPriceInfosRoomsRates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("breakfast")
         public String breakfast;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("breakfast_count")
         public Integer breakfastCount;
 
@@ -203,63 +258,135 @@ public class HotelPricePullResponseBody extends TeaModel {
         @NameInMap("cancel_policy_desc")
         public String cancelPolicyDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("company_aassist")
         public String companyAassist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("currency_code")
         public String currencyCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("instant_confirm")
         public Boolean instantConfirm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>721700504622</p>
+         */
         @NameInMap("item_id")
         public String itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("max_adv_hours")
         public Integer maxAdvHours;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4344</p>
+         */
         @NameInMap("max_days")
         public Integer maxDays;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("min_adv_hours")
         public Integer minAdvHours;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("min_days")
         public Integer minDays;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("nod")
         public Integer nod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("nop")
         public Integer nop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("payment_type")
         public Integer paymentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30000</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("promotion_info")
         public String promotionInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("quota")
         public Integer quota;
 
         @NameInMap("rate_dailys")
         public java.util.List<HotelPricePullResponseBodyModuleHotelPriceInfosRoomsRatesRateDailys> rateDailys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4509447432148</p>
+         */
         @NameInMap("rate_id")
         public String rateId;
 
         @NameInMap("rate_plan_name")
         public String ratePlanName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4509447432148</p>
+         */
         @NameInMap("rp_id")
         public String rpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2829486701</p>
+         */
         @NameInMap("seller_id")
         public String sellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("support_special_invoice")
         public Boolean supportSpecialInvoice;
 
@@ -463,6 +590,10 @@ public class HotelPricePullResponseBody extends TeaModel {
     }
 
     public static class HotelPricePullResponseBodyModuleHotelPriceInfosRooms extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("area")
         public String area;
 
@@ -472,15 +603,31 @@ public class HotelPricePullResponseBody extends TeaModel {
         @NameInMap("bed_type_string")
         public String bedTypeString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;bathtub\&quot;:true}</p>
+         */
         @NameInMap("facility")
         public String facility;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,6</p>
+         */
         @NameInMap("floor")
         public String floor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("max_occupancy")
         public Integer maxOccupancy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("network_service")
         public String networkService;
 
@@ -490,15 +637,27 @@ public class HotelPricePullResponseBody extends TeaModel {
         @NameInMap("rates")
         public java.util.List<HotelPricePullResponseBodyModuleHotelPriceInfosRoomsRates> rates;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64681618</p>
+         */
         @NameInMap("room_id")
         public String roomId;
 
         @NameInMap("room_name")
         public String roomName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("window_type")
         public String windowType;
 
@@ -617,6 +776,10 @@ public class HotelPricePullResponseBody extends TeaModel {
         @NameInMap("address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64389015</p>
+         */
         @NameInMap("hotel_id")
         public String hotelId;
 
@@ -626,6 +789,10 @@ public class HotelPricePullResponseBody extends TeaModel {
         @NameInMap("rooms")
         public java.util.List<HotelPricePullResponseBodyModuleHotelPriceInfosRooms> rooms;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9BCDD5DE-E6CB-5C25-93B9-9BE178A0AA56</p>
+         */
         @NameInMap("search_id")
         public String searchId;
 

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TripTaskQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TripTaskQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public TripTaskQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2FB0D7A8-BA41-5D04-BEFC-CADA5481AC53</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,30 +97,62 @@ public class TripTaskQueryResponseBody extends TeaModel {
     }
 
     public static class TripTaskQueryResponseBodyModuleRecordTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("actioner")
         public String actioner;
 
         @NameInMap("attributes")
         public String attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1525104000</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1525104000</p>
+         */
         @NameInMap("gmt_finished")
         public Long gmtFinished;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34360</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>575003</p>
+         */
         @NameInMap("node_id")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agree</p>
+         */
         @NameInMap("out_result")
         public String outResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -189,30 +236,62 @@ public class TripTaskQueryResponseBody extends TeaModel {
     }
 
     public static class TripTaskQueryResponseBodyModuleRunningTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("actioner")
         public String actioner;
 
         @NameInMap("attributes")
         public String attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1525104000</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1525104000</p>
+         */
         @NameInMap("gmt_finished")
         public Long gmtFinished;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34360</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>575003</p>
+         */
         @NameInMap("node_id")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>agree</p>
+         */
         @NameInMap("out_result")
         public String outResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -296,6 +375,10 @@ public class TripTaskQueryResponseBody extends TeaModel {
     }
 
     public static class TripTaskQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("needRefresh")
         public Boolean needRefresh;
 

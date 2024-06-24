@@ -21,6 +21,10 @@ public class DepartmentSaveRequest extends TeaModel {
     }
 
     public static class DepartmentSaveRequestDepartList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("depart_id")
         public Long departId;
 
@@ -30,18 +34,38 @@ public class DepartmentSaveRequest extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("depart_pid")
         public Long departPid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>001|002|003</p>
+         */
         @NameInMap("manager_ids")
         public String managerIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testdepartid001</p>
+         */
         @NameInMap("third_depart_id")
         public String thirdDepartId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testdepartpid001</p>
+         */
         @NameInMap("third_depart_pid")
         public String thirdDepartPid;
 

@@ -4,12 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOrderDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TRAVEL</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1012000000000000</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F11374007131319304192</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

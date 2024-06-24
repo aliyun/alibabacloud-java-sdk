@@ -10,6 +10,10 @@ public class InsureOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("applicant")
     public String applicantShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20202109390122</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
@@ -24,22 +28,40 @@ public class InsureOrderCreateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostalSavingsBank</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100000320302020</p>
+     */
     @NameInMap("out_ins_order_id")
     public String outInsOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202310101026030</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1020030003332000</p>
+     */
     @NameInMap("out_sub_order_id")
     public String outSubOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fliggy</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 

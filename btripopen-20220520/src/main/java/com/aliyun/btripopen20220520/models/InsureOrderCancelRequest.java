@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InsureOrderCancelRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000310301</p>
      */
     @NameInMap("btrip_user_id")
     public String btripUserId;
@@ -13,9 +16,17 @@ public class InsureOrderCancelRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open12igetbis4o07v10B1TlOWcM00</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fliggy</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 

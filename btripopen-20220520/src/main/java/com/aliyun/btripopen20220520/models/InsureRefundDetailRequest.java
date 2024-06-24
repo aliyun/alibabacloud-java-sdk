@@ -4,24 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureRefundDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1423052318072952023</p>
+     */
     @NameInMap("apply_id")
     public String applyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000000001</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000003000000490</p>
+     */
     @NameInMap("ins_order_id")
     public String insOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostalSavingsBank</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1021000196440356908</p>
+     */
     @NameInMap("out_apply_id")
     public String outApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fliggy</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 
