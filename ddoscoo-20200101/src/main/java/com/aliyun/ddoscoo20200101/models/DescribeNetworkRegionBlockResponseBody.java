@@ -45,13 +45,13 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
          * <p>An array consisting of the codes of the countries or areas from which the requests are blocked.</p>
          */
         @NameInMap("Countries")
-        public java.util.List<String> countries;
+        public java.util.List<Long> countries;
 
         /**
          * <p>An array consisting of the codes of the administrative regions in China from which the requests are blocked.</p>
          */
         @NameInMap("Provinces")
-        public java.util.List<String> provinces;
+        public java.util.List<Long> provinces;
 
         /**
          * <p>The status of the Location Blacklist policy. Valid values:</p>
@@ -71,19 +71,19 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkRegionBlockResponseBodyConfig setCountries(java.util.List<String> countries) {
+        public DescribeNetworkRegionBlockResponseBodyConfig setCountries(java.util.List<Long> countries) {
             this.countries = countries;
             return this;
         }
-        public java.util.List<String> getCountries() {
+        public java.util.List<Long> getCountries() {
             return this.countries;
         }
 
-        public DescribeNetworkRegionBlockResponseBodyConfig setProvinces(java.util.List<String> provinces) {
+        public DescribeNetworkRegionBlockResponseBodyConfig setProvinces(java.util.List<Long> provinces) {
             this.provinces = provinces;
             return this;
         }
-        public java.util.List<String> getProvinces() {
+        public java.util.List<Long> getProvinces() {
             return this.provinces;
         }
 
