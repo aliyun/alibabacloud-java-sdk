@@ -10,6 +10,10 @@ public class InsureOrderCreateRequest extends TeaModel {
     @NameInMap("applicant")
     public InsureOrderCreateRequestApplicant applicant;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20202109390122</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
@@ -24,22 +28,40 @@ public class InsureOrderCreateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostalSavingsBank</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100000320302020</p>
+     */
     @NameInMap("out_ins_order_id")
     public String outInsOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202310101026030</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1020030003332000</p>
+     */
     @NameInMap("out_sub_order_id")
     public String outSubOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fliggy</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 
@@ -121,24 +143,48 @@ public class InsureOrderCreateRequest extends TeaModel {
     }
 
     public static class InsureOrderCreateRequestApplicant extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2000-11-01</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20202109390122</p>
+         */
         @NameInMap("btrip_user_id")
         public String btripUserId;
 
         @NameInMap("cert_name")
         public String certName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110102200011018872</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("cert_type")
         public String certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -206,30 +252,66 @@ public class InsureOrderCreateRequest extends TeaModel {
     }
 
     public static class InsureOrderCreateRequestInsPersonAndSegmentListInsureSegment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>YNT</p>
+         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CKG</p>
+         */
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-10-31 13:10:00</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("dep_city")
         public String depCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CAN</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-10-31 10:55:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZH9891</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -313,24 +395,48 @@ public class InsureOrderCreateRequest extends TeaModel {
     }
 
     public static class InsureOrderCreateRequestInsPersonAndSegmentListInsured extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2000-11-01</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20202109390122</p>
+         */
         @NameInMap("btrip_user_id")
         public String btripUserId;
 
         @NameInMap("cert_name")
         public String certName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110102200011018872</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("cert_type")
         public String certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -404,6 +510,10 @@ public class InsureOrderCreateRequest extends TeaModel {
         @NameInMap("insured")
         public InsureOrderCreateRequestInsPersonAndSegmentListInsured insured;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12399992002002010</p>
+         */
         @NameInMap("out_sub_ins_order_id")
         public String outSubInsOrderId;
 

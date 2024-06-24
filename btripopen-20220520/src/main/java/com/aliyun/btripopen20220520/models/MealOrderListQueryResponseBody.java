@@ -4,23 +4,42 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealOrderListQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>noPermission</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public MealOrderListQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -79,27 +98,51 @@ public class MealOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class MealOrderListQueryResponseBodyModuleOrderList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("corp_pay_amount")
         public Long corpPayAmount;
 
         @NameInMap("merchant_name")
         public String merchantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1034124198083211043</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
         @NameInMap("order_type")
         public String orderType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("pay_amount")
         public Long payAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("person_pay_amount")
         public Long personPayAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1711705057</p>
+         */
         @NameInMap("settle_time")
         public String settleTime;
 

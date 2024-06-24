@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TravelStandardQueryShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("from_group")
     public Boolean fromGroup;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2006523763</p>
      */
     @NameInMap("rule_code")
     public Long ruleCode;

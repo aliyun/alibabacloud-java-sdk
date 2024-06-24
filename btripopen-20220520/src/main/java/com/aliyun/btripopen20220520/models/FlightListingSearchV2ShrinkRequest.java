@@ -4,30 +4,57 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightListingSearchV2ShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CA</p>
+     */
     @NameInMap("airline_code")
     public String airlineCode;
 
     @NameInMap("cabin_type_list")
     public String cabinTypeListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("direct_only")
     public Boolean directOnly;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_multi_class_price")
     public Boolean needMultiClassPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("need_query_service_fee")
     public Boolean needQueryServiceFee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_y_c_best_price")
     public Boolean needYCBestPrice;
 
@@ -39,12 +66,18 @@ public class FlightListingSearchV2ShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("search_mode")
     public Integer searchMode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;

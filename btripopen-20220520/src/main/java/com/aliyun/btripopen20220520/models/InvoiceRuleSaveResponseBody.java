@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceRuleSaveResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     @NameInMap("module")
     public InvoiceRuleSaveResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8465F68D-BC97-5C0F-9161-3E65919D9135</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +92,17 @@ public class InvoiceRuleSaveResponseBody extends TeaModel {
     }
 
     public static class InvoiceRuleSaveResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("add_num")
         public Integer addNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("remove_num")
         public Integer removeNum;
 

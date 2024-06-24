@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CorpTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,17 +20,27 @@ public class CorpTokenResponseBody extends TeaModel {
     @NameInMap("module")
     public CorpTokenResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>是否成功</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -93,9 +107,17 @@ public class CorpTokenResponseBody extends TeaModel {
     }
 
     public static class CorpTokenResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>70000</p>
+         */
         @NameInMap("expire")
         public Long expire;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37j76df</p>
+         */
         @NameInMap("token")
         public String token;
 
@@ -123,12 +145,24 @@ public class CorpTokenResponseBody extends TeaModel {
     }
 
     public static class CorpTokenResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>70000</p>
+         */
         @NameInMap("expire")
         public Long expire;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1635744378301</p>
+         */
         @NameInMap("start")
         public Long start;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37j76df</p>
+         */
         @NameInMap("token")
         public String token;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ApplyTripTaskExecuteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("action_from")
     public String actionFrom;
@@ -15,18 +18,27 @@ public class ApplyTripTaskExecuteRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agree</p>
      */
     @NameInMap("task_action")
     public String taskAction;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("task_id")
     public Long taskId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>thirdpart12138</p>
      */
     @NameInMap("user_id")
     public String userId;

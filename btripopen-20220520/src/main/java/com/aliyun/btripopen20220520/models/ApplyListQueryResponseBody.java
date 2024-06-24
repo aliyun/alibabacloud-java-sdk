@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyListQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class ApplyListQueryResponseBody extends TeaModel {
     @NameInMap("module_list")
     public java.util.List<ApplyListQueryResponseBodyModuleList> moduleList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -79,18 +95,34 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("note")
         public String note;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-19T14:03Z</p>
+         */
         @NameInMap("operate_time")
         public String operateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order")
         public Integer order;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -301,6 +333,10 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-19T14:03Z</p>
+         */
         @NameInMap("arr_date")
         public String arrDate;
 
@@ -310,15 +346,27 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("dep_city")
         public String depCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-19T14:03Z</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
         @NameInMap("invoice_name")
         public String invoiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abcd</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xm1</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
@@ -334,9 +382,17 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("trip_way")
         public Integer tripWay;
 
@@ -460,9 +516,17 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     public static class ApplyListQueryResponseBodyModuleListItinerarySetList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-19T14:03Z</p>
+         */
         @NameInMap("arr_date")
         public String arrDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS，HGH</p>
+         */
         @NameInMap("city_code_set")
         public String cityCodeSet;
 
@@ -472,15 +536,27 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-19T14:03Z</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
         @NameInMap("invoice_name")
         public String invoiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abcd</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
@@ -496,6 +572,10 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
@@ -671,6 +751,10 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("thirdpart_depart_id")
         public String thirdpartDepartId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -781,6 +865,10 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     public static class ApplyListQueryResponseBodyModuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>201710111505000464651</p>
+         */
         @NameInMap("apply_show_id")
         public String applyShowId;
 
@@ -790,12 +878,24 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("car_rule")
         public ApplyListQueryResponseBodyModuleListCarRule carRule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>corp1</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("corp_name")
         public String corpName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>depart1</p>
+         */
         @NameInMap("depart_id")
         public String departId;
 
@@ -805,21 +905,41 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("external_traveler_list")
         public java.util.List<ApplyListQueryResponseBodyModuleListExternalTravelerList> externalTravelerList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc1234</p>
+         */
         @NameInMap("flow_code")
         public String flowCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-19T14:03Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-19T14:03Z</p>
+         */
         @NameInMap("gmt_modified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1476</p>
+         */
         @NameInMap("id")
         public Long id;
 
         @NameInMap("itinerary_list")
         public java.util.List<ApplyListQueryResponseBodyModuleListItineraryList> itineraryList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("itinerary_rule")
         public Integer itineraryRule;
 
@@ -835,15 +955,27 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("payment_department_name")
         public String paymentDepartmentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("thirdpart_business_id")
         public String thirdpartBusinessId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("thirdpart_id")
         public String thirdpartId;
 
@@ -853,18 +985,34 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("trip_cause")
         public String tripCause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("trip_day")
         public Integer tripDay;
 
         @NameInMap("trip_title")
         public String tripTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("union_no")
         public String unionNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

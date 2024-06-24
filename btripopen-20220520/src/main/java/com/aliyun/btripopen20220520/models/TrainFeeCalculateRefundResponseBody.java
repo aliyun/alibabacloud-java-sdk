@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainFeeCalculateRefundResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
     @NameInMap("module")
     public TrainFeeCalculateRefundResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bc4c416859457407135025d509c</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,15 +97,31 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
     }
 
     public static class TrainFeeCalculateRefundResponseBodyModuleRefundTrainDetailsRefundTicketDetailsPassengerInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -134,21 +165,41 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
     }
 
     public static class TrainFeeCalculateRefundResponseBodyModuleRefundTrainDetailsRefundTicketDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_refund")
         public Boolean canRefund;
 
         @NameInMap("passenger_info")
         public TrainFeeCalculateRefundResponseBodyModuleRefundTrainDetailsRefundTicketDetailsPassengerInfo passengerInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("refund_cost_fee")
         public Long refundCostFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("refund_rate")
         public Long refundRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
@@ -208,18 +259,34 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
     }
 
     public static class TrainFeeCalculateRefundResponseBodyModuleRefundTrainDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
         @NameInMap("refund_ticket_details")
         public java.util.List<TrainFeeCalculateRefundResponseBodyModuleRefundTrainDetailsRefundTicketDetails> refundTicketDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>K1234</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
@@ -271,9 +338,17 @@ public class TrainFeeCalculateRefundResponseBody extends TeaModel {
     }
 
     public static class TrainFeeCalculateRefundResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123445</p>
+         */
         @NameInMap("distribute_order_id")
         public String distributeOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1017002195370467200</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 

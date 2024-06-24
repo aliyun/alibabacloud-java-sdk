@@ -7,20 +7,39 @@ public class InvoiceModifyRequest extends TeaModel {
     @NameInMap("address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345678</p>
+     */
     @NameInMap("bank_name")
     public String bankName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2222</p>
+     */
     @NameInMap("bank_no")
     public String bankNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>122333121</p>
+     */
     @NameInMap("tax_no")
     public String taxNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345678</p>
+     */
     @NameInMap("tel")
     public String tel;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340049</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;
@@ -33,6 +52,9 @@ public class InvoiceModifyRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("type")
     public Integer type;

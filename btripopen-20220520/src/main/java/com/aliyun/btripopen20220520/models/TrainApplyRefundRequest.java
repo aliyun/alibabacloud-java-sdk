@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class TrainApplyRefundRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1002145190081005400</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456778</p>
      */
     @NameInMap("out_refund_id")
     public String outRefundId;
@@ -68,24 +77,36 @@ public class TrainApplyRefundRequest extends TeaModel {
     public static class TrainApplyRefundRequestRefundTrainInfosRefundPassengerInfos extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
          */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
          */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12334</p>
          */
         @NameInMap("passenger_id")
         public String passengerId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
          */
         @NameInMap("passenger_name")
         public String passengerName;
@@ -132,6 +153,9 @@ public class TrainApplyRefundRequest extends TeaModel {
     public static class TrainApplyRefundRequestRefundTrainInfos extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
          */
         @NameInMap("dep_time")
         public String depTime;
@@ -144,6 +168,9 @@ public class TrainApplyRefundRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K234</p>
          */
         @NameInMap("train_no")
         public String trainNo;

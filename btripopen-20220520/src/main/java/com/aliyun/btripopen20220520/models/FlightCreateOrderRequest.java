@@ -4,15 +4,26 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightCreateOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>HGH</p>
+     */
     @NameInMap("arr_airport_code")
     public String arrAirportCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HGH</p>
      */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("auto_pay")
     public Integer autoPay;
 
@@ -21,6 +32,9 @@ public class FlightCreateOrderRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("buyer_unique_key")
     public String buyerUniqueKey;
@@ -31,23 +45,36 @@ public class FlightCreateOrderRequest extends TeaModel {
     @NameInMap("contact_info")
     public FlightCreateOrderRequestContactInfo contactInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PEK</p>
+     */
     @NameInMap("dep_airport_code")
     public String depAirportCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BJS</p>
      */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000-00-00 00:00:00</p>
      */
     @NameInMap("dep_date")
     public String depDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
@@ -57,18 +84,27 @@ public class FlightCreateOrderRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000_1_0</p>
      */
     @NameInMap("order_params")
     public String orderParams;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("price")
     public Long price;
@@ -76,6 +112,10 @@ public class FlightCreateOrderRequest extends TeaModel {
     @NameInMap("receipt_address")
     public String receiptAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("receipt_target")
     public Integer receiptTarget;
 
@@ -90,6 +130,9 @@ public class FlightCreateOrderRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;
@@ -252,6 +295,10 @@ public class FlightCreateOrderRequest extends TeaModel {
     }
 
     public static class FlightCreateOrderRequestContactInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>******@alibaba-inc.com</p>
+         */
         @NameInMap("contact_email")
         public String contactEmail;
 
@@ -263,6 +310,9 @@ public class FlightCreateOrderRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312345211</p>
          */
         @NameInMap("contact_phone")
         public String contactPhone;
@@ -299,6 +349,10 @@ public class FlightCreateOrderRequest extends TeaModel {
     }
 
     public static class FlightCreateOrderRequestTravelerInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
@@ -307,16 +361,26 @@ public class FlightCreateOrderRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1262651555151</p>
          */
         @NameInMap("cert_no")
         public String certNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("cert_type")
         public String certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00</p>
+         */
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
@@ -328,33 +392,52 @@ public class FlightCreateOrderRequest extends TeaModel {
 
         /**
          * <p>国籍</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国大陆</p>
          */
         @NameInMap("nationality")
         public String nationality;
 
         /**
          * <p>国籍二字码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("nationality_code")
         public String nationalityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("out_user_id")
         public String outUserId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12341231232</p>
          */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("sex")
         public Integer sex;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("type")
         public String type;

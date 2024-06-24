@@ -16,12 +16,24 @@ public class GroupUserSaveShrinkRequest extends TeaModel {
     @NameInMap("gender")
     public String gender;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("job_no")
     public String jobNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18000000000</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce/shi</p>
+     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
@@ -33,6 +45,9 @@ public class GroupUserSaveShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("user_id")
     public String userId;

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealBillSettlementQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public Integer code;
 
@@ -13,12 +17,24 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public MealBillSettlementQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -79,24 +95,48 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1004430880</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 00:00:00</p>
+         */
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 00:00:00</p>
+         */
         @NameInMap("book_time")
         public String bookTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("booker_id")
         public String bookerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A1234</p>
+         */
         @NameInMap("booker_job_no")
         public String bookerJobNo;
 
         @NameInMap("booker_name")
         public String bookerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("capital_direction")
         public String capitalDirection;
 
@@ -115,39 +155,71 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("consumer_scene")
         public String consumerScene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("corp_settle_fee")
         public Double corpSettleFee;
 
         @NameInMap("cost_center")
         public String costCenter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cs1</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
         @NameInMap("department")
         public String department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1112</p>
+         */
         @NameInMap("department_id")
         public String departmentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>70101</p>
+         */
         @NameInMap("fee_type")
         public String feeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("index")
         public String index;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("main_apply_id")
         public String mainApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXXX</p>
+         */
         @NameInMap("meal_address")
         public String mealAddress;
 
         @NameInMap("meal_city")
         public String mealCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("meal_city_code")
         public String mealCityCode;
 
@@ -157,27 +229,55 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("meal_scene")
         public String mealScene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MEAL</p>
+         */
         @NameInMap("merchant_category")
         public String merchantCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXXX</p>
+         */
         @NameInMap("merchant_name")
         public String merchantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002039196909288346</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("order_price")
         public Double orderPrice;
 
         @NameInMap("order_status_desc")
         public String orderStatusDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("person_settle_price")
         public Double personSettlePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60698599</p>
+         */
         @NameInMap("primary_id")
         public Long primaryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
@@ -187,42 +287,90 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.0</p>
+         */
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110.0</p>
+         */
         @NameInMap("settlement_fee")
         public Double settlementFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 00:00:00</p>
+         */
         @NameInMap("settlement_time")
         public String settlementTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("settlement_type")
         public String settlementType;
 
         @NameInMap("share_dinner")
         public String shareDinner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXXX</p>
+         */
         @NameInMap("store_address")
         public String storeAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cs2</p>
+         */
         @NameInMap("third_invoice_id")
         public String thirdInvoiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("third_part_business_id")
         public String thirdPartBusinessId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7244-1968</p>
+         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("traveler_id")
         public String travelerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A1234</p>
+         */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
@@ -232,6 +380,10 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_name")
         public String travelerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("voucher_type")
         public Integer voucherType;
 
@@ -667,6 +819,10 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class MealBillSettlementQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("category")
         public Integer category;
 
@@ -676,18 +832,38 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<MealBillSettlementQueryResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002039195025156700</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-02</p>
+         */
         @NameInMap("period_end")
         public String periodEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-01</p>
+         */
         @NameInMap("period_start")
         public String periodStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2695</p>
+         */
         @NameInMap("total_num")
         public Long totalNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Long totalSize;
 

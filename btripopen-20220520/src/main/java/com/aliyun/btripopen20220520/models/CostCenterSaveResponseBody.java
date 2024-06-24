@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterSaveResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,14 +17,25 @@ public class CostCenterSaveResponseBody extends TeaModel {
     @NameInMap("module")
     public CostCenterSaveResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -79,6 +94,10 @@ public class CostCenterSaveResponseBody extends TeaModel {
     }
 
     public static class CostCenterSaveResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>17690</p>
+         */
         @NameInMap("id")
         public Long id;
 

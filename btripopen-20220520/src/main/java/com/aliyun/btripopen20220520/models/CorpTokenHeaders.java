@@ -7,6 +7,10 @@ public class CorpTokenHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vf9_bvla0qs</p>
+     */
     @NameInMap("x-acs-btrip-access-token")
     public String xAcsBtripAccessToken;
 

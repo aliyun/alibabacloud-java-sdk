@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,17 +17,32 @@ public class CostCenterQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<CostCenterQueryResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("more_page")
     public Boolean morePage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -90,18 +109,38 @@ public class CostCenterQueryResponseBody extends TeaModel {
     }
 
     public static class CostCenterQueryResponseBodyModuleEntityDOS extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ding1234567</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("entity_id")
         public String entityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("entity_type")
         public String entityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default_bus</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("user_num")
         public Integer userNum;
 
@@ -153,9 +192,17 @@ public class CostCenterQueryResponseBody extends TeaModel {
     }
 
     public static class CostCenterQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:a@alipay.com">a@alipay.com</a></p>
+         */
         @NameInMap("alipay_no")
         public String alipayNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ding12345678</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
@@ -165,21 +212,40 @@ public class CostCenterQueryResponseBody extends TeaModel {
         @NameInMap("entity_d_o_s")
         public java.util.List<CostCenterQueryResponseBodyModuleEntityDOS> entityDOS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7232</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("number")
         public String number;
 
         /**
          * <p>rule code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500578154</p>
          */
         @NameInMap("rule_code")
         public Long ruleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("scope")
         public Long scope;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("thirdpart_id")
         public String thirdpartId;
 

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class TicketChangingDetailResponseBody extends TeaModel {
     @NameInMap("module")
     public TicketChangingDetailResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +92,10 @@ public class TicketChangingDetailResponseBody extends TeaModel {
     }
 
     public static class TicketChangingDetailResponseBodyModuleFlightInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MU</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -88,87 +108,175 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         @NameInMap("arr_airport")
         public String arrAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
         @NameInMap("arr_airport_code_name")
         public String arrAirportCodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LHW</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T3</p>
+         */
         @NameInMap("arr_terminal")
         public String arrTerminal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
         @NameInMap("baggage")
         public String baggage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("build_price")
         public Long buildPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>V</p>
+         */
         @NameInMap("cabin")
         public String cabin;
 
         @NameInMap("cabin_class")
         public String cabinClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU3849</p>
+         */
         @NameInMap("carrier")
         public String carrier;
 
         @NameInMap("dep_airport")
         public String depAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NGB</p>
+         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
         @NameInMap("dep_airport_code_name")
         public String depAirportCodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city")
         public String depCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NGB</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T4</p>
+         */
         @NameInMap("dep_terminal")
         public String depTerminal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-01-01 00:00:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU3849</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("last_cabin")
         public String lastCabin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA1982</p>
+         */
         @NameInMap("last_flight_no")
         public String lastFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("meal")
         public String meal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("oil_price")
         public Long oilPrice;
 
         @NameInMap("segment_type")
         public Integer segmentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NGB</p>
+         */
         @NameInMap("stop_city")
         public String stopCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
@@ -447,30 +555,62 @@ public class TicketChangingDetailResponseBody extends TeaModel {
     }
 
     public static class TicketChangingDetailResponseBodyModuleTravelerInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2000-01-01</p>
+         */
         @NameInMap("birth_date")
         public String birthDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("cert_type")
         public String certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("open_ticket_status")
         public Integer openTicketStatus;
 
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("passenger_type")
         public String passengerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678909</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>444-000000000</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>012992</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -557,33 +697,69 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002</p>
+         */
         @NameInMap("btrip_order_id")
         public Long btripOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>37772</p>
+         */
         @NameInMap("btrip_sub_order_id")
         public Long btripSubOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dis123</p>
+         */
         @NameInMap("dis_order_id")
         public String disOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chang123</p>
+         */
         @NameInMap("dis_sub_order_id")
         public String disSubOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("extra")
         public String extra;
 
         @NameInMap("flight_info_list")
         public java.util.List<TicketChangingDetailResponseBodyModuleFlightInfoList> flightInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-30 11:30:00</p>
+         */
         @NameInMap("last_pay_time")
         public String lastPayTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("pay_status")
         public Integer payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-30 11:30:00</p>
+         */
         @NameInMap("pay_time")
         public String payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("settle_price")
         public Long settlePrice;
 
@@ -593,12 +769,24 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_change_price")
         public Long totalChangePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_price")
         public Long totalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_upgrade_price")
         public Long totalUpgradePrice;
 

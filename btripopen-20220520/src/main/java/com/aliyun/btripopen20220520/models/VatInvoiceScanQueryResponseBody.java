@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class VatInvoiceScanQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -15,15 +19,25 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210e842b16611337974412836dae27</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,11 +96,18 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>75.21</p>
+         */
         @NameInMap("amount")
         public String amount;
 
         /**
          * <p>行号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("index")
         public String index;
@@ -94,21 +115,41 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("item_name")
         public String itemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("quantity")
         public String quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66PT11230069</p>
+         */
         @NameInMap("specification")
         public String specification;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12.79</p>
+         */
         @NameInMap("tax")
         public String tax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
         @NameInMap("unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75.21</p>
+         */
         @NameInMap("unit_price")
         public String unitPrice;
 
@@ -192,27 +233,55 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class VatInvoiceScanQueryResponseBodyModuleItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("amount_with_tax")
         public String amountWithTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18.87</p>
+         */
         @NameInMap("amount_without_tax")
         public String amountWithoutTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
+         */
         @NameInMap("bill_date")
         public String billDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>07122942791187744475</p>
+         */
         @NameInMap("check_code")
         public String checkCode;
 
         @NameInMap("drawer")
         public String drawer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3300111303</p>
+         */
         @NameInMap("invoice_code")
         public String invoiceCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
+         */
         @NameInMap("invoice_day")
         public String invoiceDay;
 
@@ -225,12 +294,24 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_location")
         public String invoiceLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24021111</p>
+         */
         @NameInMap("invoice_no")
         public String invoiceNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("invoice_sub_task_id")
         public Long invoiceSubTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("invoice_type")
         public Integer invoiceType;
 
@@ -239,13 +320,24 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
 
         /**
          * <p>机器码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>661619906841</p>
          */
         @NameInMap("machine_code")
         public String machineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("oss_url")
         public String ossUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&lt;87*&gt;&gt;53&gt;5023&gt;-446&gt;/4+83/5* *&gt;5/81&lt;75/1931&gt;4&gt;&gt;</p>
+         */
         @NameInMap("password_area")
         public String passwordArea;
 
@@ -261,6 +353,10 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("purchaser_name")
         public String purchaserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91441111111111111S</p>
+         */
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
 
@@ -282,15 +378,31 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("seller_name")
         public String sellerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91441111111111111N</p>
+         */
         @NameInMap("seller_tax_no")
         public String sellerTaxNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4475</p>
+         */
         @NameInMap("smart_check_code")
         public String smartCheckCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.13</p>
+         */
         @NameInMap("tax_amount")
         public String taxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
@@ -591,15 +703,31 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<VatInvoiceScanQueryResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page_no")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Integer totalSize;
 

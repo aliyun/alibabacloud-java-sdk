@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EntityAddResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,14 +17,25 @@ public class EntityAddResponseBody extends TeaModel {
     @NameInMap("module")
     public EntityAddResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -79,9 +94,17 @@ public class EntityAddResponseBody extends TeaModel {
     }
 
     public static class EntityAddResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("add_num")
         public Integer addNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("selected_user_num")
         public Integer selectedUserNum;
 

@@ -4,15 +4,31 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class UserQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-06-02 00:00:00</p>
+     */
     @NameInMap("modified_time_greater_or_equal_than")
     public String modifiedTimeGreaterOrEqualThan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9YN+jxa7PcxbNUTISeKjEw==</p>
+     */
     @NameInMap("page_token")
     public String pageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("third_part_job_no")
     public String thirdPartJobNo;
 

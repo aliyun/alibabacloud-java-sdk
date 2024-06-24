@@ -7,15 +7,31 @@ public class IntlFlightOrderPayRequest extends TeaModel {
     @NameInMap("ext_params")
     public java.util.Map<String, ?> extParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TRAVEL</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1002145190081005400</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F11372878673688133632</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15500</p>
+     */
     @NameInMap("total_price")
     public Long totalPrice;
 

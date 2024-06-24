@@ -43,9 +43,17 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
     }
 
     public static class ModuleGroupItemShoppingItemMapValueCabinQuantityListSegmentPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
@@ -73,15 +81,27 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
     }
 
     public static class ModuleGroupItemShoppingItemMapValueCabinQuantityListCabin extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabin")
         public String cabin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
         @NameInMap("cabin_class_name")
         public String cabinClassName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A</p>
+         */
         @NameInMap("quantity")
         public String quantity;
 
@@ -155,12 +175,24 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
     }
 
     public static class ModuleGroupItemShoppingItemMapValueSearchPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("tax")
         public Integer tax;
 
@@ -196,9 +228,17 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
     }
 
     public static class ModuleGroupItemShoppingItemMapValueSegmentPriceListSegmentPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
@@ -226,12 +266,24 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
     }
 
     public static class ModuleGroupItemShoppingItemMapValueSegmentPriceListSearchPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("tax")
         public Integer tax;
 

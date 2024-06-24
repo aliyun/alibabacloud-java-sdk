@@ -10,6 +10,10 @@ public class InvoiceSearchRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

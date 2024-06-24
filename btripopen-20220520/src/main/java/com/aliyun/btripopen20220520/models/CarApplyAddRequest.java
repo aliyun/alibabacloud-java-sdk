@@ -21,13 +21,24 @@ public class CarApplyAddRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-12 14:52:52</p>
      */
     @NameInMap("date")
     public String date;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-12 18:51:25</p>
+     */
     @NameInMap("finished_date")
     public String finishedDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project1413</p>
+     */
     @NameInMap("project_code")
     public String projectCode;
 
@@ -36,36 +47,59 @@ public class CarApplyAddRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("status")
     public Integer status;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IRGS1413</p>
      */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>QA1411</p>
+     */
     @NameInMap("third_part_cost_center_id")
     public String thirdPartCostCenterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GA15131</p>
+     */
     @NameInMap("third_part_invoice_id")
     public String thirdPartInvoiceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("times_total")
     public Integer timesTotal;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("times_type")
     public Integer timesType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("times_used")
     public Integer timesUsed;
@@ -81,6 +115,9 @@ public class CarApplyAddRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OPEN1415614</p>
      */
     @NameInMap("user_id")
     public String userId;

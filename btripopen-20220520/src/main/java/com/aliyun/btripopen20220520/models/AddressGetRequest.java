@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddressGetRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("action_type")
     public Integer actionType;
@@ -28,6 +31,10 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>460e254b5a5b4bd0801744a2790e5d78</p>
+     */
     @NameInMap("itinerary_id")
     public String itineraryId;
 
@@ -40,12 +47,20 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://alibtrip.open.com">https://alibtrip.open.com</a></p>
+     */
     @NameInMap("taobao_callback_url")
     public String taobaoCallbackUrl;
 
     @NameInMap("traveler_id")
     public String travelerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("type")
     public Integer type;
 

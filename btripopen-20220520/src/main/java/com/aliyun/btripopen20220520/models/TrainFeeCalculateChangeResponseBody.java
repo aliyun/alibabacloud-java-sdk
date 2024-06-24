@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainFeeCalculateChangeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
     @NameInMap("module")
     public TrainFeeCalculateChangeResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,15 +97,31 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
     }
 
     public static class TrainFeeCalculateChangeResponseBodyModuleChangeTrainDetailsChangeTicketDetailsPassengerInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
@@ -134,24 +165,48 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
     }
 
     public static class TrainFeeCalculateChangeResponseBodyModuleChangeTrainDetailsChangeTicketDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("change_fee")
         public Long changeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("change_rate")
         public Long changeRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("change_refund_fee")
         public Long changeRefundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("change_refund_rate")
         public Long changeRefundRate;
 
         @NameInMap("passenger_info")
         public TrainFeeCalculateChangeResponseBodyModuleChangeTrainDetailsChangeTicketDetailsPassengerInfo passengerInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
@@ -219,18 +274,34 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
     }
 
     public static class TrainFeeCalculateChangeResponseBodyModuleChangeTrainDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
         @NameInMap("change_ticket_details")
         public java.util.List<TrainFeeCalculateChangeResponseBodyModuleChangeTrainDetailsChangeTicketDetails> changeTicketDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>K2345</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
@@ -285,9 +356,17 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
         @NameInMap("change_train_details")
         public java.util.List<TrainFeeCalculateChangeResponseBodyModuleChangeTrainDetails> changeTrainDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("distribute_order_id")
         public String distributeOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1683901850297448200</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 

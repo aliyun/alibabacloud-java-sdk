@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TrainFeeCalculateRefundShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("distribute_order_id")
     public String distributeOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1002145190081005400</p>
      */
     @NameInMap("order_id")
     public String orderId;

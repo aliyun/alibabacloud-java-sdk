@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderDetailInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>succeed in handling request</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelOrderDetailInfoResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +96,17 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
     }
 
     public static class HotelOrderDetailInfoResponseBodyModuleBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("hour")
         public Long hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("value")
         public Long value;
 
@@ -136,9 +164,17 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
     }
 
     public static class HotelOrderDetailInfoResponseBodyModuleCancelInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-29</p>
+         */
         @NameInMap("cancel_end_time")
         public String cancelEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-29</p>
+         */
         @NameInMap("cancel_start_time")
         public String cancelStartTime;
 
@@ -175,9 +211,17 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-87217</p>
+         */
         @NameInMap("hotel_tel")
         public String hotelTel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2198781</p>
+         */
         @NameInMap("shid")
         public Long shid;
 
@@ -347,21 +391,45 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
     }
 
     public static class HotelOrderDetailInfoResponseBodyModuleInvoiceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("billing_money")
         public Long billingMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("buyer_add")
         public String buyerAdd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("buyer_bank_acc")
         public String buyerBankAcc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("buyer_bank_add")
         public String buyerBankAdd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-82321777</p>
+         */
         @NameInMap("buyer_phone")
         public String buyerPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("buyer_tax_num")
         public String buyerTaxNum;
 
@@ -380,27 +448,55 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("delivery_street")
         public String deliveryStreet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("invoice_material")
         public Integer invoiceMaterial;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("invoice_type")
         public Integer invoiceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("postage")
         public Long postage;
 
         @NameInMap("receiver_name")
         public String receiverName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-82321777</p>
+         */
         @NameInMap("receiver_phone")
         public String receiverPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tmf closeCloneTask</p>
+         */
         @NameInMap("remark")
         public String remark;
 
@@ -564,33 +660,73 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
     }
 
     public static class HotelOrderDetailInfoResponseBodyModuleOccupantInfoListCostCenterInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("cost_center_id")
         public String costCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("cost_center_no")
         public String costCenterNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("cost_center_prices")
         public Long costCenterPrices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("cost_center_ratios")
         public Long costCenterRatios;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("cost_center_subject_code")
         public String costCenterSubjectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("cost_center_subject_name")
         public String costCenterSubjectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("settle_subject_id")
         public String settleSubjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("settle_subject_name")
         public String settleSubjectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("settle_subject_no")
         public String settleSubjectNo;
 
@@ -682,54 +818,110 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
     }
 
     public static class HotelOrderDetailInfoResponseBodyModuleOccupantInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1235615612424222</p>
+         */
         @NameInMap("card_no")
         public String cardNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("card_type")
         public Integer cardType;
 
         @NameInMap("cost_center_info_list")
         public java.util.List<HotelOrderDetailInfoResponseBodyModuleOccupantInfoListCostCenterInfoList> costCenterInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("customer_type")
         public Integer customerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123112</p>
+         */
         @NameInMap("department_id")
         public String departmentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("department_name")
         public String departmentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("employee_type")
         public Integer employeeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("first_name")
         public String firstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_booker")
         public Boolean isBooker;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhang</p>
+         */
         @NameInMap("last_name")
         public String lastName;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-872237</p>
+         */
         @NameInMap("phone")
         public String phone;
 
         @NameInMap("room_no")
         public Integer roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("selected")
         public Boolean selected;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12817218</p>
+         */
         @NameInMap("staff_no")
         public String staffNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -880,24 +1072,44 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("board")
         public String board;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("board_num")
         public Integer boardNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1677600000000</p>
+         */
         @NameInMap("check_in")
         public String checkIn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1399417428510</p>
+         */
         @NameInMap("rate_plan_id")
         public String ratePlanId;
 
         @NameInMap("rate_plan_name")
         public String ratePlanName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>545993154510</p>
+         */
         @NameInMap("room_id")
         public String roomId;
 
         @NameInMap("room_name")
         public String roomName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
         @NameInMap("room_price")
         public Long roomPrice;
 
@@ -973,48 +1185,96 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
     }
 
     public static class HotelOrderDetailInfoResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-29</p>
+         */
         @NameInMap("actual_check_in_time")
         public String actualCheckInTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-29</p>
+         */
         @NameInMap("actual_check_out_time")
         public String actualCheckOutTime;
 
         @NameInMap("btrip_hotel_cancel_policy_d_t_o")
         public HotelOrderDetailInfoResponseBodyModuleBtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("btrip_order_id")
         public String btripOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("cancel_fine")
         public Long cancelFine;
 
         @NameInMap("cancel_info")
         public HotelOrderDetailInfoResponseBodyModuleCancelInfo cancelInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-15T22:27Z</p>
+         */
         @NameInMap("check_in")
         public String checkIn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-15T22:27Z</p>
+         */
         @NameInMap("check_out")
         public String checkOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("confirm_order_time")
         public String confirmOrderTime;
 
         @NameInMap("contract_name")
         public String contractName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12316261873</p>
+         */
         @NameInMap("contract_tel")
         public String contractTel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-01-21</p>
+         */
         @NameInMap("create_order_time")
         public String createOrderTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("early_arrival_time")
         public String earlyArrivalTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("early_departure")
         public Boolean earlyDeparture;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("guest_count")
         public Integer guestCount;
 
@@ -1027,63 +1287,130 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @NameInMap("invoice_info")
         public HotelOrderDetailInfoResponseBodyModuleInvoiceInfo invoiceInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1289918</p>
+         */
         @NameInMap("item_id")
         public String itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("last_arrival_time")
         public String lastArrivalTime;
 
         @NameInMap("occupant_info_list")
         public java.util.List<HotelOrderDetailInfoResponseBodyModuleOccupantInfoList> occupantInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
         @NameInMap("order_status_desc")
         public String orderStatusDesc;
 
+        @NameInMap("out_confirm_code")
+        public String outConfirmCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("pay_time")
         public String payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("product_type")
         public Integer productType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100328718728171</p>
+         */
         @NameInMap("purchase_order_id")
         public String purchaseOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("refund_reason")
         public String refundReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_service_fee")
         public Long refundServiceFee;
 
         @NameInMap("room_night_price_info_list")
         public java.util.List<HotelOrderDetailInfoResponseBodyModuleRoomNightPriceInfoList> roomNightPriceInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("room_number")
         public Integer roomNumber;
 
         @NameInMap("room_type_name")
         public String roomTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2088441675613762</p>
+         */
         @NameInMap("seller_id")
         public String sellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>taobao</p>
+         */
         @NameInMap("seller_name")
         public String sellerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.02</p>
+         */
         @NameInMap("service_fee")
         public Long serviceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("settle_type")
         public String settleType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dis123</p>
+         */
         @NameInMap("supplier_order_id")
         public String supplierOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_price")
         public Long totalPrice;
 
@@ -1274,6 +1601,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
         public String getOrderStatusDesc() {
             return this.orderStatusDesc;
+        }
+
+        public HotelOrderDetailInfoResponseBodyModule setOutConfirmCode(String outConfirmCode) {
+            this.outConfirmCode = outConfirmCode;
+            return this;
+        }
+        public String getOutConfirmCode() {
+            return this.outConfirmCode;
         }
 
         public HotelOrderDetailInfoResponseBodyModule setPayTime(String payTime) {

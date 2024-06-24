@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class FlightOrderQueryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>246584390</p>
      */
     @NameInMap("order_id")
     public Long orderId;

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightCreateOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class FlightCreateOrderResponseBody extends TeaModel {
     @NameInMap("module")
     public FlightCreateOrderResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,27 +92,59 @@ public class FlightCreateOrderResponseBody extends TeaModel {
     }
 
     public static class FlightCreateOrderResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3287177727711</p>
+         */
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("btrip_order_id")
         public Long btripOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dis123</p>
+         */
         @NameInMap("dis_order_id")
         public String disOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-00-00 00:00:00</p>
+         */
         @NameInMap("last_pay_time")
         public String lastPayTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pay_status")
         public Integer payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("payment_price")
         public Long paymentPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("total_price")
         public Long totalPrice;
 

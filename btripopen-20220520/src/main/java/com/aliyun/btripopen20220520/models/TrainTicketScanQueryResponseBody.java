@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainTicketScanQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -15,15 +19,25 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -88,6 +102,10 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("arr_station")
         public String arrStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
+         */
         @NameInMap("bill_date")
         public String billDate;
 
@@ -100,27 +118,47 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("dep_station")
         public String depStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-12 10:00:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
         @NameInMap("department")
         public String department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71</p>
+         */
         @NameInMap("id")
         public String id;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3137168772101111000</p>
+         */
         @NameInMap("order_id")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("oss_url")
         public String ossUrl;
 
         @NameInMap("passenger")
         public String passenger;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("price")
         public String price;
 
@@ -133,23 +171,41 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("seat_no")
         public String seatNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30671211200127U123456</p>
+         */
         @NameInMap("serial_number")
         public String serialNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.26</p>
+         */
         @NameInMap("tax_amount")
         public String taxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
         /**
          * <p>取票号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>784-1111111111</p>
          */
         @NameInMap("ticket_no")
         public String ticketNo;
 
         /**
          * <p>车次</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G99</p>
          */
         @NameInMap("train_no")
         public String trainNo;
@@ -341,15 +397,31 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<TrainTicketScanQueryResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page_no")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Integer totalSize;
 

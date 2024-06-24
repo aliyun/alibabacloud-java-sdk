@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class IeFlightBillSettlementQueryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page_no")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-02</p>
      */
     @NameInMap("period_end")
     public String periodEnd;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-01</p>
      */
     @NameInMap("period_start")
     public String periodStart;

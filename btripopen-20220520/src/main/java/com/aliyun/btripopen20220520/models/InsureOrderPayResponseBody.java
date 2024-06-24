@@ -4,18 +4,34 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureOrderPayResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bc4ba16799697693368683dbafc</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TripBusinessInstanceQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public TripBusinessInstanceQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210bc44416869853114684533da3c2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -85,12 +100,24 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1525104000</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1525104000</p>
+         */
         @NameInMap("gmt_modified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 

@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightCancelOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class FlightCancelOrderResponseBody extends TeaModel {
     @NameInMap("module")
     public FlightCancelOrderResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +92,10 @@ public class FlightCancelOrderResponseBody extends TeaModel {
     }
 
     public static class FlightCancelOrderResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("cancel_time")
         public String cancelTime;
 
@@ -85,6 +105,10 @@ public class FlightCancelOrderResponseBody extends TeaModel {
         @NameInMap("fail_reason")
         public String failReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("order_status")
         public String orderStatus;
 

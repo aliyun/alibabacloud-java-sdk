@@ -15,15 +15,25 @@ public class GroupDepartSaveRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>001</p>
      */
     @NameInMap("outer_dept_id")
     public String outerDeptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>002</p>
+     */
     @NameInMap("outer_dept_pid")
     public String outerDeptPid;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("status")
     public Integer status;

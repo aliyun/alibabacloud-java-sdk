@@ -4,39 +4,71 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundApplyV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683901850297448082</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467137</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1019195836916039</p>
+     */
     @NameInMap("out_sub_order_id")
     public String outSubOrderId;
 
     @NameInMap("passenger_segment_relations")
     public java.util.List<FlightRefundApplyV2RequestPassengerSegmentRelations> passengerSegmentRelations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("pre_cal_type")
     public Integer preCalType;
 
     @NameInMap("refund_reason")
     public String refundReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("refund_reason_type")
     public Integer refundReasonType;
 
     @NameInMap("ticket_nos")
     public java.util.List<String> ticketNos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("total_refund_price")
     public Long totalRefundPrice;
 
     @NameInMap("upload_pict_urls")
     public String uploadPictUrls;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("voluntary")
     public Boolean voluntary;
 
@@ -142,6 +174,10 @@ public class FlightRefundApplyV2Request extends TeaModel {
     }
 
     public static class FlightRefundApplyV2RequestPassengerSegmentRelations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1075004</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 

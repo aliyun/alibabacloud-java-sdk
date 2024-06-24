@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingApplyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class TicketChangingApplyResponseBody extends TeaModel {
     @NameInMap("module")
     public TicketChangingApplyResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,51 +92,111 @@ public class TicketChangingApplyResponseBody extends TeaModel {
     }
 
     public static class TicketChangingApplyResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("booking_changed_total_fee")
         public Integer bookingChangedTotalFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("booking_origin_total_fee")
         public Integer bookingOriginTotalFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("booking_price_changed")
         public Boolean bookingPriceChanged;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("btrip_order_id")
         public Long btripOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("btrip_sub_order_id")
         public Long btripSubOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_pay")
         public Boolean canPay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("change_fee")
         public Long changeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0000-00-00 00:00:00</p>
+         */
         @NameInMap("deadline_time")
         public String deadlineTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dis123</p>
+         */
         @NameInMap("dis_order_id")
         public String disOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mid112</p>
+         */
         @NameInMap("dis_sub_order_id")
         public String disSubOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("max_retry_times")
         public Integer maxRetryTimes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("next_retry_interval")
         public Long nextRetryInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("retry")
         public Boolean retry;
 
         @NameInMap("retry_client_tips")
         public String retryClientTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("upgrade_fee")
         public Long upgradeFee;
 

@@ -9,6 +9,9 @@ public class EntityAddRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340049</p>
      */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
@@ -35,9 +38,17 @@ public class EntityAddRequest extends TeaModel {
     }
 
     public static class EntityAddRequestEntityDOList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("entity_id")
         public String entityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("entity_type")
         public String entityType;
 

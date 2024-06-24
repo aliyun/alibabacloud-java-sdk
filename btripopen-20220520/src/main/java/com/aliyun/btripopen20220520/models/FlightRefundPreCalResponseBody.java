@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundPreCalResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
     @NameInMap("module")
     public FlightRefundPreCalResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +92,34 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
     }
 
     public static class FlightRefundPreCalResponseBodyModuleMultiRefundCalList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_apply_refund")
         public Boolean canApplyRefund;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("pre_refund_money")
         public Long preRefundMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("refund_fee")
         public Long refundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>124</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -142,18 +174,34 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         @NameInMap("extend_desc")
         public String extendDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("person")
         public Integer person;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("reason_code")
         public Integer reasonCode;
 
         @NameInMap("reason_show")
         public String reasonShow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("reason_type")
         public Integer reasonType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("volunteer")
         public Integer volunteer;
 
@@ -213,24 +261,44 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
     }
 
     public static class FlightRefundPreCalResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("flight_change")
         public Boolean flightChange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FlightItem_996677504</p>
+         */
         @NameInMap("item_unit_id")
         public String itemUnitId;
 
         @NameInMap("multi_refund_cal_list")
         public java.util.List<FlightRefundPreCalResponseBodyModuleMultiRefundCalList> multiRefundCalList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("pre_refund_money")
         public Long preRefundMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("refund_fee")
         public Long refundFee;
 
         @NameInMap("return_reason")
         public java.util.List<FlightRefundPreCalResponseBodyModuleReturnReason> returnReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>882sudu23s923j9d2</p>
+         */
         @NameInMap("session_id")
         public String sessionId;
 

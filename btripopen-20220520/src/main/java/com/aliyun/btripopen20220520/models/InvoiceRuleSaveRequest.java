@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceRuleSaveRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("all_employe")
     public Boolean allEmploye;
 
@@ -15,6 +19,9 @@ public class InvoiceRuleSaveRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i123</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;
@@ -57,12 +64,20 @@ public class InvoiceRuleSaveRequest extends TeaModel {
     }
 
     public static class InvoiceRuleSaveRequestEntities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("id")
         public String id;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 

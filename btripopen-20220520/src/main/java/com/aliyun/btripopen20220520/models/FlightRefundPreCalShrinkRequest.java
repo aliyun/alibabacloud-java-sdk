@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class FlightRefundPreCalShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("is_voluntary")
     public String isVoluntary;
 

@@ -4,11 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightCreateOrderShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
+     */
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
@@ -22,27 +29,55 @@ public class IntlFlightCreateOrderShrinkRequest extends TeaModel {
     @NameInMap("extra_info")
     public String extraInfoShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open12k0lclldfdc7v10E2HaRrOr00</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chinese</p>
+     */
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>56319a175bdf4b1898190bd7edb603b5_0</p>
+     */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F11380075736888770560</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     @NameInMap("passenger_list")
     public String passengerListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
+     */
     @NameInMap("render_key")
     public String renderKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>120000</p>
+     */
     @NameInMap("total_price_cent")
     public Long totalPriceCent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12341234</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

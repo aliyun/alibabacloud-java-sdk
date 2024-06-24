@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class SyncSingleUserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("module")
     public String module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 

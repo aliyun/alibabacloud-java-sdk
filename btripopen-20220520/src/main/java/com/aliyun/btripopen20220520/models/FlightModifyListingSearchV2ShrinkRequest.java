@@ -13,18 +13,34 @@ public class FlightModifyListingSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("interface_caller_is_support_retry")
     public Boolean interfaceCallerIsSupportRetry;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467138</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467137</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     @NameInMap("passenger_segment_relations")
     public String passengerSegmentRelationsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("search_mode")
     public Integer searchMode;
 
@@ -34,9 +50,17 @@ public class FlightModifyListingSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("selected_segments")
     public String selectedSegmentsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a2ffebfe733742aab5c491d960ba3d59</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("voluntary")
     public Boolean voluntary;
 

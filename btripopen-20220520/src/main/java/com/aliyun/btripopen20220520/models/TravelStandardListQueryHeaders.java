@@ -9,6 +9,9 @@ public class TravelStandardListQueryHeaders extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>feth00jqwls</p>
      */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;

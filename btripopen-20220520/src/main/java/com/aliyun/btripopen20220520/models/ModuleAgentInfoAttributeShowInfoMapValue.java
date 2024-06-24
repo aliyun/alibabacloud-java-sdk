@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleAgentInfoAttributeShowInfoMapValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FIRST_BAGGAGE</p>
+     */
     @NameInMap("code")
     public String code;
 

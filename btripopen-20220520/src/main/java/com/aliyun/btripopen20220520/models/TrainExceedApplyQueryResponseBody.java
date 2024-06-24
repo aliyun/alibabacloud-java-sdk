@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainExceedApplyQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public TrainExceedApplyQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BE3FBA15-C5E1-5B99-8120-9FB84A04FB81</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +92,10 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
     }
 
     public static class TrainExceedApplyQueryResponseBodyModuleApplyIntentionInfoDO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("arr_city")
         public String arrCity;
 
@@ -85,9 +105,17 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         @NameInMap("arr_station")
         public String arrStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-24T09:55Z</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SHA</p>
+         */
         @NameInMap("dep_city")
         public String depCity;
 
@@ -97,21 +125,37 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         @NameInMap("dep_station")
         public String depStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-24T09:55Z</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("price")
         public Long price;
 
         @NameInMap("seat_name")
         public String seatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>G39</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
         @NameInMap("train_type_desc")
         public String trainTypeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("type")
         public Integer type;
 
@@ -227,6 +271,10 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
     }
 
     public static class TrainExceedApplyQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>apply1</p>
+         */
         @NameInMap("apply_id")
         public Long applyId;
 
@@ -236,30 +284,62 @@ public class TrainExceedApplyQueryResponseBody extends TeaModel {
         @NameInMap("btrip_cause")
         public String btripCause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>corp1</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
         @NameInMap("exceed_reason")
         public String exceedReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("exceed_type")
         public Integer exceedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("origin_standard")
         public String originStandard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-24T09:55Z</p>
+         */
         @NameInMap("submit_time")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0001A1100000007EX08O</p>
+         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testcorp1</p>
+         */
         @NameInMap("thirdpart_corp_id")
         public String thirdpartCorpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

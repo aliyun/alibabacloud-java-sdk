@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,14 +17,25 @@ public class InvoiceSearchResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<InvoiceSearchResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EB68C364-F9A0-5046-910A-2DD92C277E71</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -81,10 +96,17 @@ public class InvoiceSearchResponseBody extends TeaModel {
     public static class InvoiceSearchResponseBodyModule extends TeaModel {
         /**
          * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1478652</p>
          */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>405009</p>
+         */
         @NameInMap("third_part_invoice_id")
         public String thirdPartInvoiceId;
 

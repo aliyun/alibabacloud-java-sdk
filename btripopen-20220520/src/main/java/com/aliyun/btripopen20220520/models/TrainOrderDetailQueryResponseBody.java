@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainOrderDetailQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -16,14 +20,25 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public TrainOrderDetailQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bc81a17090871660176894d008c</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2103a05c16872420814992343d8a09</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -82,36 +97,76 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleBookInfosBookTrainInfosBookTicketInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>04</p>
+         */
         @NameInMap("coach_no")
         public String coachNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("fail_code")
         public String failCode;
 
         @NameInMap("fail_reason")
         public String failReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("real_ticket_price")
         public Long realTicketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1A</p>
+         */
         @NameInMap("seat_no")
         public String seatNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ticket_entrance")
         public String ticketEntrance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("ticket_status")
         public Integer ticketStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ticket_type")
         public String ticketType;
 
@@ -211,27 +266,47 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleBookInfosBookTrainInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
         @NameInMap("arr_station_name")
         public String arrStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-07 15:19:01</p>
+         */
         @NameInMap("arrive_time")
         public String arriveTime;
 
         @NameInMap("book_ticket_infos")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleBookInfosBookTrainInfosBookTicketInfos> bookTicketInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
         @NameInMap("dep_station_name")
         public String depStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>D1234</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
@@ -310,18 +385,34 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("book_train_infos")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleBookInfosBookTrainInfos> bookTrainInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("fail_code")
         public String failCode;
 
         @NameInMap("fail_msg")
         public String failMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("last_pay_time")
         public String lastPayTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GW123456</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -381,45 +472,97 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleChangeInfosChangeTrainInfosChangeTicketInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("change_cost")
         public Long changeCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("change_diff")
         public Long changeDiff;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("change_gap_handing_fee")
         public Long changeGapHandingFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("change_min_ticket_amount_handing_fee")
         public Long changeMinTicketAmountHandingFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>04</p>
+         */
         @NameInMap("coach_no")
         public String coachNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("fail_code")
         public String failCode;
 
         @NameInMap("fail_reason")
         public String failReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("real_ticket_price")
         public Long realTicketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1A</p>
+         */
         @NameInMap("seat_no")
         public String seatNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ticket_entrance")
         public String ticketEntrance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("ticket_status")
         public String ticketStatus;
 
@@ -543,27 +686,47 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleChangeInfosChangeTrainInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BDC</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
         @NameInMap("arr_station_name")
         public String arrStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("arrive_time")
         public String arriveTime;
 
         @NameInMap("change_ticket_infos")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleChangeInfosChangeTrainInfosChangeTicketInfos> changeTicketInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
         @NameInMap("dep_station_name")
         public String depStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>D1234</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
@@ -639,18 +802,34 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleChangeInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890</p>
+         */
         @NameInMap("change_apply_id")
         public String changeApplyId;
 
         @NameInMap("change_train_infos")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleChangeInfosChangeTrainInfos> changeTrainInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("limit_pay_time")
         public String limitPayTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("out_change_apply_id")
         public String outChangeApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -702,9 +881,17 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleOfflineRefundDetailsOfflineRefundInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
@@ -732,15 +919,27 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleOfflineRefundDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("offline_refund_id")
         public String offlineRefundId;
 
         @NameInMap("offline_refund_infos")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleOfflineRefundDetailsOfflineRefundInfos> offlineRefundInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("offline_refund_type")
         public String offlineRefundType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("refund_total_price")
         public Long refundTotalPrice;
 
@@ -787,30 +986,54 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("cascade_dept_name")
         public String cascadeDeptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
         @NameInMap("cost_center_id")
         public String costCenterId;
 
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("cost_center_no")
         public String costCenterNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>582000002311</p>
+         */
         @NameInMap("depart_id")
         public String departId;
 
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11111</p>
+         */
         @NameInMap("invoice_id")
         public String invoiceId;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
@@ -916,24 +1139,52 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_info")
         public TrainOrderDetailQueryResponseBodyModulePassengerInfoSCostCenterInfo costCenterInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
+         */
         @NameInMap("country_code")
         public String countryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
+         */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
+         */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b6a6fc1bdf1ba60e25c2e132b612c8819</p>
+         */
         @NameInMap("passenger_mobile")
         public String passengerMobile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
+         */
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b6a6fc1bdf1ba60e25c2e132b612c8819</p>
+         */
         @NameInMap("valid_date_end")
         public String validDateEnd;
 
@@ -1009,15 +1260,31 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleRefundInfosRefundTrainInfoRefundTicketInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("refund_cost")
         public Long refundCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
@@ -1064,21 +1331,37 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("arr_station_name")
         public String arrStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
         @NameInMap("dep_station_name")
         public String depStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
         @NameInMap("refund_ticket_infos")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleRefundInfosRefundTrainInfoRefundTicketInfos> refundTicketInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>K1234</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
@@ -1146,17 +1429,28 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class TrainOrderDetailQueryResponseBodyModuleRefundInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("fail_code")
         public String failCode;
 
         @NameInMap("fail_msg")
         public String failMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456778</p>
+         */
         @NameInMap("out_refund_id")
         public String outRefundId;
 
         /**
          * <p>String</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("refund_id")
         public String refundId;
@@ -1164,6 +1458,10 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("refund_train_info")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleRefundInfosRefundTrainInfo> refundTrainInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -1232,9 +1530,17 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("offlineRefundDetails")
         public java.util.List<TrainOrderDetailQueryResponseBodyModuleOfflineRefundDetails> offlineRefundDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1017028198411054446</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3703184209587306496</p>
+         */
         @NameInMap("out_order_id")
         public String outOrderId;
 

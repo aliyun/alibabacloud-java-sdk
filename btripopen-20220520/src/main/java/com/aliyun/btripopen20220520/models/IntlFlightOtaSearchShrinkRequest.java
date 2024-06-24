@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10023</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
@@ -12,19 +16,34 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("direct_only")
     public Boolean directOnly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open12igetbis4o07v10B1TlOWcM00</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
@@ -37,11 +56,18 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
     @NameInMap("search_passenger_list")
     public String searchPassengerListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;

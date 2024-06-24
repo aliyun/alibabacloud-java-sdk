@@ -4,23 +4,42 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyTripTaskExecuteResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("module")
     public Boolean module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2FB0D7A8-BA41-5D04-BEFC-CADA5481AC53</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210bc56016876728084104176d2c35</p>
      */
     @NameInMap("traceId")
     public String traceId;

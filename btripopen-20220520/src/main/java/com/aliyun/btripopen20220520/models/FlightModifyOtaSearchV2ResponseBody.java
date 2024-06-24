@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -18,15 +22,25 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2136019116915615639457351e06ee</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -93,6 +107,9 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
 
         /**
          * <p>inner_cabin_class</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("inner_cabin_class")
         public Integer innerCabinClass;
@@ -140,30 +157,66 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfoPriceInfoDTOReShopPriceInfoDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_change_fee")
         public Integer reShopAdultChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_price")
         public Integer reShopAdultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_price_gap")
         public Integer reShopAdultPriceGap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_change_fee")
         public Integer reShopChildChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_price")
         public Integer reShopChildPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_price_gap")
         public Integer reShopChildPriceGap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_change_fee")
         public Integer reShopInfChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_price")
         public Integer reShopInfPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_price_gap")
         public Integer reShopInfPriceGap;
 
@@ -247,39 +300,87 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfoPriceInfoDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>126000</p>
+         */
         @NameInMap("adult_price")
         public Integer adultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11000</p>
+         */
         @NameInMap("adult_tax")
         public Integer adultTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>137000</p>
+         */
         @NameInMap("adult_total_price")
         public Integer adultTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>126000</p>
+         */
         @NameInMap("before_control_price")
         public Integer beforeControlPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64000</p>
+         */
         @NameInMap("child_price")
         public Integer childPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("child_tax")
         public Integer childTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66000</p>
+         */
         @NameInMap("child_total_price")
         public Integer childTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("infant_price")
         public Integer infantPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("infant_tax")
         public Integer infantTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("infant_total_price")
         public Integer infantTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1300</p>
+         */
         @NameInMap("original_adult_price")
         public Integer originalAdultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12300</p>
+         */
         @NameInMap("original_adult_total_price")
         public Integer originalAdultTotalPrice;
 
@@ -401,12 +502,20 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("attribute_show_info_map")
         public java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("best_discount")
         public Double bestDiscount;
 
         @NameInMap("cabin_class_info")
         public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfoCabinClassInfo cabinClassInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cabin_code")
         public Integer cabinCode;
 
@@ -415,6 +524,9 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
 
         /**
          * <p>item_id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c85124c527fc4b26b86d0c043ddc08d3_0</p>
          */
         @NameInMap("item_id")
         public String itemId;
@@ -428,9 +540,17 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("price_info_d_t_o")
         public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfoPriceInfoDTO priceInfoDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("quantity")
         public Integer quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("support_child_ticket")
         public Boolean supportChildTicket;
 
@@ -530,6 +650,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfosDepAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -539,6 +663,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T3</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -582,6 +710,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfosArrAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PEK</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -591,6 +723,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T2</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -634,6 +770,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfosAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CA</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -643,9 +783,17 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>//gw.alicdn.com/tfs/TB12fJAFHr1gK0jSZR0XXbP8XXa-450-450.png_80x80.jpg</p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -709,6 +857,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -875,18 +1027,38 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_seq")
         public Integer journeySeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_seq")
         public Integer segmentSeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA1110</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
@@ -902,36 +1074,64 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfosArrAirportInfo arrAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-18 09:10:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-18 10:25:00</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
         @NameInMap("airline_info")
         public FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfosAirlineInfo airlineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("share")
         public Boolean share;
 
         @NameInMap("flight_shared_info")
         public FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfosFlightSharedInfo flightSharedInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("stop")
         public Boolean stop;
 
         @NameInMap("flight_stop_info")
         public FlightModifyOtaSearchV2ResponseBodyModuleFlightSegmentInfosFlightStopInfo flightStopInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("transfer_time")
         public Integer transferTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>75</p>
+         */
         @NameInMap("duration")
         public Integer duration;
 
         @NameInMap("manufacturer")
         public String manufacturer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ARJ</p>
+         */
         @NameInMap("flight_type")
         public String flightType;
 
@@ -1136,12 +1336,24 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModulePassengerCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("adult_passenger_num")
         public Integer adultPassengerNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("child_passenger_num")
         public Integer childPassengerNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("infant_passenger_num")
         public Integer infantPassengerNum;
 
@@ -1180,6 +1392,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("agent_info")
         public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfo agentInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2136019116915615639457351e06ee</p>
+         */
         @NameInMap("cache_key")
         public String cacheKey;
 
@@ -1189,6 +1405,10 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         @NameInMap("passenger_count")
         public FlightModifyOtaSearchV2ResponseBodyModulePassengerCount passengerCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a2ffebfe733742aab5c491d960ba3d59</p>
+         */
         @NameInMap("session_id")
         public String sessionId;
 

@@ -4,15 +4,26 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightCreateOrderShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>HGH</p>
+     */
     @NameInMap("arr_airport_code")
     public String arrAirportCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HGH</p>
      */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("auto_pay")
     public Integer autoPay;
 
@@ -21,6 +32,9 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("buyer_unique_key")
     public String buyerUniqueKey;
@@ -31,23 +45,36 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
     @NameInMap("contact_info")
     public String contactInfoShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PEK</p>
+     */
     @NameInMap("dep_airport_code")
     public String depAirportCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BJS</p>
      */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000-00-00 00:00:00</p>
      */
     @NameInMap("dep_date")
     public String depDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
@@ -57,18 +84,27 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000_1_0</p>
      */
     @NameInMap("order_params")
     public String orderParams;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("price")
     public Long price;
@@ -76,6 +112,10 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
     @NameInMap("receipt_address")
     public String receiptAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("receipt_target")
     public Integer receiptTarget;
 
@@ -90,6 +130,9 @@ public class FlightCreateOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;

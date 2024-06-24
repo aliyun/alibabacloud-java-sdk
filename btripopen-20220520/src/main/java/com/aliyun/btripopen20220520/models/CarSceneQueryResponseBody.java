@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarSceneQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,14 +17,25 @@ public class CarSceneQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<CarSceneQueryResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -79,12 +94,20 @@ public class CarSceneQueryResponseBody extends TeaModel {
     }
 
     public static class CarSceneQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>travel</p>
+         */
         @NameInMap("scenarioTemplateId")
         public String scenarioTemplateId;
 
         @NameInMap("scenarioTemplateName")
         public String scenarioTemplateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVATE</p>
+         */
         @NameInMap("state")
         public String state;
 

@@ -4,51 +4,115 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleOrderItemListBaggageRuleBaggageInfoMapValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("carry_freepc")
     public Integer carryFreepc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("carry_bag_weight")
     public Integer carryBagWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("carry_bag_size")
     public String carryBagSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("is_all_carry_bag_weight")
     public Boolean isAllCarryBagWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CZ</p>
+     */
     @NameInMap("airline")
     public String airline;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PKX</p>
+     */
     @NameInMap("start_airport")
     public String startAirport;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAN</p>
+     */
     @NameInMap("end_airport")
     public String endAirport;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BJS</p>
+     */
     @NameInMap("start_city_code")
     public String startCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAN</p>
+     */
     @NameInMap("end_city_code")
     public String endCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("free_pcs")
     public Long freePcs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("baggage_weight")
     public Long baggageWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kg</p>
+     */
     @NameInMap("baggage_unit")
     public String baggageUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("baggage_size")
     public String baggageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("all_weight")
     public Boolean allWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("total_pcs")
     public Long totalPcs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("total_weight")
     public Long totalWeight;
 

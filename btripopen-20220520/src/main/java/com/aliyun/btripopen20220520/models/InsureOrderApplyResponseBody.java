@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureOrderApplyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class InsureOrderApplyResponseBody extends TeaModel {
     @NameInMap("module")
     public InsureOrderApplyResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210e800316781571635951548d1e9d</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +92,31 @@ public class InsureOrderApplyResponseBody extends TeaModel {
     }
 
     public static class InsureOrderApplyResponseBodyModuleInsOrderPolicyList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1022196500378006</p>
+         */
         @NameInMap("out_sub_ins_order_id")
         public String outSubInsOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>po10002300201</p>
+         */
         @NameInMap("policy_no")
         public String policyNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INIT</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1022196500378003</p>
+         */
         @NameInMap("sub_ins_order_id")
         public String subInsOrderId;
 
@@ -128,6 +160,10 @@ public class InsureOrderApplyResponseBody extends TeaModel {
     }
 
     public static class InsureOrderApplyResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1021000196500370003</p>
+         */
         @NameInMap("ins_order_id")
         public String insOrderId;
 

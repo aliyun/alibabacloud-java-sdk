@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureOrderRefundResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class InsureOrderRefundResponseBody extends TeaModel {
     @NameInMap("module")
     public InsureOrderRefundResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2103ad3116824902540648188de7ac</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210e846c16726306481681232d441f</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,12 +92,24 @@ public class InsureOrderRefundResponseBody extends TeaModel {
     }
 
     public static class InsureOrderRefundResponseBodyModuleInsRefundList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>po102000399221</p>
+         */
         @NameInMap("policy_refund_no")
         public String policyRefundNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>REFUND_SUCCESS</p>
+         */
         @NameInMap("refund_status")
         public String refundStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1230012499921</p>
+         */
         @NameInMap("sub_ins_order_id")
         public String subInsOrderId;
 
@@ -117,15 +145,27 @@ public class InsureOrderRefundResponseBody extends TeaModel {
     }
 
     public static class InsureOrderRefundResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>118526587</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1423041410342678003</p>
+         */
         @NameInMap("ins_order_id")
         public String insOrderId;
 
         @NameInMap("ins_refund_list")
         public java.util.List<InsureOrderRefundResponseBodyModuleInsRefundList> insRefundList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1423041410342678022</p>
+         */
         @NameInMap("out_apply_id")
         public String outApplyId;
 

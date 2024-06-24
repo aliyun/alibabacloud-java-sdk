@@ -4,24 +4,52 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightModifyApplyV2ShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>72e961f8-930b-43c1-a4ca-18a6f28349c6distributionModifyCacheInfo</p>
+     */
     @NameInMap("cache_key")
     public String cacheKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17816963077</p>
+     */
     @NameInMap("contact_phone")
     public String contactPhone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fa2fb23a859a4e78b5ddb87a6a23094b_0</p>
+     */
     @NameInMap("item_id")
     public String itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467138</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467137</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1019195786853020</p>
+     */
     @NameInMap("out_sub_order_id")
     public String outSubOrderId;
 
@@ -33,10 +61,17 @@ public class FlightModifyApplyV2ShrinkRequest extends TeaModel {
 
     /**
      * <p>sessionId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2ffebfe733742aab5c491d960ba3d59</p>
      */
     @NameInMap("session_id")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("voluntary")
     public Boolean voluntary;
 

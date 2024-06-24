@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingPayResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class TicketChangingPayResponseBody extends TeaModel {
     @NameInMap("module")
     public TicketChangingPayResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +92,34 @@ public class TicketChangingPayResponseBody extends TeaModel {
     }
 
     public static class TicketChangingPayResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_retry")
         public Boolean canRetry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("pay_price")
         public Long payPrice;
 
         @NameInMap("pay_status")
         public Integer payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0000-00-00 00:00:00</p>
+         */
         @NameInMap("pay_time")
         public String payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23098276578908765</p>
+         */
         @NameInMap("trade_no")
         public String tradeNo;
 

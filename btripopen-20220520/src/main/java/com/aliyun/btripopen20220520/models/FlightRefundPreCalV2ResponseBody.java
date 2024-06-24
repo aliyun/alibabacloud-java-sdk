@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundPreCalV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -18,15 +22,25 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92359A00-85D8-16C4-AED0-249618DEEC17</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
     /**
      * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
      */
     @NameInMap("traceId")
     public String traceId;
@@ -85,15 +99,27 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
     }
 
     public static class FlightRefundPreCalV2ResponseBodyModuleMultiRefundFeeDTOS extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3243028</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
         @NameInMap("passenger_name")
         public String passengerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("pre_refund_money")
         public Long preRefundMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_charge_fee")
         public Long refundChargeFee;
 
@@ -140,9 +166,17 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         @NameInMap("reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("reason_type")
         public Integer reasonType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("volunteer")
         public Boolean volunteer;
 
@@ -181,15 +215,27 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         @NameInMap("multi_refund_fee_d_t_o_s")
         public java.util.List<FlightRefundPreCalV2ResponseBodyModuleMultiRefundFeeDTOS> multiRefundFeeDTOS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("pre_refund_money")
         public Long preRefundMoney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_charge_fee")
         public Long refundChargeFee;
 
         @NameInMap("refund_reason_option_d_t_o_s")
         public java.util.List<FlightRefundPreCalV2ResponseBodyModuleRefundReasonOptionDTOS> refundReasonOptionDTOS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("service_charge_fee")
         public Long serviceChargeFee;
 

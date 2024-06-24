@@ -7,15 +7,27 @@ public class CostCenterQueryRequest extends TeaModel {
     @NameInMap("disable")
     public Long disable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_org_entity")
     public Boolean needOrgEntity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cost1</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
     @NameInMap("title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

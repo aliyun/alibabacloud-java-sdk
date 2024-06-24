@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ProjectModifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pro_code</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,15 +17,26 @@ public class ProjectModifyRequest extends TeaModel {
     @NameInMap("project_name")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234</p>
+     */
     @NameInMap("third_part_cost_center_id")
     public String thirdPartCostCenterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340049</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("third_part_invoice_id")
     public String thirdPartInvoiceId;
 

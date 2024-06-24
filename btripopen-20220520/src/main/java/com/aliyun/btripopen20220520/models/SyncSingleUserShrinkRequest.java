@@ -7,24 +7,48 @@ public class SyncSingleUserShrinkRequest extends TeaModel {
     @NameInMap("email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("job_no")
     public String jobNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("leave_status")
     public Integer leaveStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72369</p>
+     */
     @NameInMap("manager_user_id")
     public String managerUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16392740204</p>
+     */
     @NameInMap("phone")
     public String phone;
 
     @NameInMap("position")
     public String position;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("position_level")
     public String positionLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce/shi</p>
+     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
@@ -33,6 +57,9 @@ public class SyncSingleUserShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>573263</p>
      */
     @NameInMap("user_id")
     public String userId;

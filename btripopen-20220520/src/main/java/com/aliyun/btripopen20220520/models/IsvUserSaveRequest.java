@@ -93,9 +93,17 @@ public class IsvUserSaveRequest extends TeaModel {
         @NameInMap("cert_list")
         public java.util.List<IsvUserSaveRequestUserListCertList> certList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("depart_id")
         public Long departId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@163.com">123@163.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
@@ -105,30 +113,58 @@ public class IsvUserSaveRequest extends TeaModel {
         @NameInMap("is_admin")
         public Boolean isAdmin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8797</p>
+         */
         @NameInMap("job_no")
         public String jobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("leave_status")
         public Integer leaveStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("manager_user_id")
         public String managerUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15364762829</p>
+         */
         @NameInMap("phone")
         public String phone;
 
         @NameInMap("position")
         public String position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("position_level")
         public String positionLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ceshi</p>
+         */
         @NameInMap("real_name_en")
         public String realNameEn;
 
         @NameInMap("role_id_list")
         public java.util.List<String> roleIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("third_depart_id")
         public String thirdDepartId;
 
@@ -137,6 +173,9 @@ public class IsvUserSaveRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("user_id")
         public String userId;

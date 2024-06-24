@@ -4,18 +4,30 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOtaItemDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open12igetbis4o07v10B1TlOWcM00</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
     @NameInMap("language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JIANHANG</p>
+     */
     @NameInMap("supplier_code")
     public String supplierCode;
 

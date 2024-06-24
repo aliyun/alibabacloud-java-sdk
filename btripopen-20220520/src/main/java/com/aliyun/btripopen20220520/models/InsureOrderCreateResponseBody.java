@@ -4,6 +4,10 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsureOrderCreateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
@@ -13,12 +17,24 @@ public class InsureOrderCreateResponseBody extends TeaModel {
     @NameInMap("module")
     public InsureOrderCreateResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C6055EA5-C566-511D-9FC4-5E4D45182711</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f079916782711059363565d6be1</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +92,31 @@ public class InsureOrderCreateResponseBody extends TeaModel {
     }
 
     public static class InsureOrderCreateResponseBodyModuleInsureOrderDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1992939412431231</p>
+         */
         @NameInMap("out_sub_ins_order_id")
         public String outSubInsOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>121234444</p>
+         */
         @NameInMap("policy_no")
         public String policyNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INIT</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1022196500378001</p>
+         */
         @NameInMap("sub_ins_order_id")
         public String subInsOrderId;
 
@@ -128,15 +160,27 @@ public class InsureOrderCreateResponseBody extends TeaModel {
     }
 
     public static class InsureOrderCreateResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("copies")
         public Integer copies;
 
         @NameInMap("insure_order_detail_list")
         public java.util.List<InsureOrderCreateResponseBodyModuleInsureOrderDetailList> insureOrderDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1021000196500370001</p>
+         */
         @NameInMap("insure_order_id")
         public String insureOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("premium")
         public Long premium;
 

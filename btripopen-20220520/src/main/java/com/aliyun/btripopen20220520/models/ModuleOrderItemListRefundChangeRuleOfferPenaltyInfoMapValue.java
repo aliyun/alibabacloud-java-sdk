@@ -4,45 +4,101 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("struct")
     public Boolean struct;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("cancel_fee_ind")
     public Boolean cancelFeeInd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("change_fee_ind")
     public Boolean changeFeeInd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("upgrade_fee_ind")
     public Boolean upgradeFeeInd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("reissue_ind")
     public Boolean reissueInd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("penalty_type_code")
     public Integer penaltyTypeCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("penalty_apply_range_code")
     public Integer penaltyApplyRangeCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("penalty_charge_type_code")
     public Integer penaltyChargeTypeCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("fee")
     public Double fee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CNY</p>
+     */
     @NameInMap("currency")
     public String currency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("penalty_percent")
     public Double penaltyPercent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("start_time")
     public Integer startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("end_time")
     public Integer endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("time_unit_code")
     public Integer timeUnitCode;
 

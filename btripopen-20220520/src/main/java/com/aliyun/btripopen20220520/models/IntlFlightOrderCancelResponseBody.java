@@ -7,18 +7,34 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     @NameInMap("module")
     public IntlFlightOrderCancelResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A3F8DCAB-8301-5770-BD9F-71B0BF9E1A6E</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("result_code")
     public String resultCode;
 
     @NameInMap("result_msg")
     public String resultMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("trace_id")
     public String traceId;
 
@@ -76,6 +92,10 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOrderCancelResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-10 17:45:32</p>
+         */
         @NameInMap("cancel_time")
         public String cancelTime;
 

@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class MonthBillConfirmRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20221001</p>
      */
     @NameInMap("mail_bill_date")
     public Integer mailBillDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

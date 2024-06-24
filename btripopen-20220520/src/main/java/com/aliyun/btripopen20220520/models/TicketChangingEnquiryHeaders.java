@@ -7,6 +7,10 @@ public class TicketChangingEnquiryHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feth00jqwls</p>
+     */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 
