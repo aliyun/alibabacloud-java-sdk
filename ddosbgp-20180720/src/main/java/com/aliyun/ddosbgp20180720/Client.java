@@ -214,6 +214,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>策略绑定</p>
+     * 
+     * @param tmpReq AttachToPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachToPolicyResponse
+     */
+    public AttachToPolicyResponse attachToPolicyWithOptions(AttachToPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachToPolicyShrinkRequest request = new AttachToPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ipPortProtocolList)) {
+            request.ipPortProtocolListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ipPortProtocolList, "IpPortProtocolList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipPortProtocolListShrink)) {
+            query.put("IpPortProtocolList", request.ipPortProtocolListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachToPolicy"),
+            new TeaPair("version", "2018-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachToPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>策略绑定</p>
+     * 
+     * @param request AttachToPolicyRequest
+     * @return AttachToPolicyResponse
+     */
+    public AttachToPolicyResponse attachToPolicy(AttachToPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachToPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Checks whether Anti-DDoS Origin is authorized to access Log Service.</p>
      * 
      * @param request CheckAccessLogAuthRequest
